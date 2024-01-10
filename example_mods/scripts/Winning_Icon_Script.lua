@@ -1,67 +1,83 @@
-function onCreatePost()
-    updateIcon(1, getProperty("boyfriend.healthIcon"))
-    updateIcon(2, getProperty("dad.healthIcon"))
+--Script by _Boxed!
+--Script fixed by Shokora! Big thanks to them!
+function onCreate()
+	makeLuaSprite('winningIcon', 'icons/win-'..getProperty('boyfriend.healthicon'), getProperty('iconP1.x'), getProperty('iconP1.y'))
+	setObjectCamera('winningIcon', 'hud')
+	addLuaSprite('winningIcon', true)
+	setObjectOrder('winningIcon', getObjectOrder('iconP1') + 1)
+	setProperty('winningIcon.flipX', true)
+	setProperty('winningIcon.visible', false)
+	
+	bf = getProperty('boyfriend.healthicon')
+	
+	makeLuaSprite('winningIconDad', 'icons/win-'..getProperty('boyfriend.healthicon'), getProperty('iconP2.x'), getProperty('iconP2.y'))
+	setObjectCamera('winningIconDad', 'hud')
+	addLuaSprite('winningIconDad', true)
+	setObjectOrder('winningIconDad', getObjectOrder('iconP2') + 1)
+	setProperty('winningIconDad.flipX', false)
+	setProperty('winningIconDad.visible', false)
+	
+	dad = getProperty('boyfriend.healthicon')
 end
 
-function onEvent(eventName, value1, value2)
-    if eventName == "Change Character" then
-        local charType = 1
-        if stringTrim(value1:lower()) == "dad" or stringTrim(value1:lower()) == "opponent" then
-            charType = 2
-        else
-            charType = tonumber(value1)
-            if isnan(charType) then
-                charType = 1
-            end
-        end
-
-        local chars = {"boyfriend", "dad"}
-        updateIcon(charType, chars[charType])
-    end
-end
-
-function isnan(num)
-    return num ~= num
-end
-
--- 俺はバカ野郎だ
-function updateIcon(num, char)
-    local tag = "iconP" .. num
-
-    local name = "icons/" .. char
-    if not checkFileExists("images/" .. name .. ".png") and not checkFileExists("assets/images/" .. name .. ".png", true) then
-        name = "icons/icon-" .. char
-    end
-    if not checkFileExists("images/" .. name .. ".png") and not checkFileExists("assets/images/" .. name .. ".png", true) then
-        name = "icons/icon-face"
-    end
-    debugPrint(name)
-
-    loadGraphic(tag, name)
-    loadGraphic(tag, name, math.floor(getProperty(tag .. ".width") / 3), math.floor(getProperty(tag .. ".height")));
-    updateHitbox(tag)
-
-    -- runHaxeCode("game." .. tag .. ".animation.add(" .. char .. ", [0, 1, 2], 0, false, " .. num == 1 .. ");");
-    addAnimation(tag, char, {0, 1, 2}, 0, false)
-    setProperty(tag .. ".flipX", num == 1)
-
-    setProperty(tag .. ".antialiasing", getPropertyFromClass("ClientPrefs", "globalAntialiasing"))
-    if stringEndsWith(char, "-pixel") then
-        setProperty(tag .. ".antialiasing", false)
-    end
-end
-
-function onUpdatePost(elapsed)
-    local health = getProperty("healthBar.percent")
-
-    if health < 20 then
-        setProperty("iconP1.animation.curAnim.curFrame", 1)
-        setProperty("iconP2.animation.curAnim.curFrame", 2)
-    elseif health > 80 then
-        setProperty("iconP1.animation.curAnim.curFrame", 2)
-        setProperty("iconP2.animation.curAnim.curFrame", 1)
-    else
-        setProperty("iconP1.animation.curAnim.curFrame", 0)
-        setProperty("iconP2.animation.curAnim.curFrame", 0)
-    end
+function onUpdate(elapsed)
+		
+		bf = getProperty('iconP1.animation.curAnim.name')
+		
+		--debugPrint(getProperty('iconP1.animation.curAnim.name')) --debug
+		
+		--WHITELIST add more characters if you wish
+		--if bf == 'bf' or bf =='bf' or bf =='bf' or bf =='bf' --WHITELIST - comment '--' to disable, uncomment to enable
+		--BLACKLIST add more characters if you wish
+		--if not bf =='bf' or bf =='bf' or bf =='bf' or bf =='bf' --BLACKLIST - comment '--' to disable, uncomment to enable
+		--then --uncomment if using WHITELIST or BLACKLIST
+			makeLuaSprite('winningIcon', 'icons/win-'..getProperty('iconP1.animation.curAnim.name'), getProperty('iconP1.x'), getProperty('iconP1.y'))
+			setObjectCamera('winningIcon', 'hud')
+			addLuaSprite('winningIcon', true)
+			setObjectOrder('winningIcon', getObjectOrder('iconP1') + 1)
+			setProperty('winningIcon.flipX', true)
+			setProperty('winningIcon.visible', false)
+		
+			setProperty('winningIcon.x', getProperty('iconP1.x'))
+			setProperty('winningIcon.angle', getProperty('iconP1.angle'))
+			setProperty('winningIcon.y', getProperty('iconP1.y'))
+			setProperty('winningIcon.scale.x', getProperty('iconP1.scale.x'))
+			setProperty('winningIcon.scale.y', getProperty('iconP1.scale.y'))
+			
+			if getProperty('healthBar.percent') >= 81 then
+				setProperty('iconP1.visible', false)
+				setProperty('winningIcon.visible', true)
+			else
+				setProperty('iconP1.visible', true)
+				setProperty('winningIcon.visible', false)
+			end
+		--end --uncomment if using WHITELIST or BLACKLIST
+			
+		dad = getProperty('dad.healthicon')
+		--WHITELIST add more characters if you wish
+		--if dad == 'dad' or dad =='dad' or dad =='dad' or dad =='dad' --WHITELIST - comment '--' to disable, uncomment to enable
+		--BLACKLIST add more characters if you wish
+		--if not dad =='dad' or dad =='dad' or dad =='dad' or dad =='dad' --BLACKLIST - comment '--' to disable, uncomment to enable
+		--then --uncomment if using WHITELIST or BLACKLIST
+			makeLuaSprite('winningIconDad', 'icons/'..getProperty('iconP2.animation.curAnim.name')..'-win', getProperty('iconP2.x'), getProperty('iconP2.y'))
+			setObjectCamera('winningIconDad', 'hud')
+			addLuaSprite('winningIconDad', true)
+			setObjectOrder('winningIconDad', getObjectOrder('iconP2') + 1)
+			setProperty('winningIconDad.flipX', false)
+			setProperty('winningIconDad.visible', false)
+		
+			setProperty('winningIconDad.x', getProperty('iconP2.x'))
+			setProperty('winningIconDad.angle', getProperty('iconP2.angle'))
+			setProperty('winningIconDad.y', getProperty('iconP2.y'))
+			setProperty('winningIconDad.scale.x', getProperty('iconP2.scale.x'))
+			setProperty('winningIconDad.scale.y', getProperty('iconP2.scale.y'))
+			
+			if getProperty('healthBar.percent') < 20 then
+				setProperty('iconP2.visible', false)
+				setProperty('winningIconDad.visible', true)
+			else
+				setProperty('iconP2.visible', true)
+				setProperty('winningIconDad.visible', false)
+			end
+		--end --uncomment if using WHITELIST or BLACKLIST
 end
