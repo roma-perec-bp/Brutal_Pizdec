@@ -65,9 +65,6 @@
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
 
-	<!-- DONT ENABLE THIS -->
-	<define name="CHECK_FOR_UPDATES" if="desktop officialBuild"/>
-
 	<!-- Week Assets -->
 	<library name="videos"        preload="true" />
 	<section if="PRELOAD_ALL">
@@ -93,7 +90,6 @@
 	<section if="MODS_ALLOWED">
 		<assets path='example_mods' rename='mods' embed='false'/>
 	</section>
-	<assets path='art/readme.txt' rename='do NOT readme.txt' />
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
