@@ -31,7 +31,7 @@ function onUpdate(elapsed)
 		--BLACKLIST add more characters if you wish
 		--if not bf =='bf' or bf =='bf' or bf =='bf' or bf =='bf' --BLACKLIST - comment '--' to disable, uncomment to enable
 		--then --uncomment if using WHITELIST or BLACKLIST
-			makeLuaSprite('winningIcon', 'icons/win-'..getProperty('iconP1.animation.curAnim.name'), getProperty('iconP1.x'), getProperty('iconP1.y'))
+			makeLuaSprite('winningIcon', 'icons/'..getProperty('iconP1.animation.curAnim.name')..'-win', getProperty('iconP1.x'), getProperty('iconP1.y'))
 			setObjectCamera('winningIcon', 'hud')
 			addLuaSprite('winningIcon', true)
 			setObjectOrder('winningIcon', getObjectOrder('iconP1') + 1)
