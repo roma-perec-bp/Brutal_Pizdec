@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="monochrome_pepper-ASSETS.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="monopepper down0000" x="10" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0001" x="10" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0002" x="797" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0003" x="797" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0004" x="1584" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0005" x="1584" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0006" x="2371" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0007" x="2371" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0008" x="3158" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0009" x="3158" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0010" x="3158" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0011" x="3158" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0012" x="3158" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0013" x="3158" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper down0014" x="3158" y="10" width="777" height="733"/>
+	<SubTexture name="monopepper idle0000" x="3945" y="10" width="1378" height="1080"/>
+	<SubTexture name="monopepper left0000" x="5333" y="10" width="851" height="706"/>
+	<SubTexture name="monopepper left0001" x="5333" y="10" width="851" height="706"/>
+	<SubTexture name="monopepper left0002" x="6194" y="10" width="851" height="706"/>
+	<SubTexture name="monopepper left0003" x="6194" y="10" width="851" height="706"/>
+	<SubTexture name="monopepper left0004" x="7055" y="10" width="851" height="706"/>
+	<SubTexture name="monopepper left0005" x="7055" y="10" width="851" height="706"/>
+	<SubTexture name="monopepper left0006" x="10" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0007" x="10" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0008" x="871" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0009" x="871" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0010" x="871" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0011" x="871" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0012" x="871" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0013" x="871" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper left0014" x="871" y="1100" width="851" height="706"/>
+	<SubTexture name="monopepper right0000" x="1732" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0001" x="1732" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0002" x="2727" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0003" x="2727" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0004" x="3722" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0005" x="3722" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0006" x="4717" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0007" x="4717" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0008" x="5712" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0009" x="5712" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0010" x="5712" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0011" x="5712" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0012" x="5712" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0013" x="5712" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper right0014" x="5712" y="1100" width="985" height="670"/>
+	<SubTexture name="monopepper up0000" x="6707" y="1100" width="483" height="994"/>
+	<SubTexture name="monopepper up0001" x="6707" y="1100" width="483" height="994"/>
+	<SubTexture name="monopepper up0002" x="7200" y="1100" width="483" height="994"/>
+	<SubTexture name="monopepper up0003" x="7200" y="1100" width="483" height="994"/>
+	<SubTexture name="monopepper up0004" x="7693" y="1100" width="483" height="994"/>
+	<SubTexture name="monopepper up0005" x="7693" y="1100" width="483" height="994"/>
+	<SubTexture name="monopepper up0006" x="10" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0007" x="503" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0008" x="996" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0009" x="996" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0010" x="996" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0011" x="996" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0012" x="996" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0013" x="996" y="2104" width="483" height="994"/>
+	<SubTexture name="monopepper up0014" x="996" y="2104" width="483" height="994"/>
+</TextureAtlas>
