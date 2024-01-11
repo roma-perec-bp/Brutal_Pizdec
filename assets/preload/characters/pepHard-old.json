@@ -1,0 +1,163 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				691,
+				77
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				691,
+				77
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				10,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				352,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				352,
+				38
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				40,
+				282
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				40,
+				282
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-29,
+				58
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-29,
+				58
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/myLoveBetter",
+	"position": [
+		20,
+		-350
+	],
+	"healthicon": "pepW",
+	"flip_x": false,
+	"healthbar_colors": [
+		202,
+		21,
+		1
+	],
+	"camera_position": [
+		90,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
