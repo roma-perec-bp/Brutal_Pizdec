@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-524,
+				-292
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "monopepper right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "monopepper idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-141
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "monopepper left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-525,
+				-496
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "monopepper down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-374,
+				42
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "monopepper up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/monochrome_pepper-ASSETS",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "deadjap",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		170,
+		170
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
