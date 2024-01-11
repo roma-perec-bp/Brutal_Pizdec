@@ -1,0 +1,50 @@
+{
+	"songs": [
+		[
+			"With cone",
+			"jap",
+			[
+				135,
+				0,
+				0
+			]
+		],
+		[
+			"boom",
+			"jap",
+			[
+				135,
+				0,
+				0
+			]
+		],
+		[
+			"overfire",
+			"jap",
+			[
+				135,
+				0,
+				0
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "",
+	"weekName": "pizdec",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
