@@ -1,0 +1,163 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"fps": 24,
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				717,
+				54
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				717,
+				54
+			],
+			"indices": [
+				10,
+				12,
+				13,
+				14,
+				15
+			],
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"loop": true,
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				360,
+				30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				360,
+				30
+			],
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"loop": true,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				40,
+				750
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				40,
+				750
+			],
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"fps": 24,
+			"anim": "singUP-loop",
+			"loop": true,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-29,
+				60
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-29,
+				60
+			],
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"loop": true,
+			"name": "right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/myLove",
+	"position": [
+		20,
+		-350
+	],
+	"healthicon": "pep",
+	"flip_x": false,
+	"healthbar_colors": [
+		202,
+		21,
+		1
+	],
+	"camera_position": [
+		90,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
