@@ -20,7 +20,7 @@ class FreeplaySelectState extends MusicBeatState{
 		BG.updateHitbox();
 		BG.screenCenter();
 		add(BG);
-        categoryIcon = new FlxSprite().loadGraphic(Paths.image('category/' + freeplayCats[curSelected].toLowerCase()));
+        categoryIcon = new FlxSprite().loadGraphic(Paths.image('freeplay/' + freeplayCats[curSelected].toLowerCase()));
 		categoryIcon.updateHitbox();
 		categoryIcon.screenCenter();
 		add(categoryIcon);
