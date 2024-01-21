@@ -9,9 +9,8 @@ import states.FreeplayState;
 import backend.Highscore;
 
 class FreeplaySelectState extends MusicBeatState{
-    public static var freeplayCats:Array<String> = ['story', 'bonus'];
-    public static var curCategory:Int = 0;
-	public var NameAlpha:Alphabet;
+    public static var freeplayCats:Array<String> = ['story', 'bonus', 'cover', 'old'];
+	public var nameAlpha:Alphabet;
 	var grpCats:FlxTypedGroup<Alphabet>;
 	var curSelected:Int = 0;
 	var BG:FlxSprite;
@@ -34,10 +33,10 @@ class FreeplaySelectState extends MusicBeatState{
             catsText.isMenuItem = true;
 			grpCats.add(catsText);
 		}*/
-		NameAlpha = new Alphabet(20,(FlxG.height / 2) - 282,freeplayCats[curSelected],true,false);
-		NameAlpha.screenCenter(X);
+		nameAlpha = new Alphabet(20,(FlxG.height / 2) - 282,freeplayCats[curSelected],true);
+		nameAlpha.screenCenter(X);
 		Highscore.load();
-		add(NameAlpha);
+		add(nameAlpha);
         changeSelection();
         super.create();
     }
@@ -56,7 +55,7 @@ class FreeplaySelectState extends MusicBeatState{
             MusicBeatState.switchState(new FreeplayState());
         }
 
-        curCategory = curSelected;
+        FreeplayState.freeplayType = curSelected;
 
         super.update(elapsed);
     }
@@ -79,10 +78,10 @@ class FreeplaySelectState extends MusicBeatState{
 			}
 		}*/
 
-		NameAlpha.destroy();
-		NameAlpha = new Alphabet(20,(FlxG.height / 2) - 282,freeplayCats[curSelected],true,false);
-		NameAlpha.screenCenter(X);
-		add(NameAlpha);
+		nameAlpha.destroy();
+		nameAlpha = new Alphabet(20, (FlxG.height / 2) - 282, freeplayCats[curSelected], true);
+		nameAlpha.screenCenter(X);
+		add(nameAlpha);
 		categoryIcon.loadGraphic(Paths.image('freeplay/' + (freeplayCats[curSelected].toLowerCase())));
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 	}

@@ -3,6 +3,11 @@ package backend;
 import openfl.utils.Assets;
 import lime.utils.Assets as LimeAssets;
 
+#if sys
+import sys.io.File;
+import sys.FileSystem;
+#end
+
 class CoolUtil
 {
 	inline public static function quantize(f:Float, snap:Float){
