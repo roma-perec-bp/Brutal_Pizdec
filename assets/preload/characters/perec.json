@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "IdlePerec"
+		},
+		{
+			"offsets": [
+				65,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "LeftPerec"
+		},
+		{
+			"offsets": [
+				65,
+				-252
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "DownPerec"
+		},
+		{
+			"offsets": [
+				-2,
+				38
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "UpPerec"
+		},
+		{
+			"offsets": [
+				8,
+				-28
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "RightPerec"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/perec_ASSETS",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "jap",
+	"flip_x": false,
+	"healthbar_colors": [
+		192,
+		7,
+		10
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
