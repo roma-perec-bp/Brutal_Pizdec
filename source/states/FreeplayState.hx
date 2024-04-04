@@ -43,17 +43,6 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
-		switch (freeplayType)
-			{
-				case 0:
-					addWeek(['Boom'], 0, 0xFFce3c80, ['face']);
-				case 1:
-					addWeek(['Bopeebo', 'Fresh', 'Dad-battle'], 1, 0xff00c3ff, ['dad', 'dad', 'dad']);
-				case 2:
-					addWeek(['Bopeebo', 'Fresh', 'Dad-battle'], 1, 0xff00c3ff, ['dad', 'dad', 'dad']);
-				case 3:
-					addWeek(['Boom Old', 'Overfire Old'], 1, 0xFFce3c80, ['dad', 'dad']);
-			};
 
 		Paths.clearStoredMemory();
 		
@@ -66,41 +55,17 @@ class FreeplayState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		for (i in 0...WeekData.weeksList.length) {
-			if(weekIsLocked(WeekData.weeksList[i])) continue;
-
-			var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
-			var leSongs:Array<String> = [];
-			var leChars:Array<String> = [];
-
-			for (j in 0...leWeek.songs.length)
-			{
-				leSongs.push(leWeek.songs[j][0]);
-				leChars.push(leWeek.songs[j][1]);
-			}
-
-//			WeekData.setDirectoryFromWeek(leWeek);
-			for (song in leWeek.songs)
-			{
-				var colors:Array<Int> = song[2];
-				if(colors == null || colors.length < 3)
-				{
-					colors = [146, 113, 253];
-				}
-				//addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
-			}
-		}
-		//WeekData.loadTheFirstEnabledMod();
-
-		/*		//KIND OF BROKEN NOW AND ALSO PRETTY USELESS//
-		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		for (i in 0...initSonglist.length)
+		switch (freeplayType)
 		{
-			if(initSonglist[i] != null && initSonglist[i].length > 0) {
-				var songArray:Array<String> = initSonglist[i].split(":");
-				addSong(songArray[0], 0, songArray[1], Std.parseInt(songArray[2]));
-			}
-		}*/
+			case 0:
+				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, 0xFFc61b1b, ['jap', 'jap', 'jap-wheel']);
+			case 1:
+				addWeek(['Anekdot', 'Klork', 'T short', 'Monochrome Brutal Mix', '64 rubl', 'Lore Brutal Mix'], 1, 0xffdc9468, ['box', 'lork', 'short', 'deadjap', 'bf', 'bf']);
+			case 2:
+				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen '], 1, 0xff44bdc2, ['jap', 'jamar']);
+			case 3:
+				addWeek(['BOOM Old', 'Overfire Old'], 1, 0xFF9b1a1a, ['dad', 'dad']);
+		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 //		bg.antialiasing = backend.ClientPrefs.globalAntialiasing;

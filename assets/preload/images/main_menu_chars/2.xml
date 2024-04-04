@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="2.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="menu0000" x="0" y="0" width="288" height="425" frameX="0" frameY="-38" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0001" x="0" y="0" width="288" height="425" frameX="0" frameY="-38" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0002" x="308" y="0" width="260" height="442" frameX="-28" frameY="-22" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0003" x="308" y="0" width="260" height="442" frameX="-28" frameY="-22" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0004" x="0" y="462" width="240" height="457" frameX="-48" frameY="-7" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0005" x="0" y="462" width="240" height="457" frameX="-48" frameY="-7" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0006" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0007" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0008" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0009" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0010" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0011" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0012" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0013" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+	<SubTexture name="menu0014" x="260" y="462" width="240" height="465" frameX="-48" frameY="0" frameWidth="288" frameHeight="465"/>
+</TextureAtlas>

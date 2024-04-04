@@ -3,58 +3,129 @@ package states;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.FlxSprite;
 import flixel.FlxG;
-
+import flixel.effects.FlxFlicker;
 import states.MainMenuState;
 import states.FreeplayState;
-import backend.Highscore;
 
 class FreeplaySelectState extends MusicBeatState{
     public static var freeplayCats:Array<String> = ['story', 'bonus', 'cover', 'old'];
-	public var nameAlpha:Alphabet;
 	var grpCats:FlxTypedGroup<Alphabet>;
 	var curSelected:Int = 0;
+	public var sprItemsGroup:FlxTypedGroup<FlxSprite>;
 	var BG:FlxSprite;
-    var categoryIcon:FlxSprite;
+
+	var leftArrows:FlxSprite;
+	var rightArrows:FlxSprite;
+
+	var disableInput:Bool = false;
     override function create(){
+		final ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+
         BG = new FlxSprite().loadGraphic(Paths.image('freeplay/bg'));
 		BG.updateHitbox();
 		BG.screenCenter();
+		BG.scale.set(0.75, 0.75);
+		BG.y = -450;
 		add(BG);
-        categoryIcon = new FlxSprite().loadGraphic(Paths.image('freeplay/' + freeplayCats[curSelected].toLowerCase()));
-		categoryIcon.updateHitbox();
-		categoryIcon.screenCenter();
-		add(categoryIcon);
-        /*grpCats = new FlxTypedGroup<Alphabet>();
-		add(grpCats);
-        for (i in 0...freeplayCats.length)
+
+		sprItemsGroup = new FlxTypedGroup<FlxSprite>();
+		add(sprItemsGroup);
+
+		var curID:Int = -1;
+		for(lmol in 0...freeplayCats.length)
         {
-			var catsText:Alphabet = new Alphabet(0, (70 * i) + 30, freeplayCats[i], true, false);
-            catsText.targetY = i;
-            catsText.isMenuItem = true;
-			grpCats.add(catsText);
-		}*/
-		nameAlpha = new Alphabet(20,(FlxG.height / 2) - 282,freeplayCats[curSelected],true);
-		nameAlpha.screenCenter(X);
-		Highscore.load();
-		add(nameAlpha);
+			curID += 1;
+			var spr:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/'+ freeplayCats[lmol]));
+			spr.scale.set(0.5, 0.5);
+            spr.screenCenter(X);
+			spr.updateHitbox();
+			spr.alpha = 0;
+			spr.ID = curID;
+			sprItemsGroup.add(spr);
+		}
+
+		if (leftArrows == null){
+			leftArrows = new FlxSprite(10, 300);
+			leftArrows.antialiasing = ClientPrefs.data.antialiasing;
+			leftArrows.frames = ui_tex;
+			leftArrows.animation.addByPrefix('idle', "arrow left");
+			leftArrows.animation.addByPrefix('press', "arrow push left");
+			leftArrows.animation.play('idle');
+		}
+		add(leftArrows);
+
+		if (rightArrows == null){
+			rightArrows = new FlxSprite(leftArrows.x + 1210, leftArrows.y);
+			rightArrows.antialiasing = ClientPrefs.data.antialiasing;
+			rightArrows.frames = ui_tex;
+			rightArrows.animation.addByPrefix('idle', 'arrow right');
+			rightArrows.animation.addByPrefix('press', "arrow push right", 24, false);
+			rightArrows.animation.play('idle');
+		}
+		add(rightArrows);
+
         changeSelection();
         super.create();
+
+		FlxG.camera.zoom = 3;
+		FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.expoInOut});
     }
 
     override public function update(elapsed:Float){
         
-		if (controls.UI_LEFT_P) 
-			changeSelection(-1);
-		if (controls.UI_RIGHT_P) 
-			changeSelection(1);
-		if (controls.BACK) {
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
+		if (!disableInput)
+		{
+			if (controls.UI_LEFT_P) 
+				changeSelection(-1);
+			if (controls.UI_RIGHT_P) 
+				changeSelection(1);
+			if (controls.BACK) {
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				MusicBeatState.switchState(new MainMenuState());
+			}
+			if (controls.ACCEPT){
+				disableInput = true;
+				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+				FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.4, {ease: FlxEase.quadOut, type: BACKWARD});
+				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+				FlxFlicker.flicker(sprItemsGroup.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
+				{
+					MusicBeatState.switchState(new FreeplayState());
+				});
+			}
+			if (controls.UI_RIGHT)
+				rightArrows.animation.play('press')
+			else
+				rightArrows.animation.play('idle');
+	
+			if (controls.UI_LEFT)
+				leftArrows.animation.play('press');
+			else
+				leftArrows.animation.play('idle');
 		}
-        if (controls.ACCEPT){
-            MusicBeatState.switchState(new FreeplayState());
-        }
 
+		sprItemsGroup.forEach(function(spr:FlxSprite)
+        {
+            var cent = (FlxG.width/2) - (spr.width /2);
+            spr.x = FlxMath.lerp(spr.x, cent - (curSelected-spr.ID) * 500, CoolUtil.boundTo(elapsed * 10, 0, 1));
+            spr.scale.set(
+                spr.ID == curSelected ?
+                    FlxMath.lerp(spr.scale.x, 0.35, CoolUtil.boundTo(elapsed * 10.2, 0, 1))
+                    :
+                    FlxMath.lerp(spr.scale.x, 0.25, CoolUtil.boundTo(elapsed * 10.2, 0, 1)),
+                spr.ID == curSelected ?
+                    FlxMath.lerp(spr.scale.x, 0.35, CoolUtil.boundTo(elapsed * 10.2, 0, 1))
+                    :
+                    FlxMath.lerp(spr.scale.x, 0.25, CoolUtil.boundTo(elapsed * 10.2, 0, 1))
+            );
+            spr.alpha = (
+                spr.ID == curSelected ?
+                    FlxMath.lerp(spr.alpha, 1, CoolUtil.boundTo(elapsed * 5, 0, 1))
+                    :
+                    FlxMath.lerp(spr.alpha, 0.6, CoolUtil.boundTo(elapsed * 5, 0, 1))
+            );
+        });
+		BG.x = FlxMath.lerp(BG.x, -650 - curSelected * 500, CoolUtil.boundTo(elapsed * 5, 0, 1));
         FreeplayState.freeplayType = curSelected;
 
         super.update(elapsed);
@@ -69,20 +140,6 @@ class FreeplaySelectState extends MusicBeatState{
 
 		var bullShit:Int = 0;
 
-		/*for (item in grpCats.members) {
-			item.targetY = bullShit - curSelected;
-			bullShit++;
-			item.alpha = 0.6;
-			if (item.targetY == 0) {
-				item.alpha = 1;
-			}
-		}*/
-
-		nameAlpha.destroy();
-		nameAlpha = new Alphabet(20, (FlxG.height / 2) - 282, freeplayCats[curSelected], true);
-		nameAlpha.screenCenter(X);
-		add(nameAlpha);
-		categoryIcon.loadGraphic(Paths.image('freeplay/' + (freeplayCats[curSelected].toLowerCase())));
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 	}
 }

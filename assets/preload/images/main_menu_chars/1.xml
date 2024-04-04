@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="1.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="menu0000" x="0" y="0" width="204" height="472" frameX="0" frameY="-21" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0001" x="0" y="0" width="204" height="472" frameX="0" frameY="-21" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0002" x="224" y="0" width="193" height="487" frameX="-11" frameY="-7" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0003" x="224" y="0" width="193" height="487" frameX="-11" frameY="-7" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0004" x="0" y="507" width="189" height="492" frameX="-15" frameY="-2" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0005" x="0" y="507" width="189" height="492" frameX="-15" frameY="-2" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0006" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0007" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0008" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0009" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0010" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0011" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0012" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0013" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+	<SubTexture name="menu0014" x="209" y="507" width="189" height="494" frameX="-15" frameY="0" frameWidth="204" frameHeight="494"/>
+</TextureAtlas>

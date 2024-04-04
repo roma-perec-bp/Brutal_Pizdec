@@ -7,7 +7,6 @@ import flixel.FlxObject;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 
-import flixel.input.keyboard.FlxKey;
 import lime.app.Application;
 
 import objects.AchievementPopup;
@@ -28,7 +27,8 @@ class MainMenuState extends MusicBeatState
 		'freeplay',
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
-		'options'
+		'options',
+		'gallery'
 	];
 
 	override function create()
@@ -77,6 +77,8 @@ class MainMenuState extends MusicBeatState
 			{
 				case 4: menuItem.frames = Paths.getSparrowAtlas('options_button');
 
+				case 5: menuItem.frames = Paths.getSparrowAtlas('gallery_button');
+
 				default: menuItem.frames = Paths.getSparrowAtlas('buttons_mainmenu');
 			}
 
@@ -84,7 +86,6 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + "_hover", 24);
 			menuItem.animation.play('idle');
 			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
-			menuItem.updateHitbox();
 
 			switch(i) {
 				case 0:
@@ -97,16 +98,27 @@ class MainMenuState extends MusicBeatState
 					menuItem.setPosition(700, 478);
 				case 4:
 					menuItem.setPosition(1150, 460);
+				case 5:
+					menuItem.setPosition(490, 569);
 			}
+			menuItem.updateHitbox();
 			menuItems.add(menuItem);
 		}
+
+		var bros:FlxSprite = new FlxSprite(-50, 270);
+		bros.frames = Paths.getSparrowAtlas('main_menu_chars/'+FlxG.random.int(0,4));
+		bros.animation.addByPrefix('idle', 'menu', 24);
+		bros.animation.play('idle');
+		bros.antialiasing = ClientPrefs.data.antialiasing;
+		bros.scale.set(1, 1);
+		add(bros);
 
 		var overlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBangerOverlay'));
 		overlay.antialiasing = ClientPrefs.data.antialiasing;
 		overlay.screenCenter();
 		add(overlay);
 
-		var versionShit:FlxText = new FlxText(-200, 800, 0, "FNF BRUTAL PIZDEC v" + psychEngineVersion, 24);
+		var versionShit:FlxText = new FlxText(-200, 800, 0, "FNF` BRUTAL PIZDEC v" + psychEngineVersion, 24);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -153,50 +165,33 @@ class MainMenuState extends MusicBeatState
 			if(FreeplayState.vocals != null) FreeplayState.vocals.volume += 0.5 * elapsed;
 		}
 
+		FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, (FlxG.mouse.screenX-(FlxG.width/2)) * 0.015, (1/30)*240*elapsed);
+		FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
+
 		if (!selectedSomethin)
 		{
-			if (controls.UI_UP_P)
-				changeItem(-1);
+			changeItem();
 
-			if (controls.UI_DOWN_P)
-				changeItem(1);
+			menuItems.forEach(function(spr:FlxSprite)
+			{
+				if (FlxG.mouse.overlaps(spr) && FlxG.mouse.justPressed)
+				{
+					selectedSomethin = true;
+					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+					FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.4, {ease: FlxEase.quadOut, type: BACKWARD});
+					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
+					{
+						pressedMenu(optionShit[curSelected]);
+					});
+				}
+			});
 
 			if (controls.BACK)
 			{
 				selectedSomethin = true;
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				MusicBeatState.switchState(new TitleState());
-			}
-
-			if (controls.ACCEPT)
-			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
-				selectedSomethin = true;
-
-				FlxG.camera.flash(FlxColor.WHITE, 0.6);
-
-				FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
-				{
-					FlxTween.tween(FlxG.camera, {zoom: 4}, 1.5, {ease: FlxEase.sineInOut});
-					switch (optionShit[curSelected])
-					{
-						case 'story': MusicBeatState.switchState(new StoryMenuState());
-						case 'freeplay': MusicBeatState.switchState(new FreeplaySelectState());
-						#if ACHIEVEMENTS_ALLOWED
-						case 'awards': MusicBeatState.switchState(new AchievementsMenuState());
-						#end
-						case 'credits': MusicBeatState.switchState(new CreditsState());
-						case 'options':
-							MusicBeatState.switchState(new OptionsState());
-							OptionsState.onPlayState = false;
-							if (PlayState.SONG != null)
-							{
-								PlayState.SONG.arrowSkin = null;
-								PlayState.SONG.splashSkin = null;
-								PlayState.stageUI = 'normal';
-							}
-					}
-				});
 			}
 
 			#if desktop
@@ -211,25 +206,41 @@ class MainMenuState extends MusicBeatState
 		super.update(elapsed);
 	}
 
+	function pressedMenu(choise:String = null)
+	{
+		switch (choise)
+		{
+			case 'story': MusicBeatState.switchState(new StoryMenuState());
+			case 'freeplay': MusicBeatState.switchState(new FreeplaySelectState());
+			#if ACHIEVEMENTS_ALLOWED
+			case 'awards': MusicBeatState.switchState(new AchievementsMenuState());
+			#end
+			case 'credits': MusicBeatState.switchState(new CreditsState());
+			case 'options':
+				MusicBeatState.switchState(new OptionsState());
+				OptionsState.onPlayState = false;
+				if (PlayState.SONG != null)
+				{
+					PlayState.SONG.arrowSkin = null;
+					PlayState.SONG.splashSkin = null;
+					PlayState.stageUI = 'normal';
+				}
+			case 'gallery': MusicBeatState.switchState(new GalleryState()); //пусть функция пока бует а потом добавлю кнопАЧКУ
+
+			default: MusicBeatState.switchState(new MainMenuState());
+		}
+	}
+
 	function changeItem(huh:Int = 0)
 	{
-		curSelected = FlxMath.wrap(curSelected + huh, 0, menuItems.length - 1);
-
-		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.animation.play('idle');
-			spr.updateHitbox();
-
-			if (spr.ID == curSelected)
+			if(FlxG.mouse.overlaps(spr))
 			{
+				curSelected = spr.ID;
 				spr.animation.play('selected');
-				var add:Float = 0;
-				if(menuItems.length > 4) {
-					add = menuItems.length * 8;
-				}
-				spr.centerOffsets();
+			} else {
+				spr.animation.play('idle');
 			}
 		});
 	}

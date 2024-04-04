@@ -458,7 +458,7 @@ class TitleState extends MusicBeatState
 				// FlxG.sound.music.stop();
 
 				FlxTween.cancelTweensOf(FlxG.camera);
-				FlxTween.tween(FlxG.camera, {zoom: 4}, 1.5, {ease: FlxEase.backIn});
+				FlxTween.tween(FlxG.camera, {zoom: 3}, 1.5, {ease: FlxEase.backIn});
 				FlxTween.tween(titleText, {alpha: 0}, 0.7, {ease: FlxEase.linear});
 				textBG.alpha = 0;
 
