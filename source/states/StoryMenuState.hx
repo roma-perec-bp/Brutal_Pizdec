@@ -122,10 +122,9 @@ class StoryMenuState extends MusicBeatState
 		storyBanner.screenCenter();
 		add(storyBanner);
 
-		var tracksSprite:FlxText = new FlxText(FlxG.width * 0.05, bgSprite.y + 425, 0, "TRACKS", 48);
+		var tracksSprite:FlxText = new FlxText(FlxG.width * 0.1, bgSprite.y + 425, 0, "TRACKS", 48);
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
 		tracksSprite.setFormat(Paths.font("HouseofTerror.ttf"), 48, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		tracksSprite.font = Paths.font("HouseofTerror.ttf");
 		add(tracksSprite);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 60, 0, "", 32);
