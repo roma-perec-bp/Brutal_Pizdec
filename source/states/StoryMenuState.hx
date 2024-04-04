@@ -45,13 +45,16 @@ class StoryMenuState extends MusicBeatState
 		WeekData.reloadWeekFiles(true);
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 		persistentUpdate = persistentDraw = true;
+		
+		scoreText = new FlxText(10, 529, 0, "49324858", 42);
+		scoreText.setFormat(Paths.font("HouseofTerror.ttf"), 42,  FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
-		scoreText = new FlxText(10, 600, 0, "SCORE: 49324858", 36);
-		scoreText.setFormat("VCR OSD Mono", 69,  FlxColor.WHITE, RIGHT);
+		var scoring:FlxText = new FlxText(0, 469, 0, "SCORE", 62);
+		scoring.setFormat(Paths.font("HouseofTerror.ttf"), 62,  FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoring.x = FlxG.width - FlxG.width * 0.2;
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
-		txtWeekTitle.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, RIGHT);
-		txtWeekTitle.alpha = 0.7;
+		txtWeekTitle.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
@@ -71,7 +74,7 @@ class StoryMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		var num:Int = 0;
+		var num:Int = 100;
 		for (i in 0...WeekData.weeksList.length)
 		{
 			var weekFile:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
@@ -119,17 +122,21 @@ class StoryMenuState extends MusicBeatState
 		storyBanner.screenCenter();
 		add(storyBanner);
 
-		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
+		var tracksSprite:FlxText = new FlxText(FlxG.width * 0.05, bgSprite.y + 425, 0, "TRACKS", 48);
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
+		tracksSprite.setFormat(Paths.font("HouseofTerror.ttf"), 48, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		tracksSprite.font = Paths.font("HouseofTerror.ttf");
 		add(tracksSprite);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 60, 0, "", 32);
 		txtTracklist.alignment = CENTER;
-		txtTracklist.font = Paths.font("HouseofTerror.ttf");
-		txtTracklist.color = 0xFFe55777;
+		txtTracklist.font = tracksSprite.font;
+		txtTracklist.borderStyle = FlxTextBorderStyle.OUTLINE;
+		txtTracklist.borderColor = FlxColor.BLACK;
 		add(txtTracklist);
 		// add(rankText);
 		add(scoreText);
+		add(scoring);
 		add(txtWeekTitle);
 
 		changeWeek();
@@ -150,7 +157,8 @@ class StoryMenuState extends MusicBeatState
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, FlxMath.bound(elapsed * 30, 0, 1)));
 		if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 
-		scoreText.text = "WEEK SCORE:" + lerpScore;
+		scoreText.text = "" + lerpScore;
+		scoreText.x = FlxG.width - FlxG.width * 0.15;
 
 		// FlxG.watch.addQuick('font', scoreText.font);
 

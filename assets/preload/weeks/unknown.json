@@ -1,40 +1,40 @@
 {
-	"storyName": "The rain will end here and the fire will start",
+	"storyName": "???",
 	"difficulties": "Normal",
 	"hideFreeplay": false,
-	"weekBackground": "pizdec",
-	"weekBefore": "tutorial",
+	"weekBackground": "stage",
+	"weekBefore": "main",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"startUnlocked": true,
+	"startUnlocked": false,
 	"hideStoryMode": false,
 	"songs": [
 		[
-			"With cone",
+			"???",
 			"jap",
 			[
-				135,
+				0,
 				0,
 				0
 			]
 		],
 		[
-			"boom",
+			"???",
 			"jap",
 			[
-				135,
+				0,
 				0,
 				0
 			]
 		],
 		[
-			"overfire",
+			"???",
 			"jap",
 			[
-				135,
+				0,
 				0,
 				0
 			]
@@ -46,5 +46,5 @@
 		""
 	],
 	"hiddenUntilUnlocked": false,
-	"weekName": "pizdec"
+	"weekName": "???"
 }
