@@ -60,11 +60,11 @@ class FreeplayState extends MusicBeatState
 			case 0:
 				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, 0xFFc61b1b, ['jap', 'jap', 'jap-wheel']);
 			case 1:
-				addWeek(['Anekdot', 'Klork', 'T short', 'Monochrome Brutal Mix', '64 rubl', 'Lore Brutal Mix'], 1, 0xffdc9468, ['box', 'lork', 'short', 'deadjap', 'bf', 'bf']);
+				addWeek(['Anekdot', 'Klork', 'T short', 'Monochrome', '64 rubl', 'Lore'], 1, 0xffdc9468, ['box', 'lork', 'short', 'deadjap', 'bf', 'bf']);
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen '], 1, 0xff44bdc2, ['jap', 'jamar']);
 			case 3:
-				addWeek(['BOOM Old', 'Overfire Old'], 1, 0xFF9b1a1a, ['dad', 'dad']);
+				addWeek(['BOOM Old', 'Overfire Old', 'KLORK OLD'], 1, 0xFF9b1a1a, ['dad', 'dad']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
