@@ -81,6 +81,7 @@ class PauseSubState extends MusicBeatSubstate
 		bg2 = new FlxSprite(0, 0).loadGraphic(Paths.image("pause_pvz_menu/background"));
 		bg2.screenCenter();
 		bg2.scrollFactor.set();
+		bg2.updateHitbox();
 		add(bg2);
 
 		FlxG.mouse.visible = true;
@@ -99,6 +100,7 @@ class PauseSubState extends MusicBeatSubstate
 			menuItemsGroup.add(menuItem);
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
 			menuItem.scrollFactor.set();
+			menuItem.updateHitbox();
 
 			menuItem.x = menuItemsAdvanced[i][1];
 			menuItem.y = menuItemsAdvanced[i][2];

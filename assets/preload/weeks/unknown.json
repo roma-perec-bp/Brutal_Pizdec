@@ -2,15 +2,19 @@
 	"storyName": "???",
 	"difficulties": "Normal",
 	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"weekBefore": "main",
+	"weekBackground": "unknown",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "main",
 	"startUnlocked": false,
-	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
 	"songs": [
 		[
 			"???",
@@ -40,11 +44,7 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"",
-		"",
-		""
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "???"
+	"hideStoryMode": false,
+	"weekName": "???",
+	"hiddenUntilUnlocked": false
 }

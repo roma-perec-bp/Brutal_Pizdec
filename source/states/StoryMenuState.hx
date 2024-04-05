@@ -83,7 +83,7 @@ class StoryMenuState extends MusicBeatState
 			{
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
-				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 500, WeekData.weeksList[i]);
+				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
 				weekThing.y += ((weekThing.height + 20) * num);
 				weekThing.targetY = num;
 				grpWeekText.add(weekThing);
@@ -122,7 +122,7 @@ class StoryMenuState extends MusicBeatState
 		storyBanner.screenCenter();
 		add(storyBanner);
 
-		var tracksSprite:FlxText = new FlxText(FlxG.width * 0.1, bgSprite.y + 425, 0, "TRACKS", 48);
+		var tracksSprite:FlxText = new FlxText(FlxG.width * 0.101, bgSprite.y + 425, 0, "TRACKS", 48);
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
 		tracksSprite.setFormat(Paths.font("HouseofTerror.ttf"), 48, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(tracksSprite);
