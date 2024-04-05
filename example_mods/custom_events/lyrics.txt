@@ -1,0 +1,2 @@
+val 1: text
+val 2: text color
