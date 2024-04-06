@@ -259,14 +259,20 @@ class StoryMenuState extends MusicBeatState
 			
 			if (stopspamming == false)
 			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
+				FlxG.sound.play(Paths.sound('thunder'));
+				FlxG.sound.play(Paths.sound('gameover jumpscare'));
+				FlxG.sound.play(Paths.sound('perecHaha'));
+				FlxG.sound.play(Paths.sound('boom'));
+
+				FlxG.sound.music.stop();
 
 				grpWeekText.members[curWeek].startFlashing();
-
+				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+				FlxG.camera.shake(0.003, 5);
 				stopspamming = true;
 			}
 
-			new FlxTimer().start(1, function(tmr:FlxTimer)
+			new FlxTimer().start(5, function(tmr:FlxTimer)
 			{
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 				FreeplayState.destroyFreeplayVocals();
