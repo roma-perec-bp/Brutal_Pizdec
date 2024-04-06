@@ -64,7 +64,7 @@ class FreeplayState extends MusicBeatState
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen '], 1, 0xff44bdc2, ['jap', 'jamar']);
 			case 3:
-				addWeek(['BOOM Old', 'Overfire Old', 'KLORK OLD'], 1, 0xFF9b1a1a, ['dad', 'dad']);
+				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, 0xFF9b1a1a, ['dad', 'dad', 'lork']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
