@@ -10,7 +10,7 @@ import states.FreeplayState;
 class FreeplaySelectState extends MusicBeatState{
     public static var freeplayCats:Array<String> = ['story', 'bonus', 'cover', 'old'];
 	var grpCats:FlxTypedGroup<Alphabet>;
-	var curSelected:Int = 0;
+	static var curSelected:Int = 0;
 	public var sprItemsGroup:FlxTypedGroup<FlxSprite>;
 	var BG:FlxSprite;
 

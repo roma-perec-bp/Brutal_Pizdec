@@ -9,6 +9,8 @@ import substates.ResetScoreSubState;
 import backend.Mods;
 import states.FreeplaySelectState;
 
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.display.FlxGridOverlay;
 
 using StringTools;
 
@@ -24,7 +26,6 @@ class FreeplayState extends MusicBeatState
 
 	var scoreBG:FlxSprite;
 	var scoreText:FlxText;
-	var diffText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
 	var intendedScore:Int = 0;
@@ -58,19 +59,25 @@ class FreeplayState extends MusicBeatState
 		switch (freeplayType)
 		{
 			case 0:
-				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, 0xFFc61b1b, ['jap', 'jap', 'jap-wheel']);
+				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, 0xFFbc0000, ['jap', 'jap', 'jap-wheel']);
 			case 1:
-				addWeek(['Anekdot', 'Klork', 'T short', 'Monochrome', '64 rubl', 'Lore'], 1, 0xffdc9468, ['box', 'lork', 'short', 'deadjap', 'bf', 'bf']);
+				addWeek(['Anekdot', 'Klork', 'T short', 'Monochrome', '64 rubl', 'Lore'], 1, 0xfffe9797, ['box', 'lork', 'short', 'deadjap', 'bf', 'bf']);
 			case 2:
-				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen '], 1, 0xff44bdc2, ['jap', 'jamar']);
+				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen '], 1, 0xff23cb64, ['jap', 'jamar']);
 			case 3:
-				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, 0xFF9b1a1a, ['dad', 'dad', 'lork']);
+				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, 0xFF898989, ['dad', 'dad', 'lork']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 //		bg.antialiasing = backend.ClientPrefs.globalAntialiasing;
 		add(bg);
 		bg.screenCenter();
+
+		var grid:FlxBackdrop = new FlxBackdrop(FlxGridOverlay.createGrid(80, 80, 160, 160, true, 0x33FFFFFF, 0x0));
+		grid.velocity.set(40, 40);
+		grid.alpha = 0;
+		FlxTween.tween(grid, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+		add(grid);
 
 		grpSongs = new FlxTypedGroup<FlxText>();
 		add(grpSongs);
@@ -81,7 +88,7 @@ class FreeplayState extends MusicBeatState
 			curID += 1;
 			var songText:FlxText = new FlxText(0, 0, 0, songs[i].songName, 87);
 			songText.setFormat(Paths.font("HouseofTerror.ttf"), 87,  FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-			songText.borderSize = 2;
+			songText.borderSize = 4;
 			songText.ID = curID;
 			grpSongs.add(songText);
 
@@ -97,21 +104,18 @@ class FreeplayState extends MusicBeatState
 		WeekData.setDirectoryFromWeek();
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		scoreText.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, RIGHT);
 
 		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
 		scoreBG.alpha = 0.6;
 		add(scoreBG);
-
-		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
-		diffText.font = scoreText.font;
-		add(diffText);
 
 		add(scoreText);
 
 		curCategory = new FlxText(0, scoreText.y, 0, FreeplaySelectState.freeplayCats[freeplayType], 32);
 		curCategory.font = scoreText.font;
 		curCategory.screenCenter(X);
+		add(curCategory);
 
 		if(curSelected[freeplayType] >= songs.length) curSelected[freeplayType] = 0;
 		bg.color = songs[curSelected[freeplayType]].color;
@@ -126,15 +130,10 @@ class FreeplayState extends MusicBeatState
 		textBG.alpha = 0.6;
 		add(textBG);
 
-		#if PRELOAD_ALL
-		var leText:String = "Press SPACE to listen to the Song / Press RESET to Reset your Score and Accuracy.";
-		var size:Int = 16;
-		#else
 		var leText:String = "Press RESET to Reset your Score and Accuracy.";
 		var size:Int = 18;
-		#end
 		var text:FlxText = new FlxText(textBG.x, textBG.y + 4, FlxG.width, leText, size);
-		text.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, RIGHT);
+		text.setFormat(Paths.font("HouseofTerror.ttf"), size, FlxColor.WHITE, CENTER);
 		text.scrollFactor.set();
 		add(text);
 		super.create();
@@ -202,7 +201,6 @@ class FreeplayState extends MusicBeatState
 		var upP = controls.UI_UP_P;
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
-		var space = FlxG.keys.justPressed.SPACE;
 		var ctrl = FlxG.keys.justPressed.CONTROL;
 
 		var shiftMult:Int = 1;
@@ -235,11 +233,7 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		if (controls.UI_LEFT_P)
-			changeDiff(-1);
-		else if (controls.UI_RIGHT_P)
-			changeDiff(1);
-		else if (upP || downP) changeDiff();
+		if (upP || downP) changeDiff();
 
 		if (controls.BACK)
 		{
@@ -251,46 +245,11 @@ class FreeplayState extends MusicBeatState
 			MusicBeatState.switchState(new FreeplaySelectState());
 		}
 		
-		if(space)
-		{
-			if(instPlaying != curSelected[freeplayType])
-			{
-				#if PRELOAD_ALL
-				destroyFreeplayVocals();
-				FlxG.sound.music.volume = 0;
-				Mods.currentModDirectory = songs[curSelected[freeplayType]].folder;
-				var poop:String = Highscore.formatSong(songs[curSelected[freeplayType]].songName.toLowerCase(), curDifficulty);
-				PlayState.SONG = Song.loadFromJson(poop, songs[curSelected[freeplayType]].songName.toLowerCase());
-				if (PlayState.SONG.needsVoices)
-					vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
-				else
-					vocals = new FlxSound();
-
-				FlxG.sound.list.add(vocals);
-				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.7);
-				vocals.play();
-				vocals.persist = true;
-				vocals.looped = true;
-				vocals.volume = 0.7;
-				instPlaying = curSelected[freeplayType];
-				#end
-			}
-		}
-
-		else if (accepted)
+		if (accepted)
 		{
 			persistentUpdate = false;
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected[freeplayType]].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-			/*#if MODS_ALLOWED
-			if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
-			#else
-			if(!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop))) {
-			#end
-				poop = songLowercase;
-				curDifficulty = 1;
-				trace('Couldnt find file');
-			}*/
 			trace(poop);
 
 			PlayState.SONG = Song.loadFromJson(poop, songLowercase);
@@ -339,6 +298,12 @@ class FreeplayState extends MusicBeatState
                     FlxMath.lerp(spr.alpha, 1, CoolUtil.boundTo(elapsed * 5, 0, 1))
                     :
                     FlxMath.lerp(spr.alpha, 0.7, CoolUtil.boundTo(elapsed * 5, 0, 1))
+            );
+			spr.x = (
+                spr.ID == curSelected[freeplayType] ?
+                    FlxMath.lerp(spr.x, 150, CoolUtil.boundTo(elapsed * 5, 0, 1))
+                    :
+                    FlxMath.lerp(spr.x, 50, CoolUtil.boundTo(elapsed * 5, 0, 1))
             );
         });
 
@@ -390,11 +355,6 @@ class FreeplayState extends MusicBeatState
 		intendedRating = Highscore.getRating(songs[curSelected[freeplayType]].songName, curDifficulty);
 		#end
 
-		if (Difficulty.list.length > 1)
-			diffText.text = '< ' + lastDifficultyName.toUpperCase() + ' >';
-		else
-			diffText.text = lastDifficultyName.toUpperCase();
-
 		positionHighscore();
 
 		_updateSongLastDifficulty();
@@ -405,8 +365,6 @@ class FreeplayState extends MusicBeatState
 		if(playSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		curSelected[freeplayType] += change;
-
-		_updateSongLastDifficulty();
 
 		if (curSelected[freeplayType] < 0)
 			curSelected[freeplayType] = songs.length - 1;
@@ -460,8 +418,6 @@ class FreeplayState extends MusicBeatState
 
 		scoreBG.scale.x = FlxG.width - scoreText.x + 6;
 		scoreBG.x = FlxG.width - (scoreBG.scale.x / 2);
-		diffText.x = Std.int(scoreBG.x + (scoreBG.width / 2));
-		diffText.x -= diffText.width / 2;
 	}
 
 	inline private function _updateSongLastDifficulty()
