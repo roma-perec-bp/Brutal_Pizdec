@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="twitter.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pressed_twitter_button0000" x="0" y="0" width="107" height="102"/>
+	<SubTexture name="pressed_twitter_button0001" x="0" y="0" width="107" height="102"/>
+	<SubTexture name="pressed_twitter_button0002" x="113" y="0" width="107" height="102"/>
+	<SubTexture name="pressed_twitter_button0003" x="113" y="0" width="107" height="102"/>
+	<SubTexture name="pressed_twitter_button0004" x="226" y="0" width="107" height="102"/>
+	<SubTexture name="pressed_twitter_button0005" x="226" y="0" width="107" height="102"/>
+	<SubTexture name="twitter_button0000" x="339" y="0" width="119" height="119"/>
+	<SubTexture name="twitter_button0001" x="339" y="0" width="119" height="119"/>
+	<SubTexture name="twitter_button0002" x="0" y="125" width="119" height="119"/>
+	<SubTexture name="twitter_button0003" x="0" y="125" width="119" height="119"/>
+	<SubTexture name="twitter_button0004" x="125" y="125" width="119" height="119"/>
+	<SubTexture name="twitter_button0005" x="125" y="125" width="119" height="119"/>
+</TextureAtlas>

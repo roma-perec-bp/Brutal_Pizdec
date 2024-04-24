@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gamejolt.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gamejolt_button0000" x="0" y="0" width="119" height="118"/>
+	<SubTexture name="gamejolt_button0001" x="0" y="0" width="119" height="118"/>
+	<SubTexture name="gamejolt_button0002" x="125" y="0" width="119" height="118"/>
+	<SubTexture name="gamejolt_button0003" x="125" y="0" width="119" height="118"/>
+	<SubTexture name="gamejolt_button0004" x="250" y="0" width="119" height="118"/>
+	<SubTexture name="gamejolt_button0005" x="250" y="0" width="119" height="118"/>
+	<SubTexture name="pressed_gamejolt_button0000" x="375" y="0" width="107" height="102"/>
+	<SubTexture name="pressed_gamejolt_button0001" x="375" y="0" width="107" height="102"/>
+	<SubTexture name="pressed_gamejolt_button0002" x="0" y="124" width="107" height="102"/>
+	<SubTexture name="pressed_gamejolt_button0003" x="0" y="124" width="107" height="102"/>
+	<SubTexture name="pressed_gamejolt_button0004" x="113" y="124" width="107" height="102"/>
+	<SubTexture name="pressed_gamejolt_button0005" x="113" y="124" width="107" height="102"/>
+</TextureAtlas>

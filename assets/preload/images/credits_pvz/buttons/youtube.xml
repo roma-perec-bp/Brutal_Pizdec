@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="youtube.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pressed_youtube_button0000" x="0" y="0" width="108" height="102"/>
+	<SubTexture name="pressed_youtube_button0001" x="0" y="0" width="108" height="102"/>
+	<SubTexture name="pressed_youtube_button0002" x="114" y="0" width="108" height="102"/>
+	<SubTexture name="pressed_youtube_button0003" x="114" y="0" width="108" height="102"/>
+	<SubTexture name="pressed_youtube_button0004" x="228" y="0" width="108" height="102"/>
+	<SubTexture name="pressed_youtube_button0005" x="228" y="0" width="108" height="102"/>
+	<SubTexture name="youtube_button0000" x="342" y="0" width="119" height="118"/>
+	<SubTexture name="youtube_button0001" x="342" y="0" width="119" height="118"/>
+	<SubTexture name="youtube_button0002" x="0" y="124" width="119" height="118"/>
+	<SubTexture name="youtube_button0003" x="0" y="124" width="119" height="118"/>
+	<SubTexture name="youtube_button0004" x="125" y="124" width="119" height="118"/>
+	<SubTexture name="youtube_button0005" x="125" y="124" width="119" height="118"/>
+</TextureAtlas>
