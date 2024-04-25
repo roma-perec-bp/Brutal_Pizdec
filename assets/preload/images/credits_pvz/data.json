@@ -65,6 +65,15 @@
             }
         },
         {
+            "picture":"diyguy",
+            "nickname":"DiyGuy64",
+            "work":"Artist",
+            "wish":"ia vam ebalo za everivar razobiu",
+            "socialnetwork": {
+                "youtube":"https://www.youtube.com/channel/UCBT5H_YYbciRYx2pvBGeyrg"
+            }
+        },
+        {
             "picture":"brok",
             "nickname":"Brok",
             "work":"Composer",
@@ -118,7 +127,7 @@
             "work":"Artist",
             "wish":"keep yourself safe, really",
             "socialnetwork": {
-
+                "twitter":"https://twitter.com/lol_Egorushka"
             }
         },
         {
@@ -150,11 +159,13 @@
         },
         {
             "picture":"ender",
-            "nickname":"Ender",
-            "work":"Coder",
+            "nickname":"Ender69",
+            "work":"Coder and Charter",
             "wish":"Skull Issue",
             "socialnetwork": {
-                "youtube":"https://www.youtube.com/@ender69funk"
+                "youtube":"https://www.youtube.com/@ender69funk",
+                "gamejolt":"https://gamejolt.com/@ender69funk",
+                "twitter":"https://twitter.com/ender69funk",
             }
         },
         {
@@ -166,6 +177,7 @@
 
             }
         },
+
         {
             "picture":"mlaofmd",
             "nickname":"Mlaofmd",
@@ -263,7 +275,7 @@
             "work":"Charter",
             "wish":"Makes chromatics like a fucker",
             "socialnetwork": {
-
+                "youtube":"https://youtube.com/@HelpWmods"
             }
         },
         {
