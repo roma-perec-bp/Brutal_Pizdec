@@ -19,14 +19,14 @@ end
 
 function onStepHit()
     if curStep == 32 then
-        setProperty('blackFlash.visible', false)
+        doTweenAlpha('suka','blackFlash', 0, 1, 'linear')
     end
     if curStep == 288 then
         setProperty('vin.visible', false)
     end
     
     if curStep == 2720 then
-        doTweenAlpha('maniaPartYea','maniaPart', 1, 0.1, 'linear')
+        doTweenAlpha('maniaPartYea','maniaPart', 1, 0.5, 'linear')
     end
     if curStep == 2971 then
         doTweenAlpha('Fucked','maniaPart', 0, 0.1, 'linear')
