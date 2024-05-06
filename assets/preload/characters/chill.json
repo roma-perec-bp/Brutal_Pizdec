@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "hot pepper idle"
+		},
+		{
+			"offsets": [
+				125,
+				-61
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "hot pepper down"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "hot pepper up"
+		},
+		{
+			"offsets": [
+				-92,
+				-150
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "hot pepper right"
+		},
+		{
+			"offsets": [
+				595,
+				-35
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "hot pepper left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/hot pepper",
+	"position": [
+		-60,
+		-120
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		110,
+		390
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}
