@@ -1638,8 +1638,11 @@ class PlayState extends MusicBeatState
 		}*/
 		callOnScripts('onUpdate', [elapsed]);
 
-		if (fireHalapeno.alpha >= 0.0001)
-			fireHalapeno.alpha -= 0.01;
+		if(curStage == 'roof-old')
+		{
+			if (fireHalapeno.alpha >= 0.0001)
+				fireHalapeno.alpha -= 0.01;
+		}
 
 		FlxG.camera.followLerp = 0;
 		if(!inCutscene && !paused) {
