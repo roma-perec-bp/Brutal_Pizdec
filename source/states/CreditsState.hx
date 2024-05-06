@@ -137,7 +137,7 @@ class CreditsState extends MusicBeatState
         desc_text2.screenCenter(X);
         add(desc_text2);
 
-        desc_text = new FlxText(10, 645, 1200, '', 30);
+        desc_text = new FlxText(10, 620, 1250, '', 30);
         desc_text.setFormat(Paths.font("HouseofTerror.ttf"), 30, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         desc_text.screenCenter(X);
         add(desc_text);
@@ -152,6 +152,7 @@ class CreditsState extends MusicBeatState
             add(flashBG);
             new FlxTimer().start(1, function(tmr:FlxTimer)
             {
+                FlxG.sound.play(Paths.sound('credits_pvz/intro'));
                 FlxFlicker.flicker(flashBG, 1.1, 0.09, false, function(flick:FlxFlicker)
                 {
                     FlxTween.tween(name_text, {y: name_text.y + 250 }, 0.4, {
@@ -160,6 +161,7 @@ class CreditsState extends MusicBeatState
                     FlxTween.tween(desc_text, {y: desc_text.y - 150 }, 0.4, {
                         ease: FlxEase.sineOut
                     });
+                    FlxG.sound.play(Paths.sound('credits_pvz/light'));
                 });
             });
         }

@@ -142,6 +142,7 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 		#end
+		
 		super.create();
 	}
 
@@ -177,7 +178,7 @@ class MainMenuState extends MusicBeatState
 				{
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-					FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.4, {ease: FlxEase.quadOut, type: BACKWARD});
+					FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.7, {ease: FlxEase.quadOut, type: BACKWARD});
 					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
 					{

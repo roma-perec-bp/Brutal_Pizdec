@@ -108,6 +108,11 @@ class CoolUtil
 		return Math.max(min, Math.min(max, value));
 	}
 
+	inline public static function spaceToDash(string:String):String
+	{
+		return string.replace(" ", "-");
+	}
+
 	inline public static function browserLoad(site:String) {
 		#if linux
 		Sys.command('/usr/bin/xdg-open', [site]);

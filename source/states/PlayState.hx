@@ -42,6 +42,7 @@ import states.editors.ChartingState;
 import states.editors.CharacterEditorState;
 
 import substates.PauseSubState;
+import substates.PauseSubStateold;
 import substates.GameOverSubstate;
 
 #if !flash 
@@ -179,6 +180,7 @@ class PlayState extends MusicBeatState
 
 	public var healthBar:HealthBar;
 	public var timeBar:HealthBar;
+	private var healthBarBGOverlay:FlxSprite;
 	var songPercent:Float = 0;
 
 	public var ratingsData:Array<Rating> = Rating.loadDefault();
@@ -384,6 +386,8 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'stage': new states.stages.StageWeek1(); //Week 1
+			case 'night': new states.stages.Roof(); //Week 1
+			case 'roof-old': new states.stages.OldRoof(); //Week 1
 		}
 
 		if(isPixelStage) {
@@ -512,6 +516,21 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 
+				if(curStage == 'roof-old')
+		{
+			healthBarBGOverlay = new FlxSprite(300, FlxG.height * (!ClientPrefs.data.downScroll ? 0.785 : 0.005));
+			healthBarBGOverlay.loadGraphic(Paths.image('healthBarBG-old', 'shared'));
+		}
+		else
+		{
+			healthBarBGOverlay = new FlxSprite(healthBar.x - 27, healthBar.y - 38);
+			healthBarBGOverlay.loadGraphic(Paths.image('healthBarBG', 'shared'));
+		}
+
+		healthBarBGOverlay.visible = !ClientPrefs.data.hideHud;
+		healthBarBGOverlay.alpha = ClientPrefs.data.healthBarAlpha;
+		add(healthBarBGOverlay);
+		
 		healthBar = new HealthBar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
 		healthBar.leftToRight = false;
@@ -554,6 +573,7 @@ class PlayState extends MusicBeatState
 		notes.cameras = [camHUD];
 
 		healthBar.cameras = [camHUD];
+		healthBarBGOverlay.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
@@ -642,6 +662,10 @@ class PlayState extends MusicBeatState
 
 		super.create();
 		Paths.clearUnusedMemory();
+
+		FlxG.mouse.unload();
+		FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
+		FlxG.mouse.visible = true;
 		
 		CustomFadeTransition.nextCamera = camOther;
 		if(eventNotes.length < 1) checkEventNote();
@@ -1824,8 +1848,11 @@ class PlayState extends MusicBeatState
 					note.resetAnim = 0;
 				}
 		}
-		openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
-		//}
+
+		if(curStage == 'roof-old' || chartingMode)
+			openSubState(new PauseSubStateold(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+		else
+			openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
 		#if desktop
 		DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
@@ -2282,6 +2309,9 @@ class PlayState extends MusicBeatState
 			Highscore.saveScore(SONG.song, songScore, storyDifficulty, percent);
 			#end
 			playbackRate = 1;
+
+			if (!FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
+				FlxG.save.data.playedSongs.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
 
 			if (chartingMode)
 			{
