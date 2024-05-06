@@ -183,6 +183,8 @@ class PlayState extends MusicBeatState
 	private var healthBarBGOverlay:FlxSprite;
 	var songPercent:Float = 0;
 
+	private var fireHalapeno:FlxSprite;
+
 	public var ratingsData:Array<Rating> = Rating.loadDefault();
 	public var fullComboFunction:Void->Void = null;
 
@@ -516,7 +518,7 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 
-				if(curStage == 'roof-old')
+		if(curStage == 'roof-old')
 		{
 			healthBarBGOverlay = new FlxSprite(300, FlxG.height * (!ClientPrefs.data.downScroll ? 0.785 : 0.005));
 			healthBarBGOverlay.loadGraphic(Paths.image('healthBarBG-old', 'shared'));
@@ -530,7 +532,7 @@ class PlayState extends MusicBeatState
 		healthBarBGOverlay.visible = !ClientPrefs.data.hideHud;
 		healthBarBGOverlay.alpha = ClientPrefs.data.healthBarAlpha;
 		add(healthBarBGOverlay);
-		
+
 		healthBar = new HealthBar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
 		healthBar.leftToRight = false;
@@ -559,6 +561,22 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.data.hideHud;
 		add(scoreTxt);
 
+		if(curStage == 'roof-old')
+		{
+			fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
+			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
+			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
+			fireHalapeno.flipY = ClientPrefs.data.downScroll;
+			fireHalapeno.antialiasing = ClientPrefs.data.antialiasing;
+			fireHalapeno.scrollFactor.set();
+			fireHalapeno.blend = ADD;
+			fireHalapeno.alpha = 0.0001;
+			fireHalapeno.updateHitbox();
+			fireHalapeno.screenCenter(X);
+			fireHalapeno.animation.play('idle');
+			add(fireHalapeno);
+		}
+
 		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
@@ -577,6 +595,8 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+
+		fireHalapeno.cameras = [camHUD];
 
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
@@ -1610,6 +1630,9 @@ class PlayState extends MusicBeatState
 			iconP1.swapOldIcon();
 		}*/
 		callOnScripts('onUpdate', [elapsed]);
+
+		if (fireHalapeno.alpha >= 0.0001)
+			fireHalapeno.alpha -= 0.01;
 
 		FlxG.camera.followLerp = 0;
 		if(!inCutscene && !paused) {
@@ -2917,6 +2940,12 @@ class PlayState extends MusicBeatState
 				}
 			}
 
+			if(note.noteType == 'Jap Note'){
+				FlxG.sound.play(Paths.sound('boom'), 0.4);
+				if (health >= 0.4) health -= 0.1;
+				fireHalapeno.alpha = 0.5;
+			}
+
 			var char:Character = dad;
 			var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, note.noteData)))] + altAnim;
 			if(note.gfNote) {
@@ -2928,6 +2957,11 @@ class PlayState extends MusicBeatState
 				char.playAnim(animToPlay, true);
 				char.holdTimer = 0;
 			}
+		}
+
+		if(note.noteType == 'Jap Note no anim') {
+			if (health >= 0.4) health -=  0.06;
+			fireHalapeno.alpha = 0.8;
 		}
 
 		if (SONG.needsVoices)
@@ -2970,6 +3004,9 @@ class PlayState extends MusicBeatState
 								boyfriend.playAnim('hurt', true);
 								boyfriend.specialAnim = true;
 							}
+						case 'Jap Note': //Hurt note
+							FlxG.sound.play(Paths.sound('boom'), 0.6);
+							fireHalapeno.alpha = 0.5;
 					}
 				}
 

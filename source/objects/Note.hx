@@ -100,6 +100,8 @@ class Note extends FlxSprite
 	public var copyAngle:Bool = true;
 	public var copyAlpha:Bool = true;
 
+	public var jap:Bool = false;
+
 	public var hitHealth:Float = 0.023;
 	public var missHealth:Float = 0.0475;
 	public var rating:String = 'unknown';
@@ -188,6 +190,29 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
+				case 'Jap Note':
+					ignoreNote = mustPress;
+					reloadNote('JAPNOTE_assets');
+					rgbShader.enabled = false;
+					noteSplashData.r = 0xFFff0000;
+					noteSplashData.g = 0xFF003806;
+					hitCausesMiss = true;
+					earlyHitMult = 0.5;
+					lateHitMult = 0.5;
+					missHealth = 0.25;
+					lowPriority = true;
+					offsetX = -20;
+					jap = true;
+	
+				case 'Jap Note no anim':
+					ignoreNote = mustPress;
+					reloadNote('JAPNOTE_assets');
+					rgbShader.enabled = false;
+					noteSplashData.r = 0xFFff0000;
+					noteSplashData.g = 0xFF003806;
+					noAnimation = true;
+					offsetX = -20;
+					jap = true;
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);
 			if (hitsound != 'hitsound' && ClientPrefs.data.hitsoundVolume > 0) Paths.sound(hitsound); //precache new sound for being idiot-proof

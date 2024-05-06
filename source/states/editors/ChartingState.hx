@@ -58,7 +58,9 @@ class ChartingState extends MusicBeatState
 		'Hey!',
 		'Hurt Note',
 		'GF Sing',
-		'No Animation'
+		'No Animation',
+		'Jap Note',
+		'Jap Note no anim'
 	];
 	public var ignoreWarnings = false;
 	var curNoteTypes:Array<String> = [];
@@ -81,10 +83,11 @@ class ChartingState extends MusicBeatState
 		['Screen Shake', "Value 1: Camera shake\nValue 2: HUD shake\n\nEvery value works as the following example: \"1, 0.05\".\nThe first number (1) is the duration.\nThe second number (0.05) is the intensity."],
 		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"],
 		['Change Scroll Speed', "Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."],
-		['Set Property', "Value 1: Variable name\nValue 2: New value"],
 		['Play Sound', "Value 1: Sound file name\nValue 2: Volume (Default: 1), ranges from 0 to 1"],
-                ['Flash Camera', 'V1: Duration, \nV2: Hex color\nDefault color FFFFFF'],
-		['Set Cam Zoom', 'V1: Zoom\nV2: Time(soon)']
+        ['Flash Camera', 'V1: Duration, \nV2: Hex color\nDefault color FFFFFF'],
+		['Set Cam Zoom', 'V1: Zoom\nV2: Time(soon)'],
+		['GrassHey', "Value 1: on or off?"],
+		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 
 	];
 

@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "how",
-		"player2": "pep",
+		"player1": "how-old",
+		"player2": "pep-old",
 		"events": [],
 		"notes": [
 			{
@@ -40,27 +40,27 @@
 				"sectionNotes": [
 					[
 						4125,
-						7,
+						4,
 						0,
-						"No Animation"
-					],
-					[
-						4125,
-						6,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						4125,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						4125,
-						4,
+						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						4125,
+						7,
+						0,
+						"Jap Note no anim"
 					]
 				],
 				"altAnim": false,
@@ -244,6 +244,12 @@
 						8250,
 						2,
 						0
+					],
+					[
+						8175,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -295,6 +301,12 @@
 						9450,
 						0,
 						75
+					],
+					[
+						9150,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -498,6 +510,12 @@
 						13050,
 						3,
 						75
+					],
+					[
+						12600,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -589,30 +607,36 @@
 						13200,
 						4,
 						0,
-						"No Animation"
-					],
-					[
-						13200,
-						5,
-						0,
-						"No Animation"
-					],
-					[
-						13200,
-						6,
-						0,
-						"No Animation"
-					],
-					[
-						13200,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						13800,
 						5,
 						525
+					],
+					[
+						13200,
+						5,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						13200,
+						6,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						13200,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						14250,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -756,6 +780,12 @@
 						17700,
 						3,
 						225
+					],
+					[
+						17100,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -852,6 +882,24 @@
 						18585,
 						7,
 						0
+					],
+					[
+						18150,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						18450,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						18900,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -1080,6 +1128,18 @@
 						22200,
 						1,
 						75
+					],
+					[
+						22050,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						22650,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -1148,100 +1208,124 @@
 						0
 					],
 					[
+						22950,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						23250,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
 						22800,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						22800,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						22800,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						22800,
 						7,
 						0,
-						"No Animation"
-					],
-					[
-						23100,
-						4,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						23100,
 						7,
 						0,
-						"No Animation"
-					],
-					[
-						23100,
-						6,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						23100,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						23100,
+						6,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						23100,
+						4,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						23400,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						23400,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						23400,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						23400,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						23400,
+						7,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						23700,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						23700,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						23700,
+						5,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						23700,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
-						23700,
-						5,
+						23550,
+						3,
 						0,
-						"No Animation"
+						"Jap Note"
+					],
+					[
+						23850,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -1262,7 +1346,8 @@
 					[
 						24000,
 						3,
-						0
+						0,
+						"Jap Note"
 					],
 					[
 						24150,
@@ -1290,11 +1375,6 @@
 						75
 					],
 					[
-						24600,
-						0,
-						0
-					],
-					[
 						24750,
 						3,
 						75
@@ -1313,6 +1393,12 @@
 						25050,
 						2,
 						75
+					],
+					[
+						24600,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -1366,28 +1452,46 @@
 						75
 					],
 					[
-						25800,
-						5,
+						25500,
+						2,
 						0,
-						"No Animation"
+						"Jap Note"
+					],
+					[
+						25800,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						26250,
+						1,
+						0,
+						"Jap Note"
 					],
 					[
 						25800,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						25800,
+						5,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						25800,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						25800,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					]
 				],
 				"altAnim": false,
@@ -1444,39 +1548,67 @@
 						75
 					],
 					[
-						27000,
-						1,
-						0
-					],
-					[
 						27150,
 						1,
 						75
+					],
+					[
+						27300,
+						3,
+						75
+					],
+					[
+						27450,
+						1,
+						75
+					],
+					[
+						27000,
+						1,
+						0,
+						"Jap Note"
 					],
 					[
 						27150,
 						2,
-						0
-					],
-					[
-						27300,
-						3,
-						75
+						0,
+						"Jap Note"
 					],
 					[
 						27300,
 						1,
-						0
+						0,
+						"Jap Note"
 					],
 					[
 						27450,
 						3,
-						0
+						0,
+						"Jap Note"
 					],
 					[
 						27450,
-						1,
-						75
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						27300,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						27150,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						27000,
+						4,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -1548,25 +1680,67 @@
 						28200,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						28200,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						28200,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						28200,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						27600,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						27750,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						27975,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						28725,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						28575,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						28725,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						28575,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -1789,25 +1963,61 @@
 						30596.25,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						30594.375,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						30593.4375,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						30593.4375,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						30000,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						30300,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						30450,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						30750,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						30900,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						31050,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -1821,18 +2031,8 @@
 			{
 				"sectionNotes": [
 					[
-						31200,
-						2,
-						0
-					],
-					[
 						31275,
 						1,
-						0
-					],
-					[
-						31350,
-						2,
 						0
 					],
 					[
@@ -1841,18 +2041,8 @@
 						0
 					],
 					[
-						31500,
-						2,
-						0
-					],
-					[
 						31575,
 						1,
-						0
-					],
-					[
-						31650,
-						2,
 						0
 					],
 					[
@@ -1899,6 +2089,42 @@
 						32325,
 						1,
 						0
+					],
+					[
+						31200,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						31350,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						31500,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						31650,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						31800,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						32100,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -2090,25 +2316,61 @@
 						32925,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						32400,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						32475,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						32550,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						32625,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						32700,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						32775,
+						3,
+						0,
+						"Jap Note"
 					],
 					[
 						32925,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						32925,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						32925,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -2160,6 +2422,24 @@
 						34350,
 						2,
 						0
+					],
+					[
+						33750,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						34050,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						34500,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -2215,11 +2495,6 @@
 				"sectionNotes": [
 					[
 						36000,
-						1,
-						0
-					],
-					[
-						36000,
 						2,
 						525
 					],
@@ -2229,39 +2504,49 @@
 						0
 					],
 					[
-						36750,
-						1,
-						0
-					],
-					[
 						36900,
 						1,
 						0
 					],
 					[
-						37050,
-						1,
+						36750,
+						3,
 						0
+					],
+					[
+						37050,
+						3,
+						0
+					],
+					[
+						36000,
+						1,
+						0,
+						"Jap Note"
 					],
 					[
 						36600,
 						3,
-						0
+						0,
+						"Jap Note"
 					],
 					[
 						36750,
-						3,
-						0
-					],
-					[
-						37050,
-						3,
-						0
+						1,
+						0,
+						"Jap Note"
 					],
 					[
 						36900,
 						3,
-						0
+						0,
+						"Jap Note"
+					],
+					[
+						37050,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -2335,24 +2620,26 @@
 						0
 					],
 					[
-						38100,
-						1,
-						0
-					],
-					[
 						38175,
 						0,
-						0
-					],
-					[
-						38250,
-						2,
 						0
 					],
 					[
 						38325,
 						3,
 						0
+					],
+					[
+						38250,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						38100,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -2409,25 +2696,43 @@
 						38400,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						38400,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						38400,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						38400,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						38550,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						38850,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						39300,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -2504,25 +2809,55 @@
 						39600,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						39600,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						39600,
-						6,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						39600,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						39600,
+						6,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						39900,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						40350,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						40200,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						40500,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						40650,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -2631,11 +2966,6 @@
 						150
 					],
 					[
-						41400,
-						6,
-						0
-					],
-					[
 						41475,
 						7,
 						0
@@ -2684,73 +3014,145 @@
 						40800,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						40800,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						40800,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						40800,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						40800,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						41400,
+						5,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						41400,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						41400,
-						5,
-						0,
-						"No Animation"
-					],
-					[
-						41396.875,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						41400,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
-						41998.125,
+						41997.1875,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
-						41998.125,
-						5,
-						0,
-						"No Animation"
-					],
-					[
-						41998.125,
+						41997.1875,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
-						41998.125,
+						41995.3125,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						41997.1875,
+						5,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						41175,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						41175,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						41025,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						41025,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						41025,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						41175,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						41550,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						41550,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						41700,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						41700,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						41850,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						41850,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -2844,26 +3246,6 @@
 						0
 					],
 					[
-						42000,
-						6,
-						0
-					],
-					[
-						42000,
-						7,
-						0
-					],
-					[
-						42000,
-						5,
-						0
-					],
-					[
-						42000,
-						4,
-						0
-					],
-					[
 						42150,
 						5,
 						0
@@ -2884,16 +3266,6 @@
 						0
 					],
 					[
-						42600,
-						5,
-						0
-					],
-					[
-						42600,
-						7,
-						0
-					],
-					[
 						42825,
 						5,
 						225
@@ -2904,16 +3276,6 @@
 						0
 					],
 					[
-						42900,
-						6,
-						0
-					],
-					[
-						42900,
-						7,
-						0
-					],
-					[
 						43050,
 						7,
 						0
@@ -2930,75 +3292,113 @@
 					],
 					[
 						42300,
-						4,
+						7,
 						0,
-						"No Animation"
-					],
-					[
-						42300,
-						5,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						42300,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						42300,
-						7,
+						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						42300,
+						4,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						42000,
+						4,
+						0
+					],
+					[
+						42000,
+						5,
+						0
+					],
+					[
+						42000,
+						6,
+						0
+					],
+					[
+						42000,
+						7,
+						0
 					],
 					[
 						42600,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						42600,
+						5,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						42600,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
-						42597.1875,
+						42600,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
-						42597.1875,
+						42900,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						42900,
+						6,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						42900,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						42900,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						42525,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						42750,
+						1,
+						0,
+						"Jap Note"
 					],
 					[
 						42900,
-						5,
+						3,
 						0,
-						"No Animation"
-					],
-					[
-						42897.1875,
-						6,
-						0,
-						"No Animation"
-					],
-					[
-						42895.3125,
-						7,
-						0,
-						"No Animation"
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3182,6 +3582,30 @@
 						46650,
 						2,
 						0
+					],
+					[
+						45750,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						45900,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						46200,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						46500,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3238,25 +3662,49 @@
 						46800,
 						4,
 						0,
-						"No Animation"
-					],
-					[
-						46800,
-						6,
-						0,
-						"No Animation"
-					],
-					[
-						46800,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						46800,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						46800,
+						6,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						46800,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						47250,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						46950,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						47550,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						47850,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3460,6 +3908,30 @@
 						51450,
 						3,
 						75
+					],
+					[
+						50550,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						50625,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						51300,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						51150,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3523,52 +3995,76 @@
 						0
 					],
 					[
-						51600,
-						4,
-						0,
-						"No Animation"
-					],
-					[
-						51600,
-						5,
-						0,
-						"No Animation"
-					],
-					[
-						51600,
-						6,
-						0,
-						"No Animation"
-					],
-					[
-						51600,
-						7,
-						0,
-						"No Animation"
-					],
-					[
 						52200,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						52200,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						52200,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						52200,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						51600,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						51600,
+						5,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						51600,
+						6,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						51600,
+						4,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						52275,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						52425,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						52575,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						52725,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3712,6 +4208,48 @@
 						56100,
 						3,
 						225
+					],
+					[
+						55200,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						55350,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						55200,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						55350,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						55800,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						55950,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						56250,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -3755,52 +4293,100 @@
 						225
 					],
 					[
+						56550,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						56850,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						56850,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						57150,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						57150,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						57150,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						57450,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						57450,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
 						56400,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						56400,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						56400,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						56400,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						57000,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						57000,
+						6,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						57000,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						57000,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						57000,
-						7,
-						0,
-						"No Animation"
-					],
-					[
-						57000,
-						6,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -4109,6 +4695,30 @@
 						61125,
 						6,
 						0
+					],
+					[
+						60375,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						60450,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						60900,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						61050,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -4175,193 +4785,289 @@
 						61200,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						61200,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						61350,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						61200,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						61350,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						61500,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						61500,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						61650,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						61650,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						61800,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						61875,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						61950,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						62025,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						62100,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						62175,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						62250,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						62325,
+						1,
+						0,
+						"Jap Note"
 					],
 					[
 						61200,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61200,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61200,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61350,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61350,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61350,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61350,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61500,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61500,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61500,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61500,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61650,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61650,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61650,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61650,
 						4,
 						0,
-						"No Animation"
-					],
-					[
-						62250,
-						4,
-						0,
-						"No Animation"
-					],
-					[
-						62100,
-						4,
-						0,
-						"No Animation"
-					],
-					[
-						61950,
-						4,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61800,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61800,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61800,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61800,
 						7,
 						0,
-						"No Animation"
-					],
-					[
-						61950,
-						7,
-						0,
-						"No Animation"
-					],
-					[
-						61950,
-						5,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						61950,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						61950,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						61950,
+						4,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						61950,
+						5,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						62100,
-						7,
+						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						62100,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						62100,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
-						62250,
+						62100,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						62250,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						62250,
+						7,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						62250,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						62250,
+						4,
+						0,
+						"Jap Note no anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -4654,6 +5360,12 @@
 						76200,
 						3,
 						525
+					],
+					[
+						75600,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -4685,6 +5397,12 @@
 						77700,
 						1,
 						225
+					],
+					[
+						77100,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -4718,6 +5436,12 @@
 						78900,
 						1,
 						225
+					],
+					[
+						78300,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -4734,6 +5458,18 @@
 						79200,
 						0,
 						1125
+					],
+					[
+						79800,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						80100,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
 				"altAnim": false,
@@ -4748,6 +5484,24 @@
 						80400,
 						3,
 						1125
+					],
+					[
+						81000,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						81300,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						81300,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -4779,6 +5533,30 @@
 						82500,
 						1,
 						825
+					],
+					[
+						81600,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						81900,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						82200,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						82500,
+						5,
+						0,
+						"Jap Note"
 					]
 				],
 				"typeOfSection": 0,
@@ -4790,24 +5568,46 @@
 				"bpm": 110
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						83400,
 						2,
 						525
+					],
+					[
+						82800,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						83100,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						83400,
+						6,
+						0,
+						"Jap Note"
+					],
+					[
+						83700,
+						6,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -4829,16 +5629,40 @@
 						84900,
 						1,
 						525
+					],
+					[
+						84000,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						84300,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						84600,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						84900,
+						5,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -4850,16 +5674,40 @@
 						85800,
 						3,
 						525
+					],
+					[
+						85200,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						85500,
+						6,
+						0,
+						"Jap Note"
+					],
+					[
+						85800,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						86100,
+						7,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -4881,16 +5729,40 @@
 						87300,
 						1,
 						225
+					],
+					[
+						86400,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						86700,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						87000,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						87300,
+						5,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -4912,48 +5784,192 @@
 						88500,
 						1,
 						225
+					],
+					[
+						87600,
+						6,
+						0,
+						"Jap Note"
+					],
+					[
+						87900,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						88200,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						88500,
+						5,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						88800,
 						0,
 						1125
+					],
+					[
+						88800,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						88950,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						89100,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						89250,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						89400,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						89550,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						89700,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						89850,
+						4,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						90000,
 						3,
 						1125
+					],
+					[
+						90000,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90150,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90300,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90450,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90600,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90675,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90750,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90900,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90975,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						91050,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						91125,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						90825,
+						7,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -4980,32 +5996,80 @@
 						92100,
 						1,
 						825
+					],
+					[
+						91350,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						91650,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						91950,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						92250,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
 						93000,
 						2,
 						525
+					],
+					[
+						92400,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						92625,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						93000,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						93225,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5032,16 +6096,52 @@
 						94500,
 						1,
 						525
+					],
+					[
+						93600,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						93900,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						94050,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						93750,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						94200,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						94350,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5053,16 +6153,52 @@
 						95400,
 						3,
 						525
+					],
+					[
+						94800,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						94950,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						95100,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						95400,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						95850,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						95700,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5089,16 +6225,40 @@
 						96900,
 						1,
 						225
+					],
+					[
+						96150,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						96450,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						96750,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						97050,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5120,16 +6280,40 @@
 						98100,
 						1,
 						225
+					],
+					[
+						97350,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						97650,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						97950,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						98250,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5141,16 +6325,112 @@
 						98400,
 						0,
 						1125
+					],
+					[
+						98400,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						98550,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						98700,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						98850,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						99000,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						99150,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						99300,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						99450,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						99375,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						99225,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						99075,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						98925,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						98775,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						98625,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						98475,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						99525,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5234,11 +6514,6 @@
 						0
 					],
 					[
-						100725,
-						7,
-						0
-					],
-					[
 						100762.5,
 						7,
 						0
@@ -5254,22 +6529,7 @@
 						0
 					],
 					[
-						100725,
-						6,
-						0
-					],
-					[
-						100725,
-						5,
-						0
-					],
-					[
 						100762.5,
-						4,
-						0
-					],
-					[
-						100725,
 						4,
 						0
 					],
@@ -5279,43 +6539,8 @@
 						0
 					],
 					[
-						100650,
-						4,
-						0
-					],
-					[
 						100612.5,
 						4,
-						0
-					],
-					[
-						100575,
-						4,
-						0
-					],
-					[
-						100537.5,
-						4,
-						0
-					],
-					[
-						100500,
-						4,
-						0
-					],
-					[
-						100500,
-						5,
-						0
-					],
-					[
-						100500,
-						6,
-						0
-					],
-					[
-						100500,
-						7,
 						0
 					],
 					[
@@ -5324,17 +6549,7 @@
 						0
 					],
 					[
-						100650,
-						5,
-						0
-					],
-					[
 						100612.5,
-						5,
-						0
-					],
-					[
-						100575,
 						5,
 						0
 					],
@@ -5354,16 +6569,6 @@
 						0
 					],
 					[
-						100575,
-						7,
-						0
-					],
-					[
-						100575,
-						6,
-						0
-					],
-					[
 						100612.5,
 						6,
 						0
@@ -5371,16 +6576,6 @@
 					[
 						100612.5,
 						7,
-						0
-					],
-					[
-						100650,
-						7,
-						0
-					],
-					[
-						100650,
-						6,
 						0
 					],
 					[
@@ -5397,23 +6592,335 @@
 						99600,
 						2,
 						1125
+					],
+					[
+						100500,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						100500,
+						6,
+						0,
+						"Jap Note"
+					],
+					[
+						100500,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						100500,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						100500,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100500,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100425,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100425,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100425,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100350,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100275,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100200,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100200,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100200,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100275,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100275,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100350,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100350,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100500,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100575,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						100575,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						100575,
+						6,
+						0,
+						"Jap Note"
+					],
+					[
+						100575,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						100537.5,
+						4,
+						0
+					],
+					[
+						100650,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						100650,
+						6,
+						0,
+						"Jap Note"
+					],
+					[
+						100650,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						100650,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						100725,
+						4,
+						0,
+						"Jap Note"
+					],
+					[
+						100725,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						100725,
+						6,
+						0,
+						"Jap Note"
+					],
+					[
+						100725,
+						7,
+						0,
+						"Jap Note"
+					],
+					[
+						100725,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100762.5,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100687.5,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100650,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100575,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100612.5,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100537.5,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						100575,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100537.5,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100537.5,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100575,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100612.5,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100612.5,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100650,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100650,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100687.5,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100687.5,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100725,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						100762.5,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100725,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						100762.5,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						100800,
-						0,
-						0
-					],
 					[
 						100875,
 						1,
@@ -5488,23 +6995,24 @@
 						101925,
 						3,
 						0
+					],
+					[
+						100800,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						102000,
-						1,
-						0
-					],
 					[
 						102075,
 						0,
@@ -5579,16 +7087,22 @@
 						103125,
 						3,
 						0
+					],
+					[
+						102000,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5604,11 +7118,6 @@
 					[
 						103350,
 						0,
-						0
-					],
-					[
-						103425,
-						1,
 						0
 					],
 					[
@@ -5629,11 +7138,6 @@
 					[
 						103725,
 						1,
-						0
-					],
-					[
-						103800,
-						3,
 						0
 					],
 					[
@@ -5670,16 +7174,28 @@
 						104325,
 						3,
 						0
+					],
+					[
+						103425,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						103800,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5763,14 +7279,14 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -5854,21 +7370,16 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						106800,
-						1,
-						0
-					],
 					[
 						106875,
 						0,
@@ -5882,11 +7393,6 @@
 					[
 						107025,
 						0,
-						0
-					],
-					[
-						107100,
-						2,
 						0
 					],
 					[
@@ -5930,11 +7436,6 @@
 						0
 					],
 					[
-						107775,
-						1,
-						0
-					],
-					[
 						107850,
 						2,
 						0
@@ -5943,16 +7444,34 @@
 						107925,
 						3,
 						0
+					],
+					[
+						106800,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						107100,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						107775,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6016,34 +7535,38 @@
 						0
 					],
 					[
-						108900,
-						1,
-						0
-					],
-					[
-						108975,
+						109125,
+						3,
 						0,
-						0
+						"Jap Note"
 					],
 					[
 						109050,
 						2,
-						0
+						0,
+						"Jap Note"
 					],
 					[
-						109125,
-						3,
-						0
+						108900,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						108975,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6057,14 +7580,14 @@
 						1125
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6151,59 +7674,59 @@
 						110400,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						110400,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						110400,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						110400,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						111000,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						111000,
+						6,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						111000,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						111000,
-						6,
-						0,
-						"No Animation"
-					],
-					[
-						111000,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						111000,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6288,61 +7811,85 @@
 					],
 					[
 						111600,
-						4,
-						0,
-						"No Animation"
-					],
-					[
-						111600,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						111600,
-						7,
+						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						111600,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						111600,
+						7,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						112200,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						112200,
 						6,
 						0,
-						"No Animation"
-					],
-					[
-						112200,
-						4,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						112200,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						112200,
+						4,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						111675,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						112050,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						112350,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						112650,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6386,11 +7933,6 @@
 						0
 					],
 					[
-						113400,
-						3,
-						0
-					],
-					[
 						113475,
 						3,
 						0
@@ -6429,59 +7971,64 @@
 						112800,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						112800,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						112800,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						112800,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						113400,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						113400,
+						6,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						113400,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						113400,
-						6,
-						0,
-						"No Animation"
-					],
-					[
-						113400,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						113400,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						113400,
+						3,
+						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6568,59 +8115,77 @@
 						114000,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						114000,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						114000,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						114000,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						114600,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						114600,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						114600,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						114600,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						114075,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						114525,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						114825,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6707,59 +8272,59 @@
 						115200,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						115200,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						115200,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						115200,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						115800,
+						7,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						115800,
+						6,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						115800,
+						5,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						115800,
 						4,
 						0,
-						"No Animation"
-					],
-					[
-						115800,
-						5,
-						0,
-						"No Animation"
-					],
-					[
-						115800,
-						6,
-						0,
-						"No Animation"
-					],
-					[
-						115800,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6846,59 +8411,83 @@
 						116400,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						116400,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						116400,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						116400,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						117000,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						117000,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						117000,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						117000,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						116550,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						116850,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						117075,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						117375,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -6985,59 +8574,95 @@
 						117600,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						117600,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						117600,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						117600,
 						7,
 						0,
-						"No Animation"
-					],
-					[
-						118200,
-						5,
-						0,
-						"No Animation"
-					],
-					[
-						118200,
-						6,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						118200,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						118200,
+						6,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						118200,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						118200,
+						5,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						117675,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						117825,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						118200,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						118275,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						118425,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						118725,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7049,16 +8674,64 @@
 						118800,
 						2,
 						1125
+					],
+					[
+						119925,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						119775,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						119625,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						119475,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						119475,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						119625,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						119775,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						119925,
+						3,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7102,14 +8775,14 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7153,14 +8826,14 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7204,14 +8877,14 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7258,35 +8931,35 @@
 						123600,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						123600,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						123600,
-						6,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						123600,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						123600,
+						6,
+						0,
+						"Jap Note no anim"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7330,14 +9003,14 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7376,14 +9049,14 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7430,59 +9103,59 @@
 						127200,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						127200,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						127200,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						127200,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						128100,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						128100,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						128100,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						128100,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7527,37 +9200,37 @@
 					],
 					[
 						129000,
+						4,
+						0,
+						"Jap Note no anim"
+					],
+					[
+						129000,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						129000,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						129000,
 						7,
 						0,
-						"No Animation"
-					],
-					[
-						129000,
-						4,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7596,14 +9269,14 @@
 						225
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7625,16 +9298,28 @@
 						131700,
 						3,
 						225
+					],
+					[
+						131850,
+						5,
+						0,
+						"Jap Note"
+					],
+					[
+						131700,
+						6,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7671,16 +9356,28 @@
 						132900,
 						3,
 						225
+					],
+					[
+						132300,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						132900,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7707,59 +9404,71 @@
 						133200,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						133200,
 						5,
 						0,
-						"No Animation"
-					],
-					[
-						133200,
-						7,
-						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						133200,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						133200,
+						7,
+						0,
+						"Jap Note no anim"
 					],
 					[
 						133800,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						133800,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						133800,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						133800,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						133500,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						133800,
+						0,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7813,14 +9522,14 @@
 						0
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7874,14 +9583,14 @@
 						225
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": false
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7933,16 +9642,28 @@
 						137850,
 						1,
 						0
+					],
+					[
+						136950,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						136800,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -7999,59 +9720,113 @@
 						138600,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						138600,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						138600,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						138600,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						138900,
 						7,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						138900,
 						6,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						138900,
 						5,
 						0,
-						"No Animation"
+						"Jap Note no anim"
 					],
 					[
 						138900,
 						4,
 						0,
-						"No Animation"
+						"Jap Note no anim"
+					],
+					[
+						138000,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						138150,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						138300,
+						0,
+						0,
+						"Jap Note"
+					],
+					[
+						138450,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						138600,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						138600,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						138600,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						138900,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						138900,
+						1,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
@@ -8088,42 +9863,111 @@
 						139650,
 						7,
 						2100
+					],
+					[
+						139200,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						139800,
+						2,
+						0,
+						"Jap Note"
 					]
 				],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 200,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 200,
+				"sectionNotes": [
+					[
+						142800,
+						1,
+						0,
+						"Jap Note"
+					],
+					[
+						142800,
+						2,
+						0,
+						"Jap Note"
+					],
+					[
+						142800,
+						3,
+						0,
+						"Jap Note"
+					],
+					[
+						142800,
+						0,
+						0,
+						"Jap Note"
+					]
+				],
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 200,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 200
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 200
 			},
 			{
 				"gfSection": false,
@@ -8139,8 +9983,8 @@
 		"gfVersion": "gf",
 		"player3": null,
 		"splashSkin": "noteSplashes",
-		"song": "BOOM Old",
-		"stage": "roof",
+		"song": "BOOM old",
+		"stage": "roof-old",
 		"validScore": true,
 		"arrowSkin": "",
 		"needsVoices": true,
