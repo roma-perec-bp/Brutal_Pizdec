@@ -29,7 +29,7 @@ function onStepHit()
         doTweenAlpha('maniaPartYea','maniaPart', 1, 0.5, 'linear')
     end
     if curStep == 2971 then
-        doTweenAlpha('Fucked','maniaPart', 0, 0.1, 'linear')
+        doTweenAlpha('Fucked','maniaPart', 0, 0.01, 'linear')
     end
     if curStep == 3072 then
         setProperty('vin.visible', true)

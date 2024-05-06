@@ -2223,7 +2223,7 @@ class PlayState extends MusicBeatState
 				{
 					color = "0xFFFFFF";
 				}
-				camOther.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
+				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 
 			case 'Set Cam Zoom':
 				var val1:Float = Std.parseFloat(value1);
