@@ -544,8 +544,8 @@ class PlayState extends MusicBeatState
 
 		if(curStage != 'roof-old')
 		{
-			healthBarBGOverlay.x = healthBar.x - 27
-			healthBarBGOverlay.y = healthBar.y - 38
+			healthBarBGOverlay.x = healthBar.x - 27;
+			healthBarBGOverlay.y = healthBar.y - 38;
 		}
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
