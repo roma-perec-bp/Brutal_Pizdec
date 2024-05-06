@@ -87,6 +87,7 @@ class ChartingState extends MusicBeatState
         ['Flash Camera', 'V1: Duration, \nV2: Hex color\nDefault color FFFFFF'],
 		['Set Cam Zoom', 'V1: Zoom\nV2: Time(soon)'],
 		['GrassHey', "Value 1: on or off?"],
+		['Toogle CamZooming', 'shit that not let you camzoom lmao']
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 
 	];

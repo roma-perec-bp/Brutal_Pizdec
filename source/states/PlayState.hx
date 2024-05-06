@@ -525,7 +525,7 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			healthBarBGOverlay = new FlxSprite(healthBar.x - 27, healthBar.y - 38);
+			healthBarBGOverlay = new FlxSprite(0, 0);
 			healthBarBGOverlay.loadGraphic(Paths.image('healthBarBG', 'shared'));
 		}
 
@@ -541,6 +541,12 @@ class PlayState extends MusicBeatState
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
 		reloadHealthBarColors();
 		add(healthBar);
+
+		if(curStage != 'roof-old')
+		{
+			healthBarBGOverlay.x = healthBar.x - 27
+			healthBarBGOverlay.y = healthBar.y - 38
+		}
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
@@ -2196,6 +2202,9 @@ class PlayState extends MusicBeatState
 			case 'Play Sound':
 				if(flValue2 == null) flValue2 = 1;
 				FlxG.sound.play(Paths.sound(value1), flValue2);
+
+			case 'Toogle CamZooming':
+				camZooming = !camZooming;
 
 			
 			case 'Flash Camera':
