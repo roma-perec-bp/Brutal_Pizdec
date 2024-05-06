@@ -602,7 +602,8 @@ class PlayState extends MusicBeatState
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 
-		fireHalapeno.cameras = [camHUD];
+		if(curStage == 'roof-old')
+			fireHalapeno.cameras = [camHUD];
 
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
