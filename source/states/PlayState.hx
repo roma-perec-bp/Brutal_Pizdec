@@ -2173,6 +2173,39 @@ class PlayState extends MusicBeatState
 			case 'Play Sound':
 				if(flValue2 == null) flValue2 = 1;
 				FlxG.sound.play(Paths.sound(value1), flValue2);
+
+			
+			case 'Flash Camera':
+				var duration:Float = Std.parseFloat(value1);
+				var color:String = value2;
+				if (color.length > 1)
+				{
+					if (!color.startsWith('0x'))
+						color = '0xFF$color';
+				}
+				else
+				{
+					color = "0xFFFFFF";
+				}
+				camOther.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
+
+			case 'Set Cam Zoom':
+				var val1:Float = Std.parseFloat(value1);
+				var val2:Float = Std.parseFloat(value2);
+				if (Math.isNaN(val1))
+					val1 = 1;
+				if (Math.isNaN(val2) || val2 == 0)
+					defaultCamZoom = val1;
+				else
+				{
+					FlxTween.tween(camGame, {zoom: val1}, val2, {
+						ease: FlxEase.sineInOut,
+						onComplete: function(twn:FlxTween)
+						{
+							defaultCamZoom = camGame.zoom;
+						}
+					});
+				}
 		}
 		
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
