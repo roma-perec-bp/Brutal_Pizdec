@@ -13,7 +13,7 @@ class FlipaClip extends BaseStage
 		bg = new BGSprite('Sexy', -200, -200, 0, 0);
 		add(bg);
 
-		grad = new BGSprite('sexygradient', -200, -650, 0, 0);
+		grad = new BGSprite('sexygradient', -200, -1000, 0, 0);
 		grad.alpha = 0.001;
 		add(grad);
 	}
