@@ -19,7 +19,7 @@ class FlipaClip extends BaseStage
 
 	override function createPost()
 	{
-		water = new BGSprite('Flipaclip', 0, 600, 0, 0);
+		water = new BGSprite('Flipaclip', 0, 550, 0, 0);
 		water.scale.set(0.2, 0.2);
 		add(water);
 		water.cameras = [camHUD];
@@ -27,14 +27,29 @@ class FlipaClip extends BaseStage
 
 	override function update(elapsed:Float)
 	{
-		var mult:Float = FlxMath.lerp(0.4, water.scale.x, FlxMath.bound(1 - (elapsed * 9 ), 0, 1));
+		var mult:Float = FlxMath.lerp(0.2, water.scale.x, FlxMath.bound(1 - (elapsed * 9 ), 0, 1));
 		water.scale.set(mult, mult);
 		water.updateHitbox();
 	}
 
 	override function beatHit()
 	{
-		water.scale.set(0.3, 0.3);
+		water.scale.set(0.25, 0.25);
 		water.updateHitbox();
+	}
+
+	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
+	{
+		switch(eventName)
+		{
+			case 'BBG BG':
+				PlayState.instance.dad.alpha = 0.6;
+				FlxTween.tween(PlayState.instance.dad, {alpha: 1}, 0.8);
+				FlxG.camera.shake(0.03, 0.1);
+				game.health -= FlxG.random.float(0.2, 0.7);
+
+				FlxG.camera.zoom += 0.069;
+				camHUD.zoom += 0.07;
+		}
 	}
 }

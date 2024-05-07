@@ -94,6 +94,7 @@ class ChartingState extends MusicBeatState
 		['GrassHey', "Value 1: on or off?"],
 		['dead jumpscare', "Value 1: time"],
 		['boom dead', "yes"],
+		['BBG BG', "bye bg"],
 		['Toogle CamZooming', 'shit that not let you camzoom lmao'],
 		['Camera rotate on', "1: Speed multiplier\n2: Range"],
 		['Camera rotate off', ""],
