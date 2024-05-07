@@ -10,7 +10,8 @@ class Void extends BaseStage
 	override function create()
 	{
 		game.skipCountdown = true;
-		setStartCallback(startCut);
+		if(game.chartingMode == false)
+			setStartCallback(startCut);
 	}
 
 	override function createPost()

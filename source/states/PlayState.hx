@@ -18,6 +18,9 @@ import backend.Song;
 import backend.Section;
 import backend.Rating;
 
+import flixel.addons.effects.FlxTrail;
+import flixel.addons.effects.FlxTrailArea;
+
 import flixel.FlxBasic;
 import flixel.FlxObject;
 import flixel.FlxSubState;
@@ -217,9 +220,12 @@ class PlayState extends MusicBeatState
 	public var songMisses:Int = 0;
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
-	var scoreTxtTween:FlxTween;
 
+	var scoreTxtTween:FlxTween;
 	var sexcameratween:FlxTween;
+	var followTween:FlxTween;
+
+	var trail:FlxTrail;
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -294,6 +300,9 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
+
+		rotCam = false;
+		camera.angle = 0;
 
 		// Gameplay settings
 		healthGain = ClientPrefs.getGameplaySetting('healthgain');
@@ -1133,6 +1142,22 @@ class PlayState extends MusicBeatState
 		insert(members.indexOf(dadGroup), obj);
 	}
 
+	public function removeBehindGF(obj:FlxBasic)
+	{
+		remove(obj);
+		obj.destroy();
+	}
+	public function removeBehindBF(obj:FlxBasic)
+	{
+		remove(obj);
+		obj.destroy();
+	}
+	public function removeBehindDad(obj:FlxBasic)
+	{
+		remove(obj);
+		obj.destroy();
+	}
+
 	public function clearNotesBefore(time:Float)
 	{
 		var i:Int = unspawnNotes.length - 1;
@@ -1633,6 +1658,11 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 
+	public static var rotCam = false;
+	var rotCamSpd:Float = 1;
+	var rotCamRange:Float = 10;
+	var rotCamInd = 0;
+
 	override public function update(elapsed:Float)
 	{
 		/*if (FlxG.keys.justPressed.NINE)
@@ -1658,6 +1688,17 @@ class PlayState extends MusicBeatState
 			} else {
 				boyfriendIdleTime = 0;
 			}
+		}
+
+		if (rotCam)
+		{
+			rotCamInd++;
+			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange;
+		}
+		else
+		{
+			if(rotCamInd != 0) //Memory leak removing :D
+				rotCamInd = 0;
 		}
 
 		super.update(elapsed);
@@ -2267,6 +2308,129 @@ class PlayState extends MusicBeatState
 						{
 							sexcameratween = null;
 						}});
+
+			case 'Camera Follow Pos Tween':
+				if(camFollow != null)
+				{
+					if(followTween != null)
+						followTween.cancel();
+
+					var split:Array<String> = value1.split(',');
+					var xMove:Float = 0;
+					var yMove:Float = 0;
+					var time:Float = 0;
+
+					var ease = LuaUtils.getTweenEaseByString(value2);
+
+					isCameraOnForcedPos = false;
+					if(split != null || flValue2 != null)
+					{
+						isCameraOnForcedPos = true;
+						if(split[0] != null) xMove = Std.parseInt(split[0].trim());
+						if(split[1] != null) yMove = Std.parseInt(split[1].trim());
+						if(split[2] != null) time = Std.parseFloat(split[2].trim());
+
+						followTween = FlxTween.tween(camFollow, {x: xMove, y: yMove}, time, {ease: ease,
+							onComplete: function(twn:FlxTween)
+								{
+									followTween = null;
+								}});
+					}
+				}
+
+			case 'Add trail':
+				var split:Array<String> = value1.split(',');
+				var length:Int = 0;
+				var delay:Int = 0;
+				var alpha:Float = 0;
+				var diff:Float = 0;
+
+				var splitSec:Array<String> = value2.split(',');
+				var chara:String = '';
+				var color:Int = 0;
+				var blend:Int = 0;
+				var yes:String = '';
+
+				if(split[0] != null) length = Std.parseInt(split[0].trim());
+				if(split[1] != null) delay = Std.parseInt(split[1].trim());
+				if(split[2] != null) alpha = Std.parseFloat(split[2].trim());
+				if(split[3] != null) diff = Std.parseFloat(split[3].trim());
+				if(Math.isNaN(length)) length = 4;
+				if(Math.isNaN(delay)) delay = 24;
+				if(Math.isNaN(alpha)) alpha = 0.3;
+				if(Math.isNaN(diff)) diff = 0.069;
+
+				if(splitSec[0] != null) chara = splitSec[0].trim();
+				if(splitSec[1] != null) blend = Std.parseInt(splitSec[1].trim());
+				if(splitSec[2] != null) color = Std.parseInt(splitSec[2].trim());
+				if(splitSec[3] != null) yes = splitSec[3].trim();
+				if(Math.isNaN(blend)) blend = 0;
+
+				var char:Character = switch (chara.toLowerCase().trim()) {
+					case 'gf' | 'girlfriend': gf;
+					case 'dad' | 'opponent': dad;
+
+					default: boyfriend;
+				};
+
+				trail = new FlxTrail(char, null, length, delay, alpha, diff);
+
+				switch(blend) 
+				{
+					case 1:
+						trail.blend = HARDLIGHT;
+					case 2:
+						trail.blend = ADD;
+					case 3:
+						trail.blend = MULTIPLY;
+				}
+
+				if(yes == 'yes')
+				{
+					if(color == 0)
+					{
+						switch(chara.toLowerCase().trim()) {
+							case 'gf' | 'girlfriend':
+								var gfcol = gf.healthColorArray;
+								trail.color = FlxColor.fromRGB(gfcol[0], gfcol[1], gfcol[2]);
+							case 'dad' | 'opponent':
+								var dadCol = dad.healthColorArray;
+								trail.color = FlxColor.fromRGB(dadCol[0], dadCol[1], dadCol[2]);
+							default:
+								var bfCol = boyfriend.healthColorArray;
+								trail.color = FlxColor.fromRGB(bfCol[0], bfCol[1], bfCol[2]);
+						}
+					}
+					else
+						trail.color = color;
+				}
+
+				switch(chara.toLowerCase().trim()) {
+					case 'gf' | 'girlfriend':
+						addBehindGF(trail);
+					case 'dad' | 'opponent':
+						addBehindDad(trail);
+					default:
+						addBehindBF(trail);
+				}
+
+			case 'Remove trail':
+				switch(value1.toLowerCase().trim()) {
+					case 'gf' | 'girlfriend':
+						removeBehindGF(trail);
+					case 'dad' | 'opponent':
+						removeBehindDad(trail);
+					default:
+						removeBehindBF(trail);
+				}
+
+			case 'Camera rotate on': //VS SHAGGY ТОП
+				rotCam = true;
+				rotCamSpd = flValue1;
+				rotCamRange = flValue2;
+			case 'Camera rotate off':
+				rotCam = false;
+				camera.angle = 0;
 		}
 		
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
