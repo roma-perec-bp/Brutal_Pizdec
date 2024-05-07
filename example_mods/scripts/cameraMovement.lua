@@ -1,153 +1,77 @@
-local DadX = 0
-local DadY = 0
+offset = 30
+notes = {'Hurt Note','note1','note2'}
+idlemov = false
 
-local BfX = 0
-local BfY = 0
-
-local GfX = 0
-local GfY = 0
-
-local BfOfs = 25
-local GfOfs = 55
-local DadOfs = 25
-
-local BfOfsX = 0
-local BfOfsY = 0
-
-local GfOfsX = 0
-local GfOfsY = 0
-
-local DadOfsX = 0
-local DadOfsY = 0
-
-local enableSystem = true
-local cameraFollowing = true
-
-local currentTarget = ''
-local currentSection = nil
-local firstSection = false
-
---[[If you want to know the credits:
-i got a ideia of the script by Washo789, 
-the script is made by BF Myt.]]--
-function onBeatHit()
-    if curBeat % 4 == 0 and currentSection == nil then
-        currentSection = ''
-    end
+function goodNoteHit(_, d, t)
+	if not getProperty("isCameraOnForcedPos") and mustHitSection then
+		camera(d, true, type)
+	end
 end
-function onUpdate()
-    if enableSystem == true and getProperty('isCameraOnForcedPos') == false then
-        if currentSection ~= nil then
-            if gfSection ~= true then
-                if mustHitSection == false  then
-                    if currentSection ~= 'dad' then
-                        currentTarget = 'dad'
-                        currentSection = 'dad'
-                    end
-                else
-                    if currentSection ~= 'boyfriend' then
-                        currentTarget = 'boyfriend'
-                        currentSection = 'boyfriend'
-                    end
-                end
-            else
-                if currentSection ~= 'gf' then
-                    currentTarget = 'gf'
-                    currentSection = 'gf'
-                end
-            end
-        end
-        if currentTarget == 'boyfriend' then
-            BfX = getMidpointX('boyfriend') - 100 - getProperty('boyfriend.cameraPosition[0]') + getProperty('boyfriendCameraOffset[0]') + BfOfsX
-            BfY = getMidpointY('boyfriend') - 100 + getProperty('boyfriend.cameraPosition[1]') + getProperty('boyfriendCameraOffset[1]') + BfOfsY
-    
-            if string.find(getProperty('boyfriend.animation.curAnim.name'),'singLEFT',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',BfX-BfOfs,BfY)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('boyfriend.animation.curAnim.name'),'singDOWN',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',BfX,BfY+BfOfs)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('boyfriend.animation.curAnim.name'),'singRIGHT',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',BfX+BfOfs,BfY)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('boyfriend.animation.curAnim.name'),'singUP',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',BfX,BfY-BfOfs)
-                cameraFollowing = true
-            else
-                if cameraFollowing == true then
-                    triggerEvent('Camera Follow Pos',BfX,BfY)
-                    triggerEvent('Camera Follow Pos','','')
-                    cameraFollowing = false
-                end
-            end
-    
-        elseif currentTarget == 'dad' then
-            DadX = getMidpointX('dad') + 150 + getProperty('dad.cameraPosition[0]') + getProperty('opponentCameraOffset[0]') + DadOfsX
-            DadY = getMidpointY('dad') - 100 + getProperty('dad.cameraPosition[1]') + getProperty('opponentCameraOffset[1]') + DadOfsY
-    
-            if string.find(getProperty('dad.animation.curAnim.name'),'singLEFT',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',DadX-DadOfs,DadY)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('dad.animation.curAnim.name'),'singDOWN',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',DadX,DadY+DadOfs)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('dad.animation.curAnim.name'),'singUP',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',DadX,DadY-DadOfs)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('dad.animation.curAnim.name'),'singRIGHT',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',DadX+DadOfs,DadY)
-                cameraFollowing = true
-    
-            else
-                if cameraFollowing == true then
-                    triggerEvent('Camera Follow Pos',DadX,DadY)
-                    triggerEvent('Camera Follow Pos','','')
-                    cameraFollowing = false
-                end
-            end
-        elseif currentTarget == 'gf' then
-            GfX = getMidpointX('gf') + getProperty('gf.cameraPosition[0]') + getProperty('girlfriendCameraOffset[0]') + GfOfsX
-            GfY = getMidpointY('gf') + getProperty('gf.cameraPosition[1]') + getProperty('girlfriendCameraOffset[1]') + GfOfsY
-            if string.find(getProperty('gf.animation.curAnim.name'),'singLEFT',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',GfX-GfOfs,GfY)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('gf.animation.curAnim.name'),'singDOWN',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',GfX,GfY + GfOfs)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('gf.animation.curAnim.name'),'singUP',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',GfX,GfY - GfOfs)
-                cameraFollowing = true
-    
-            elseif string.find(getProperty('gf.animation.curAnim.name'),'singRIGHT',0,true) ~= nil then
-                triggerEvent('Camera Follow Pos',GfX+GfOfs,GfY)
-                cameraFollowing = true
-    
-            else
-                if cameraFollowing == true then
-                    triggerEvent('Camera Follow Pos',GfX,GfY)
-                    triggerEvent('Camera Follow Pos','','')
-                    cameraFollowing = false
-                end
-            end
-        end
-        setProperty('isCameraOnForcedPos',false)
-    else
-        if cameraFollowing == true then
-            cameraFollowing = false
-        end
-    end
+function opponentNoteHit(_, d, t)
+	if not getProperty("isCameraOnForcedPos") and not mustHitSection then
+		camera(d, false, t)
+	end
 end
-function onMoveCamera(focus)
-    if firstSection == false then
-        currentTarget = focus
-        firstSection = true
-    end
+function noteMiss(_, _, t)
+	if not getProperty("isCameraOnForcedPos") then
+		camera(nil, true, t)
+	end
+end
+
+function onEvent(name, v1, v2)
+	if name == "Camera Follow Pos" and v1 ~= '0' or v2 ~= '0' then
+		camera()
+	end
+end
+
+
+function camera(d,mp,t)	
+x = 0
+y = 0
+secs = 1.27 *  getProperty("cameraSpeed") * getPropertyFromClass("flixel.FlxG", "sound.music.pitch")
+	for _, n in ipairs(notes) do
+		if t ~= n and (gfSection or mp == nil or mp == mustHitSection) then
+			if d ~= nil then
+				x = (d == 0 and -offset or d == 3 and offset)
+				y = (d == 1 and offset or d == 2 and -offset) 
+				runTimer('moveshit',stepCrochet * (0.0011 / getPropertyFromClass("flixel.FlxG", "sound.music.pitch")) * getProperty((gfSection and "gf" or (mp and "boyfriend" or "dad")) .. ".singDuration") )
+			else
+				cancelTimer('moveshit')
+			end
+		end
+		--cancelTween('camXidle')
+		--cancelTween('camYidle')
+		doTweenX("camX", "camGame.targetOffset",x, secs, "quintOut")
+		doTweenY("camY", "camGame.targetOffset",y, secs, "quintOut")
+	end
+end
+
+function onTimerCompleted(t)
+	if t == "moveshit" then
+		camera()
+	end	
+end
+
+function onUpdatePost()
+	if idlemov and not getProperty("isCameraOnForcedPos") then
+		secsidle = 1.27 *  getProperty("cameraSpeed") * getPropertyFromClass("flixel.FlxG", "sound.music.pitch")
+		char = (gfSection and 'gf' or (mustHitSection and 'boyfriend' or 'dad'))
+		frames = getProperty(char..'.animation.curAnim.numFrames')
+			if getProperty(char..'.danceIdle') then
+				if getProperty(char..'.animation.curAnim.curFrame') == tonumber(math.floor(frames/2)) then
+					xid = (stringStartsWith(getProperty(char..'.animation.curAnim.name'),'danceLeft') and offset or stringStartsWith(getProperty(char..'.animation.curAnim.name'),'danceRight') and -offset)
+					doTweenX("camXidle", "camGame.targetOffset",xid, secsidle, "quintOut")
+				end
+				if getProperty(char..'.animation.curAnim.curFrame') == 0 and (stringStartsWith(getProperty(char..'.animation.curAnim.name'),'danceLeft') or stringStartsWith(getProperty(char..'.animation.curAnim.name'),'danceRight')) then
+					doTweenX("camXidle", "camGame.targetOffset",0, secsidle, "quintOut")
+				end	
+			else
+				if getProperty(char..'.animation.curAnim.curFrame') == 0 then
+					yid = (stringStartsWith(getProperty(char..'.animation.curAnim.name'),'idle') and offset)
+					doTweenY("camYidle", "camGame.targetOffset",yid, secsidle, "quintOut")
+				elseif getProperty(char..'.animation.curAnim.curFrame') == tonumber(math.floor(frames/2)) and not stringStartsWith(getProperty(char..'.animation.curAnim.name'),'sing') then
+					doTweenY("camYidle", "camGame.targetOffset",0, secsidle, "quintOut")
+				end
+			end
+	end
 end
