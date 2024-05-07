@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "hot pepper idle"
-		},
-		{
-			"offsets": [
-				125,
-				-61
-			],
-			"indices": [],
 			"fps": 24,
-			"anim": "singDOWN",
-			"loop": false,
-			"name": "hot pepper down"
+			"name": "zombie chill idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				50,
+				9,
 				0
 			],
-			"indices": [],
+			"anim": "singDOWN",
 			"fps": 24,
+			"name": "zombie chill down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				29
+			],
 			"anim": "singUP",
-			"loop": false,
-			"name": "hot pepper up"
+			"fps": 24,
+			"name": "zombie chill up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-92,
-				-150
+				-32,
+				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "hot pepper right"
+			"fps": 24,
+			"name": "zombie chill right",
+			"indices": []
 		},
 		{
-			"offsets": [
-				595,
-				-35
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT",
 			"loop": false,
-			"name": "hot pepper left"
+			"offsets": [
+				16,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "zombie chill left",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -65,13 +65,13 @@
 	"healthicon": "sex",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		255,
+		0,
+		0
 	],
 	"camera_position": [
-		110,
-		390
+		-120,
+		220
 	],
 	"sing_duration": 4,
 	"scale": 0.8

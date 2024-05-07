@@ -1,7 +1,5 @@
-function onCreate()
-    setPropertyFromClass('backend.ClientPrefs', 'data.opponentStrums', false)
+function onSongStart()
+    for i = 0,3 do
+        setPropertyFromGroup('opponentStrums', i, 'alpha', 0)
+    end
 end
-
-function onDestroy()
-    setPropertyFromClass('backend.ClientPrefs', 'data.opponentStrums', getPropertyFromClass('ClientPrefs', 'opponentStrums'))
-  end

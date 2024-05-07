@@ -5,6 +5,9 @@
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
 			"indices": [
 				15,
 				16,
@@ -22,9 +25,6 @@
 				28,
 				29
 			],
-			"fps": 24,
-			"anim": "danceRight",
-			"loop": false,
 			"name": "chill-sexy idle"
 		},
 		{
@@ -32,6 +32,9 @@
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
 			"indices": [
 				30,
 				1,
@@ -49,9 +52,6 @@
 				13,
 				14
 			],
-			"fps": 24,
-			"anim": "danceLeft",
-			"loop": false,
 			"name": "chill-sexy idle"
 		},
 		{
@@ -59,10 +59,10 @@
 				-19,
 				-46
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "chill-sexy left"
 		},
 		{
@@ -70,10 +70,10 @@
 				-46,
 				-123
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "chill-sexy down"
 		},
 		{
@@ -81,10 +81,10 @@
 				-45,
 				63
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "chill-sexy up"
 		},
 		{
@@ -92,10 +92,10 @@
 				-46,
 				-88
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "chill-sexy right"
 		}
 	],
@@ -108,14 +108,14 @@
 	"healthicon": "sex",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
-	],
-	"camera_position": [
-		-70,
+		255,
+		0,
 		0
 	],
-	"sing_duration": 6.1,
+	"camera_position": [
+		-90,
+		170
+	],
+	"sing_duration": 4.00000000000001,
 	"scale": 1
 }

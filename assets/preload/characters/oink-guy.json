@@ -3,119 +3,147 @@
 		{
 			"loop": false,
 			"offsets": [
-				5,
-				-6
+				-1,
+				0
 			],
-			"anim": "singLEFT",
+			"anim": "danceLeft",
 			"fps": 24,
-			"name": "BF NOTE LEFT0",
-			"indices": []
+			"name": "oink idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-20,
-				-51
+				17,
+				2
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "oink idle",
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				-141
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "BF NOTE DOWN0",
+			"name": "oink down0",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-46,
-				27
+				16,
+				57
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "BF NOTE UP0",
+			"name": "oink up0",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-48,
-				-7
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "BF NOTE RIGHT0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				7,
-				19
-			],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "BF NOTE LEFT MISS",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-15,
-				-19
-			],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "BF NOTE DOWN MISS",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-46,
-				27
+				11,
+				87
 			],
 			"anim": "singUPmiss",
 			"fps": 24,
-			"name": "BF NOTE UP MISS",
+			"name": "oink up miss",
 			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-44,
-				22
+				95,
+				-159
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BF NOTE RIGHT MISS",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "oink down miss"
 		},
 		{
 			"offsets": [
-				-5,
-				0
+				385,
+				-27
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "idle",
+			"anim": "singLEFTmiss",
 			"loop": false,
-			"name": "oink idle"
+			"name": "oink right miss"
+		},
+		{
+			"offsets": [
+				93,
+				-29
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "oink left miss"
+		},
+		{
+			"offsets": [
+				27,
+				-22
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "oink left0"
+		},
+		{
+			"offsets": [
+				172,
+				-27
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "oink right0"
 		}
 	],
-	"no_antialiasing": false,
+	"no_antialiasing": true,
 	"image": "characters/oink_guy_ASSET",
 	"position": [
 		90,
 		80
 	],
 	"healthicon": "oink",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		49,
 		176,
 		209
 	],
 	"camera_position": [
-		0,
-		0
+		60,
+		140
 	],
 	"sing_duration": 4,
 	"scale": 0.7

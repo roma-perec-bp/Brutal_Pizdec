@@ -16,10 +16,10 @@
 				173,
 				23
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "chill chill down"
 		},
 		{
@@ -27,10 +27,10 @@
 				160,
 				220
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "chill chill up"
 		},
 		{
@@ -38,10 +38,10 @@
 				-90,
 				-240
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "chill chill right"
 		},
 		{
@@ -49,10 +49,10 @@
 				439,
 				-280
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "chill chill left"
 		}
 	],
@@ -65,13 +65,13 @@
 	"healthicon": "sex",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		255,
+		0,
+		0
 	],
 	"camera_position": [
-		110,
-		390
+		60,
+		450
 	],
 	"sing_duration": 4,
 	"scale": 0.5

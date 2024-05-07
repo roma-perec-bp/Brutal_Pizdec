@@ -3,17 +3,6 @@
 		{
 			"loop": false,
 			"offsets": [
-				-524,
-				-292
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "monopepper right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
 				0,
 				0
 			],
@@ -23,37 +12,80 @@
 			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-20,
-				-141
+				20,
+				-222
 			],
-			"anim": "singLEFT",
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
 			"fps": 24,
-			"name": "monopepper left",
-			"indices": []
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "monopepper left"
 		},
 		{
+			"offsets": [
+				-574,
+				-342
+			],
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
 			"loop": false,
+			"name": "monopepper right"
+		},
+		{
 			"offsets": [
 				-525,
-				-496
+				-626
 			],
-			"anim": "singDOWN",
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
 			"fps": 24,
-			"name": "monopepper down",
-			"indices": []
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "monopepper down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-374,
-				42
+				-28
 			],
-			"anim": "singUP",
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
 			"fps": 24,
-			"name": "monopepper up",
-			"indices": []
+			"anim": "singUP",
+			"loop": false,
+			"name": "monopepper up"
 		}
 	],
 	"no_antialiasing": false,
@@ -73,6 +105,6 @@
 		170,
 		170
 	],
-	"sing_duration": 6.1,
+	"sing_duration": 4.00000000000001,
 	"scale": 1
 }
