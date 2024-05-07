@@ -4,12 +4,13 @@ import states.stages.objects.*;
 
 class FlipaClip extends BaseStage
 {
+	public var bg:BGSprite;
 	public var grad:BGSprite;
 	public var water:BGSprite;
 
 	override function create()
 	{
-		var bg:BGSprite = new BGSprite('Sexy', -200, -200, 0, 0);
+		bg = new BGSprite('Sexy', -200, -200, 0, 0);
 		add(bg);
 
 		grad = new BGSprite('sexygradient', -200, 0, 0, 0);
@@ -43,13 +44,8 @@ class FlipaClip extends BaseStage
 		switch(eventName)
 		{
 			case 'BBG BG':
-				PlayState.instance.dad.alpha = 0.6;
-				FlxTween.tween(PlayState.instance.dad, {alpha: 1}, 0.8);
-				FlxG.camera.shake(0.03, 0.1);
-				game.health -= FlxG.random.float(0.2, 0.7);
-
-				FlxG.camera.zoom += 0.069;
-				camHUD.zoom += 0.07;
+				FlxTween.tween(bg, {alpha: 0}, 40);
+				FlxTween.tween(grad, {alpha: 1}, 40);
 		}
 	}
 }
