@@ -95,9 +95,9 @@ class FreeplayState extends MusicBeatState
 			case 1:
 				addWeek(['Anekdot', 'Klork', 'T short', 'Monochrome', '64 rubl', 'Lore'], 1, bonusColors, ['box', 'lork', 'short', 'deadjap', 'bf', 'bf'], ['lamar', 'lork', 'tshort', 'dead', 'lamar', 'gandons']);
 			case 2:
-				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen '], 1, coverColors, ['jap', 'jamar'], ['bbg', 'lamar']);
+				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex', 'jamar'], ['bbg', 'lamar']);
 			case 3:
-				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, oldColors, ['dad', 'dad', 'lork'], ['lamar', 'lamar', 'lork']);
+				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, oldColors, ['jap-old', 'jap-wheel-old', 'lork'], ['lamar', 'lamar', 'lork']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
