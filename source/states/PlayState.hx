@@ -1947,7 +1947,7 @@ class PlayState extends MusicBeatState
 				{
 					FlxTween.cancelTweensOf(dad);
 					FlxTween.tween(dad, {alpha: 0}, 0.8);
-					FlxTween.tween(dad, {alpha: 0}, 1, {onComplete:
+					FlxTween.tween(camHUD, {alpha: 0}, 2, {onComplete:
 						function (twn:FlxTween)
 						{
 							MusicBeatState.resetState();
