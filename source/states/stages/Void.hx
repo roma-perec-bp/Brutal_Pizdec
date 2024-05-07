@@ -24,7 +24,6 @@ class Void extends BaseStage
 		jumpScare.cameras = [camOther];
 
 		PlayState.instance.dad.alpha = 0.001;
-		FlxTween.tween(PlayState.instance.dad, {alpha: 1}, 0.8);
 	}
 
 	function startCut()
@@ -32,9 +31,6 @@ class Void extends BaseStage
 		/*FlxG.sound.play(Paths.sound('dead' + FlxG.random.int(0, 69)), 1, false, null, true, function() {
 			startCountdown();
 		});*/
-
-		FlxTween.tween(PlayState.instance.dad, {alpha: 1}, 0.8);
-
 		FlxG.sound.play(Paths.sound('dead'), 1, false, null, true, function() {
 			FlxTween.tween(PlayState.instance.dad, {alpha: 1}, 0.8);
 			startCountdown();

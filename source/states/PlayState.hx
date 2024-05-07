@@ -406,7 +406,9 @@ class PlayState extends MusicBeatState
 		{
 			case 'stage': new states.stages.StageWeek1(); //Default
 			case 'night': new states.stages.Roof(); //Perec
+			case 'day': new states.stages.Grass(); //Klork and shit
 			case 'void': new states.stages.Void(); //Dead Perec
+			case 'flipaclip': new states.stages.FlipaClip(); //Малыш~
 			case 'roof-old': new states.stages.OldRoof(); //Perec Old
 		}
 
