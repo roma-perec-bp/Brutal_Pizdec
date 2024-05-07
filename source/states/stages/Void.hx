@@ -57,7 +57,7 @@ class Void extends BaseStage
 		}
 	}
 
-	var jumpscareSizeInterval:Float = 0.879;
+	var jumpscareSizeInterval:Float = 1.323;
 
 	function jumpscare(duration:Float) {
 		// jumpscare
