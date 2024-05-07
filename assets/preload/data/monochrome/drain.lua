@@ -1,7 +1,7 @@
-
-function opponentNoteHit()
-    health = getProperty('health')
-    if getProperty('health') > 0.08 then
-        setProperty('health', health- 0.02);
-    end
+function onCreate()
+    setPropertyFromClass('backend.ClientPrefs', 'data.opponentStrums', false)
 end
+
+function onDestroy()
+    setPropertyFromClass('backend.ClientPrefs', 'data.opponentStrums', getPropertyFromClass('ClientPrefs', 'opponentStrums'))
+  end

@@ -85,8 +85,10 @@ class ChartingState extends MusicBeatState
 		['Change Scroll Speed', "Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."],
 		['Play Sound', "Value 1: Sound file name\nValue 2: Volume (Default: 1), ranges from 0 to 1"],
         ['Flash Camera', 'V1: Duration, \nV2: Hex color\nDefault color FFFFFF'],
-		['Set Cam Zoom', 'V1: Zoom\nV2: Time(soon)'],
+		['Set Cam Zoom', 'V1: Zoom\nV2: Time'],
 		['GrassHey', "Value 1: on or off?"],
+		['dead jumpscare', "Value 1: time"],
+		['boom dead', "yes"],
 		['Toogle CamZooming', 'shit that not let you camzoom lmao'],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 

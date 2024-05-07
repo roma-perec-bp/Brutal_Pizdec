@@ -387,9 +387,10 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'stage': new states.stages.StageWeek1(); //Week 1
-			case 'night': new states.stages.Roof(); //Week 1
-			case 'roof-old': new states.stages.OldRoof(); //Week 1
+			case 'stage': new states.stages.StageWeek1(); //Default
+			case 'night': new states.stages.Roof(); //Perec
+			case 'void': new states.stages.Void(); //Dead Perec
+			case 'roof-old': new states.stages.OldRoof(); //Perec Old
 		}
 
 		if(isPixelStage) {
@@ -1942,7 +1943,21 @@ class PlayState extends MusicBeatState
 					timer.active = true;
 				}
 				#end
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollow.x, camFollow.y));
+				if(curStage == 'void')
+				{
+					FlxTween.cancelTweensOf(dad);
+					FlxTween.tween(dad, {alpha: 0}, 0.8);
+					FlxTween.tween(dad, {alpha: 0}, 1, {onComplete:
+						function (twn:FlxTween)
+						{
+							MusicBeatState.resetState();
+						}
+					});
+				}
+				else
+				{
+					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollow.x, camFollow.y));
+				}
 
 				// MusicBeatState.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 

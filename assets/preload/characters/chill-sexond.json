@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "chill chill idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				173,
+				23
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "chill chill down"
+		},
+		{
+			"offsets": [
+				160,
+				220
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "chill chill up"
+		},
+		{
+			"offsets": [
+				-90,
+				-240
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "chill chill right"
+		},
+		{
+			"offsets": [
+				439,
+				-280
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "chill chill left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/chill",
+	"position": [
+		-220,
+		-420
+	],
+	"healthicon": "sex",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		110,
+		390
+	],
+	"sing_duration": 4,
+	"scale": 0.5
+}
