@@ -219,6 +219,8 @@ class PlayState extends MusicBeatState
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
+	var sexcameratween:FlxTween;
+
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
@@ -2241,22 +2243,30 @@ class PlayState extends MusicBeatState
 				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 
 			case 'Set Cam Zoom':
-				var val1:Float = Std.parseFloat(value1);
-				var val2:Float = Std.parseFloat(value2);
-				if (Math.isNaN(val1))
-					val1 = 1;
-				if (Math.isNaN(val2) || val2 == 0)
-					defaultCamZoom = val1;
-				else
-				{
-					FlxTween.tween(camGame, {zoom: val1}, val2, {
-						ease: FlxEase.sineInOut,
-						onComplete: function(twn:FlxTween)
+				if(flValue1 == null) flValue1 = 1;
+				if(flValue2 == null) flValue2 = 1;
+
+				if(sexcameratween != null)
+					sexcameratween.cancel();
+
+				sexcameratween = FlxTween.tween(this, {defaultCamZoom: flValue1}, flValue2, {ease: FlxEase.sineInOut,
+					onComplete: function(twn:FlxTween)
 						{
-							defaultCamZoom = camGame.zoom;
-						}
-					});
-				}
+							sexcameratween = null;
+						}});
+
+			case 'Set Cam Zoom Alt': //нужна если camZooming == false
+				if(flValue1 == null) flValue1 = 1;
+				if(flValue2 == null) flValue2 = 1;
+
+				if(sexcameratween != null)
+					sexcameratween.cancel();
+
+				sexcameratween = FlxTween.tween(FlxG.camera, {zoom: flValue1}, flValue2, {ease: FlxEase.sineInOut,
+					onComplete: function(twn:FlxTween)
+						{
+							sexcameratween = null;
+						}});
 		}
 		
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));

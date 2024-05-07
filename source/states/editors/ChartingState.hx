@@ -86,6 +86,7 @@ class ChartingState extends MusicBeatState
 		['Play Sound', "Value 1: Sound file name\nValue 2: Volume (Default: 1), ranges from 0 to 1"],
         ['Flash Camera', 'V1: Duration, \nV2: Hex color\nDefault color FFFFFF'],
 		['Set Cam Zoom', 'V1: Zoom\nV2: Time'],
+		['Set Cam Zoom Alt', 'V1: Zoom\nV2: Time'],
 		['GrassHey', "Value 1: on or off?"],
 		['dead jumpscare', "Value 1: time"],
 		['boom dead', "yes"],
