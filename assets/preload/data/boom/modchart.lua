@@ -1,10 +1,9 @@
-
 function onCreate()
     makeLuaSprite('maniaPart', null, 360, 0)
-	makeGraphic('maniaPart', 560, 720, '000000')
-	setObjectCamera('maniaPart', 'hud')
-	setProperty('maniaPart.alpha', 0.00001)
-	addLuaSprite('maniaPart', false)
+    makeGraphic('maniaPart', 560, 720, '000000')
+    setObjectCamera('maniaPart', 'hud')
+    setProperty('maniaPart.alpha', 0.00001)
+    addLuaSprite('maniaPart', false)
 	
     --начало модчарта хахаха
     makeLuaSprite('blackFlash', null, 0, 0)
@@ -34,7 +33,7 @@ function onStepHit()
     if curStep == 3072 then
         setProperty('vin.visible', true)
     end
-    if curStep == 3854 then
+    if curStep == 3584 then
         setProperty('vin.visible', false)
     end
 end
