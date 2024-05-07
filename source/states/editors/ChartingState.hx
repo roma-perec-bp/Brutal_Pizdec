@@ -60,7 +60,8 @@ class ChartingState extends MusicBeatState
 		'GF Sing',
 		'No Animation',
 		'Jap Note',
-		'Jap Note no anim'
+		'Jap Note no anim',
+		'rom'
 	];
 	public var ignoreWarnings = false;
 	var curNoteTypes:Array<String> = [];

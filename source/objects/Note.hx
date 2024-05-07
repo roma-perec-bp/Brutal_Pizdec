@@ -100,6 +100,8 @@ class Note extends FlxSprite
 	public var copyAngle:Bool = true;
 	public var copyAlpha:Bool = true;
 
+	public var romNote:Bool = false;
+
 	public var jap:Bool = false;
 
 	public var hitHealth:Float = 0.023;
@@ -190,6 +192,8 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
+				case 'rom':
+					romNote = true;
 				case 'Jap Note':
 					ignoreNote = mustPress;
 					reloadNote('JAPNOTE_assets');

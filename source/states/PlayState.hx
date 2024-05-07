@@ -104,6 +104,7 @@ class PlayState extends MusicBeatState
 
 	public var boyfriendMap:Map<String, Character> = new Map<String, Character>();
 	public var dadMap:Map<String, Character> = new Map<String, Character>();
+	public var romMap:Map<String, Character> = new Map<String, Character>();
 	public var gfMap:Map<String, Character> = new Map<String, Character>();
 	public var variables:Map<String, Dynamic> = new Map<String, Dynamic>();
 	
@@ -136,6 +137,7 @@ class PlayState extends MusicBeatState
 
 	public var boyfriendGroup:FlxSpriteGroup;
 	public var dadGroup:FlxSpriteGroup;
+	public var romGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
 	public static var curStage:String = '';
 	public static var stageUI:String = "normal";
@@ -159,6 +161,8 @@ class PlayState extends MusicBeatState
 	public var dad:Character = null;
 	public var gf:Character = null;
 	public var boyfriend:Character = null;
+
+	public var rom:Character = null; //ТОТ САМЫЫЫЙ!!!!111!1!1
 
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
@@ -210,6 +214,7 @@ class PlayState extends MusicBeatState
 
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
+	public var iconROM:HealthIcon;
 	public var camHUD:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
@@ -393,6 +398,7 @@ class PlayState extends MusicBeatState
 			girlfriendCameraOffset = [0, 0];
 
 		boyfriendGroup = new FlxSpriteGroup(BF_X, BF_Y);
+		romGroup = new FlxSpriteGroup(DAD_X + 100, DAD_Y - 100);
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
 
@@ -409,6 +415,7 @@ class PlayState extends MusicBeatState
 		}
 
 		add(gfGroup);
+		if(SONG.song == 'lore') add(romGroup);
 		add(dadGroup);
 		add(boyfriendGroup);
 
@@ -448,6 +455,14 @@ class PlayState extends MusicBeatState
 			gf.scrollFactor.set(0.95, 0.95);
 			gfGroup.add(gf);
 			startCharacterScripts(gf.curCharacter);
+		}
+
+		if(SONG.song == 'lore')
+		{
+			rom = new Character(0, 0, 'bf');
+			startCharacterPos(rom, true);
+			romGroup.add(rom);
+			startCharacterScripts(rom.curCharacter);
 		}
 
 		dad = new Character(0, 0, SONG.player2);
@@ -572,6 +587,15 @@ class PlayState extends MusicBeatState
 		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
 		add(iconP2);
 
+		if(SONG.song == 'lore')
+		{
+			iconROM = new HealthIcon(rom.healthIcon, false);
+			iconROM.y = healthBar.y - 100;
+			iconROM.visible = !ClientPrefs.data.hideHud;
+			iconROM.alpha = ClientPrefs.data.healthBarAlpha;
+			add(iconROM);
+		}
+
 		scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
@@ -611,6 +635,7 @@ class PlayState extends MusicBeatState
 		healthBar.cameras = [camHUD];
 		healthBarBGOverlay.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
+		if(SONG.song == 'lore') iconROM.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 
@@ -1564,7 +1589,7 @@ class PlayState extends MusicBeatState
 			if (finishTimer != null && !finishTimer.finished) finishTimer.active = false;
 			if (songSpeedTween != null) songSpeedTween.active = false;
 
-			var chars:Array<Character> = [boyfriend, gf, dad];
+			var chars:Array<Character> = [boyfriend, gf, dad, rom];
 			for (char in chars)
 				if(char != null && char.colorTween != null)
 					char.colorTween.active = false;
@@ -1592,7 +1617,7 @@ class PlayState extends MusicBeatState
 			if (finishTimer != null && !finishTimer.finished) finishTimer.active = true;
 			if (songSpeedTween != null) songSpeedTween.active = true;
 
-			var chars:Array<Character> = [boyfriend, gf, dad];
+			var chars:Array<Character> = [boyfriend, gf, dad, rom];
 			for (char in chars)
 				if(char != null && char.colorTween != null)
 					char.colorTween.active = true;
@@ -1730,24 +1755,37 @@ class PlayState extends MusicBeatState
 		iconP2.scale.set(mult, mult);
 		iconP2.updateHitbox();
 
+		if(curSong == 'lore')
+		{
+			var mult:Float = FlxMath.lerp(1, iconROM.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
+			iconROM.scale.set(mult, mult);
+			iconROM.updateHitbox();
+		}
+
 		var iconOffset:Int = 26;
 		if (health > 2) health = 2;
+
 		iconP1.x = healthBar.barCenter + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
 		iconP2.x = healthBar.barCenter - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
+		if(curSong == 'lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 100) / 2 - iconOffset * 2;
+
 		if (healthBar.percent < 20) 
 		{
 			iconP1.animation.curAnim.curFrame = 1;
 			iconP2.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
+			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
 		}
 		else if (healthBar.percent > 80)
 		{
 			iconP1.animation.curAnim.curFrame = iconP1.numFrames > 2 ? 2 : 0;
 			iconP2.animation.curAnim.curFrame = 1;
+			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = 1;
 		}
 		else 
 		{
 			iconP1.animation.curAnim.curFrame = 0;
 			iconP2.animation.curAnim.curFrame = 0;
+			if(curSong == 'lore') iconP2.animation.curAnim.curFrame = 0;
 		}
 
 		if (controls.justPressed('debug_2') && !endingSong && !inCutscene)
@@ -3153,6 +3191,9 @@ class PlayState extends MusicBeatState
 			if(note.gfNote) {
 				char = gf;
 			}
+			else if(note.romNote){
+				char = rom;
+			}
 
 			if(char != null)
 			{
@@ -3369,9 +3410,11 @@ class PlayState extends MusicBeatState
 			notes.sort(FlxSort.byY, ClientPrefs.data.downScroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
 
 		iconP1.scale.set(1.2, 1.2);
+		if(curSong == 'lore') iconROM.scale.set(1.2, 1.2);
 		iconP2.scale.set(1.2, 1.2);
 
 		iconP1.updateHitbox();
+		if(curSong == 'lore') iconROM.updateHitbox();
 		iconP2.updateHitbox();
 
 		if (gf != null && curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
@@ -3380,6 +3423,12 @@ class PlayState extends MusicBeatState
 			boyfriend.dance();
 		if (curBeat % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 			dad.dance();
+
+		if(curSong == 'lore')
+		{
+			if (curBeat % rom.danceEveryNumBeats == 0 && rom.animation.curAnim != null && !rom.animation.curAnim.name.startsWith('sing') && !rom.stunned)
+				rom.dance();
+		}
 
 		super.beatHit();
 		lastBeatHit = curBeat;
