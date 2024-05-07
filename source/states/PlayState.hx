@@ -2249,7 +2249,7 @@ class PlayState extends MusicBeatState
 				if(sexcameratween != null)
 					sexcameratween.cancel();
 
-				sexcameratween = FlxTween.tween(this, {defaultCamZoom: flValue1}, flValue2, {ease: FlxEase.sineInOut,
+				sexcameratween = FlxTween.tween(this, {defaultCamZoom: flValue1}, flValue2, {ease: FlxEase.quadInOut,
 					onComplete: function(twn:FlxTween)
 						{
 							sexcameratween = null;
@@ -2262,7 +2262,7 @@ class PlayState extends MusicBeatState
 				if(sexcameratween != null)
 					sexcameratween.cancel();
 
-				sexcameratween = FlxTween.tween(FlxG.camera, {zoom: flValue1}, flValue2, {ease: FlxEase.sineInOut,
+				sexcameratween = FlxTween.tween(FlxG.camera, {zoom: flValue1}, flValue2, {ease: FlxEase.quadInOut,
 					onComplete: function(twn:FlxTween)
 						{
 							sexcameratween = null;
