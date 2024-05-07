@@ -45,7 +45,7 @@ class FlipaClip extends BaseStage
 		{
 			case 'BBG BG':
 				FlxTween.tween(bg, {alpha: 0}, 20);
-				FlxTween.tween(grad, {alpha: 1}, 10);
+				FlxTween.tween(grad, {alpha: 1}, 20);
 		}
 	}
 }
