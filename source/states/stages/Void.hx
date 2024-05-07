@@ -72,6 +72,10 @@ class Void extends BaseStage
 						jumpScare.screenCenter();
 					}, true
 				);
+				camHUD.shake(0.0125 * (jumpscareSizeInterval / 2), (((!Math.isNaN(duration)) ? duration : 1) * Conductor.stepCrochet) / 1000);
+
+			FlxG.camera.zoom += 0.069;
+			camHUD.zoom += 0.07;
 		}
 		else
 		{
