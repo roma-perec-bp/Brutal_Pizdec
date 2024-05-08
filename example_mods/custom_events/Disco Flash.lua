@@ -1,5 +1,5 @@
 function onCreate()
-	makeLuaSprite('flash', 'discoVin', 0, 0);
+	makeLuaSprite('flash', 'discoVin', 0, 0); -- почему это зуйня не отображается имеено на песни ламара блять
 	setObjectCamera('flash', 'hud')
 	setObjectOrder('flash', 0)
 	addLuaSprite('flash', true);
