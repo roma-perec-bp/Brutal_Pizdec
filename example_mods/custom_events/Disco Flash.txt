@@ -1,0 +1,2 @@
+Vaule 1: Duration
+Vaule 2: Color
