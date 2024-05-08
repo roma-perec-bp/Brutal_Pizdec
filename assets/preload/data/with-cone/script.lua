@@ -1,4 +1,5 @@
 local gfAss = false
+local fire = false
 
 function onCreate()
     setProperty('skipCountdown', true)
@@ -20,9 +21,53 @@ end
 
 function onCreatePost()
     setCharacterX('dad', -200)
+
+    if (shadersEnabled) then
+        initLuaShader("sandstorm");
+        makeLuaSprite("temporaryShader");
+        makeGraphic("temporaryShader", screenWidth, screenHeight);
+        setSpriteShader("temporaryShader", "sandstorm");
+        setShaderSampler2D('temporaryShader', 'distortTexture', 'heatwave')
+    end
+
+    makeLuaSprite('fullscreen', '',-1200,-900)
+    setScrollFactor('fullscreen', 0, 0)
+    makeGraphic('fullscreen', 3840, 2160, 'FF7700')
+    addLuaSprite('fullscreen',true)
+    setObjectCamera('fullscreen','other')
+    setBlendMode('fullscreen','add')
+    setProperty('fullscreen.alpha',0)
+end
+
+function onUpdatePost()
+    if fire == true then
+        setShaderFloat('temporaryShader','iTime',os.clock()/2)
+    end
+end
+
+function onEvent(eventName, value1, value2)
+    if eventName == 'burn with cone' then        
+        if (shadersEnabled) then
+            addHaxeLibrary("ShaderFilter", "openfl.filters");
+            runHaxeCode([[
+                game.camGame.setFilters([new ShaderFilter(game.getLuaObject("temporaryShader").shader)]);
+                game.camHUD.setFilters([new ShaderFilter(game.getLuaObject("temporaryShader").shader)]);
+            ]]);
+        end
+        setProperty('fullscreen.alpha',0.225)
+        doTweenAlpha('bluebluebyebye','fullscreen',0.15,1)
+        fire = true;
+    end
 end
 
 function onBeatHit()
+
+    if fire == true then
+        if curBeat % 4 == 0 then
+            setProperty('fullscreen.alpha',0.225)
+            doTweenAlpha('bluebluebyebye','fullscreen',0.15,1)
+         end
+    end
     if curBeat == 16 then
         doTweenX('onidet', 'dad', 300, 3, 'quadInOut')
     end
@@ -68,5 +113,6 @@ function onBeatHit()
 
     if curBeat == 665 then
         setProperty('blackScreenSonicCount.alpha', 1)
+        setProperty('fullscreen.visible', false)
     end
 end

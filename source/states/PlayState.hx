@@ -573,7 +573,7 @@ class PlayState extends MusicBeatState
 
 		if(curStage != 'roof-old')
 		{
-			healthBarBGOverlay.x = healthBar.x - 28;
+			healthBarBGOverlay.x = healthBar.x - 22;
 			healthBarBGOverlay.y = healthBar.y - 38;
 		}
 
@@ -592,7 +592,7 @@ class PlayState extends MusicBeatState
 		if(SONG.song == 'lore')
 		{
 			iconROM = new HealthIcon(rom.healthIcon, false);
-			iconROM.y = healthBar.y - 100;
+			iconROM.y = healthBar.y - 50;
 			iconROM.visible = !ClientPrefs.data.hideHud;
 			iconROM.alpha = ClientPrefs.data.healthBarAlpha;
 			add(iconROM);

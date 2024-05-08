@@ -100,6 +100,8 @@ class ChartingState extends MusicBeatState
 		['Toogle CamZooming', 'shit that not let you camzoom lmao'],
 		['Camera rotate on', "1: Speed multiplier\n2: Range"],
 		['Camera rotate off', ""],
+		['burn with cone', "only with cone"],
+		['vibe time', "only with cone"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 
 	];
