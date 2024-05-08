@@ -59,8 +59,8 @@
 	"no_antialiasing": false,
 	"image": "characters/chill",
 	"position": [
-		-220,
-		-420
+		-370,
+		-550
 	],
 	"healthicon": "sex",
 	"flip_x": false,
@@ -71,7 +71,7 @@
 	],
 	"camera_position": [
 		60,
-		450
+		600
 	],
 	"sing_duration": 4,
 	"scale": 0.5

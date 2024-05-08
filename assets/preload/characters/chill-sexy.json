@@ -102,8 +102,8 @@
 	"no_antialiasing": false,
 	"image": "characters/chill-sexy",
 	"position": [
-		-170,
-		-180
+		-370,
+		-380
 	],
 	"healthicon": "sex",
 	"flip_x": false,
@@ -114,7 +114,7 @@
 	],
 	"camera_position": [
 		-90,
-		170
+		220
 	],
 	"sing_duration": 4.00000000000001,
 	"scale": 1

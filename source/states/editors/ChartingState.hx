@@ -93,6 +93,8 @@ class ChartingState extends MusicBeatState
 		['Set Cam Zoom Alt', 'V1: Zoom\nV2: Time'],
 		['GrassHey', "Value 1: on or off?"],
 		['dead jumpscare', "Value 1: time"],
+		['Character Color', "Value 1: Character\nValue 2:Color 0xffffffff, time"],
+		['Character Color Transform', "Value 1: redOffset, greenOffset, blueOffset, redMultiplier, greenMultiplier, blueMultiplier\nValue 2:Character, Time"],
 		['boom dead', "yes"],
 		['BBG BG', "bye bg"],
 		['Toogle CamZooming', 'shit that not let you camzoom lmao'],

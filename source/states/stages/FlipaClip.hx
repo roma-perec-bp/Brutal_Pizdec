@@ -13,7 +13,7 @@ class FlipaClip extends BaseStage
 		bg = new BGSprite('Sexy', -200, -200, 0, 0);
 		add(bg);
 
-		grad = new BGSprite('sexygradient', -200, -2200, 0, 0);
+		grad = new BGSprite('sexygradient', -200, -1600, 0, 0);
 		grad.alpha = 0.001;
 		add(grad);
 	}
@@ -45,7 +45,7 @@ class FlipaClip extends BaseStage
 		{
 			case 'BBG BG':
 				FlxTween.tween(bg, {alpha: 0}, 20);
-				FlxTween.tween(grad, {alpha: 1}, 20);
+				FlxTween.tween(grad, {alpha: 1, y: -200}, 20);
 		}
 	}
 }

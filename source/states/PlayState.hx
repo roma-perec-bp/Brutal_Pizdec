@@ -573,7 +573,7 @@ class PlayState extends MusicBeatState
 
 		if(curStage != 'roof-old')
 		{
-			healthBarBGOverlay.x = healthBar.x - 27;
+			healthBarBGOverlay.x = healthBar.x - 28;
 			healthBarBGOverlay.y = healthBar.y - 38;
 		}
 
@@ -2377,6 +2377,70 @@ class PlayState extends MusicBeatState
 								}});
 					}
 				}
+
+			case 'Character Color':
+				var char:Character = boyfriend;
+				var split:Array<String> = value2.split(',');
+				var color:Int = 0;
+				var time:Float = 0;
+
+				if(split[0] != null) color = Std.parseInt(split[0].trim());
+				if(split[1] != null) time = Std.parseFloat(split[1].trim());
+
+				switch (value1.toLowerCase().trim())
+				{
+					case 'gf' | 'girlfriend':
+						char = gf;
+					case 'dad':
+						char = dad;
+					case 'rom':
+						char = rom;
+					default:
+						char = boyfriend;
+				}
+
+				if(char.colorTween != null)
+					char.colorTween.cancel();
+
+				FlxTween.color(char, time, char.color, color, {ease: FlxEase.linear});
+
+			case 'Character Color Transform':
+				var char:Character = boyfriend;
+
+				var split:Array<String> = value1.split(',');
+				var redOff:Int = 0;
+				var greenOff:Int = 0;
+				var blueOff:Int = 0;
+				var redMult:Int = 0;
+				var greenMult:Int = 0;
+				var blueMult:Int = 0;
+				if(split[0] != null) redOff = Std.parseInt(split[0].trim());
+				if(split[1] != null) greenOff = Std.parseInt(split[1].trim());
+				if(split[2] != null) blueOff = Std.parseInt(split[2].trim());
+				if(split[3] != null) redMult = Std.parseInt(split[3].trim());
+				if(split[4] != null) greenMult = Std.parseInt(split[4].trim());
+				if(split[5] != null) blueMult = Std.parseInt(split[5].trim());
+
+				var splitSec:Array<String> = value2.split(',');
+				var chara:String = '';
+				var time:Float = 0;
+
+				if(splitSec[0] != null) chara = splitSec[0].trim();
+				if(splitSec[1] != null) time = Std.parseFloat(splitSec[1].trim());
+
+				switch (chara.toLowerCase().trim())
+				{
+					case 'gf' | 'girlfriend':
+						char = gf;
+					case 'dad':
+						char = dad;
+					case 'rom':
+						char = rom;
+					default:
+						char = boyfriend;
+				}
+
+				FlxTween.tween(char.colorTransform, {redOffset: redOff, greenOffset: greenOff, blueOffset: blueOff, redMultiplier: redMult, greenMultiplier: greenMult, blueMultiplier: blueMult}, time, {ease: FlxEase.linear});
 
 			case 'Add trail':
 				var split:Array<String> = value1.split(',');
