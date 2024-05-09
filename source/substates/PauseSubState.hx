@@ -32,8 +32,6 @@ class PauseSubState extends MusicBeatSubstate
 	var practiceText:FlxText;
 	//var botplayText:FlxText;
 
-	public static var transCamera:FlxCamera;
-
 	var dragDropObj:FlxSprite;
 	var bg2:FlxSprite;
 
