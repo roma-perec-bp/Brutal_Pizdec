@@ -613,7 +613,7 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			scoreTxt = new FlxText(0, healthBar.y - 40, FlxG.width, "", 32);
+			scoreTxt = new FlxText(0, healthBar.y - 45, FlxG.width, "", 32);
 			scoreTxt.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		}
 
