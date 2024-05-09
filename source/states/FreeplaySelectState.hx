@@ -75,6 +75,9 @@ class FreeplaySelectState extends MusicBeatState{
         
 		if (!disableInput)
 		{
+			FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, (FlxG.mouse.screenX-(FlxG.width/2)) * 0.015, (1/30)*240*elapsed);
+			FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
+			
 			if (controls.UI_LEFT_P) 
 				changeSelection(-1);
 			if (controls.UI_RIGHT_P) 
