@@ -15,6 +15,11 @@ import flixel.addons.display.FlxGridOverlay;
 import shaders.RimlightShader;
 
 using StringTools;
+import lime.app.Application;
+
+#if sys
+import sys.FileSystem;
+#end
 
 class FreeplayState extends MusicBeatState
 {
@@ -296,6 +301,14 @@ class FreeplayState extends MusicBeatState
 					changeDiff();
 				}
 			}
+
+			if(FlxG.mouse.wheel != 0)
+			{
+				changeSelection(-FlxG.mouse.wheel);
+				changePortrait(songs[curSelected[freeplayType]].charPort);
+				changeDiff();
+			}
+
 		}
 
 		if (upP || downP) changeDiff();
@@ -310,32 +323,41 @@ class FreeplayState extends MusicBeatState
 			MusicBeatState.switchState(new FreeplaySelectState());
 		}
 		
-		if (accepted)
+		if (accepted || FlxG.mouse.justPressed)
 		{
 			persistentUpdate = false;
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected[freeplayType]].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-			trace(poop);
+			//trace(poop);
 
-			PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-			PlayState.isStoryMode = false;
-			PlayState.storyDifficulty = curDifficulty;
-
-			trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-			if(colorTween != null) {
-				colorTween.cancel();
+			#if sys
+			if(FileSystem.exists(Paths.json(songLowercase + '/' + poop)))
+			{
+			#end
+				PlayState.SONG = Song.loadFromJson(poop, songLowercase);
+				PlayState.isStoryMode = false;
+				PlayState.storyDifficulty = curDifficulty;
+	
+				trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+				if(colorTween != null) {
+					colorTween.cancel();
+				}
+				
+				if (FlxG.keys.pressed.SHIFT){
+					LoadingState.loadAndSwitchState(new ChartingState());
+				}else{
+				//	LoadingState.loadAndSwitchState(new CharSelectState()); //just tryna fix a bunch of shit
+					LoadingState.loadAndSwitchState(new PlayState());
+				}
+	
+				FlxG.sound.music.volume = 0;
+						
+				destroyFreeplayVocals();
+			#if sys
+			} else {
+				Application.current.window.alert('Null Song Reference: "' + poop + '". ', "Critical Error!");
 			}
-			
-			if (FlxG.keys.pressed.SHIFT){
-				LoadingState.loadAndSwitchState(new ChartingState());
-			}else{
-			//	LoadingState.loadAndSwitchState(new CharSelectState()); //just tryna fix a bunch of shit
-				LoadingState.loadAndSwitchState(new PlayState());
-			}
-
-			FlxG.sound.music.volume = 0;
-					
-			destroyFreeplayVocals();
+			#end
 		}
 		else if(controls.RESET)
 		{

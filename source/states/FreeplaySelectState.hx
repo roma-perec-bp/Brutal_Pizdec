@@ -83,16 +83,22 @@ class FreeplaySelectState extends MusicBeatState{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				MusicBeatState.switchState(new MainMenuState());
 			}
-			if (controls.ACCEPT){
-				disableInput = true;
-				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-				FlxTween.tween(FlxG.camera, {zoom:1.2}, 0.3, {ease: FlxEase.quadOut});
-				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
-				FlxFlicker.flicker(sprItemsGroup.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
-				{
-					MusicBeatState.switchState(new FreeplayState());
-				});
+			if(FlxG.mouse.wheel != 0)
+			{
+				FlxG.sound.play(Paths.sound('scrollMenu'), 0.6);
+				changeSelection(-FlxG.mouse.wheel);
 			}
+
+			if (controls.ACCEPT){
+				pressed();
+			}
+
+			sprItemsGroup.forEach(function(spr:FlxSprite)
+			{
+				if(FlxG.mouse.overlaps(spr) && spr.ID == curSelected && FlxG.mouse.justPressed)
+					pressed();
+			});
+
 			if (controls.UI_RIGHT)
 				rightArrows.animation.play('press')
 			else
@@ -130,6 +136,18 @@ class FreeplaySelectState extends MusicBeatState{
 
         super.update(elapsed);
     }
+
+	function pressed()
+	{
+		disableInput = true;
+		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		FlxTween.tween(FlxG.camera, {zoom:1.2}, 0.3, {ease: FlxEase.quadOut});
+		FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+		FlxFlicker.flicker(sprItemsGroup.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
+		{
+			MusicBeatState.switchState(new FreeplayState());
+		});
+	}
 
     function changeSelection(change:Int = 0) {
 		curSelected += change;
