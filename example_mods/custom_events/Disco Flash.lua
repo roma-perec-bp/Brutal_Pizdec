@@ -9,7 +9,7 @@ end
 
 function onEvent(eventName, value1, value2)
 	if eventName == "Disco Flash" then
-		setProperty('flash.alpha',1)
+		setProperty('flash.alpha',0.6)
 		if value2 ~= nil and value2 ~= '' then
 			setProperty('flash.color', getColorFromHex(tostring(value2)))
 		else
