@@ -21,6 +21,8 @@ class MainMenuState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
+
+	var canPress:Bool = false;
 	
 	var optionShit:Array<String> = [
 		'story',
@@ -128,7 +130,9 @@ class MainMenuState extends MusicBeatState
 		changeItem();
 
 		FlxG.camera.zoom = 3;
-		FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.1, {ease: FlxEase.expoInOut});
+		FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.1, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween) {
+			canPress = true;
+		}});
 
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
@@ -174,37 +178,40 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
-			changeItem();
-
-			menuItems.forEach(function(spr:FlxSprite)
+			if(canPress)
 			{
-				if (FlxG.mouse.overlaps(spr) && FlxG.mouse.justPressed)
+				changeItem();
+
+				menuItems.forEach(function(spr:FlxSprite)
+				{
+					if (FlxG.mouse.overlaps(spr) && FlxG.mouse.justPressed)
+					{
+						selectedSomethin = true;
+						FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+						FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.7, {ease: FlxEase.quadOut, type: BACKWARD});
+						FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+						FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
+						{
+							pressedMenu(optionShit[curSelected]);
+						});
+					}
+				});
+	
+				if (controls.BACK)
 				{
 					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-					FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.7, {ease: FlxEase.quadOut, type: BACKWARD});
-					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
-					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
-					{
-						pressedMenu(optionShit[curSelected]);
-					});
+					FlxG.sound.play(Paths.sound('cancelMenu'));
+					MusicBeatState.switchState(new TitleState());
 				}
-			});
-
-			if (controls.BACK)
-			{
-				selectedSomethin = true;
-				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new TitleState());
+	
+				#if desktop
+				else if (controls.justPressed('debug_1'))
+				{
+					selectedSomethin = true;
+					MusicBeatState.switchState(new MasterEditorMenu());
+				}
+				#end	
 			}
-
-			#if desktop
-			else if (controls.justPressed('debug_1'))
-			{
-				selectedSomethin = true;
-				MusicBeatState.switchState(new MasterEditorMenu());
-			}
-			#end
 		}
 
 		super.update(elapsed);
