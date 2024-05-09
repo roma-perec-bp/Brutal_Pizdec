@@ -10,6 +10,35 @@
             }
         },
         {
+            "picture":"foxizzm",
+            "nickname":"Foxizzm",
+            "work":"CO-director",
+            "wish":"uuum idk what to put here",
+            "socialnetwork": {
+                "youtube":"https://youtube.com/@mlaofmd1145?si=DjEAa5mdZ5LwIVSd"
+            }
+        },
+        {
+            "picture":"romchek",
+            "nickname":"Rom4chek",
+            "work":"Build-creator, Coder, Composer, Animator, Voice Actor, Chromatic Scale Maker",
+            "wish":"Help me i'm stuck in this basement for 2 501 000 years",
+            "socialnetwork": {
+                "youtube":"https://www.youtube.com/channel/UC-HE2s0nRt4naMHOxogTZsA",
+                "gamejolt":"https://gamejolt.com/@Rom4chek",
+                "twitter":"https://twitter.com/rom4chek"
+            }
+        },
+        {
+            "picture":"electropea",
+            "nickname":"ElectroPea",
+            "work":"Coder & Artist",
+            "wish":"electro pea electro pea electro pea electro pea electro pea electro peaelectro peaelectro peaelectro peaelectro peaelectro peaelectro peaelectro peaelectro pea",
+            "socialnetwork": {
+                "youtube":"https://youtu.be/LcFm4iAbG54"
+            }
+        },
+        {
             "picture":"sashaklepikov",
             "nickname":"SashaKlepikov64",
             "work":"Composer",
@@ -74,15 +103,6 @@
             }
         },
         {
-            "picture":"electropea",
-            "nickname":"ElectroPea",
-            "work":"Coder & Artist",
-            "wish":"electro pea electro pea electro pea electro pea electro pea electro peaelectro peaelectro peaelectro peaelectro peaelectro peaelectro peaelectro peaelectro pea",
-            "socialnetwork": {
-                "youtube":"https://youtu.be/LcFm4iAbG54"
-            }
-        },
-        {
             "picture":"ztyagoteniya",
             "nickname":"ZTyagoteniya",
             "work":"Charter",
@@ -99,17 +119,6 @@
             "socialnetwork": {
                 "youtube":"https://www.youtube.com/@Tanuki220",
                 "gamejolt":"https://gamejolt.com/@tanuki220"
-            }
-        },
-        {
-            "picture":"romchek",
-            "nickname":"Rom4chek",
-            "work":"Build-creator, Coder, Composer, Animator, Voice Actor, Chromatic Scale Maker",
-            "wish":"Help me i'm stuck in this basement for 2 501 000 years",
-            "socialnetwork": {
-                "youtube":"https://www.youtube.com/channel/UC-HE2s0nRt4naMHOxogTZsA",
-                "gamejolt":"https://gamejolt.com/@Rom4chek",
-                "twitter":"https://twitter.com/rom4chek"
             }
         },
         {
@@ -149,6 +158,15 @@
             }
         },
         {
+            "picture":"zarx",
+            "nickname":"ZarX",
+            "work":"Artist",
+            "wish":"hi",
+            "socialnetwork": {
+                
+            }
+        },
+        {
             "picture":"ender",
             "nickname":"Ender69",
             "work":"Coder and Charter",
@@ -174,15 +192,6 @@
             "nickname":"Mlaofmd",
             "work":"Animator",
             "wish":"furry daddy lmao",
-            "socialnetwork": {
-                "youtube":"https://youtube.com/@mlaofmd1145?si=DjEAa5mdZ5LwIVSd"
-            }
-        },
-        {
-            "picture":"foxizzm",
-            "nickname":"Foxizzm",
-            "work":"Art-director",
-            "wish":"uuum idk what to put here",
             "socialnetwork": {
                 "youtube":"https://youtube.com/@mlaofmd1145?si=DjEAa5mdZ5LwIVSd"
             }
@@ -267,15 +276,6 @@
             "wish":"Makes chromatics like a fucker",
             "socialnetwork": {
                 "youtube":"https://youtube.com/@HelpWmods"
-            }
-        },
-        {
-            "picture":"zarx",
-            "nickname":"ZarX",
-            "work":"Artist",
-            "wish":"hi",
-            "socialnetwork": {
-                
             }
         },
         {
