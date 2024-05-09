@@ -227,6 +227,8 @@ class PlayState extends MusicBeatState
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 
+	public var fullScore:Int = 0;
+
 	var scoreTxtTween:FlxTween;
 	var sexcameratween:FlxTween;
 	var followTween:FlxTween;
@@ -1326,6 +1328,8 @@ class PlayState extends MusicBeatState
 			vocals.pause();
 		}
 
+		trace(fullScore);
+
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
 		FlxTween.tween(timeBar, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
@@ -1421,6 +1425,8 @@ class PlayState extends MusicBeatState
 
 				susLength = susLength / Conductor.stepCrochet;
 				unspawnNotes.push(swagNote);
+
+				fullScore += 350;
 
 				var floorSus:Int = Math.floor(susLength);
 				if(floorSus > 0) {
