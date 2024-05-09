@@ -496,7 +496,7 @@ class PlayState extends MusicBeatState
 		if(curStage != 'roof-old')
 		{
 			timeBarBGoverlay = new FlxSprite(0, 0);
-			timeBarBGoverlay.loadGraphic(Paths.image('healthBarBG', 'shared'));
+			timeBarBGoverlay.loadGraphic(Paths.image('timeBarOverlay', 'shared'));
 			timeBarBGoverlay.visible = (ClientPrefs.data.timeBarType != 'Disabled');
 			add(timeBarBGoverlay);
 		}
@@ -661,6 +661,7 @@ class PlayState extends MusicBeatState
 			fireHalapeno.cameras = [camHUD];
 
 		botplayTxt.cameras = [camHUD];
+		timeBarBGoverlay.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 
@@ -1033,6 +1034,7 @@ class PlayState extends MusicBeatState
 		var introImagesArray:Array<String> = switch(stageUI) {
 			case "pixel": ['${stageUI}UI/ready-pixel', '${stageUI}UI/set-pixel', '${stageUI}UI/date-pixel'];
 			case "normal": ["ready", "set" ,"go"];
+			case "old": ["ready-old", "set-old" ,"go-old"];
 			default: ['${stageUI}UI/ready', '${stageUI}UI/set', '${stageUI}UI/go'];
 		}
 		introAssets.set(stageUI, introImagesArray);
@@ -1099,6 +1101,7 @@ class PlayState extends MusicBeatState
 				var introImagesArray:Array<String> = switch(stageUI) {
 					case "pixel": ['${stageUI}UI/ready-pixel', '${stageUI}UI/set-pixel', '${stageUI}UI/date-pixel'];
 					case "normal": ["ready", "set" ,"go"];
+					case "old": ["ready-old", "set-old" ,"go-old"];
 					default: ['${stageUI}UI/ready', '${stageUI}UI/set', '${stageUI}UI/go'];
 				}
 				introAssets.set(stageUI, introImagesArray);
@@ -1159,16 +1162,38 @@ class PlayState extends MusicBeatState
 
 		spr.screenCenter();
 		spr.antialiasing = antialias;
+		spr.scale.set(0.9, 0.9);
 		insert(members.indexOf(notes), spr);
-		FlxTween.tween(spr, {/*y: spr.y + 100,*/ alpha: 0}, Conductor.crochet / 1000, {
-			ease: FlxEase.cubeInOut,
-			onComplete: function(twn:FlxTween)
+
+		if(curStage == 'roof-old')
+		{
+			FlxTween.tween(spr, {/*y: spr.y + 100,*/ alpha: 0}, Conductor.crochet / 1000, {
+				ease: FlxEase.cubeInOut,
+				onComplete: function(twn:FlxTween)
+				{
+					remove(spr);
+					spr.destroy();
+				}
+			});
+			return spr;
+		}
+		else
+		{
+			if(image != 'go')
+			{
+				FlxTween.tween(spr.scale, {x: 1, y: 1}, Conductor.crochet / 1000, {
+					ease: FlxEase.linear
+				});
+			}
+
+			new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 			{
 				remove(spr);
 				spr.destroy();
-			}
-		});
-		return spr;
+			});
+
+			return spr;
+		}
 	}
 
 	public function addBehindGF(obj:FlxBasic)
@@ -2127,6 +2152,27 @@ class PlayState extends MusicBeatState
 					boyfriend.playAnim('hey', true);
 					boyfriend.specialAnim = true;
 					boyfriend.heyTimer = flValue2;
+				}
+
+			case 'CountDown':
+				final introAlts:Array<String> = switch(stageUI)
+				{
+					case "pixel":  ['${stageUI}UI/ready-pixel', '${stageUI}UI/set-pixel', '${stageUI}UI/date-pixel'];
+					case "normal": ["ready", "set" ,"go"];
+					default:       ['${stageUI}UI/ready', '${stageUI}UI/set', '${stageUI}UI/go'];
+				};
+				final antialias:Bool = (ClientPrefs.data.antialiasing && !isPixelStage);
+	
+				switch(value1.toLowerCase().trim()) {
+					case 'ready': 
+						countdownReady = createCountdownSprite(introAlts[0], antialias); 
+						if(value2 == 'true') FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
+					case 'set':
+						countdownSet = createCountdownSprite(introAlts[1], antialias);
+						if(value2 == 'true') FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
+					case 'go':
+						countdownGo = createCountdownSprite(introAlts[2], antialias);
+						if(value2 == 'true') FlxG.sound.play(Paths.sound('rap' + introSoundsSuffix), 0.6);
 				}
 
 			case 'Set GF Speed':

@@ -21,6 +21,8 @@ class OldRoof extends BaseStage
 			bg2.alpha = 0.001;
 			add(bg2);
 		}
+
+		PlayState.stageUI = "old";
 	}
 
 	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
