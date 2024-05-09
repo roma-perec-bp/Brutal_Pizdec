@@ -605,9 +605,18 @@ class PlayState extends MusicBeatState
 			iconROM.alpha = ClientPrefs.data.healthBarAlpha;
 			add(iconROM);
 		}
+	
+		if(curStage == 'roof-old')
+		{
+			scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
+			scoreTxt.setFormat(Paths.font("HouseofTerror.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		}
+		else
+		{
+			scoreTxt = new FlxText(0, healthBar.y - 40, FlxG.width, "", 32);
+			scoreTxt.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		}
 
-		scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.data.hideHud;
@@ -1260,22 +1269,34 @@ class PlayState extends MusicBeatState
 			str += ' ($percent%) - $ratingFC';
 		}
 
-		scoreTxt.text = 'Score: ' + songScore
-		+ ' | Misses: ' + songMisses
-		+ ' | Rating: ' + str;
-
-		if(ClientPrefs.data.scoreZoom && !miss && !cpuControlled)
+		if(curStage == 'roof-old')
 		{
-			if(scoreTxtTween != null) {
-				scoreTxtTween.cancel();
+			scoreTxt.text = 'Score: ' + songScore
+			+ ' | Misses: ' + songMisses
+			+ ' | Rating: ' + str;
+		}
+		else
+		{
+			scoreTxt.text = 'Score: ' + songScore
+			+ '\nMisses: ' + songMisses
+			+ '\nAccuracy: ' + str;
+		}
+
+		if(curStage == 'roof-old')
+		{
+			if(ClientPrefs.data.scoreZoom && !miss && !cpuControlled)
+			{
+				if(scoreTxtTween != null)scoreTxtTween.cancel();
+
+				scoreTxt.scale.x = 1.075;
+				scoreTxt.scale.y = 1.075;
+		
+				scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
+					onComplete: function(twn:FlxTween) {
+						scoreTxtTween = null;
+					}
+				});
 			}
-			scoreTxt.scale.x = 1.075;
-			scoreTxt.scale.y = 1.075;
-			scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
-				onComplete: function(twn:FlxTween) {
-					scoreTxtTween = null;
-				}
-			});
 		}
 		callOnScripts('onUpdateScore', [miss]);
 	}
@@ -1401,6 +1422,9 @@ class PlayState extends MusicBeatState
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 				var gottaHitNote:Bool = section.mustHitSection;
 
+				if (gottaHitNote && songNotes[3] != 'Hurt Note' && songNotes[3] != 'Jap Note')
+					totalNotes += 1;
+
 				if (songNotes[1] > 3)
 				{
 					gottaHitNote = !section.mustHitSection;
@@ -1424,9 +1448,8 @@ class PlayState extends MusicBeatState
 				var susLength:Float = swagNote.sustainLength;
 
 				susLength = susLength / Conductor.stepCrochet;
-				unspawnNotes.push(swagNote);
 
-				fullScore += 350;
+				unspawnNotes.push(swagNote);
 
 				var floorSus:Int = Math.floor(susLength);
 				if(floorSus > 0) {
@@ -1498,6 +1521,8 @@ class PlayState extends MusicBeatState
 
 		unspawnNotes.sort(sortByTime);
 		generatedMusic = true;
+
+		fullScore = totalNotes * 350;
 	}
 
 	// called only once per different event (Used for precaching)
@@ -2840,6 +2865,7 @@ class PlayState extends MusicBeatState
 
 	public var totalPlayed:Int = 0;
 	public var totalNotesHit:Float = 0.0;
+	public var totalNotes:Int = 0;
 
 	public var showCombo:Bool = false;
 	public var showComboNum:Bool = true;
@@ -2854,18 +2880,10 @@ class PlayState extends MusicBeatState
 
 	private function cachePopUpScore()
 	{
-		var uiPrefix:String = '';
-		var uiSuffix:String = '';
-		if (stageUI != "normal")
-		{
-			uiPrefix = '${stageUI}UI/';
-			if (PlayState.isPixelStage) uiSuffix = '-pixel';
-		}
-
 		for (rating in ratingsData)
-			Paths.image(uiPrefix + rating.image + uiSuffix);
+			Paths.image(rating.image);
 		for (i in 0...10)
-			Paths.image(uiPrefix + 'num' + i + uiSuffix);
+			Paths.image('num' + i);
 	}
 
 	private function popUpScore(note:Note = null):Void
@@ -2899,18 +2917,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		var uiPrefix:String = "";
-		var uiSuffix:String = '';
-		var antialias:Bool = ClientPrefs.data.antialiasing;
-
-		if (stageUI != "normal")
-		{
-			uiPrefix = '${stageUI}UI/';
-			if (PlayState.isPixelStage) uiSuffix = '-pixel';
-			antialias = !isPixelStage;
-		}
-
-		rating.loadGraphic(Paths.image(uiPrefix + daRating.image + uiSuffix));
+		rating.loadGraphic(Paths.image(daRating.image));
 		rating.cameras = [camHUD];
 		rating.screenCenter();
 		rating.x = placement - 40;
@@ -2923,7 +2930,7 @@ class PlayState extends MusicBeatState
 		rating.y -= ClientPrefs.data.comboOffset[1];
 		rating.antialiasing = antialias;
 
-		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(uiPrefix + 'combo' + uiSuffix));
+		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image('combo'));
 		comboSpr.cameras = [camHUD];
 		comboSpr.screenCenter();
 		comboSpr.x = placement;
@@ -2988,7 +2995,7 @@ class PlayState extends MusicBeatState
 		}
 		for (i in seperatedScore)
 		{
-			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(uiPrefix + 'num' + Std.int(i) + uiSuffix));
+			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('num' + Std.int(i)));
 			numScore.cameras = [camHUD];
 			numScore.screenCenter();
 			numScore.x = placement + (43 * daLoop) - 90 + ClientPrefs.data.comboOffset[2];
