@@ -1,11 +1,11 @@
 {
 	"directory": "pizdec",
-	"defaultZoom": 0.7,
+	"defaultZoom": 0.5,
 	"stageUI": "",
 
-	"boyfriend": [850, -20],
+	"boyfriend": [1750, 370],
 	"girlfriend": [250, -40],
-	"opponent": [-100, 0],
+	"opponent": [300, 450],
 	"hide_girlfriend": true,
 
 	"camera_boyfriend": [0, -20],

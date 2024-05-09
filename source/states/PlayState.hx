@@ -189,7 +189,6 @@ class PlayState extends MusicBeatState
 	public var healthBar:HealthBar;
 	public var timeBar:HealthBar;
 	private var healthBarBGOverlay:FlxSprite;
-	private var timeBarBGoverlay:FlxSprite;
 	var songPercent:Float = 0;
 
 	private var fireHalapeno:FlxSprite;
@@ -493,14 +492,6 @@ class PlayState extends MusicBeatState
 		}
 		stagesFunc(function(stage:BaseStage) stage.createPost());
 
-		if(curStage != 'roof-old')
-		{
-			timeBarBGoverlay = new FlxSprite(0, 0);
-			timeBarBGoverlay.loadGraphic(Paths.image('timeBarOverlay', 'shared'));
-			timeBarBGoverlay.visible = (ClientPrefs.data.timeBarType != 'Disabled');
-			add(timeBarBGoverlay);
-		}
-
 		Conductor.songPosition = -5000 / Conductor.songPosition;
 		var showTime:Bool = (ClientPrefs.data.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
@@ -512,19 +503,18 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.data.downScroll) timeTxt.y = FlxG.height - 44;
 		if(ClientPrefs.data.timeBarType == 'Song Name') timeTxt.text = SONG.song;
 
-		timeBar = new HealthBar(0, timeTxt.y + (timeTxt.height / 4), 'timeBar', function() return songPercent, 0, 1);
+		if(curStage != 'roof-old')
+			timeBar = new HealthBar(0, timeTxt.y + (timeTxt.height / 4), 'timeBar', function() return songPercent, 0, 1);
+		else
+			timeBar = new HealthBar(0, timeTxt.y + (timeTxt.height / 4), 'timeBarOld', function() return songPercent, 0, 1);
+
 		timeBar.scrollFactor.set();
 		timeBar.screenCenter(X);
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
+		if(curStage != 'roof-old') timeBar.setColors(0xffc3e942, 0xff000000);
 		add(timeBar);
 		add(timeTxt);
-
-		if(curStage != 'roof-old')
-		{
-			timeBarBGoverlay.x = timeBar.x;
-			timeBarBGoverlay.y = timeBar.y;
-		}
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
@@ -661,7 +651,6 @@ class PlayState extends MusicBeatState
 			fireHalapeno.cameras = [camHUD];
 
 		botplayTxt.cameras = [camHUD];
-		timeBarBGoverlay.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 
