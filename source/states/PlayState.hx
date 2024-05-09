@@ -634,6 +634,7 @@ class PlayState extends MusicBeatState
 		ratingTxt = new FlxText(0, healthBar.y - 125, FlxG.width, "Lmao x69", 64);
 		ratingTxt.setFormat(Paths.font("HouseofTerror.ttf"), 64, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		ratingTxt.scrollFactor.set();
+		ratingTxt.alpha = 0.001;
 		ratingTxt.borderSize = 1.5;
 
 		if(curStage != 'roof-old')
@@ -3082,6 +3083,16 @@ class PlayState extends MusicBeatState
 				},
 				startDelay: Conductor.crochet * 0.002 / playbackRate
 			});
+		}
+		else
+		{
+			FlxTween.cancelTweensOf(ratingTxt);
+			FlxTween.cancelTweensOf(ratingTxt.alpha);
+			ratingTxt.alpha = 1;
+			ratingTxt.text = daRating.image.toUpperCase() + ' x' + combo;
+			ratingTxt.y = healthBar.y - 100;
+			FlxTween.tween(ratingTxt, {y: healthBar.y - 125}, Conductor.crochet * 0.002, {ease: FlxEase.quadOut});
+			FlxTween.tween(ratingTxt, {alpha: 0}, 0.2 / playbackRate, {startDelay: Conductor.crochet * 0.001 / playbackRate});
 		}
 	}
 
