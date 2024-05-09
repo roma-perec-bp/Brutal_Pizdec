@@ -227,6 +227,10 @@ class PlayState extends MusicBeatState
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 
+	var ratingTxt:FlxText;
+
+	var accuracyShit:FlxText;
+
 	public var fullScore:Int = 0;
 
 	var scoreTxtTween:FlxTween;
@@ -622,6 +626,22 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.data.hideHud;
 		add(scoreTxt);
 
+		accuracyShit = new FlxText(0, healthBar.y + 40, FlxG.width, "Rating: Horny", 32);
+		accuracyShit.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		accuracyShit.scrollFactor.set();
+		accuracyShit.borderSize = 1.25;
+
+		ratingTxt = new FlxText(0, healthBar.y - 125, FlxG.width, "Lmao x69", 64);
+		ratingTxt.setFormat(Paths.font("HouseofTerror.ttf"), 64, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		ratingTxt.scrollFactor.set();
+		ratingTxt.borderSize = 1.5;
+
+		if(curStage != 'roof-old')
+		{
+			add(accuracyShit);
+			add(ratingTxt);
+		}
+
 		if(curStage == 'roof-old')
 		{
 			fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
@@ -657,6 +677,8 @@ class PlayState extends MusicBeatState
 		if(SONG.song == 'lore') iconROM.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+		accuracyShit.cameras = [camHUD];
+		ratingTxt.cameras = [camHUD];
 
 		if(curStage == 'roof-old')
 			fireHalapeno.cameras = [camHUD];
@@ -1262,11 +1284,11 @@ class PlayState extends MusicBeatState
 
 	public function updateScore(miss:Bool = false)
 	{
-		var str:String = ratingName;
+		var str:String = '?';
 		if(totalPlayed != 0)
 		{
 			var percent:Float = CoolUtil.floorDecimal(ratingPercent * 100, 2);
-			str += ' ($percent%) - $ratingFC';
+			str = ' ($percent%) - $ratingFC';
 		}
 
 		if(curStage == 'roof-old')
@@ -1280,6 +1302,8 @@ class PlayState extends MusicBeatState
 			scoreTxt.text = 'Score: ' + songScore
 			+ '\nMisses: ' + songMisses
 			+ '\nAccuracy: ' + str;
+
+			accuracyShit.text = 'Rating: ' + ratingName;
 		}
 
 		if(curStage == 'roof-old')
@@ -1292,6 +1316,22 @@ class PlayState extends MusicBeatState
 				scoreTxt.scale.y = 1.075;
 		
 				scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
+					onComplete: function(twn:FlxTween) {
+						scoreTxtTween = null;
+					}
+				});
+			}
+		}
+		else
+		{
+			if(ClientPrefs.data.scoreZoom && !miss && !cpuControlled)
+			{
+				if(scoreTxtTween != null)scoreTxtTween.cancel();
+
+				accuracyShit.scale.x = 1.075;
+				accuracyShit.scale.y = 1.075;
+		
+				scoreTxtTween = FlxTween.tween(accuracyShit.scale, {x: 1, y: 1}, 0.2, {
 					onComplete: function(twn:FlxTween) {
 						scoreTxtTween = null;
 					}
