@@ -102,7 +102,7 @@ class FreeplayState extends MusicBeatState
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex', 'jamar'], ['bbg', 'lamar']);
 			case 3:
-				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, oldColors, ['jap-old', 'jap-wheel-old', 'lork'], ['lamar', 'lamar', 'lork']);
+				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, oldColors, ['jap-old', 'jap-wheel-old', 'lork'], ['jap-old', 'jap2-old', 'lork']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
@@ -507,6 +507,10 @@ class FreeplayState extends MusicBeatState
 				portrait.offset.set(-210, 60);
 			case 'gandons':
 				portrait.offset.set(-13, 147);
+			case 'jap-old':
+				portrait.offset.set(-237, 136);
+			case 'jap2-old':
+				portrait.offset.set(-237, 136);
 			default:
 				portrait.offset.set(0, 0);
 		}

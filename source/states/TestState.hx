@@ -30,7 +30,7 @@ class TestState extends MusicBeatState
 		Achievements.setAchievementCurNum('test123', 
 			Achievements.getAchievementCurNum('test123') + 1
 		);
-		if(Achievements.getAchievementCurNum('test123') >= Achievements.achievementsStuff[Achievements.getAchievementIndex('test123')][4])
+		if(Achievements.getAchievementCurNum('test123') == Achievements.achievementsStuff[Achievements.getAchievementIndex('test123')][4])
 		{
 			Achievements.unlockAchievement('test123');
 			ClientPrefs.saveSettings();
