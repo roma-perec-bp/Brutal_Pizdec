@@ -196,6 +196,13 @@ class MainMenuState extends MusicBeatState
 						});
 					}
 				});
+
+				if(FlxG.keys.justPressed.ONE)
+				{
+					selectedSomethin = true;
+					FlxG.sound.play(Paths.sound('cancelMenu'));
+					MusicBeatState.switchState(new AchievementsStatePVZ());
+				}
 	
 				if (controls.BACK)
 				{
@@ -224,7 +231,7 @@ class MainMenuState extends MusicBeatState
 			case 'story': MusicBeatState.switchState(new StoryMenuState());
 			case 'freeplay': MusicBeatState.switchState(new FreeplaySelectState());
 			#if ACHIEVEMENTS_ALLOWED
-			case 'awards': MusicBeatState.switchState(new AchievementsMenuState());
+			case 'awards': MusicBeatState.switchState(new AchievementsStatePVZ());
 			#end
 			case 'credits': MusicBeatState.switchState(new CreditsState());
 			case 'options':

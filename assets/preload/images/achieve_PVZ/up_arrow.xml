@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="up_arrow.png">
+	<!-- Created with Adobe Animate version 22.0.2.168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="up_arrow0000" x="0" y="0" width="133" height="136"/>
+	<SubTexture name="up_arrow_pressed0000" x="133" y="0" width="144" height="147"/>
+	<SubTexture name="up_arrow_pressed0001" x="277" y="0" width="144" height="147"/>
+	<SubTexture name="up_arrow_pressed0002" x="277" y="0" width="144" height="147"/>
+	<SubTexture name="up_arrow_pressed0003" x="0" y="147" width="144" height="147"/>
+</TextureAtlas>
