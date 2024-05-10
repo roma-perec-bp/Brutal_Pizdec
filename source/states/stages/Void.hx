@@ -28,10 +28,7 @@ class Void extends BaseStage
 
 	function startCut()
 	{
-		/*FlxG.sound.play(Paths.sound('dead' + FlxG.random.int(0, 69)), 1, false, null, true, function() {
-			startCountdown();
-		});*/
-		FlxG.sound.play(Paths.sound('dead'), 1, false, null, true, function() {
+		FlxG.sound.play(Paths.sound('dead' + FlxG.random.int(0, 69)), 1, false, null, true, function() {
 			FlxTween.tween(PlayState.instance.dad, {alpha: 1}, 0.8);
 			startCountdown();
 		});
