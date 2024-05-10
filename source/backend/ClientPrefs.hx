@@ -167,6 +167,7 @@ class ClientPrefs {
 			Reflect.setField(FlxG.save.data, key, Reflect.field(data, key));
 		}
 		FlxG.save.data.achievementsMap = Achievements.achievementsMap;
+		FlxG.save.data.map_maxcurVars = Achievements.map_maxcurVars;
 		FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
 		FlxG.save.flush();
 

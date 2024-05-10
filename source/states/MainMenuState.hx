@@ -203,6 +203,12 @@ class MainMenuState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('cancelMenu'));
 					MusicBeatState.switchState(new AchievementsStatePVZ());
 				}
+				if(FlxG.keys.justPressed.TWO)
+				{
+					selectedSomethin = true;
+					FlxG.sound.play(Paths.sound('cancelMenu'));
+					MusicBeatState.switchState(new TestState());
+				}
 	
 				if (controls.BACK)
 				{
