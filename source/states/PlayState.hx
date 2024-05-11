@@ -2780,7 +2780,7 @@ class PlayState extends MusicBeatState
 		else
 		{
 			var noMissWeek:String = WeekData.getWeekFileName() + '_nomiss';
-			var achieve:String = checkForAchievement([noMissWeek, 'r_ubad', 'ur_good', 'hype', 'two_keys', 'toastie', 'debugger']);
+			var achieve:String = checkForAchievement([noMissWeek, 'cum']);
 			if(achieve != null) {
 				startAchievement(achieve);
 				return false;
@@ -3950,29 +3950,8 @@ class PlayState extends MusicBeatState
 				{
 					switch(achievementName)
 					{
-						case 'ur_bad':
-							unlock = (ratingPercent < 0.2 && !practiceMode);
-
-						case 'ur_good':
-							unlock = (ratingPercent >= 1 && !usedPractice);
-
-						case 'roadkill_enthusiast':
-							unlock = (Achievements.henchmenDeath >= 50);
-
-						case 'oversinging':
-							unlock = (boyfriend.holdTimer >= 10 && !usedPractice);
-
-						case 'hype':
-							unlock = (!boyfriendIdled && !usedPractice);
-
-						case 'two_keys':
-							unlock = (!usedPractice && keysPressed.length <= 2);
-
-						case 'toastie':
-							unlock = (/*ClientPrefs.data.framerate <= 60 &&*/ !ClientPrefs.data.shaders && ClientPrefs.data.lowQuality && !ClientPrefs.data.antialiasing);
-
-						case 'debugger':
-							unlock = (Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice);
+						case 'cum':
+							unlock = (ClientPrefs.data.arrowRGB == [[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
 					}
 				}
 
