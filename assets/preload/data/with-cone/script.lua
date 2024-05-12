@@ -54,20 +54,19 @@ function onEvent(eventName, value1, value2)
                 game.camHUD.setFilters([new ShaderFilter(game.getLuaObject("temporaryShader").shader)]);
             ]]);
         end
-        setProperty('fullscreen.alpha',0.225)
-        doTweenAlpha('bluebluebyebye','fullscreen',0.15,1)
+        setProperty('fullscreen.alpha',0.195)
         fire = true;
     end
 end
 
-function onBeatHit()
-
+function onSectionHit()
     if fire == true then
-        if curBeat % 4 == 0 then
-            setProperty('fullscreen.alpha',0.225)
-            doTweenAlpha('bluebluebyebye','fullscreen',0.15,1)
-         end
+        setProperty('fullscreen.alpha',0.225)
+        doTweenAlpha('bluebluebyebye','fullscreen',0.15,1)
     end
+end
+
+function onBeatHit()
     if curBeat == 16 then
         doTweenX('onidet', 'dad', 300, 3, 'quadInOut')
     end

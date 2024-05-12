@@ -1465,6 +1465,11 @@
 						"burn with cone",
 						"",
 						""
+					],
+					[
+						"Cam Boom Speed",
+						"999",
+						"0"
 					]
 				]
 			]
