@@ -48,10 +48,8 @@ class AchievementsStatePVZ extends MusicBeatState
 		add(attachedTextGroup);
         
 		for (i in 0...Achievements.achievementsStuff.length) {
-			if(!Achievements.achievementsStuff[i][3] || Achievements.achievementsMap.exists(Achievements.achievementsStuff[i][2])) {
-				options.push(Achievements.achievementsStuff[i]);
-				achievementIndex.push(i);
-			}
+			options.push(Achievements.achievementsStuff[i]);
+			achievementIndex.push(i);
 		}
 
 		for (i in 0...options.length) {
@@ -200,21 +198,25 @@ class FlxOffsetText extends FlxText
 		{
 			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[this.ID][2]))
 			{
-				var curText = this.text;
-				this.text = "";
-				for(j in 0...curText.length)
-				{
-					if(curText.charAt(j) != " ")
-					{
-						this.text += "?";
-					} else {
-						this.text += " ";
-					}
-				}
+				createQuestionText();
 			} else {
 				this.color = 0xFFFFDD00;
 			}
+		} else {
+			if(Achievements.achievementsStuff[this.ID][3] == true)
+				createQuestionText();
 		}
 		super.update(el);
+	}
+
+	function createQuestionText()
+	{
+		var curText = this.text;
+		this.text = "";
+		for(j in 0...curText.length)
+		{
+			if(curText.charAt(j) != " ")
+			{ this.text += "?"; } else { this.text += " "; }
+		}
 	}
 }
