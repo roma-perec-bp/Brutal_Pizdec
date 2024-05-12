@@ -13,6 +13,8 @@ import objects.AchievementPopup;
 import states.editors.MasterEditorMenu;
 import options.OptionsState;
 
+import shaders.ColorSwap;
+
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '1.0.0'; //This is also used for Discord RPC
@@ -32,6 +34,10 @@ class MainMenuState extends MusicBeatState
 		'options',
 		'gallery'
 	];
+
+	var trophy:FlxSprite;
+	var origSaturTrophy:Float;
+	var shaderMonochrome:ColorSwap;
 
 	override function create()
 	{
@@ -65,9 +71,6 @@ class MainMenuState extends MusicBeatState
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
-		/*if(optionShit.length > 6) {
-			scale = 6 / optionShit.length;
-		}*/
 
 		for (i in 0...optionShit.length)
 		{
@@ -78,16 +81,13 @@ class MainMenuState extends MusicBeatState
 			switch(i)
 			{
 				case 4: menuItem.frames = Paths.getSparrowAtlas('options_button');
-
 				case 5: menuItem.frames = Paths.getSparrowAtlas('gallery_button');
-
 				default: menuItem.frames = Paths.getSparrowAtlas('buttons_mainmenu');
 			}
 
 			menuItem.animation.addByPrefix('idle', optionShit[i] + "_normal", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + "_hover", 24);
 			menuItem.animation.play('idle');
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 
 			switch(i) {
 				case 0:
@@ -120,12 +120,23 @@ class MainMenuState extends MusicBeatState
 		overlay.screenCenter();
 		add(overlay);
 
-		var versionShit:FlxText = new FlxText(-200, 800, 0, "FNF` BRUTAL PIZDEC v" + psychEngineVersion, 24);
+		var versionShit:FlxText = new FlxText(-200, 800, 0, "FNF: BRUTAL PIZDEC v" + psychEngineVersion, 24);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		// NG.core.calls.event.logEvent('swag').send();
+		trophy = new FlxSprite(330, 335).loadGraphic(Paths.image('trophyPVZ'));
+		trophy.scale.set(0.30, 0.30);
+		shaderMonochrome = new ColorSwap();
+		trophy.shader = shaderMonochrome.shader;
+		if(monochrome() == false)
+		{
+			shaderMonochrome.saturation = -1;
+			shaderMonochrome.brightness = -0.05;
+		}
+		origSaturTrophy = shaderMonochrome.brightness;
+		trophy.updateHitbox();
+		add(trophy);
 
 		changeItem();
 
@@ -133,29 +144,15 @@ class MainMenuState extends MusicBeatState
 		FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.1, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween) {
 			canPress = true;
 		}});
-
-		#if ACHIEVEMENTS_ALLOWED
-		Achievements.loadAchievements();
-		var leDate = Date.now();
-		if (leDate.getDay() == 5 && leDate.getHours() >= 18) {
-			var achieveID:Int = Achievements.getAchievementIndex('friday_night_play');
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
-				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-				giveAchievement();
-				ClientPrefs.saveSettings();
-			}
-		}
-		#end
 		
 		super.create();
 
 		FlxG.mouse.unload();
-		FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
+		FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0); // you can't hide what you did
 		FlxG.mouse.visible = true;
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
-	// Unlocks "Freaky on a Friday Night" achievement
 	function giveAchievement() {
 		add(new AchievementPopup('friday_night_play', camAchievement));
 		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
@@ -164,6 +161,16 @@ class MainMenuState extends MusicBeatState
 	#end
 
 	var selectedSomethin:Bool = false;
+
+	function monochrome()
+	{
+		for(i in 0...Achievements.achievementsStuff.length)
+		{
+			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][2]))
+				return false;
+		}
+		return true;
+	}
 
 	override function update(elapsed:Float)
 	{
@@ -176,11 +183,42 @@ class MainMenuState extends MusicBeatState
 		FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, (FlxG.mouse.screenX-(FlxG.width/2)) * 0.015, (1/30)*240*elapsed);
 		FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
 
+		#if ACHIEVEMENTS_ALLOWED
+		if(FlxG.keys.justPressed.ONE)
+		{
+			Achievements.loadAchievements();
+			var achieveID:Int = Achievements.getAchievementIndex('friday_night_play');
+			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
+				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+				giveAchievement();
+				ClientPrefs.saveSettings();
+			}
+		}
+		#end
+
 		if (!selectedSomethin)
 		{
 			if(canPress)
 			{
 				changeItem();
+
+				if(FlxG.mouse.overlaps(trophy))
+				{
+					shaderMonochrome.brightness = origSaturTrophy-0.3;
+					if(FlxG.mouse.justPressed)
+					{
+						selectedSomethin = true;
+						FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+						FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.7, {ease: FlxEase.quadOut, type: BACKWARD});
+						FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+						FlxFlicker.flicker(trophy, 1, 0.06, true, false, function(flick:FlxFlicker)
+						{
+							pressedMenu('awards');
+						});
+					}
+				} else {
+					shaderMonochrome.brightness = origSaturTrophy;
+				}
 
 				menuItems.forEach(function(spr:FlxSprite)
 				{
@@ -196,19 +234,6 @@ class MainMenuState extends MusicBeatState
 						});
 					}
 				});
-
-				if(FlxG.keys.justPressed.ONE)
-				{
-					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('cancelMenu'));
-					MusicBeatState.switchState(new AchievementsStatePVZ());
-				}
-				if(FlxG.keys.justPressed.TWO)
-				{
-					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('cancelMenu'));
-					MusicBeatState.switchState(new TestState());
-				}
 	
 				if (controls.BACK)
 				{
