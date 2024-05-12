@@ -120,7 +120,7 @@ class MainMenuState extends MusicBeatState
 		overlay.screenCenter();
 		add(overlay);
 
-		var versionShit:FlxText = new FlxText(-200, 800, 0, "FNF` BRUTAL PIZDEC v" + psychEngineVersion, 24);
+		var versionShit:FlxText = new FlxText(-200, 800, 0, "FNF: BRUTAL PIZDEC v" + psychEngineVersion, 24);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -148,7 +148,7 @@ class MainMenuState extends MusicBeatState
 		super.create();
 
 		FlxG.mouse.unload();
-		FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
+		FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0); // you can't hide what you did
 		FlxG.mouse.visible = true;
 	}
 

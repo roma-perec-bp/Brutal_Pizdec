@@ -73,26 +73,35 @@ class AchievementsStatePVZ extends MusicBeatState
 			iconsAchievementsGroup.add(icon);
 
 			var nameText = new FlxOffsetText(0, 0, 800, achieveNameIcon, 56, 0, -70, true);
-			nameText.setFormat(Paths.font("HouseofTerror.ttf"), 56, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			nameText.setFormat(Paths.font("HouseofTerror.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			nameText.screenCenter(X);
 			nameText.x += 45;
 			nameText.y = FlxG.height/2 + (FlxG.height * i) + nameText.offsetY;
 			nameText.ID = i;
 			attachedTextGroup.add(nameText);
 
-			var descText = new FlxOffsetText(0, 0, 800, achieveDescIcon, 56, 0, 20);
-			descText.setFormat(Paths.font("HouseofTerror.ttf"), 40, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			var descText = new FlxOffsetText(0, 0, 950, achieveDescIcon, 56, 0, 20);
+			descText.setFormat(Paths.font("HouseofTerror.ttf"), 38, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			descText.screenCenter(X);
 			descText.x += 45;
 			descText.y = FlxG.height/2 + (FlxG.height * i) + descText.offsetY;
 			descText.ID = i;
 			attachedTextGroup.add(descText);
 
-			var scoreNumberText = new FlxOffsetText(FlxG.width - 5, 0, 800, achieveDescIcon, 56, 0, 20);
-			scoreNumberText.setFormat(Paths.font("HouseofTerror.ttf"), 40, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-			scoreNumberText.y = FlxG.height/2 + (FlxG.height * i) + scoreNumberText.offsetY;
-			scoreNumberText.ID = i;
-			attachedTextGroup.add(scoreNumberText);
+			if(Achievements.achievementsStuff[achievementIndex[i]][4] != null)
+			{
+				trace(i);
+				var scoreNumberText = new FlxOffsetText(0, 0, FlxG.width, 
+					Std.string(Achievements.getAchievementCurNum(achieveName))
+						+"/"+
+					Std.string(Achievements.achievementsStuff[achievementIndex[i]][4]), 56, -10, 7, false, false);
+				scoreNumberText.setFormat(Paths.font("HouseofTerror.ttf"), 80, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				scoreNumberText.screenCenter(X);
+				scoreNumberText.x += scoreNumberText.offsetX;
+				scoreNumberText.y = FlxG.height/2 + (FlxG.height * i) + scoreNumberText.offsetY;
+				scoreNumberText.ID = i;
+				attachedTextGroup.add(scoreNumberText);
+			}
 		}
 
 		upArrow = new FlxSprite(1136, 15).loadGraphic(Paths.image("achieve_PVZ/up_arrow"));
@@ -116,10 +125,9 @@ class AchievementsStatePVZ extends MusicBeatState
 
 		for(j in 0...Achievements.achievementsStuff.length)
 		{
-			allsum ++;
 			if(Achievements.isAchievementUnlocked(Achievements.achievementsStuff[j][2])) unlockedSum++;
 		}
-
+		allsum = Achievements.achievementsStuff.length;
 		amountText.text = Std.string(unlockedSum)+'/'+Std.string(allsum);
 
         super.create();
@@ -184,12 +192,14 @@ class FlxOffsetText extends FlxText
 	public var offsetX:Float = 0;
 	public var offsetY:Float = 0;
 	public var type:Bool = false;
-	public function new(x:Float, y:Float, length:Float, text:String = "", size:Int, ?offsetX:Float = 0, ?offsetY:Float = 0, ?type:Bool = false)
+	public var menuText:Bool = true;
+	public function new(x:Float, y:Float, length:Float, text:String = "", size:Int, ?offsetX:Float = 0, ?offsetY:Float = 0, ?type:Bool = false, ?menuText:Bool = true)
 	{
 		super(x, y, length, text, size);
 		this.offsetX = offsetX;
 		this.offsetY = offsetY;
 		this.type = type;
+		this.menuText = menuText;
 	}
 
 	override function update(el:Float)
@@ -203,8 +213,10 @@ class FlxOffsetText extends FlxText
 				this.color = 0xFFFFDD00;
 			}
 		} else {
-			if(Achievements.achievementsStuff[this.ID][3] == true)
-				createQuestionText();
+			if(menuText == true) {
+				if(Achievements.achievementsStuff[this.ID][3] == true && !Achievements.isAchievementUnlocked(Achievements.achievementsStuff[this.ID][2]))
+					createQuestionText();
+			}
 		}
 		super.update(el);
 	}
