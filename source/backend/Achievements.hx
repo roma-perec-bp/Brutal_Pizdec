@@ -7,7 +7,7 @@ class Achievements {
 		["Brutal Pizdec","Beat Story Mode with no Misses & no Deaths.","story2",false],
 		["Feeling jalapenos in my ass!!","Beat every Songs.","allweeks0",false],
 		["Scorching Self-Immolation","Beat every Songs with no Misses & no Deaths.","allweeks1",false],
-		["Um excuse me what the actual fuck are you doing in my house???","All Song. No Misses. No Deaths. All achievements.","allweeks2",false],
+		["Um excuse me what the actual fuck are you doing in my house???","All Songs. No Misses. No Deaths. All achievements.","allweeks2",false],
 		["Life Anecdote",'Die on \"Anekdot\" song.','anekdote0',false],
 		["Daily Anecdote!!",'Beat \"Anekdot\" song with no Misses.','anekdote1',false],
 		["DIMA KUPLINOV",'Beat \"Klork\" song with no Misses.','klork0',false],
