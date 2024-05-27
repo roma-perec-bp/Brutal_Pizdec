@@ -1,7 +1,25 @@
+function onCreate()
+    makeLuaSprite('blackFlash', null, 0, 0)
+    makeGraphic('blackFlash', 1280, 720, '000000')
+    setObjectCamera('blackFlash', 'hud')
+    addLuaSprite('blackFlash', true)
+end
+
 function onBeatHit()
     if curBeat % 2 == 0 then
         setProperty('iconP1.flipX', true)
     else
         setProperty('iconP1.flipX', false)
+    end
+    if  curBeat == 746 then
+
+        doTweenAlpha('suka','blackFlash', 1, 30, 'linear')
+
+    end
+end
+
+function onStepHit()
+    if curStep == 1 then
+        doTweenAlpha('suka','blackFlash', 0, 20, 'linear')
     end
 end
