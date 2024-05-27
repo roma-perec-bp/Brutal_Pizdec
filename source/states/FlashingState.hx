@@ -11,6 +11,8 @@ class FlashingState extends MusicBeatState
 	public static var leftState:Bool = false;
 
 	var warnText:FlxText;
+	var disclaimer:FlxText;
+	var enterText:FlxText;
 	override function create()
 	{
 		super.create();
@@ -18,43 +20,49 @@ class FlashingState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 
+		disclaimer = new FlxText(0, 0, FlxG.width, "WATCH OUT!", 48);
+		disclaimer.setFormat("vcr.ttf", 80, FlxColor.RED, CENTER);
+		disclaimer.y += 120;
+		add(disclaimer);
+
 		warnText = new FlxText(0, 0, FlxG.width,
-			"Hey, watch out!\n
-			This Mod contains some flashing lights!\n
-			Press ENTER to disable them now or go to Options Menu.\n
-			Press ESCAPE to ignore this message.\n
-			You've been warned!",
+			"In this mod there will be unsencored words and there will also be flashing lights!
+			If you have a low PC or your FPS is down,
+			then I recommend checking the
+			settings in the \"Graphics\" categories",
 			32);
-		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+		warnText.setFormat("vcr.ttf", 32, FlxColor.WHITE, CENTER);
+		warnText.x += 10;
 		warnText.screenCenter(Y);
 		add(warnText);
+
+		enterText = new FlxText(0, 0, FlxG.width,
+			"PRESS ENTER TO START",
+			32);
+		enterText.setFormat("vcr.ttf", 64, FlxColor.GREEN, CENTER);
+		enterText.y += 520;
+		add(enterText);
 	}
+
 
 	override function update(elapsed:Float)
 	{
 		if(!leftState) {
-			var back:Bool = controls.BACK;
-			if (controls.ACCEPT || back) {
+			if (controls.ACCEPT) {
 				leftState = true;
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
-				if(!back) {
-					ClientPrefs.data.flashing = false;
-					ClientPrefs.saveSettings();
 					FlxG.sound.play(Paths.sound('confirmMenu'));
-					FlxFlicker.flicker(warnText, 1, 0.1, false, true, function(flk:FlxFlicker) {
-						new FlxTimer().start(0.5, function (tmr:FlxTimer) {
-							MusicBeatState.switchState(new TitleState());
+					ClientPrefs.saveSettings();
+					FlxFlicker.flicker(enterText, 1, 0.1, false, true, function(flk:FlxFlicker) {
+							FlxTween.tween(disclaimer, {alpha: 0}, 1);
+							FlxTween.tween(warnText, {alpha: 0}, 1, {
+								onComplete: function (twn:FlxTween) {
+									MusicBeatState.switchState(new TitleState());
+								}
+					
 						});
 					});
-				} else {
-					FlxG.sound.play(Paths.sound('cancelMenu'));
-					FlxTween.tween(warnText, {alpha: 0}, 1, {
-						onComplete: function (twn:FlxTween) {
-							MusicBeatState.switchState(new TitleState());
-						}
-					});
-				}
 			}
 		}
 		super.update(elapsed);
