@@ -17,11 +17,6 @@ import sys.FileSystem;
 
 import objects.AttachedSprite;
 
-/*import haxe.zip.Reader;
-import haxe.zip.Entry;
-import haxe.zip.Uncompress;
-import haxe.zip.Writer;*/
-
 class ModsMenuState extends MusicBeatState
 {
 	var mods:Array<ModMetadata> = [];
