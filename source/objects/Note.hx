@@ -165,21 +165,12 @@ class Note extends FlxSprite
 			switch(value) {
 				case 'Hurt Note':
 					ignoreNote = mustPress;
-					//reloadNote('HURTNOTE_assets');
-					//this used to change the note texture to HURTNOTE_assets.png,
-					//but i've changed it to something more optimized with the implementation of RGBPalette:
-
-					// note colors
 					rgbShader.r = 0xFF101010;
 					rgbShader.g = 0xFFFF0000;
 					rgbShader.b = 0xFF990022;
-
-					// splash data and colors
 					noteSplashData.r = 0xFFFF0000;
 					noteSplashData.g = 0xFF101010;
 					noteSplashData.texture = 'noteSplashes/noteSplashes-electric';
-
-					// gameplay data
 					lowPriority = true;
 					missHealth = isSustainNote ? 0.25 : 0.1;
 					hitCausesMiss = true;
@@ -196,7 +187,14 @@ class Note extends FlxSprite
 					romNote = true;
 				case 'Jap Note':
 					ignoreNote = mustPress;
-					reloadNote('JAPNOTE_assets');
+					if(curSong == 'boom-old')
+						{
+							reloadNote('JAPNOTEold_assets');
+						}
+						else
+						{
+							reloadNote('JAPNOTE_assets');
+						}
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;
@@ -210,7 +208,14 @@ class Note extends FlxSprite
 	
 				case 'Jap Note no anim':
 					ignoreNote = mustPress;
-					reloadNote('JAPNOTE_assets');
+					if(curSong == 'boom-old')
+					{
+						reloadNote('JAPNOTEold_assets');
+					}
+					else
+					{
+						reloadNote('JAPNOTE_assets');
+					}
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;

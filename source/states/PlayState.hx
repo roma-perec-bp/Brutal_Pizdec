@@ -458,7 +458,7 @@ class PlayState extends MusicBeatState
 
 		if(SONG.song == 'lore')
 		{
-			rom = new Character(0, 0, 'bf');
+			rom = new Character(0, 0, 'rom');
 			startCharacterPos(rom, true);
 			romGroup.add(rom);
 			startCharacterScripts(rom.curCharacter);

@@ -29,7 +29,6 @@ import sys.io.File;
 
 typedef TitleData =
 {
-
 	titlex:Float,
 	titley:Float,
 	startx:Float,
