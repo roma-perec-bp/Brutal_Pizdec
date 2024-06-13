@@ -2430,7 +2430,7 @@ class PlayState extends MusicBeatState
 				var color:String = value2;
 				if (color.length > 1)
 				{
-					if (!color.startsWith('0x'))
+					if (!color.startsWith('0xFF'))
 						color = '0xFF$color';
 				}
 				else
