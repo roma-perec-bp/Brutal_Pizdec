@@ -19,7 +19,6 @@ import openfl.display.BitmapData;
 import shaders.ColorSwap;
 
 import states.StoryMenuState;
-import states.OutdatedState;
 import states.MainMenuState;
 
 #if MODS_ALLOWED
@@ -408,11 +407,8 @@ class TitleState extends MusicBeatState
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					if (mustUpdate) {
-						MusicBeatState.switchState(new OutdatedState());
-					} else {
 						MusicBeatState.switchState(new MainMenuState());
-					}
+					
 					closedState = true;
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);

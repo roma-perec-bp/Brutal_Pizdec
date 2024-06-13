@@ -187,14 +187,7 @@ class Note extends FlxSprite
 					romNote = true;
 				case 'Jap Note':
 					ignoreNote = mustPress;
-					if(curSong == 'boom-old')
-						{
-							reloadNote('JAPNOTEold_assets');
-						}
-						else
-						{
-							reloadNote('JAPNOTE_assets');
-						}
+					reloadNote('JAPNOTEold_assets'); //пока ччто олд постоавил что бы будушием делать новый хуйню
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;
@@ -206,16 +199,9 @@ class Note extends FlxSprite
 					offsetX = -20;
 					jap = true;
 	
-				case 'Jap Note no anim':
+				case 'Jap Note no anim': //зачем это
 					ignoreNote = mustPress;
-					if(curSong == 'boom-old')
-					{
-						reloadNote('JAPNOTEold_assets');
-					}
-					else
-					{
-						reloadNote('JAPNOTE_assets');
-					}
+					reloadNote('JAPNOTEold_assets');
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;

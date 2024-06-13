@@ -21,13 +21,11 @@ function onCreate()
 	setObjectCamera('maniaPart', 'hud')
 	setProperty('maniaPart.alpha', 0.00001)
 	addLuaSprite('maniaPart', false)
-	
     --начало модчарта хахаха
     makeLuaSprite('blackFlash', null, 0, 0)
     makeGraphic('blackFlash', 1280, 720, '000000')
     setObjectCamera('blackFlash', 'hud')
     addLuaSprite('blackFlash', false)
-    
     makeLuaSprite('vin', 'vin', 0, 0)
     setObjectCamera('vin', 'hud')
     addLuaSprite('vin', true)
