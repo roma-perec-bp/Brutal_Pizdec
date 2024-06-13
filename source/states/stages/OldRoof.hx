@@ -34,7 +34,7 @@ class OldRoof extends BaseStage
 				if(value1 == 'on')
 					bg2.alpha = 1;
 				else
-					bg2.alpha = 0.001;
+					bg2.alpha = 0.000001;
 		}
 	}
 }
