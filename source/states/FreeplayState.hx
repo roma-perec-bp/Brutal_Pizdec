@@ -96,13 +96,13 @@ class FreeplayState extends MusicBeatState
 		switch (freeplayType)
 		{
 			case 0:
-				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
+				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['freeplay/jap-pixel', 'freeplay/jap-pixel', 'freeplay/ap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
 			case 1:
-				addWeek(['Anekdot', 'Klork', 'T short', 'Monochrome', '64 rubl', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', '64-pixel', 'lore-pixel'], ['lamar', 'lork', 'tshort', 'dead', 'lamar', 'gandons']);
+				addWeek(['Anekdot', 'Klork', 'T Short', 'Monochrome', '64 rubl', 'Lore'], 1, bonusColors, ['freeplay/box-pixel', 'freeplay/lork-pixel', 'freeplay/short-pixel', 'freeplay/deadjap-pixel', 'freeplay/64-pixel', 'freeplay/lore-pixel'], ['lamar', 'lork', 'tshort', 'dead', 'lamar', 'gandons']);
 			case 2:
-				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex-pixel', 'jamar-pixel'], ['bbg', 'lamar']);
+				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['freeplay/sex-pixel', 'freeplay/jamar-pixel'], ['bbg', 'lamar']);
 			case 3:
-				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, oldColors, ['jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel'], ['jap-old', 'jap2-old', 'lork']);
+				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, oldColors, ['freeplay/jap-old-pixel', 'freeplay/jap-wheel-old-pixel', 'freeplay/lork-pixel'], ['jap-old', 'jap2-old', 'lork']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));

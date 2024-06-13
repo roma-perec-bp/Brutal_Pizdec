@@ -2423,7 +2423,6 @@ class PlayState extends MusicBeatState
 
 			case 'Toogle CamZooming':
 				camZooming = !camZooming;
-
 			
 			case 'Flash Camera':
 				var duration:Float = Std.parseFloat(value1);
@@ -2435,7 +2434,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					color = "0xFFFFFF";
+					color = "0xFFFFFFFF";
 				}
 				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 
