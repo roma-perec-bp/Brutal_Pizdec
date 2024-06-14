@@ -1201,7 +1201,7 @@
 					],
 					[
 						"Camera Follow Pos Tween",
-						"1350, -100, 6",
+						"1350, -400, 6",
 						"linear"
 					]
 				]
@@ -1220,7 +1220,7 @@
 						"0.05"
 					],
 					[
-						"Camera Follow Pos",
+						"Camera Follow Pos Tween",
 						"",
 						""
 					]

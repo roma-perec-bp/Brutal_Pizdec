@@ -633,8 +633,8 @@ class PlayState extends MusicBeatState
 			add(ratingTxt);
 		}
 
-		if(curStage == 'roof-old')
-		{
+		/*if(curStage == 'roof-old')
+		{*/
 			fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
 			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
 			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
@@ -647,7 +647,19 @@ class PlayState extends MusicBeatState
 			fireHalapeno.screenCenter(X);
 			fireHalapeno.animation.play('idle');
 			add(fireHalapeno);
-		}
+		/*} else { fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
+			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
+			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
+			fireHalapeno.flipY = ClientPrefs.data.downScroll;
+			fireHalapeno.antialiasing = ClientPrefs.data.antialiasing;
+			fireHalapeno.scrollFactor.set();
+			fireHalapeno.blend = ADD;
+			fireHalapeno.alpha = 0.0001;
+			fireHalapeno.updateHitbox();
+			fireHalapeno.screenCenter(X);
+			fireHalapeno.animation.play('idle');
+			add(fireHalapeno);
+		}*/
 
 		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
