@@ -1,5 +1,5 @@
 function onCreate()
-    makeLuaSprite('blackFlash', null, 0, 0)
+    makeLuaSprite('blackFlash', nil, 0, 0)
     makeGraphic('blackFlash', 1280, 720, '000000')
     setObjectCamera('blackFlash', 'hud')
     addLuaSprite('blackFlash', true)
@@ -12,9 +12,7 @@ function onBeatHit()
         setProperty('iconP1.flipX', false)
     end
     if  curBeat == 746 then
-
-        doTweenAlpha('suka','blackFlash', 1, 30, 'linear')
-
+        doTweenAlpha('suka','blackFlash', 1, 25, 'linear')
     end
 end
 

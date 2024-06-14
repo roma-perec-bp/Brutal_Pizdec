@@ -51,8 +51,6 @@ class Prompt extends MusicBeatSubstate
 	{
 		super.create();
 		if (goAnyway){
-			
-			
 				if(okc != null)okc();
 			close();
 			

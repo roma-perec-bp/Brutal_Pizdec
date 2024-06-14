@@ -187,7 +187,7 @@ class Note extends FlxSprite
 					romNote = true;
 				case 'Jap Note':
 					ignoreNote = mustPress;
-					reloadNote('JAPNOTEold_assets'); //пока ччто олд постоавил что бы будушием делать новый хуйню
+					reloadNote('JAPNOTE_assets'); //пока ччто олд постоавил что бы будушием делать новый хуйню
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;
@@ -201,7 +201,7 @@ class Note extends FlxSprite
 	
 				case 'Jap Note no anim': //зачем это
 					ignoreNote = mustPress;
-					reloadNote('JAPNOTEold_assets');
+					reloadNote('JAPNOTE_assets');
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;

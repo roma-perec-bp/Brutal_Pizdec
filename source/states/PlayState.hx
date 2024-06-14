@@ -2061,7 +2061,8 @@ class PlayState extends MusicBeatState
 				}
 		}
 
-		if(curStage == 'roof-old' || chartingMode)
+		//if(curStage == 'roof-old' || chartingMode) //чарт эдитор крашить игру, так что я скрою времмено
+		if(curStage == 'roof-old')
 			openSubState(new PauseSubStateold(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		else
 			openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
