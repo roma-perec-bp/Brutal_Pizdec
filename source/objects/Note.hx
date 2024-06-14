@@ -183,8 +183,14 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
+					rgbShader.r = 0xFF2D2D49;
+					rgbShader.g = 0xFFFFFFFF;
+					rgbShader.b = 0xFF000000;
 				case 'rom':
 					romNote = true;
+					rgbShader.r = 0xFF4CFF00;
+					rgbShader.g = 0xFFFFFFFF;
+					rgbShader.b = 0xFF164E00;
 				case 'Jap Note':
 					ignoreNote = mustPress;
 					reloadNote('JAPNOTE_assets'); //пока ччто олд постоавил что бы будушием делать новый хуйню
@@ -198,7 +204,6 @@ class Note extends FlxSprite
 					lowPriority = true;
 					offsetX = -20;
 					jap = true;
-	
 				case 'Jap Note no anim': //зачем это
 					ignoreNote = mustPress;
 					reloadNote('JAPNOTE_assets');

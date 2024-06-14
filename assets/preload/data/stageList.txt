@@ -1,2 +1,8 @@
 stage
 night
+day
+old-roof
+flipaclip
+void
+lore
+lamar

@@ -647,7 +647,8 @@ class PlayState extends MusicBeatState
 			fireHalapeno.screenCenter(X);
 			fireHalapeno.animation.play('idle');
 			add(fireHalapeno);
-		/*} else { fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
+		/*} else { 
+			fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
 			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
 			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
 			fireHalapeno.flipY = ClientPrefs.data.downScroll;
@@ -2442,8 +2443,8 @@ class PlayState extends MusicBeatState
 				var color:String = value2;
 				if (color.length > 1)
 				{
-					if (!color.startsWith('0xFF'))
-						color = '0xFF$color';
+					if (!color.startsWith('0x'))
+						color = '0x$color';
 				}
 				else
 				{
@@ -3369,7 +3370,7 @@ class PlayState extends MusicBeatState
 
 		if(note.noteType == 'Jap Note no anim') {
 			if (health >= 0.4) health -=  0.06;
-			fireHalapeno.alpha = 0.8;
+			//fireHalapeno.alpha = 0.8;
 		}
 
 		if (SONG.needsVoices)

@@ -96,7 +96,7 @@ class FreeplayState extends MusicBeatState
 		switch (freeplayType)
 		{
 			case 0:
-				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'ap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
+				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
 			case 1:
 				addWeek(['Anekdot', 'Klork', 'T Short', 'Monochrome', '64 rubl', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', '64-pixel', 'lore-pixel'], ['lamar', 'lork', 'tshort', 'dead', 'lamar', 'gandons']);
 			case 2:
