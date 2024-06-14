@@ -42,6 +42,7 @@ class LoadingState extends MusicBeatState
 
 	var funkay:FlxSprite;
 	var loadBar:FlxSprite;
+	
 	override function create()
 	{
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);

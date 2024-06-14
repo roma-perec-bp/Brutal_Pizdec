@@ -2074,8 +2074,7 @@ class PlayState extends MusicBeatState
 				}
 		}
 
-		//if(curStage == 'roof-old' || chartingMode) //чарт эдитор крашить игру, так что я скрою времмено
-		if(curStage == 'roof-old')
+		if(curStage == 'roof-old' || chartingMode)
 			openSubState(new PauseSubStateold(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		else
 			openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
@@ -2444,11 +2443,11 @@ class PlayState extends MusicBeatState
 				if (color.length > 1)
 				{
 					if (!color.startsWith('0x'))
-						color = '0x$color';
+						color = '0xFF$color';
 				}
 				else
 				{
-					color = "0xFFFFFFFF";
+					color = "0xFFFFFF";
 				}
 				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 
@@ -2459,7 +2458,7 @@ class PlayState extends MusicBeatState
 				if(sexcameratween != null)
 					sexcameratween.cancel();
 
-				sexcameratween = FlxTween.tween(this, {defaultCamZoom: flValue1}, flValue2, {ease: FlxEase.quadOut,
+				sexcameratween = FlxTween.tween(this, {defaultCamZoom: flValue1}, flValue2, {ease: FlxEase.quadInOut,
 					onComplete: function(twn:FlxTween)
 						{
 							sexcameratween = null;
@@ -2472,7 +2471,7 @@ class PlayState extends MusicBeatState
 				if(sexcameratween != null)
 					sexcameratween.cancel();
 
-				sexcameratween = FlxTween.tween(FlxG.camera, {zoom: flValue1}, flValue2, {ease: FlxEase.quadOut,
+				sexcameratween = FlxTween.tween(FlxG.camera, {zoom: flValue1}, flValue2, {ease: FlxEase.quadInOut,
 					onComplete: function(twn:FlxTween)
 						{
 							sexcameratween = null;
