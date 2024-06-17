@@ -35,7 +35,6 @@ class HealthIcon extends FlxSprite
 			loadGraphic(graphic, true, Math.floor(graphic.width / 3), Math.floor(graphic.height));
 			iconOffsets[0] = (width - 150) / 2;
 			iconOffsets[1] = (height - 150) / 2;
-			iconOffsets[2] = (height - 150) / 2;
 			updateHitbox();
 
 			animation.add(char, [0, 1, 2], 0, false, isPlayer);
