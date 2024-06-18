@@ -155,6 +155,8 @@ class PlayState extends MusicBeatState
 
 	public var rom:Character = null; //ТОТ САМЫЫЫЙ!!!!111!1!1
 
+	var direction:Bool = false; //fade camera
+
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
 	public var eventNotes:Array<EventNote> = [];
@@ -2436,20 +2438,50 @@ class PlayState extends MusicBeatState
 
 			case 'Toogle CamZooming':
 				camZooming = !camZooming;
-			
+
 			case 'Flash Camera':
-				var duration:Float = Std.parseFloat(value1);
-				var color:String = value2;
-				if (color.length > 1)
-				{
-					if (!color.startsWith('0x'))
-						color = '0xFF$color';
+				var args:Array<String> = value2.split(",");
+
+				var color:FlxColor = 0xFFFFFFFF;
+
+				if (flValue1 == null) flValue1 = 1;
+	
+				if (args[0] == null || args[0] == '')
+					color = 0xFFFFFFFF;
+
+				color = Std.parseInt(args[0]);
+
+				var camera:String = args[1];
+	
+				switch(camera.toLowerCase().trim()) {
+					case 'camhud' | 'HUD' | 'hud':
+						camHUD.flash(color, flValue1, null, true);
+					default:
+						FlxG.camera.flash(color, flValue1, null, true);
 				}
-				else
-				{
-					color = "0xFFFFFF";
+	
+			case 'Camera Fade':
+				var args:Array<String> = value2.split(",");
+
+				var color:FlxColor = 0xFFFFFFFF;
+	
+				if (flValue1 == null) flValue1 = 1;
+		
+				if (args[0] == null || args[0] == '')
+					color = 0xFFFFFFFF;
+	
+				color = Std.parseInt(args[0]);
+	
+				var camera:String = args[1];
+
+				switch(camera.toLowerCase().trim()) {
+					case 'camhud' | 'HUD' | 'hud':
+						camHUD.fade(color, flValue1, direction, null, true);
+						direction = !direction;
+					default:
+						FlxG.camera.fade(color, flValue1, direction, null, true);
+						direction = !direction;
 				}
-				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 
 			case 'Set Cam Zoom':
 				if(flValue1 == null) flValue1 = 1;

@@ -15,8 +15,12 @@ function onCreate()
     makeLuaSprite('blackScreenSonicCount','',0,0)
     setObjectCamera('blackScreenSonicCount','hud')
     makeGraphic('blackScreenSonicCount',screenWidth,screenHeight,'000000')
-    setProperty('blackScreenSonicCount.alpha', 0.001)
+    setProperty('blackScreenSonicCount.alpha', 1)
     addLuaSprite('blackScreenSonicCount',false)
+end
+
+function onSongStart()
+    doTweenAlpha('aaaaa', 'blackScreenSonicCount', 0, 10)
 end
 
 function onCreatePost()
