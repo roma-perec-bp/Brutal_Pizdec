@@ -3442,10 +3442,10 @@ class PlayState extends MusicBeatState
 
 		if(note.noteType == 'Jalapeno Note BOOM SOUND') {
 			if (health >= 0.4) health -=  0.1;
-			fireHalapeno.alpha = 0.8;
-			fireFlash.alpha = 0.6;
-			FlxG.camera.zoom += 0.04;
-			camHUD.zoom += 0.04;
+			fireHalapeno.alpha = 0.5;
+			fireFlash.alpha = 0.4;
+			FlxG.camera.zoom += 0.02;
+			camHUD.zoom += 0.02;
 		}
 
 		if (SONG.needsVoices)
@@ -3495,8 +3495,8 @@ class PlayState extends MusicBeatState
 						case 'Jalapeno Note NEW':
 							FlxG.sound.play(Paths.sound('boom'), 0.6);
 							health -=  0.06;
-							fireHalapeno.alpha = 0.5;
-							fireFlash.alpha = 0.8;
+							fireHalapeno.alpha = 0.8;
+							fireFlash.alpha = 0.6;
 							FlxG.camera.zoom += 0.06;
 							camHUD.zoom += 0.06;
 							dropTime = 10;
