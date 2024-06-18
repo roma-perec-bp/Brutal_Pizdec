@@ -160,6 +160,8 @@ class PlayState extends MusicBeatState
 
 	var direction:Bool = false; //fade camera
 
+	private var task:SongIntro;
+
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
 	public var eventNotes:Array<EventNote> = [];
@@ -555,6 +557,16 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 
+		if(curStage != 'roof-old')
+		{
+			if (Assets.exists(Paths.txt(SONG.song.toLowerCase().replace(' ', '-') + "/info")))
+			{
+				task = new SongIntro(0, -250, SONG.song.toLowerCase().replace(' ', '-'));
+				task.cameras = [camOther];
+				add(task);
+			}
+		}
+
 		if(curStage == 'roof-old')
 		{
 			healthBarBGOverlay = new FlxSprite(300, FlxG.height * (!ClientPrefs.data.downScroll ? 0.785 : 0.005));
@@ -700,7 +712,7 @@ class PlayState extends MusicBeatState
 
 		if(curStage == 'roof-old' || curStage == 'night')
 			fireHalapeno.cameras = [camHUD];
-		
+
 		if(curStage == 'night') fireFlash.cameras = [camOther];
 
 		botplayTxt.cameras = [camHUD];
@@ -1409,7 +1421,7 @@ class PlayState extends MusicBeatState
 			vocals.pause();
 		}
 
-		trace(fullScore);
+		if (task != null) task.start();
 
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
