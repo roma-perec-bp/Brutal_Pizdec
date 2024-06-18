@@ -650,7 +650,7 @@ class PlayState extends MusicBeatState
 			fireHalapeno.animation.play('idle');
 			add(fireHalapeno);
 		} else { 
-			/*fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
+			fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
 			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
 			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
 			fireHalapeno.flipY = ClientPrefs.data.downScroll;
@@ -661,7 +661,7 @@ class PlayState extends MusicBeatState
 			fireHalapeno.updateHitbox();
 			fireHalapeno.screenCenter(X);
 			fireHalapeno.animation.play('idle');
-			add(fireHalapeno);*/
+			add(fireHalapeno);
 		}
 
 		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, "BOTPLAY", 32);
