@@ -46,7 +46,7 @@ class SongIntro extends FlxSpriteGroup
         text.setFormat(Paths.font("HouseofTerror.ttf"), 100, color, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         text.borderSize = 4;
 
-        var text2 = new FlxText(850, 650, 0, "", fontSize);
+        var text2 = new FlxText(850, 550, 0, "", fontSize);
         text2.setFormat(Paths.font("HouseofTerror.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
         var text3 = new FlxText(text2.x, text2.y + 60, 0, "", fontSize);
