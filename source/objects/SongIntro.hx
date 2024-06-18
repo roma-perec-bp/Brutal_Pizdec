@@ -14,7 +14,7 @@ class SongIntro extends FlxSpriteGroup
 {
     var meta:Array<Array<String>> = [];
     var size:Float = 0;
-    var fontSize:Int = 42;
+    var fontSize:Int = 48;
     var colorText:FlxColor = 0xFFFFFFFF;
 
     public function new(_x:Float, _y:Float, _song:String, ?_numberThing:Int = -1) {
@@ -46,10 +46,10 @@ class SongIntro extends FlxSpriteGroup
         text.setFormat(Paths.font("HouseofTerror.ttf"), 100, color, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         text.borderSize = 4;
 
-        var text2 = new FlxText(850, 550, 0, "", fontSize);
+        var text2 = new FlxText(850, 600, 0, "", fontSize);
         text2.setFormat(Paths.font("HouseofTerror.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
-        var text3 = new FlxText(text2.x, text2.y + 60, 0, "", fontSize);
+        var text3 = new FlxText(text2.x, text2.y + 60, 0, "", fontSize - 20);
         text3.setFormat(Paths.font("HouseofTerror.ttf"), fontSize, FlxColor.WHITE, FlxTextAlign.RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
         var text4 = new FlxText(text2.x, text3.y + 60, 0, "", fontSize);
