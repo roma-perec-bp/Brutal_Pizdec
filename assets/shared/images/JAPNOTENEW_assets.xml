@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="JAPNOTENEW_assets.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue0000" x="10" y="10" width="160" height="185"/>
+	<SubTexture name="green0000" x="180" y="10" width="160" height="185"/>
+	<SubTexture name="purple0000" x="10" y="205" width="185" height="161"/>
+	<SubTexture name="red0000" x="205" y="205" width="185" height="161"/>
+</TextureAtlas>

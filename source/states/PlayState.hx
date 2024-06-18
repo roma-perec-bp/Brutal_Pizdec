@@ -146,6 +146,9 @@ class PlayState extends MusicBeatState
 
 	public var spawnTime:Float = 2000;
 
+	var healthDrop:Float = 0;
+	var dropTime:Float = 0;
+
 	public var vocals:FlxSound;
 	public var inst:FlxSound;
 
@@ -184,6 +187,7 @@ class PlayState extends MusicBeatState
 	var songPercent:Float = 0;
 
 	private var fireHalapeno:FlxSprite;
+	private var fireFlash:FlxSprite;
 
 	public var ratingsData:Array<Rating> = Rating.loadDefault();
 	public var fullComboFunction:Void->Void = null;
@@ -650,7 +654,7 @@ class PlayState extends MusicBeatState
 			fireHalapeno.animation.play('idle');
 			add(fireHalapeno);
 		} else { 
-			fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
+			fireHalapeno = new FlxSprite(0, scoreTxt.y - 190);
 			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
 			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
 			fireHalapeno.flipY = ClientPrefs.data.downScroll;
@@ -662,6 +666,14 @@ class PlayState extends MusicBeatState
 			fireHalapeno.screenCenter(X);
 			fireHalapeno.animation.play('idle');
 			add(fireHalapeno);
+		}
+
+		if(curStage == 'night')
+		{
+			fireFlash = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xFFFF7700);
+			fireFlash.alpha = 0;
+			fireFlash.blend = ADD;
+			add(fireFlash);
 		}
 
 		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, "BOTPLAY", 32);
@@ -686,8 +698,11 @@ class PlayState extends MusicBeatState
 		accuracyShit.cameras = [camHUD];
 		ratingTxt.cameras = [camHUD];
 
-		if(curStage == 'roof-old')
+		if(curStage == 'roof-old' || curStage == 'night')
+		{
 			fireHalapeno.cameras = [camHUD];
+			fireFlash.cameras = [camOther];
+		}
 
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
@@ -1468,7 +1483,7 @@ class PlayState extends MusicBeatState
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 				var gottaHitNote:Bool = section.mustHitSection;
 
-				if (gottaHitNote && songNotes[3] != 'Hurt Note' && songNotes[3] != 'Jap Note')
+				if (gottaHitNote && songNotes[3] != 'Hurt Note' && songNotes[3] != 'Jap Note' && songNotes[3] != 'Jalapeno Note NEW')
 					totalNotes += 1;
 
 				if (songNotes[1] > 3)
@@ -1808,10 +1823,16 @@ class PlayState extends MusicBeatState
 		}*/
 		callOnScripts('onUpdate', [elapsed]);
 
-		if(curStage == 'roof-old')
+		if(curStage == 'roof-old' || curStage == 'night')
 		{
-			if (fireHalapeno.alpha >= 0.0001)
+			if (fireHalapeno.alpha >= 0)
 				fireHalapeno.alpha -= 0.01;
+		}
+
+		if(curStage == 'night')
+		{
+			if (fireFlash.alpha >= 0)
+				fireFlash.alpha -= 0.01;
 		}
 
 		FlxG.camera.followLerp = 0;
@@ -1825,6 +1846,21 @@ class PlayState extends MusicBeatState
 			} else {
 				boyfriendIdleTime = 0;
 			}
+		}
+
+		if(dropTime > 0)
+		{
+			dropTime -= elapsed;
+			health -= healthDrop * (elapsed/(1/120));
+			healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
+			FlxColor.fromRGB(255, 50, 0));
+		}
+
+		if(dropTime<=0)
+		{
+			healthDrop = 0;
+			dropTime = 0;
+			reloadHealthBarColors();
 		}
 
 		if (rotCam)
@@ -3404,6 +3440,14 @@ class PlayState extends MusicBeatState
 			fireHalapeno.alpha = 0.8;
 		}
 
+		if(note.noteType == 'Jalapeno Note BOOM SOUND') {
+			if (health >= 0.4) health -=  0.1;
+			fireHalapeno.alpha = 0.8;
+			fireFlash.alpha = 0.6;
+			FlxG.camera.zoom += 0.04;
+			camHUD.zoom += 0.04;
+		}
+
 		if (SONG.needsVoices)
 			vocals.volume = 1;
 
@@ -3447,6 +3491,16 @@ class PlayState extends MusicBeatState
 						case 'Jap Note': //Hurt note
 							FlxG.sound.play(Paths.sound('boom'), 0.6);
 							fireHalapeno.alpha = 0.5;
+
+						case 'Jalapeno Note NEW':
+							FlxG.sound.play(Paths.sound('boom'), 0.6);
+							health -=  0.06;
+							fireHalapeno.alpha = 0.5;
+							fireFlash.alpha = 0.8;
+							FlxG.camera.zoom += 0.06;
+							camHUD.zoom += 0.06;
+							dropTime = 10;
+							healthDrop += 0.00025;
 					}
 				}
 

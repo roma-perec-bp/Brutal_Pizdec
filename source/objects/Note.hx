@@ -193,7 +193,7 @@ class Note extends FlxSprite
 					rgbShader.b = 0xFF164E00;
 				case 'Jap Note':
 					ignoreNote = mustPress;
-					reloadNote('JAPNOTE_assets'); //пока ччто олд постоавил что бы будушием делать новый хуйню
+					reloadNote('JAPNOTE_assets');
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;
@@ -203,16 +203,38 @@ class Note extends FlxSprite
 					missHealth = 0.25;
 					lowPriority = true;
 					offsetX = -20;
-					jap = true;
-				case 'Jap Note no anim': //зачем это
+				case 'Jap Note no anim':
 					ignoreNote = mustPress;
 					reloadNote('JAPNOTE_assets');
 					rgbShader.enabled = false;
-					noteSplashData.r = 0xFFff0000;
-					noteSplashData.g = 0xFF003806;
 					noAnimation = true;
 					offsetX = -20;
-					jap = true;
+
+				case 'Jalapeno Note NEW':
+					rgbShader.r = 0xFF101010;
+					rgbShader.g = 0xFFFF0000;
+					rgbShader.b = 0xFF990022;
+					ignoreNote = mustPress;
+					reloadNote('JAPNOTENEW_assets');
+					rgbShader.enabled = false;
+					noteSplashData.r = 0xFFff0000;
+					noteSplashData.g = 0xFF003806;
+					hitCausesMiss = true;
+					earlyHitMult = 0.5;
+					lateHitMult = 0.5;
+					missHealth = 0.25;
+					lowPriority = true;
+					if(noteData == 3) offsetX = -20;
+
+				case 'Jalapeno Note BOOM SOUND':
+					rgbShader.r = 0xFF101010;
+					rgbShader.g = 0xFFFF0000;
+					rgbShader.b = 0xFF990022;
+					ignoreNote = mustPress;
+					reloadNote('JAPNOTENEW_assets');
+					rgbShader.enabled = false;
+					noAnimation = true;
+					if(noteData == 3) offsetX = -20;
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);
 			if (hitsound != 'hitsound' && ClientPrefs.data.hitsoundVolume > 0) Paths.sound(hitsound); //precache new sound for being idiot-proof
