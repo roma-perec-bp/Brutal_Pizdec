@@ -1,78 +1,78 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "shrek idle",
-			"indices": []
+			"indices": [],
+			"name": "shrek idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				163,
-				-3
+				190,
+				-6
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "shrek left",
-			"indices": []
+			"indices": [],
+			"name": "shrek left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				52,
-				-77
+				40,
+				-62
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "shrek down",
-			"indices": []
+			"indices": [],
+			"name": "shrek down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				20,
-				48
+				18,
+				35
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "shrek up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "shrek up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-1,
+				-3,
 				-2
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "shrek right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "shrek right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/shrek_Assets",
 	"position": [
-		0,
-		-80
+		30,
+		50
 	],
 	"healthicon": "rom",
 	"flip_x": false,
 	"healthbar_colors": [
-		180,
-		253,
-		107
+		171,
+		255,
+		52
 	],
 	"camera_position": [
-		10,
-		0
+		130,
+		70
 	],
 	"sing_duration": 4,
-	"scale": 0.9
+	"scale": 0.7
 }
