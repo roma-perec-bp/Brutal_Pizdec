@@ -60,12 +60,9 @@ class PauseSubStateold extends MusicBeatSubstate
 		difficultyChoices.push('BACK');
 
 
+		//НАХУЙ КАСТОП ПАУЗА БУДЕТ ТОК СВОЯЯЯЯЯЯ
 		pauseMusic = new FlxSound();
-		if(songName != null) {
-			pauseMusic.loadEmbedded(Paths.music(songName), true, true);
-		} else if (songName != 'None') {
-			pauseMusic.loadEmbedded(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)), true, true);
-		}
+		pauseMusic.loadEmbedded(Paths.music('pizdec'), true, true);
 		pauseMusic.volume = 0;
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 
@@ -281,12 +278,9 @@ class PauseSubStateold extends MusicBeatSubstate
 					PlayState.instance.paused = true; // For lua
 					PlayState.instance.vocals.volume = 0;
 					MusicBeatState.switchState(new OptionsState());
-					if(ClientPrefs.data.pauseMusic != 'None')
-					{
-						FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)), pauseMusic.volume);
-						FlxTween.tween(FlxG.sound.music, {volume: 1}, 0.8);
-						FlxG.sound.music.time = pauseMusic.time;
-					}
+					FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)), pauseMusic.volume);
+					FlxTween.tween(FlxG.sound.music, {volume: 1}, 0.8);
+					FlxG.sound.music.time = pauseMusic.time;
 					OptionsState.onPlayState = true;
 				case "Exit to menu":
 					#if desktop DiscordClient.resetClientID(); #end
