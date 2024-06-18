@@ -1707,7 +1707,7 @@ class PlayState extends MusicBeatState
 			for (timer in modchartTimers) timer.active = false;
 			#end
 
-			FlxG.camera.zoom = 1;
+			if(!curStage == 'roof-old') FlxG.camera.zoom = 1;
 		}
 
 		super.openSubState(SubState);
@@ -1741,7 +1741,7 @@ class PlayState extends MusicBeatState
 			callOnScripts('onResume');
 			resetRPC(startTimer != null && startTimer.finished);
 			
-			FlxG.camera.zoom = defaultCamZoom;
+			if(!curStage == 'roof-old') FlxG.camera.zoom = defaultCamZoom;
 		}
 
 		super.closeSubState();
