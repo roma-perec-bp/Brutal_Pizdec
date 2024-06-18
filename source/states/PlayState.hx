@@ -699,10 +699,9 @@ class PlayState extends MusicBeatState
 		ratingTxt.cameras = [camHUD];
 
 		if(curStage == 'roof-old' || curStage == 'night')
-		{
 			fireHalapeno.cameras = [camHUD];
-			fireFlash.cameras = [camOther];
-		}
+		
+		if(curStage == 'night') fireFlash.cameras = [camOther];
 
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
