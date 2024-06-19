@@ -186,11 +186,15 @@ class Note extends FlxSprite
 					rgbShader.r = 0xFF2D2D49;
 					rgbShader.g = 0xFFFFFFFF;
 					rgbShader.b = 0xFF000000;
+					noteSplashData.r = 0xFF2D2D49;
+					noteSplashData.g = 0xFFFFFFFF;
 				case 'rom':
 					romNote = true;
 					rgbShader.r = 0xFF4CFF00;
 					rgbShader.g = 0xFFFFFFFF;
 					rgbShader.b = 0xFF164E00;
+					noteSplashData.r = 0xFF4CFF00;
+					noteSplashData.g = 0xFFFFFFFF;
 				case 'Jap Note':
 					ignoreNote = mustPress;
 					reloadNote('JAPNOTE_assets');
