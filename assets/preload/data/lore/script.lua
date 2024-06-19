@@ -11,13 +11,10 @@ function onBeatHit()
     else
         setProperty('iconP1.flipX', false)
     end
-    if  curBeat == 746 then
-        doTweenAlpha('suka','blackFlash', 1, 25, 'linear')
+    if curBeat == 1 then
+        doTweenAlpha('suka','blackFlash', 0, 40, 'quardOut')
     end
-end
-
-function onStepHit()
-    if curStep == 1 then
-        doTweenAlpha('suka','blackFlash', 0, 20, 'linear')
+    if curBeat == 746 then
+        doTweenAlpha('suka','blackFlash', 1, 25, 'linear')
     end
 end

@@ -64,7 +64,6 @@ class FreeplayState extends MusicBeatState
 		0xff61de35,
 		0xff7a7a7a,
 		0xff171717,
-		0xff7b3dc4,
 		0xff3b4dee
 	];
 
@@ -98,7 +97,7 @@ class FreeplayState extends MusicBeatState
 			case 0:
 				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
 			case 1:
-				addWeek(['Anekdot', 'Klork', 'T Short', 'Monochrome', '64 rubl', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', '64-pixel', 'lore-pixel'], ['lamar', 'lork', 'tshort', 'dead', 'lamar', 'gandons']);
+				addWeek(['Anekdot', 'Klork', 'T Short', 'Monochrome', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', 'lore-pixel'], ['lamar', 'lork', 'tshort', 'dead', 'gandons']);
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex-pixel', 'jamar-pixel'], ['bbg', 'lamar']);
 			case 3:
