@@ -18,38 +18,6 @@ function onUpdatePost(elapsed)
     setProperty('iconP2.scale.y', getProperty('iconScale.scale.y'))
 end
 
-function onUpdate(elapsed)
-	if curStep == 1 then
-		noteTweenX('dragonTween1', 0, 740 + Meow1, 1, 'quartInOut');
-    	noteTweenX('dragonTween2', 1, 740 + Meow2, 1, 'quartInOut');
-    	noteTweenX('dragonTween3', 2, 740 + Meow3, 1, 'quartInOut');
-    	noteTweenX('dragonTween4', 3, 740 + Meow4, 1, 'quartInOut');
-    	noteTweenAngle("dragonAngle1", 0, 360, 1, "quartInOut");
-                noteTweenAngle("dradonAngle2", 1, 360, 1, "quartInOut");
-                noteTweenAngle("dragonAngle3", 6, 360, 1, "quartInOut");
-                noteTweenAngle("dragonAngel4", 7, 360, 1, "quartInOut");
-
-		noteTweenX('foxTween1', 4, 85 + Meow1, 1, 'quartInOut');
-    	noteTweenX('foxTween2', 5, 85 + Meow2, 1, 'quartInOut');
-    	noteTweenX('foxTween3', 6, 85 + Meow3, 1, 'quartInOut');
-    	noteTweenX('foxTween4', 7, 85 + Meow4, 1, 'quartInOut');
-    	noteTweenAngle("foxAngle1", 4, 360, 1, "quartInOut");
-                noteTweenAngle("foxAngle2", 5, 360, 1, "quartInOut");
-                noteTweenAngle("foxAngle3", 6, 360, 1, "quartInOut");
-                noteTweenAngle("foxAngel4", 7, 360, 1, "quartInOut");
-	end
-end
-
-function onSongStart()
-	for i = 0,7 do 
-		x = getPropertyFromGroup('strumLineNotes', i, 'x')
-
-		y = getPropertyFromGroup('strumLineNotes', i, 'y')
-
-		table.insert(defaultNotePos, {x,y})
-	end
-end
-
 function onBeatHit()
 	if curBeat >= 32 and curBeat < 96 then
 	  if curBeat % 2 == 0 then

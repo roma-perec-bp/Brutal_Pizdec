@@ -1,24 +1,23 @@
 {
 	"song": {
-		"sectionLengths": [],
 		"player1": "hwaw",
-		"events": [],
-		"gfVersion": "gf",
-		"player2": "perec",
+		"sectionLengths": [],
 		"notes": [
 			{
-				"sectionNotes": [],
-				"lengthInSteps": 16,
 				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"sectionNotes": [],
 				"mustHitSection": false
 			},
 			{
-				"sectionNotes": [],
-				"lengthInSteps": 16,
 				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"sectionNotes": [],
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						2526.31578947368,
@@ -31,11 +30,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						3789.47368421053,
@@ -48,11 +47,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						5052.63157894737,
@@ -75,11 +74,11 @@
 						79
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						6315.78947368421,
@@ -92,11 +91,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						7578.94736842105,
@@ -109,11 +108,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						8842.1052631579,
@@ -126,11 +125,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						10105.2631578947,
@@ -151,13 +150,19 @@
 						11052.6315789474,
 						1,
 						79
+					],
+					[
+						10342.1052631579,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						11368.4210526316,
@@ -170,11 +175,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						12631.5789473684,
@@ -187,11 +192,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						13894.7368421053,
@@ -204,11 +209,11 @@
 						553
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						15157.8947368421,
@@ -231,11 +236,11 @@
 						79
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						16421.0526315789,
@@ -246,13 +251,19 @@
 						17052.6315789474,
 						1,
 						553
+					],
+					[
+						17605.2631578947,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						17684.2105263158,
@@ -270,11 +281,11 @@
 						1187
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						18947.3684210526,
@@ -290,13 +301,19 @@
 						18947.3684210526,
 						4,
 						1185
+					],
+					[
+						19736.8421052632,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						20210.5263157895,
@@ -322,13 +339,19 @@
 						20210.5263157895,
 						5,
 						1185
+					],
+					[
+						20842.1052631579,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						21473.6842105263,
@@ -349,101 +372,161 @@
 						21473.6842105263,
 						6,
 						790
+					],
+					[
+						21473.6842105263,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						21947.3684210526,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						22263.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						22421.0526315789,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						22578.9473684211,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						22657.8947368421,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						22736.8421052632,
 						0,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						22736.8421052632,
-						2,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						22736.8421052632,
 						1,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						22736.8421052632,
+						2,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						22736.8421052632,
 						3,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
-				"sectionNotes": [],
-				"lengthInSteps": 16,
 				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"sectionNotes": [],
 				"mustHitSection": true
 			},
 			{
-				"sectionNotes": [],
-				"lengthInSteps": 16,
 				"typeOfSection": 0,
-				"changeBPM": true,
+				"lengthInSteps": 16,
+				"sectionNotes": [],
+				"mustHitSection": false,
 				"bpm": 200,
+				"changeBPM": true
+			},
+			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"sectionNotes": [],
 				"mustHitSection": false
 			},
 			{
-				"sectionNotes": [],
-				"lengthInSteps": 16,
 				"typeOfSection": 0,
-				"mustHitSection": false
-			},
-			{
-				"sectionNotes": [],
 				"lengthInSteps": 16,
-				"typeOfSection": 0,
+				"sectionNotes": [],
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						28863.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						28863.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						28863.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						28863.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						28863.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						28863.1578947368,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						28863.1578947368,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						28863.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						30063.1578947368,
@@ -496,11 +579,11 @@
 						75
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						31263.1578947368,
@@ -538,11 +621,11 @@
 						75
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": false
 			},
 			{
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
 				"sectionNotes": [
 					[
 						32463.1578947368,
@@ -593,14 +676,24 @@
 						33513.1578947368,
 						3,
 						75
+					],
+					[
+						32463.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						33063.1578947368,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"lengthInSteps": 16,
-				"typeOfSection": 0,
 				"mustHitSection": true
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						34413.1578947368,
@@ -636,17 +729,35 @@
 						34113.1578947368,
 						3,
 						75
+					],
+					[
+						33663.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						34413.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						34713.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						34863.1578947368,
@@ -699,15 +810,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						36063.1578947368,
@@ -745,15 +856,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						37263.1578947368,
@@ -804,17 +915,35 @@
 						38313.1578947368,
 						3,
 						75
+					],
+					[
+						37263.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						37863.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						38163.1578947368,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						38463.1578947368,
@@ -847,44 +976,62 @@
 						75
 					],
 					[
-						39513.1578947368,
-						2,
-						75
-					],
-					[
 						38463.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						38463.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						38463.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						38463.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						38463.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						38913.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						39513.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						39513.1578947368,
+						2,
+						78.9473684210526
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						40263.1578947368,
@@ -932,15 +1079,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						41763.1578947368,
@@ -968,15 +1115,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						42213.1578947368,
@@ -1022,17 +1169,29 @@
 						42813.1578947368,
 						2,
 						75
+					],
+					[
+						42513.1578947368,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						42963.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						43263.1578947368,
@@ -1083,36 +1242,60 @@
 						43263.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						43263.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						43263.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						43263.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						43263.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						43563.1578947368,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						43863.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						44163.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						45063.1578947368,
@@ -1160,15 +1343,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						45663.1578947368,
@@ -1209,17 +1392,23 @@
 						46413.1578947368,
 						1,
 						75
+					],
+					[
+						46862.2203947368,
+						0,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						47163.1578947368,
@@ -1332,38 +1521,68 @@
 						0
 					],
 					[
-						46863.1578947368,
-						5,
-						0,
-						"Jap Note no anim"
+						46900.6578947368,
+						6,
+						0
 					],
 					[
 						46863.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						46863.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						46900.6578947368,
-						6,
-						0
+						46863.1578947368,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						48061.2828947368,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						46863.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						46863.1578947368,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						47163.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						47763.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						48963.1578947368,
@@ -1432,32 +1651,56 @@
 					],
 					[
 						48063.1578947368,
-						6,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						48063.1578947368,
-						7,
+						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						48063.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						48063.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						48288.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						48663.1578947368,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						48963.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						49263.1578947368,
@@ -1510,15 +1753,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						50463.1578947368,
@@ -1569,36 +1812,48 @@
 						51063.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						51063.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						51063.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						51063.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						50463.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						51063.1578947368,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						52113.1578947368,
@@ -1666,15 +1921,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						52863.1578947368,
@@ -1720,36 +1975,60 @@
 						53763.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						53763.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						53763.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						53763.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						52863.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						53313.1578947368,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						53763.1578947368,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						53763.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						54063.1578947368,
@@ -1797,15 +2076,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						55413.1578947368,
@@ -1851,36 +2130,60 @@
 						55863.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						55863.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						55863.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						55863.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						55263.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						55713.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						56013.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						56313.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						57213.1578947368,
@@ -1933,15 +2236,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						57663.1578947368,
@@ -1972,36 +2275,48 @@
 						57663.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						57663.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						57663.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						57663.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						57663.1578947368,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						57663.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						58863.1578947368,
@@ -2052,17 +2367,29 @@
 						59463.1578947368,
 						3,
 						0
+					],
+					[
+						58863.1578947368,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						59463.1578947368,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						60363.1578947368,
@@ -2113,17 +2440,47 @@
 						60813.1578947368,
 						2,
 						0
+					],
+					[
+						60063.1578947368,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						60663.1578947368,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						60813.1578947368,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						60663.1578947368,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						60813.1578947368,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						61263.1578947368,
@@ -2176,15 +2533,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						62463.1578947368,
@@ -2245,17 +2602,23 @@
 						63513.1578947368,
 						1,
 						0
+					],
+					[
+						62463.1578947368,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						63963.1578947368,
@@ -2301,36 +2664,60 @@
 						63663.1578947368,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						63663.1578947368,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						63663.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						63663.1578947368,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						63663.1578947368,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						64263.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						64413.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						64713.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						65013.1578947368,
@@ -2374,38 +2761,68 @@
 					],
 					[
 						64863.1578947368,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						64863.1578947368,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						64863.1578947368,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						64863.1578947368,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						64863.1578947368,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						65313.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						65463.1578947368,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						65613.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						64863.1578947368,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						65913.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						66213.1578947369,
@@ -2504,38 +2921,74 @@
 					],
 					[
 						66063.1578947369,
-						6,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						66063.1578947369,
-						7,
+						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						66063.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						66063.1578947369,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						67262.6891447369,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						66063.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						66513.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						66663.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						66813.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						66963.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						67263.1578947369,
@@ -2746,30 +3199,42 @@
 						67263.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						67263.1578947369,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						67263.1578947369,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						67488.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						68313.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						68463.1578947369,
@@ -2822,15 +3287,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						69663.1578947369,
@@ -2868,15 +3333,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						70863.1578947368,
@@ -2927,17 +3392,35 @@
 						71913.1578947369,
 						3,
 						75
+					],
+					[
+						70863.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						71463.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						71913.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						72813.1578947369,
@@ -2976,38 +3459,62 @@
 					],
 					[
 						72063.1578947369,
-						6,
+						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						72063.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						72063.1578947369,
-						4,
+						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						72063.1578947369,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						72063.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						72363.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						72663.1578947369,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						72963.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						73263.1578947369,
@@ -3060,15 +3567,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						74463.1578947369,
@@ -3106,15 +3613,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						75663.1578947368,
@@ -3165,17 +3672,41 @@
 						76713.1578947369,
 						3,
 						75
+					],
+					[
+						75663.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						76113.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						76263.1578947369,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						76713.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						76863.1578947369,
@@ -3216,60 +3747,90 @@
 						76863.1578947369,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						76863.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						76863.1578947369,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						76863.1578947369,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						77463.1578947369,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						77463.1578947369,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						77463.1578947369,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						77463.1578947369,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						76863.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						76863.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					],
 					[
 						77463.1578947369,
-						5,
+						3,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note NEW"
 					],
 					[
-						77463.1578947369,
-						6,
+						77613.1578947369,
 						0,
-						"Jap Note no anim"
+						0,
+						"Jalapeno Note NEW"
 					],
 					[
-						77463.1578947369,
-						7,
+						77913.1578947369,
+						3,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						78663.1578947369,
@@ -3317,15 +3878,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						80163.1578947369,
@@ -3353,15 +3914,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						80613.1578947368,
@@ -3410,38 +3971,56 @@
 					],
 					[
 						81363.1578947369,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						81363.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						81363.1578947369,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						81363.1578947369,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						80463.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					],
 					[
 						81363.1578947369,
-						4,
+						3,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note NEW"
+					],
+					[
+						81063.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						81663.1578947369,
@@ -3490,32 +4069,62 @@
 					],
 					[
 						82263.1578947369,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						82263.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						82263.1578947369,
-						7,
+						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						82260.0328947369,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						81663.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						81963.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						82263.1578947369,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						82563.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						83463.1578947369,
@@ -3563,15 +4172,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						84063.1578947369,
@@ -3614,15 +4223,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						85938.1578947369,
@@ -3671,38 +4280,62 @@
 					],
 					[
 						85263.1578947369,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						85263.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						85263.1578947369,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						85263.1578947369,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						85263.1578947369,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						85263.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						85413.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						86013.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						86313.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						87363.1578947369,
@@ -3748,36 +4381,54 @@
 						86463.1578947369,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						86463.1578947369,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						86463.1578947369,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						86463.1578947369,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						86688.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						87063.1578947369,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						87363.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						88113.1578947369,
@@ -3815,15 +4466,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						89163.1578947369,
@@ -3876,15 +4527,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						90063.1578947369,
@@ -3922,15 +4573,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						91263.1578947369,
@@ -3968,15 +4619,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						92463.1578947369,
@@ -4032,17 +4683,23 @@
 						92913.1578947369,
 						3,
 						0
+					],
+					[
+						92463.1578947369,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						93663.1578947369,
@@ -4098,17 +4755,23 @@
 						94413.1578947369,
 						0,
 						0
+					],
+					[
+						93663.1578947369,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						94863.1578947369,
@@ -4149,17 +4812,29 @@
 						95763.1578947369,
 						0,
 						225
+					],
+					[
+						94863.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						95763.1578947369,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						96063.1578947369,
@@ -4215,17 +4890,23 @@
 						97113.1578947369,
 						1,
 						0
+					],
+					[
+						96738.1578947369,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						97563.1578947369,
@@ -4266,17 +4947,23 @@
 						97263.1578947369,
 						5,
 						525
+					],
+					[
+						97263.1578947369,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						98463.1578947369,
@@ -4317,17 +5004,23 @@
 						99363.1578947369,
 						3,
 						225
+					],
+					[
+						98463.1578947369,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						99663.1578947369,
@@ -4383,17 +5076,29 @@
 						100413.157894737,
 						1,
 						0
+					],
+					[
+						99663.1578947369,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						99663.1578947369,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						100863.157894737,
@@ -4464,17 +5169,35 @@
 						101388.157894737,
 						2,
 						0
+					],
+					[
+						100863.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						100863.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						100863.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						102063.157894737,
@@ -4535,17 +5258,35 @@
 						102963.157894737,
 						1,
 						0
+					],
+					[
+						102063.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						102213.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						102813.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						103563.157894737,
@@ -4606,17 +5347,35 @@
 						104313.157894737,
 						0,
 						0
+					],
+					[
+						103413.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						104013.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						104313.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						104463.157894737,
@@ -4672,17 +5431,41 @@
 						105063.157894737,
 						7,
 						525
+					],
+					[
+						104613.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						104913.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						105213.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						105513.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						106563.157894737,
@@ -4723,17 +5506,53 @@
 						106563.157894737,
 						7,
 						225
+					],
+					[
+						105663.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						106113.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						106113.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						106563.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						106563.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						106563.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						106863.157894737,
@@ -4751,15 +5570,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						108663.157894737,
@@ -4822,15 +5641,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						109263.157894737,
@@ -4848,15 +5667,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						110463.157894737,
@@ -4919,15 +5738,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						111813.157894737,
@@ -4980,15 +5799,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						112863.157894737,
@@ -5026,15 +5845,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						114063.157894737,
@@ -5097,15 +5916,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						115263.157894737,
@@ -5158,15 +5977,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						116463.157894737,
@@ -5252,17 +6071,23 @@
 						117513.157894737,
 						7,
 						375
+					],
+					[
+						116463.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						117663.157894737,
@@ -5320,15 +6145,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						118863.157894737,
@@ -5374,17 +6199,23 @@
 						118863.157894737,
 						7,
 						1125
+					],
+					[
+						118863.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						120063.157894737,
@@ -5432,15 +6263,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						121263.157894737,
@@ -5481,17 +6312,41 @@
 						122313.157894737,
 						2,
 						0
+					],
+					[
+						121263.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						121563.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						121863.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						122163.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						122463.157894737,
@@ -5532,17 +6387,41 @@
 						123513.157894737,
 						1,
 						0
+					],
+					[
+						122463.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						122763.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						123063.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						123363.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						123663.157894737,
@@ -5595,15 +6474,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						124863.157894737,
@@ -5666,15 +6545,15 @@
 						150
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						126063.157894737,
@@ -5740,17 +6619,41 @@
 						126963.157894737,
 						2,
 						0
+					],
+					[
+						126663.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						126663.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						126063.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						126063.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						127263.157894737,
@@ -5811,17 +6714,41 @@
 						128313.157894737,
 						0,
 						0
+					],
+					[
+						127263.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						127263.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						127863.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						127863.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						128463.157894737,
@@ -5882,17 +6809,41 @@
 						129513.157894737,
 						0,
 						0
+					],
+					[
+						128463.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						128463.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						129063.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						129063.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						129663.157894737,
@@ -5983,17 +6934,65 @@
 						130788.157894737,
 						1,
 						0
+					],
+					[
+						129663.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						129663.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						129888.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						129963.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						130338.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						130413.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						130113.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						130113.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						130863.157894737,
@@ -6054,17 +7053,29 @@
 						131913.157894737,
 						0,
 						0
+					],
+					[
+						130863.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						130863.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						132063.157894737,
@@ -6125,17 +7136,41 @@
 						133113.157894737,
 						0,
 						0
+					],
+					[
+						132063.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						132063.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						132663.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						132663.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						133263.157894737,
@@ -6196,17 +7231,41 @@
 						134313.157894737,
 						0,
 						0
+					],
+					[
+						133263.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						133263.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						133863.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						133863.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						134463.157894737,
@@ -6297,17 +7356,77 @@
 						135588.157894737,
 						1,
 						0
+					],
+					[
+						134463.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						134463.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						134688.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						134763.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						134913.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						134913.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						135138.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						135213.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						134613.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						135063.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						135663.157894737,
@@ -6363,36 +7482,36 @@
 						135663.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						135663.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						135663.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						135663.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						136863.157894737,
@@ -6446,38 +7565,50 @@
 					],
 					[
 						136863.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						136863.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						136863.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						136863.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						136863.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						136863.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						136863.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						138063.157894737,
@@ -6533,36 +7664,42 @@
 						138063.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						138063.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						138063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						138063.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						138363.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						139263.157894737,
@@ -6610,18 +7747,8 @@
 						0
 					],
 					[
-						140238.157894737,
-						3,
-						0
-					],
-					[
 						140313.157894737,
 						2,
-						0
-					],
-					[
-						140388.157894737,
-						3,
 						0
 					],
 					[
@@ -6656,62 +7783,62 @@
 					],
 					[
 						139263.157894737,
-						5,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						139263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						139263.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						139263.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						139863.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						139863.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						139863.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						139863.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						140463.157894737,
@@ -6765,38 +7892,50 @@
 					],
 					[
 						140463.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						140463.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						140463.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						140463.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						140463.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						140763.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						141213.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						141663.157894737,
@@ -6852,36 +7991,48 @@
 						141663.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						141663.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						141663.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						141663.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						141663.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						141663.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						142863.157894737,
@@ -6945,38 +8096,62 @@
 					],
 					[
 						142863.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						142863.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						142863.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						142863.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						142863.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						144055.657894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						144055.657894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						142863.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						143613.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						144063.157894737,
@@ -7024,18 +8199,8 @@
 						0
 					],
 					[
-						145038.157894737,
-						3,
-						0
-					],
-					[
 						145113.157894737,
 						2,
-						0
-					],
-					[
-						145188.157894737,
-						3,
 						0
 					],
 					[
@@ -7110,44 +8275,50 @@
 					],
 					[
 						144063.157894737,
-						4,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						144063.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						144663.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						144663.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						144663.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						144663.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						144663.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						144655.657894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						145263.157894737,
@@ -7208,17 +8379,59 @@
 						146313.157894737,
 						0,
 						0
+					],
+					[
+						145413.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						145563.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						145713.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						145863.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						146013.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						146163.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						146313.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						146463.157894737,
@@ -7279,17 +8492,65 @@
 						147513.157894737,
 						0,
 						0
+					],
+					[
+						146463.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						146613.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						146763.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						146913.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						147063.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						147363.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						147513.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						147213.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						147663.157894737,
@@ -7350,17 +8611,65 @@
 						148713.157894737,
 						0,
 						0
+					],
+					[
+						147663.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						147813.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						147963.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						148113.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						148263.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						148413.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						148563.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						148713.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						148863.157894737,
@@ -7451,17 +8760,77 @@
 						149313.157894737,
 						3,
 						0
+					],
+					[
+						148863.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149013.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149163.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149313.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149463.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149613.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149838.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149838.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149988.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						149988.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						150063.157894737,
@@ -7524,15 +8893,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						151263.157894737,
@@ -7593,17 +8962,29 @@
 						152313.157894737,
 						0,
 						0
+					],
+					[
+						151563.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						151713.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						152463.157894737,
@@ -7664,17 +9045,29 @@
 						153513.157894737,
 						0,
 						0
+					],
+					[
+						152913.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						153138.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						153663.157894737,
@@ -7765,17 +9158,29 @@
 						154788.157894737,
 						1,
 						0
+					],
+					[
+						154113.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						154338.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						154863.157894737,
@@ -7831,36 +9236,48 @@
 						154863.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						154863.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						154863.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						154863.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						155463.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						155463.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						156063.157894737,
@@ -7914,38 +9331,44 @@
 					],
 					[
 						156063.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						156063.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						156063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						156063.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						156063.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						156663.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						157263.157894737,
@@ -8001,36 +9424,42 @@
 						157263.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						157263.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						157263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						157263.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						157863.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						158463.157894737,
@@ -8078,18 +9507,8 @@
 						0
 					],
 					[
-						159438.157894737,
-						3,
-						0
-					],
-					[
 						159513.157894737,
 						2,
-						0
-					],
-					[
-						159588.157894737,
-						3,
 						0
 					],
 					[
@@ -8124,62 +9543,62 @@
 					],
 					[
 						158463.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						158463.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						158463.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						158463.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						158463.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						159063.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						159063.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						159063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						159063.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						159663.157894737,
@@ -8233,38 +9652,50 @@
 					],
 					[
 						159663.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						159663.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						159663.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						159663.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						159663.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						160413.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						160713.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						160863.157894737,
@@ -8320,36 +9751,42 @@
 						160863.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						160863.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						160863.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						160863.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						161613.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						162063.157894737,
@@ -8408,38 +9845,50 @@
 					],
 					[
 						162063.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						162063.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						162063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						162063.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						162063.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						162213.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						162813.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						163263.157894737,
@@ -8537,98 +9986,122 @@
 						150
 					],
 					[
+						163263.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163263.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163263.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163263.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163563.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163563.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163563.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163557.532894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163863.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163861.282894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163863.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163863.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
 						164163.157894737,
 						6,
 						150
 					],
 					[
-						163263.157894737,
-						4,
+						164163.157894737,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						163263.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						163263.157894737,
+						164159.407894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						163263.157894737,
-						7,
+						164163.157894737,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						163563.157894737,
+						164163.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						164461.282894737,
 						6,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						163563.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						163563.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						163863.157894737,
-						7,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						163863.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						163863.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						164163.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						164163.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						164163.157894737,
-						7,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						164463.157894737,
@@ -8682,32 +10155,32 @@
 					],
 					[
 						164463.157894737,
+						3,
 						0,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						164463.157894737,
 						1,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						164463.157894737,
-						3,
 						0,
-						"Jap Note no anim"
+						0,
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						165663.157894737,
@@ -8745,15 +10218,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						166863.157894737,
@@ -8804,17 +10277,35 @@
 						167913.157894737,
 						3,
 						75
+					],
+					[
+						166863.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						167463.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						167913.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						168063.157894737,
@@ -8855,36 +10346,66 @@
 						168063.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						168063.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						168063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						168063.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						168363.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						168663.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						168813.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						168963.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						169113.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						169263.157894737,
@@ -8937,15 +10458,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						170463.157894737,
@@ -8983,15 +10504,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						171663.157894737,
@@ -9042,17 +10563,41 @@
 						172713.157894737,
 						3,
 						75
+					],
+					[
+						171663.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						172113.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						172263.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						172713.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						172863.157894737,
@@ -9091,62 +10636,92 @@
 					],
 					[
 						172863.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						172863.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						172863.157894737,
-						6,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						172863.157894737,
 						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						173463.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						173463.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						173463.157894737,
-						6,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						173463.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						173463.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						173463.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						173463.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						172863.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						172863.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						172863.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						172863.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						173463.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						173613.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						173763.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						173913.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						174663.157894737,
@@ -9194,15 +10769,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						175263.157894737,
@@ -9230,15 +10805,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						176613.157894737,
@@ -9289,36 +10864,54 @@
 						177363.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						177363.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						177363.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						177363.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						176463.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						177363.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						176913.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						177663.157894737,
@@ -9347,38 +10940,62 @@
 					],
 					[
 						178263.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						178263.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						178263.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						178263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						177663.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						177963.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					],
 					[
 						178263.157894737,
-						7,
+						3,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note NEW"
+					],
+					[
+						178563.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						179463.157894737,
@@ -9426,15 +11043,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						180063.157894737,
@@ -9477,15 +11094,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						181938.157894737,
@@ -9534,38 +11151,56 @@
 					],
 					[
 						181263.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						181263.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						181263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						181263.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						181263.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						181263.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						181413.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						182013.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						182463.157894737,
@@ -9611,36 +11246,54 @@
 						182463.157894737,
 						4,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						182463.157894737,
-						6,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						182463.157894737,
-						7,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						182463.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						182463.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						182463.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						182688.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						182913.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						183363.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						183663.157894737,
@@ -9663,15 +11316,15 @@
 						300
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						185763.157894737,
@@ -9684,15 +11337,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						186063.157894737,
@@ -9725,15 +11378,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						187263.157894737,
@@ -9761,15 +11414,15 @@
 						375
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						189063.157894737,
@@ -9807,15 +11460,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						190563.157894737,
@@ -9863,15 +11516,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						190863.157894737,
@@ -9909,15 +11562,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						192063.157894737,
@@ -9948,36 +11601,48 @@
 						192213.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						192213.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						192213.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						192213.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						192213.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						192213.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						193263.157894737,
@@ -10016,38 +11681,50 @@
 					],
 					[
 						193263.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						193263.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						193263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						193263.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						193263.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						193263.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						193263.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						194463.157894737,
@@ -10098,36 +11775,54 @@
 						195063.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						195063.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						195063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						195063.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						195063.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						195063.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						195063.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						195663.157894737,
@@ -10165,15 +11860,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						196863.157894737,
@@ -10201,15 +11896,15 @@
 						375
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						198063.157894737,
@@ -10252,15 +11947,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						200163.157894737,
@@ -10353,15 +12048,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						200463.157894737,
@@ -10399,15 +12094,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						201663.157894737,
@@ -10436,38 +12131,62 @@
 					],
 					[
 						201813.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						201813.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						201813.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						201813.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						202859.407894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						201813.157894737,
-						4,
 						0,
-						"Jap Note no anim"
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						201813.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						201813.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						202863.157894737,
@@ -10541,32 +12260,44 @@
 					],
 					[
 						202863.157894737,
-						5,
+						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						202863.157894737,
-						6,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						202863.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						202863.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						202863.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						204063.157894737,
@@ -10647,17 +12378,53 @@
 						205188.157894737,
 						1,
 						0
+					],
+					[
+						204063.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						204063.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						204063.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						204063.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						205259.407894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						204063.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						205263.157894737,
@@ -10725,32 +12492,44 @@
 					],
 					[
 						205263.157894737,
-						5,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						205263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						205263.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						205263.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						205263.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						206463.157894737,
@@ -10813,15 +12592,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						207663.157894737,
@@ -10890,15 +12669,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						208863.157894737,
@@ -10985,15 +12764,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						210063.157894737,
@@ -11038,15 +12817,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						211263.157894737,
@@ -11103,15 +12882,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						212463.157894737,
@@ -11174,15 +12953,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						213663.157894737,
@@ -11245,15 +13024,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						214863.157894737,
@@ -11310,15 +13089,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						216063.157894737,
@@ -11381,15 +13160,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						217563.157894737,
@@ -11440,15 +13219,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						218463.157894737,
@@ -11475,15 +13254,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						219663.157894737,
@@ -11582,15 +13361,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						220863.157894737,
@@ -11689,15 +13468,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						222063.157894737,
@@ -11748,15 +13527,15 @@
 						"No Animation"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						224163.157894737,
@@ -11769,15 +13548,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						225213.157894737,
@@ -11800,15 +13579,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						225663.157894737,
@@ -11816,45 +13595,45 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						230463.157894737,
@@ -11862,15 +13641,15 @@
 						1125
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						231663.157894737,
@@ -11893,15 +13672,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						233163.157894737,
@@ -11914,15 +13693,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						234063.157894737,
@@ -11960,15 +13739,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						235863.157894737,
@@ -11981,15 +13760,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						236463.157894737,
@@ -12012,15 +13791,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						237663.157894737,
@@ -12043,15 +13822,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						238863.157894737,
@@ -12059,15 +13838,15 @@
 						1125
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						240063.157894737,
@@ -12075,15 +13854,15 @@
 						1125
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						241263.157894737,
@@ -12106,15 +13885,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						242763.157894737,
@@ -12125,17 +13904,23 @@
 						243063.157894737,
 						3,
 						525
+					],
+					[
+						243363.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						243663.157894737,
@@ -12173,15 +13958,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						245463.157894737,
@@ -12192,17 +13977,23 @@
 						245163.157894737,
 						1,
 						225
+					],
+					[
+						244938.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						246063.157894737,
@@ -12223,17 +14014,23 @@
 						246963.157894737,
 						3,
 						225
+					],
+					[
+						246663.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						247263.157894737,
@@ -12254,49 +14051,169 @@
 						248163.157894737,
 						1,
 						225
+					],
+					[
+						247563.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						248313.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						248463.157894737,
 						3,
 						1125
+					],
+					[
+						248688.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						249063.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						249363.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						249663.157894737,
 						1,
 						1125
+					],
+					[
+						249663.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						249813.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						249963.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250113.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250263.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250263.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250413.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250488.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250563.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250638.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250713.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250713.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250788.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250788.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						250788.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						250863.157894737,
@@ -12337,17 +14254,23 @@
 						251763.157894737,
 						0,
 						225
+					],
+					[
+						251388.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						252063.157894737,
@@ -12368,17 +14291,23 @@
 						252663.157894737,
 						2,
 						525
+					],
+					[
+						252138.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						253263.157894737,
@@ -12419,17 +14348,35 @@
 						253263.157894737,
 						7,
 						1125
+					],
+					[
+						253488.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						253863.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						254238.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						254463.157894737,
@@ -12450,17 +14397,23 @@
 						254463.157894737,
 						7,
 						1125
+					],
+					[
+						254913.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						255663.157894737,
@@ -12506,17 +14459,35 @@
 						256713.157894737,
 						3,
 						0
+					],
+					[
+						255888.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						256188.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						256563.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						256863.157894737,
@@ -12562,17 +14533,35 @@
 						257913.157894737,
 						1,
 						75
+					],
+					[
+						257238.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						257538.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						257838.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						258063.157894737,
@@ -12583,17 +14572,29 @@
 						258063.157894737,
 						3,
 						1125
+					],
+					[
+						258738.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						259038.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						259263.157894737,
@@ -12604,17 +14605,35 @@
 						259263.157894737,
 						1,
 						1125
+					],
+					[
+						259713.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						259938.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						260088.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						260463.157894737,
@@ -12655,17 +14674,23 @@
 						260463.157894737,
 						6,
 						2325
+					],
+					[
+						261063.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						262263.157894737,
@@ -12681,17 +14706,23 @@
 						261663.157894737,
 						2,
 						225
+					],
+					[
+						262038.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						262863.157894737,
@@ -12732,17 +14763,23 @@
 						262863.157894737,
 						5,
 						2325
+					],
+					[
+						263313.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						264663.157894737,
@@ -12758,17 +14795,23 @@
 						264063.157894737,
 						2,
 						225
+					],
+					[
+						264663.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						265263.157894737,
@@ -12814,17 +14857,23 @@
 						265263.157894737,
 						7,
 						2325
+					],
+					[
+						266013.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						266463.157894737,
@@ -12865,17 +14914,29 @@
 						267513.157894737,
 						1,
 						0
+					],
+					[
+						267063.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						267213.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						267663.157894737,
@@ -12886,17 +14947,41 @@
 						267663.157894737,
 						6,
 						1125
+					],
+					[
+						267663.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						267963.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						268338.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						268638.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						268863.157894737,
@@ -12909,234 +14994,367 @@
 						525
 					],
 					[
-						269500.657894737,
+						269463.157894737,
 						0,
-						0
+						525,
+						"No Animation"
 					],
 					[
-						269538.157894737,
+						269463.157894737,
 						1,
-						0
+						525,
+						"No Animation"
 					],
 					[
-						269575.657894737,
+						269463.157894737,
+						2,
+						525
+					],
+					[
+						269463.157894737,
 						3,
-						0
+						525
 					],
 					[
-						269613.157894737,
+						269988.157894737,
 						2,
-						0
-					],
-					[
-						269688.157894737,
-						2,
-						0
-					],
-					[
-						269725.657894737,
-						1,
-						0
-					],
-					[
-						269763.157894737,
 						0,
-						0
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						269800.657894737,
+						269988.157894737,
 						3,
-						0
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						269838.157894737,
-						2,
-						0
-					],
-					[
-						269875.657894737,
+						269988.157894737,
 						1,
-						0
-					],
-					[
-						269913.157894737,
-						2,
-						0
-					],
-					[
-						269950.657894737,
-						1,
-						0
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						269988.157894737,
 						0,
-						0
-					],
-					[
-						270025.657894737,
-						3,
-						0
-					],
-					[
-						269538.157894737,
-						2,
-						0
-					],
-					[
-						269988.157894737,
-						2,
-						0
-					],
-					[
-						269988.157894737,
-						1,
-						0
-					],
-					[
-						269913.157894737,
-						3,
-						0
-					],
-					[
-						269988.157894737,
-						3,
-						0
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						269913.157894737,
 						0,
-						0
-					],
-					[
-						269838.157894737,
 						0,
-						0
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						269838.157894737,
+						269913.157894737,
 						1,
-						0
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						269838.157894737,
-						3,
-						0
-					],
-					[
-						269763.157894737,
+						269913.157894737,
 						2,
-						0
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269913.157894737,
+						3,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269838.157894737,
+						3,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269838.157894737,
+						2,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269838.157894737,
+						1,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269838.157894737,
+						0,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						269763.157894737,
-						1,
-						0
-					],
-					[
-						269763.157894737,
 						3,
-						0
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						269688.157894737,
 						3,
-						0
-					],
-					[
-						269688.157894737,
-						1,
-						0
-					],
-					[
-						269658.157894737,
-						1,
-						0
-					],
-					[
-						269613.157894737,
-						1,
-						0
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						269613.157894737,
 						3,
-						0
-					],
-					[
-						269613.157894737,
 						0,
-						0
-					],
-					[
-						269688.157894737,
-						0,
-						0
-					],
-					[
-						269538.157894737,
-						0,
-						0
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						269538.157894737,
 						3,
-						0
-					],
-					[
-						269463.157894737,
-						3,
-						525
-					],
-					[
-						269463.157894737,
-						2,
-						525
-					],
-					[
-						269463.157894737,
-						1,
-						525
-					],
-					[
-						269463.157894737,
 						0,
-						525
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						269472.532894737,
-						0,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						269472.532894737,
+						269538.157894737,
 						2,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						269472.532894737,
-						3,
+						269613.157894737,
+						2,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						269472.532894737,
+						269688.157894737,
+						2,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269763.157894737,
+						2,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269763.157894737,
 						1,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269688.157894737,
+						1,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269613.157894737,
+						1,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269538.157894737,
+						1,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269538.157894737,
+						0,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269613.157894737,
+						0,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269688.157894737,
+						0,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269763.157894737,
+						0,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269466.282894737,
+						0,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269466.282894737,
+						1,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269466.282894737,
+						2,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						269466.282894737,
+						3,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						268938.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269013.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269238.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269388.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269388.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269463.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269538.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269613.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269613.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269688.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269688.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269763.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269763.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269838.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269838.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269838.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269913.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269913.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269913.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269988.157894737,
+						4,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269988.157894737,
+						5,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269988.157894737,
+						6,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						269988.157894737,
+						7,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						270063.157894737,
@@ -13214,15 +15432,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						271263.157894737,
@@ -13285,15 +15503,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						272463.157894737,
@@ -13371,15 +15589,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						273963.157894737,
@@ -13457,15 +15675,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						274863.157894737,
@@ -13543,15 +15761,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						276063.157894737,
@@ -13614,15 +15832,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						277263.157894737,
@@ -13700,15 +15918,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						278463.157894737,
@@ -13721,15 +15939,15 @@
 						525
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						279663.157894737,
@@ -13807,63 +16025,63 @@
 						75
 					],
 					[
-						280263.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						280263.157894737,
-						6,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						280263.157894737,
-						7,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						280263.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
 						279663.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						279663.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						279663.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						279663.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						280263.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						280263.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						280263.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						280263.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						280863.157894737,
@@ -13929,60 +16147,60 @@
 						280863.157894737,
 						4,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						280863.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						280863.157894737,
-						6,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						280863.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						280863.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						280863.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						281463.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						281463.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						281463.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						281463.157894737,
 						4,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						281463.157894737,
-						5,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						281463.157894737,
-						6,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						281463.157894737,
-						7,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						282063.157894737,
@@ -14061,62 +16279,62 @@
 					],
 					[
 						282063.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						282063.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						282063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						282063.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						282063.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						282663.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						282663.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						282663.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						282663.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						283563.157894737,
@@ -14197,60 +16415,66 @@
 						283263.157894737,
 						4,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						283263.157894737,
-						6,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						283263.157894737,
-						7,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						283263.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						283863.157894737,
+						283263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						283263.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						283863.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						283863.157894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						283863.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						283863.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						284455.657894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						284463.157894737,
@@ -14333,57 +16557,57 @@
 						525
 					],
 					[
-						285063.157894737,
+						284463.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						285063.157894737,
+						284463.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						285063.157894737,
+						284463.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						285063.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						284463.157894737,
+						285063.157894737,
 						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						284463.157894737,
+						285063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
-						284463.157894737,
+						285063.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						285663.157894737,
@@ -14472,62 +16696,68 @@
 					],
 					[
 						285663.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						285663.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						285663.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						285663.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						285663.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						286263.157894737,
 						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						286263.157894737,
 						5,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						286263.157894737,
-						7,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						286263.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						286263.157894737,
+						7,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						286859.407894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						286863.157894737,
@@ -14671,50 +16901,62 @@
 					],
 					[
 						286863.157894737,
-						5,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						286863.157894737,
-						7,
+						5,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						286863.157894737,
 						4,
 						0,
-						"Jap Note no anim"
-					],
-					[
-						287463.157894737,
-						4,
-						0,
-						"Jap Note no anim"
-					],
-					[
-						287463.157894737,
-						5,
-						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						287463.157894737,
 						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						287463.157894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						287463.157894737,
+						4,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						287455.657894737,
+						6,
+						0,
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						288062.532894737,
+						5,
+						0,
+						"Jalapeno Note BOOM SOUND"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						288063.157894737,
@@ -14743,32 +16985,44 @@
 					],
 					[
 						288063.157894737,
-						4,
+						7,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						288063.157894737,
 						6,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
 					],
 					[
 						288063.157894737,
-						7,
+						4,
 						0,
-						"Jap Note no anim"
+						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						288663.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						288663.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						289263.157894737,
@@ -14811,15 +17065,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						290463.157894737,
@@ -14857,15 +17111,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						291663.157894737,
@@ -14916,17 +17170,35 @@
 						292713.157894737,
 						3,
 						75
+					],
+					[
+						291663.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						292113.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						292263.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						292863.157894737,
@@ -14962,17 +17234,29 @@
 						293313.157894737,
 						3,
 						75
+					],
+					[
+						292863.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						293763.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						294063.157894737,
@@ -15015,15 +17299,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						295263.157894737,
@@ -15061,15 +17345,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						296463.157894737,
@@ -15120,17 +17404,29 @@
 						297513.157894737,
 						3,
 						75
+					],
+					[
+						296463.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						297513.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						297663.157894737,
@@ -15166,17 +17462,29 @@
 						298713.157894737,
 						2,
 						75
+					],
+					[
+						297663.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						298713.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						299763.157894737,
@@ -15214,15 +17522,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						300063.157894737,
@@ -15250,15 +17558,15 @@
 						225
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						301413.157894737,
@@ -15314,17 +17622,23 @@
 						301413.157894737,
 						7,
 						375
+					],
+					[
+						302163.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						302463.157894737,
@@ -15350,17 +17664,23 @@
 						303063.157894737,
 						2,
 						225
+					],
+					[
+						303363.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						303663.157894737,
@@ -15403,15 +17723,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						305763.157894737,
@@ -15449,15 +17769,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						306738.157894737,
@@ -15505,15 +17825,15 @@
 						75
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						307263.157894737,
@@ -15554,17 +17874,23 @@
 						308163.157894737,
 						1,
 						225
+					],
+					[
+						307713.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						308463.157894737,
@@ -15927,15 +18253,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						309663.157894737,
@@ -16063,15 +18389,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						311178.157894737,
@@ -16189,15 +18515,15 @@
 						0
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
+				"sectionBeats": 4,
 				"sectionNotes": [
 					[
 						312396.907894737,
@@ -16280,30 +18606,33 @@
 						600
 					]
 				],
-				"sectionBeats": 4,
-				"altAnim": false,
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": false,
 				"changeBPM": false,
-				"mustHitSection": false
+				"bpm": 190
 			},
 			{
-				"typeOfSection": 0,
-				"sectionNotes": [],
 				"sectionBeats": 4,
-				"altAnim": false,
+				"sectionNotes": [],
+				"typeOfSection": 0,
 				"gfSection": false,
-				"bpm": 190,
+				"altAnim": false,
+				"mustHitSection": true,
 				"changeBPM": false,
-				"mustHitSection": true
+				"bpm": 190
 			}
 		],
+		"player2": "perec",
+		"gfVersion": "gf",
+		"events": [],
 		"player3": null,
 		"song": "boom",
-		"stage": "night",
-		"sections": 0,
 		"needsVoices": true,
-		"speed": 3,
-		"bpm": 190
+		"sections": 0,
+		"stage": "night",
+		"bpm": 190,
+		"speed": 3
 	}
 }

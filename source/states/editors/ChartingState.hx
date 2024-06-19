@@ -61,6 +61,8 @@ class ChartingState extends MusicBeatState
 		'No Animation',
 		'Jap Note',
 		'Jap Note no anim',
+		'Jalapeno Note NEW',
+		'Jalapeno Note BOOM SOUND',
 		'rom'
 	];
 	public var ignoreWarnings = false;
