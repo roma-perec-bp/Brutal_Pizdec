@@ -2507,7 +2507,7 @@ class PlayState extends MusicBeatState
 						FlxG.camera.flash(color, flValue1, null, true);
 				}
 	
-			case 'Fade Camera':
+			case 'Camera Fade':
 				var args:Array<String> = value2.split(",");
 
 				var color:FlxColor = 0xFFFFFFFF;

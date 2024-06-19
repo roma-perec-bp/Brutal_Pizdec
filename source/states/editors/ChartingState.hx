@@ -87,7 +87,7 @@ class ChartingState extends MusicBeatState
 		['Remove trail', "Remove Trail on character on VALUE 1"],
 		['Play Sound', "Value 1: Sound file name\nValue 2: Volume (Default: 1), ranges from 0 to 1"],
         ['Flash Camera', 'V1: Duration, \nV2: Hex color\n Default color FFFFFF\nCamera - camHUD or camGame'],
-		['Fade Camera', 'V1: Duration, \nV2: Hex color\nDefault color FFFFFF\nCamera - camHUD or camGame'],
+		['Camera Fade', 'V1: Duration, \nV2: Hex color\nDefault color FFFFFF\nCamera - camHUD or camGame'],
 		['Set Cam Zoom', 'V1: Zoom\nV2: Time'],
 		['Set Cam Zoom Alt', 'V1: Zoom\nV2: Time'],
 		['GrassHey', "Value 1: on or off?"],
