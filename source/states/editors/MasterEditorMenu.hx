@@ -17,7 +17,8 @@ class MasterEditorMenu extends MusicBeatState
 		'Chart Editor',
 		'Character Editor',
 		'Week Editor',
-		'Note Splash Debug'
+		'Note Splash Debug',
+		'flashing states test'
 	];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
 	private var directories:Array<String> = [null];
