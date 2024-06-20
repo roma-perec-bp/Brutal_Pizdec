@@ -117,6 +117,8 @@ class ChartingState extends MusicBeatState
 	public static var lastSection:Int = 0;
 	private static var lastSong:String = '';
 
+	public static var sectionLmao:Int = 0;
+
 	var bpmTxt:FlxText;
 
 	var camPos:FlxObject;
@@ -672,6 +674,16 @@ class ChartingState extends MusicBeatState
 		}
 		stepperSectionBPM.name = 'section_bpm';
 		blockPressWhileTypingOnStepper.push(stepperSectionBPM);
+
+		var stepperChangeSection:FlxUINumericStepper = new FlxUINumericStepper(260, 75, 1, 0, 0, 9999, 3);
+		stepperChangeSection.value = sectionLmao;
+		stepperChangeSection.name = 'section_select';
+		blockPressWhileTypingOnStepper.push(stepperChangeSection);
+
+		var changeSectionEasy:FlxButton = new FlxButton(170, 70, "Change Section", function()
+		{
+			changeSection(sectionLmao);
+		});
 
 		var check_eventsSec:FlxUICheckBox = null;
 		var check_notesSec:FlxUICheckBox = null;
@@ -1565,6 +1577,9 @@ class ChartingState extends MusicBeatState
 
 				case 'song_speed':
 					_song.speed = nums.value;
+					
+				case 'section_select':
+					sectionLmao = Std.int(nums.value);
 
 				case 'song_bpm':
 					_song.bpm = nums.value;
