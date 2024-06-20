@@ -10091,6 +10091,60 @@
 						6,
 						0,
 						"Jalapeno Note BOOM SOUND"
+					],
+					[
+						163263.157894737,
+						0,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						163413.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						163563.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						163713.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						163863.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						164013.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						164163.157894737,
+						1,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						164313.157894737,
+						2,
+						0,
+						"Jalapeno Note NEW"
+					],
+					[
+						164313.157894737,
+						3,
+						0,
+						"Jalapeno Note NEW"
 					]
 				],
 				"typeOfSection": 0,
@@ -13516,13 +13570,13 @@
 					],
 					[
 						222963.157894737,
-						6,
-						1125,
+						4,
+						225,
 						"No Animation"
 					],
 					[
 						222963.157894737,
-						4,
+						6,
 						225,
 						"No Animation"
 					]
@@ -13546,6 +13600,18 @@
 						224313.157894737,
 						6,
 						525
+					],
+					[
+						223263.157894737,
+						6,
+						750,
+						"No Animation"
+					],
+					[
+						223263.157894737,
+						5,
+						750,
+						"No Animation"
 					]
 				],
 				"typeOfSection": 0,
@@ -18627,6 +18693,7 @@
 		"player2": "perec",
 		"gfVersion": "gf",
 		"events": [],
+		"gameOverLoop": "gameOverZombie",
 		"player3": null,
 		"song": "boom",
 		"needsVoices": true,
