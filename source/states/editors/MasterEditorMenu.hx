@@ -9,6 +9,7 @@ import sys.FileSystem;
 import objects.Character;
 
 import states.MainMenuState;
+import states.FlashingState;
 import states.FreeplayState;
 
 class MasterEditorMenu extends MusicBeatState
@@ -90,6 +91,8 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new DialogueCharacterEditorState(), false);
 				case 'Note Splash Debug':
 					LoadingState.loadAndSwitchState(new NoteSplashDebugState());
+				case 'Note Splash Debug':
+					MusicBeatState.switchState(new FlashingState());
 			}
 			FlxG.sound.music.volume = 0;
 			#if PRELOAD_ALL
