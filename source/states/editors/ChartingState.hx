@@ -746,7 +746,7 @@ class ChartingState extends MusicBeatState
 			updateGrid();
 		});
 
-		var clearSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y, "Clear", function()
+		var clearSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y, "Clear All", function()
 		{
 			if(check_notesSec.checked)
 			{
@@ -772,6 +772,46 @@ class ChartingState extends MusicBeatState
 		});
 		clearSectionButton.color = FlxColor.RED;
 		clearSectionButton.label.color = FlxColor.WHITE;
+
+		var clearPlayerSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y + 50, "Clear Right Section", function()
+		{
+			if(check_notesSec.checked)
+			{
+				// Support to Custom section selected
+				var stupidArray = [];
+				for (i in 0..._song.notes[curSec].sectionNotes.length){
+					var MySection = _song.notes[curSec].sectionNotes;						
+					var NoteSelected:Array<Dynamic> = _song.notes[curSec].sectionNotes[i];
+					if(NoteSelected[1] <= 3) stupidArray.push(MySection[i]);
+				}						
+				_song.notes[curSec].sectionNotes = stupidArray;
+				// haxelflixel dosent has .removeAt()... im gonna cry
+			}
+			updateGrid();
+			updateNoteUI();
+		});
+		clearPlayerSectionButton.color = FlxColor.RED;
+		clearPlayerSectionButton.label.color = FlxColor.WHITE;
+
+		var clearOppoSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y + 100, "Clear Left Section", function()
+		{
+			if(check_notesSec.checked)
+			{
+				// Support to Custom section selected
+				var stupidArray = [];
+				for (i in 0..._song.notes[curSec].sectionNotes.length){
+					var MySection = _song.notes[curSec].sectionNotes;						
+					var NoteSelected:Array<Dynamic> = _song.notes[curSec].sectionNotes[i];
+					if(NoteSelected[1] >= 4) stupidArray.push(MySection[i]);					
+				}
+				_song.notes[curSec].sectionNotes = stupidArray;
+				// haxelflixel dosent has .removeAt()... im gonna cry
+			}
+			updateGrid();
+			updateNoteUI();
+		});
+		clearOppoSectionButton.color = FlxColor.RED;
+		clearOppoSectionButton.label.color = FlxColor.WHITE;
 		
 		check_notesSec = new FlxUICheckBox(10, clearSectionButton.y + 25, null, null, "Notes", 100);
 		check_notesSec.checked = true;
@@ -885,6 +925,8 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(copyButton);
 		tab_group_section.add(pasteButton);
 		tab_group_section.add(clearSectionButton);
+		tab_group_section.add(clearOppoSectionButton);
+		tab_group_section.add(clearPlayerSectionButton);
 		tab_group_section.add(check_notesSec);
 		tab_group_section.add(check_eventsSec);
 		tab_group_section.add(swapSection);
