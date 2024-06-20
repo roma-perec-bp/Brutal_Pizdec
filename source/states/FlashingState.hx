@@ -17,33 +17,37 @@ class FlashingState extends MusicBeatState
 	{
 		super.create();
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		add(bg);
-
-		disclaimer = new FlxText(0, 0, FlxG.width, "WATCH OUT!", 48);
-		disclaimer.setFormat("vcr.ttf", 80, FlxColor.RED, CENTER);
+		disclaimer = new FlxText(0, 0, FlxG.width, "WARNING!!!", 48);
+		disclaimer.setFormat("HouseofTerror.ttf", 80, FlxColor.RED, CENTER);
+		disclaimer.alpha = 0.00001;
 		disclaimer.y += 120;
 		add(disclaimer);
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"In this mod there will be unsencored words and there will also be flashing lights!
-			If you have a low PC or your FPS is down,
-			then I recommend checking the
-			settings in the \"Graphics\" categories",
+			"This mod has slurs and bad words, it's recommended to play\n
+			this mod with headphones and censore some audios if you\n
+			family friendly youtube content maker",
 			32);
-		warnText.setFormat("vcr.ttf", 32, FlxColor.WHITE, CENTER);
+		warnText.setFormat("HouseofTerror.ttf", 32, FlxColor.WHITE, CENTER);
 		warnText.x += 10;
 		warnText.screenCenter(Y);
 		add(warnText);
 
-		enterText = new FlxText(0, 0, FlxG.width,
-			"PRESS ENTER TO START",
-			32);
-		enterText.setFormat("vcr.ttf", 64, FlxColor.GREEN, CENTER);
-		enterText.y += 520;
-		add(enterText);
-	}
+		FlxTween.tween(disclaimer, {alpha: 1}, 0.6);
 
+		FlxG.sound.play(Paths.sound('discalmer/intro-1'), 1, false, null, true, function() {
+			FlxTween.tween(warnText, {alpha: 1}, 0.6);
+			FlxG.sound.play(Paths.sound('discalmer/intro-2'), 1, false, null, true, function() {
+				warnText.txt += '\nOh and also it has flashing lights, shaking screen\n and stuff that bad for epileptic guys'
+				FlxG.sound.play(Paths.sound('discalmer/intro-3'), 1, false, null, true, function() {
+					FlxG.sound.play(Paths.sound('discalmer/intro-4'), 1, false, null, true, function() {
+						warnText.visible = false;
+						disclaimer.visible = false;
+					});
+				});
+			});
+		});
+	}
 
 	override function update(elapsed:Float)
 	{
