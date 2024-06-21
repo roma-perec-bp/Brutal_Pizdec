@@ -59,20 +59,20 @@ class FlashingState extends MusicBeatState
 
 		FlxTween.tween(disclaimer, {alpha: 1}, 1);
 
-		FlxG.sound.play(Paths.sound('discalmer/intro-1'), 1, false, null, true, function() {
+		FlxG.sound.play(Paths.sound('disclamer/intro-1'), 1, false, null, true, function() {
 			FlxTween.tween(warnText, {alpha: 1}, 0.6);
-			FlxG.sound.play(Paths.sound('discalmer/intro-2'), 1, false, null, true, function() {
+			FlxG.sound.play(Paths.sound('disclamer/intro-2'), 1, false, null, true, function() {
 				warnText.text += '\nOh and also it has flashing lights, shaking screen\n and stuff that bad for epileptic guys';
-				FlxG.sound.play(Paths.sound('discalmer/intro-3'), 1, false, null, true, function() {
+				FlxG.sound.play(Paths.sound('disclamer/intro-3'), 1, false, null, true, function() {
 					warnText.visible = false;
 					disclaimer.visible = false;
-					FlxG.sound.play(Paths.sound('discalmer/intro-4'), 1, false, null, true, function() {
+					FlxG.sound.play(Paths.sound('disclamer/intro-4'), 1, false, null, true, function() {
 						FlxTween.tween(flashDick, {alpha: 1}, 1);
 						FlxTween.tween(noText, {alpha: 1}, 1);
 						FlxTween.tween(yesText, {alpha: 1}, 1);
-						FlxG.sound.play(Paths.sound('discalmer/flash-1'), 1, false, null, true, function() {
+						FlxG.sound.play(Paths.sound('disclamer/flash-1'), 1, false, null, true, function() {
 							canChoose = true;
-							FlxG.sound.play(Paths.sound('discalmer/flash-2'));
+							FlxG.sound.play(Paths.sound('disclamer/flash-2'));
 							timerOfWaiting();
 							FlxG.mouse.unload();
 							FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
@@ -89,7 +89,7 @@ class FlashingState extends MusicBeatState
 	{
 		startTimer = new FlxTimer().start(60, function(tmr:FlxTimer)
 		{
-			FlxG.sound.play(Paths.sound('discalmer/waiting-'+ FlxG.random.int(1, 18)));
+			FlxG.sound.play(Paths.sound('disclamer/waiting-'+ FlxG.random.int(1, 18)));
 
 			switch (swagCounter)
 			{
@@ -125,13 +125,13 @@ class FlashingState extends MusicBeatState
 	{
 		if(sad)
 		{
-			FlxG.sound.play(Paths.sound('discalmer/enough'), 1, false, null, true, function() {
+			FlxG.sound.play(Paths.sound('disclamer/enough'), 1, false, null, true, function() {
 
 			});
 		}
 		else
 		{
-			FlxG.sound.play(Paths.sound('discalmer/accept-'+ whatWillPlay), 1, false, null, true, function() {
+			FlxG.sound.play(Paths.sound('disclamer/accept-'+ whatWillPlay), 1, false, null, true, function() {
 
 			});
 		}
