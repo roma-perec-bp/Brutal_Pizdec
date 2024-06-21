@@ -105,11 +105,6 @@
 	<haxelib name="discord_rpc" if="desktop"/>
 	<haxelib name="tjson" />
 	<haxedef name="openflPos" />
-	
-	<!--Modchart bullshit-->>
-	<haxelib name="fnf-modcharting-tools" />
-
-	<define name="PSYCHVERSION" value="0.7"/>
 
 	<!-- Enables a terminal log prompt on debug builds -->
 	<haxelib name="hxcpp-debug-server" if="debug"/>

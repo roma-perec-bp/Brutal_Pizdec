@@ -5,6 +5,8 @@ import tjson.TJSON as Json;
 import haxe.format.JsonParser;
 import haxe.io.Bytes;
 
+import shaders.ColorSwap;
+
 import flixel.FlxObject;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.ui.FlxUI;

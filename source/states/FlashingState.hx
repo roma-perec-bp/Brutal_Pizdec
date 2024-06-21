@@ -13,6 +13,14 @@ class FlashingState extends MusicBeatState
 	var warnText:FlxText;
 	var disclaimer:FlxText;
 	var enterText:FlxText;
+
+	var flashDick:Alphabet;
+	var yesText:Alphabet;
+	var noText:Alphabet;
+
+	var canChoose:Bool = false;
+	var startTimer:FlxTimer;
+	var whatWillPlay:Int = 1;
 	override function create()
 	{
 		super.create();
@@ -33,40 +41,150 @@ class FlashingState extends MusicBeatState
 		warnText.screenCenter(Y);
 		add(warnText);
 
-		FlxTween.tween(disclaimer, {alpha: 1}, 0.6);
+		flashDick = new Alphabet(0, 180, "Leave option FLASHING LIGHTS enabled?", true);
+		flashDick.screenCenter(X);
+		flashDick.alpha = 0;
+		add(flashDick);
+
+		yesText = new Alphabet(0, flashDick.y + 150, 'Yes', true);
+		yesText.screenCenter(X);
+		yesText.x -= 200;
+		yesText.alpha = 0;
+		add(yesText);
+		noText = new Alphabet(0, flashDick.y + 150, 'No', true);
+		noText.screenCenter(X);
+		noText.x += 200;
+		noText.alpha = 0;
+		add(noText);
+
+		FlxTween.tween(disclaimer, {alpha: 1}, 1);
 
 		FlxG.sound.play(Paths.sound('discalmer/intro-1'), 1, false, null, true, function() {
 			FlxTween.tween(warnText, {alpha: 1}, 0.6);
 			FlxG.sound.play(Paths.sound('discalmer/intro-2'), 1, false, null, true, function() {
-				warnText.txt += '\nOh and also it has flashing lights, shaking screen\n and stuff that bad for epileptic guys'
+				warnText.text += '\nOh and also it has flashing lights, shaking screen\n and stuff that bad for epileptic guys';
 				FlxG.sound.play(Paths.sound('discalmer/intro-3'), 1, false, null, true, function() {
+					warnText.visible = false;
+					disclaimer.visible = false;
 					FlxG.sound.play(Paths.sound('discalmer/intro-4'), 1, false, null, true, function() {
-						warnText.visible = false;
-						disclaimer.visible = false;
+						FlxTween.tween(flashDick, {alpha: 1}, 1);
+						FlxTween.tween(noText, {alpha: 1}, 1);
+						FlxTween.tween(yesText, {alpha: 1}, 1);
+						FlxG.sound.play(Paths.sound('discalmer/flash-1'), 1, false, null, true, function() {
+							canChoose = true;
+							FlxG.sound.play(Paths.sound('discalmer/flash-2'));
+							timerOfWaiting();
+							FlxG.mouse.unload();
+							FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
+							FlxG.mouse.visible = true;
+						});
 					});
 				});
 			});
 		});
 	}
 
+	var swagCounter:Int = 1;
+	function timerOfWaiting()
+	{
+		startTimer = new FlxTimer().start(60, function(tmr:FlxTimer)
+		{
+			FlxG.sound.play(Paths.sound('discalmer/waiting-'+ FlxG.random.int(1, 18)));
+
+			switch (swagCounter)
+			{
+				case 1 | 5 | 15 | 30 | 68:
+					whatWillPlay += 1;
+				case 69:
+				    leftState = true;
+					canChoose = false;
+					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+					ClientPrefs.data.flashing = true;
+					ClientPrefs.saveSettings();
+					FlxFlicker.flicker(yesText, 1, 0.06, true, false, function(flick:FlxFlicker)
+					{
+						FlxTween.tween(flashDick, {alpha: 0}, 0.6);
+						FlxTween.tween(noText, {alpha: 0}, 0.6);
+						FlxTween.tween(yesText, {alpha: 0}, 0.6);
+					});
+					soWhat(true);
+			}
+
+			swagCounter += 1;
+		}, 69);
+	}
+
+	function goAwayBruh()
+	{
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxTransitionableState.skipNextTransOut = true;
+		MusicBeatState.switchState(new TitleState());
+	}
+
+	function soWhat(sad:Bool = false)
+	{
+		if(sad)
+		{
+			FlxG.sound.play(Paths.sound('discalmer/enough'), 1, false, null, true, function() {
+
+			});
+		}
+		else
+		{
+			FlxG.sound.play(Paths.sound('discalmer/accept-'+ whatWillPlay), 1, false, null, true, function() {
+
+			});
+		}
+	}
+
 	override function update(elapsed:Float)
 	{
-		if(!leftState) {
-			if (controls.ACCEPT) {
-				leftState = true;
-				FlxTransitionableState.skipNextTransIn = true;
-				FlxTransitionableState.skipNextTransOut = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+		if(canChoose)
+		{
+			if(FlxG.mouse.overlaps(yesText))
+			{
+				yesText.alpha = 0.6;
+				if(FlxG.mouse.justPressed)
+				{
+					leftState = true;
+					canChoose = false;
+					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+					ClientPrefs.data.flashing = true;
 					ClientPrefs.saveSettings();
-					FlxFlicker.flicker(enterText, 1, 0.1, false, true, function(flk:FlxFlicker) {
-							FlxTween.tween(disclaimer, {alpha: 0}, 1);
-							FlxTween.tween(warnText, {alpha: 0}, 1, {
-								onComplete: function (twn:FlxTween) {
-									MusicBeatState.switchState(new TitleState());
-								}
-					
-						});
+					startTimer.cancel();
+					FlxFlicker.flicker(yesText, 1, 0.06, true, false, function(flick:FlxFlicker)
+					{
+						FlxTween.tween(flashDick, {alpha: 0}, 0.6);
+						FlxTween.tween(noText, {alpha: 0}, 0.6);
+						FlxTween.tween(yesText, {alpha: 0}, 0.6);
 					});
+					soWhat(false);
+				}
+			} else {
+				yesText.alpha = 1;
+			}
+
+			if(FlxG.mouse.overlaps(noText))
+			{
+				noText.alpha = 0.6;
+				if(FlxG.mouse.justPressed)
+				{
+					leftState = true;
+					canChoose = false;
+					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+					ClientPrefs.data.flashing = true;
+					ClientPrefs.saveSettings();
+					startTimer.cancel();
+					FlxFlicker.flicker(noText, 1, 0.06, true, false, function(flick:FlxFlicker)
+					{
+						FlxTween.tween(flashDick, {alpha: 0}, 0.6);
+						FlxTween.tween(noText, {alpha: 0}, 0.6);
+						FlxTween.tween(yesText, {alpha: 0}, 0.6);
+					});
+					soWhat(false);
+				}
+			} else {
+				noText.alpha = 1;
 			}
 		}
 		super.update(elapsed);
