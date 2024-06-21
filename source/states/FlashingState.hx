@@ -32,26 +32,25 @@ class FlashingState extends MusicBeatState
 		add(disclaimer);
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"This mod has slurs and bad words, it's recommended to play\n
-			this mod with headphones and censore some audios if you\n
-			family friendly youtube content maker",
+			"This mod has slurs and bad words, it's recommended to play\nthis mod with headphones and censore some audios if you\nfamily friendly youtube content maker",
 			32);
 		warnText.setFormat("HouseofTerror.ttf", 32, FlxColor.WHITE, CENTER);
 		warnText.x += 10;
+		warnText.alpha = 0;
 		warnText.screenCenter(Y);
 		add(warnText);
 
-		flashDick = new Alphabet(0, 180, "Leave option FLASHING LIGHTS enabled?", true);
+		flashDick = new Alphabet(0, 180, "Leave option\nFLASHING LIGHTS enabled?", true);
 		flashDick.screenCenter(X);
 		flashDick.alpha = 0;
 		add(flashDick);
 
-		yesText = new Alphabet(0, flashDick.y + 150, 'Yes', true);
+		yesText = new Alphabet(0, flashDick.y + 250, 'Yes', true);
 		yesText.screenCenter(X);
 		yesText.x -= 200;
 		yesText.alpha = 0;
 		add(yesText);
-		noText = new Alphabet(0, flashDick.y + 150, 'No', true);
+		noText = new Alphabet(0, flashDick.y + 250, 'No', true);
 		noText.screenCenter(X);
 		noText.x += 200;
 		noText.alpha = 0;
@@ -60,7 +59,7 @@ class FlashingState extends MusicBeatState
 		FlxTween.tween(disclaimer, {alpha: 1}, 1);
 
 		FlxG.sound.play(Paths.sound('disclamer/intro-1'), 1, false, null, true, function() {
-			FlxTween.tween(warnText, {alpha: 1}, 0.6);
+			FlxTween.tween(warnText, {alpha: 1}, 1);
 			FlxG.sound.play(Paths.sound('disclamer/intro-2'), 1, false, null, true, function() {
 				warnText.text += '\nOh and also it has flashing lights, shaking screen\n and stuff that bad for epileptic guys';
 				FlxG.sound.play(Paths.sound('disclamer/intro-3'), 1, false, null, true, function() {
