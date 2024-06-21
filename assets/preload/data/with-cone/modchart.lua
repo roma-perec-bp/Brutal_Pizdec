@@ -40,5 +40,9 @@ function onUpdate(elapsed)
 	end   
   if curBeat == 658 then
     setProperty("camHUD.angle", 0)
+	for i = 0,7 do 
+		setPropertyFromGroup('strumLineNotes', i, 'x', defaultNotePos[i + 1][1])
+		setPropertyFromGroup('strumLineNotes', i, 'y', defaultNotePos[i + 1][2])
+	end
   end
 end
