@@ -129,7 +129,7 @@ function onBeatHit()
     if curBeat == 594 then
         setProperty('hand.visible', true)
         playAnim('hand', 'raise', true)
-        runTimer('why', 4.18)
+        runTimer('why', 4.16)
     end
 
     if curBeat == 665 then
