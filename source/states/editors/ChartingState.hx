@@ -5,6 +5,8 @@ import tjson.TJSON as Json;
 import haxe.format.JsonParser;
 import haxe.io.Bytes;
 
+import shaders.ColorSwap;
+
 import flixel.FlxObject;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.ui.FlxUI;
@@ -116,6 +118,8 @@ class ChartingState extends MusicBeatState
 	public static var curSec:Int = 0;
 	public static var lastSection:Int = 0;
 	private static var lastSong:String = '';
+
+	public static var sectionLmao:Int = 0;
 
 	var bpmTxt:FlxText;
 
@@ -673,6 +677,16 @@ class ChartingState extends MusicBeatState
 		stepperSectionBPM.name = 'section_bpm';
 		blockPressWhileTypingOnStepper.push(stepperSectionBPM);
 
+		var stepperChangeSection:FlxUINumericStepper = new FlxUINumericStepper(260, 75, 1, 0, 0, 9999, 3);
+		stepperChangeSection.value = sectionLmao;
+		stepperChangeSection.name = 'section_select';
+		blockPressWhileTypingOnStepper.push(stepperChangeSection);
+
+		var changeSectionEasy:FlxButton = new FlxButton(170, 70, "Change Section", function()
+		{
+			changeSection(sectionLmao);
+		});
+
 		var check_eventsSec:FlxUICheckBox = null;
 		var check_notesSec:FlxUICheckBox = null;
 		var copyButton:FlxButton = new FlxButton(10, 190, "Copy Section", function()
@@ -746,7 +760,7 @@ class ChartingState extends MusicBeatState
 			updateGrid();
 		});
 
-		var clearSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y, "Clear", function()
+		var clearSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y, "Clear All", function()
 		{
 			if(check_notesSec.checked)
 			{
@@ -772,6 +786,46 @@ class ChartingState extends MusicBeatState
 		});
 		clearSectionButton.color = FlxColor.RED;
 		clearSectionButton.label.color = FlxColor.WHITE;
+
+		var clearPlayerSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y + 50, "Clear Right Section", function()
+		{
+			if(check_notesSec.checked)
+			{
+				// Support to Custom section selected
+				var stupidArray = [];
+				for (i in 0..._song.notes[curSec].sectionNotes.length){
+					var MySection = _song.notes[curSec].sectionNotes;						
+					var NoteSelected:Array<Dynamic> = _song.notes[curSec].sectionNotes[i];
+					if(NoteSelected[1] <= 3) stupidArray.push(MySection[i]);
+				}						
+				_song.notes[curSec].sectionNotes = stupidArray;
+				// haxelflixel dosent has .removeAt()... im gonna cry
+			}
+			updateGrid();
+			updateNoteUI();
+		});
+		clearPlayerSectionButton.color = FlxColor.RED;
+		clearPlayerSectionButton.label.color = FlxColor.WHITE;
+
+		var clearOppoSectionButton:FlxButton = new FlxButton(pasteButton.x + 100, pasteButton.y + 100, "Clear Left Section", function()
+		{
+			if(check_notesSec.checked)
+			{
+				// Support to Custom section selected
+				var stupidArray = [];
+				for (i in 0..._song.notes[curSec].sectionNotes.length){
+					var MySection = _song.notes[curSec].sectionNotes;						
+					var NoteSelected:Array<Dynamic> = _song.notes[curSec].sectionNotes[i];
+					if(NoteSelected[1] >= 4) stupidArray.push(MySection[i]);					
+				}
+				_song.notes[curSec].sectionNotes = stupidArray;
+				// haxelflixel dosent has .removeAt()... im gonna cry
+			}
+			updateGrid();
+			updateNoteUI();
+		});
+		clearOppoSectionButton.color = FlxColor.RED;
+		clearOppoSectionButton.label.color = FlxColor.WHITE;
 		
 		check_notesSec = new FlxUICheckBox(10, clearSectionButton.y + 25, null, null, "Notes", 100);
 		check_notesSec.checked = true;
@@ -885,6 +939,8 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(copyButton);
 		tab_group_section.add(pasteButton);
 		tab_group_section.add(clearSectionButton);
+		tab_group_section.add(clearOppoSectionButton);
+		tab_group_section.add(clearPlayerSectionButton);
 		tab_group_section.add(check_notesSec);
 		tab_group_section.add(check_eventsSec);
 		tab_group_section.add(swapSection);
@@ -1523,6 +1579,9 @@ class ChartingState extends MusicBeatState
 
 				case 'song_speed':
 					_song.speed = nums.value;
+					
+				case 'section_select':
+					sectionLmao = Std.int(nums.value);
 
 				case 'song_bpm':
 					_song.bpm = nums.value;
@@ -2214,13 +2273,13 @@ class ChartingState extends MusicBeatState
 	var columns:Int = 9;
 	function reloadGridLayer() {
 		gridLayer.clear();
-		gridBG = FlxGridOverlay.create(1, 1, columns, Std.int(getSectionBeats() * 4 * zoomList[curZoom]));
+		gridBG = FlxGridOverlay.create(1, 1, columns, Std.int(getSectionBeats() * 4 * zoomList[curZoom]), true, 0xff424242, 0xff202020);
 		gridBG.antialiasing = false;
 		gridBG.scale.set(GRID_SIZE, GRID_SIZE);
 		gridBG.updateHitbox();
 
 		#if desktop
-		if(FlxG.save.data.chart_waveformInst || FlxG.save.data.chart_waveformVoices) {
+		if(FlxG.save.data.chart_waveformInst || FlxG.save.data.chart_waveformVoices || FlxG.save.data.chart_waveformOppVoices) {
 			updateWaveform();
 		}
 		#end
@@ -2229,7 +2288,7 @@ class ChartingState extends MusicBeatState
 		var foundNextSec:Bool = false;
 		if(sectionStartTime(1) <= FlxG.sound.music.length)
 		{
-			nextGridBG = FlxGridOverlay.create(1, 1, columns, Std.int(getSectionBeats(curSec + 1) * 4 * zoomList[curZoom]));
+			nextGridBG = FlxGridOverlay.create(1, 1, columns, Std.int(getSectionBeats(curSec + 1) * 4 * zoomList[curZoom]), true, 0xff424242, 0xff202020);
 			nextGridBG.antialiasing = false;
 			nextGridBG.scale.set(GRID_SIZE, GRID_SIZE);
 			nextGridBG.updateHitbox();
@@ -2866,7 +2925,14 @@ class ChartingState extends MusicBeatState
 		if(height < minHeight) height = minHeight;
 		if(height < 1) height = 1; //Prevents error of invalid height
 
-		var spr:FlxSprite = new FlxSprite(note.x + (GRID_SIZE * 0.5) - 4, note.y + GRID_SIZE / 2).makeGraphic(8, height);
+		var colorSwap = new ColorSwap();
+		var shader = colorSwap.shader;
+
+		var colorList:Array<String> = ['db00ff', '00ffff', '12fa05', 'f9393f'];
+		if (PlayState.isPixelStage) colorList = ['e276ff', '3dcaff', '71e300', 'ff884e'];
+		var susColor:Int = Std.parseInt('0xff' + colorList[note.noteData]);
+
+		var spr:FlxSprite = new FlxSprite(note.x + (GRID_SIZE * 0.5) - 4, note.y + GRID_SIZE / 2).makeGraphic(8, height, susColor);
 		return spr;
 	}
 

@@ -9,6 +9,7 @@ import sys.FileSystem;
 import objects.Character;
 
 import states.MainMenuState;
+import states.FlashingState;
 import states.FreeplayState;
 
 class MasterEditorMenu extends MusicBeatState
@@ -17,7 +18,8 @@ class MasterEditorMenu extends MusicBeatState
 		'Chart Editor',
 		'Character Editor',
 		'Week Editor',
-		'Note Splash Debug'
+		'Note Splash Debug',
+		'flashing states test'
 	];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
 	private var directories:Array<String> = [null];
@@ -89,6 +91,8 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new DialogueCharacterEditorState(), false);
 				case 'Note Splash Debug':
 					LoadingState.loadAndSwitchState(new NoteSplashDebugState());
+				case 'flashing states test':
+					MusicBeatState.switchState(new FlashingState());
 			}
 			FlxG.sound.music.volume = 0;
 			#if PRELOAD_ALL
