@@ -673,7 +673,7 @@
 		"events": [],
 		"player2": "perec",
 		"song": "overfire",
-		"needsVoices": true,
+		"needsVoices": false,
 		"stage": "night",
 		"speed": 3.6,
 		"bpm": 180

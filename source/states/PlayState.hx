@@ -1421,7 +1421,8 @@ class PlayState extends MusicBeatState
 			vocals.pause();
 		}
 
-		if (task != null) task.start();
+		if(!SONG.disableAtTheStartSong)
+			if (task != null) task.start();
 
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
@@ -2482,6 +2483,9 @@ class PlayState extends MusicBeatState
 			case 'Play Sound':
 				if(flValue2 == null) flValue2 = 1;
 				FlxG.sound.play(Paths.sound(value1), flValue2);
+
+			case 'Show Song':
+				if (task != null) task.start(); //если хочешь то вот
 
 			case 'Toogle CamZooming':
 				camZooming = !camZooming;

@@ -94,6 +94,7 @@ class ChartingState extends MusicBeatState
 		['Set Cam Zoom Alt', 'V1: Zoom\nV2: Time'],
 		['GrassHey', "Value 1: on or off?"],
 		['dead jumpscare', "Value 1: time"],
+		['Show Song', "fuck you"],
 		['Character Color', "Value 1: Character\nValue 2:Color 0xffffffff, time"],
 		['Character Color Transform', "Value 1: redOffset, greenOffset, blueOffset, redMultiplier, greenMultiplier, blueMultiplier\nValue 2:Character, Time"],
 		['boom dead', "yes"],
@@ -939,6 +940,8 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(copyButton);
 		tab_group_section.add(pasteButton);
 		tab_group_section.add(clearSectionButton);
+		tab_group_section.add(stepperChangeSection);
+		tab_group_section.add(changeSectionEasy);
 		tab_group_section.add(clearOppoSectionButton);
 		tab_group_section.add(clearPlayerSectionButton);
 		tab_group_section.add(check_notesSec);
@@ -1409,6 +1412,13 @@ class ChartingState extends MusicBeatState
 			//trace('CHECKED!');
 		};
 
+		var check_disableSongTask:FlxUICheckBox = new FlxUICheckBox(check_disableNoteRGB.x + 150, 170, null, null, "Disable Song Credits Intro at the start", 100);
+		check_disableSongTask.checked = (_song.disableAtTheStartSong == true);
+		check_disableSongTask.callback = function()
+		{
+			_song.disableAtTheStartSong = check_disableSongTask.checked;
+		};
+
 		//
 		noteSkinInputText = new FlxUIInputText(10, 280, 150, _song.arrowSkin != null ? _song.arrowSkin : '', 8);
 		blockPressWhileTypingOn.push(noteSkinInputText);
@@ -1428,6 +1438,7 @@ class ChartingState extends MusicBeatState
 		tab_group_data.add(gameOverEndInputText);
 
 		tab_group_data.add(check_disableNoteRGB);
+		tab_group_data.add(check_disableSongTask);
 		
 		tab_group_data.add(reloadNotesButton);
 		tab_group_data.add(noteSkinInputText);
