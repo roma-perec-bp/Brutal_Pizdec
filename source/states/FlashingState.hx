@@ -21,6 +21,11 @@ class FlashingState extends MusicBeatState
 	var canChoose:Bool = false;
 	var startTimer:FlxTimer;
 	var whatWillPlay:Int = 1;
+
+	var botsuka:FlxSprite;
+	var rippvzdich:FlxSprite;
+
+	public var gmanMoment:FlxSound;
 	override function create()
 	{
 		super.create();
@@ -41,8 +46,8 @@ class FlashingState extends MusicBeatState
 		add(warnText);
 
 		flashDick = new Alphabet(0, 180, "Leave option\nFLASHING LIGHTS enabled?", true);
-		flashDick.screenCenter(X);
 		flashDick.alpha = 0;
+		flashDick.screenCenter(X);
 		add(flashDick);
 
 		yesText = new Alphabet(0, flashDick.y + 250, 'Yes', true);
@@ -55,6 +60,21 @@ class FlashingState extends MusicBeatState
 		noText.x += 200;
 		noText.alpha = 0;
 		add(noText);
+
+		botsuka = new FlxSprite().loadGraphic(Paths.image('dolbaeb'));
+		botsuka.antialiasing = false; //huli net to
+		botsuka.screenCenter();
+		botsuka.alpha = 0;
+		add(botsuka);
+
+		rippvzdich = new FlxSprite().loadGraphic(Paths.image('fnf'));
+		rippvzdich.antialiasing = false; //huli net to
+		rippvzdich.screenCenter();
+		rippvzdich.alpha = 0;
+		add(rippvzdich);
+
+		gmanMoment = new FlxSound().loadEmbedded(Paths.sound('disclamer/flash-2'));
+		FlxG.sound.list.add(gmanMoment);
 
 		FlxTween.tween(disclaimer, {alpha: 1}, 1);
 
@@ -71,7 +91,7 @@ class FlashingState extends MusicBeatState
 						FlxTween.tween(yesText, {alpha: 1}, 1);
 						FlxG.sound.play(Paths.sound('disclamer/flash-1'), 1, false, null, true, function() {
 							canChoose = true;
-							FlxG.sound.play(Paths.sound('disclamer/flash-2'));
+							gmanMoment.play();
 							timerOfWaiting();
 							FlxG.mouse.unload();
 							FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
@@ -120,18 +140,37 @@ class FlashingState extends MusicBeatState
 		MusicBeatState.switchState(new TitleState());
 	}
 
+	function botPlay()
+	{
+		FlxTween.tween(botsuka, {alpha: 1}, 1);
+		FlxG.sound.play(Paths.sound('disclamer/botplay-1'), 1, false, null, true, function() {
+			new FlxTimer().start(4, function(tmr:FlxTimer)
+			{
+				FlxTween.tween(rippvzdich, {alpha: 1}, 1);
+				FlxTween.tween(rippvzdich.scale, {x: 1.2, y: 1.2}, 10);
+			});
+			FlxG.sound.play(Paths.sound('disclamer/botplay-2'), 1, false, null, true, function() {
+				FlxTween.tween(rippvzdich, {alpha: 0}, 1);
+				FlxTween.tween(botsuka, {alpha: 0}, 1);
+				FlxG.sound.play(Paths.sound('disclamer/end'), 1, false, null, true, function() {
+					goAwayBruh();
+				});
+			});
+		});
+	}
+
 	function soWhat(sad:Bool = false)
 	{
 		if(sad)
 		{
 			FlxG.sound.play(Paths.sound('disclamer/enough'), 1, false, null, true, function() {
-
+				botPlay();
 			});
 		}
 		else
 		{
 			FlxG.sound.play(Paths.sound('disclamer/accept-'+ whatWillPlay), 1, false, null, true, function() {
-
+				botPlay();
 			});
 		}
 	}
@@ -145,6 +184,7 @@ class FlashingState extends MusicBeatState
 				yesText.alpha = 0.6;
 				if(FlxG.mouse.justPressed)
 				{
+					gmanMoment.stop();
 					leftState = true;
 					canChoose = false;
 					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
@@ -168,6 +208,7 @@ class FlashingState extends MusicBeatState
 				noText.alpha = 0.6;
 				if(FlxG.mouse.justPressed)
 				{
+					gmanMoment.stop();
 					leftState = true;
 					canChoose = false;
 					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
