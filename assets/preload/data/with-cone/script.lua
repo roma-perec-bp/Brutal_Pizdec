@@ -23,6 +23,12 @@ function onSongStart()
     doTweenAlpha('aaaaa', 'blackScreenSonicCount', 0, 10)
 end
 
+function onTimerCompleted(tag, loops, loopsLeft)
+    if tag == 'why' then
+        setProperty('hand.visible', false) --for some reason it buggy after anim ends soooooo
+    end
+end
+
 function onCreatePost()
     setCharacterX('dad', -200)
 
@@ -41,6 +47,12 @@ function onCreatePost()
     setObjectCamera('fullscreen','other')
     setBlendMode('fullscreen','add')
     setProperty('fullscreen.alpha',0)
+
+    makeAnimatedLuaSprite('hand', 'nelzya', 795, 300)
+    addAnimationByPrefix('hand', 'raise', 'hand rise', 24, false)
+    setObjectCamera('hand', 'camhud')
+    addLuaSprite('hand', true)
+    setProperty('hand.visible', false)
 end
 
 function onUpdatePost()
@@ -112,6 +124,12 @@ function onBeatHit()
 
     if curBeat == 464 then
         doTweenAlpha('po', 'blammedLightsBlack', 0, 0.5)
+    end
+
+    if curBeat == 594 then
+        setProperty('hand.visible', true)
+        playAnim('hand', 'raise', true)
+        runTimer('why', 4.18)
     end
 
     if curBeat == 665 then
