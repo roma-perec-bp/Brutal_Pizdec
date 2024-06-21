@@ -64,7 +64,6 @@ function onStepHit()
         noteTweenX("Pizdec2", 1, 530, 0.5, "quartInOut")
         noteTweenX("Pizdec3", 2, 640, 0.5, "quartInOut")
         noteTweenX("Pizdec4", 3, 750, 0.5, "quartInOut")
-        
         noteTweenAlpha("hwaw1", 4, 0, 1, "quartInOut")
         noteTweenAlpha("hwaw2", 5, 0, 1, "quartInOut")
         noteTweenAlpha("hwaw3", 6, 0, 1, "quartInOut")
