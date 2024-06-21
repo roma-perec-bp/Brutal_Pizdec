@@ -6,6 +6,7 @@ function onCreate()
     setTextSize('lyrics', 30)
     updateHitbox('lyrics')
     screenCenter('lyrics', 'x')
+    setTextFont('lyrics', 'HouseofTerror.ttf')
 
     setProperty('lyrics.alpha', 0)
     addLuaText('lyrics')
