@@ -1865,7 +1865,7 @@ class PlayState extends MusicBeatState
 			dropTime -= elapsed;
 			health -= healthDrop * (elapsed/(1/120));
 			healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
-			FlxColor.fromRGB(255, 50, 0));
+			FlxColor.fromRGB(255, 138, 0));
 		}
 
 		if(dropTime<=0)

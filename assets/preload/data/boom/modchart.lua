@@ -57,6 +57,14 @@ function onStepHit()
     if curStep == 288 then
         setProperty('vin.visible', false)
     end
+
+    if curStep == 1664 then
+        setProperty('vin.visible', true)
+    end
+
+    if curStep == 2176 then
+        setProperty('vin.visible', false)
+    end
     
     if curStep == 2720 then
         doTweenAlpha('maniaPartYea','maniaPart', 1, 0.5, 'linear')
