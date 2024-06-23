@@ -11,6 +11,10 @@ class Roof extends BaseStage
 
 	public var grad:FlxSprite;
 
+	public var flames:FlxSprite;
+	public var flames2:FlxSprite;
+	public var smoke:FlxSprite;
+
 	public var fire:Bool = false;
 	public var vibing:Bool = false;
 
@@ -22,6 +26,25 @@ class Roof extends BaseStage
 		var bg:BGSprite = new BGSprite('sky', 0, 0, 0.75, 0.75);
 		bg.setGraphicSize(Std.int(bg.width * 3));
 		add(bg);
+
+		flames = new FlxSprite(-600, -1000);
+		flames.frames = Paths.getSparrowAtlas('Starman_BG_Fire_Assets');
+		flames.animation.addByPrefix('flames', 'fire anim effects', 24);
+		flames.animation.play('flames');
+		flames.alpha = 0.001;
+		add(flames);
+
+		flames2 = new FlxSprite(600, -1000);
+		flames2.frames = Paths.getSparrowAtlas('Starman_BG_Fire_Assets');
+		flames2.animation.addByPrefix('flames', 'fire anim effects', 24);
+		flames2.animation.play('flames');
+		flames2.alpha = 0.001;
+		flames2.flipX = true;
+		add(flames2);
+
+		smoke = new FlxSprite(0, 0).loadGraphic(Paths.image('smoke'));
+		smoke.alpha = 0.001;
+		smoke.cameras = [camHUD];
 
 		grad = new FlxSprite(-1000, -400).loadGraphic(Paths.image('gradient'));
 		grad.scrollFactor.set(0, 1);
@@ -76,6 +99,15 @@ class Roof extends BaseStage
 			case 'vibe time':
 				vibing = !vibing;
 				grad.visible = vibing;
+			
+			case 'fire boom':
+				add(smoke);
+				FlxTween.tween(flames, {y: -350}, 10, {ease: FlxEase.sineOut});
+				FlxTween.tween(flames2, {y: -350}, 10, {ease: FlxEase.sineOut});
+
+				FlxTween.tween(smoke, {alpha: 1}, 10);
+				FlxTween.tween(flames, {alpha: 1}, 10);
+				FlxTween.tween(flames2, {alpha: 1}, 10);
 		}
 	}
 
