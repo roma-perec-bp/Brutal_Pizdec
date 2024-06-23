@@ -43,7 +43,7 @@ class HealthIcon extends FlxSprite
 			var file:Dynamic = Paths.image(name);
 
 			loadGraphic(file); //Load stupidly first for getting the file size
-			var width2 = width;
+			//var width2 = width;
 			if (width == 450) {
 				loadGraphic(file, true, Math.floor(width / 3), Math.floor(height)); //Then load it fr // winning icons go br
 				iconOffsets[0] = (width - 150) / 3;
@@ -56,7 +56,7 @@ class HealthIcon extends FlxSprite
 			}
 			
 			updateHitbox();
-			if (width2 == 450) {
+			if (width == 450) {
 				animation.add(char, [0, 1, 2], 0, false, isPlayer);
 			} else {
 				animation.add(char, [0, 1], 0, false, isPlayer);
