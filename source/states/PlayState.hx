@@ -2485,8 +2485,7 @@ class PlayState extends MusicBeatState
 				FlxG.sound.play(Paths.sound(value1), flValue2);
 
 			case 'Show Song':
-				if (task != null) task.start(); //если хочешь то вот 
-				//e69: нахуя????? 
+				if (task != null) task.start(); //если хочешь то вот
 
 			case 'Toogle CamZooming':
 				camZooming = !camZooming;
