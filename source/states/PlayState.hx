@@ -1869,12 +1869,15 @@ class PlayState extends MusicBeatState
 			health -= healthDrop * (elapsed/(1/120));
 			healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
 			FlxColor.fromRGB(255, 138, 0));
+			iconP1.offset.x = FlxG.random.float(-10, 10);
+			iconP1.offset.y = FlxG.random.float(-10, 10);
 		}
 
 		if(dropTime<=0)
 		{
+			iconP1.changeIcon(boyfriend.healthIcon);
 			healthDrop = 0;
-			dropTime = 0;
+			dropTime = -1;
 			reloadHealthBarColors();
 		}
 
@@ -1910,9 +1913,12 @@ class PlayState extends MusicBeatState
 		if (controls.justPressed('debug_1') && !endingSong && !inCutscene)
 			openChartEditor();
 
-		var mult:Float = FlxMath.lerp(1, iconP1.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
-		iconP1.scale.set(mult, mult);
-		iconP1.updateHitbox();
+		if(dropTime <= 0)
+		{
+			var mult:Float = FlxMath.lerp(1, iconP1.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
+			iconP1.scale.set(mult, mult);
+			iconP1.updateHitbox();
+		}
 
 		var mult:Float = FlxMath.lerp(1, iconP2.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
 		iconP2.scale.set(mult, mult);
@@ -3524,7 +3530,9 @@ class PlayState extends MusicBeatState
 							FlxG.camera.zoom += 0.06;
 							camHUD.zoom += 0.06;
 							dropTime = 10;
-							healthDrop += 0.00025;
+							healthDrop += 0.00050;
+							iconP1.scale.set(1, 1);
+							iconP1.changeIcon('hwaw-fire');
 					}
 				}
 
@@ -3684,11 +3692,11 @@ class PlayState extends MusicBeatState
 		if (generatedMusic)
 			notes.sort(FlxSort.byY, ClientPrefs.data.downScroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
 
-		iconP1.scale.set(1.2, 1.2);
+		if(dropTime <= 0) iconP1.scale.set(1.2, 1.2);
 		if(curSong == 'lore') iconROM.scale.set(1.2, 1.2);
 		iconP2.scale.set(1.2, 1.2);
 
-		iconP1.updateHitbox();
+		if(dropTime <= 0) iconP1.updateHitbox();
 		if(curSong == 'lore') iconROM.updateHitbox();
 		iconP2.updateHitbox();
 
