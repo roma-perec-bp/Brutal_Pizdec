@@ -1,9 +1,0 @@
-Value 1: Bar Thickness (pixels), Speed (seconds)
-[Recommend from Maxplay Games: 125, 1]
-Value 2: Cinematic Type
-[Recommend from Maxplay Games: 2]
-Cinematic Types:
-1: Underlapping 2: Overlapping 3: With HUD
-4: Without HUD 5: Static Strums
-
--- Created by RamenDominoes

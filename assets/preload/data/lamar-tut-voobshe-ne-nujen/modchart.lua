@@ -12,10 +12,12 @@ function onCreate()
 end
 
 function onUpdatePost(elapsed)
+    if curBeat >= 32 and curBeat < 96 or curBeat >= 192 and curBeat < 256 then
     setProperty('iconP1.scale.x', getProperty('iconScale.scale.x'))
     setProperty('iconP1.scale.y', getProperty('iconScale.scale.y'))
     setProperty('iconP2.scale.x', getProperty('iconScale.scale.x'))
     setProperty('iconP2.scale.y', getProperty('iconScale.scale.y'))
+    end
 end
 
 function onBeatHit()
