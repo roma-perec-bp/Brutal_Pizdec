@@ -39,6 +39,14 @@ class SongIntro extends FlxSpriteGroup
                 color = 0xffff0000;
             case 'overfire':
                 color = 0xffff7a00;
+            case 't-short':
+                color = 0xff1e1d2b;
+            case 'klork' | 'klork-old':
+                color == 0xff8cd485;
+            case 'monochrome':
+                color == 0xff3f3f3f;
+            case 's6x-boom':
+                color == 0xffec0063;
         }
 
         var text = new FlxText(780, 400, 0, "", 82);
