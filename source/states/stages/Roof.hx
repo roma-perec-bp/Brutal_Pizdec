@@ -27,14 +27,14 @@ class Roof extends BaseStage
 		bg.setGraphicSize(Std.int(bg.width * 3));
 		add(bg);
 
-		flames = new FlxSprite(-600, -1000);
+		flames = new FlxSprite(-600, 2000);
 		flames.frames = Paths.getSparrowAtlas('Starman_BG_Fire_Assets');
 		flames.animation.addByPrefix('flames', 'fire anim effects', 24);
 		flames.animation.play('flames');
 		flames.alpha = 0.001;
 		add(flames);
 
-		flames2 = new FlxSprite(600, -1000);
+		flames2 = new FlxSprite(600, 2000);
 		flames2.frames = Paths.getSparrowAtlas('Starman_BG_Fire_Assets');
 		flames2.animation.addByPrefix('flames', 'fire anim effects', 24);
 		flames2.animation.play('flames');

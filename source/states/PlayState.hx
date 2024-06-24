@@ -1733,8 +1733,6 @@ class PlayState extends MusicBeatState
 			for (tween in modchartTweens) tween.active = false;
 			for (timer in modchartTimers) timer.active = false;
 			#end
-
-			if(curStage != 'roof-old') FlxG.camera.zoom = 1;
 		}
 
 		super.openSubState(SubState);
@@ -1768,7 +1766,12 @@ class PlayState extends MusicBeatState
 			callOnScripts('onResume');
 			resetRPC(startTimer != null && startTimer.finished);
 			
-			if(curStage != 'roof-old') FlxG.camera.zoom = defaultCamZoom;
+			FlxTween.cancelTweensOf(FlxG.camera.zoom);
+
+			if(sexcameratween != null)
+				sexcameratween.cancel();
+			
+			if(curStage != 'roof-old') FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 0.5, {ease: FlxEase.quadOut});
 		}
 
 		super.closeSubState();
@@ -2100,6 +2103,12 @@ class PlayState extends MusicBeatState
 		FlxG.camera.followLerp = 0;
 		persistentUpdate = false;
 		persistentDraw = true;
+		FlxTween.cancelTweensOf(FlxG.camera.zoom);
+
+		if(sexcameratween != null)
+			sexcameratween.cancel();
+
+		if(curStage != 'roof-old') FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.quadOut});
 		paused = true;
 
 		// 1 / 1000 chance for Gitaroo Man easter egg

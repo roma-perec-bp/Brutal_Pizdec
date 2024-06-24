@@ -84,24 +84,31 @@ function onStepHit()
     if curStep == 2971 then
         doTweenAlpha('Fucked','maniaPart', 0, 0.1, 'linear')
     end
+    if curStep == 2972 then
+        noteTweenX('Pizdec1', 0,110, 1, 'quartInOut');
+            noteTweenX('Pizdec2', 1, 220, 1, 'quartInOut');
+            noteTweenX('Pizdec3', 2, 330, 1, 'quartInOut');
+            noteTweenX('Pizdec4', 3,440, 1, 'quartInOut');
+            noteTweenAlpha("hwaw1", 4, 1,2, "quartInOut")
+            noteTweenAlpha("hwaw2", 5, 1, 2, "quartInOut")
+            noteTweenAlpha("hwaw3", 6, 1, 2, "quartInOut")
+            noteTweenAlpha("hwaw4", 7, 1, 2, "quartInOut")
+            noteTweenAngle("salto", 0, -360, 1, "quartInOut");
+            noteTweenAngle("saltyhyEbanyl", 1, -360, 1, "quartInOut");
+            noteTweenAngle("fuckingSalto", 2, -360, 1, "quartInOut");
+            noteTweenAngle("SaltoPizdec", 3, -360, 1, "quartInOut");
+      end
     if curStep == 3072 then
         setProperty('vin.visible', true)
     end
-  if curStep == 3184 then
-    noteTweenX('Pizdec1', 0,110, 1, 'quartInOut');
-		noteTweenX('Pizdec2', 1, 220, 1, 'quartInOut');
-		noteTweenX('Pizdec3', 2, 330, 1, 'quartInOut');
-		noteTweenX('Pizdec4', 3,440, 1, 'quartInOut');
-    noteTweenAlpha("hwaw1", 4, 1,2, "quartInOut")
-        noteTweenAlpha("hwaw2", 5, 1, 2, "quartInOut")
-        noteTweenAlpha("hwaw3", 6, 1, 2, "quartInOut")
-        noteTweenAlpha("hwaw4", 7, 1, 2, "quartInOut")
-        noteTweenAngle("salto", 0, -360, 1, "quartInOut");
-        noteTweenAngle("saltyhyEbanyl", 1, -360, 1, "quartInOut");
-        noteTweenAngle("fuckingSalto", 2, -360, 1, "quartInOut");
-        noteTweenAngle("SaltoPizdec", 3, -360, 1, "quartInOut");
-  end
     if curStep == 3584 then
+        setProperty('vin.visible', false)
+    end
+
+    if curStep == 3840 then
+        setProperty('vin.visible', true)
+    end
+    if curStep == 4096 then
         setProperty('vin.visible', false)
     end
 end

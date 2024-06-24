@@ -237,6 +237,15 @@ class Note extends FlxSprite
 					rgbShader.enabled = false;
 					noAnimation = true;
 					if(noteData == 3) offsetX = -20;
+
+				case 'Mania Note': //Я бы мог просто поменять текстуру обычных но блять идите нахуй нет это пиздец, да и нота будет необычной перед тем как перец начнет так что дадада
+				    reloadNote('noteSkins/NOTE_assets-mania');
+					noAnimation = true;
+					scale.x = 1;
+					scale.y = 1;
+					rgbShader.enabled = false;
+					offsetX = 32;
+					if(isSustainNote) offsetX = 28;
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);
 			if (hitsound != 'hitsound' && ClientPrefs.data.hitsoundVolume > 0) Paths.sound(hitsound); //precache new sound for being idiot-proof
@@ -297,7 +306,6 @@ class Note extends FlxSprite
 			copyAngle = false;
 
 			animation.play(colArray[noteData % colArray.length] + 'holdend');
-
 			updateHitbox();
 
 			offsetX -= width / 2;
@@ -308,7 +316,6 @@ class Note extends FlxSprite
 			if (prevNote.isSustainNote)
 			{
 				prevNote.animation.play(colArray[prevNote.noteData % colArray.length] + 'hold');
-
 				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.05;
 				if(createdFrom != null && createdFrom.songSpeed != null) prevNote.scale.y *= createdFrom.songSpeed;
 

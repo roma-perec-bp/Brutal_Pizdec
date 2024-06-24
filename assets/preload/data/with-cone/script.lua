@@ -46,7 +46,7 @@ function onCreatePost()
     addLuaSprite('fullscreen',true)
     setObjectCamera('fullscreen','other')
     setBlendMode('fullscreen','add')
-    setProperty('fullscreen.alpha',0)
+    setProperty('fullscreen.alpha',0.0001)
 
     makeAnimatedLuaSprite('hand', 'nelzya', 795, 300)
     addAnimationByPrefix('hand', 'raise', 'hand rise', 24, false)

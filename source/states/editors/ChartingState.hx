@@ -65,7 +65,8 @@ class ChartingState extends MusicBeatState
 		'Jap Note no anim',
 		'Jalapeno Note NEW',
 		'Jalapeno Note BOOM SOUND',
-		'rom'
+		'rom',
+		'Mania Note'
 	];
 	public var ignoreWarnings = false;
 	var curNoteTypes:Array<String> = [];
@@ -104,6 +105,7 @@ class ChartingState extends MusicBeatState
 		['Camera rotate off', ""],
 		['burn with cone', "only with cone"],
 		['vibe time', "only with cone"],
+		['fire boom', "only boom"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 	];
 
