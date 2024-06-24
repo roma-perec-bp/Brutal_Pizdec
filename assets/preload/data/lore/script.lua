@@ -1,7 +1,7 @@
 function onCreate()
     makeLuaSprite('blackFlash', nil, 0, 0)
     makeGraphic('blackFlash', 1280, 720, '000000')
-    setObjectCamera('blackFlash', 'hud')
+    setObjectCamera('blackFlash', 'camgame')
     addLuaSprite('blackFlash', true)
 end
 
