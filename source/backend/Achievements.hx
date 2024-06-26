@@ -3,9 +3,9 @@ package backend;
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [
 		// story mode
-		["Explodynamic!","Beat Story Mode.","story",false], // done
-		["Pizdec","Beat Story Mode with no Misses.","story_nomiss",false], // done
-		["Brutal Pizdec","Beat Story Mode with no Misses & no Deaths.","story_nomiss_nodeaths",false], // done, i think
+		["Explodynamic!","Beat Story Mode.","main",false], // done
+		["Pizdec","Beat Story Mode with no Misses.","main_nomiss",false], // done
+		["Brutal Pizdec","Beat Story Mode with no Misses & no Deaths.","main_nomiss_nodeaths",false], // done, i think
 		["Feeling jalapenos in my ass!!","Beat every Songs.","allweeks",false],
 		["Scorching Self-Immolation","Beat every Songs with no Misses & no Deaths.","allweeks1",false],
 		["Um excuse me what the actual fuck are you doing in my house???","All Songs. No Misses. No Deaths. All achievements.","allweeks2",false],

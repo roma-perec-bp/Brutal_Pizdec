@@ -2848,8 +2848,6 @@ class PlayState extends MusicBeatState
 		camZooming = false;
 		inCutscene = false;
 		updateTime = false;
-
-		deathCounter = 0;
 		seenCutscene = false;
 
 		#if ACHIEVEMENTS_ALLOWED
@@ -2860,7 +2858,9 @@ class PlayState extends MusicBeatState
 			if (isStoryMode)
 			{
 				var noMissWeek:String = WeekData.getWeekFileName() + '_nomiss';
-				var achieve:String = checkForAchievement([noMissWeek, 'cum', WeekData.getWeekFileName()]);
+				var noMissDeathsWeek:String = WeekData.getWeekFileName() + '_nomiss_nodeaths';
+				var achieve:String = checkForAchievement([WeekData.getWeekFileName(), noMissWeek, noMissDeathsWeek, 'cum']);
+				trace(WeekData.getWeekFileName());
 				if(achieve != null) {
 					startAchievement(achieve);
 					return false;
@@ -2875,6 +2875,8 @@ class PlayState extends MusicBeatState
 			}
 		}
 		#end
+
+		deathCounter = 0;
 
 		var ret:Dynamic = callOnScripts('onEndSong', null, true);
 		if(ret != FunkinLua.Function_Stop && !transitioning)
@@ -4050,28 +4052,38 @@ class PlayState extends MusicBeatState
 				var unlock:Bool = false;
 				if (achievementName == WeekData.getWeekFileName() + '_nomiss') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
-					if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+					trace("NoMiss");
+					if(isStoryMode && campaignMisses + songMisses < 1 && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+					{
 						unlock = true;
+						trace('NoMiss: ${unlock}');
+					}
 				}
-				else if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
+				if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
-					if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice
-						&& deathCounter == 0	
-					)
+					trace("NoMissNoDeaths");
+					if(isStoryMode && campaignMisses + songMisses < 1 && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice && deathCounter == 0)
+					{
 						unlock = true;
+						trace('NoMiss: ${unlock}');
+					}
 				}
-				else if (achievementName == songName.toLowerCase() + "_freeplay_nomiss")
+				if (achievementName == songName.toLowerCase() + "_freeplay_nomiss")
 				{
 					if(!isStoryMode && songMisses < 1 && !changedDifficulty && !usedPractice)
+					{
 						unlock = true;
+						trace('Freeplay NoMiss: ${unlock}');
+					}
 				}
 				else
 				{
+					var weekName:String = WeekData.getWeekFileName();
 					switch(achievementName)
 					{
 						case 'cum':
 							unlock = (ClientPrefs.data.arrowRGB == [[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
-						case WeekData.getWeekFileName():
+						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{
 								unlock = true;
