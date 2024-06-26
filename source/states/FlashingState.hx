@@ -26,6 +26,12 @@ class FlashingState extends MusicBeatState
 	var rippvzdich:FlxSprite;
 
 	public var gmanMoment:FlxSound;
+
+	var proceed:Float = 0;
+	var proceedMax:Float = 100;
+	var skiptext:FlxText;
+
+	var infoToggled:Bool = false;
 	override function create()
 	{
 		super.create();
@@ -72,6 +78,10 @@ class FlashingState extends MusicBeatState
 		rippvzdich.screenCenter();
 		rippvzdich.alpha = 0;
 		add(rippvzdich);
+		
+		skiptext = new FlxText(5, FlxG.height-28, FlxG.width, "Skipping...", 16);
+		skiptext.setFormat("vcr.ttf", 18, FlxColor.WHITE, LEFT);
+		add(skiptext);
 
 		gmanMoment = new FlxSound().loadEmbedded(Paths.sound('disclamer/flash-2'));
 		FlxG.sound.list.add(gmanMoment);
@@ -173,6 +183,7 @@ class FlashingState extends MusicBeatState
 				botPlay();
 			});
 		}
+		infoToggled = true;
 	}
 
 	override function update(elapsed:Float)
@@ -190,7 +201,7 @@ class FlashingState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 					ClientPrefs.data.flashing = true;
 					ClientPrefs.saveSettings();
-					startTimer.cancel();
+					if (startTimer != null) startTimer.cancel();
 					FlxFlicker.flicker(yesText, 1, 0.06, true, false, function(flick:FlxFlicker)
 					{
 						FlxTween.tween(flashDick, {alpha: 0}, 0.6);
@@ -214,7 +225,7 @@ class FlashingState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 					ClientPrefs.data.flashing = true;
 					ClientPrefs.saveSettings();
-					startTimer.cancel();
+					if (startTimer != null) startTimer.cancel();
 					FlxFlicker.flicker(noText, 1, 0.06, true, false, function(flick:FlxFlicker)
 					{
 						FlxTween.tween(flashDick, {alpha: 0}, 0.6);
@@ -226,6 +237,28 @@ class FlashingState extends MusicBeatState
 			} else {
 				noText.alpha = 1;
 			}
+		}
+		if(FlxG.keys.pressed.ESCAPE && canChoose == false) {
+			proceed = Math.min(proceed + elapsed*60, proceedMax); // aka 1
+			skiptext.alpha = proceed/100;
+			if (proceed == proceedMax)
+			{
+				if (infoToggled == false)
+				{
+					FlxG.sound.destroy();
+					canChoose = true;
+					FlxTween.tween(flashDick, {alpha: 1}, 1);
+					FlxTween.tween(noText, {alpha: 1}, 1);
+					FlxTween.tween(yesText, {alpha: 1}, 1);
+					warnText.visible = false;
+					disclaimer.visible = false;
+				} else {
+					goAwayBruh();
+				}
+			}
+		} else {
+			skiptext.alpha = 0;
+			proceed = 0;
 		}
 		super.update(elapsed);
 	}

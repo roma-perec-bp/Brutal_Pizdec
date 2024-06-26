@@ -39,6 +39,8 @@ class MainMenuState extends MusicBeatState
 	var origSaturTrophy:Float;
 	var shaderMonochrome:ColorSwap;
 
+	var bros:FlxSprite;
+
 	override function create()
 	{
 		#if MODS_ALLOWED
@@ -107,10 +109,12 @@ class MainMenuState extends MusicBeatState
 			menuItems.add(menuItem);
 		}
 
-		var bros:FlxSprite = new FlxSprite(-50, 270);
-		bros.frames = Paths.getSparrowAtlas('main_menu_chars/'+FlxG.random.int(0,4));
+		var randomNum = FlxG.random.int(0,4);
+		bros = new FlxSprite(-50, 270);
+		bros.frames = Paths.getSparrowAtlas('main_menu_chars/${randomNum}');
 		bros.animation.addByPrefix('idle', 'menu', 24);
 		bros.animation.play('idle');
+		bros.ID = randomNum;
 		bros.antialiasing = ClientPrefs.data.antialiasing;
 		bros.scale.set(1, 1);
 		add(bros);
@@ -153,10 +157,19 @@ class MainMenuState extends MusicBeatState
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
-	function giveAchievement() {
-		add(new AchievementPopup('friday_night_play', camAchievement));
+	function giveAchievement(name) {
+		add(new AchievementPopup(name, camAchievement));
 		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement "friday_night_play"');
+		trace('Giving achievement: ${name}');
+	}
+	function checkAchievement(achievementName) {
+		Achievements.loadAchievements();
+		var achieveID:Int = Achievements.getAchievementIndex(achievementName);
+		if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
+			Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+			giveAchievement(achievementName);
+			ClientPrefs.saveSettings();
+		}
 	}
 	#end
 
@@ -186,13 +199,11 @@ class MainMenuState extends MusicBeatState
 		#if ACHIEVEMENTS_ALLOWED
 		if(FlxG.keys.justPressed.ONE)
 		{
-			Achievements.loadAchievements();
-			var achieveID:Int = Achievements.getAchievementIndex('friday_night_play');
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
-				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-				giveAchievement();
-				ClientPrefs.saveSettings();
-			}
+			checkAchievement('friday_night_play');
+		}
+		if((FlxG.mouse.overlaps(bros)) && FlxG.mouse.justPressed && bros.ID == 4)
+		{
+			checkAchievement('menu0');
 		}
 		#end
 

@@ -2857,11 +2857,21 @@ class PlayState extends MusicBeatState
 			return false;
 		else
 		{
-			var noMissWeek:String = WeekData.getWeekFileName() + '_nomiss';
-			var achieve:String = checkForAchievement([noMissWeek, 'cum']);
-			if(achieve != null) {
-				startAchievement(achieve);
-				return false;
+			if (isStoryMode)
+			{
+				var noMissWeek:String = WeekData.getWeekFileName() + '_nomiss';
+				var achieve:String = checkForAchievement([noMissWeek, 'cum', WeekData.getWeekFileName()]);
+				if(achieve != null) {
+					startAchievement(achieve);
+					return false;
+				}
+			} else {
+				var noMissSong:String = songName.toLowerCase() + "_freeplay_nomiss";
+				var achieve:String = checkForAchievement([noMissSong, 'cum']);
+				if(achieve != null) {
+					startAchievement(achieve);
+					return false;
+				}
 			}
 		}
 		#end
@@ -4040,8 +4050,19 @@ class PlayState extends MusicBeatState
 				var unlock:Bool = false;
 				if (achievementName == WeekData.getWeekFileName() + '_nomiss') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
-					if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'HARD'
-						&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+					if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+						unlock = true;
+				}
+				else if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
+				{
+					if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice
+						&& deathCounter == 0	
+					)
+						unlock = true;
+				}
+				else if (achievementName == songName.toLowerCase() + "_freeplay_nomiss")
+				{
+					if(!isStoryMode && songMisses < 1 && !changedDifficulty && !usedPractice)
 						unlock = true;
 				}
 				else
@@ -4050,6 +4071,11 @@ class PlayState extends MusicBeatState
 					{
 						case 'cum':
 							unlock = (ClientPrefs.data.arrowRGB == [[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
+						case WeekData.getWeekFileName():
+							if (isStoryMode && storyPlaylist.length <= 1)
+							{
+								unlock = true;
+							}
 					}
 				}
 
