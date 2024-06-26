@@ -104,6 +104,8 @@ class Note extends FlxSprite
 
 	public var jap:Bool = false;
 
+	private var curSong:String = "";
+
 	public var hitHealth:Float = 0.023;
 	public var missHealth:Float = 0.0475;
 	public var rating:String = 'unknown';
@@ -183,11 +185,14 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-					rgbShader.r = 0xFF2D2D49;
-					rgbShader.g = 0xFFFFFFFF;
-					rgbShader.b = 0xFF000000;
-					noteSplashData.r = 0xFF2D2D49;
-					noteSplashData.g = 0xFFFFFFFF;
+					if(curSong == 'lore')
+					{
+						rgbShader.r = 0xFF2D2D49;
+						rgbShader.g = 0xFFFFFFFF;
+						rgbShader.b = 0xFF000000;
+						noteSplashData.r = 0xFF2D2D49;
+						noteSplashData.g = 0xFFFFFFFF;
+					}
 				case 'rom':
 					romNote = true;
 					rgbShader.r = 0xFF4CFF00;

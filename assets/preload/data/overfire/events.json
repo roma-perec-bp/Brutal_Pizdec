@@ -12,7 +12,7 @@
 				]
 			],
 			[
-				1250,
+				1333.33333333333,
 				[
 					[
 						"lyrics",
@@ -22,7 +22,17 @@
 				]
 			],
 			[
-				1750,
+				1666.66666666667,
+				[
+					[
+						"lyrics",
+						"Game",
+						"ff0000"
+					]
+				]
+			],
+			[
+				2000,
 				[
 					[
 						"lyrics",
@@ -32,7 +42,7 @@
 				]
 			],
 			[
-				2166.66666666667,
+				2333.33333333333,
 				[
 					[
 						"lyrics",
@@ -42,7 +52,7 @@
 				]
 			],
 			[
-				2416.66666666667,
+				2500,
 				[
 					[
 						"lyrics",
@@ -52,7 +62,7 @@
 				]
 			],
 			[
-				2750,
+				2833.33333333333,
 				[
 					[
 						"lyrics",
@@ -62,7 +72,7 @@
 				]
 			],
 			[
-				3166.66666666667,
+				3000,
 				[
 					[
 						"lyrics",
@@ -952,17 +962,7 @@
 				]
 			],
 			[
-				135250,
-				[
-					[
-						"lyrics",
-						"Hah.",
-						"ff0000"
-					]
-				]
-			],
-			[
-				135750,
+				136166.666666667,
 				[
 					[
 						"lyrics",
@@ -972,7 +972,7 @@
 				]
 			],
 			[
-				136000,
+				136416.666666667,
 				[
 					[
 						"lyrics",
@@ -982,31 +982,11 @@
 				]
 			],
 			[
-				136250,
+				136666.666666667,
 				[
 					[
 						"lyrics",
-						"You think",
-						"ff0000"
-					]
-				]
-			],
-			[
-				136583.333333333,
-				[
-					[
-						"lyrics",
-						"You think this",
-						"ff0000"
-					]
-				]
-			],
-			[
-				136833.333333333,
-				[
-					[
-						"lyrics",
-						"You think this is",
+						"You thinking",
 						"ff0000"
 					]
 				]
@@ -1016,7 +996,7 @@
 				[
 					[
 						"lyrics",
-						"You think this is over?",
+						"You thinking about",
 						"ff0000"
 					]
 				]
@@ -1026,7 +1006,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You thinking this is",
 						"ff0000"
 					]
 				]
@@ -1036,17 +1016,7 @@
 				[
 					[
 						"lyrics",
-						"You think",
-						"ff0000"
-					]
-				]
-			],
-			[
-				137833.333333333,
-				[
-					[
-						"lyrics",
-						"You think this",
+						"You thinking this is end?",
 						"ff0000"
 					]
 				]
@@ -1056,57 +1026,7 @@
 				[
 					[
 						"lyrics",
-						"You think this is",
-						"ff0000"
-					]
-				]
-			],
-			[
-				138166.666666667,
-				[
-					[
-						"lyrics",
-						"You think this is stupid",
-						"ff0000"
-					]
-				]
-			],
-			[
-				138333.333333333,
-				[
-					[
-						"lyrics",
-						"You think this is stupid",
-						"ff0000"
-					]
-				]
-			],
-			[
-				138416.666666667,
-				[
-					[
-						"lyrics",
-						"You think this is stupid",
-						"ff0000"
-					]
-				]
-			],
-			[
-				138750,
-				[
-					[
-						"lyrics",
-						"You think this is stupid",
-						"ff0000"
-					]
-				]
-			],
-			[
-				138916.666666667,
-				[
-					[
-						"lyrics",
-						"You think this is stupid mix",
+						"You thinking this is end? YEAH?",
 						"ff0000"
 					]
 				]
@@ -1116,47 +1036,57 @@
 				[
 					[
 						"lyrics",
-						"You think this is stupid mix o-",
+						"You",
 						"ff0000"
 					]
 				]
 			],
 			[
-				139416.666666667,
+				139333.333333333,
 				[
 					[
 						"lyrics",
-						"You think this is stupid mix OVER?",
+						"You think-",
 						"ff0000"
 					]
 				]
 			],
 			[
-				140166.666666667,
+				139500,
 				[
 					[
 						"lyrics",
-						"O",
+						"You thinking",
 						"ff0000"
 					]
 				]
 			],
 			[
-				140416.666666667,
+				139750,
 				[
 					[
 						"lyrics",
-						"O NO!",
+						"You thinking about",
 						"ff0000"
 					]
 				]
 			],
 			[
-				140500,
+				140083.333333333,
 				[
 					[
 						"lyrics",
-						"O NO!",
+						"You thinking about this",
+						"ff0000"
+					]
+				]
+			],
+			[
+				140333.333333333,
+				[
+					[
+						"lyrics",
+						"You thinking about this bull-",
 						"ff0000"
 					]
 				]
@@ -1166,27 +1096,7 @@
 				[
 					[
 						"lyrics",
-						"O NO!",
-						"ff0000"
-					]
-				]
-			],
-			[
-				140666.666666667,
-				[
-					[
-						"lyrics",
-						"O NO!",
-						"ff0000"
-					]
-				]
-			],
-			[
-				140750,
-				[
-					[
-						"lyrics",
-						"O NO!",
+						"You thinking about this bullshit",
 						"ff0000"
 					]
 				]
@@ -1196,7 +1106,7 @@
 				[
 					[
 						"lyrics",
-						"O NO!",
+						"You thinking about this bullshit o-",
 						"ff0000"
 					]
 				]
@@ -1206,37 +1116,37 @@
 				[
 					[
 						"lyrics",
-						"We",
+						"You thinking about this bullshit over-",
 						"ff0000"
 					]
 				]
 			],
 			[
-				141666.666666667,
+				141583.333333333,
 				[
 					[
 						"lyrics",
-						"We just",
+						"You thinking about this bullshit overhead",
 						"ff0000"
 					]
 				]
 			],
 			[
-				142000,
+				141833.333333333,
 				[
 					[
 						"lyrics",
-						"We just started!",
+						"You thinking about this bullshit overhead mix",
 						"ff0000"
 					]
 				]
 			],
 			[
-				142333.333333333,
+				142083.333333333,
 				[
 					[
 						"lyrics",
-						"We just started!",
+						"You thinking about this bullshit overhead mix end?",
 						"ff0000"
 					]
 				]
@@ -1246,57 +1156,17 @@
 				[
 					[
 						"lyrics",
-						"We just started!",
+						"You thinking about this bullshit overhead mix end? YES?",
 						"ff0000"
 					]
 				]
 			],
 			[
-				142833.333333333,
+				143750,
 				[
 					[
 						"lyrics",
-						"We just started!",
-						"ff0000"
-					]
-				]
-			],
-			[
-				143000,
-				[
-					[
-						"lyrics",
-						"We just started!",
-						"ff0000"
-					]
-				]
-			],
-			[
-				143666.666666667,
-				[
-					[
-						"lyrics",
-						"he",
-						"ff0000"
-					]
-				]
-			],
-			[
-				144000,
-				[
-					[
-						"lyrics",
-						"HA HA",
-						"ff0000"
-					]
-				]
-			],
-			[
-				144416.666666667,
-				[
-					[
-						"lyrics",
-						"HA HA HA",
+						"heh",
 						"ff0000"
 					]
 				]
@@ -1306,7 +1176,7 @@
 				[
 					[
 						"lyrics",
-						"HA HA HA.",
+						"he",
 						"ff0000"
 					]
 				]
@@ -1316,17 +1186,2077 @@
 				[
 					[
 						"lyrics",
-						"HA HA HA..",
+						"he he",
 						"ff0000"
 					]
 				]
 			],
 			[
-				144916.666666667,
+				145000,
 				[
 					[
 						"lyrics",
-						"HA HA HA...",
+						"he he heh",
+						"ff0000"
+					]
+				]
+			],
+			[
+				145833.333333333,
+				[
+					[
+						"lyrics",
+						"Heh",
+						"ff0000"
+					]
+				]
+			],
+			[
+				146166.666666667,
+				[
+					[
+						"lyrics",
+						"Heh he",
+						"ff0000"
+					]
+				]
+			],
+			[
+				146416.666666667,
+				[
+					[
+						"lyrics",
+						"Heh he he",
+						"ff0000"
+					]
+				]
+			],
+			[
+				146666.666666667,
+				[
+					[
+						"lyrics",
+						"Heh he he he",
+						"ff0000"
+					]
+				]
+			],
+			[
+				146916.666666667,
+				[
+					[
+						"lyrics",
+						"Heh he he he heh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				147500,
+				[
+					[
+						"lyrics",
+						"HAH",
+						"ff0000"
+					]
+				]
+			],
+			[
+				147833.333333333,
+				[
+					[
+						"lyrics",
+						"HA",
+						"ff0000"
+					]
+				]
+			],
+			[
+				148083.333333333,
+				[
+					[
+						"lyrics",
+						"HA HA",
+						"ff0000"
+					]
+				]
+			],
+			[
+				148416.666666667,
+				[
+					[
+						"lyrics",
+						"HAAAAAAAAAAAH...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				150000,
+				[
+					[
+						"lyrics",
+						"Not-",
+						"ff0000"
+					]
+				]
+			],
+			[
+				150333.333333333,
+				[
+					[
+						"lyrics",
+						"Nothing",
+						"ff0000"
+					]
+				]
+			],
+			[
+				150666.666666667,
+				[
+					[
+						"lyrics",
+						"Nothing like",
+						"ff0000"
+					]
+				]
+			],
+			[
+				150833.333333333,
+				[
+					[
+						"lyrics",
+						"Nothing like",
+						"ff0000"
+					]
+				]
+			],
+			[
+				151166.666666667,
+				[
+					[
+						"lyrics",
+						"Nothing like thah",
+						"ff0000"
+					]
+				]
+			],
+			[
+				151416.666666667,
+				[
+					[
+						"lyrics",
+						"Nothing like thah",
+						"ff0000"
+					]
+				]
+			],
+			[
+				152000,
+				[
+					[
+						"lyrics",
+						"You've",
+						"a5c09b"
+					]
+				]
+			],
+			[
+				152333.333333333,
+				[
+					[
+						"lyrics",
+						"You've already",
+						"a5c09b"
+					]
+				]
+			],
+			[
+				152583.333333333,
+				[
+					[
+						"lyrics",
+						"You've already forgot",
+						"a5c09b"
+					]
+				]
+			],
+			[
+				152833.333333333,
+				[
+					[
+						"lyrics",
+						"You've already forgor",
+						"a5c09b"
+					]
+				]
+			],
+			[
+				153083.333333333,
+				[
+					[
+						"lyrics",
+						"You've already forgor me",
+						"a5c09b"
+					]
+				]
+			],
+			[
+				153416.666666667,
+				[
+					[
+						"lyrics",
+						"You've already forgor me, yea?",
+						"a5c09b"
+					]
+				]
+			],
+			[
+				170041.666666667,
+				[
+					[
+						"lyrics",
+						"You",
+						"ff007e"
+					]
+				]
+			],
+			[
+				170208.333333333,
+				[
+					[
+						"lyrics",
+						"Cocksuck-",
+						"ff007e"
+					]
+				]
+			],
+			[
+				170361.111111111,
+				[
+					[
+						"lyrics",
+						"Cocksucker",
+						"ff007e"
+					]
+				]
+			],
+			[
+				197333.333333334,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				197500,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				197666.666666667,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				197833.333333334,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				198000,
+				[
+					[
+						"lyrics",
+						"You shall",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				198333.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				198666.666666667,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				198833.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				199000,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				199166.666666667,
+				[
+					[
+						"lyrics",
+						"Y0u sh4ll n0t p422",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				199333.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				199500,
+				[
+					[
+						"lyrics",
+						"Y0u sh4ll n0t p422",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				199666.666666667,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				200000,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				200500,
+				[
+					[
+						"lyrics",
+						"Y0u",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				200583.333333334,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				200666.666666667,
+				[
+					[
+						"lyrics",
+						"You suck",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				200916.666666667,
+				[
+					[
+						"lyrics",
+						"You suck my",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				201166.666666667,
+				[
+					[
+						"lyrics",
+						"You suck my",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				201333.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				201500,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				201666.666666667,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				201833.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				202000,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				202666.666666667,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				203000,
+				[
+					[
+						"lyrics",
+						"You still",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				203333.333333334,
+				[
+					[
+						"lyrics",
+						"You still try-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				203583.333333334,
+				[
+					[
+						"lyrics",
+						"You still trying",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				204000,
+				[
+					[
+						"lyrics",
+						"But",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				204250,
+				[
+					[
+						"lyrics",
+						"But you",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				204416.666666667,
+				[
+					[
+						"lyrics",
+						"But you al-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				204666.666666667,
+				[
+					[
+						"lyrics",
+						"But you always",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				205000,
+				[
+					[
+						"lyrics",
+						"But you always su-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				205333.333333334,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				205500,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				205666.666666667,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				205833.333333334,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				206000,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				206166.666666667,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				206666.666666667,
+				[
+					[
+						"lyrics",
+						"So",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				207000,
+				[
+					[
+						"lyrics",
+						"So why",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				207250,
+				[
+					[
+						"lyrics",
+						"So why you",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				207500,
+				[
+					[
+						"lyrics",
+						"So why you still",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				207666.666666667,
+				[
+					[
+						"lyrics",
+						"So why you still try-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				207833.333333334,
+				[
+					[
+						"lyrics",
+						"So why you still trying",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				208000,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				208166.666666667,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				208333.333333334,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				208500,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				208666.666666667,
+				[
+					[
+						"lyrics",
+						"You shall",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				209000,
+				[
+					[
+						"lyrics",
+						"You shall not",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				209333.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				209500,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				209666.666666667,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				209833.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				210000,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				210166.666666667,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				210333.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				210666.666666667,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				211333.333333334,
+				[
+					[
+						"lyrics",
+						"You suck",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				211583.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				212000,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				212166.666666667,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				212333.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				212500,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				212666.666666667,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				212833.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				213333.333333334,
+				[
+					[
+						"lyrics",
+						"You",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				213666.666666667,
+				[
+					[
+						"lyrics",
+						"You still",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				214000,
+				[
+					[
+						"lyrics",
+						"You still try-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				214250,
+				[
+					[
+						"lyrics",
+						"You still trying",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				214666.666666667,
+				[
+					[
+						"lyrics",
+						"But",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				214916.666666667,
+				[
+					[
+						"lyrics",
+						"But you",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				214916.666666667,
+				[
+					[
+						"lyrics",
+						"But you",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				215083.333333334,
+				[
+					[
+						"lyrics",
+						"But you al-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				215083.333333334,
+				[
+					[
+						"lyrics",
+						"But you al-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				215333.333333334,
+				[
+					[
+						"lyrics",
+						"But you always",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				215333.333333334,
+				[
+					[
+						"lyrics",
+						"But you always",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				215666.666666667,
+				[
+					[
+						"lyrics",
+						"But you always su-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				215666.666666667,
+				[
+					[
+						"lyrics",
+						"But you always su-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				216000,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				216166.666666667,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				216333.333333334,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				216500,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				216666.666666667,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				216833.333333334,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				217000,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				217333.333333334,
+				[
+					[
+						"lyrics",
+						"So",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				217666.666666667,
+				[
+					[
+						"lyrics",
+						"So why",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				217916.666666667,
+				[
+					[
+						"lyrics",
+						"So why you",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				218166.666666667,
+				[
+					[
+						"lyrics",
+						"So why you still",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				218333.333333334,
+				[
+					[
+						"lyrics",
+						"So why you still try-",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				218500,
+				[
+					[
+						"lyrics",
+						"So why you still trying",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				218666.666666667,
+				[
+					[
+						"lyrics",
+						"You",
+						"ff0000"
+					]
+				]
+			],
+			[
+				218833.333333334,
+				[
+					[
+						"lyrics",
+						"You",
+						"ff0000"
+					]
+				]
+			],
+			[
+				219000,
+				[
+					[
+						"lyrics",
+						"You",
+						"ff0000"
+					]
+				]
+			],
+			[
+				219166.666666667,
+				[
+					[
+						"lyrics",
+						"You",
+						"ff0000"
+					]
+				]
+			],
+			[
+				219333.333333334,
+				[
+					[
+						"lyrics",
+						"You shall",
+						"ff0000"
+					]
+				]
+			],
+			[
+				219666.666666667,
+				[
+					[
+						"lyrics",
+						"You shall not",
+						"ff0000"
+					]
+				]
+			],
+			[
+				220000,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				220166.666666667,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				220333.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				220500,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				220666.666666667,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				220833.333333334,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				221000,
+				[
+					[
+						"lyrics",
+						"You shall not pass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				221333.333333334,
+				[
+					[
+						"lyrics",
+						"You",
+						"ff0000"
+					]
+				]
+			],
+			[
+				222000,
+				[
+					[
+						"lyrics",
+						"You suck",
+						"ff0000"
+					]
+				]
+			],
+			[
+				222250,
+				[
+					[
+						"lyrics",
+						"You suck my",
+						"ff0000"
+					]
+				]
+			],
+			[
+				222666.666666667,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				222833.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				223000,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				223166.666666667,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				223333.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				223500,
+				[
+					[
+						"lyrics",
+						"You suck my ass",
+						"ff0000"
+					]
+				]
+			],
+			[
+				224000,
+				[
+					[
+						"lyrics",
+						"You",
+						"ff0000"
+					]
+				]
+			],
+			[
+				224333.333333334,
+				[
+					[
+						"lyrics",
+						"You still",
+						"ff0000"
+					]
+				]
+			],
+			[
+				224666.666666667,
+				[
+					[
+						"lyrics",
+						"You still try-",
+						"ff0000"
+					]
+				]
+			],
+			[
+				224916.666666667,
+				[
+					[
+						"lyrics",
+						"You still trying",
+						"ff0000"
+					]
+				]
+			],
+			[
+				225333.333333334,
+				[
+					[
+						"lyrics",
+						"But",
+						"ff0000"
+					]
+				]
+			],
+			[
+				225583.333333334,
+				[
+					[
+						"lyrics",
+						"But you",
+						"ff0000"
+					]
+				]
+			],
+			[
+				225750,
+				[
+					[
+						"lyrics",
+						"But you al-",
+						"ff0000"
+					]
+				]
+			],
+			[
+				226000,
+				[
+					[
+						"lyrics",
+						"But you always",
+						"ff0000"
+					]
+				]
+			],
+			[
+				226333.333333334,
+				[
+					[
+						"lyrics",
+						"But you always su-",
+						"ff0000"
+					]
+				]
+			],
+			[
+				226666.666666667,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"ff0000"
+					]
+				]
+			],
+			[
+				226833.333333334,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"ff0000"
+					]
+				]
+			],
+			[
+				227000.000000001,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"ff0000"
+					]
+				]
+			],
+			[
+				227166.666666667,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"ff0000"
+					]
+				]
+			],
+			[
+				227333.333333334,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"ff0000"
+					]
+				]
+			],
+			[
+				227500.000000001,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"ff0000"
+					]
+				]
+			],
+			[
+				227666.666666667,
+				[
+					[
+						"lyrics",
+						"But you always sucking",
+						"ff0000"
+					]
+				]
+			],
+			[
+				228000.000000001,
+				[
+					[
+						"lyrics",
+						"So",
+						"ff0000"
+					]
+				]
+			],
+			[
+				228333.333333334,
+				[
+					[
+						"lyrics",
+						"So why",
+						"ff0000"
+					]
+				]
+			],
+			[
+				228583.333333334,
+				[
+					[
+						"lyrics",
+						"So why you",
+						"ff0000"
+					]
+				]
+			],
+			[
+				228833.333333334,
+				[
+					[
+						"lyrics",
+						"So why you still",
+						"ff0000"
+					]
+				]
+			],
+			[
+				229000,
+				[
+					[
+						"lyrics",
+						"So why you still try-",
+						"ff0000"
+					]
+				]
+			],
+			[
+				229166.666666667,
+				[
+					[
+						"lyrics",
+						"So why you still trying",
+						"ff0000"
+					]
+				]
+			],
+			[
+				239666.666666667,
+				[
+					[
+						"lyrics",
+						"FUCK-",
+						"ff0000"
+					]
+				]
+			],
+			[
+				239833.333333334,
+				[
+					[
+						"lyrics",
+						"FUCKED",
+						"ff0000"
+					]
+				]
+			],
+			[
+				240000.000000001,
+				[
+					[
+						"lyrics",
+						"FUCKED UP",
+						"ff0000"
+					]
+				]
+			],
+			[
+				242333.333333334,
+				[
+					[
+						"lyrics",
+						"This",
+						"ff007e"
+					]
+				]
+			],
+			[
+				242500.000000001,
+				[
+					[
+						"lyrics",
+						"This is",
+						"ff007e"
+					]
+				]
+			],
+			[
+				242666.666666667,
+				[
+					[
+						"lyrics",
+						"This is a",
+						"ff007e"
+					]
+				]
+			],
+			[
+				242916.666666667,
+				[
+					[
+						"lyrics",
+						"This is a long",
+						"ff007e"
+					]
+				]
+			],
+			[
+				243083.333333334,
+				[
+					[
+						"lyrics",
+						"This is a long-awai",
+						"ff007e"
+					]
+				]
+			],
+			[
+				243250.000000001,
+				[
+					[
+						"lyrics",
+						"This is a long-awai-",
+						"ff007e"
+					]
+				]
+			],
+			[
+				243416.666666667,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited",
+						"ff007e"
+					]
+				]
+			],
+			[
+				243583.333333334,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole",
+						"ff007e"
+					]
+				]
+			],
+			[
+				243750.000000001,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole",
+						"ff007e"
+					]
+				]
+			],
+			[
+				244000.000000001,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole sing-",
+						"ff007e"
+					]
+				]
+			],
+			[
+				244166.666666667,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single",
+						"ff007e"
+					]
+				]
+			],
+			[
+				244333.333333334,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person",
+						"ff007e"
+					]
+				]
+			],
+			[
+				244541.666666667,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person",
+						"ff007e"
+					]
+				]
+			],
+			[
+				244708.333333334,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person",
+						"ff007e"
+					]
+				]
+			],
+			[
+				244916.666666667,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person",
+						"ff007e"
+					]
+				]
+			],
+			[
+				245083.333333334,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person con-",
+						"ff007e"
+					]
+				]
+			],
+			[
+				245333.333333334,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person conti-",
+						"ff007e"
+					]
+				]
+			],
+			[
+				245666.666666667,
+				[
+					[
+						"lyrics",
+						"FUCK-",
+						"ff0000"
+					]
+				]
+			],
+			[
+				246083.333333334,
+				[
+					[
+						"lyrics",
+						"FUCKED",
+						"ff0000"
+					]
+				]
+			],
+			[
+				246416.666666667,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person continuation second",
+						"ff007e"
+					]
+				]
+			],
+			[
+				246750.000000001,
+				[
+					[
+						"lyrics",
+						"This is a long-awaited whole single person continuation second part",
+						"ff007e"
+					]
+				]
+			],
+			[
+				246916.666666667,
+				[
+					[
+						"lyrics",
+						"FUCK",
+						"ff0000"
+					]
+				]
+			],
+			[
+				247250.000000001,
+				[
+					[
+						"lyrics",
+						"FUCK",
+						"ff0000"
+					]
+				]
+			],
+			[
+				247416.666666667,
+				[
+					[
+						"lyrics",
+						"FUCK YOU",
+						"ff0000"
+					]
+				]
+			],
+			[
+				247833.333333334,
+				[
+					[
+						"lyrics",
+						"FUCK YOU",
+						"ff0000"
+					]
+				]
+			],
+			[
+				297333.333333334,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				318666.666666667,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				318750,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				318833.333333333,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				318916.666666667,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319000,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319083.333333333,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319166.666666667,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319250,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319333.333333333,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319416.666666667,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319500,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319583.333333333,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319666.666666667,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319750,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319833.333333333,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
+						"ff0000"
+					]
+				]
+			],
+			[
+				319916.666666667,
+				[
+					[
+						"lyrics",
+						"Raaaahhhh...",
 						"ff0000"
 					]
 				]
