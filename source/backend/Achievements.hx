@@ -2,30 +2,33 @@ package backend;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [
-		["Explodynamic!","Beat Story Mode.","story0",false],
-		["Pizdec","Beat Story Mode with no Misses.","story1",false],
-		["Brutal Pizdec","Beat Story Mode with no Misses & no Deaths.","story2",false],
-		["Feeling jalapenos in my ass!!","Beat every Songs.","allweeks0",false],
+		// story mode
+		["Explodynamic!","Beat Story Mode.","main",false], // done
+		["Pizdec","Beat Story Mode with no Misses.","main_nomiss",false], // done
+		["Brutal Pizdec","Beat Story Mode with no Misses & no Deaths.","main_nomiss_nodeaths",false], // done, i think
+		["Feeling jalapenos in my ass!!","Beat every Songs.","allweeks",false],
 		["Scorching Self-Immolation","Beat every Songs with no Misses & no Deaths.","allweeks1",false],
 		["Um excuse me what the actual fuck are you doing in my house???","All Songs. No Misses. No Deaths. All achievements.","allweeks2",false],
+		// freeplay no miss
+		["Daily Anecdote!!",'Beat \"Anekdot\" song with no Misses.','anekdot_freeplay_nomiss',false], // done
+		["DIMA KUPLINOV",'Beat \"Klork\" song with no Misses.','klork_freeplay_nomiss',false], // done
+		["D E A D",'Beat \"Monochrome\" song with no Misses.','monochrome_freeplay_nomiss',false], // done
+		["I have a GAME theory!",'Beat \"Lore\" song with no Misses.','lore_freeplay_nomiss',false], // done
+		["SEXY",'Beat \"S6x-Boom\" song with no Misses.','s6x-boom_freeplay_nomiss',false], // done
+		["Fully smoked!!",'Beat \"lamar tut voobshe ne nujen\" song with no Misses.','lamar-tut-voobshe-ne-nujen_freeplay_nomiss',false], // idk? is it done?
+		// misc
 		["Life Anecdote",'Die on \"Anekdot\" song.','anekdote0',false],
-		["Daily Anecdote!!",'Beat \"Anekdot\" song with no Misses.','anekdote1',false],
-		["DIMA KUPLINOV",'Beat \"Klork\" song with no Misses.','klork0',false],
-		["RANDOM SHORT IN UNDERWEARS????",'Beat \"T-Short\" song with no Misses.','tshort0',false],
-		["D E A D",'Beat \"Monochrome\" song with no Misses.','monochrome0',false],
-		["Typical 17bucks",'Beat \"64rubl\" song with no Misses.','64rubl0',false],
-		["I have a GAME theory!",'Beat \"Lore\" song with no Misses.','lore0',false],
-		["SEXY",'Beat \"S6x-Boom\" song with no Misses.','sxbmb0',false],
-		["Fully smoked!!",'Beat \"lamar tut voobshe ne nujen\" song with no Misses.','lamar',false],
-		["Oh, China, what are you doing here?",'Press on JinchengZhang in Main Menu.','menu0',true],
+		["Oh, China, what are you doing here?",'Press on JinchengZhang in Main Menu.','menu0',true], // done
 		["Skill Issue",'Die 10 times in any song.','skill0',true,10],
 		["KA-BOOM",'Hit the Jalapeno Note 10 times','kaboom',true,10],
 		["KA-SEX",'Hit the Jalapeno Note 69 times','kaboom',true,69],
 		["Da old days...",'Beat Every Old Songs.','oldweek0',false],
-		["Cum","Play any song with only white color on notes RGB option",'cum',false],
+		["Cum","Play any song with only white color on notes RGB option",'cum',false], // done already
 		["Cursed Omlet da fucking shit",'Press 7 on "Lore" song.','cursed0',true],
 		["Random Sing",'Press 7 on "T-Short" song.','tshort0',true],
-		["FNAF Jumpscare",'Die on "Monochrome" song.','fnaf0',false]
+		["FNAF Jumpscare",'Die on "Monochrome" song.','fnaf0',false],
+		// that one
+		["Freaky on a Friday Night","Play on a Friday... Night.",'friday_night_play',false] // done
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 	public static var map_maxcurVars:Map<String, Int> = new Map<String, Int>();

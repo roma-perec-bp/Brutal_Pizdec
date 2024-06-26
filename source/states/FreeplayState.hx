@@ -73,6 +73,7 @@ class FreeplayState extends MusicBeatState
 	];
 
 	var oldColors:Array<Int> = [
+		0xff4d250e,
 		0xffff0000,
 		0xff642800,
 		0xff61de35
@@ -101,7 +102,7 @@ class FreeplayState extends MusicBeatState
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex-pixel', 'jamar-pixel'], ['bbg', 'lamar']);
 			case 3:
-				addWeek(['BOOM Old', 'Overfire Old', 'Klork Old'], 1, oldColors, ['jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel'], ['jap-old', 'jap2-old', 'lork']);
+				addWeek(['With Cone OLD','BOOM OLD', 'Overfire OLD', 'Klork OLD'], 1, oldColors, ['jap-old-pixel', 'jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel'], ['jap-old', 'jap-old', 'jap2-old', 'lork']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
