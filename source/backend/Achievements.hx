@@ -17,7 +17,7 @@ class Achievements {
 		["SEXY",'Beat \"S6x-Boom\" song with no Misses.','s6x-boom_freeplay_nomiss',false], // done
 		["Fully smoked!!",'Beat \"lamar tut voobshe ne nujen\" song with no Misses.','lamar-tut-voobshe-ne-nujen_freeplay_nomiss',false], // idk? is it done?
 		// misc
-		["Life Anecdote",'Die on \"Anekdot\" song.','anekdot_death',false], // done
+		["Anekdot is for real",'Die on \"Anekdot\" song.','anekdot_death',false], // done
 		["Oh, China, what are you doing here?",'Press on JinchengZhang in Main Menu.','menu0',true], // done
 		["Skill Issue",'Die 10 times in any song.','skill0',true,10],
 		["KA-BOOM",'Hit the Jalapeno Note 10 times','kaboom',true,10],
