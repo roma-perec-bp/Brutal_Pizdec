@@ -10,6 +10,9 @@ import flixel.math.FlxPoint;
 import states.StoryMenuState;
 import states.FreeplayState;
 
+import backend.Achievements;
+import objects.AchievementPopup;
+
 class GameOverSubstate extends MusicBeatSubstate
 {
 	public var boyfriend:Character;
@@ -23,6 +26,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	public static var deathSoundName:String = 'fnf_loss_sfx';
 	public static var loopSoundName:String = 'gameOver';
 	public static var endSoundName:String = 'gameOverEnd';
+
+	private var camAchievement:FlxCamera;
 
 	public static var instance:GameOverSubstate;
 
@@ -73,10 +78,32 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollow.setPosition(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
 		FlxG.camera.focusOn(new FlxPoint(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2)));
 		add(camFollow);
+
+		camAchievement = new FlxCamera();
+		camAchievement.bgColor.alpha = 0;
+		FlxG.cameras.add(camAchievement, false);
 	}
 
 	public var startedDeath:Bool = false;
 	var isFollowingAlready:Bool = false;
+
+	#if ACHIEVEMENTS_ALLOWED
+	function giveAchievement(name) {
+		add(new AchievementPopup(name, camAchievement));
+		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		trace('Giving achievement: ${name}');
+	}
+	function checkAchievement(achievementName) {
+		Achievements.loadAchievements();
+		var achieveID:Int = Achievements.getAchievementIndex(achievementName);
+		if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
+			Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+			giveAchievement(achievementName);
+			ClientPrefs.saveSettings();
+		}
+	}
+	#end
+
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
@@ -141,7 +168,11 @@ class GameOverSubstate extends MusicBeatSubstate
 	var isEnding:Bool = false;
 
 	function coolStartDeath(?volume:Float = 1):Void
-	{
+	{		
+		#if ACHIEVEMENTS_ALLOWED
+			if(PlayState.songName.toLowerCase() == "anekdot")
+				checkAchievement('anekdot_death');
+		#end
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
 	}
 

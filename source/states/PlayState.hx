@@ -280,7 +280,7 @@ class PlayState extends MusicBeatState
 	private var keysArray:Array<String>;
 
 	public var precacheList:Map<String, String> = new Map<String, String>();
-	public var songName:String;
+	public static var songName:String;
 
 	// Callbacks for stages
 	public var startCallback:Void->Void = null;
@@ -2085,7 +2085,6 @@ class PlayState extends MusicBeatState
 			checkEventNote();
 		}
 
-		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
 				KillNotes();
@@ -2096,7 +2095,6 @@ class PlayState extends MusicBeatState
 				clearNotesBefore(Conductor.songPosition);
 			}
 		}
-		#end
 
 		setOnScripts('cameraX', camFollow.x);
 		setOnScripts('cameraY', camFollow.y);
@@ -2198,7 +2196,8 @@ class PlayState extends MusicBeatState
 				for (timer in modchartTimers) {
 					timer.active = true;
 				}
-				#end
+				#end		
+
 				if(curStage == 'void')
 				{
 					FlxTween.cancelTweensOf(dad);
