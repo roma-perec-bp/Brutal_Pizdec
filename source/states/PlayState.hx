@@ -3091,7 +3091,7 @@ class PlayState extends MusicBeatState
 
 	private function cacheMedals()
 	{
-		for (i in 0...6)
+		for (i in 1...6)
 			Paths.image('medals/medal_' + i);
 	}
 
