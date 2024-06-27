@@ -183,7 +183,7 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-					if(PlayState.instance.curSong == 'lore')
+					if(PlayState.SONG.song == 'lore')
 					{
 						rgbShader.r = 0xFF2D2D49;
 						rgbShader.g = 0xFFFFFFFF;
