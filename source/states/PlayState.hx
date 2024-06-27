@@ -1914,7 +1914,25 @@ class PlayState extends MusicBeatState
 		}
 
 		if (controls.justPressed('debug_1') && !endingSong && !inCutscene)
-			openChartEditor();
+		{
+			if(curSong == "lore" || curSong == "t-short")
+			{
+				#if ACHIEVEMENTS_ALLOWED
+				Achievements.loadAchievements();
+				var achieveID:Int = Achievements.getAchievementIndex(curSong);
+				if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
+					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
+					achievementObj.onFinish = openChartEditor;
+					add(achievementObj);
+					ClientPrefs.saveSettings();
+				}
+				#end
+			} else {
+				openChartEditor();
+			}
+		}
 
 		if(dropTime <= 0)
 		{
@@ -3559,6 +3577,22 @@ class PlayState extends MusicBeatState
 							healthDrop += 0.00050;
 							iconP1.scale.set(1, 1);
 							iconP1.changeIcon('hwaw-fire');
+
+						// checking achievement
+						Achievements.loadAchievements();
+						var kaboom:Int = Achievements.getAchievementCurNum("kaboom");							
+						if (kaboom == Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]-1) {
+							#if ACHIEVEMENTS_ALLOWED
+							var achieveID:Int = Achievements.getAchievementIndex('kaboom');
+							if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
+								Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+								startAchievement('kaboom');
+								ClientPrefs.saveSettings();
+							}
+							#end
+						} else {
+							Achievements.setAchievementCurNum("kaboom", kaboom + 1);
+						}
 					}
 				}
 
