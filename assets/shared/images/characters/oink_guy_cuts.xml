@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="oink_guy_cuts.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="scary0000" x="10" y="10" width="441" height="901" frameX="-13" frameY="-24" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0001" x="461" y="10" width="441" height="900" frameX="0" frameY="-50" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0002" x="461" y="10" width="441" height="900" frameX="0" frameY="-50" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0003" x="912" y="10" width="441" height="900" frameX="0" frameY="-66" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0004" x="912" y="10" width="441" height="900" frameX="0" frameY="-66" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0005" x="1363" y="10" width="441" height="901" frameX="-2" frameY="-9" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0006" x="1363" y="10" width="441" height="901" frameX="-2" frameY="-9" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0007" x="1814" y="10" width="422" height="911" frameX="-11" frameY="0" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0008" x="1814" y="10" width="422" height="911" frameX="-11" frameY="0" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0009" x="1814" y="10" width="422" height="911" frameX="-11" frameY="0" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0010" x="1814" y="10" width="422" height="911" frameX="-11" frameY="0" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0011" x="1814" y="10" width="422" height="911" frameX="-11" frameY="0" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0012" x="1814" y="10" width="422" height="911" frameX="-11" frameY="0" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0013" x="1814" y="10" width="422" height="911" frameX="-11" frameY="0" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0014" x="2246" y="10" width="441" height="872" frameX="-2" frameY="-26" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0015" x="2246" y="10" width="441" height="872" frameX="-2" frameY="-26" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0016" x="10" y="931" width="441" height="884" frameX="-2" frameY="-16" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0017" x="10" y="931" width="441" height="884" frameX="-2" frameY="-16" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0018" x="461" y="931" width="441" height="901" frameX="-2" frameY="-1" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="scary0019" x="461" y="931" width="441" height="901" frameX="-2" frameY="-1" frameWidth="454" frameHeight="966"/>
+	<SubTexture name="shot0000" x="912" y="931" width="800" height="778" frameX="0" frameY="0" frameWidth="855" frameHeight="778"/>
+	<SubTexture name="shot0001" x="1722" y="931" width="800" height="778" frameX="-55" frameY="0" frameWidth="855" frameHeight="778"/>
+</TextureAtlas>
