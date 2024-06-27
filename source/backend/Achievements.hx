@@ -19,14 +19,14 @@ class Achievements {
 		// misc
 		["Anekdot is for real",'Die on \"Anekdot\" song.','anekdot_death',false], // done
 		["Oh, China, what are you doing here?",'Press on JinchengZhang in Main Menu.','menu0',true], // done
-		["Skill Issue",'Die 10 times in any song.','skill0',true,10],
-		["KA-BOOM",'Hit the Jalapeno Note 10 times','kaboom',true,10],
-		["KA-SEX",'Hit the Jalapeno Note 69 times','kaboom',true,69],
+		["Skill Issue",'Die 10 times in any song.','skill',true,10], // done,
+		["KA-BOOM",'Hit the Jalapeno Note 10 times','kaboom1',true,3],
+		["KA-SEX",'Hit the Jalapeno Note 69 times','kaboom2',true,5],
 		["Da old days...",'Beat Every Old Songs.','oldweek0',false],
 		["Cum","Play any song with only white color on notes RGB option",'cum',false], // done already
 		["Cursed Omlet da fucking shit",'Press 7 on "Lore" song.','cursed0',true],
 		["Random Sing",'Press 7 on "T-Short" song.','tshort0',true],
-		["FNAF Jumpscare",'Die on "Monochrome" song.','fnaf0',false],
+		["FNAF Jumpscare",'Die on "Monochrome" song.','fnaf',false], // done
 		// that one
 		["Freaky on a Friday Night","Play on a Friday... Night.",'friday_night_play',false] // done
 	];

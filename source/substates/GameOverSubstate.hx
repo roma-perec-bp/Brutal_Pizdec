@@ -168,12 +168,19 @@ class GameOverSubstate extends MusicBeatSubstate
 	var isEnding:Bool = false;
 
 	function coolStartDeath(?volume:Float = 1):Void
-	{		
-		#if ACHIEVEMENTS_ALLOWED
-			if(PlayState.songName.toLowerCase() == "anekdot")
-				checkAchievement('anekdot_death');
-		#end
+	{
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
+		var achievementLists = [];
+		// songs
+		if(PlayState.songName.toLowerCase() == "anekdot")
+			checkAchievement("anekdot_death");
+		// deaths
+		Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
+		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
+			checkAchievement("skill");
+		}
+		ClientPrefs.saveSettings();
+		trace(Achievements.getAchievementCurNum("skill") + ", " + Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]);
 	}
 
 	function endBullshit():Void
