@@ -63,10 +63,15 @@ end
 
 function onStepHit()
     if curStep == 28 then
-        setProperty('healthBar.visible', true)
-        setProperty('healthBarBGOverlay.visible', true)
+        setProperty('scoreTxt.visible', true)
+        setProperty('timeTxt.visible', true)
+        setProperty('timeBar.visible', true)
+        setProperty('timeBarBG.visible', true)
+        setProperty('accuracyShit.visible', true)
     end
     if curStep == 30 then
+        setProperty('healthBar.visible', true)
+        setProperty('healthBarBGOverlay.visible', true)
         setProperty('iconP1.visible', true)
         setProperty('iconP2.visible', true)
     end
@@ -75,13 +80,6 @@ function onStepHit()
     end
     if curStep == 288 then
         setProperty('vin.visible', false)
-    end
-    if curStep == 368 then
-        setProperty('scoreTxt.visible', true)
-        setProperty('timeTxt.visible', true)
-        setProperty('timeBar.visible', true)
-        setProperty('timeBarBG.visible', true)
-        setProperty('accuracyShit.visible', true)
     end
     if curStep == 1398 then
         noteTweenAlpha("sex1", 0, 0, 1, "quartInOut")
@@ -104,18 +102,18 @@ function onStepHit()
         noteTweenX('foxTween4', 7, 415 + Meow4, 1, 'quartInOut');
     end
     if curStep == 1536 then
-        noteTweenAlpha("ssex1", 0, 1, 1, "quartInOut")
-        noteTweenAlpha("ssss", 1, 1, 1, "quartInOut")
-        noteTweenAlpha("sssex1", 2, 1, 1, "quartInOut")
+        noteTweenAlpha("ssex1", 0, 1, 10, "quartInOut")
+        noteTweenAlpha("ssss", 1, 1, 10, "quartInOut")
+        noteTweenAlpha("sssex1", 2, 1, 10, "quartInOut")
         noteTweenAlpha("sex69", 3, 1, 1, "quartInOut")
-        noteTweenAngle("saltoHWAW1", 4, 360, 1, "quartInOut");
-        noteTweenAngle("saltoHWAW2", 5, 360, 1, "quartInOut");
-        noteTweenAngle("saltoHWAW3", 6, 360, 1, "quartInOut");
-        noteTweenAngle("saltoHWAW4", 7, 360, 1, "quartInOut");
-        noteTweenX('foxTween1', 4, 740 + Meow1, 1, 'quartInOut');
-    	noteTweenX('foxTween2', 5, 740 + Meow2, 1, 'quartInOut');
-    	noteTweenX('foxTween3', 6, 744 + Meow3, 1, 'quartInOut');
-    	noteTweenX('foxTween4', 7, 744 + Meow4, 1, 'quartInOut');
+        noteTweenAngle("saltoHWAW1", 4, 360, 10, "quartInOut");
+        noteTweenAngle("saltoHWAW2", 5, 360, 10, "quartInOut");
+        noteTweenAngle("saltoHWAW3", 6, 360, 10, "quartInOut");
+        noteTweenAngle("saltoHWAW4", 7, 360, 10, "quartInOut");
+        noteTweenX('foxTween1', 4, 740 + Meow1, 10, 'quartInOut');
+    	noteTweenX('foxTween2', 5, 740 + Meow2, 10, 'quartInOut');
+    	noteTweenX('foxTween3', 6, 744 + Meow3, 10, 'quartInOut');
+    	noteTweenX('foxTween4', 7, 744 + Meow4, 10, 'quartInOut');
     end
     if curStep == 1664 then
         setProperty('vin.visible', true)

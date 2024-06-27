@@ -87,7 +87,22 @@ function onBeatHit()
         doTweenX('onidet', 'dad', 300, 3, 'quadInOut')
     end
 
-    if curBeat >= 209 and curBeat < 336 then
+    if curBeat == 272 then
+        doTweenAlpha('watafak', 'blammedLightsBlack', 1, 0.001)
+    end
+
+    if curBeat == 304 then
+        doTweenX('opa', 'dad', 500, 1, 'quadInOut')
+        doTweenX('2opa', 'boyfriend', 1350, 1, 'quadInOut')
+    end
+
+    if curBeat == 336 then
+        doTweenAlpha('watafak', 'blammedLightsBlack', 0.001, 1)
+        doTweenX('obratno', 'dad', 300, 3, 'quadInOut')
+        doTweenX('obratnonahi', 'boyfriend', 1750, 3, 'quadInOut')
+    end
+
+    if curBeat >= 496 and curBeat < 624 then
         if gfAss == false then
             doTweenAngle('cameraBop1', 'camGame', 10, stepCrochet*0.002, 'quadOut')
             gfAss = true
@@ -97,42 +112,27 @@ function onBeatHit()
         end
     end
 
-    if curBeat == 336 then
+    if curBeat == 624 then
         doTweenAngle('backCamGay', 'camGame', 0, 1, 'quadOut')
-        doTweenAlpha('watafak', 'blammedLightsBlack', 1, 3)
-    end
-
-    if curBeat == 352 then
-        doTweenX('opa', 'dad', 500, 1, 'quadInOut')
-        doTweenX('2opa', 'boyfriend', 1350, 1, 'quadInOut')
-    end
-
-    if curBeat == 384 then
-        doTweenAlpha('watafak', 'blammedLightsBlack', 0.001, 1)
-        doTweenX('obratno', 'dad', 300, 3, 'quadInOut')
-        doTweenX('obratnonahi', 'boyfriend', 1750, 3, 'quadInOut')
-    end
-
-    if curBeat == 448 then
         doTweenAlpha('pizda', 'blammedLightsBlack', 1, 3)
         doTweenAlpha('blacks', 'blackScreenSonicCount', 1, 3)
     end
 
-    if curBeat == 460 then
+    if curBeat == 636 then
         doTweenAlpha('aaaaa', 'blackScreenSonicCount', 0, 1)
     end
 
-    if curBeat == 464 then
+    if curBeat == 640 then
         doTweenAlpha('po', 'blammedLightsBlack', 0, 0.5)
     end
 
-    if curBeat == 594 then
+    if curBeat == 771 then
         setProperty('hand.visible', true)
         playAnim('hand', 'raise', true)
         runTimer('why', 4.16)
     end
 
-    if curBeat == 665 then
+    if curBeat == 840 then
         setProperty('blackScreenSonicCount.alpha', 1)
         setProperty('fullscreen.visible', false)
     end
