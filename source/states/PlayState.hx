@@ -4093,11 +4093,16 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
+					trace("switch achievements");
 					var weekName:String = WeekData.getWeekFileName();
 					switch(achievementName)
 					{
 						case 'cum':
-							unlock = (ClientPrefs.data.arrowRGB == [[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
+							unlock = (ClientPrefs.data.arrowRGB == [
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{
