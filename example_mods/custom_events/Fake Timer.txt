@@ -1,0 +1,3 @@
+Value 1: Fake Time to use in TimeBar ( Seconds * 1000 )
+Value 2: Type 1 to return original time
+For example, Value 1 can be "143400"
