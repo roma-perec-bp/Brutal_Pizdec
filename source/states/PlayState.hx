@@ -280,11 +280,14 @@ class PlayState extends MusicBeatState
 	private var keysArray:Array<String>;
 
 	public var precacheList:Map<String, String> = new Map<String, String>();
-	public var songName:String;
+	public static var songName:String;
 
 	// Callbacks for stages
 	public var startCallback:Void->Void = null;
 	public var endCallback:Void->Void = null;
+
+	// achievement stuff
+	public var kaboomAchievement:Array<String> = [];
 
 	override public function create()
 	{
@@ -2085,7 +2088,6 @@ class PlayState extends MusicBeatState
 			checkEventNote();
 		}
 
-		#if debug
 		if(!endingSong && !startingSong) {
 			if (FlxG.keys.justPressed.ONE) {
 				KillNotes();
@@ -2096,7 +2098,6 @@ class PlayState extends MusicBeatState
 				clearNotesBefore(Conductor.songPosition);
 			}
 		}
-		#end
 
 		setOnScripts('cameraX', camFollow.x);
 		setOnScripts('cameraY', camFollow.y);
@@ -2186,9 +2187,6 @@ class PlayState extends MusicBeatState
 
 				paused = true;
 
-				vocals.stop();
-				FlxG.sound.music.stop();
-
 				persistentUpdate = false;
 				persistentDraw = false;
 				#if LUA_ALLOWED
@@ -2199,6 +2197,8 @@ class PlayState extends MusicBeatState
 					timer.active = true;
 				}
 				#end
+				vocals.stop();
+				FlxG.sound.music.stop();
 				if(curStage == 'void')
 				{
 					FlxTween.cancelTweensOf(dad);
@@ -2206,7 +2206,21 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(camHUD, {alpha: 0}, 2, {onComplete:
 						function (twn:FlxTween)
 						{
-							MusicBeatState.resetState();
+							var achievementName:String = "fnaf";
+							Achievements.loadAchievements();
+							var achieveID:Int = Achievements.getAchievementIndex(achievementName);
+							if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
+								Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+								ClientPrefs.saveSettings();
+								var achievementPop:AchievementPopup = new AchievementPopup(achievementName, camOther);
+								FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+								add(achievementPop);
+								achievementPop.onFinish = function() {
+									MusicBeatState.resetState();
+								};
+							} else {
+								MusicBeatState.resetState();
+							}
 						}
 					});
 				}
@@ -4048,6 +4062,7 @@ class PlayState extends MusicBeatState
 		var usedPractice:Bool = (ClientPrefs.getGameplaySetting('practice') || ClientPrefs.getGameplaySetting('botplay'));
 		for (i in 0...achievesToCheck.length) {
 			var achievementName:String = achievesToCheck[i];
+			trace(achievementName);
 			if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled && Achievements.getAchievementIndex(achievementName) > -1) {
 				var unlock:Bool = false;
 				if (achievementName == WeekData.getWeekFileName() + '_nomiss') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
@@ -4059,7 +4074,7 @@ class PlayState extends MusicBeatState
 						trace('NoMiss: ${unlock}');
 					}
 				}
-				if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
+				else if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
 					trace("NoMissNoDeaths");
 					if(isStoryMode && campaignMisses + songMisses < 1 && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice && deathCounter == 0)
@@ -4068,7 +4083,7 @@ class PlayState extends MusicBeatState
 						trace('NoMiss: ${unlock}');
 					}
 				}
-				if (achievementName == songName.toLowerCase() + "_freeplay_nomiss")
+				else if (achievementName == songName.toLowerCase() + "_freeplay_nomiss")
 				{
 					if(!isStoryMode && songMisses < 1 && !changedDifficulty && !usedPractice)
 					{
@@ -4078,11 +4093,16 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
+					trace("switch achievements");
 					var weekName:String = WeekData.getWeekFileName();
 					switch(achievementName)
 					{
 						case 'cum':
-							unlock = (ClientPrefs.data.arrowRGB == [[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
+							unlock = (ClientPrefs.data.arrowRGB == [
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
+								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{
