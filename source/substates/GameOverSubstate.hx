@@ -178,9 +178,9 @@ class GameOverSubstate extends MusicBeatSubstate
 		Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
 		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
 			checkAchievement("skill");
+			Achievements.setAchievementCurNum("skill", Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]);
 		}
 		ClientPrefs.saveSettings();
-		trace(Achievements.getAchievementCurNum("skill") + ", " + Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]);
 	}
 
 	function endBullshit():Void

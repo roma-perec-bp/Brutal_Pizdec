@@ -286,8 +286,18 @@ class PlayState extends MusicBeatState
 	public var startCallback:Void->Void = null;
 	public var endCallback:Void->Void = null;
 
-	// achievement stuff
-	public var kaboomAchievement:Array<String> = [];
+	// Медальки
+	public var medal:FlxSprite;
+	public var medal_system:Array<Dynamic> = [
+		[99.9, 100.0],
+		[95.0, 99.8],
+		[75.0, 94.9],
+		[74.9, 50.0],
+		[38.0, 49.9],
+		[0.0, 37.9]
+	];
+	public var medalStatus:Int = 5;
+	public var medalOldStatus:Int = 5;
 
 	override public function create()
 	{
@@ -718,9 +728,15 @@ class PlayState extends MusicBeatState
 
 		if(curStage == 'night') fireFlash.cameras = [camOther];
 
+		// медальки
+		medal = new FlxSprite(FlxG.width - 164, FlxG.height - 164).loadGraphic(Paths.image('medals/medal_6', 'shared'));
+		medal.origin.set(128/2, 128/2);
+		add(medal);
+
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
+		medal.cameras = [camHUD];
 
 		startingSong = true;
 		
@@ -2005,6 +2021,11 @@ class PlayState extends MusicBeatState
 			if(ClientPrefs.data.timeBarType != 'Song Name')
 				timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 		}
+
+		// medal
+		var mult:Float = FlxMath.lerp(1, medal.scale.x, FlxMath.bound(1 - (elapsed * 15 * playbackRate), 0, 1));
+		medal.scale.set(mult, mult);
+		medal.updateHitbox();
 
 		if (camZooming)
 		{
@@ -3575,13 +3596,15 @@ class PlayState extends MusicBeatState
 							// checking achievement
 							Achievements.loadAchievements();
 							var kaboom:Int = Achievements.getAchievementCurNum("kaboom");	
-							Achievements.setAchievementCurNum("kaboom", kaboom + 1);						
-							if (kaboom >= Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]) {
+							var kaboomMax:Int = Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4];
+							Achievements.setAchievementCurNum("kaboom", kaboom+1);						
+							if (kaboom == Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]) {
 								#if ACHIEVEMENTS_ALLOWED
 								var achieveID:Int = Achievements.getAchievementIndex('kaboom');
 								if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
 									Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 									startAchievement('kaboom');
+									Achievements.setAchievementCurNum("kaboom", kaboomMax);
 									ClientPrefs.saveSettings();
 								}
 							}
@@ -3605,6 +3628,23 @@ class PlayState extends MusicBeatState
 				popUpScore(note);
 			}
 			health += note.hitHealth * healthGain;
+
+			// calculate shit
+			var cur:Float = (songHits*350/fullScore)*100;
+			for(i in 0...medal_system.length)
+			{
+				if(cur < medal_system[i][1] && cur >= medal_system[i][0])
+				{
+					medalStatus = i;
+					if (medalOldStatus != medalStatus)
+					{
+						medalOldStatus = medalStatus;
+						medal.scale.set(1.5, 1.5);
+						trace("Old status changed.");
+					}
+					medal.loadGraphic(Paths.image('medals/medal_${i+1}', 'shared'));
+				}
+			}
 
 			if(!note.noAnimation) {
 				var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, note.noteData)))];
