@@ -202,6 +202,8 @@ class PlayState extends MusicBeatState
 	public static var changedDifficulty:Bool = false;
 	public static var chartingMode:Bool = false;
 
+	public var vocalsFinished = false;
+
 	//Gameplay settings
 	public var healthGain:Float = 1;
 	public var healthLoss:Float = 1;
@@ -804,6 +806,7 @@ class PlayState extends MusicBeatState
 
 		cacheCountdown();
 		cachePopUpScore();
+		cacheMedals();
 		
 		for (key => type in precacheList)
 		{
@@ -1431,6 +1434,10 @@ class PlayState extends MusicBeatState
 		FlxG.sound.music.pitch = playbackRate;
 		FlxG.sound.music.onComplete = finishSong.bind();
 		vocals.play();
+		vocals.onComplete = function()
+		{
+			vocalsFinished = true;
+		}
 
 		if(startOnTime > 0) setSongTime(startOnTime - 500);
 		startOnTime = 0;
@@ -1832,12 +1839,16 @@ class PlayState extends MusicBeatState
 		FlxG.sound.music.play();
 		FlxG.sound.music.pitch = playbackRate;
 		Conductor.songPosition = FlxG.sound.music.time;
-		if (Conductor.songPosition <= vocals.length)
+
+		if (!vocalsFinished)
 		{
-			vocals.time = Conductor.songPosition;
-			vocals.pitch = playbackRate;
+			if (Conductor.songPosition <= vocals.length)
+			{
+				vocals.time = Conductor.songPosition;
+				vocals.pitch = playbackRate;
+			}
+			vocals.play();
 		}
-		vocals.play();
 	}
 
 	public var paused:Bool = false;
@@ -3076,6 +3087,12 @@ class PlayState extends MusicBeatState
 			Paths.image(rating.image);
 		for (i in 0...10)
 			Paths.image('num' + i);
+	}
+
+	private function cachePopUpScore()
+	{
+		for (i in 0...6)
+			Paths.image('medals/medal_' + i);
 	}
 
 	private function popUpScore(note:Note = null):Void

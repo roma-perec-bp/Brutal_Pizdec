@@ -268,7 +268,7 @@ class StoryMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('perecHaha'));
 				FlxG.sound.play(Paths.sound('boom'));
 
-				FlxG.sound.music.stop();
+				FlxG.sound.music.volume = 0;
 
 				grpWeekText.members[curWeek].startFlashing();
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);

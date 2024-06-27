@@ -13,7 +13,7 @@ class OldRoof extends BaseStage
 		bg.updateHitbox();
 		add(bg);
 
-		if(songName == 'overfire-old')
+		if(PlayState.SONG.song == 'Overfire OLD')
 		{
 			bg2 = new BGSprite('grasswalk', -600, -200, 0.9, 0.9);
 			bg2.setGraphicSize(Std.int(bg.width * 1.4));
