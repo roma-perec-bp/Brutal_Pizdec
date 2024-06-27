@@ -109,7 +109,7 @@ class MainMenuState extends MusicBeatState
 			menuItems.add(menuItem);
 		}
 
-		var randomNum = FlxG.random.int(0,4);
+		var randomNum:Int = FlxG.random.int(0,4);
 		bros = new FlxSprite(-50, 270);
 		bros.frames = Paths.getSparrowAtlas('main_menu_chars/${randomNum}');
 		bros.animation.addByPrefix('idle', 'menu', 24);
@@ -157,17 +157,12 @@ class MainMenuState extends MusicBeatState
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
-	function giveAchievement(name) {
-		add(new AchievementPopup(name, camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement: ${name}');
-	}
 	function checkAchievement(achievementName) {
 		Achievements.loadAchievements();
 		var achieveID:Int = Achievements.getAchievementIndex(achievementName);
 		if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
-			Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-			giveAchievement(achievementName);
+			add(new AchievementPopup(achievementName, camAchievement));
+			Achievements.unlockAchievement(achievementName);
 			ClientPrefs.saveSettings();
 		}
 	}
