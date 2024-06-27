@@ -104,8 +104,6 @@ class Note extends FlxSprite
 
 	public var jap:Bool = false;
 
-	private var curSong:String = "";
-
 	public var hitHealth:Float = 0.023;
 	public var missHealth:Float = 0.0475;
 	public var rating:String = 'unknown';
@@ -185,7 +183,7 @@ class Note extends FlxSprite
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-					if(curSong == 'lore')
+					if(PlayState.instance.curSong == 'lore')
 					{
 						rgbShader.r = 0xFF2D2D49;
 						rgbShader.g = 0xFFFFFFFF;
