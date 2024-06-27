@@ -97,7 +97,7 @@
 					[
 						"Flash Camera",
 						"0.5",
-						"ff0000"
+						"0xffff0000"
 					]
 				]
 			],
@@ -1182,7 +1182,7 @@
 					[
 						"Flash Camera",
 						"0.5",
-						"FF0000"
+						"0xffFF0000"
 					],
 					[
 						"Set Cam Zoom",
@@ -1602,7 +1602,7 @@
 					[
 						"Flash Camera",
 						"0.5",
-						"ffffff"
+						"0xffffffff"
 					],
 					[
 						"Character Color Transform",
@@ -1847,7 +1847,7 @@
 					[
 						"Flash Camera",
 						"0.5",
-						""
+						"0xffffffff"
 					],
 					[
 						"Set Cam Zoom",
@@ -1942,7 +1942,7 @@
 					[
 						"Flash Camera",
 						"0.5",
-						""
+						"0xffffffff"
 					],
 					[
 						"Camera Follow Pos",
@@ -2417,7 +2417,7 @@
 					[
 						"Flash Camera",
 						"1",
-						"ff0000"
+						"0xffff0000"
 					],
 					[
 						"Screen Shake",
@@ -2602,7 +2602,7 @@
 					[
 						"Flash Camera",
 						"1",
-						"FFFFFF"
+						"0xffFFFFFF"
 					]
 				]
 			],
@@ -2700,14 +2700,9 @@
 						"800"
 					],
 					[
-						"Add trail",
-						"3, 6, 0.3, 0.002",
-						"dad, 0, 0, no"
-					],
-					[
 						"Flash Camera",
 						"1",
-						"FFFFFF"
+						"0xffFFFFFF"
 					],
 					[
 						"Character Color Transform",
