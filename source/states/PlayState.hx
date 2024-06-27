@@ -290,12 +290,12 @@ class PlayState extends MusicBeatState
 	// Медальки
 	public var medal:FlxSprite;
 	public var medal_system:Array<Dynamic> = [
-		[99.9, 100.0],
-		[95.0, 99.8],
-		[75.0, 94.9],
-		[74.9, 50.0],
-		[38.0, 49.9],
-		[0.0, 37.9]
+		[99.9, 100.0, 'Master'],
+		[95.0, 99.8, 'Super Elite'],
+		[75.0, 94.9, 'Elite'],
+		[74.9, 50.0, 'Advanced'],
+		[38.0, 49.9, 'Specialist'],
+		[0.0, 37.9, 'Skill issue']
 	];
 	public var medalStatus:Int = 5;
 	public var medalOldStatus:Int = 5;
@@ -4096,14 +4096,7 @@ class PlayState extends MusicBeatState
 				//trace((totalNotesHit / totalPlayed) + ', Total: ' + totalPlayed + ', notes hit: ' + totalNotesHit);
 
 				// Rating Name
-				ratingName = ratingStuff[ratingStuff.length-1][0]; //Uses last string
-				if(ratingPercent < 1)
-					for (i in 0...ratingStuff.length-1)
-						if(ratingPercent < ratingStuff[i][1])
-						{
-							ratingName = ratingStuff[i][0];
-							break;
-						}
+				ratingName = medal_system[medalStatus][2];
 			}
 			fullComboFunction();
 		}
