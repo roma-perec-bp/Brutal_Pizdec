@@ -3384,15 +3384,7 @@ class PlayState extends MusicBeatState
 				});
 			}
 
-			/*if (holdArray.contains(true) && !endingSong) {
-				#if ACHIEVEMENTS_ALLOWED
-				var achieve:String = checkForAchievement(['oversinging']);
-				if (achieve != null) {
-					startAchievement(achieve);
-				}
-				#end
-			}
-			else*/if (boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music.pitch) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
+			if (boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music.pitch) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
 			{
 				boyfriend.dance();
 				//boyfriend.animation.curAnim.finish();
@@ -4099,7 +4091,7 @@ class PlayState extends MusicBeatState
 			var achievementName:String = achievesToCheck[i];
 			Achievements.loadAchievements();
 			trace(achievementName);
-			if(!Achievements.isAchievementUnlocked(achievementName) && Achievements.getAchievementIndex(achievementName) > -1) {
+			if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled && Achievements.getAchievementIndex(achievementName) > -1) {
 				trace(achievementName + ', start testing stuff');
 				var unlock:Bool = false;
 				if (achievementName == WeekData.getWeekFileName() + '_nomiss') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
@@ -4135,11 +4127,10 @@ class PlayState extends MusicBeatState
 					switch(achievementName)
 					{
 						case 'cum':
-							unlock = (ClientPrefs.data.arrowRGB == [
-								[-1, -1, -1],
-								[-1, -1, -1],
-								[-1, -1, -1],
-								[-1, -1, -1]]);
+							unlock = (ClientPrefs.data.arrowRGB[0][0] == -1 && ClientPrefs.data.arrowRGB[0][1] == -1 && ClientPrefs.data.arrowRGB[0][2] == -1 &&
+								ClientPrefs.data.arrowRGB[1][0] == -1 && ClientPrefs.data.arrowRGB[1][1] == -1 && ClientPrefs.data.arrowRGB[1][2] == -1 &&
+								ClientPrefs.data.arrowRGB[2][0] == -1 && ClientPrefs.data.arrowRGB[2][1] == -1 && ClientPrefs.data.arrowRGB[2][2] == -1 &&
+								ClientPrefs.data.arrowRGB[3][0] == -1 && ClientPrefs.data.arrowRGB[3][1] == -1 && ClientPrefs.data.arrowRGB[3][2] == -1);
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{
