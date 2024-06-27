@@ -4124,7 +4124,10 @@ class PlayState extends MusicBeatState
 					switch(achievementName)
 					{
 						case 'cum':
-							unlock = (ClientPrefs.data.arrowRGB == [[-1,-1,-1],[-1,-1,-1],[-1,-1,-1],[-1,-1,-1]]);
+							unlock = (ClientPrefs.data.arrowRGB[0][0] == -1 && ClientPrefs.data.arrowRGB[0][1] == -1 && ClientPrefs.data.arrowRGB[0][2] == -1 &&
+								ClientPrefs.data.arrowRGB[1][0] == -1 && ClientPrefs.data.arrowRGB[1][1] == -1 && ClientPrefs.data.arrowRGB[1][2] == -1 &&
+								ClientPrefs.data.arrowRGB[2][0] == -1 && ClientPrefs.data.arrowRGB[2][1] == -1 && ClientPrefs.data.arrowRGB[2][2] == -1 &&
+								ClientPrefs.data.arrowRGB[3][0] == -1 && ClientPrefs.data.arrowRGB[3][1] == -1 && ClientPrefs.data.arrowRGB[3][2] == -1);
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{
