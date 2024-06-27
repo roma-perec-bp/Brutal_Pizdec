@@ -1929,6 +1929,7 @@ class PlayState extends MusicBeatState
 					ClientPrefs.saveSettings();
 				}
 				#end
+				openChartEditor(); //на время
 			} else {
 				openChartEditor();
 			}
@@ -3384,7 +3385,11 @@ class PlayState extends MusicBeatState
 				});
 			}
 
-			if (boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music.pitch) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
+			if(holdArray.contains(true) && !endingSong)
+			{
+				//персанаж больше не задерживается когда хажимаешь кнопку, хз как норм починить так что лолол я еблан
+			}
+			else if (boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music.pitch) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
 			{
 				boyfriend.dance();
 				//boyfriend.animation.curAnim.finish();
