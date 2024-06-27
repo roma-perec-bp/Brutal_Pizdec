@@ -19,7 +19,7 @@ class Achievements {
 		// misc
 		["Anekdot is for real",'Die on \"Anekdot\" song.','anekdot_death',false], // done
 		["Oh, China, what are you doing here?",'Press on JinchengZhang in Main Menu.','menu0',true], // done
-		["Skill Issue",'Die 10 times in any song.','skill',true,10], // done,
+		["Skill Issue",'Die 10 times in any song.','skill',true,10], // done
 		["KA-BOOM",'Hit the Jalapeno Note 10 times','kaboom',true,10], // done
 		["Da old days...",'Beat Every Old Songs.','oldweek0',false],
 		["Cum","Play any song with only white color on notes RGB option",'cum',false], // ah hell naw
