@@ -180,7 +180,6 @@ class PlayState extends MusicBeatState
 	private var curSong:String = "";
 
 	public var gfSpeed:Int = 1;
-	public var charSpeed:Int = 2;
 	public var health:Float = 1;
 	public var combo:Int = 0;
 
@@ -1169,9 +1168,9 @@ class PlayState extends MusicBeatState
 			{
 				if (gf != null && tmr.loopsLeft % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
 					gf.dance();
-				if (tmr.loopsLeft % Math.round(charSpeed * boyfriend.danceEveryNumBeats) == 0 && boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.stunned)
+				if (tmr.loopsLeft % boyfriend.danceEveryNumBeats == 0 && boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.stunned)
 					boyfriend.dance();
-				if (tmr.loopsLeft % Math.round(charSpeed * dad.danceEveryNumBeats) == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
+				if (tmr.loopsLeft % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 					dad.dance();
 
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
@@ -2376,7 +2375,8 @@ class PlayState extends MusicBeatState
 
 			case 'Set CHARACTERS Speed':
 				if(flValue1 == null || flValue1 < 1) flValue1 = 1;
-				charSpeed = Math.round(flValue1);
+				dad.danceEveryNumBeats = Math.round(flValue1);
+				bf.danceEveryNumBeats = Math.round(flValue1);
 
 			case 'Add Camera Zoom':
 				if(ClientPrefs.data.camZooms && FlxG.camera.zoom < 1.6) {
@@ -3822,9 +3822,9 @@ class PlayState extends MusicBeatState
 
 		if (gf != null && curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
 			gf.dance();
-		if (curBeat % Math.round(charSpeed * boyfriend.danceEveryNumBeats) == 0 && boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.stunned)
+		if (curBeat % boyfriend.danceEveryNumBeats == 0 && boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.stunned)
 			boyfriend.dance();
-		if (curBeat % Math.round(charSpeed * dad.danceEveryNumBeats) == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
+		if (curBeat % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 			dad.dance();
 
 		if(curSong == 'lore')
