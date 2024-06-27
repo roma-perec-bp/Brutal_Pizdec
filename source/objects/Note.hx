@@ -221,6 +221,7 @@ class Note extends FlxSprite
 					rgbShader.b = 0xFF990022;
 					ignoreNote = mustPress;
 					reloadNote('JAPNOTENEW_assets');
+					noteSplashData.texture = 'noteSplashes/noteSplashes-sparkles';
 					rgbShader.enabled = false;
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;
