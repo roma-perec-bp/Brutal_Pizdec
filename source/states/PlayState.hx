@@ -3089,7 +3089,7 @@ class PlayState extends MusicBeatState
 			Paths.image('num' + i);
 	}
 
-	private function cachePopUpScore()
+	private function cacheMedals()
 	{
 		for (i in 0...6)
 			Paths.image('medals/medal_' + i);
