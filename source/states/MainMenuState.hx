@@ -109,8 +109,7 @@ class MainMenuState extends MusicBeatState
 			menuItems.add(menuItem);
 		}
 
-		// var randomNum = FlxG.random.int(0,4);
-		var randomNum = 4;
+		var randomNum:Int = FlxG.random.int(0,4);
 		bros = new FlxSprite(-50, 270);
 		bros.frames = Paths.getSparrowAtlas('main_menu_chars/${randomNum}');
 		bros.animation.addByPrefix('idle', 'menu', 24);
