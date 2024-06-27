@@ -2894,6 +2894,7 @@ class PlayState extends MusicBeatState
 				var achieve:String = checkForAchievement([WeekData.getWeekFileName(), noMissWeek, noMissDeathsWeek, 'cum']);
 				trace(WeekData.getWeekFileName());
 				if(achieve != null) {
+					trace(achieve);
 					startAchievement(achieve);
 					return false;
 				}
@@ -2901,6 +2902,7 @@ class PlayState extends MusicBeatState
 				var noMissSong:String = songName.toLowerCase() + "_freeplay_nomiss";
 				var achieve:String = checkForAchievement([noMissSong, 'cum']);
 				if(achieve != null) {
+					trace(achieve);
 					startAchievement(achieve);
 					return false;
 				}
@@ -4092,12 +4094,13 @@ class PlayState extends MusicBeatState
 	private function checkForAchievement(achievesToCheck:Array<String> = null):String
 	{
 		if(chartingMode) return null;
-
 		var usedPractice:Bool = (ClientPrefs.getGameplaySetting('practice') || ClientPrefs.getGameplaySetting('botplay'));
 		for (i in 0...achievesToCheck.length) {
 			var achievementName:String = achievesToCheck[i];
-			//trace(achievementName);
-			if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled && Achievements.getAchievementIndex(achievementName) > -1) {
+			Achievements.loadAchievements();
+			trace(achievementName);
+			if(!Achievements.isAchievementUnlocked(achievementName) && Achievements.getAchievementIndex(achievementName) > -1) {
+				trace(achievementName + ', start testing stuff');
 				var unlock:Bool = false;
 				if (achievementName == WeekData.getWeekFileName() + '_nomiss') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{

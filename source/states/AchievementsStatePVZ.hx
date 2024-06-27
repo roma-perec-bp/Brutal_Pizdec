@@ -47,6 +47,7 @@ class AchievementsStatePVZ extends MusicBeatState
 		attachedTextGroup = new FlxTypedGroup<FlxOffsetText>();
 		add(attachedTextGroup);
         
+		Achievements.loadAchievements();
 		for (i in 0...Achievements.achievementsStuff.length) {
 			options.push(Achievements.achievementsStuff[i]);
 			achievementIndex.push(i);
