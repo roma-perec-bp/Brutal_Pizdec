@@ -3578,10 +3578,10 @@ class PlayState extends MusicBeatState
 							iconP1.scale.set(1, 1);
 							iconP1.changeIcon('hwaw-fire');
 
-						// checking achievement
-						Achievements.loadAchievements();
-						var kaboom:Int = Achievements.getAchievementCurNum("kaboom");							
-						if (kaboom == Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]-1) {
+							// checking achievement
+							Achievements.loadAchievements();
+							var kaboom:Int = Achievements.getAchievementCurNum("kaboom");							
+							if (kaboom == Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]-1) {
 							#if ACHIEVEMENTS_ALLOWED
 							var achieveID:Int = Achievements.getAchievementIndex('kaboom');
 							if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
@@ -3590,9 +3590,9 @@ class PlayState extends MusicBeatState
 								ClientPrefs.saveSettings();
 							}
 							#end
-						} else {
-							Achievements.setAchievementCurNum("kaboom", kaboom + 1);
-						}
+						    } else {
+								Achievements.setAchievementCurNum("kaboom", kaboom + 1);
+							}
 					}
 				}
 
@@ -4133,10 +4133,10 @@ class PlayState extends MusicBeatState
 					{
 						case 'cum':
 							unlock = (ClientPrefs.data.arrowRGB == [
-								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
-								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
-								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF],
-								[0xffFFFFFF, 0xffFFFFFF, 0xffFFFFFF]]);
+								[-1, -1, -1],
+								[-1, -1, -1],
+								[-1, -1, -1],
+								[-1, -1, -1]]);
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{
