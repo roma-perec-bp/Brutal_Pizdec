@@ -3574,19 +3574,18 @@ class PlayState extends MusicBeatState
 
 							// checking achievement
 							Achievements.loadAchievements();
-							var kaboom:Int = Achievements.getAchievementCurNum("kaboom");							
-							if (kaboom == Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]-1) {
-							#if ACHIEVEMENTS_ALLOWED
-							var achieveID:Int = Achievements.getAchievementIndex('kaboom');
-							if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
-								Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-								startAchievement('kaboom');
-								ClientPrefs.saveSettings();
+							var kaboom:Int = Achievements.getAchievementCurNum("kaboom");	
+							Achievements.setAchievementCurNum("kaboom", kaboom + 1);						
+							if (kaboom >= Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]) {
+								#if ACHIEVEMENTS_ALLOWED
+								var achieveID:Int = Achievements.getAchievementIndex('kaboom');
+								if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
+									Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+									startAchievement('kaboom');
+									ClientPrefs.saveSettings();
+								}
 							}
 							#end
-						    } else {
-								Achievements.setAchievementCurNum("kaboom", kaboom + 1);
-							}
 					}
 				}
 
