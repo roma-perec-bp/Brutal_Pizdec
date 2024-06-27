@@ -82,6 +82,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		camAchievement = new FlxCamera();
 		camAchievement.bgColor.alpha = 0;
 		FlxG.cameras.add(camAchievement, false);
+
+		achievements();
 	}
 
 	public var startedDeath:Bool = false;
@@ -101,6 +103,19 @@ class GameOverSubstate extends MusicBeatSubstate
 			giveAchievement(achievementName);
 			ClientPrefs.saveSettings();
 		}
+	}
+	function achievements() {
+		var achievementLists = [];
+		// songs
+		if(PlayState.songName.toLowerCase() == "anekdot")
+			checkAchievement("anekdot_death");
+		// deaths
+		Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
+		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
+			checkAchievement("skill");
+		}
+		ClientPrefs.saveSettings();
+		trace(Achievements.getAchievementCurNum("skill") + ", " + Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]);
 	}
 	#end
 
@@ -170,17 +185,6 @@ class GameOverSubstate extends MusicBeatSubstate
 	function coolStartDeath(?volume:Float = 1):Void
 	{
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
-		var achievementLists = [];
-		// songs
-		if(PlayState.songName.toLowerCase() == "anekdot")
-			checkAchievement("anekdot_death");
-		// deaths
-		Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
-		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
-			checkAchievement("skill");
-			Achievements.setAchievementCurNum("skill", Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]);
-		}
-		ClientPrefs.saveSettings();
 	}
 
 	function endBullshit():Void

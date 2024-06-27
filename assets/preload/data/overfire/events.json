@@ -132,7 +132,7 @@
 					[
 						"Flash Camera",
 						"1",
-						"ff0000"
+						"0xffff0000"
 					],
 					[
 						"Cam Boom Speed",
@@ -147,7 +147,7 @@
 					[
 						"Flash Camera",
 						"1",
-						""
+						"0xffffffff"
 					],
 					[
 						"Cam Boom Speed",
@@ -162,7 +162,7 @@
 					[
 						"Flash Camera",
 						"1",
-						""
+						"0xffffffff"
 					],
 					[
 						"Set Cam Zoom",
@@ -187,7 +187,7 @@
 					[
 						"Flash Camera",
 						"1",
-						""
+						"0xffFFFFFF"
 					],
 					[
 						"Cam Boom Speed",
@@ -392,12 +392,17 @@
 					[
 						"Flash Camera",
 						"1",
-						"ff0000"
+						"0xffff0000"
 					],
 					[
 						"Set Cam Zoom",
 						"0.6",
 						"0.1"
+					],
+					[
+						"lyrics",
+						"AAAAAAAA",
+						"FF0000"
 					]
 				]
 			],
@@ -407,7 +412,7 @@
 					[
 						"Set Cam Zoom",
 						"0.9",
-						"0.1"
+						"0.03"
 					]
 				]
 			],
@@ -417,7 +422,7 @@
 					[
 						"Set Cam Zoom",
 						"0.8",
-						"0.1"
+						"0.03"
 					]
 				]
 			],
@@ -427,7 +432,7 @@
 					[
 						"Set Cam Zoom",
 						"0.9",
-						"0.1"
+						"0.03"
 					]
 				]
 			],
@@ -857,7 +862,7 @@
 					[
 						"Set Cam Zoom",
 						"0.9",
-						"0.1"
+						"0.03"
 					]
 				]
 			],
@@ -867,7 +872,7 @@
 					[
 						"Set Cam Zoom",
 						"0.8",
-						"0.1"
+						"0.03"
 					]
 				]
 			],
@@ -877,7 +882,7 @@
 					[
 						"Set Cam Zoom",
 						"0.9",
-						"0.1"
+						"0.03"
 					]
 				]
 			],

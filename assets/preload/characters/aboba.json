@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "pea idle"
+		},
+		{
+			"offsets": [
+				4,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "pea left"
+		},
+		{
+			"offsets": [
+				16,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "pea down"
+		},
+		{
+			"offsets": [
+				18,
+				61
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "pea up"
+		},
+		{
+			"offsets": [
+				-14,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "pea right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/peatv_assets",
+	"position": [
+		0,
+		140
+	],
+	"healthicon": "peatv",
+	"flip_x": false,
+	"healthbar_colors": [
+		43,
+		43,
+		255
+	],
+	"camera_position": [
+		150,
+		-70
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}
