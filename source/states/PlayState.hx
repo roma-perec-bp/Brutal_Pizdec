@@ -2376,7 +2376,7 @@ class PlayState extends MusicBeatState
 			case 'Set CHARACTERS Speed':
 				if(flValue1 == null || flValue1 < 1) flValue1 = 1;
 				dad.danceEveryNumBeats = Math.round(flValue1);
-				bf.danceEveryNumBeats = Math.round(flValue1);
+				boyfriend.danceEveryNumBeats = Math.round(flValue1);
 
 			case 'Add Camera Zoom':
 				if(ClientPrefs.data.camZooms && FlxG.camera.zoom < 1.6) {
