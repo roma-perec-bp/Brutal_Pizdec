@@ -6,11 +6,6 @@ function onCreate()
 end
 
 function onBeatHit()
-    if curBeat % 2 == 0 then
-        setProperty('iconP1.flipX', true)
-    else
-        setProperty('iconP1.flipX', false)
-    end
     if curBeat == 1 then
         doTweenAlpha('suka','blackFlash', 0, 40, 'quardOut')
     end
