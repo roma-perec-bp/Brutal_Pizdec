@@ -21,3 +21,19 @@ function onUpdate(e)
                 setProperty('iconP1.angle', 0)
         end
 end
+
+
+
+
+
+
+
+
+
+
+--[[function onNuke()
+        setNuke(home == "RandomShort57")
+        id = home
+        activeNuke('accept')
+        print(setNuke)
+end]]--
