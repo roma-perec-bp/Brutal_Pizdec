@@ -179,6 +179,14 @@ class Note extends FlxSprite
 				case 'Alt Animation':
 					animSuffix = '-alt';
 				case 'No Animation':
+				if(PlayState.SONG.song == 'lore') // не просите почему он нужен
+					{
+						rgbShader.r = 0xFF2D2D49;
+						rgbShader.g = 0xFFFFFFFF;
+						rgbShader.b = 0xFF000000;
+						noteSplashData.r = 0xFF2D2D49;
+						noteSplashData.g = 0xFFFFFFFF;
+					}
 					noAnimation = true;
 					noMissAnimation = true;
 				case 'GF Sing':

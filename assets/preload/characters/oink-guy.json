@@ -88,10 +88,10 @@
 				385,
 				-27
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFTmiss",
-			"loop": false,
+			"indices": [],
 			"name": "oink right miss"
 		},
 		{
@@ -99,10 +99,10 @@
 				93,
 				-29
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"loop": false,
+			"indices": [],
 			"name": "oink left miss"
 		},
 		{
@@ -110,10 +110,10 @@
 				27,
 				-22
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "oink left0"
 		},
 		{
@@ -121,28 +121,28 @@
 				172,
 				-27
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "oink right0"
 		}
 	],
 	"no_antialiasing": true,
 	"image": "characters/oink_guy_ASSET",
 	"position": [
-		90,
-		80
+		130,
+		200
 	],
-	"healthicon": "oink",
+	"healthicon": "oink-pixel",
 	"flip_x": false,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		255,
+		102,
+		204
 	],
 	"camera_position": [
-		60,
+		30,
 		140
 	],
 	"sing_duration": 4,
