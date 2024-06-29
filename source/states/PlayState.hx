@@ -2604,7 +2604,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if (!ClientPrefs.data.flashing) color = "0xFFFFFF";
+					if (!ClientPrefs.data.flashing) color = "0xFFFFFFFF";
 				}
 				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 	
