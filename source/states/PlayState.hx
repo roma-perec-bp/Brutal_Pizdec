@@ -216,6 +216,7 @@ class PlayState extends MusicBeatState
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var iconROM:HealthIcon;
+	public var iconGF:HealthIcon;
 	public var camHUD:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
@@ -631,6 +632,12 @@ class PlayState extends MusicBeatState
 			iconROM.visible = !ClientPrefs.data.hideHud;
 			iconROM.alpha = ClientPrefs.data.healthBarAlpha;
 			add(iconROM);
+
+			iconGF = new HealthIcon(gf.healthIcon, true);
+			iconGF.y = healthBar.y - 50;
+			iconGF.visible = !ClientPrefs.data.hideHud;
+			iconGF.alpha = ClientPrefs.data.healthBarAlpha;
+			add(iconGF);
 		}
 	
 		if(curStage == 'roof-old')
@@ -720,6 +727,7 @@ class PlayState extends MusicBeatState
 		healthBarBGOverlay.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		if(SONG.song == 'lore') iconROM.cameras = [camHUD];
+		if(SONG.song == 'lore') iconGF.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		accuracyShit.cameras = [camHUD];
@@ -1980,30 +1988,41 @@ class PlayState extends MusicBeatState
 			iconROM.updateHitbox();
 		}
 
+		if(curSong == 'lore')
+			{
+				var mult:Float = FlxMath.lerp(1, iconROM.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
+				iconGF.scale.set(mult, mult);
+				iconGF.updateHitbox();
+			}
+
 		var iconOffset:Int = 26;
 		if (health > 2) health = 2;
 
 		iconP1.x = healthBar.barCenter + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
 		iconP2.x = healthBar.barCenter - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
 		if(curSong == 'lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 100) / 2 - iconOffset * 2;
+		if(curSong == 'lore') iconGF.x = healthBar.barCenter + (150 * iconGF.scale.x + 0) / 2 - iconOffset;
 
 		if (healthBar.percent < 20) 
 		{
 			iconP1.animation.curAnim.curFrame = 1;
+			if(curSong == 'lore') iconGF.animation.curAnim.curFrame = 1;
 			iconP2.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
 			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
 		}
 		else if (healthBar.percent > 80)
 		{
 			iconP1.animation.curAnim.curFrame = iconP1.numFrames > 2 ? 2 : 0;
+			if(curSong == 'lore') iconGF.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
 			iconP2.animation.curAnim.curFrame = 1;
 			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = 1;
 		}
 		else 
 		{
 			iconP1.animation.curAnim.curFrame = 0;
+			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = 0;
 			iconP2.animation.curAnim.curFrame = 0;
-			if(curSong == 'lore') iconP2.animation.curAnim.curFrame = 0;
+			if(curSong == 'lore') iconGF.animation.curAnim.curFrame = 0;
 		}
 
 		if (controls.justPressed('debug_2') && !endingSong && !inCutscene)
@@ -2576,25 +2595,18 @@ class PlayState extends MusicBeatState
 				camZooming = !camZooming;
 
 			case 'Flash Camera':
-				var args:Array<String> = value2.split(",");
-
-				var color:FlxColor = 0xFFFFFFFF;
-
-				if (flValue1 == null) flValue1 = 1;
-	
-				if (args[0] == null || args[0] == '')
-					color = 0xFFFFFFFF;
-
-				color = Std.parseInt(args[0]);
-
-				var camera:String = args[1];
-	
-				switch(camera.toLowerCase().trim()) {
-					case 'camhud' | 'HUD' | 'hud':
-						camHUD.flash(color, flValue1, null, true);
-					default:
-						FlxG.camera.flash(color, flValue1, null, true);
+				var duration:Float = Std.parseFloat(value1);
+				var color:String = value2;
+				if (color.length > 1)
+				{
+					if (!color.startsWith('0x'))
+						color = '0xFF$color';
 				}
+				else
+				{
+					if (!ClientPrefs.data.flashing) color = "0xFFFFFF";
+				}
+				camHUD.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 	
 			case 'Camera Fade':
 				var args:Array<String> = value2.split(",");
@@ -3814,10 +3826,12 @@ class PlayState extends MusicBeatState
 
 		if(dropTime <= 0) iconP1.scale.set(1.2, 1.2);
 		if(curSong == 'lore') iconROM.scale.set(1.2, 1.2);
+		if(curSong == 'lore') iconGF.scale.set(1.2, 1.2);
 		iconP2.scale.set(1.2, 1.2);
 
 		if(dropTime <= 0) iconP1.updateHitbox();
 		if(curSong == 'lore') iconROM.updateHitbox();
+		if(curSong == 'lore') iconGF.updateHitbox();
 		iconP2.updateHitbox();
 
 		if (gf != null && curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
