@@ -2606,7 +2606,7 @@ class PlayState extends MusicBeatState
 				{
 					if (!ClientPrefs.data.flashing) color = "0xFFFFFF";
 				}
-				camHUD.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
+				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 	
 			case 'Camera Fade':
 				var args:Array<String> = value2.split(",");
