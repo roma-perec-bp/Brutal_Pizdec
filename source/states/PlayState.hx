@@ -1251,6 +1251,8 @@ class PlayState extends MusicBeatState
 
 		if(curStage == 'roof-old')
 		{
+			if(image == 'set') spr.setGraphicSize(Std.int(spr.width / 2));
+
 			FlxTween.tween(spr, {/*y: spr.y + 100,*/ alpha: 0}, Conductor.crochet / 1000, {
 				ease: FlxEase.cubeInOut,
 				onComplete: function(twn:FlxTween)
