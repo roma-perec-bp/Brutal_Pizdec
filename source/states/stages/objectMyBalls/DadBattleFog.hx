@@ -1,4 +1,4 @@
-package states.stages.objects;
+package states.stages.objectMyBalls;
 
 class DadBattleFog extends FlxSpriteGroup
 {
