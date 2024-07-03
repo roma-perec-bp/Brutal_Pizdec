@@ -1199,16 +1199,25 @@ class PlayState extends MusicBeatState
 					case 0:
 						tick = THREE;
 					case 1:
-						countdownReady = createCountdownSprite(introAlts[0], antialias);
-						FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
+						if(curSong != 'lore')
+						{
+							countdownReady = createCountdownSprite(introAlts[0], antialias);
+							FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
+						}
 						tick = TWO;
 					case 2:
-						countdownSet = createCountdownSprite(introAlts[1], antialias);
-						FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
+						if(curSong != 'lore')
+						{
+							countdownSet = createCountdownSprite(introAlts[1], antialias);
+							FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
+						}
 						tick = ONE;
 					case 3:
-						countdownGo = createCountdownSprite(introAlts[2], antialias);
-						FlxG.sound.play(Paths.sound('rap' + introSoundsSuffix), 0.6);
+						if(curSong != 'lore')
+						{
+							countdownGo = createCountdownSprite(introAlts[2], antialias);
+							FlxG.sound.play(Paths.sound('rap' + introSoundsSuffix), 0.6);
+						}
 						tick = GO;
 					case 4:
 						tick = START;
@@ -2002,7 +2011,7 @@ class PlayState extends MusicBeatState
 
 		iconP1.x = healthBar.barCenter + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
 		iconP2.x = healthBar.barCenter - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
-		if(curSong == 'lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 100) / 2 - iconOffset * 2;
+		if(curSong == 'lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 50) / 2 - iconOffset * 2;
 		if(curSong == 'lore') iconGF.x = healthBar.barCenter + (150 * iconGF.scale.x + 0) / 2 - iconOffset;
 
 		if (healthBar.percent < 20) 
