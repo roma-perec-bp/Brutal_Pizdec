@@ -1,14 +1,13 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-1,
 				0
 			],
-			"anim": "danceLeft",
+			"loop": false,
 			"fps": 24,
-			"name": "oink idle",
+			"anim": "danceLeft",
 			"indices": [
 				0,
 				1,
@@ -18,17 +17,17 @@
 				5,
 				6,
 				7
-			]
+			],
+			"name": "oink idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				17,
 				2
 			],
-			"anim": "danceRight",
+			"loop": false,
 			"fps": 24,
-			"name": "oink idle",
+			"anim": "danceRight",
 			"indices": [
 				8,
 				9,
@@ -37,95 +36,96 @@
 				12,
 				13,
 				14
-			]
+			],
+			"name": "oink idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				70,
 				-141
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "oink down0",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "oink down0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				16,
 				57
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "oink up0",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "oink up0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				11,
 				87
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "oink up miss",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "oink up miss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				95,
 				-159
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "oink down miss"
+			"fps": 24,
+			"name": "oink down miss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				385,
 				-27
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "oink right miss"
+			"fps": 24,
+			"name": "oink right miss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				93,
 				-29
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "oink left miss"
+			"fps": 24,
+			"name": "oink left miss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				27,
 				-22
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "oink left0"
+			"fps": 24,
+			"name": "oink left0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				172,
 				-27
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "oink right0"
+			"fps": 24,
+			"name": "oink right0",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
@@ -138,8 +138,8 @@
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
-		102,
-		204
+		0,
+		175
 	],
 	"camera_position": [
 		30,

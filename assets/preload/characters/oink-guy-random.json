@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "random_short"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "random",
+			"fps": 24,
+			"name": "random_short",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/oink_guy_random",
+	"position": [
+		-140,
+		200
+	],
+	"healthicon": "oink-pixel",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		0,
+		175
+	],
+	"camera_position": [
+		30,
+		140
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}
