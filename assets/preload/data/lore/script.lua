@@ -17,6 +17,9 @@ function onCreate()
     setProperty('iconGF.alpha', 0.0001)
 
     setProperty('gf.alpha', 0.001)
+
+    precacheImage('characters/oink_guy_cuts')
+    precacheImage('rom_coming')
 end
 
 function onCreatePost()
