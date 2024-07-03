@@ -10,7 +10,7 @@ function onCreate()
     makeLuaSprite('blackFlash', nil, 0, 0)
     makeGraphic('blackFlash', 1280, 720, '000000')
     setObjectCamera('blackFlash', 'camhud')
-    addLuaSprite('blackFlash', false)
+    addLuaSprite('blackFlash', true)
 
     setProperty('rom.alpha', 0.0001)
     setProperty('iconROM.visible', false)
