@@ -18,6 +18,8 @@ class FreeplaySelectState extends MusicBeatState{
 	var rightArrows:FlxSprite;
 
 	var disableInput:Bool = false;
+
+	var cantTouchYet:Bool = false;
     override function create(){
 		final ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 
@@ -78,9 +80,9 @@ class FreeplaySelectState extends MusicBeatState{
 			FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, (FlxG.mouse.screenX-(FlxG.width/2)) * 0.015, (1/30)*240*elapsed);
 			FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
 			
-			if (controls.UI_LEFT_P) 
+			if (controls.UI_LEFT_P || FlxG.mouse.overlaps(leftArrows) && FlxG.mouse.justPressed)
 				changeSelection(-1);
-			if (controls.UI_RIGHT_P) 
+			if (controls.UI_RIGHT_P || FlxG.mouse.overlaps(rightArrows) && FlxG.mouse.justPressed) 
 				changeSelection(1);
 			if (controls.BACK) {
 				FlxG.sound.play(Paths.sound('cancelMenu'));
@@ -92,22 +94,22 @@ class FreeplaySelectState extends MusicBeatState{
 				changeSelection(-FlxG.mouse.wheel);
 			}
 
-			if (controls.ACCEPT){
+			if (controls.ACCEPT && !cantTouchYet){
 				pressed();
 			}
 
 			sprItemsGroup.forEach(function(spr:FlxSprite)
 			{
-				if(FlxG.mouse.overlaps(spr) && spr.ID == curSelected && FlxG.mouse.justPressed)
+				if(FlxG.mouse.overlaps(spr) && spr.ID == curSelected && FlxG.mouse.justPressed && !cantTouchYet)
 					pressed();
 			});
 
-			if (controls.UI_RIGHT)
+			if (controls.UI_RIGHT || FlxG.mouse.overlaps(rightArrows))
 				rightArrows.animation.play('press')
 			else
 				rightArrows.animation.play('idle');
 	
-			if (controls.UI_LEFT)
+			if (controls.UI_LEFT || FlxG.mouse.overlaps(leftArrows))
 				leftArrows.animation.play('press');
 			else
 				leftArrows.animation.play('idle');
@@ -153,6 +155,7 @@ class FreeplaySelectState extends MusicBeatState{
 	}
 
     function changeSelection(change:Int = 0) {
+		cantTouchYet = true;
 		curSelected += change;
 		if (curSelected < 0)
 			curSelected = freeplayCats.length - 1;
@@ -160,6 +163,10 @@ class FreeplaySelectState extends MusicBeatState{
 			curSelected = 0;
 
 		var bullShit:Int = 0;
+
+		new FlxTimer().start(0.5, function(tmr:FlxTimer) {
+			cantTouchYet = false;
+		});
 
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 	}

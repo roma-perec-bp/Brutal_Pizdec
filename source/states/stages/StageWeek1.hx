@@ -32,8 +32,45 @@ class StageWeek1 extends BaseStage
 			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
 			stageCurtains.updateHitbox();
 			add(stageCurtains);
+
+			if(PlayState.SONG.song == 'lore')
+			{
+				setStartCallback(startCut);
+				setEndCallback(endCut);
+			}
 		}
 	}
+
+	function startCut()
+	{
+		var matt:FlxSprite = new FlxSprite().loadGraphic(Paths.image('robtop'));
+		matt.scale.set(0.5, 0.5);
+		matt.updateHitbox();
+		matt.screenCenter();
+		add(matt);
+		matt.cameras = [camHUD];
+
+		FlxG.sound.play(Paths.sound('matpat_theme'), 1, false, null, true, function() {
+			FlxTween.tween(matt, {alpha: 0}, 1);
+			startCountdown();
+		});
+	}
+
+	function endCut()
+	{
+		var no:FlxSprite = new FlxSprite().loadGraphic(Paths.image('yesno'));
+		no.updateHitbox();
+		no.screenCenter();
+		add(no);
+		no.cameras = [camHUD];
+
+		FlxG.sound.play(Paths.sound('no_rights'), 1);
+
+		new FlxTimer().start(2, function(tmr:FlxTimer) {
+			endSong();
+		});
+	}
+
 	override function eventPushed(event:objects.Note.EventNote)
 	{
 		switch(event.event)

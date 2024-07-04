@@ -195,6 +195,11 @@ class PauseSubState extends MusicBeatSubstate
 				}
 			}
 		});
+
+		if(accepted)
+		{
+			close();
+		}
 	}
 
 	public static function restartSong(noTrans:Bool = false)
