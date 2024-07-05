@@ -11,6 +11,7 @@ function onCreate()
     makeGraphic('blackFlash', 1280, 720, '000000')
     setObjectCamera('blackFlash', 'camhud')
     addLuaSprite('blackFlash', false) --эндер я ноты видеть хочу нахуй ты на тру ставишь
+    -- так и планировалось
 
     setProperty('rom.alpha', 0.0001)
     setProperty('iconROM.visible', false)
@@ -23,7 +24,7 @@ function onCreate()
 end
 
 function onCreatePost()
-    makeLuaSprite('pizdec', 'hornyJump')
+    makeLuaSprite('pizdec', 'hornyJump') -- ватафак ром
     setObjectCamera('pizdec', 'camhud')
     setProperty('pizdec.alpha', 0.0001)
     addLuaSprite('pizdec', false)
