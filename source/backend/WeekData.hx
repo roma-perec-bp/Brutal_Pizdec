@@ -90,8 +90,8 @@ class WeekData {
 		var directories:Array<String> = [Paths.mods(), Paths.getPreloadPath()];
 		var originalLength:Int = directories.length;
 
-		for (mod in Mods.parseList().enabled)
-			directories.push(Paths.mods(mod + '/'));
+//		for (mod in Mods.parseList().enabled)
+			//directories.push(Paths.mods(mod + '/'));
 		#else
 		var directories:Array<String> = [Paths.getPreloadPath()];
 		var originalLength:Int = directories.length;

@@ -272,7 +272,10 @@ class StoryMenuState extends MusicBeatState
 
 				grpWeekText.members[curWeek].startFlashing();
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
-				FlxG.camera.shake(0.003, 5);
+				if (ClientPrefs.data.screenShake) {
+					FlxG.camera.shake(0.003, 5);
+				}
+				
 				stopspamming = true;
 			}
 

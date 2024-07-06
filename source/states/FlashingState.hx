@@ -67,13 +67,13 @@ class FlashingState extends MusicBeatState
 		noText.alpha = 0;
 		add(noText);
 
-		botsuka = new FlxSprite().loadGraphic(Paths.image('dolbaeb'));
+		botsuka = new FlxSprite().loadGraphic(Paths.image('dolbaeb')); // Это к хваву
 		botsuka.antialiasing = false; //huli net to
 		botsuka.screenCenter();
 		botsuka.alpha = 0;
 		add(botsuka);
 
-		rippvzdich = new FlxSprite().loadGraphic(Paths.image('fnf'));
+		rippvzdich = new FlxSprite().loadGraphic(Paths.image('fnf')); // А это остальным долбаёбам
 		rippvzdich.antialiasing = false; //huli net to
 		rippvzdich.screenCenter();
 		rippvzdich.alpha = 0;

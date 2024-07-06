@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-6,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Gorox Left"
+		},
+		{
+			"offsets": [
+				-6,
+				192
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Gorox Up"
+		},
+		{
+			"offsets": [
+				-6,
+				3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Gorox Right"
+		},
+		{
+			"offsets": [
+				0,
+				-30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Gorox Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Gorox Idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/goroh_kurilshik",
+	"position": [
+		0,
+		260
+	],
+	"healthicon": "jamar",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		195,
+		16
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

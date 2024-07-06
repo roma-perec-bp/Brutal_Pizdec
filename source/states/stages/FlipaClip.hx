@@ -20,11 +20,13 @@ class FlipaClip extends BaseStage
 
 	override function createPost()
 	{
+		if(!ClientPrefs.data.lowQuality) { // у меня с этим лагает
 		water = new BGSprite('Flipaclip', 0, 550, 0, 0);
 		water.setGraphicSize(Std.int(water.width * 0.22));
 		water.scale.set(0.2, 0.2);
 		add(water);
 		water.cameras = [camHUD];
+		}
 	}
 
 	override function update(elapsed:Float)

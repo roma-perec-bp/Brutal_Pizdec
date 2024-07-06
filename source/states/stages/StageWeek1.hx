@@ -32,12 +32,12 @@ class StageWeek1 extends BaseStage
 			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
 			stageCurtains.updateHitbox();
 			add(stageCurtains);
+		}
 
-			if(PlayState.SONG.song == 'lore')
-			{
-				setStartCallback(startCut);
-				setEndCallback(endCut);
-			}
+		if(PlayState.SONG.song == 'lore')
+		{
+			setStartCallback(startCut);
+			setEndCallback(endCut);
 		}
 	}
 
@@ -109,7 +109,9 @@ class StageWeek1 extends BaseStage
 						{
 							dadbattleBlack.visible = true;
 							dadbattleLight.visible = true;
-							dadbattleFog.visible = true;
+							if(!ClientPrefs.data.lowQuality) {
+								dadbattleFog.visible = true;
+							} // тоже лаги с ним
 							defaultCamZoom += 0.12;
 						}
 

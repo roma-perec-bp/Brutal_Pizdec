@@ -812,7 +812,7 @@ class FunkinLua {
 			PlayState.chartingMode = false;
 			game.transitioning = true;
 			FlxG.camera.followLerp = 0;
-			Mods.loadTopMod();
+//			Mods.loadTopMod();
 			return true;
 		});
 		Lua_helper.add_callback(lua, "getSongPosition", function() {

@@ -56,7 +56,6 @@ class Void extends BaseStage
 	var jumpscareSizeInterval:Float = 1.323;
 
 	function jumpscare(duration:Float) {
-		// jumpscare
 		if (ClientPrefs.data.flashing) {
 				jumpScare.visible = true;
 				jumpScare.alpha = FlxG.random.float(0.6, 1);

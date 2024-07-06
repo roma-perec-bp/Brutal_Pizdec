@@ -46,7 +46,7 @@ class MainMenuState extends MusicBeatState
 		#if MODS_ALLOWED
 		Mods.pushGlobalMods();
 		#end
-		Mods.loadTopMod();
+//		Mods.loadTopMod();
 
 		#if desktop
 		// Updating Discord Rich Presence

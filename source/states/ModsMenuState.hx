@@ -388,20 +388,6 @@ class ModsMenuState extends MusicBeatState
 		}
 	}
 
-	function saveTxt()
-	{
-		var fileStr:String = '';
-		for (values in modsList)
-		{
-			if(fileStr.length > 0) fileStr += '\n';
-			fileStr += values[0] + '|' + (values[1] ? '1' : '0');
-		}
-
-		var path:String = 'modsList.txt';
-		File.saveContent(path, fileStr);
-		Mods.pushGlobalMods();
-	}
-
 	var noModsSine:Float = 0;
 	var canExit:Bool = true;
 	override function update(elapsed:Float)
@@ -419,7 +405,6 @@ class ModsMenuState extends MusicBeatState
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			FlxG.mouse.visible = false;
-			saveTxt();
 			if(needaReset)
 			{
 				//MusicBeatState.switchState(new TitleState());

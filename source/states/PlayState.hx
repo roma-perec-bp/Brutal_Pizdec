@@ -2477,19 +2477,21 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'Screen Shake':
-				var valuesArray:Array<String> = [value1, value2];
-				var targetsArray:Array<FlxCamera> = [camGame, camHUD];
-				for (i in 0...targetsArray.length) {
-					var split:Array<String> = valuesArray[i].split(',');
-					var duration:Float = 0;
-					var intensity:Float = 0;
-					if(split[0] != null) duration = Std.parseFloat(split[0].trim());
-					if(split[1] != null) intensity = Std.parseFloat(split[1].trim());
-					if(Math.isNaN(duration)) duration = 0;
-					if(Math.isNaN(intensity)) intensity = 0;
+				if (ClientPrefs.data.screenShake) {
+					var valuesArray:Array<String> = [value1, value2];
+					var targetsArray:Array<FlxCamera> = [camGame, camHUD];
+					for (i in 0...targetsArray.length) {
+						var split:Array<String> = valuesArray[i].split(',');
+						var duration:Float = 0;
+						var intensity:Float = 0;
+						if(split[0] != null) duration = Std.parseFloat(split[0].trim());
+						if(split[1] != null) intensity = Std.parseFloat(split[1].trim());
+						if(Math.isNaN(duration)) duration = 0;
+						if(Math.isNaN(intensity)) intensity = 0;
 
-					if(duration > 0 && intensity != 0) {
-						targetsArray[i].shake(intensity, duration);
+						if(duration > 0 && intensity != 0) {
+							targetsArray[i].shake(intensity, duration);
+						}
 					}
 				}
 
@@ -2615,7 +2617,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if (!ClientPrefs.data.flashing) color = "0xFFFFFFFF";
+					if (ClientPrefs.data.flashing) color = "0xFFFFFFFF";
 				}
 				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 	
@@ -3001,7 +3003,7 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					Mods.loadTopMod();
+//					Mods.loadTopMod();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					#if desktop DiscordClient.resetClientID(); #end
 
@@ -3042,7 +3044,7 @@ class PlayState extends MusicBeatState
 			else
 			{
 				trace('WENT BACK TO FREEPLAY??');
-				Mods.loadTopMod();
+//				Mods.loadTopMod();
 				#if desktop DiscordClient.resetClientID(); #end
 
 				cancelMusicFadeTween();

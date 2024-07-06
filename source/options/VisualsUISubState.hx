@@ -70,9 +70,21 @@ class VisualsUISubState extends BaseOptionsMenu
 			"What should the Time Bar display?",
 			'timeBarType',
 			'string',
-			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
+			['Time Left', 'Time Elapsed', 'Disabled']);
 		addOption(option);
-		
+
+		var option:Option = new Option('Flashing Lights',
+			"Uncheck this if you're sensitive to flashing lights!",
+			'flashing',
+			'bool');
+		addOption(option);
+
+		var option:Option = new Option('Screen Shake',
+			"Uncheck this if you're sensitive to screen shake!",
+			'screenShake',
+			'bool');
+		addOption(option);
+
 		#if !mobile
 		var option:Option = new Option('FPS Counter',
 			'If unchecked, hides FPS Counter.',

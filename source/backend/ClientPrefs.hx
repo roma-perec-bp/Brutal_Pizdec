@@ -13,6 +13,7 @@ class SaveVariables {
 	public var opponentStrums:Bool = true;
 	public var showFPS:Bool = true;
 	public var flashing:Bool = true;
+	public var screenShake:Bool = true;
 	public var autoPause:Bool = true;
 	public var antialiasing:Bool = true;
 	public var noteSkin:String = 'Default';
@@ -20,7 +21,7 @@ class SaveVariables {
 	public var splashAlpha:Float = 0.6;
 	public var lowQuality:Bool = false;
 	public var shaders:Bool = true;
-	public var cacheOnGPU:Bool = #if !switch false #else true #end; //шадоу марио я твою маму выебу нахуй за это
+	public var cacheOnGPU:Bool = #if !switch false #else true #end; //шадоу марио я твою маму выебу нахуй за этоs
 	public var framerate:Int = 60;
 	public var camZooms:Bool = true;
 	public var hideHud:Bool = false;
