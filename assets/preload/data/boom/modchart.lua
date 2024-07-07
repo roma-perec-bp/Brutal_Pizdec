@@ -105,15 +105,15 @@ function onStepHit()
         noteTweenAlpha("ssex1", 0, 1, 10, "quartInOut")
         noteTweenAlpha("ssss", 1, 1, 10, "quartInOut")
         noteTweenAlpha("sssex1", 2, 1, 10, "quartInOut")
-        noteTweenAlpha("sex69", 3, 1, 1, "quartInOut")
-        noteTweenAngle("saltoHWAW1", 4, 360, 10, "quartInOut");
-        noteTweenAngle("saltoHWAW2", 5, 360, 10, "quartInOut");
-        noteTweenAngle("saltoHWAW3", 6, 360, 10, "quartInOut");
-        noteTweenAngle("saltoHWAW4", 7, 360, 10, "quartInOut");
-        noteTweenX('foxTween1', 4, 740 + Meow1, 10, 'quartInOut');
-    	noteTweenX('foxTween2', 5, 740 + Meow2, 10, 'quartInOut');
-    	noteTweenX('foxTween3', 6, 744 + Meow3, 10, 'quartInOut');
-    	noteTweenX('foxTween4', 7, 744 + Meow4, 10, 'quartInOut');
+        noteTweenAlpha("sex69", 3, 1, 10, "quartInOut")
+        noteTweenAngle("saltoHWAW1", 4, 360, 8, "quartInOut");
+        noteTweenAngle("saltoHWAW2", 5, 360, 8, "quartInOut");
+        noteTweenAngle("saltoHWAW3", 6, 360, 8, "quartInOut");
+        noteTweenAngle("saltoHWAW4", 7, 360, 8, "quartInOut");
+        noteTweenX('foxTween1', 4, 740 + Meow1, 8, 'quartInOut');
+    	noteTweenX('foxTween2', 5, 740 + Meow2, 8, 'quartInOut');
+    	noteTweenX('foxTween3', 6, 744 + Meow3, 8, 'quartInOut');
+    	noteTweenX('foxTween4', 7, 744 + Meow4, 8, 'quartInOut');
     end
     if curStep == 1664 then
         setProperty('vin.visible', true)
