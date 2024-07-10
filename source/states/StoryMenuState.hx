@@ -49,13 +49,14 @@ class StoryMenuState extends MusicBeatState
 		WeekData.reloadWeekFiles(true);
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 		persistentUpdate = persistentDraw = true;
-		
-		scoreText = new FlxText(10, 529, 0, "49324858", 42);
-		scoreText.setFormat(Paths.font("HouseofTerror.ttf"), 42,  FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
 		var scoring:FlxText = new FlxText(0, 469, 0, "SCORE", 62);
 		scoring.setFormat(Paths.font("HouseofTerror.ttf"), 62,  FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoring.x = FlxG.width - FlxG.width * 0.2;
+
+		scoreText = new FlxText(scoring.x + 60, 529, 0, "49324858", 42);
+		scoreText.setFormat(Paths.font("HouseofTerror.ttf"), 42,  FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreText.alignment = CENTER;
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
 		txtWeekTitle.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -161,7 +162,7 @@ class StoryMenuState extends MusicBeatState
 		if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 
 		scoreText.text = "" + lerpScore;
-		scoreText.x = FlxG.width - FlxG.width * 0.15;
+		scoreText.updateHitbox();
 
 		// FlxG.watch.addQuick('font', scoreText.font);
 
