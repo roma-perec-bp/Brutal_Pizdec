@@ -2,6 +2,6 @@
 <TextureAtlas imagePath="awards.png">
 	<!-- Created with Adobe Animate version 24.0.0.305 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="awards_hover0000" x="981" y="10" width="961" height="1750"/>
-	<SubTexture name="awards_normal0000" x="10" y="10" width="961" height="1750"/>
+	<SubTexture name="trophy_hover0000" x="981" y="10" width="961" height="1750"/>
+	<SubTexture name="trophy_normal0000" x="10" y="10" width="961" height="1750"/>
 </TextureAtlas>

@@ -12,8 +12,6 @@ import objects.AchievementPopup;
 import states.editors.MasterEditorMenu;
 import options.OptionsState;
 
-import shaders.ColorSwap;
-
 enum MainMenuColumn {
 	LEFT;
 	CENTER;
@@ -41,20 +39,16 @@ class MainMenuState extends MusicBeatState
 		'freeplay',
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
-		'gallery',
-		'awards'
+		'gallery'
 	];
 
 	//Left/Text options
 	var leftOptions:Array<String> = [
-		'awards',
+		'trophy',
 		'gallery'
 	];
 
 	var rightOption:String = 'options';
-
-	var origSaturTrophy:Float;
-	var shaderMonochrome:ColorSwap;
 
 	var bros:FlxSprite;
 
@@ -106,12 +100,6 @@ class MainMenuState extends MusicBeatState
 					createMenuItem(option, 700, 478);
 				case 4:
 					createMenuItem(option, 490, 569);
-				case 5:
-					for(i in 0...Achievements.achievementsStuff.length)
-					{
-						if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
-							createMenuItem(option, 330, 335, true);
-					}
 			}
 		}
 
@@ -129,6 +117,31 @@ class MainMenuState extends MusicBeatState
 		bros.antialiasing = ClientPrefs.data.antialiasing;
 		bros.scale.set(1, 1);
 		add(bros);
+		
+		for(i in 0...Achievements.achievementsStuff.length)
+		{
+			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
+			{
+				var trophy:FlxSprite = new FlxSprite(330, 335);
+				if(monochrome() == false)
+				{
+					trophy.frames = Paths.getSparrowAtlas('awards_ew');
+				}
+				else
+				{
+					trophy.frames = Paths.getSparrowAtlas('awards');
+				}
+				trophy.animation.addByPrefix('idle', 'trophy_normal', 24, true);
+				trophy.animation.play('idle');
+				trophy.scale.set(0.30, 0.30);
+
+				trophy.updateHitbox();
+				
+				trophy.antialiasing = ClientPrefs.data.antialiasing;
+				add(trophy);
+
+			}
+		}
 
 		var overlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBangerOverlay'));
 		overlay.antialiasing = ClientPrefs.data.antialiasing;
@@ -140,7 +153,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
-		changeItem();
+		changeItem(0, true);
 
 		FlxG.camera.zoom = 3;
 		FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1.1, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween) {
@@ -154,35 +167,19 @@ class MainMenuState extends MusicBeatState
 		FlxG.mouse.visible = true;
 	}
 
-	function createMenuItem(name:String, x:Float, y:Float, ?trophy:Bool = false):FlxSprite
+	function createMenuItem(name:String, x:Float, y:Float):FlxSprite
 	{
 		var menuItem:FlxSprite = new FlxSprite(x, y);
-		if(trophy == false)
-		{
-			if(name == 'story' || name == 'awards' || name == 'freeplay' || name == 'credits')
-				menuItem.frames = Paths.getSparrowAtlas('buttons_mainmenu');
-			else
-				menuItem.frames = Paths.getSparrowAtlas('${name}_button');
 
-			menuItem.animation.addByPrefix('idle', '${name}_normal', 24, true);
-			menuItem.animation.addByPrefix('selected', '${name}_hover', 24, true);
-			menuItem.animation.play('idle');
-		}
+		if(name == 'story' || name == 'awards' || name == 'freeplay' || name == 'credits')
+			menuItem.frames = Paths.getSparrowAtlas('buttons_mainmenu');
 		else
-		{
-			menuItem.frames = Paths.getSparrowAtlas('awards');
-			menuItem.animation.addByPrefix('idle', 'awards_normal', 24, true);
-			menuItem.animation.addByPrefix('selected', 'awards_hover', 24, true);
-			menuItem.scale.set(0.30, 0.30);
-			shaderMonochrome = new ColorSwap();
-			menuItem.shader = shaderMonochrome.shader;
-			if(monochrome() == false)
-			{
-				shaderMonochrome.saturation = -1;
-				shaderMonochrome.brightness = -0.05;
-			}
-			origSaturTrophy = shaderMonochrome.brightness;
-		}
+			menuItem.frames = Paths.getSparrowAtlas('${name}_button');
+
+		menuItem.animation.addByPrefix('idle', '${name}_normal', 24, true);
+		menuItem.animation.addByPrefix('selected', '${name}_hover', 24, true);
+		menuItem.animation.play('idle');
+
 		menuItem.updateHitbox();
 		
 		menuItem.antialiasing = ClientPrefs.data.antialiasing;
@@ -343,6 +340,7 @@ class MainMenuState extends MusicBeatState
 							case 'freeplay': MusicBeatState.switchState(new FreeplaySelectState());
 							#if ACHIEVEMENTS_ALLOWED
 							case 'awards': MusicBeatState.switchState(new AchievementsStatePVZ());
+							case 'trophy': MusicBeatState.switchState(new AchievementsStatePVZ());
 							#end
 							case 'credits': MusicBeatState.switchState(new CreditsState());
 							case 'options':
@@ -380,13 +378,13 @@ class MainMenuState extends MusicBeatState
 		super.update(elapsed);
 	}
 
-	function changeItem(change:Int = 0)
+	function changeItem(change:Int = 0, ?noSound:Bool)
 	{
 		var prevEntry:Int = curSelected;
 
 		if(change != 0) curColumn = CENTER;
 		curSelected = FlxMath.wrap(curSelected + change, 0, optionShit.length - 1);
-		if (curSelected != prevEntry) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+		if (!noSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		for (item in menuItems)
 			item.animation.play('idle');

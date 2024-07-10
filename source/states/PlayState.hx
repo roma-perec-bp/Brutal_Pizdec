@@ -438,7 +438,7 @@ class PlayState extends MusicBeatState
 		}
 
 		add(gfGroup);
-		if(SONG.song == 'lore') add(romGroup);
+		if(SONG.song == 'Lore') add(romGroup);
 		add(dadGroup);
 		add(boyfriendGroup);
 
@@ -480,7 +480,7 @@ class PlayState extends MusicBeatState
 			startCharacterScripts(gf.curCharacter);
 		}
 
-		if(SONG.song == 'lore')
+		if(SONG.song == 'Lore')
 		{
 			rom = new Character(0, 0, 'rom');
 			startCharacterPos(rom, true);
@@ -625,7 +625,7 @@ class PlayState extends MusicBeatState
 		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
 		add(iconP2);
 
-		if(SONG.song == 'lore')
+		if(SONG.song == 'Lore')
 		{
 			iconROM = new HealthIcon(rom.healthIcon, false);
 			iconROM.y = healthBar.y - 50;
@@ -726,8 +726,8 @@ class PlayState extends MusicBeatState
 		healthBar.cameras = [camHUD];
 		healthBarBGOverlay.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
-		if(SONG.song == 'lore') iconROM.cameras = [camHUD];
-		if(SONG.song == 'lore') iconGF.cameras = [camHUD];
+		if(SONG.song == 'Lore') iconROM.cameras = [camHUD];
+		if(SONG.song == 'Lore') iconGF.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		accuracyShit.cameras = [camHUD];
@@ -1960,7 +1960,7 @@ class PlayState extends MusicBeatState
 
 		if (controls.justPressed('debug_1') && !endingSong && !inCutscene)
 		{
-			if(curSong == "lore" || curSong == "t-short")
+			if(curSong == "Lore" || curSong == "t-short")
 			{
 				#if ACHIEVEMENTS_ALLOWED
 				Achievements.loadAchievements();
@@ -1991,14 +1991,14 @@ class PlayState extends MusicBeatState
 		iconP2.scale.set(mult, mult);
 		iconP2.updateHitbox();
 
-		if(curSong == 'lore')
+		if(curSong == 'Lore')
 		{
 			var mult:Float = FlxMath.lerp(1, iconROM.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
 			iconROM.scale.set(mult, mult);
 			iconROM.updateHitbox();
 		}
 
-		if(curSong == 'lore')
+		if(curSong == 'Lore')
 			{
 				var mult:Float = FlxMath.lerp(1, iconROM.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
 				iconGF.scale.set(mult, mult);
@@ -2010,29 +2010,29 @@ class PlayState extends MusicBeatState
 
 		iconP1.x = healthBar.barCenter + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
 		iconP2.x = healthBar.barCenter - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
-		if(curSong == 'lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 250) / 2 - iconOffset * 2;
-		if(curSong == 'lore') iconGF.x = healthBar.barCenter + (150 * iconGF.scale.x + 0) / 2 - iconOffset;
+		if(curSong == 'Lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 250) / 2 - iconOffset * 2;
+		if(curSong == 'Lore') iconGF.x = healthBar.barCenter + (150 * iconGF.scale.x + 0) / 2 - iconOffset;
 
 		if (healthBar.percent < 20) 
 		{
 			iconP1.animation.curAnim.curFrame = 1;
-			if(curSong == 'lore') iconGF.animation.curAnim.curFrame = 1;
+			if(curSong == 'Lore') iconGF.animation.curAnim.curFrame = 1;
 			iconP2.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
-			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
+			if(curSong == 'Lore') iconROM.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
 		}
 		else if (healthBar.percent > 80)
 		{
 			iconP1.animation.curAnim.curFrame = iconP1.numFrames > 2 ? 2 : 0;
-			if(curSong == 'lore') iconGF.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
+			if(curSong == 'Lore') iconGF.animation.curAnim.curFrame = iconP2.numFrames > 2 ? 2 : 0;
 			iconP2.animation.curAnim.curFrame = 1;
-			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = 1;
+			if(curSong == 'Lore') iconROM.animation.curAnim.curFrame = 1;
 		}
 		else 
 		{
 			iconP1.animation.curAnim.curFrame = 0;
-			if(curSong == 'lore') iconROM.animation.curAnim.curFrame = 0;
+			if(curSong == 'Lore') iconROM.animation.curAnim.curFrame = 0;
 			iconP2.animation.curAnim.curFrame = 0;
-			if(curSong == 'lore') iconGF.animation.curAnim.curFrame = 0;
+			if(curSong == 'Lore') iconGF.animation.curAnim.curFrame = 0;
 		}
 
 		if (controls.justPressed('debug_2') && !endingSong && !inCutscene)
@@ -3837,13 +3837,13 @@ class PlayState extends MusicBeatState
 			notes.sort(FlxSort.byY, ClientPrefs.data.downScroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
 
 		if(dropTime <= 0) iconP1.scale.set(1.2, 1.2);
-		if(curSong == 'lore') iconROM.scale.set(1.2, 1.2);
-		if(curSong == 'lore') iconGF.scale.set(1.2, 1.2);
+		if(curSong == 'Lore') iconROM.scale.set(1.2, 1.2);
+		if(curSong == 'Lore') iconGF.scale.set(1.2, 1.2);
 		iconP2.scale.set(1.2, 1.2);
 
 		if(dropTime <= 0) iconP1.updateHitbox();
-		if(curSong == 'lore') iconROM.updateHitbox();
-		if(curSong == 'lore') iconGF.updateHitbox();
+		if(curSong == 'Lore') iconROM.updateHitbox();
+		if(curSong == 'Lore') iconGF.updateHitbox();
 		iconP2.updateHitbox();
 
 		if (gf != null && curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
@@ -3853,7 +3853,7 @@ class PlayState extends MusicBeatState
 		if (curBeat % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 			dad.dance();
 
-		if(curSong == 'lore')
+		if(curSong == 'Lore')
 		{
 			if (curBeat % rom.danceEveryNumBeats == 0 && rom.animation.curAnim != null && !rom.animation.curAnim.name.startsWith('sing') && !rom.stunned)
 				rom.dance();
