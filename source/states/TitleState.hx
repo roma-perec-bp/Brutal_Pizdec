@@ -92,8 +92,8 @@ class TitleState extends MusicBeatState
 
 		ClientPrefs.loadPrefs();
 
-		FlxG.mouse.unload();
-		FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);
+		//FlxG.mouse.unload();
+		//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);
 		Highscore.load();
 
 		// IGNORE THIS!!!
