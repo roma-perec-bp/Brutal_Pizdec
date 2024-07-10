@@ -185,6 +185,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	function coolStartDeath(?volume:Float = 1):Void
 	{
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
+		FlxTween.tween(FlxG.camera, {zoom: 0.9}, 4, {ease: FlxEase.quadInOut}); //если камера в такой пизде то идем в зум 0.9
 	}
 
 	function endBullshit():Void

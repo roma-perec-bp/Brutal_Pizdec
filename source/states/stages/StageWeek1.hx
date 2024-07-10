@@ -34,7 +34,7 @@ class StageWeek1 extends BaseStage
 			add(stageCurtains);
 		}
 
-		if(PlayState.SONG.song == 'lore')
+		if(PlayState.SONG.song == 'Lore')
 		{
 			setStartCallback(startCut);
 			setEndCallback(endCut);

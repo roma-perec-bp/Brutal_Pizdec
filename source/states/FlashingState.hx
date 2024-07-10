@@ -79,8 +79,8 @@ class FlashingState extends MusicBeatState
 		rippvzdich.alpha = 0;
 		add(rippvzdich);
 		
-		skiptext = new FlxText(5, FlxG.height-28, FlxG.width, "Skipping...", 16);
-		skiptext.setFormat("vcr.ttf", 18, FlxColor.WHITE, LEFT);
+		skiptext = new FlxText(5, FlxG.height-28, FlxG.width, "Skipping...", 26);
+		skiptext.setFormat("vcr.ttf", 26, FlxColor.WHITE, LEFT);
 		add(skiptext);
 
 		gmanMoment = new FlxSound().loadEmbedded(Paths.sound('disclamer/flash-2'));
@@ -238,7 +238,7 @@ class FlashingState extends MusicBeatState
 				noText.alpha = 1;
 			}
 		}
-		if(FlxG.keys.pressed.ESCAPE && canChoose == false) {
+		if((FlxG.keys.pressed.ESCAPE || FlxG.keys.pressed.ENTER)&& canChoose == false) {
 			proceed = Math.min(proceed + elapsed*60, proceedMax); // aka 1
 			skiptext.alpha = proceed/100;
 			if (proceed == proceedMax)

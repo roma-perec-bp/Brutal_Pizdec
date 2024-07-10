@@ -1199,21 +1199,21 @@ class PlayState extends MusicBeatState
 					case 0:
 						tick = THREE;
 					case 1:
-						if(curSong != 'lore')
+						if(curSong != 'Lore')
 						{
 							countdownReady = createCountdownSprite(introAlts[0], antialias);
 							FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
 						}
 						tick = TWO;
 					case 2:
-						if(curSong != 'lore')
+						if(curSong != 'Lore')
 						{
 							countdownSet = createCountdownSprite(introAlts[1], antialias);
 							FlxG.sound.play(Paths.sound('bash' + introSoundsSuffix), 0.6);
 						}
 						tick = ONE;
 					case 3:
-						if(curSong != 'lore')
+						if(curSong != 'Lore')
 						{
 							countdownGo = createCountdownSprite(introAlts[2], antialias);
 							FlxG.sound.play(Paths.sound('rap' + introSoundsSuffix), 0.6);
