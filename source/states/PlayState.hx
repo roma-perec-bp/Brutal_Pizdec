@@ -832,8 +832,8 @@ class PlayState extends MusicBeatState
 		super.create();
 		Paths.clearUnusedMemory();
 
-		FlxG.mouse.unload();
-		FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
+		//FlxG.mouse.unload();
+		//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
 		FlxG.mouse.visible = true;
 		
 		CustomFadeTransition.nextCamera = camOther;

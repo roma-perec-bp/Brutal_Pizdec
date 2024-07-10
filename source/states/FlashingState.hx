@@ -104,7 +104,7 @@ class FlashingState extends MusicBeatState
 							gmanMoment.play();
 							timerOfWaiting();
 							FlxG.mouse.unload();
-							FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
+							//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
 							FlxG.mouse.visible = true;
 						});
 					});
