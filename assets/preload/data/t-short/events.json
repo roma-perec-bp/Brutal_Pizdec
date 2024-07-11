@@ -1,0 +1,81 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Set Cam Zoom Alt",
+						"1.1",
+						"18"
+					],
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"2",
+						"0.5"
+					]
+				]
+			],
+			[
+				42000,
+				[
+					[
+						"Cam Boom Speed",
+						"1",
+						"0.78"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				66000,
+				[
+					[
+						"Cam Boom Speed",
+						"2",
+						"0.5"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				96000,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"1"
+					]
+				]
+			]
+		]
+	}
+}
