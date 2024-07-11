@@ -13,12 +13,14 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'downScroll', //Save data variable name
 			'bool'); //Variable type
 		addOption(option);
+		option.noChange = true;
 
 		var option:Option = new Option('Middlescroll',
 			'If checked, your notes get centered.\n(WARNING!!! This option will break modcharts)',
 			'middleScroll',
 			'bool');
 		addOption(option);
+		option.noChange = true;
 
 		var option:Option = new Option('Ghost Tapping',
 			"If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.",

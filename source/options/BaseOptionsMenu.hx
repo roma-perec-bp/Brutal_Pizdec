@@ -17,6 +17,9 @@ class BaseOptionsMenu extends MusicBeatSubstate
 	private var descBox:FlxSprite;
 	private var descText:FlxText;
 
+	private var zrya:FlxSprite;
+	var doing:Bool = false;
+
 	public var title:String;
 	public var rpcTitle:String;
 
@@ -36,6 +39,15 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		add(bg);
+
+		zrya = new FlxSprite(860, 135);
+		zrya.frames = Paths.getSparrowAtlas('no');
+		zrya.animation.addByPrefix('idle', 'idle', 24, true);
+		zrya.animation.addByPrefix('boom', 'zrya', 24, false);
+		zrya.updateHitbox();
+		zrya.antialiasing = ClientPrefs.data.antialiasing;
+		add(zrya);
+		zrya.visible = false;
 
 		// avoids lagspikes while scrolling through menus!
 		grpOptions = new FlxTypedGroup<Alphabet>();
@@ -131,10 +143,29 @@ class BaseOptionsMenu extends MusicBeatSubstate
 			{
 				if(controls.ACCEPT)
 				{
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-					curOption.setValue((curOption.getValue() == true) ? false : true);
-					curOption.change();
-					reloadCheckboxes();
+					if(curOption.noChange == false)
+					{
+						FlxG.sound.play(Paths.sound('scrollMenu'));
+						curOption.setValue((curOption.getValue() == true) ? false : true);
+						curOption.change();
+						reloadCheckboxes();
+					}
+					else
+					{
+						if(doing == false)
+						{
+							doing = true;
+							zrya.animation.play('boom', false);
+							zrya.visible = true;
+							FlxG.sound.music.fadeOut(1, 0);
+							new FlxTimer().start(7, function(tmr:FlxTimer)
+							{
+								zrya.visible = true;
+								FlxG.sound.music.fadeIn(1, 0, 1);
+								doing = true;
+							});
+						}
+					}
 				}
 			} else {
 				if(controls.UI_LEFT || controls.UI_RIGHT) {
