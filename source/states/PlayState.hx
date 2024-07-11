@@ -1966,7 +1966,7 @@ class PlayState extends MusicBeatState
 				Achievements.loadAchievements();
 				var achieveID:Int = Achievements.getAchievementIndex(curSong);
 				if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
-					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+					FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
 					achievementObj.onFinish = openChartEditor;
@@ -2293,7 +2293,7 @@ class PlayState extends MusicBeatState
 								Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 								ClientPrefs.saveSettings();
 								var achievementPop:AchievementPopup = new AchievementPopup(achievementName, camOther);
-								FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+								FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 								add(achievementPop);
 								achievementPop.onFinish = function() {
 									MusicBeatState.resetState();

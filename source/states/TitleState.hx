@@ -196,9 +196,9 @@ class TitleState extends MusicBeatState
 		gfDance.scale.set(0.65,0.65);
 		gfDance.screenCenter(X);
 
-		var logotrail:FlxTrail = new FlxTrail(gfDance, null, 14, 0, 1, 0.1);
+		var logotrail:FlxTrail = new FlxTrail(gfDance, null, 3, 6, 0.3, 0.002);
+		//logotrail.blend = ADD;
 		logotrail.color = 0xffff0000;
-		logotrail.blend = HARDLIGHT;
 		add(logotrail);
 
 		add(gfDance);
@@ -234,9 +234,10 @@ class TitleState extends MusicBeatState
 		textBG.alpha = 0.6;
 		add(textBG);
 		
-		titleText.scale.set(0.45,0.45);
+		//titleText.scale.set(0.45,0.45);
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
+		titleText.screenCenter(X);
 		titleText.antialiasing = ClientPrefs.data.antialiasing;
 
 		add(titleText);
@@ -468,15 +469,18 @@ class TitleState extends MusicBeatState
 				case 5:
 					FlxTween.tween(ngSpr, {alpha: 0}, 0.3, {ease: FlxEase.linear});
 					logo.visible = true;
-					FlxTween.tween(logo.scale, {x: 0.25, y: 0.25}, 0.3, {ease: FlxEase.quadOut});
+					FlxTween.tween(logo.scale, {x: 0.25, y: 0.25}, 0.5, {ease: FlxEase.backOut});
 				case 7:
-					logo.angle = 12;
-					FlxTween.tween(logo.scale, {x: 0.45, y: 0.45}, 0.01, {ease: FlxEase.linear});
+					logo.angle = 17;
+					FlxTween.tween(logo, {angle: 0}, 0.3, {ease: FlxEase.quadOut});
+					logo.scale.set(0.55, 0.55);
+					FlxTween.tween(logo.scale, {x: 0.45, y: 0.45}, 0.5, {ease: FlxEase.quadOut});
 					FlxTween.tween(white, {alpha: 1}, 0.8, {ease: FlxEase.linear});
 					if(!skippedIntro) FlxTween.tween(FlxG.camera, {zoom: 1.9}, 1.2, {ease: FlxEase.quadIn});
 				case 8:
-					logo.angle = -12;
-					FlxTween.tween(logo.scale, {x: 0.65, y: 0.65}, 0.01, {ease: FlxEase.linear});
+					logo.angle = -17;
+					FlxTween.tween(logo, {angle: 0}, 0.3, {ease: FlxEase.quadOut});
+					FlxTween.tween(logo.scale, {x: 1, y: 1}, 0.5, {ease: FlxEase.backInOut});
 				case 9:
 					skipIntro();
 			}

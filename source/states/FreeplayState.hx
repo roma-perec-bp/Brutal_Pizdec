@@ -14,6 +14,8 @@ import flixel.addons.display.FlxGridOverlay;
 
 import shaders.RimlightShader;
 
+import flixel.effects.FlxFlicker;
+
 using StringTools;
 import lime.app.Application;
 
@@ -39,6 +41,7 @@ class FreeplayState extends MusicBeatState
 	var intendedRating:Float = 0;
 
 	var portrait:FlxSprite;
+	var cantDo:Bool = false;
 
 	private var grpSongs:FlxTypedGroup<FlxText>;
 	private var curPlaying:Bool = false;
@@ -242,11 +245,6 @@ class FreeplayState extends MusicBeatState
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
-		if (FlxG.sound.music.volume < 0.7)
-		{
-			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
-		}
-
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, CoolUtil.boundTo(elapsed * 24, 0, 1)));
 		lerpRating = FlxMath.lerp(lerpRating, intendedRating, CoolUtil.boundTo(elapsed * 12, 0, 1));
 
@@ -275,97 +273,109 @@ class FreeplayState extends MusicBeatState
 		var shiftMult:Int = 1;
 		if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
 
-		if(songs.length > 1)
+		if(!cantDo)
 		{
-			if (upP)
-			{
-				changeSelection(-shiftMult);
-				changePortrait(songs[curSelected[freeplayType]].charPort);
-				holdTime = 0;
-			}
-			if (downP)
-			{
-				changeSelection(shiftMult);
-				changePortrait(songs[curSelected[freeplayType]].charPort);
-				holdTime = 0;
-			}
-
-			if(controls.UI_DOWN || controls.UI_UP)
-			{
-				var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
-				holdTime += elapsed;
-				var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
-
-				if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
+			if(songs.length > 1)
+			{		
+				if (upP)
 				{
-					changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
+					changeSelection(-shiftMult);
+					changePortrait(songs[curSelected[freeplayType]].charPort);
+					holdTime = 0;
+				}
+				if (downP)
+				{
+					changeSelection(shiftMult);
+					changePortrait(songs[curSelected[freeplayType]].charPort);
+					holdTime = 0;
+				}
+		
+				if(controls.UI_DOWN || controls.UI_UP)
+				{
+					var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
+					holdTime += elapsed;
+					var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
+		
+					if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
+					{
+						changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
+						changePortrait(songs[curSelected[freeplayType]].charPort);
+						changeDiff();
+					}
+				}
+		
+				if(FlxG.mouse.wheel != 0)
+				{
+					changeSelection(-FlxG.mouse.wheel);
 					changePortrait(songs[curSelected[freeplayType]].charPort);
 					changeDiff();
 				}
 			}
-
-			if(FlxG.mouse.wheel != 0)
-			{
-				changeSelection(-FlxG.mouse.wheel);
-				changePortrait(songs[curSelected[freeplayType]].charPort);
-				changeDiff();
-			}
-
-		}
-
-		if (upP || downP) changeDiff();
-
-		if (controls.BACK)
-		{
-			persistentUpdate = false;
-			if(colorTween != null) {
-				colorTween.cancel();
-			}
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new FreeplaySelectState());
-		}
 		
-		if (accepted || FlxG.mouse.justPressed)
-		{
-			persistentUpdate = false;
-			var songLowercase:String = Paths.formatToSongPath(songs[curSelected[freeplayType]].songName);
-			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-			//trace(poop);
-
-			#if sys
-			if(FileSystem.exists(Paths.json(songLowercase + '/' + poop)))
+			if (upP || downP) changeDiff();
+		
+			if (controls.BACK)
 			{
-			#end
-				PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-				PlayState.isStoryMode = false;
-				PlayState.storyDifficulty = curDifficulty;
-	
-				trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+				persistentUpdate = false;
 				if(colorTween != null) {
 					colorTween.cancel();
 				}
-				
-				if (FlxG.keys.pressed.SHIFT){
-					LoadingState.loadAndSwitchState(new ChartingState());
-				}else{
-				//	LoadingState.loadAndSwitchState(new CharSelectState()); //just tryna fix a bunch of shit
-					LoadingState.loadAndSwitchState(new PlayState());
-				}
-	
-				FlxG.sound.music.volume = 0;
-						
-				destroyFreeplayVocals();
-			#if sys
-			} else {
-				Application.current.window.alert('Null Song Reference: "' + poop + '". ', "Critical Error!");
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				MusicBeatState.switchState(new FreeplaySelectState());
 			}
-			#end
-		}
-		else if(controls.RESET)
-		{
-			persistentUpdate = false;
-			openSubState(new ResetScoreSubState(songs[curSelected[freeplayType]].songName, curDifficulty, songs[curSelected[freeplayType]].songCharacter));
-			FlxG.sound.play(Paths.sound('scrollMenu'));
+				
+			if (accepted || FlxG.mouse.justPressed)
+			{
+				persistentUpdate = false;
+				var songLowercase:String = Paths.formatToSongPath(songs[curSelected[freeplayType]].songName);
+				var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
+				//trace(poop);
+		
+				#if sys
+				if(FileSystem.exists(Paths.json(songLowercase + '/' + poop)))
+				{
+				#end
+					PlayState.SONG = Song.loadFromJson(poop, songLowercase);
+					PlayState.isStoryMode = false;
+					PlayState.storyDifficulty = curDifficulty;
+	
+					trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+					if(colorTween != null) {
+						colorTween.cancel();
+					}
+						
+					FlxG.sound.play(Paths.sound('confirmMenu'));
+					FlxG.sound.music.volume = 0;
+					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1, true);
+					cantDo = true;
+					destroyFreeplayVocals();
+		
+					for (i in 0...grpSongs.members.length)
+					{
+						if (i == curSelected[freeplayType])
+						{
+							FlxFlicker.flicker(grpSongs.members[i], 1, 0.06, false, false);
+							FlxFlicker.flicker(iconArray[i], 1, 0.06, false, false);
+						}
+					}
+
+					new FlxTimer().start(1, function(tmr:FlxTimer)
+					{
+						LoadingState.loadAndSwitchState(new PlayState(), true);
+						FreeplayState.destroyFreeplayVocals();
+					});
+				#if sys
+				} else {
+					Application.current.window.alert('Null Song Reference: "' + poop + '". ', "Critical Error!");
+				}
+				#end
+			}
+			else if(controls.RESET)
+			{
+				persistentUpdate = false;
+				openSubState(new ResetScoreSubState(songs[curSelected[freeplayType]].songName, curDifficulty, songs[curSelected[freeplayType]].songCharacter));
+				FlxG.sound.play(Paths.sound('scrollMenu'));
+			}
 		}
 
 		grpSongs.forEach(function(spr:FlxText)
