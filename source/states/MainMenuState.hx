@@ -13,6 +13,7 @@ import states.editors.MasterEditorMenu;
 import options.OptionsState;
 
 enum MainMenuColumn {
+	NONE;
 	LEFT;
 	CENTER;
 	RIGHT;
@@ -22,7 +23,7 @@ class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '1.0.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
-	public static var curColumn:MainMenuColumn = CENTER;
+	public static var curColumn:MainMenuColumn = NONE;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var leftItems:FlxTypedGroup<FlxSprite>;
@@ -245,6 +246,7 @@ class MainMenuState extends MusicBeatState
 						case CENTER: selectedItem = menuItems.members[curSelected];
 						case LEFT: selectedItem = leftItems.members[curSelected];
 						case RIGHT:selectedItem = rightItem;
+						case NONE: selectedItem = null;
 					}
 
 					if(leftItems != null && FlxG.mouse.overlaps(leftItems))
@@ -280,7 +282,7 @@ class MainMenuState extends MusicBeatState
 							changeItem();
 						}
 					}
-					else
+					else if(menuItems != null && FlxG.mouse.overlaps(menuItems))
 					{
 						var dist:Float = -1;
 						var distItem:Int = -1;
@@ -305,9 +307,14 @@ class MainMenuState extends MusicBeatState
 							changeItem();
 						}
 					}
+					else
+					{
+						curColumn = NONE;
+						changeItem();
+					}
 				}
 
-				if (controls.ACCEPT || (FlxG.mouse.justPressed))
+				if (controls.ACCEPT || (curColumn != NONE && FlxG.mouse.justPressed))
 				{
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					selectedSomethin = true;
@@ -330,6 +337,9 @@ class MainMenuState extends MusicBeatState
 						case RIGHT:
 							option = rightOption;
 							item = rightItem;
+						case NONE:
+							option = null;
+							item = null;
 					}
 
 					FlxFlicker.flicker(item, 1, 0.06, true, false, function(flick:FlxFlicker)
@@ -382,9 +392,9 @@ class MainMenuState extends MusicBeatState
 	{
 		var prevEntry:Int = curSelected;
 
-		if(change != 0) curColumn = CENTER;
+		if(change != 0) curColumn = NONE;
 		curSelected = FlxMath.wrap(curSelected + change, 0, optionShit.length - 1);
-		if (!noSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+		if (!noSound && curColumn != NONE) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		for (item in menuItems)
 			item.animation.play('idle');
@@ -398,7 +408,9 @@ class MainMenuState extends MusicBeatState
 				selectedItem = leftItems.members[curSelected];
 			case RIGHT:
 				selectedItem = rightItem;
+			case NONE:
+				selectedItem = null;
 		}
-		selectedItem.animation.play('selected');
+		if(curColumn != NONE) selectedItem.animation.play('selected');
 	}
 }

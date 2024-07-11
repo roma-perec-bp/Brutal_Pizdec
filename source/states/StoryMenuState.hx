@@ -158,10 +158,7 @@ class StoryMenuState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		// scoreText.setFormat('VCR OSD Mono', 32);
-		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, FlxMath.bound(elapsed * 30, 0, 1)));
-		if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
-
-		scoreText.text = "" + lerpScore;
+		scoreText.text = "" + intendedScore;
 		scoreText.updateHitbox();
 
 		// FlxG.watch.addQuick('font', scoreText.font);
@@ -314,7 +311,6 @@ class StoryMenuState extends MusicBeatState
 		#end
 	}
 
-	var lerpScore:Int = 0;
 	var intendedScore:Int = 0;
 
 	function changeWeek(change:Int = 0):Void
