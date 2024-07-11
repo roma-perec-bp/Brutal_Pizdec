@@ -17,6 +17,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 	private var descBox:FlxSprite;
 	private var descText:FlxText;
 
+	public var bg:FlxSprite;
 	private var zrya:FlxSprite;
 	var doing:Bool = false;
 
@@ -34,8 +35,8 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		DiscordClient.changePresence(rpcTitle, null);
 		#end
 		
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
+		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg.color = 0xFF7cdb7a;
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		add(bg);
@@ -126,9 +127,12 @@ class BaseOptionsMenu extends MusicBeatSubstate
 			changeSelection(1);
 		}
 
-		if (controls.BACK) {
-			close();
-			FlxG.sound.play(Paths.sound('cancelMenu'));
+		if(doing == false)
+		{
+			if (controls.BACK) {
+				close();
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+			}
 		}
 
 		if(nextAccept <= 0)
@@ -145,7 +149,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 				{
 					if(curOption.noChange == false)
 					{
-						FlxG.sound.play(Paths.sound('scrollMenu'));
+						FlxG.sound.play(Paths.sound('button'));
 						curOption.setValue((curOption.getValue() == true) ? false : true);
 						curOption.change();
 						reloadCheckboxes();
@@ -155,14 +159,18 @@ class BaseOptionsMenu extends MusicBeatSubstate
 						if(doing == false)
 						{
 							doing = true;
+							FlxG.sound.play(Paths.sound('cancelMenu'));
+							FlxG.sound.play(Paths.sound('comatose'));
 							zrya.animation.play('boom', false);
 							zrya.visible = true;
 							FlxG.sound.music.fadeOut(1, 0);
+							FlxTween.color(bg, 1, bg.color, 0xff260000);
 							new FlxTimer().start(7, function(tmr:FlxTimer)
 							{
 								zrya.visible = true;
 								FlxG.sound.music.fadeIn(1, 0, 1);
-								doing = true;
+								doing = false;
+								FlxTween.color(bg, 1, bg.color, 0xFF7cdb7a);
 							});
 						}
 					}
@@ -212,7 +220,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 							}
 							updateTextFrom(curOption);
 							curOption.change();
-							FlxG.sound.play(Paths.sound('scrollMenu'));
+							FlxG.sound.play(Paths.sound('button'));
 						} else if(curOption.type != 'string') {
 							holdValue += curOption.scrollSpeed * elapsed * (controls.UI_LEFT ? -1 : 1);
 							if(holdValue < curOption.minValue) holdValue = curOption.minValue;
