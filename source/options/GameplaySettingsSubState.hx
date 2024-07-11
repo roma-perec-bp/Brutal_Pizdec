@@ -16,7 +16,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.noChange = true;
 
 		var option:Option = new Option('Middlescroll',
-			'If checked, your notes get centered.\n(WARNING!!! This option will break modcharts)',
+			'If checked, your notes get centered.',
 			'middleScroll',
 			'bool');
 		addOption(option);
