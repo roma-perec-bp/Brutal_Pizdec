@@ -16,6 +16,8 @@ class StoryMenuState extends MusicBeatState
 {
 	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
 
+
+	var scoring:FlxText;
 	var scoreText:FlxText;
 
 	private static var lastDifficultyName:String = '';
@@ -50,11 +52,11 @@ class StoryMenuState extends MusicBeatState
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 		persistentUpdate = persistentDraw = true;
 
-		var scoring:FlxText = new FlxText(0, 469, 0, "SCORE", 62);
+		scoring = new FlxText(0, 469, 0, "SCORE", 62);
 		scoring.setFormat(Paths.font("HouseofTerror.ttf"), 62,  FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoring.x = FlxG.width - FlxG.width * 0.2;
 
-		scoreText = new FlxText(scoring.x + 60, 529, 0, "49324858", 42);
+		scoreText = new FlxText(FlxG.width - FlxG.width * 0.2, 529, 0, "0", 42);
 		scoreText.setFormat(Paths.font("HouseofTerror.ttf"), 42,  FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreText.alignment = CENTER;
 
@@ -158,9 +160,6 @@ class StoryMenuState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		// scoreText.setFormat('VCR OSD Mono', 32);
-		scoreText.text = "" + intendedScore;
-		scoreText.updateHitbox();
-
 		// FlxG.watch.addQuick('font', scoreText.font);
 
 		if (!movedBack && !selectedWeek)
@@ -394,5 +393,9 @@ class StoryMenuState extends MusicBeatState
 		#if !switch
 		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
 		#end
+
+		scoreText.text = "" + intendedScore;
+		scoreText.screenCenter(X);
+		scoreText.x += FlxG.width * 0.35;
 	}
 }
