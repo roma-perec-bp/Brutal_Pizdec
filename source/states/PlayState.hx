@@ -687,7 +687,7 @@ class PlayState extends MusicBeatState
 			fireHalapeno.screenCenter(X);
 			fireHalapeno.animation.play('idle');
 			add(fireHalapeno);
-		} else { 
+		} else if(curStage == 'night') { 
 			fireHalapeno = new FlxSprite(0, scoreTxt.y - 190);
 			fireHalapeno.frames = Paths.getSparrowAtlas('fire_new');
 			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
@@ -2607,6 +2607,8 @@ class PlayState extends MusicBeatState
 				camZooming = !camZooming;
 
 			case 'Flash Camera':
+				if (!ClientPrefs.data.flashing) return;
+
 				var duration:Float = Std.parseFloat(value1);
 				var color:String = value2;
 				if (color.length > 1)
@@ -2616,7 +2618,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if (ClientPrefs.data.flashing) color = "0xFFFFFFFF";
+					color = "0xFFFFFFFF";
 				}
 				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 	
