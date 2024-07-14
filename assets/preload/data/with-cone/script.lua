@@ -95,12 +95,6 @@ function onBeatHit()
 
     if curBeat == 272 then
         doTweenAlpha('watafak', 'blammedLightsBlack', 1, 0.001)
-    end
-
-    if curBeat == 304 then
-        doTweenX('opa', 'dad', 500, 1, 'quadInOut')
-        doTweenX('2opa', 'boyfriend', 1350, 1, 'quadInOut')
-
         setProperty('iconP2.colorTransform.redMultiplier', 0)
         setProperty('iconP2.colorTransform.blueMultiplier', 0)
         setProperty('iconP2.colorTransform.greenMultiplier', 0)
@@ -114,6 +108,11 @@ function onBeatHit()
         setProperty('iconP1.colorTransform.redOffset', 255)
         setProperty('iconP1.colorTransform.greenOffset', 0)
         setProperty('iconP1.colorTransform.blueOffset', 176)
+    end
+
+    if curBeat == 304 then
+        doTweenX('opa', 'dad', 500, 1, 'quadInOut')
+        doTweenX('2opa', 'boyfriend', 1350, 1, 'quadInOut')
     end
 
     if curBeat == 336 then

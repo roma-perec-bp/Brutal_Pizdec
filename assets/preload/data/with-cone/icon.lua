@@ -29,7 +29,7 @@ function onUpdatePost(elapsed)
 end
 
 function onBeatHit()
-    if curBeat >= 208 and curBeat < 24 or curBeat >= 496 and curBeat < 624 then --DnB
+    if curBeat >= 208 and curBeat < 240 or curBeat >= 496 and curBeat < 624 then --DnB
         if curBeat % getProperty('gfSpeed') == 0 then
             if curBeat % (getProperty('gfSpeed') * 2) == 0 then
                 scaleObject('iconP1obj', 1.1, 0.8)
