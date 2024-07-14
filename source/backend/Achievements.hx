@@ -26,6 +26,7 @@ class Achievements {
 		["Cursed Omlet da fucking shit",'Press 7 on "Lore" song.','lore',true], // done
 		["Random Sing",'Press 7 on "T-Short" song.','t-short',true], // done // НЕТУ
 		["FNAF Jumpscare",'Die on "Monochrome" song.','fnaf',false], // done
+		["How",'Die on with BotPlay turned on.','bot',false], // done
 		// that one
 		["Freaky on a Friday Night","Play on a Friday... Night.",'friday_night_play',false] // done
 	];
