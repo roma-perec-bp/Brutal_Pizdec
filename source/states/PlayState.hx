@@ -689,7 +689,7 @@ class PlayState extends MusicBeatState
 			add(fireHalapeno);
 		} else { 
 			fireHalapeno = new FlxSprite(0, scoreTxt.y - 190);
-			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
+			fireHalapeno.frames = Paths.getSparrowAtlas('fire_new');
 			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
 			fireHalapeno.flipY = ClientPrefs.data.downScroll;
 			fireHalapeno.antialiasing = ClientPrefs.data.antialiasing;
@@ -3557,6 +3557,7 @@ class PlayState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('boom'), 0.4);
 				if (health >= 0.4) health -= 0.1;
 				fireHalapeno.alpha = 0.5;
+				fireHalapeno.animation.play('idle');
 			}
 
 			var char:Character = dad;
@@ -3578,6 +3579,7 @@ class PlayState extends MusicBeatState
 		if(note.noteType == 'Jap Note no anim') {
 			if (health >= 0.4) health -=  0.06;
 			fireHalapeno.alpha = 0.8;
+			fireHalapeno.animation.play('idle');
 		}
 
 		if(note.noteType == 'Jalapeno Note BOOM SOUND') {
@@ -3586,6 +3588,7 @@ class PlayState extends MusicBeatState
 			fireFlash.alpha = 0.4;
 			FlxG.camera.zoom += 0.02;
 			camHUD.zoom += 0.02;
+			fireHalapeno.animation.play('idle');
 		}
 
 		if (SONG.needsVoices)
