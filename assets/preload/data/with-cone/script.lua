@@ -82,6 +82,12 @@ function onSectionHit()
     end
 end
 
+function doTweenColorTransform(char,RM,GM,BM,R,G,B,secs)
+    runHaxeCode([[
+    FlxTween.tween(game.]]..char..[[.colorTransform, { redOffset: ]]..R..[[, greenOffset: ]]..G..[[, blueOffset: ]]..B..[[, redMultiplier: ]]..RM..[[, greenMultiplier: ]]..GM..[[, blueMultiplier: ]]..BM..[[ }, ]]..secs..[[);
+    ]])
+end
+
 function onBeatHit()
     if curBeat == 16 then
         doTweenX('onidet', 'dad', 300, 3, 'quadInOut')
@@ -94,12 +100,28 @@ function onBeatHit()
     if curBeat == 304 then
         doTweenX('opa', 'dad', 500, 1, 'quadInOut')
         doTweenX('2opa', 'boyfriend', 1350, 1, 'quadInOut')
+
+        setProperty('iconP2.colorTransform.redMultiplier', 0)
+        setProperty('iconP2.colorTransform.blueMultiplier', 0)
+        setProperty('iconP2.colorTransform.greenMultiplier', 0)
+        setProperty('iconP2.colorTransform.redOffset', 255)
+        setProperty('iconP2.colorTransform.greenOffset', 0)
+        setProperty('iconP2.colorTransform.blueOffset', 0)
+
+        setProperty('iconP1.colorTransform.redMultiplier', 0)
+        setProperty('iconP1.colorTransform.blueMultiplier', 0)
+        setProperty('iconP1.colorTransform.greenMultiplier', 0)
+        setProperty('iconP1.colorTransform.redOffset', 255)
+        setProperty('iconP1.colorTransform.greenOffset', 0)
+        setProperty('iconP1.colorTransform.blueOffset', 176)
     end
 
     if curBeat == 336 then
         doTweenAlpha('watafak', 'blammedLightsBlack', 0.001, 1)
         doTweenX('obratno', 'dad', 300, 3, 'quadInOut')
         doTweenX('obratnonahi', 'boyfriend', 1750, 3, 'quadInOut')
+        doTweenColorTransform('iconP1', 1, 1, 1, 0, 0, 0, 1)
+        doTweenColorTransform('iconP2', 1, 1, 1, 0, 0, 0, 1)
     end
 
     if curBeat >= 496 and curBeat < 624 then
