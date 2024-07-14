@@ -26,10 +26,11 @@ class Roof extends BaseStage
 		bg.setGraphicSize(Std.int(bg.width * 3));
 		add(bg);
 
-		flames = new FlxSprite(0, 2000);
+		flames = new FlxSprite(200, 3000);
 		flames.frames = Paths.getSparrowAtlas('Starman_BG_Fire_Assets');
 		flames.animation.addByPrefix('flames', 'fire', 24);
 		flames.animation.play('flames');
+		flames.setGraphicSize(Std.int(flames.width * 3));
 		flames.alpha = 0.001;
 		add(flames);
 
@@ -93,7 +94,7 @@ class Roof extends BaseStage
 			
 			case 'fire boom':
 				add(smoke);
-				FlxTween.tween(flames, {y: -350}, 10, {ease: FlxEase.sineOut});
+				FlxTween.tween(flames, {y: 800}, 10, {ease: FlxEase.sineOut});
 
 				FlxTween.tween(smoke, {alpha: 1}, 10);
 				FlxTween.tween(flames, {alpha: 1}, 10);
