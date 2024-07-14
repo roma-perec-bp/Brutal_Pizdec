@@ -114,7 +114,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
 			checkAchievement("skill");
 		}
-		if(PlayState.cpuControlled)
+		if(PlayState.instance.cpuControlled)
 			checkAchievement("bot");
 		ClientPrefs.saveSettings();
 		//trace(Achievements.getAchievementCurNum("skill") + ", " + Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]);
