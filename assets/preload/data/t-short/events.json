@@ -36,8 +36,8 @@
 				[
 					[
 						"Cam Boom Speed",
-						"1",
-						"0.78"
+						"2",
+						"1"
 					],
 					[
 						"Flash Camera",
@@ -158,6 +158,11 @@
 						"Flash Camera",
 						"1",
 						"0xFFFFFFFF"
+					],
+					[
+						"Cam Boom Speed",
+						"2",
+						"1"
 					]
 				]
 			],
