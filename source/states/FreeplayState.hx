@@ -101,7 +101,7 @@ class FreeplayState extends MusicBeatState
 			case 0:
 				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
 			case 1:
-				addWeek(['Anekdot', 'Klork', 'T Short', 'Monochrome', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', 'lore-pixel'], ['lamar', 'lork', 'tshort', 'dead', 'gandons']);
+				addWeek(['Anekdot', 'Klork', 'T Short', 'Monochrome', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', 'lore-pixel'], ['zombie', 'lork', 'tshort', 'dead', 'gandons']);
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex-pixel', 'jamar-pixel'], ['bbg', 'lamar']);
 			case 3:
@@ -427,30 +427,6 @@ class FreeplayState extends MusicBeatState
             );
         };
 
-		var sexu = FlxG.keys.anyJustPressed([I]);
-		var rightP = FlxG.keys.anyJustPressed([L]);
-		var sexa = FlxG.keys.anyJustPressed([K]);
-		var leftP = FlxG.keys.anyJustPressed([J]);
-
-		var holdShift = FlxG.keys.pressed.SHIFT;
-		var multiplier = 1;
-		if (holdShift)
-			multiplier = 10;
-
-		if (sexu || rightP || sexa || leftP)
-		{
-			if (sexu)
-				portrait.offset.y += 1 * multiplier;
-			if (sexa)
-				portrait.offset.y -= 1 * multiplier;
-			if (leftP)
-				portrait.offset.x += 1 * multiplier;
-			if (rightP)
-				portrait.offset.x -= 1 * multiplier;
-
-			trace(portrait.offset);
-		}
-
 		super.update(elapsed);
 	}
 
@@ -507,6 +483,8 @@ class FreeplayState extends MusicBeatState
 				portrait.offset.set(-196, 70);
 			case 'jap_3':
 				portrait.offset.set(-190, 110);
+			case 'zombie':
+				portrait.offset.set(-82, 140);
 			case 'tshort':
 				portrait.offset.set(-80, 160);
 			case 'lork':
