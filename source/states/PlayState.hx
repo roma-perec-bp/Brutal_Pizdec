@@ -1970,7 +1970,7 @@ class PlayState extends MusicBeatState
 
 		if (controls.justPressed('debug_1') && !endingSong && !inCutscene)
 		{
-			if(curSong == "Lore" || curSong == "t-short")
+			if(curSong == "lore" || curSong == "t-short")
 			{
 				#if ACHIEVEMENTS_ALLOWED
 				Achievements.loadAchievements();
