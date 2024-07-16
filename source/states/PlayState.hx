@@ -422,6 +422,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'stage': new states.stages.StageWeek1(); //Default
 			case 'night': new states.stages.Roof(); //Perec
+			case 'anekdot': new states.stages.Anekdot(); //Shutky
 			case 'day': new states.stages.Grass(); //Klork and shit
 			case 'void': new states.stages.Void(); //Dead Perec
 			case 'flipaclip': new states.stages.FlipaClip(); //Малыш~
@@ -1979,13 +1980,13 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
-					achievementObj.onFinish = ebatLoh;
+					achievementObj.onFinish = openChartEditor;
 					add(achievementObj);
 					ClientPrefs.saveSettings();
 				}
 				#end
 			} else {
-				ebatLoh();
+				openChartEditor();
 			}
 		}
 
@@ -3174,6 +3175,22 @@ class PlayState extends MusicBeatState
 				totalPlayed++;
 				RecalculateRating(false);
 			}
+
+			// calculate shit
+			var cur:Float = (songHits*350/fullScore)*100;
+			for(i in 0...medal_system.length)
+			{
+				if(cur < medal_system[i][1] && cur >= medal_system[i][0])
+				{
+					medalStatus = i;
+					if (medalOldStatus != medalStatus)
+					{
+						medalOldStatus = medalStatus;
+						uniqueMedalChange(medalStatus+1);
+						medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
+					}
+				}
+			}
 		}
 
 		if(curStage == 'roof-old')
@@ -3743,22 +3760,6 @@ class PlayState extends MusicBeatState
 				popUpScore(note);
 			}
 			health += note.hitHealth * healthGain;
-
-			// calculate shit
-			var cur:Float = (songHits*350/fullScore)*100;
-			for(i in 0...medal_system.length)
-			{
-				if(cur < medal_system[i][1] && cur >= medal_system[i][0])
-				{
-					medalStatus = i;
-					if (medalOldStatus != medalStatus)
-					{
-						medalOldStatus = medalStatus;
-						uniqueMedalChange(medalStatus);
-						medal.loadGraphic(Paths.image('medals/medal_${medalStatus}', 'shared'));
-					}
-				}
-			}
 
 			if(!note.noAnimation) {
 				var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, note.noteData)))];
