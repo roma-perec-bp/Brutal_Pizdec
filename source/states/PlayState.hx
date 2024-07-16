@@ -3615,17 +3615,17 @@ class PlayState extends MusicBeatState
 			case 6:
 				//вообще нихуя сосите
 			case 5:
-				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, Conductor.crochet * 0.008, {ease: FlxEase.quadOut, type: BACKWARD});
+				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, Conductor.crochet * 0.002, {ease: FlxEase.quadOut, type: BACKWARD});
 			case 4:
-				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, Conductor.crochet * 0.008, {ease: FlxEase.backOut, type: BACKWARD});
+				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, Conductor.crochet * 0.002, {ease: FlxEase.backOut, type: BACKWARD});
 			case 3:
-				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, Conductor.crochet * 0.008, {ease: FlxEase.bounceOut, type: BACKWARD});
-				FlxTween.tween(medal, {angle: 7}, Conductor.crochet * 0.008, {ease: FlxEase.backOut, type: BACKWARD});
+				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, Conductor.crochet * 0.002, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 7}, Conductor.crochet * 0.002, {ease: FlxEase.backOut, type: BACKWARD});
 			case 2:
 				medal.color = 0xff7400ff;
-				FlxTween.tween(medal.scale, {x: 0.6, y: 0.6}, Conductor.crochet * 0.008, {ease: FlxEase.expoOut, type: BACKWARD});
-				FlxTween.tween(medal, {angle: 12}, Conductor.crochet * 0.008, {ease: FlxEase.bounceOut, type: BACKWARD});
-				FlxTween.color(medal, Conductor.crochet * 0.008, medal.color, 0xffFFFFFF);
+				FlxTween.tween(medal.scale, {x: 0.6, y: 0.6}, Conductor.crochet * 0.002, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 12}, Conductor.crochet * 0.002, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.color(medal, Conductor.crochet * 0.002, medal.color, 0xffFFFFFF);
 			case 1:
 				medal.colorTransform.redOffset = 0;
 				medal.colorTransform.greenOffset = 163;
@@ -3635,9 +3635,9 @@ class PlayState extends MusicBeatState
 				medal.colorTransform.greenMultiplier = 0;
 				medal.colorTransform.blueMultiplier = 0;
 
-				FlxTween.tween(medal.scale, {x: 0.7, y: 0.7}, Conductor.crochet * 0.008, {ease: FlxEase.elasticOut, type: BACKWARD});
-				FlxTween.tween(medal, {angle: 23}, Conductor.crochet * 0.008, {ease: FlxEase.expoOut, type: BACKWARD});
-				FlxTween.tween(medal.colorTransform, {redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1}, Conductor.crochet * 0.008);
+				FlxTween.tween(medal.scale, {x: 0.7, y: 0.7}, Conductor.crochet * 0.002, {ease: FlxEase.elasticOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 23}, Conductor.crochet * 0.002, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal.colorTransform, {redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1}, Conductor.crochet * 0.002);
 		}
 	}
 
