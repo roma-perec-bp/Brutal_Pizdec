@@ -1985,6 +1985,7 @@ class PlayState extends MusicBeatState
 					ClientPrefs.saveSettings();
 				}
 				#end
+				openChartEditor();
 			} else {
 				openChartEditor();
 			}
