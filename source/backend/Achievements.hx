@@ -15,7 +15,7 @@ class Achievements {
 		["D E A D",'Beat \"Monochrome\" song with no Misses.','monochrome_freeplay_nomiss',false], // done
 		["I have a GAME theory!",'Beat \"Lore\" song with no Misses.','lore_freeplay_nomiss',false], // done
 		["SEXY",'Beat \"S6x-Boom\" song with no Misses.','s6x-boom_freeplay_nomiss',false], // done
-		["Fully smoked!!",'Beat \"lamar tut voobshe ne nujen\" song with no Misses.','lamar-tut-voobshe-ne-nujen_freeplay_nomiss',false], // idk? is it done?
+		["Fully smoked!!",'Beat \"lamar tut voobshe ne nujen\" song with no Misses.','lamar-tut-voobshe-ne-nujen_freeplay_nomiss',false], // idk? is it done? -ElectroPea It is done i literally fced it -Rom4chek
 		// misc
 		["Anekdot is for real",'Die on \"Anekdot\" song.','anekdot_death',false], // done
 		["Oh, China, what are you doing here?",'Press on JinchengZhang in Main Menu.','menu0',true], // done
