@@ -14,6 +14,10 @@ class LohState extends MusicBeatState
     public var videoCutscene:VideoSprite = null;
     override function create()
 	{
+        if (FlxG.random.bool(0.1))
+        {
+            videoShow = 'leaks'; //гыгыгы
+        }
 		#if VIDEOS_ALLOWED
 		var foundFile:Bool = false;
 		var fileName:String = Paths.video(videoShow);
