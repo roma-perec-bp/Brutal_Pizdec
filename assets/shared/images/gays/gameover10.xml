@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gameover10.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="RETRY_END0000" x="1811" y="1423" width="315" height="168" frameX="-437" frameY="-280" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0001" x="2353" y="1422" width="341" height="174" frameX="-424" frameY="-277" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0002" x="383" y="1380" width="369" height="182" frameX="-410" frameY="-273" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0003" x="1946" y="1224" width="397" height="189" frameX="-396" frameY="-269" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0004" x="2437" y="1000" width="425" height="197" frameX="-382" frameY="-265" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0005" x="741" y="747" width="453" height="206" frameX="-368" frameY="-261" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0006" x="1946" y="1000" width="481" height="214" frameX="-354" frameY="-257" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0007" x="1426" y="1000" width="510" height="222" frameX="-340" frameY="-253" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0008" x="741" y="1000" width="675" height="370" frameX="-258" frameY="-179" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0009" x="10" y="747" width="721" height="396" frameX="-234" frameY="-166" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0010" x="1211" y="568" width="766" height="422" frameX="-212" frameY="-153" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0011" x="2214" y="544" width="812" height="446" frameX="-189" frameY="-141" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0012" x="3173" y="518" width="856" height="472" frameX="-167" frameY="-128" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0013" x="3173" y="10" width="902" height="498" frameX="-144" frameY="-115" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0014" x="2214" y="10" width="949" height="524" frameX="-121" frameY="-102" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0015" x="1211" y="10" width="993" height="548" frameX="-99" frameY="-90" frameWidth="1191" frameHeight="727"/>
+	<SubTexture name="RETRY_END0016" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0017" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0018" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0019" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0020" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0021" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0022" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0023" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0024" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0025" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0026" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0027" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0028" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0029" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0030" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0031" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0032" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0033" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0034" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0035" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0036" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0037" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0038" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0039" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0040" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0041" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0042" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0043" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_END0044" x="10" y="10" width="1191" height="727"/>
+	<SubTexture name="RETRY_LOOP0000" x="1117" y="1380" width="290" height="152"/>
+	<SubTexture name="RETRY_LOOP0001" x="1117" y="1542" width="226" height="121" frameX="-32" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0002" x="1117" y="1542" width="226" height="121" frameX="-32" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0003" x="2704" y="1430" width="241" height="127" frameX="-25" frameY="-12" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0004" x="2704" y="1430" width="241" height="127" frameX="-25" frameY="-12" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0005" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0006" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0007" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0008" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0009" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0010" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0011" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0012" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0013" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_LOOP0014" x="1417" y="1439" width="230" height="121" frameX="-30" frameY="-15" frameWidth="290" frameHeight="152"/>
+	<SubTexture name="RETRY_START0000" x="2872" y="1000" width="389" height="205"/>
+	<SubTexture name="RETRY_START0001" x="3271" y="1000" width="389" height="205"/>
+	<SubTexture name="RETRY_START0002" x="3670" y="1000" width="389" height="205"/>
+	<SubTexture name="RETRY_START0003" x="10" y="1153" width="389" height="205"/>
+	<SubTexture name="RETRY_START0004" x="2437" y="1207" width="389" height="205"/>
+	<SubTexture name="RETRY_START0005" x="3271" y="1000" width="389" height="205"/>
+	<SubTexture name="RETRY_START0006" x="2836" y="1215" width="388" height="205" frameX="-1" frameY="0" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0007" x="3234" y="1215" width="385" height="203" frameX="-2" frameY="-1" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0008" x="3629" y="1215" width="381" height="201" frameX="-4" frameY="-2" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0009" x="1426" y="1232" width="375" height="197" frameX="-7" frameY="-4" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0010" x="10" y="1368" width="363" height="191" frameX="-13" frameY="-7" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0011" x="762" y="1380" width="345" height="181" frameX="-22" frameY="-12" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0012" x="409" y="1153" width="317" height="167" frameX="-36" frameY="-19" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0013" x="3629" y="1426" width="277" height="146" frameX="-56" frameY="-29" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0014" x="1987" y="568" width="172" height="91" frameX="-108" frameY="-56" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0015" x="1987" y="568" width="172" height="91" frameX="-108" frameY="-56" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0016" x="2955" y="1430" width="238" height="126" frameX="-75" frameY="-39" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0017" x="2955" y="1430" width="238" height="126" frameX="-75" frameY="-39" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0018" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0019" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0020" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0021" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0022" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0023" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0024" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0025" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0026" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0027" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0028" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0029" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0030" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0031" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0032" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0033" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0034" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0035" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0036" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0037" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0038" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0039" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0040" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0041" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0042" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0043" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+	<SubTexture name="RETRY_START0044" x="3234" y="1428" width="249" height="131" frameX="-70" frameY="-37" frameWidth="389" frameHeight="205"/>
+</TextureAtlas>

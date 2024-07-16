@@ -98,6 +98,7 @@ class ChartingState extends MusicBeatState
 		['GrassHey', "Value 1: on or off?"],
 		['dead jumpscare', "Value 1: time"],
 		['Show Song', "fuck you"],
+		['Play Video', "value1: video"],
 		['Character Color', "Value 1: Character\nValue 2:Color 0xffffffff, time"],
 		['Character Color Transform', "Value 1: redOffset, greenOffset, blueOffset, redMultiplier, greenMultiplier, blueMultiplier\nValue 2:Character, Time"],
 		['boom dead', "yes"],
