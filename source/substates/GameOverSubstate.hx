@@ -174,44 +174,6 @@ class GameOverSubstate extends MusicBeatSubstate
 			endBullshit();
 		}
 
-		if (controls.RESET)
-		{
-			randomNum = FlxG.random.int(0, 11);
-			fuckedText.frames = Paths.getSparrowAtlas('gays/gameover'+randomNum);
-			fuckedText.animation.addByPrefix('start', 'RETRY_START', 24, false);
-			fuckedText.animation.addByPrefix('loop', 'RETRY_LOOP', 24);
-			fuckedText.animation.addByPrefix('end', 'RETRY_END', 24, false);
-			fuckedText.animation.play('loop');
-
-			switch(randomNum)
-			{
-				case 0:
-					fuckedText.offset.x = 145;
-				case 1:
-					fuckedText.offset.x = 90;
-				case 2:
-					fuckedText.offset.x = 9;
-				case 3:
-					fuckedText.offset.x = 10;
-				case 4:
-					fuckedText.offset.x = 6;
-				case 5:
-					fuckedText.offset.x = 10;
-				case 6:
-					fuckedText.offset.x = -2;
-				case 7:
-					fuckedText.offset.x = 110;
-				case 8:
-					fuckedText.offset.x = -65;
-				case 9:
-					fuckedText.offset.x = -15;
-				case 10:
-					fuckedText.offset.x = -70;
-				case 11:
-					fuckedText.offset.x = 70;
-			}
-		}
-
 		if (controls.BACK)
 		{
 			#if desktop DiscordClient.resetClientID(); #end
@@ -267,30 +229,6 @@ class GameOverSubstate extends MusicBeatSubstate
 					else coolStartDeath();
 				}
 			}
-		}
-
-		var sexu = FlxG.keys.anyJustPressed([I]);
-		var rightP = FlxG.keys.anyJustPressed([L]);
-		var sexa = FlxG.keys.anyJustPressed([K]);
-		var leftP = FlxG.keys.anyJustPressed([J]);
-
-		var holdShift = FlxG.keys.pressed.SHIFT;
-		var multiplier = 1;
-		if (holdShift)
-			multiplier = 10;
-
-		if (sexu || rightP || sexa || leftP)
-		{
-			if (sexu)
-				fuckedText.offset.y += 1 * multiplier;
-			if (sexa)
-				fuckedText.offset.y -= 1 * multiplier;
-			if (leftP)
-				fuckedText.offset.x += 1 * multiplier;
-			if (rightP)
-				fuckedText.offset.x -= 1 * multiplier;
-
-			trace(fuckedText.offset);
 		}
 		
 		if(updateCamera) FlxG.camera.followLerp = FlxMath.bound(elapsed * 0.6 / (FlxG.updateFramerate / 60), 0, 1);
