@@ -22,6 +22,8 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	public var fuckedText:FlxSprite;
 
+	var randomNum:Int = FlxG.random.int(0, 11);
+
 	var stageSuffix:String = "";
 
 	public static var characterName:String = 'bf-dead';
@@ -75,6 +77,44 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.camera.target = null;
 
 		boyfriend.playAnim('firstDeath');
+
+		fuckedText = new FlxSprite(boyfriend.x - 75, boyfriend.y + 10);
+		fuckedText.frames = Paths.getSparrowAtlas('gays/gameover'+randomNum);
+		fuckedText.animation.addByPrefix('start', 'RETRY_START', 24, false);
+		fuckedText.animation.addByPrefix('loop', 'RETRY_LOOP', 24);
+		fuckedText.animation.addByPrefix('end', 'RETRY_END', 24, false);
+		fuckedText.antialiasing = ClientPrefs.data.antialiasing;
+		fuckedText.updateHitbox();
+		fuckedText.animation.play('start');
+
+		switch(randomNum)
+		{
+			case 0:
+				fuckedText.offset.x = 145;
+			case 1:
+				fuckedText.offset.x = 90;
+			case 2:
+				fuckedText.offset.x = 9;
+			case 3:
+				fuckedText.offset.x = 10;
+			case 4:
+				fuckedText.offset.x = 6;
+			case 5:
+				fuckedText.offset.x = 10;
+			case 6:
+				fuckedText.offset.x = -2;
+			case 7:
+				fuckedText.offset.x = 110;
+			case 8:
+				fuckedText.offset.x = -65;
+			case 9:
+				fuckedText.offset.x = -15;
+			case 10:
+				fuckedText.offset.x = -70;
+			case 11:
+				fuckedText.offset.x = 70;
+		}
+		add(fuckedText);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollow.setPosition(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
@@ -155,7 +195,12 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (boyfriend.animation.curAnim != null)
 		{
 			if (boyfriend.animation.curAnim.name == 'firstDeath' && boyfriend.animation.curAnim.finished && startedDeath)
+			{
 				boyfriend.playAnim('deathLoop');
+				fuckedText.animation.play('loop');
+				fuckedText.x = boyfriend.x;
+				fuckedText.y = boyfriend.y + 50;
+			}
 
 			if(boyfriend.animation.curAnim.name == 'firstDeath')
 			{
@@ -209,6 +254,9 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (!isEnding)
 		{
 			isEnding = true;
+			fuckedText.animation.play('end');
+			fuckedText.x = boyfriend.x - 550;
+			fuckedText.y = boyfriend.y - 230;
 			boyfriend.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
 			FlxG.sound.play(Paths.music(endSoundName));
