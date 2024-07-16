@@ -1970,7 +1970,7 @@ class PlayState extends MusicBeatState
 
 		if (controls.justPressed('debug_1') && !endingSong && !inCutscene)
 		{
-			if(curSong == "lore" || curSong == "t-short")
+			if(curSong == "Lore" || curSong == "T-SHORT")
 			{
 				#if ACHIEVEMENTS_ALLOWED
 				Achievements.loadAchievements();
@@ -1979,14 +1979,13 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
-					achievementObj.onFinish = openChartEditor;
+					achievementObj.onFinish = ebatLoh;
 					add(achievementObj);
 					ClientPrefs.saveSettings();
 				}
 				#end
-				openChartEditor(); //на время
 			} else {
-				openChartEditor();
+				ebatLoh();
 			}
 		}
 
@@ -2249,6 +2248,24 @@ class PlayState extends MusicBeatState
 		#end
 		
 		MusicBeatState.switchState(new ChartingState());
+	}
+
+	function ebatLoh()
+	{
+		FlxG.camera.followLerp = 0;
+		persistentUpdate = false;
+		paused = true;
+		cancelMusicFadeTween();
+
+		if(curSong == "Lore" || curSong == "T-SHORT")
+			LohState.videoShow = curSong;
+
+		#if desktop
+		DiscordClient.changePresence("DICK SUCER", null, null, true);
+		DiscordClient.resetClientID();
+		#end
+
+		MusicBeatState.switchState(new LohState());
 	}
 
 	function openCharacterEditor()

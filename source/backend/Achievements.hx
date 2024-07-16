@@ -23,8 +23,8 @@ class Achievements {
 		["KA-BOOM",'Hit the Jalapeno Note 10 times','kaboom',true,10], // done
 		["Da old days...",'Beat Every Old Songs.','oldweek0',false], // НЕТУ
 		["Cum","Play any song with only white color on notes RGB option",'cum',false], // ah hell naw
-		["Cursed Omlet da fucking shit",'Press 7 on "Lore" song.','lore',true], // done
-		["Random Sing",'Press 7 on "T-Short" song.','t-short',true], // done // НЕТУ
+		["Cursed Omlet da fucking shit",'Press 7 on "Lore" song.','Lore',true], // done
+		["Random Sing",'Press 7 on "T-Short" song.','T-SHORT',true], // done // НЕТУ
 		["FNAF Jumpscare",'Die on "Monochrome" song.','fnaf',false], // done
 		["How",'Die on with BotPlay turned on.','bot',false], // done
 		// that one
