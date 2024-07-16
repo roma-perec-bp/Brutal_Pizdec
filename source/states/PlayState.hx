@@ -740,8 +740,10 @@ class PlayState extends MusicBeatState
 		if(curStage == 'night') fireFlash.cameras = [camOther];
 
 		// медальки
-		medal = new FlxSprite(FlxG.width - 164, FlxG.height - 164).loadGraphic(Paths.image('medals/medal_6', 'shared'));
+		medal = new FlxSprite(FlxG.width - 164, FlxG.height - 224).loadGraphic(Paths.image('medals/medal_6', 'shared'));
+		medal.scale.set(0.3, 0.3);
 		medal.origin.set(128/2, 128/2);
+		medal.updateHitbox();
 		add(medal);
 
 		botplayTxt.cameras = [camHUD];
@@ -2064,11 +2066,6 @@ class PlayState extends MusicBeatState
 				timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 		}
 
-		// medal
-		var mult:Float = FlxMath.lerp(1, medal.scale.x, FlxMath.bound(1 - (elapsed * 15 * playbackRate), 0, 1));
-		medal.scale.set(mult, mult);
-		medal.updateHitbox();
-
 		if (camZooming)
 		{
 			FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, FlxG.camera.zoom, FlxMath.bound(1 - (elapsed * 3.125 * camZoomingDecay * playbackRate), 0, 1));
@@ -3141,7 +3138,7 @@ class PlayState extends MusicBeatState
 		if(daRating.noteSplash && !note.noteSplashData.disabled)
 			spawnNoteSplashOnNote(note);
 
-		if(!practiceMode && !cpuControlled) {
+		if(!practiceMode /*&& !cpuControlled*/) {
 			songScore += score;
 			if(!note.ratingDisabled)
 			{
@@ -3611,6 +3608,39 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	function uniqueMedalChange(medalInt:Int) //почему не LERP? потому что Ease
+	{
+		switch(medalInt)
+		{
+			case 6:
+				//вообще нихуя сосите
+			case 5:
+				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, Conductor.crochet * 0.008, {ease: FlxEase.quadOut, type: BACKWARD});
+			case 4:
+				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, Conductor.crochet * 0.008, {ease: FlxEase.backOut, type: BACKWARD});
+			case 3:
+				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, Conductor.crochet * 0.008, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 7}, Conductor.crochet * 0.008, {ease: FlxEase.backOut, type: BACKWARD});
+			case 2:
+				medal.color = 0xff7400ff;
+				FlxTween.tween(medal.scale, {x: 0.6, y: 0.6}, Conductor.crochet * 0.008, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 12}, Conductor.crochet * 0.008, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.color(medal, Conductor.crochet * 0.008, medal.color, 0xffFFFFFF);
+			case 1:
+				medal.colorTransform.redOffset = 0;
+				medal.colorTransform.greenOffset = 163;
+				medal.colorTransform.blueOffset = 255;
+
+				medal.colorTransform.redMultiplier = 0;
+				medal.colorTransform.greenMultiplier = 0;
+				medal.colorTransform.blueMultiplier = 0;
+
+				FlxTween.tween(medal.scale, {x: 0.7, y: 0.7}, Conductor.crochet * 0.008, {ease: FlxEase.elasticOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 23}, Conductor.crochet * 0.008, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal.colorTransform, {redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1}, Conductor.crochet * 0.008);
+		}
+	}
+
 	function goodNoteHit(note:Note):Void
 	{
 		if (!note.wasGoodHit)
@@ -3696,10 +3726,9 @@ class PlayState extends MusicBeatState
 					if (medalOldStatus != medalStatus)
 					{
 						medalOldStatus = medalStatus;
-						medal.scale.set(1.5, 1.5);
-						trace("Old status changed.");
+						uniqueMedalChange(medalStatus);
+						medal.loadGraphic(Paths.image('medals/medal_${medalStatus}', 'shared'));
 					}
-					medal.loadGraphic(Paths.image('medals/medal_${i+1}', 'shared'));
 				}
 			}
 
