@@ -2028,7 +2028,7 @@ class PlayState extends MusicBeatState
 
 		iconP1.x = healthBar.barCenter + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
 		iconP2.x = healthBar.barCenter - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
-		if(curSong == 'Lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 250) / 2 - iconOffset * 2;
+		if(curSong == 'Lore') iconROM.x = healthBar.barCenter - (150 * iconROM.scale.x + 150) / 2 - iconOffset * 2;
 		if(curSong == 'Lore') iconGF.x = healthBar.barCenter + (150 * iconGF.scale.x + 0) / 2 - iconOffset;
 
 		if (healthBar.percent < 20) 
