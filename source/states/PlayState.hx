@@ -825,6 +825,8 @@ class PlayState extends MusicBeatState
 					Paths.sound(key);
 				case 'music':
 					Paths.music(key);
+				case 'video':
+					Paths.video(key);
 			}
 		}
 
@@ -1687,6 +1689,10 @@ class PlayState extends MusicBeatState
 			case 'Play Sound':
 				precacheList.set(event.value1, 'sound');
 				Paths.sound(event.value1);
+
+			case 'Play Video':
+				precacheList.set(event.value1, 'video');
+				Paths.video(event.value1);
 		}
 		stagesFunc(function(stage:BaseStage) stage.eventPushedUnique(event));
 	}
@@ -2744,11 +2750,8 @@ class PlayState extends MusicBeatState
 					default:
 						char = boyfriend;
 				}
-
-				if(char.colorTween != null)
-					char.colorTween.cancel();
-
-				FlxTween.color(char, time, char.color, color, {ease: FlxEase.linear});
+				trace('dee');
+				FlxTween.color(char, time, char.color, color);
 
 			case 'Character Color Transform':
 				var char:Character = boyfriend;
@@ -2884,7 +2887,7 @@ class PlayState extends MusicBeatState
 
 			case 'Play Video':
 				startVideo(value1, true, false);
-				canPause = true; //хз как видео остановить на паузе
+				canPause = false; //хз как видео остановить на паузе
 		}
 		
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));

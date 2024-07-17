@@ -3,6 +3,7 @@ local x1 = 0
 local x2 = 0
 local circle = false
 local dnb = false
+local shake = false
 local vanilla = true
 
 function onCreate()
@@ -22,6 +23,13 @@ function onUpdatePost(elapsed)
     setProperty('iconP2.scale.y', getProperty('iconP2obj.scale.y'))
     setProperty('iconP1.y', getProperty('healthBar.y') - 150 - (150 * getProperty('iconP1.scale.y') / -2))
     setProperty('iconP2.y', getProperty('healthBar.y') - 150 - (150 * getProperty('iconP2.scale.y') / -2))
+
+    if shake == true then
+        setProperty('iconP1.offset.x', getRandomFloat(-4, 4))
+        setProperty('iconP1.offset.y', getRandomFloat(-4, 4))
+        setProperty('iconP2.offset.x', getRandomFloat(-4, 4))
+        setProperty('iconP2.offset.y', getRandomFloat(-4, 4))
+    end
 end
 
 function onBeatHit()
@@ -109,5 +117,29 @@ function onBeatHit()
     end
     if curBeat == 448 then
         dnb = false
+    end
+    if curBeat == 456 then
+        vanilla = true
+    end
+    if curBeat == 472 then
+        doTweenColor('lol', 'dad', 'ff0000', 10)
+    end
+    if curBeat == 488 then
+        dnb = true
+        vanilla = false
+    end
+    if curBeat == 520 then
+        dnb = false
+        shake = true
+    end
+    if curBeat == 552 then
+        shake = false
+        vanilla = true
+    end
+    if curBeat == 584 then
+        vanilla = false
+    end
+    if curBeat == 596 then
+        cameraFade('game', '000000', 1)
     end
 end
