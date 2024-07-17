@@ -424,6 +424,7 @@ class PlayState extends MusicBeatState
 			case 'night': new states.stages.Roof(); //Perec
 			case 'anekdot': new states.stages.Anekdot(); //Shutky
 			case 'day': new states.stages.Grass(); //Klork and shit
+			case 'random': new states.stages.Random(); //T short
 			case 'void': new states.stages.Void(); //Dead Perec
 			case 'flipaclip': new states.stages.FlipaClip(); //Малыш~
 			case 'lamar': new states.stages.Lamar(); //Lamar
