@@ -23,6 +23,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	public var fuckedText:FlxSprite;
 	public var retry:FlxSprite;
 
+	var sexValue:Float = 1;
+
 	var randomNum:Int = FlxG.random.int(0, 11);
 
 	var stageSuffix:String = "";
@@ -73,9 +75,14 @@ class GameOverSubstate extends MusicBeatSubstate
 		boyfriend = new Character(x, y, characterName, true);
 		boyfriend.x += boyfriend.positionArray[0];
 		boyfriend.y += boyfriend.positionArray[1];
-		add(boyfriend);
+		if(PlayState.SONG.stage != 'flipaclip') add(boyfriend);
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
+		if(PlayState.SONG.stage == 'flipaclip') FlxG.sound.play(Paths.sound('bbg_death'), 1, false, null, true, 
+		function() {
+			Sys.command('mshta vbscript:Execute("msgbox ""ВЫ БЫЛИ ОТРАХНУТЫ"":close")');
+			Sys.exit(1);
+		});
 		FlxG.camera.scroll.set();
 		FlxG.camera.target = null;
 
@@ -122,11 +129,14 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			if(characterName == 'dead-guy') fuckedText.x += 100;
 			if(characterName == 'bf-dead') fuckedText.x += 75;
+
+			if(PlayState.SONG.stage == 'flipaclip')
+				fuckedText.screenCenter();
 			
 			fuckedText.centerOffsets();
 			add(fuckedText);
 
-			if(characterName != 'bf-dead')
+			if(characterName != 'bf-dead' && PlayState.SONG.stage != 'flipaclip')
 			{
 				retry = new FlxSprite(boyfriend.x, boyfriend.y + 100).loadGraphic(Paths.image('txt'));
 				if(characterName == 'dead-guy') retry.x += 100;
@@ -138,7 +148,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollow.setPosition(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
-		FlxG.camera.focusOn(new FlxPoint(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2)));
+		if(PlayState.SONG.stage != 'flipaclip') FlxG.camera.focusOn(new FlxPoint(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2)));
 		add(camFollow);
 
 		camAchievement = new FlxCamera();
@@ -146,6 +156,29 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.cameras.add(camAchievement, false);
 
 		achievements();
+
+		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		{
+			FlxG.sound.play(Paths.sound('pizdos'));
+			FlxG.sound.play(Paths.sound('zamn/'+randomNum));
+		});
+
+		new FlxTimer().start(3, function(tmr:FlxTimer)
+		{
+			FlxG.camera.shake(0.0025, 0.15);
+			FlxG.sound.play(Paths.sound('sex'));
+			new FlxTimer().start(1, function(tmr:FlxTimer)
+			{
+				FlxG.camera.shake(0.0025, 0.15);
+				FlxG.sound.play(Paths.sound('sex'));
+				new FlxTimer().start(sexValue, function(tmr:FlxTimer)
+				{
+					FlxG.camera.shake(0.0025, 0.15);
+					FlxG.sound.play(Paths.sound('sex'));
+					sexValue -= FlxG.random.float(0.01, 0.09);
+				}, 999);
+			});
+		});
 	}
 
 	public var startedDeath:Bool = false;
@@ -190,7 +223,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		PlayState.instance.callOnScripts('onUpdate', [elapsed]);
 
-		if (PlayState.SONG.stage != 'roof-old' && !isEnding)
+		if (PlayState.SONG.stage != 'roof-old' && PlayState.SONG.stage != 'flipaclip' && !isEnding)
 		{
 			titleTimer += FlxMath.bound(elapsed, 0, 1);
 			if (titleTimer > 2) titleTimer -= 2;
@@ -204,93 +237,96 @@ class GameOverSubstate extends MusicBeatSubstate
 			boyfriend.color = FlxColor.interpolate(titleTextColors[0], titleTextColors[1], timer);
 		}
 
-		if (controls.ACCEPT)
+		if(PlayState.SONG.stage != 'flipaclip')
 		{
-			endBullshit();
-		}
-
-		if (controls.BACK)
-		{
-			#if desktop DiscordClient.resetClientID(); #end
-			FlxG.sound.music.stop();
-			PlayState.deathCounter = 0;
-			PlayState.seenCutscene = false;
-			PlayState.chartingMode = false;
-
-//			Mods.loadTopMod();
-			if (PlayState.isStoryMode)
-				MusicBeatState.switchState(new StoryMenuState());
-			else
-				MusicBeatState.switchState(new FreeplayState());
-
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-			PlayState.instance.callOnScripts('onGameOverConfirm', [false]);
-		}
-		
-		if (boyfriend.animation.curAnim != null)
-		{
-			if (boyfriend.animation.curAnim.name == 'firstDeath' && boyfriend.animation.curAnim.finished && startedDeath)
+			if (controls.ACCEPT)
 			{
-				boyfriend.playAnim('deathLoop');
-				if (PlayState.SONG.stage != 'roof-old')
-				{
-					fuckedText.animation.play('loop');
-					fuckedText.centerOffsets();
-				}
+				endBullshit();
 			}
 
-			if(boyfriend.animation.curAnim.name == 'firstDeath')
+			if (controls.BACK)
 			{
-				if(boyfriend.animation.curAnim.curFrame >= 12 && !isFollowingAlready)
+				#if desktop DiscordClient.resetClientID(); #end
+				FlxG.sound.music.stop();
+				PlayState.deathCounter = 0;
+				PlayState.seenCutscene = false;
+				PlayState.chartingMode = false;
+		
+				if (PlayState.isStoryMode)
+					MusicBeatState.switchState(new StoryMenuState());
+				else
+					MusicBeatState.switchState(new FreeplayState());
+		
+				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+				PlayState.instance.callOnScripts('onGameOverConfirm', [false]);
+			}
+
+			if (boyfriend.animation.curAnim != null)
+			{
+				if (boyfriend.animation.curAnim.name == 'firstDeath' && boyfriend.animation.curAnim.finished && startedDeath)
 				{
-					FlxG.camera.follow(camFollow, LOCKON, 0);
-					updateCamera = true;
-					isFollowingAlready = true;
-					
+					boyfriend.playAnim('deathLoop');
 					if (PlayState.SONG.stage != 'roof-old')
 					{
-						FlxG.sound.play(Paths.sound('pizdos'));
-						FlxG.sound.play(Paths.sound('zamn/'+randomNum));
+						fuckedText.animation.play('loop');
+						fuckedText.centerOffsets();
 					}
 				}
-
-				if(boyfriend.animation.curAnim.curFrame >= 25)
+		
+				if(boyfriend.animation.curAnim.name == 'firstDeath')
 				{
-					if (PlayState.SONG.stage != 'roof-old' && characterName != 'bf-dead')
+					if(boyfriend.animation.curAnim.curFrame >= 12 && !isFollowingAlready)
 					{
-						FlxTween.tween(retry, {y: boyfriend.y - 50, alpha: 1}, 4, {
-							ease: FlxEase.expoOut
-						});
+						FlxG.camera.follow(camFollow, LOCKON, 0);
+						updateCamera = true;
+						isFollowingAlready = true;
+							
+						if (PlayState.SONG.stage != 'roof-old')
+						{
+							FlxG.sound.play(Paths.sound('pizdos'));
+							FlxG.sound.play(Paths.sound('zamn/'+randomNum));
+						}
 					}
-				}
-
-				if (boyfriend.animation.curAnim.finished && !playingDeathSound)
-				{
-					startedDeath = true;
-					if (PlayState.SONG.stage == 'night')
+		
+					if(boyfriend.animation.curAnim.curFrame >= 25)
 					{
-						playingDeathSound = true;
-						coolStartDeath(0.2);
-
-						FlxG.sound.play(Paths.sound('game_over/line_' + FlxG.random.int(0, 33)), 1, false, null, true, function() {
-							if(!isEnding)
-							{
-								FlxG.sound.music.fadeIn(4, 0.2, 1);
-							}
-						});
+						if (PlayState.SONG.stage != 'roof-old' && characterName != 'bf-dead')
+						{
+							FlxTween.tween(retry, {y: boyfriend.y - 50, alpha: 1}, 4, {
+								ease: FlxEase.expoOut
+							});
+						}
 					}
-					else coolStartDeath();
+		
+					if (boyfriend.animation.curAnim.finished && !playingDeathSound)
+					{
+						startedDeath = true;
+						if (PlayState.SONG.stage == 'night')
+						{
+							playingDeathSound = true;
+							coolStartDeath(0.2);
+		
+							FlxG.sound.play(Paths.sound('game_over/line_' + FlxG.random.int(0, 33)), 1, false, null, true, function() {
+								if(!isEnding)
+								{
+									FlxG.sound.music.fadeIn(4, 0.2, 1);
+								}
+							});
+						}
+						else coolStartDeath();
+					}
 				}
 			}
-		}
+				
+			if(updateCamera) FlxG.camera.followLerp = FlxMath.bound(elapsed * 0.6 / (FlxG.updateFramerate / 60), 0, 1);
+			else FlxG.camera.followLerp = 0;
 		
-		if(updateCamera) FlxG.camera.followLerp = FlxMath.bound(elapsed * 0.6 / (FlxG.updateFramerate / 60), 0, 1);
-		else FlxG.camera.followLerp = 0;
-
-		if (FlxG.sound.music.playing)
-		{
-			Conductor.songPosition = FlxG.sound.music.time;
+			if (FlxG.sound.music.playing)
+			{
+				Conductor.songPosition = FlxG.sound.music.time;
+			}
 		}
+	
 		PlayState.instance.callOnScripts('onUpdatePost', [elapsed]);
 	}
 

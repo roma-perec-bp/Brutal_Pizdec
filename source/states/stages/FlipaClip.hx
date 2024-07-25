@@ -1,6 +1,7 @@
 package states.stages;
 
 import states.stages.objects.*;
+import substates.GameOverSubstate;
 
 class FlipaClip extends BaseStage
 {
@@ -10,6 +11,9 @@ class FlipaClip extends BaseStage
 
 	override function create()
 	{
+		var _song = PlayState.SONG;
+		GameOverSubstate.deathSoundName = 'fnf_loss_sfx_notBf';
+		
 		bg = new BGSprite('Sexy', -200, -200, 0, 0);
 		add(bg);
 
