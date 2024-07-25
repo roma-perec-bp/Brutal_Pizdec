@@ -3037,7 +3037,7 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 //					Mods.loadTopMod();
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 					#if desktop DiscordClient.resetClientID(); #end
 
 					cancelMusicFadeTween();

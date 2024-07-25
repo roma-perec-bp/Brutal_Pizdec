@@ -1,6 +1,7 @@
 package states.stages;
 
 import states.stages.objects.*;
+import substates.GameOverSubstate;
 import objects.Character;
 
 class Roof extends BaseStage
@@ -22,6 +23,10 @@ class Roof extends BaseStage
 
 	override function create()
 	{
+		var _song = PlayState.SONG;
+		GameOverSubstate.deathSoundName = 'fnf_loss_sfx_notBf';
+		GameOverSubstate.characterName = 'hwaw-death';
+
 		var bg:BGSprite = new BGSprite('sky', 0, 0, 0.75, 0.75);
 		bg.setGraphicSize(Std.int(bg.width * 3));
 		add(bg);
