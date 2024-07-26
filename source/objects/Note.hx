@@ -65,6 +65,7 @@ class Note extends FlxSprite
 	public var rgbShader:RGBShaderReference;
 	public static var globalRgbShaders:Array<RGBPalette> = [];
 	public var inEditor:Bool = false;
+	public var playstateMoment:Bool = false;
 
 	public var animSuffix:String = '';
 	public var gfNote:Bool = false;
@@ -146,14 +147,41 @@ class Note extends FlxSprite
 
 	public function defaultRGB()
 	{
-		var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[noteData];
-		if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[noteData];
-
-		if (noteData > -1 && noteData <= arr.length)
+		if(inEditor || playstateMoment == false)
 		{
-			rgbShader.r = arr[0];
-			rgbShader.g = arr[1];
-			rgbShader.b = arr[2];
+			var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[noteData];
+			if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[noteData];
+			if (noteData > -1 && noteData <= arr.length)
+			{
+				rgbShader.r = arr[0];
+				rgbShader.g = arr[1];
+				rgbShader.b = arr[2];
+			}
+		}
+		else
+		{
+			if(mustPress)
+			{
+				var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[noteData];
+				if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[noteData];
+				if (noteData > -1 && noteData <= arr.length)
+				{
+					rgbShader.r = arr[0];
+					rgbShader.g = arr[1];
+					rgbShader.b = arr[2];
+				}
+			}
+			else
+			{
+				var arrOpp:Array<String> = PlayState.instance.dad.arrowColor[noteData];
+
+				if (noteData > -1 && noteData <= arrOpp.length)
+				{
+					rgbShader.r = Std.parseInt(arrOpp[0]);
+					rgbShader.g = Std.parseInt(arrOpp[1]);
+					rgbShader.b = Std.parseInt(arrOpp[2]);
+				}
+			}
 		}
 	}
 
@@ -179,31 +207,92 @@ class Note extends FlxSprite
 				case 'Alt Animation':
 					animSuffix = '-alt';
 				case 'No Animation':
-				if(PlayState.SONG.song == 'lore') // не просите почему он нужен
+				if(PlayState.SONG.song == 'Lore') // не просите почему он нужен
 					{
-						rgbShader.r = 0xFF2D2D49;
-						rgbShader.g = 0xFFFFFFFF;
-						rgbShader.b = 0xFF000000;
-						noteSplashData.r = 0xFF2D2D49;
-						noteSplashData.g = 0xFFFFFFFF;
+						switch(noteData)
+						{
+							case 0:
+								rgbShader.r = 0xFF00137F;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF0D0037;
+								noteSplashData.r = 0xFF00137F;
+								noteSplashData.g = 0xFFFFFFFF;
+							case 1:
+								rgbShader.r = 0xFF000000;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF303030;
+								noteSplashData.r = 0xFF000000;
+								noteSplashData.g = 0xFFFFFFFF;
+							case 2:
+								rgbShader.r = 0xFFD1C9A9;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF898045;
+								noteSplashData.r = 0xFFD1C9A9;
+								noteSplashData.g = 0xFFFFFFFF;
+							case 3:
+								rgbShader.r = 0xFF37004F;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF0A002A;
+								noteSplashData.r = 0xFF37004F;
+								noteSplashData.g = 0xFFFFFFFF;
+						}
 					}
 					noAnimation = true;
 					noMissAnimation = true;
 				case 'GF Sing':
 					gfNote = true;
-					if(PlayState.SONG.song == 'lore')
+					if(PlayState.SONG.song == 'Lore')
 					{
-						rgbShader.r = 0xFF2D2D49;
-						rgbShader.g = 0xFFFFFFFF;
-						rgbShader.b = 0xFF000000;
-						noteSplashData.r = 0xFF2D2D49;
-						noteSplashData.g = 0xFFFFFFFF;
+						switch(noteData)
+						{
+							case 0:
+								rgbShader.r = 0xFF00137F;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF0D0037;
+								noteSplashData.r = 0xFF00137F;
+								noteSplashData.g = 0xFFFFFFFF;
+							case 1:
+								rgbShader.r = 0xFF000000;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF303030;
+								noteSplashData.r = 0xFF000000;
+								noteSplashData.g = 0xFFFFFFFF;
+							case 2:
+								rgbShader.r = 0xFFD1C9A9;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF898045;
+								noteSplashData.r = 0xFFD1C9A9;
+								noteSplashData.g = 0xFFFFFFFF;
+							case 3:
+								rgbShader.r = 0xFF37004F;
+								rgbShader.g = 0xFFFFFFFF;
+								rgbShader.b = 0xFF0A002A;
+								noteSplashData.r = 0xFF37004F;
+								noteSplashData.g = 0xFFFFFFFF;
+						}
 					}
 				case 'rom':
 					romNote = true;
-					rgbShader.r = 0xFF4CFF00;
-					rgbShader.g = 0xFFFFFFFF;
-					rgbShader.b = 0xFF164E00;
+
+					switch(noteData)
+					{
+						case 0:
+							rgbShader.r = 0xFFFF006E;
+							rgbShader.g = 0xFFFFFFFF;
+							rgbShader.b = 0xFF7F0037;
+						case 1:
+							rgbShader.r = 0xFF00FF21;
+							rgbShader.g = 0xFFFFFFFF;
+							rgbShader.b = 0xFF007F46;
+						case 2:
+							rgbShader.r = 0xFFFF0000;
+							rgbShader.g = 0xFFFFFFFF;
+							rgbShader.b = 0xFF7F0000;
+						case 3:
+							rgbShader.r = 0xFF00FF90;
+							rgbShader.g = 0xFFFFFFFF;
+							rgbShader.b = 0xFF007F46;
+					}
 				case 'Jap Note':
 					ignoreNote = mustPress;
 					reloadNote('JAPNOTE_assets');
@@ -266,7 +355,7 @@ class Note extends FlxSprite
 		return value;
 	}
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?createdFrom:Dynamic = null)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?createdFrom:Dynamic = null, ?playstateMoment:Bool = false)
 	{
 		super();
 
@@ -279,6 +368,7 @@ class Note extends FlxSprite
 		this.prevNote = prevNote;
 		isSustainNote = sustainNote;
 		this.inEditor = inEditor;
+		this.playstateMoment = playstateMoment;
 		this.moves = false;
 
 		x += (ClientPrefs.data.middleScroll ? PlayState.STRUM_X_MIDDLESCROLL : PlayState.STRUM_X) + 50;
@@ -291,7 +381,7 @@ class Note extends FlxSprite
 
 		if(noteData > -1) {
 			texture = '';
-			rgbShader = new RGBShaderReference(this, initializeGlobalRGBShader(noteData));
+			rgbShader = new RGBShaderReference(this, initializeGlobalRGBShader(noteData, mustPress, inEditor, playstateMoment));
 			if(PlayState.SONG != null && PlayState.SONG.disableNoteRGB) rgbShader.enabled = false;
 
 			x += swagWidth * (noteData);
@@ -354,19 +444,46 @@ class Note extends FlxSprite
 		x += offsetX;
 	}
 
-	public static function initializeGlobalRGBShader(noteData:Int)
+	public static function initializeGlobalRGBShader(noteData:Int, ?oppo:Bool, ?editor:Bool, ?play:Bool = false)
 	{
 		if(globalRgbShaders[noteData] == null)
 		{
 			var newRGB:RGBPalette = new RGBPalette();
 			globalRgbShaders[noteData] = newRGB;
 
-			var arr:Array<FlxColor> = (!PlayState.isPixelStage) ? ClientPrefs.data.arrowRGB[noteData] : ClientPrefs.data.arrowRGBPixel[noteData];
-			if (noteData > -1 && noteData <= arr.length)
+			if(editor || play == false)
 			{
-				newRGB.r = arr[0];
-				newRGB.g = arr[1];
-				newRGB.b = arr[2];
+				var arr:Array<FlxColor> = (!PlayState.isPixelStage) ? ClientPrefs.data.arrowRGB[noteData] : ClientPrefs.data.arrowRGBPixel[noteData];
+				if (noteData > -1 && noteData <= arr.length)
+				{
+					newRGB.r = arr[0];
+					newRGB.g = arr[1];
+					newRGB.b = arr[2];
+				}
+			}
+			else
+			{
+				if(oppo)
+				{
+					var arr:Array<FlxColor> = (!PlayState.isPixelStage) ? ClientPrefs.data.arrowRGB[noteData] : ClientPrefs.data.arrowRGBPixel[noteData];
+					if (noteData > -1 && noteData <= arr.length)
+					{
+						newRGB.r = arr[0];
+						newRGB.g = arr[1];
+						newRGB.b = arr[2];
+					}
+				}
+				else
+				{
+					var arrOpp:Array<String> = PlayState.instance.dad.arrowColor[noteData];
+
+					if (noteData > -1 && noteData <= arrOpp.length)
+					{
+						newRGB.r = Std.parseInt(arrOpp[0]);
+						newRGB.g = Std.parseInt(arrOpp[1]);
+						newRGB.b = Std.parseInt(arrOpp[2]);
+					}
+				}
 			}
 		}
 		return globalRgbShaders[noteData];

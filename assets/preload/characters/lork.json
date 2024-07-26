@@ -73,6 +73,28 @@
 		200,
 		-40
 	],
+	"notes_colors": [
+		[
+			"0xFF00FF90",
+			"0xFFFFFFFF",
+			"0xFF007F46"
+		],
+		[
+			"0xFF0026FF",
+			"0xFFFFFFFF",
+			"0xFF00137F"
+		],
+		[
+			"0xFF00FF21",
+			"0xFFFFFFFF",
+			"0xFF007F0E"
+		],
+		[
+			"0xFFFFE97F",
+			"0xFFFFFFFF",
+			"0xFF7F743F"
+		]
+	],
 	"sing_duration": 6.1,
 	"scale": 1.4
 }

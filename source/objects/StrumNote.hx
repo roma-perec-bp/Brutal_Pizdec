@@ -23,22 +23,54 @@ class StrumNote extends FlxSprite
 	}
 
 	public var useRGBShader:Bool = true;
-	public function new(x:Float, y:Float, leData:Int, player:Int) {
+	public function new(x:Float, y:Float, leData:Int, player:Int, ?notPlayState:Bool = true) {
 		rgbShader = new RGBShaderReference(this, Note.initializeGlobalRGBShader(leData));
 		rgbShader.enabled = false;
 		if(PlayState.SONG != null && PlayState.SONG.disableNoteRGB) useRGBShader = false;
 		
-		var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[leData];
-		if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[leData];
-		
-		if(leData <= arr.length)
+		if (player == 0)
 		{
-			@:bypassAccessor
+			if(notPlayState == false && useRGBShader == true)
 			{
-				rgbShader.r = arr[0];
-				rgbShader.g = arr[1];
-				rgbShader.b = arr[2];
+				var arrOpp:Array<String> = PlayState.instance.dad.arrowColor[leData]; //crash
+				if(leData <= arrOpp.length)
+				{
+					@:bypassAccessor
+					{
+				     	rgbShader.r = Std.parseInt(arrOpp[0]);
+				    	rgbShader.g = Std.parseInt(arrOpp[1]);
+				    	rgbShader.b = Std.parseInt(arrOpp[2]);
+					}
+				}
 			}
+			else
+			{
+				var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[leData];
+				if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[leData];
+				if(leData <= arr.length)
+				{
+					@:bypassAccessor
+					{
+						rgbShader.r = arr[0];
+						rgbShader.g = arr[1];
+						rgbShader.b = arr[2];
+					}
+				}
+			}
+		}
+		else if (player == 1)
+		{
+			var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[leData];
+			if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[leData];
+	    	if(leData <= arr.length)
+	    	{
+				@:bypassAccessor
+				{
+	    	    	rgbShader.r = arr[0];
+		        	rgbShader.g = arr[1];
+		        	rgbShader.b = arr[2];
+				}
+	    	}
 		}
 
 		noteData = leData;
