@@ -805,6 +805,13 @@ class PlayState extends MusicBeatState
 		}
 
 		precacheList.set('alphabet', 'image');
+
+		if(curSong == 'Anekdot')
+		{
+			for (i in 0...5)
+				Paths.image('noteAnekdot/note_' + i);
+		}
+
 		resetRPC();
 
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
@@ -3621,8 +3628,15 @@ class PlayState extends MusicBeatState
 
 			if(char != null)
 			{
-				char.playAnim(animToPlay, true);
-				char.holdTimer = 0;
+				if(curSong == 'Anekdot')
+				{
+					if(!note.isSustainNote) anekdotHit(note);
+				}
+				else
+				{
+					char.playAnim(animToPlay, true);
+					char.holdTimer = 0;
+				}
 			}
 		}
 
@@ -3814,6 +3828,33 @@ class PlayState extends MusicBeatState
 				note.destroy();
 			}
 		}
+	}
+
+	function anekdotHit(note:Note)
+	{
+		var player:Character = dad;
+		var boxNote:AnekdotNote = new AnekdotNote(player, note.noteData);
+		
+		boxNote.x = player.x + 250;
+		boxNote.y = player.y - 100;
+		boxNote.scale.set(0.6, 0.6);
+		boxNote.updateHitbox();
+
+		boxNote.blend = ADD;
+
+		boxNote.acceleration.y = -550;
+		boxNote.velocity.y = FlxG.random.int(-100, -150);
+		boxNote.velocity.x = FlxG.random.int(140, 175);
+
+		add(boxNote);
+
+		FlxTween.tween(boxNote, {alpha: 0}, Conductor.crochet * 0.004, {
+			ease: FlxEase.linear,
+			onComplete: function(twn:FlxTween)
+			{
+				boxNote.destroy();
+			}
+		});
 	}
 
 	public function spawnNoteSplashOnNote(note:Note) {

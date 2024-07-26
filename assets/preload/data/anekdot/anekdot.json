@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "perec",
-		"player2": "bf",
+		"player1": "psycho",
+		"player2": "box",
 		"events": [
 			[
 				0,
@@ -625,6 +625,11 @@
 						"Cam Boom Speed",
 						"1",
 						"4"
+					],
+					[
+						"Change Scroll Speed",
+						"1.5",
+						"10"
 					]
 				]
 			],
@@ -648,8 +653,8 @@
 					],
 					[
 						"Screen Shake",
-						"15, 0.01",
-						"15, 0.01"
+						"14, 0.01",
+						"14, 0.01"
 					]
 				]
 			],
