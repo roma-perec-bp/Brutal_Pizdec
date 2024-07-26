@@ -7,6 +7,11 @@ class Anekdot extends BaseStage
 {
 	override function create()
 	{	
+		var les:BGSprite = new BGSprite('les', 0, 0, 0.7, 0.9);
+		les.screenCenter();
+		les.setGraphicSize(Std.int(les.width * 1.5));
+		add(les);
+
 		var day:BGSprite = new BGSprite('bg', 0, 0);
 		day.screenCenter();
 		day.setGraphicSize(Std.int(day.width * 1.5));

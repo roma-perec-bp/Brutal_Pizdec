@@ -82,6 +82,7 @@ class FreeplayState extends MusicBeatState
 		0xff61de35
 	];
 
+	var jalapenis:String = 'jap_3';
 	override function create()
 	{
 
@@ -96,10 +97,13 @@ class FreeplayState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
+		if(FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash('overfire')))
+			jalapenis = 'jap_4';
+
 		switch (freeplayType)
 		{
 			case 0:
-				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
+				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', jalapenis]);
 			case 1:
 				addWeek(['Anekdot', 'Klork', 'T-SHORT', 'Monochrome', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', 'lore-pixel'], ['zombie', 'lork', 'tshort', 'dead', 'gandons']);
 			case 2:
@@ -483,6 +487,8 @@ class FreeplayState extends MusicBeatState
 				portrait.offset.set(-196, 70);
 			case 'jap_3':
 				portrait.offset.set(-190, 110);
+			case 'jap_4':
+				portrait.offset.set(-198, 110);
 			case 'zombie':
 				portrait.offset.set(-82, 140);
 			case 'tshort':

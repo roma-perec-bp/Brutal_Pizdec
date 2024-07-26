@@ -111,7 +111,7 @@ class MainMenuState extends MusicBeatState
 			rightItem = createMenuItem(rightOption, 1150, 460);
 		}
 
-		var randomNum:Int = FlxG.random.int(0,4);
+		var randomNum:Int = FlxG.random.int(0,5);
 		bros = new FlxSprite(-50, 270);
 		bros.frames = Paths.getSparrowAtlas('main_menu_chars/${randomNum}');
 		bros.animation.addByPrefix('idle', 'menu', 24);
@@ -119,11 +119,16 @@ class MainMenuState extends MusicBeatState
 		bros.ID = randomNum;
 		bros.antialiasing = ClientPrefs.data.antialiasing;
 		bros.scale.set(1, 1);
+
+		if(randomNum == 5)
+		{
+			bros.y += 160; //какого хуя рандом шлепка
+		}
 		add(bros);
 		
 		for(i in 0...Achievements.achievementsStuff.length)
 		{
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
+			if(Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
 			{
 				var trophy:FlxSprite = new FlxSprite(330, 335);
 				if(monochrome() == false)
@@ -142,7 +147,6 @@ class MainMenuState extends MusicBeatState
 				
 				trophy.antialiasing = ClientPrefs.data.antialiasing;
 				add(trophy);
-
 			}
 		}
 

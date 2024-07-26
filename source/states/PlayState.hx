@@ -676,7 +676,7 @@ class PlayState extends MusicBeatState
 			fireHalapeno = new FlxSprite(0, scoreTxt.y - 250);
 			fireHalapeno.frames = Paths.getSparrowAtlas('fireLmao');
 			fireHalapeno.animation.addByPrefix('idle', 'fire', 24);
-			fireHalapeno.flipY = ClientPrefs.data.downScroll;
+			fireHalapeno.flipX = true;
 			fireHalapeno.antialiasing = ClientPrefs.data.antialiasing;
 			fireHalapeno.scrollFactor.set();
 			fireHalapeno.blend = ADD;
@@ -2024,11 +2024,11 @@ class PlayState extends MusicBeatState
 		}
 
 		if(curSong == 'Lore')
-			{
-				var mult:Float = FlxMath.lerp(1, iconROM.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
-				iconGF.scale.set(mult, mult);
-				iconGF.updateHitbox();
-			}
+		{
+			var mult:Float = FlxMath.lerp(1, iconROM.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
+			iconGF.scale.set(mult, mult);
+			iconGF.updateHitbox();
+		}
 
 		var iconOffset:Int = 26;
 		if (health > 2) health = 2;

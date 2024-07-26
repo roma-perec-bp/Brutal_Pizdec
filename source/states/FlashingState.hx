@@ -79,8 +79,8 @@ class FlashingState extends MusicBeatState
 		rippvzdich.alpha = 0;
 		add(rippvzdich);
 		
-		skiptext = new FlxText(5, FlxG.height-28, FlxG.width, "Skipping...", 26);
-		skiptext.setFormat("vcr.ttf", 26, FlxColor.WHITE, LEFT);
+		skiptext = new FlxText(5, FlxG.height-28, FlxG.width, "Hold Enter to skip...", 32);
+		skiptext.setFormat("vcr.ttf", 32, FlxColor.WHITE, CENTER);
 		add(skiptext);
 
 		gmanMoment = new FlxSound().loadEmbedded(Paths.sound('disclamer/flash-2'));
