@@ -1,0 +1,134 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				70,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-31,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				8,
+				19
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				20,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				23,
+				24,
+				25
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/LORK_NEW_ASSETS",
+	"position": [
+		50,
+		170
+	],
+	"healthicon": "lork",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		185,
+		103
+	],
+	"camera_position": [
+		200,
+		-40
+	],
+	"notes_colors": [
+		[
+			"0xFF00FF90",
+			"0xFFFFFFFF",
+			"0xFF007F46"
+		],
+		[
+			"0xFF0026FF",
+			"0xFFFFFFFF",
+			"0xFF00137F"
+		],
+		[
+			"0xFF00FF21",
+			"0xFFFFFFFF",
+			"0xFF007F0E"
+		],
+		[
+			"0xFFFFE97F",
+			"0xFFFFFFFF",
+			"0xFF7F743F"
+		]
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 1
+}
