@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="note_5.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hitNote0000" x="1714" y="520" width="254" height="335" frameX="-87" frameY="-114" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0001" x="10" y="580" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0002" x="10" y="10" width="407" height="560" frameX="-20" frameY="0" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0003" x="427" y="1030" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0004" x="844" y="1030" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0005" x="1261" y="1030" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0006" x="10" y="1090" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0007" x="427" y="1540" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0008" x="844" y="1540" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0009" x="1261" y="1540" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0010" x="10" y="1600" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0011" x="427" y="2050" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0012" x="844" y="2050" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0013" x="1261" y="2050" width="407" height="500" frameX="-20" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0014" x="1291" y="520" width="413" height="500" frameX="-17" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0015" x="862" y="520" width="419" height="500" frameX="-14" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0016" x="427" y="520" width="425" height="500" frameX="-11" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0017" x="1333" y="10" width="433" height="500" frameX="-7" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0018" x="884" y="10" width="439" height="500" frameX="-4" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0019" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0020" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0021" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0022" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0023" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0024" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0025" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0026" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0027" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0028" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0029" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0030" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0031" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0032" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0033" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+	<SubTexture name="hitNote0034" x="427" y="10" width="447" height="500" frameX="0" frameY="-30" frameWidth="447" frameHeight="560"/>
+</TextureAtlas>
