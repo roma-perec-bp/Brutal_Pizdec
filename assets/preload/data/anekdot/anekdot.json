@@ -627,6 +627,11 @@
 						"4"
 					],
 					[
+						"Set DAD Speed",
+						"1",
+						"0"
+					],
+					[
 						"Change Scroll Speed",
 						"1.5",
 						"10"

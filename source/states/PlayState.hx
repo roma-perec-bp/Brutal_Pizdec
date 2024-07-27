@@ -227,8 +227,6 @@ class PlayState extends MusicBeatState
 
 	var accuracyShit:FlxText;
 
-	public var fullScore:Int = 0;
-
 	var scoreTxtTween:FlxTween;
 	var sexcameratween:FlxTween;
 	var followTween:FlxTween;
@@ -1561,9 +1559,6 @@ class PlayState extends MusicBeatState
 				var daNoteData:Int = Std.int(songNotes[1] % 4);
 				var gottaHitNote:Bool = section.mustHitSection;
 
-				if (gottaHitNote && songNotes[3] != 'Hurt Note' && songNotes[3] != 'Jap Note' && songNotes[3] != 'Jalapeno Note NEW')
-					totalNotes += 1;
-
 				if (songNotes[1] > 3)
 				{
 					gottaHitNote = !section.mustHitSection;
@@ -1587,6 +1582,14 @@ class PlayState extends MusicBeatState
 				var susLength:Float = swagNote.sustainLength;
 
 				susLength = susLength / Conductor.stepCrochet;
+
+				var badNote:Bool = false;
+
+				if(swagNote.noteType == 'Hurt Note' || swagNote.noteType == 'Jap Note' || swagNote.noteType == 'Jalapeno Note NEW')
+					badNote = true;
+
+				if (swagNote.mustPress == true && badNote == false)
+					totalNotes++;
 
 				unspawnNotes.push(swagNote);
 
@@ -1660,8 +1663,6 @@ class PlayState extends MusicBeatState
 
 		unspawnNotes.sort(sortByTime);
 		generatedMusic = true;
-
-		fullScore = totalNotes * 350;
 	}
 
 	// called only once per different event (Used for precaching)
@@ -2440,9 +2441,12 @@ class PlayState extends MusicBeatState
 				if(flValue1 == null || flValue1 < 1) flValue1 = 1;
 				gfSpeed = Math.round(flValue1);
 
-			case 'Set CHARACTERS Speed':
+			case 'Set DAD Speed':
 				if(flValue1 == null || flValue1 < 1) flValue1 = 1;
 				dad.danceEveryNumBeats = Math.round(flValue1);
+
+			case 'Set BF Speed':
+				if(flValue1 == null || flValue1 < 1) flValue1 = 1;
 				boyfriend.danceEveryNumBeats = Math.round(flValue1);
 
 			case 'Add Camera Zoom':
@@ -3187,22 +3191,6 @@ class PlayState extends MusicBeatState
 				totalPlayed++;
 				RecalculateRating(false);
 			}
-
-			// calculate shit
-			var cur:Float = (songHits*350/fullScore)*100;
-			for(i in 0...medal_system.length)
-			{
-				if(cur < medal_system[i][1] && cur >= medal_system[i][0])
-				{
-					medalStatus = i;
-					if (medalOldStatus != medalStatus)
-					{
-						medalOldStatus = medalStatus;
-						uniqueMedalChange(medalStatus+1);
-						medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
-					}
-				}
-			}
 		}
 
 		if(curStage == 'roof-old')
@@ -3674,6 +3662,7 @@ class PlayState extends MusicBeatState
 
 	function uniqueMedalChange(medalInt:Int) //почему не LERP? потому что Ease
 	{
+		FlxTween.cancelTweensOf(medal);
 		switch(medalInt)
 		{
 			case 6:
@@ -3691,8 +3680,8 @@ class PlayState extends MusicBeatState
 				FlxTween.tween(medal, {angle: 12}, Conductor.crochet * 0.002, {ease: FlxEase.bounceOut, type: BACKWARD});
 				FlxTween.color(medal, Conductor.crochet * 0.002, medal.color, 0xffFFFFFF);
 			case 1:
-				medal.colorTransform.redOffset = 0;
-				medal.colorTransform.greenOffset = 163;
+				medal.colorTransform.redOffset = 134;
+				medal.colorTransform.greenOffset = 248;
 				medal.colorTransform.blueOffset = 255;
 
 				medal.colorTransform.redMultiplier = 0;
@@ -3702,6 +3691,8 @@ class PlayState extends MusicBeatState
 				FlxTween.tween(medal.scale, {x: 0.7, y: 0.7}, Conductor.crochet * 0.002, {ease: FlxEase.elasticOut, type: BACKWARD});
 				FlxTween.tween(medal, {angle: 23}, Conductor.crochet * 0.002, {ease: FlxEase.expoOut, type: BACKWARD});
 				FlxTween.tween(medal.colorTransform, {redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1}, Conductor.crochet * 0.002);
+
+				medal.x -= 50; //ТЫ ЧЕ ОХУЕЛ
 		}
 	}
 
@@ -4275,6 +4266,51 @@ class PlayState extends MusicBeatState
 		}
 		else if (songMisses < 10)
 			ratingFC = 'SDCB';
+
+		if (sicks == totalNotes)
+			medalStatus = 0;
+
+		// calculate shit
+		// Grade % (only good and sick), 1.00 is a full combo
+		var grade = (sicks + goods) / totalNotes;
+		// Clear % (including bad and shit). 1.00 is a full clear but not a full combo
+		var clear = (songHits) / totalNotes;
+
+		if (grade == 1.00)
+		{
+			if(ratingFC == 'SFC') medalStatus = 0;
+			else medalStatus = 1;
+		}
+		else if (grade >= 0.80)
+			medalStatus = 2;
+		else if (grade >= 0.60)
+			medalStatus = 3;
+		else if (grade >= 0.50)
+			medalStatus = 4;
+		else
+			medalStatus = 5;
+
+		if (medalOldStatus != medalStatus)
+		{
+			medalOldStatus = medalStatus;
+			uniqueMedalChange(medalStatus+1);
+			medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
+		}
+
+		/*var cur:Float = (songHits*350/fullScore)*200;
+		for(i in 0...medal_system.length)
+		{
+			if(cur < medal_system[i][1] && cur >= medal_system[i][0])
+			{
+				medalStatus = i;
+				if (medalOldStatus != medalStatus)
+					{
+					medalOldStatus = medalStatus;
+					uniqueMedalChange(medalStatus+1);
+					medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
+				}
+			}
+		}*/
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
