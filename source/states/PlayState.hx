@@ -212,6 +212,7 @@ class PlayState extends MusicBeatState
 	public var iconP2:HealthIcon;
 	public var iconROM:HealthIcon;
 	public var iconGF:HealthIcon;
+	public var camVideo:FlxCamera;
 	public var camHUD:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
@@ -332,12 +333,15 @@ class PlayState extends MusicBeatState
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
+		camVideo = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
+		camVideo.bgColor.alpha = 0;
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
+		FlxG.cameras.add(camVideo, false);
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camOther, false);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
@@ -1062,6 +1066,8 @@ class PlayState extends MusicBeatState
 				};
 			}
 			add(cutscene);
+
+			cutscene.videoSprite.cameras = [cameraFromString('video')];
 
 			if (playOnLoad)
 				cutscene.videoSprite.play();
@@ -2899,7 +2905,7 @@ class PlayState extends MusicBeatState
 
 			case 'Play Video':
 				startVideo(value1, true, false);
-				canPause = false; //хз как видео остановить на паузе
+				//canPause = false; //хз как видео остановить на паузе
 		}
 		
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
@@ -3513,6 +3519,15 @@ class PlayState extends MusicBeatState
 			for (i in 0...releaseArray.length)
 				if(releaseArray[i] || strumsBlocked[i] == true)
 					keyReleased(i);
+	}
+
+	function cameraFromString(cam:String):FlxCamera {
+		switch(cam.toLowerCase()) {
+			case 'camVideo' | 'video': return camVideo;
+			case 'camhud' | 'hud': return camHUD;
+			case 'camother' | 'other': return camOther;
+		}
+		return camGame;
 	}
 
 	function noteMiss(daNote:Note):Void { //You didn't hit the key and let it go offscreen, also used by Hurt Notes

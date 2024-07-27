@@ -140,6 +140,6 @@ function onBeatHit()
         vanilla = false
     end
     if curBeat == 596 then
-        cameraFade('hud', '000000', 1)
+        cameraFade('hud', '000000', 7)
     end
 end
