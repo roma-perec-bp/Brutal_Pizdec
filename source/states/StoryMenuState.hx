@@ -16,9 +16,10 @@ class StoryMenuState extends MusicBeatState
 {
 	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
 
-
 	var scoring:FlxText;
 	var scoreText:FlxText;
+
+	var medgrp:FlxTypedSpriteGroup<FlxSprite>;
 
 	private static var lastDifficultyName:String = '';
 	var curDifficulty:Int = 1;
@@ -145,6 +146,9 @@ class StoryMenuState extends MusicBeatState
 		add(scoring);
 		add(txtWeekTitle);
 
+		medgrp = new FlxTypedSpriteGroup<FlxSprite>();
+		add(medgrp);
+
 		changeWeek();
 		changeDifficulty();
 
@@ -164,30 +168,6 @@ class StoryMenuState extends MusicBeatState
 
 		if (!movedBack && !selectedWeek)
 		{
-			var upP = controls.UI_UP_P;
-			var downP = controls.UI_DOWN_P;
-			if (upP)
-			{
-				changeWeek(-1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-
-			if (downP)
-			{
-				changeWeek(1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-
-			if(FlxG.mouse.wheel != 0)
-			{
-				FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-				changeWeek(-FlxG.mouse.wheel);
-				changeDifficulty();
-			}
-
-			if (upP || downP)
-				changeDifficulty();
-
 			if(FlxG.keys.justPressed.CONTROL)
 			{
 				persistentUpdate = false;
@@ -197,9 +177,8 @@ class StoryMenuState extends MusicBeatState
 			{
 				persistentUpdate = false;
 				openSubState(new ResetScoreSubState('', curDifficulty, '', curWeek));
-				//FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
-			else if (controls.ACCEPT)
+			else if (controls.ACCEPT || FlxG.mouse.justPressed)
 			{
 				selectWeek();
 			}
@@ -364,6 +343,18 @@ class StoryMenuState extends MusicBeatState
 			curDifficulty = newPos;
 		}
 		updateText();
+
+		medgrp.clear();
+
+		for (i in 0...3)
+		{
+			var medal:FlxSprite = new FlxSprite((i * 75) + scoreText.x - 105, scoreText.y + 55).loadGraphic(Paths.image('medals/medal_1'));
+			medal.scale.set(0.15, 0.15);
+			medal.updateHitbox();
+			medal.centerOffsets();
+			medal.antialiasing = ClientPrefs.data.antialiasing;
+			medgrp.add(medal);
+		}
 	}
 
 	function weekIsLocked(name:String):Bool {

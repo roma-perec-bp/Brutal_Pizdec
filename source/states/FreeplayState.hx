@@ -34,6 +34,7 @@ class FreeplayState extends MusicBeatState
 	public static var freeplayType = 0;
 
 	var scoreBG:FlxSprite;
+	var scoreMedal:FlxSprite;
 	var scoreText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
@@ -55,6 +56,7 @@ class FreeplayState extends MusicBeatState
 	var colorTween:FlxTween;
 
 	var displayName:String;
+	public var medal:FlxSprite;
 
 	var mainColors:Array<Int> = [
 		0xff4d250e,
@@ -187,7 +189,20 @@ class FreeplayState extends MusicBeatState
 		scoreBG.alpha = 0.6;
 		add(scoreBG);
 
+		scoreMedal = new FlxSprite(FlxG.width - 195, 66).makeGraphic(195, 170, 0xFF000000);
+		scoreMedal.alpha = 0.6;
+		add(scoreMedal);
+
 		add(scoreText);
+
+		// медальки
+		medal = new FlxSprite(FlxG.width - 150, 75).loadGraphic(Paths.image('medals/medal_1'));
+		medal.scale.set(0.2, 0.2);
+		medal.origin.set(128/2, 128/2);
+		medal.updateHitbox();
+		medal.centerOffsets();
+		medal.antialiasing = ClientPrefs.data.antialiasing;
+		add(medal);
 
 		if(curSelected[freeplayType] >= songs.length) curSelected[freeplayType] = 0;
 		bg.color = songs[curSelected[freeplayType]].color;
