@@ -1,6 +1,4 @@
 ---@diagnostic disable: undefined-global, lowercase-global
-local textStringStart = 0
-local textStringLast = 0
 
 local rus = ''
 local eng = ''
@@ -12,13 +10,15 @@ function onCreate()
     setTextSize('lyrics', 30)
     updateHitbox('lyrics')
     screenCenter('lyrics', 'x')
-    setTextFont('lyrics', 'HouseofTerror.ttf')
+    setTextFont('lyrics', 'HouseofTerrorRus.ttf')
+    setObjectCamera('lyrics', 'other')
 
     setProperty('lyrics.alpha', 0)
     addLuaText('lyrics')
 end
 
 function onEvent(eventName, value1, value2)
+    luaDebugMode = true
     if eventName == 'lyrics' then
         cancelTimer('lyricsTMR')
         cancelTween('lyricsBye')
@@ -26,14 +26,18 @@ function onEvent(eventName, value1, value2)
         cancelTween('lyricsShrinkY')
         setProperty('lyrics.alpha', 1)
 
-        tableV1 = stringSplit(value1,'$')
-        rus = stringTrim(split[2])
+        local split = stringSplit(value1, '$')
         eng = stringTrim(split[1])
+        rus = stringTrim(split[2])
 
-        if getPropertyFromClass('ClientPrefs', 'language') == 'Russian' then
-            setTextString('lyrics', rus)
-        else
-            setTextString('lyrics', eng)
+        if getPropertyFromClass('backend.ClientPrefs', 'data.language') == 'Russian' then
+            if split[2] == nil and split[2] == '' then
+                setTextString('lyrics', split[1])
+            else
+                setTextString('lyrics', split[2])
+            end
+        elseif getPropertyFromClass('backend.ClientPrefs', 'data.language') == 'English' then
+            setTextString('lyrics', split[1])
         end
 
         if value2 ~= nil and value2 ~= '' then
