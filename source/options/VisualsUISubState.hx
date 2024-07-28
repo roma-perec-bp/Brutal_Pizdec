@@ -60,6 +60,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			addOption(option);
 		}
 
+		var option:Option = new Option('Change Language:',
+			"Select language that you prefer (WARNING! ONLY SUBTITLES AND ENDING SCREENS WILL BE TRANSLATED)",
+			'language',
+			'string',
+			['Russian', 'English']);
+		addOption(option);
+
 		var option:Option = new Option('Hide HUD',
 			'If checked, hides most HUD elements.',
 			'hideHud',

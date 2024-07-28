@@ -16,7 +16,7 @@
 				[
 					[
 						"lyrics",
-						"Game",
+						"Game$Игры",
 						"ff0000"
 					]
 				]
@@ -26,7 +26,7 @@
 				[
 					[
 						"lyrics",
-						"Game",
+						"Game$Игры",
 						"ff0000"
 					]
 				]
@@ -36,7 +36,7 @@
 				[
 					[
 						"lyrics",
-						"Game over",
+						"Game over$Игры кончились",
 						"ff0000"
 					]
 				]
@@ -46,7 +46,7 @@
 				[
 					[
 						"lyrics",
-						"Game over",
+						"Game over$Игры кончились",
 						"ff0000"
 					]
 				]
@@ -56,7 +56,7 @@
 				[
 					[
 						"lyrics",
-						"Game over",
+						"Game over$Игры кончились",
 						"ff0000"
 					]
 				]
@@ -66,7 +66,7 @@
 				[
 					[
 						"lyrics",
-						"Game over, bitch",
+						"Game over, sucker!!$Игры кончились, чмо!!",
 						"ff0000"
 					]
 				]
@@ -76,7 +76,7 @@
 				[
 					[
 						"lyrics",
-						"Game over, bitch",
+						"Game over, sucker!!$Игры кончились, чмо!!",
 						"ff0000"
 					]
 				]
@@ -86,7 +86,7 @@
 				[
 					[
 						"lyrics",
-						"HA",
+						"HA$ХА",
 						"ff0000"
 					],
 					[
@@ -101,7 +101,7 @@
 				[
 					[
 						"lyrics",
-						"HA HA",
+						"HA HA$ХА ХА",
 						"ff0000"
 					]
 				]
@@ -111,7 +111,7 @@
 				[
 					[
 						"lyrics",
-						"HA HA HA",
+						"HA HA HA$ХА ХА ХА",
 						"ff0000"
 					]
 				]
@@ -121,7 +121,7 @@
 				[
 					[
 						"lyrics",
-						"HA HA HA HA",
+						"HA HA HA HA$ХА ХА ХА ХА",
 						"ff0000"
 					]
 				]
@@ -231,7 +231,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"Oh$Ах",
 						"ff0000"
 					]
 				]
@@ -241,7 +241,7 @@
 				[
 					[
 						"lyrics",
-						"You fucking",
+						"Oh you...$Ах тыж...",
 						"ff0000"
 					]
 				]
@@ -251,7 +251,7 @@
 				[
 					[
 						"lyrics",
-						"A",
+						"A$A",
 						"ff0000"
 					]
 				]
@@ -261,7 +261,7 @@
 				[
 					[
 						"lyrics",
-						"AA",
+						"AA$AA",
 						"ff0000"
 					]
 				]
@@ -271,7 +271,7 @@
 				[
 					[
 						"lyrics",
-						"AAA",
+						"AAA$AAA",
 						"ff0000"
 					]
 				]
@@ -281,7 +281,7 @@
 				[
 					[
 						"lyrics",
-						"AAAA",
+						"AAAA$AAAA",
 						"ff0000"
 					]
 				]
@@ -291,7 +291,7 @@
 				[
 					[
 						"lyrics",
-						"AAAAA",
+						"AAAAA$AAAAA",
 						"ff0000"
 					]
 				]
@@ -301,7 +301,7 @@
 				[
 					[
 						"lyrics",
-						"AAAAAA",
+						"AAAAAA$AAAAAA",
 						"ff0000"
 					]
 				]
@@ -311,7 +311,7 @@
 				[
 					[
 						"lyrics",
-						"AAAAAAA",
+						"AAAAAAA$AAAAAAA",
 						"ff0000"
 					]
 				]
@@ -321,7 +321,7 @@
 				[
 					[
 						"lyrics",
-						"AAAAAAAA",
+						"AAAAAAAA$AAAAAAAA",
 						"ff0000"
 					]
 				]
@@ -331,7 +331,7 @@
 				[
 					[
 						"lyrics",
-						"AAAAAAAA",
+						"AAAAAAAA$AAAAAAAA",
 						"ff0000"
 					]
 				]
@@ -341,7 +341,7 @@
 				[
 					[
 						"lyrics",
-						"AUGHRKSK",
+						"AUGHRKSK$AUGHRKSK",
 						"ff0000"
 					]
 				]
@@ -351,7 +351,7 @@
 				[
 					[
 						"lyrics",
-						"AAAAAAA",
+						"AAAAAAA$AAAAAAA",
 						"ff0000"
 					]
 				]
@@ -361,7 +361,7 @@
 				[
 					[
 						"lyrics",
-						"ASMYNSAL",
+						"ASMYNSAL$ASMYNSAL",
 						"ff0000"
 					]
 				]
@@ -371,7 +371,7 @@
 				[
 					[
 						"lyrics",
-						"AAAAAAA",
+						"AAAAAAA$AAAAAAA",
 						"ff0000"
 					]
 				]
@@ -381,7 +381,7 @@
 				[
 					[
 						"lyrics",
-						"AJRBPISO",
+						"AJRBPISO$AJRBPISO",
 						"ff0000"
 					]
 				]
@@ -401,7 +401,7 @@
 					],
 					[
 						"lyrics",
-						"AAAAAAAA",
+						"AAAAAAAA$AAAAAAAA",
 						"FF0000"
 					]
 				]
@@ -472,11 +472,21 @@
 				]
 			],
 			[
+				98333.3333333333,
+				[
+					[
+						"lyrics",
+						"EY!$ЭЙ!",
+						"ff0000"
+					]
+				]
+			],
+			[
 				99999.9999999999,
 				[
 					[
 						"lyrics",
-						"FUCK",
+						"FUCK$БЛЯТЬ",
 						"ff0000"
 					]
 				]
@@ -736,7 +746,7 @@
 				[
 					[
 						"lyrics",
-						"BULL",
+						"BITCH!$СУ",
 						"ff0000"
 					]
 				]
@@ -746,7 +756,7 @@
 				[
 					[
 						"lyrics",
-						"BULLSHIT",
+						"BITCH!$СУКА!",
 						"ff0000"
 					]
 				]
@@ -901,7 +911,7 @@
 				[
 					[
 						"lyrics",
-						"BULL",
+						"BITCH!$СУ",
 						"ff0000"
 					]
 				]
@@ -911,7 +921,7 @@
 				[
 					[
 						"lyrics",
-						"BULLSHIT",
+						"BITCH!$СУКА!",
 						"ff0000"
 					]
 				]
@@ -971,7 +981,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You$Ты",
 						"ff0000"
 					]
 				]
@@ -981,7 +991,7 @@
 				[
 					[
 						"lyrics",
-						"You think",
+						"You think$Ты думаешь",
 						"ff0000"
 					]
 				]
@@ -991,7 +1001,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking",
+						"You think$Ты думаешь",
 						"ff0000"
 					]
 				]
@@ -1001,7 +1011,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about",
+						"You think that$Ты думаешь что",
 						"ff0000"
 					]
 				]
@@ -1011,7 +1021,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking this is",
+						"You think that we've$Ты думаешь что это",
 						"ff0000"
 					]
 				]
@@ -1021,7 +1031,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking this is end?",
+						"You think that we've done?$Ты думаешь что это конец?",
 						"ff0000"
 					]
 				]
@@ -1031,7 +1041,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking this is end? YEAH?",
+						"You think that we've done? YEAH?$Ты думаешь что это конец? ДА?",
 						"ff0000"
 					]
 				]
@@ -1041,7 +1051,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You$Ты",
 						"ff0000"
 					]
 				]
@@ -1051,7 +1061,7 @@
 				[
 					[
 						"lyrics",
-						"You think-",
+						"You think$Ты думаешь",
 						"ff0000"
 					]
 				]
@@ -1061,7 +1071,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking",
+						"You think that$Ты думаешь что",
 						"ff0000"
 					]
 				]
@@ -1071,7 +1081,17 @@
 				[
 					[
 						"lyrics",
-						"You thinking about",
+						"This$Этому",
+						"ff0000"
+					]
+				]
+			],
+			[
+				140000,
+				[
+					[
+						"lyrics",
+						"This CR$Этому Х",
 						"ff0000"
 					]
 				]
@@ -1081,7 +1101,27 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this",
+						"This CR$Этому Х",
+						"ff0000"
+					]
+				]
+			],
+			[
+				140166.666666667,
+				[
+					[
+						"lyrics",
+						"This CR$Этому Х",
+						"ff0000"
+					]
+				]
+			],
+			[
+				140250,
+				[
+					[
+						"lyrics",
+						"This CR$Этому Х",
 						"ff0000"
 					]
 				]
@@ -1091,7 +1131,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bull-",
+						"This CRAPPY$Этому ХУЕВОМУ",
 						"ff0000"
 					]
 				]
@@ -1101,7 +1141,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bullshit",
+						"This CRAPPY$Этому ХУЕВОМУ",
 						"ff0000"
 					]
 				]
@@ -1111,7 +1151,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bullshit o-",
+						"This CRAPPY mix$Этому ХУЕВОМУ миксу",
 						"ff0000"
 					]
 				]
@@ -1121,7 +1161,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bullshit over-",
+						"This CRAPPY mix of$Этому ХУЕВОМУ миксу на",
 						"ff0000"
 					]
 				]
@@ -1131,7 +1171,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bullshit overhead",
+						"This CRAPPY mix of overhead$Этому ХУЕВОМУ миксу на оверхед",
 						"ff0000"
 					]
 				]
@@ -1141,7 +1181,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bullshit overhead mix",
+						"This CRAPPY mix of overhead is$Этому ХУЕВОМУ миксу на оверхед конец?",
 						"ff0000"
 					]
 				]
@@ -1151,7 +1191,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bullshit overhead mix end?",
+						"This CRAPPY mix of overhead is finished?$Этому ХУЕВОМУ миксу на оверхед конец?",
 						"ff0000"
 					]
 				]
@@ -1161,7 +1201,7 @@
 				[
 					[
 						"lyrics",
-						"You thinking about this bullshit overhead mix end? YES?",
+						"This CRAPPY mix of overhead is finished? YEAH?$Этому ХУЕВОМУ миксу на оверхед конец? ДА?",
 						"ff0000"
 					]
 				]
@@ -1171,7 +1211,7 @@
 				[
 					[
 						"lyrics",
-						"heh",
+						"heh$хех",
 						"ff0000"
 					]
 				]
@@ -1181,7 +1221,7 @@
 				[
 					[
 						"lyrics",
-						"he",
+						"he$хе",
 						"ff0000"
 					]
 				]
@@ -1191,7 +1231,7 @@
 				[
 					[
 						"lyrics",
-						"he he",
+						"he he$хе хе",
 						"ff0000"
 					]
 				]
@@ -1201,7 +1241,7 @@
 				[
 					[
 						"lyrics",
-						"he he heh",
+						"he he heh$хе хе хех",
 						"ff0000"
 					]
 				]
@@ -1211,7 +1251,7 @@
 				[
 					[
 						"lyrics",
-						"Heh",
+						"Heh$Хех",
 						"ff0000"
 					]
 				]
@@ -1221,7 +1261,7 @@
 				[
 					[
 						"lyrics",
-						"Heh he",
+						"Heh he$Хех хе",
 						"ff0000"
 					]
 				]
@@ -1231,7 +1271,7 @@
 				[
 					[
 						"lyrics",
-						"Heh he he",
+						"Heh he he$Хех хе хе",
 						"ff0000"
 					]
 				]
@@ -1241,7 +1281,7 @@
 				[
 					[
 						"lyrics",
-						"Heh he he he",
+						"Heh he he he$Хех хе хе хе",
 						"ff0000"
 					]
 				]
@@ -1251,7 +1291,7 @@
 				[
 					[
 						"lyrics",
-						"Heh he he he heh...",
+						"Heh he he he heh...$Хех хе хе хе хех...",
 						"ff0000"
 					]
 				]
@@ -1261,7 +1301,7 @@
 				[
 					[
 						"lyrics",
-						"HAH",
+						"HAH$ХАХ",
 						"ff0000"
 					]
 				]
@@ -1271,7 +1311,7 @@
 				[
 					[
 						"lyrics",
-						"HA",
+						"HA$ХА",
 						"ff0000"
 					]
 				]
@@ -1281,7 +1321,7 @@
 				[
 					[
 						"lyrics",
-						"HA HA",
+						"HA HA$ХА ХА",
 						"ff0000"
 					]
 				]
@@ -1291,7 +1331,7 @@
 				[
 					[
 						"lyrics",
-						"HAAAAAAAAAAAH...",
+						"HAAAAAAAAAAAH...$ХАААААААААА...",
 						"ff0000"
 					]
 				]
@@ -1301,7 +1341,7 @@
 				[
 					[
 						"lyrics",
-						"Not-",
+						"OF$НИ",
 						"ff0000"
 					]
 				]
@@ -1311,7 +1351,7 @@
 				[
 					[
 						"lyrics",
-						"Nothing",
+						"OF COURSE$НИХУЯ",
 						"ff0000"
 					]
 				]
@@ -1321,7 +1361,7 @@
 				[
 					[
 						"lyrics",
-						"Nothing like",
+						"OF COURSE NOT$НИХУЯ ПОДОБ",
 						"ff0000"
 					]
 				]
@@ -1331,7 +1371,7 @@
 				[
 					[
 						"lyrics",
-						"Nothing like",
+						"OF COURSE NOT!$НИХУЯ ПОДОБНО",
 						"ff0000"
 					]
 				]
@@ -1341,7 +1381,7 @@
 				[
 					[
 						"lyrics",
-						"Nothing like thah",
+						"OF COURSE NOT!!$НИХУЯ ПОДОБНОГО!!!",
 						"ff0000"
 					]
 				]
@@ -1351,7 +1391,7 @@
 				[
 					[
 						"lyrics",
-						"Nothing like thah",
+						"OF COURSE NOT!!!$НИХУЯ ПОДОБНОГО!!!",
 						"ff0000"
 					]
 				]
@@ -1361,7 +1401,7 @@
 				[
 					[
 						"lyrics",
-						"You've",
+						"You've$Ты",
 						"a5c09b"
 					]
 				]
@@ -1371,7 +1411,7 @@
 				[
 					[
 						"lyrics",
-						"You've already",
+						"You've already$Ты уже",
 						"a5c09b"
 					]
 				]
@@ -1381,7 +1421,7 @@
 				[
 					[
 						"lyrics",
-						"You've already forgot",
+						"You've already forgot$Ты уже забыл",
 						"a5c09b"
 					]
 				]
@@ -1391,7 +1431,7 @@
 				[
 					[
 						"lyrics",
-						"You've already forgor",
+						"You've already forgor$Ты уже забыл",
 						"a5c09b"
 					]
 				]
@@ -1401,47 +1441,47 @@
 				[
 					[
 						"lyrics",
-						"You've already forgor me",
+						"You've already forgor me$Ты уже забыл меня",
 						"a5c09b"
 					]
 				]
 			],
 			[
-				153416.666666667,
+				153333.333333333,
 				[
 					[
 						"lyrics",
-						"You've already forgor me, yea?",
+						"You've already forgor me, yea?$Ты уже забыл меня да?",
 						"a5c09b"
 					]
 				]
 			],
 			[
-				170041.666666667,
+				170000,
 				[
 					[
 						"lyrics",
-						"You",
+						"Cock$Ху",
 						"ff007e"
 					]
 				]
 			],
 			[
-				170208.333333333,
+				170166.666666667,
 				[
 					[
 						"lyrics",
-						"Cocksuck-",
+						"Cocksuck$Хуе",
 						"ff007e"
 					]
 				]
 			],
 			[
-				170361.111111111,
+				170333.333333333,
 				[
 					[
 						"lyrics",
-						"Cocksucker",
+						"Cocksucker$Хуесос",
 						"ff007e"
 					]
 				]
@@ -1451,37 +1491,7 @@
 				[
 					[
 						"lyrics",
-						"You",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				197500,
-				[
-					[
-						"lyrics",
-						"You",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				197666.666666667,
-				[
-					[
-						"lyrics",
-						"You",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				197833.333333334,
-				[
-					[
-						"lyrics",
-						"You",
+						"You$Ты",
 						"A5C09B"
 					]
 				]
@@ -1491,7 +1501,7 @@
 				[
 					[
 						"lyrics",
-						"You shall",
+						"You shall$Ты не",
 						"A5C09B"
 					]
 				]
@@ -1501,7 +1511,7 @@
 				[
 					[
 						"lyrics",
-						"You shall not",
+						"You shall not$Ты не прой",
 						"A5C09B"
 					]
 				]
@@ -1511,27 +1521,7 @@
 				[
 					[
 						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				198833.333333334,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				199000,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
+						"You shall not pass!$Ты не пройдешь!",
 						"A5C09B"
 					]
 				]
@@ -1541,7 +1531,7 @@
 				[
 					[
 						"lyrics",
-						"Y0u sh4ll n0t p422",
+						"Y0u sh4ll n0t p422!$Т1 н4 пр0йд2шь!",
 						"A5C09B"
 					]
 				]
@@ -1551,27 +1541,27 @@
 				[
 					[
 						"lyrics",
-						"You shall not pass",
+						"You shall not p466!$Т1 н4 п40йд266!",
 						"A5C09B"
 					]
 				]
 			],
 			[
-				199500,
+				199583.333333334,
 				[
 					[
 						"lyrics",
-						"Y0u sh4ll n0t p422",
+						"Y0u sh4ll n0t p422!$Т1 н4 пр0йд2шь!",
 						"A5C09B"
 					]
 				]
 			],
 			[
-				199666.666666667,
+				199833.333333334,
 				[
 					[
 						"lyrics",
-						"You shall not pass",
+						"You shall not pass!$Ты не пройдешь!",
 						"A5C09B"
 					]
 				]
@@ -1581,7 +1571,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You$Ты",
 						"A5C09B"
 					]
 				]
@@ -1591,7 +1581,7 @@
 				[
 					[
 						"lyrics",
-						"Y0u",
+						"Y0u$Ты п",
 						"A5C09B"
 					]
 				]
@@ -1601,7 +1591,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You$Т4 п",
 						"A5C09B"
 					]
 				]
@@ -1611,7 +1601,7 @@
 				[
 					[
 						"lyrics",
-						"You suck",
+						"You suck$Ты по",
 						"A5C09B"
 					]
 				]
@@ -1621,7 +1611,7 @@
 				[
 					[
 						"lyrics",
-						"You suck my",
+						"You suck my$Ты посо",
 						"A5C09B"
 					]
 				]
@@ -1631,7 +1621,7 @@
 				[
 					[
 						"lyrics",
-						"You suck my",
+						"You suck my$Ты посо",
 						"A5C09B"
 					]
 				]
@@ -1641,37 +1631,7 @@
 				[
 					[
 						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				201500,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				201666.666666667,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				201833.333333334,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
+						"You suck my ass!$Ты пососешь!",
 						"A5C09B"
 					]
 				]
@@ -1681,7 +1641,27 @@
 				[
 					[
 						"lyrics",
-						"You suck my ass",
+						"You suck my ass$Ты пососешь!",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				202500,
+				[
+					[
+						"lyrics",
+						"You s7ck my 2ss$Т4 п0с0с9шь!",
+						"A5C09B"
+					]
+				]
+			],
+			[
+				202583.333333334,
+				[
+					[
+						"lyrics",
+						"You suck my ass$Ты пососешь!",
 						"A5C09B"
 					]
 				]
@@ -1691,7 +1671,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You$Ты",
 						"A5C09B"
 					]
 				]
@@ -1701,7 +1681,7 @@
 				[
 					[
 						"lyrics",
-						"You still",
+						"You still$Ты ста",
 						"A5C09B"
 					]
 				]
@@ -1711,17 +1691,17 @@
 				[
 					[
 						"lyrics",
-						"You still try-",
+						"You still try-$Ты старае",
 						"A5C09B"
 					]
 				]
 			],
 			[
-				203583.333333334,
+				203666.666666667,
 				[
 					[
 						"lyrics",
-						"You still trying",
+						"You still trying$Ты стараешься",
 						"A5C09B"
 					]
 				]
@@ -1731,27 +1711,27 @@
 				[
 					[
 						"lyrics",
-						"But",
+						"But$Но",
 						"A5C09B"
 					]
 				]
 			],
 			[
-				204250,
+				204166.666666667,
 				[
 					[
 						"lyrics",
-						"But you",
+						"But you$Но все",
 						"A5C09B"
 					]
 				]
 			],
 			[
-				204416.666666667,
+				204333.333333334,
 				[
 					[
 						"lyrics",
-						"But you al-",
+						"But you al-$Но все вре-",
 						"A5C09B"
 					]
 				]
@@ -1761,7 +1741,7 @@
 				[
 					[
 						"lyrics",
-						"But you always",
+						"But you always$Но все время",
 						"A5C09B"
 					]
 				]
@@ -1771,7 +1751,7 @@
 				[
 					[
 						"lyrics",
-						"But you always su-",
+						"But you always su-$Но все время со-",
 						"A5C09B"
 					]
 				]
@@ -1781,57 +1761,7 @@
 				[
 					[
 						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				205500,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				205666.666666667,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				205833.333333334,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				206000,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				206166.666666667,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
+						"But you always sucking$Но все время сосешь!",
 						"A5C09B"
 					]
 				]
@@ -1841,7 +1771,7 @@
 				[
 					[
 						"lyrics",
-						"So",
+						"So$Так",
 						"A5C09B"
 					]
 				]
@@ -1851,7 +1781,7 @@
 				[
 					[
 						"lyrics",
-						"So why",
+						"So why$Так за",
 						"A5C09B"
 					]
 				]
@@ -1861,7 +1791,7 @@
 				[
 					[
 						"lyrics",
-						"So why you",
+						"So why you$Так зачем",
 						"A5C09B"
 					]
 				]
@@ -1871,7 +1801,7 @@
 				[
 					[
 						"lyrics",
-						"So why you still",
+						"So why you still$Так зачем те",
 						"A5C09B"
 					]
 				]
@@ -1881,7 +1811,7 @@
 				[
 					[
 						"lyrics",
-						"So why you still try-",
+						"So why you still try-$Так зачем те э-",
 						"A5C09B"
 					]
 				]
@@ -1891,7 +1821,7 @@
 				[
 					[
 						"lyrics",
-						"So why you still trying",
+						"So why you still trying$Так зачем те это",
 						"A5C09B"
 					]
 				]
@@ -1901,38 +1831,8 @@
 				[
 					[
 						"lyrics",
-						"You",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				208166.666666667,
-				[
-					[
-						"lyrics",
-						"You",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				208333.333333334,
-				[
-					[
-						"lyrics",
-						"You",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				208500,
-				[
-					[
-						"lyrics",
-						"You",
-						"A5C09B"
+						"You$Ты",
+						"951919"
 					]
 				]
 			],
@@ -1941,8 +1841,8 @@
 				[
 					[
 						"lyrics",
-						"You shall",
-						"A5C09B"
+						"You shall$Ты не",
+						"951919"
 					]
 				]
 			],
@@ -1951,8 +1851,8 @@
 				[
 					[
 						"lyrics",
-						"You shall not",
-						"A5C09B"
+						"You shall not$Ты не прой",
+						"951919"
 					]
 				]
 			],
@@ -1961,68 +1861,8 @@
 				[
 					[
 						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				209500,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				209666.666666667,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				209833.333333334,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				210000,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				210166.666666667,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				210333.333333334,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"A5C09B"
+						"You shall not pass$Ты не пройдешь!",
+						"951919"
 					]
 				]
 			],
@@ -2031,8 +1871,8 @@
 				[
 					[
 						"lyrics",
-						"You",
-						"A5C09B"
+						"You$Ты",
+						"951919"
 					]
 				]
 			],
@@ -2041,18 +1881,18 @@
 				[
 					[
 						"lyrics",
-						"You suck",
-						"A5C09B"
+						"You suck$Ты по",
+						"951919"
 					]
 				]
 			],
 			[
-				211583.333333334,
+				211666.666666667,
 				[
 					[
 						"lyrics",
-						"You suck my",
-						"A5C09B"
+						"You suck my$Ты посо",
+						"951919"
 					]
 				]
 			],
@@ -2061,58 +1901,8 @@
 				[
 					[
 						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				212166.666666667,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				212333.333333334,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				212500,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				212666.666666667,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				212833.333333334,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"A5C09B"
+						"You suck my ass!$Ты пососешь!",
+						"951919"
 					]
 				]
 			],
@@ -2121,8 +1911,8 @@
 				[
 					[
 						"lyrics",
-						"You",
-						"A5C09B"
+						"You$Ты",
+						"951919"
 					]
 				]
 			],
@@ -2131,8 +1921,8 @@
 				[
 					[
 						"lyrics",
-						"You still",
-						"A5C09B"
+						"You still$Ты ста",
+						"951919"
 					]
 				]
 			],
@@ -2141,18 +1931,18 @@
 				[
 					[
 						"lyrics",
-						"You still try-",
-						"A5C09B"
+						"You stiil try-$Ты стараешь",
+						"951919"
 					]
 				]
 			],
 			[
-				214250,
+				214333.333333334,
 				[
 					[
 						"lyrics",
-						"You still trying",
-						"A5C09B"
+						"You stiil trying$Ты стараешься",
+						"951919"
 					]
 				]
 			],
@@ -2161,48 +1951,28 @@
 				[
 					[
 						"lyrics",
-						"But",
-						"A5C09B"
+						"But$Но",
+						"951919"
 					]
 				]
 			],
 			[
-				214916.666666667,
+				214833.333333334,
 				[
 					[
 						"lyrics",
-						"But you",
-						"A5C09B"
+						"But you$Но все",
+						"951919"
 					]
 				]
 			],
 			[
-				214916.666666667,
+				215000,
 				[
 					[
 						"lyrics",
-						"But you",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				215083.333333334,
-				[
-					[
-						"lyrics",
-						"But you al-",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				215083.333333334,
-				[
-					[
-						"lyrics",
-						"But you al-",
-						"A5C09B"
+						"But you al-$Но все вре-",
+						"951919"
 					]
 				]
 			],
@@ -2211,18 +1981,8 @@
 				[
 					[
 						"lyrics",
-						"But you always",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				215333.333333334,
-				[
-					[
-						"lyrics",
-						"But you always",
-						"A5C09B"
+						"But you always$Но все время",
+						"951919"
 					]
 				]
 			],
@@ -2231,18 +1991,8 @@
 				[
 					[
 						"lyrics",
-						"But you always su-",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				215666.666666667,
-				[
-					[
-						"lyrics",
-						"But you always su-",
-						"A5C09B"
+						"But you always su-$Но все время со-",
+						"951919"
 					]
 				]
 			],
@@ -2251,68 +2001,8 @@
 				[
 					[
 						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				216166.666666667,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				216333.333333334,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				216500,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				216666.666666667,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				216833.333333334,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
-					]
-				]
-			],
-			[
-				217000,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"A5C09B"
+						"But you always sucking$Но все время сосешь!",
+						"951919"
 					]
 				]
 			],
@@ -2321,8 +2011,8 @@
 				[
 					[
 						"lyrics",
-						"So",
-						"A5C09B"
+						"So$Так",
+						"951919"
 					]
 				]
 			],
@@ -2331,18 +2021,18 @@
 				[
 					[
 						"lyrics",
-						"So why",
-						"A5C09B"
+						"So why$Так за",
+						"951919"
 					]
 				]
 			],
 			[
-				217916.666666667,
+				218000,
 				[
 					[
 						"lyrics",
-						"So why you",
-						"A5C09B"
+						"So why you$Так зачем",
+						"951919"
 					]
 				]
 			],
@@ -2351,8 +2041,8 @@
 				[
 					[
 						"lyrics",
-						"So why you still",
-						"A5C09B"
+						"So why you still$Так зачем те",
+						"951919"
 					]
 				]
 			],
@@ -2361,8 +2051,8 @@
 				[
 					[
 						"lyrics",
-						"So why you still try-",
-						"A5C09B"
+						"So why you still try-$Так зачем те э-",
+						"951919"
 					]
 				]
 			],
@@ -2371,8 +2061,8 @@
 				[
 					[
 						"lyrics",
-						"So why you still trying",
-						"A5C09B"
+						"So why you still trying$Так зачем те это",
+						"951919"
 					]
 				]
 			],
@@ -2381,37 +2071,7 @@
 				[
 					[
 						"lyrics",
-						"You",
-						"ff0000"
-					]
-				]
-			],
-			[
-				218833.333333334,
-				[
-					[
-						"lyrics",
-						"You",
-						"ff0000"
-					]
-				]
-			],
-			[
-				219000,
-				[
-					[
-						"lyrics",
-						"You",
-						"ff0000"
-					]
-				]
-			],
-			[
-				219166.666666667,
-				[
-					[
-						"lyrics",
-						"You",
+						"You$Ты",
 						"ff0000"
 					]
 				]
@@ -2421,7 +2081,7 @@
 				[
 					[
 						"lyrics",
-						"You shall",
+						"You shall$Ты не",
 						"ff0000"
 					]
 				]
@@ -2431,7 +2091,7 @@
 				[
 					[
 						"lyrics",
-						"You shall not",
+						"You shall not$Ты не прой",
 						"ff0000"
 					]
 				]
@@ -2441,67 +2101,7 @@
 				[
 					[
 						"lyrics",
-						"You shall not pass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				220166.666666667,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				220333.333333334,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				220500,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				220666.666666667,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				220833.333333334,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				221000,
-				[
-					[
-						"lyrics",
-						"You shall not pass",
+						"You shall not pass$Ты не пройдешь!",
 						"ff0000"
 					]
 				]
@@ -2511,7 +2111,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You$Ты",
 						"ff0000"
 					]
 				]
@@ -2521,17 +2121,17 @@
 				[
 					[
 						"lyrics",
-						"You suck",
+						"You suck$Ты по",
 						"ff0000"
 					]
 				]
 			],
 			[
-				222250,
+				222333.333333334,
 				[
 					[
 						"lyrics",
-						"You suck my",
+						"You suck my$Ты посо",
 						"ff0000"
 					]
 				]
@@ -2541,57 +2141,7 @@
 				[
 					[
 						"lyrics",
-						"You suck my ass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				222833.333333334,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				223000,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				223166.666666667,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				223333.333333334,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
-						"ff0000"
-					]
-				]
-			],
-			[
-				223500,
-				[
-					[
-						"lyrics",
-						"You suck my ass",
+						"You suck my ass$Ты пососешь!",
 						"ff0000"
 					]
 				]
@@ -2601,7 +2151,7 @@
 				[
 					[
 						"lyrics",
-						"You",
+						"You$Ты",
 						"ff0000"
 					]
 				]
@@ -2611,7 +2161,7 @@
 				[
 					[
 						"lyrics",
-						"You still",
+						"You still$Ты ста",
 						"ff0000"
 					]
 				]
@@ -2621,17 +2171,17 @@
 				[
 					[
 						"lyrics",
-						"You still try-",
+						"You still try-$Ты стараешь",
 						"ff0000"
 					]
 				]
 			],
 			[
-				224916.666666667,
+				225000,
 				[
 					[
 						"lyrics",
-						"You still trying",
+						"You still trying$Ты стараешься",
 						"ff0000"
 					]
 				]
@@ -2641,27 +2191,27 @@
 				[
 					[
 						"lyrics",
-						"But",
+						"But$Но",
 						"ff0000"
 					]
 				]
 			],
 			[
-				225583.333333334,
+				225500,
 				[
 					[
 						"lyrics",
-						"But you",
+						"But you$Но все",
 						"ff0000"
 					]
 				]
 			],
 			[
-				225750,
+				225666.666666667,
 				[
 					[
 						"lyrics",
-						"But you al-",
+						"But you al-$Но все вре-",
 						"ff0000"
 					]
 				]
@@ -2671,7 +2221,7 @@
 				[
 					[
 						"lyrics",
-						"But you always",
+						"But you always$Но все время",
 						"ff0000"
 					]
 				]
@@ -2681,7 +2231,7 @@
 				[
 					[
 						"lyrics",
-						"But you always su-",
+						"But you always su-$Но все время со-",
 						"ff0000"
 					]
 				]
@@ -2691,67 +2241,7 @@
 				[
 					[
 						"lyrics",
-						"But you always sucking",
-						"ff0000"
-					]
-				]
-			],
-			[
-				226833.333333334,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"ff0000"
-					]
-				]
-			],
-			[
-				227000.000000001,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"ff0000"
-					]
-				]
-			],
-			[
-				227166.666666667,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"ff0000"
-					]
-				]
-			],
-			[
-				227333.333333334,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"ff0000"
-					]
-				]
-			],
-			[
-				227500.000000001,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
-						"ff0000"
-					]
-				]
-			],
-			[
-				227666.666666667,
-				[
-					[
-						"lyrics",
-						"But you always sucking",
+						"But you always sucking$Но все время сосешь!",
 						"ff0000"
 					]
 				]
@@ -2761,7 +2251,7 @@
 				[
 					[
 						"lyrics",
-						"So",
+						"So$Так",
 						"ff0000"
 					]
 				]
@@ -2771,17 +2261,17 @@
 				[
 					[
 						"lyrics",
-						"So why",
+						"So why$Так за",
 						"ff0000"
 					]
 				]
 			],
 			[
-				228583.333333334,
+				228666.666666667,
 				[
 					[
 						"lyrics",
-						"So why you",
+						"So why you$Так зачем",
 						"ff0000"
 					]
 				]
@@ -2791,7 +2281,7 @@
 				[
 					[
 						"lyrics",
-						"So why you still",
+						"So why you still$Так зачем те",
 						"ff0000"
 					]
 				]
@@ -2801,7 +2291,7 @@
 				[
 					[
 						"lyrics",
-						"So why you still try-",
+						"So why you still try-$Так зачем те э-",
 						"ff0000"
 					]
 				]
@@ -2811,7 +2301,27 @@
 				[
 					[
 						"lyrics",
-						"So why you still trying",
+						"So why you still trying$Так зачем те это",
+						"ff0000"
+					]
+				]
+			],
+			[
+				238666.666666667,
+				[
+					[
+						"lyrics",
+						"HOLY$ДА",
+						"ff0000"
+					]
+				]
+			],
+			[
+				239000.000000001,
+				[
+					[
+						"lyrics",
+						"FUCK$ ДА БЛЯТЬ",
 						"ff0000"
 					]
 				]
@@ -2821,7 +2331,7 @@
 				[
 					[
 						"lyrics",
-						"FUCK-",
+						"SHUT$ЗА",
 						"ff0000"
 					]
 				]
@@ -2831,7 +2341,7 @@
 				[
 					[
 						"lyrics",
-						"FUCKED",
+						"SHUT THE FUCK$ЗАЕ",
 						"ff0000"
 					]
 				]
@@ -2841,7 +2351,7 @@
 				[
 					[
 						"lyrics",
-						"FUCKED UP",
+						"SHUT THE FUCK UP!!!$ЗАЕБАЛ!!!",
 						"ff0000"
 					]
 				]
@@ -2851,7 +2361,7 @@
 				[
 					[
 						"lyrics",
-						"This",
+						"This$Э",
 						"ff007e"
 					]
 				]
@@ -2861,7 +2371,7 @@
 				[
 					[
 						"lyrics",
-						"This is",
+						"This is$Это",
 						"ff007e"
 					]
 				]
@@ -2871,7 +2381,7 @@
 				[
 					[
 						"lyrics",
-						"This is a",
+						"This is the$Это долго",
 						"ff007e"
 					]
 				]
@@ -2881,57 +2391,57 @@
 				[
 					[
 						"lyrics",
-						"This is a long",
+						"This is the thing$Это долгожданн",
 						"ff007e"
 					]
 				]
 			],
 			[
-				243083.333333334,
+				243166.666666667,
 				[
 					[
 						"lyrics",
-						"This is a long-awai",
+						"This is the thing that$Это долгожданно",
 						"ff007e"
 					]
 				]
 			],
 			[
-				243250.000000001,
+				243333.333333334,
 				[
 					[
 						"lyrics",
-						"This is a long-awai-",
+						"This is the thing that one$Это долгожданное",
 						"ff007e"
 					]
 				]
 			],
 			[
-				243416.666666667,
+				243500.000000001,
 				[
 					[
 						"lyrics",
-						"This is a long-awaited",
+						"This is the thing that one person$Это долгожданное целым",
 						"ff007e"
 					]
 				]
 			],
 			[
-				243583.333333334,
+				243666.666666667,
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole",
+						"This is the thing that one person was waiting$Это долгожданное целым одним",
 						"ff007e"
 					]
 				]
 			],
 			[
-				243750.000000001,
+				243833.333333334,
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole",
+						"This is the thing that one person was waiting for$Это долгожданное целым одним чело",
 						"ff007e"
 					]
 				]
@@ -2941,67 +2451,27 @@
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole sing-",
+						"This is the thing that one person was waiting for along$Это долгожданное целым одним челове",
 						"ff007e"
 					]
 				]
 			],
 			[
-				244166.666666667,
+				244416.666666667,
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole single",
+						"This is the thing that one person was waiting for along time$Это долгожданное целым одним человеком",
 						"ff007e"
 					]
 				]
 			],
 			[
-				244333.333333334,
+				245000.000000001,
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole single person",
-						"ff007e"
-					]
-				]
-			],
-			[
-				244541.666666667,
-				[
-					[
-						"lyrics",
-						"This is a long-awaited whole single person",
-						"ff007e"
-					]
-				]
-			],
-			[
-				244708.333333334,
-				[
-					[
-						"lyrics",
-						"This is a long-awaited whole single person",
-						"ff007e"
-					]
-				]
-			],
-			[
-				244916.666666667,
-				[
-					[
-						"lyrics",
-						"This is a long-awaited whole single person",
-						"ff007e"
-					]
-				]
-			],
-			[
-				245083.333333334,
-				[
-					[
-						"lyrics",
-						"This is a long-awaited whole single person con-",
+						"Second$Продол",
 						"ff007e"
 					]
 				]
@@ -3011,7 +2481,7 @@
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole single person conti-",
+						"Second part$Продолжение",
 						"ff007e"
 					]
 				]
@@ -3021,8 +2491,18 @@
 				[
 					[
 						"lyrics",
-						"FUCK-",
+						"GOSH$ПИЗ",
 						"ff0000"
+					]
+				]
+			],
+			[
+				245916.666666667,
+				[
+					[
+						"lyrics",
+						"Second part of$Продолжение",
+						"ff007e"
 					]
 				]
 			],
@@ -3031,27 +2511,27 @@
 				[
 					[
 						"lyrics",
-						"FUCKED",
+						"DAMMIT$ПИЗДЕЦ",
 						"ff0000"
 					]
 				]
 			],
 			[
-				246416.666666667,
+				246250.000000001,
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole single person continuation second",
+						"Second part of overfire$Продолжение оверфаер",
 						"ff007e"
 					]
 				]
 			],
 			[
-				246750.000000001,
+				246666.666666667,
 				[
 					[
 						"lyrics",
-						"This is a long-awaited whole single person continuation second part",
+						"Second part of overfire v2$Продолжение оверфаер в2",
 						"ff007e"
 					]
 				]
@@ -3061,7 +2541,7 @@
 				[
 					[
 						"lyrics",
-						"FUCK",
+						"GO$ИДИ",
 						"ff0000"
 					]
 				]
@@ -3071,7 +2551,7 @@
 				[
 					[
 						"lyrics",
-						"FUCK",
+						"FUC$ИДИ",
 						"ff0000"
 					]
 				]
@@ -3081,17 +2561,17 @@
 				[
 					[
 						"lyrics",
-						"FUCK YOU",
+						"YOURSELF!!!$НАХУЙ!!!",
 						"ff0000"
 					]
 				]
 			],
 			[
-				247833.333333334,
+				247666.666666667,
 				[
 					[
 						"lyrics",
-						"FUCK YOU",
+						"YOURSELF!!!$НАХУЙ!!!",
 						"ff0000"
 					]
 				]
@@ -3101,8 +2581,138 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"Raaaahhhh...$Раааааххх...",
 						"ff0000"
+					]
+				]
+			],
+			[
+				308000,
+				[
+					[
+						"lyrics",
+						"HA$ХА",
+						"ff0000"
+					]
+				]
+			],
+			[
+				308333.333333333,
+				[
+					[
+						"lyrics",
+						"HA HA$ХА ХА",
+						"ff0000"
+					]
+				]
+			],
+			[
+				308666.666666667,
+				[
+					[
+						"lyrics",
+						"HA HA HA$ХА ХА ХА",
+						"ff0000"
+					]
+				]
+			],
+			[
+				309000,
+				[
+					[
+						"lyrics",
+						"HA HA HA HA$ХА ХА ХА ХА",
+						"ff0000"
+					]
+				]
+			],
+			[
+				317333.333333333,
+				[
+					[
+						"lyrics",
+						"WHA$ЭЭЭ",
+						"ff007e"
+					]
+				]
+			],
+			[
+				317416.666666667,
+				[
+					[
+						"lyrics",
+						"WHAA$ЭЭЭЭ",
+						"ff007e"
+					]
+				]
+			],
+			[
+				317500,
+				[
+					[
+						"lyrics",
+						"WHAAA$ЭЭЭЭЭЫ",
+						"ff007e"
+					]
+				]
+			],
+			[
+				317583.333333333,
+				[
+					[
+						"lyrics",
+						"WHAAAA$ЭЭЭЭЭЫЫЫЫ",
+						"ff007e"
+					]
+				]
+			],
+			[
+				317666.666666667,
+				[
+					[
+						"lyrics",
+						"WHAAAAA$ЭЭЭЫЭЭЭЫЫЫ",
+						"ff007e"
+					]
+				]
+			],
+			[
+				317750,
+				[
+					[
+						"lyrics",
+						"IS$ЭТО",
+						"ff007e"
+					]
+				]
+			],
+			[
+				318000,
+				[
+					[
+						"lyrics",
+						"IS THAT$ЭТО ЧТО",
+						"ff007e"
+					]
+				]
+			],
+			[
+				318250,
+				[
+					[
+						"lyrics",
+						"GRAVE DANGER$GRAVE DANGER",
+						"ff007e"
+					]
+				]
+			],
+			[
+				318583.333333333,
+				[
+					[
+						"lyrics",
+						"GRAVE DANGER$МОГИЛА ОПАСНО!?",
+						"ff007e"
 					]
 				]
 			],
@@ -3111,7 +2721,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3121,7 +2731,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3131,7 +2741,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3141,7 +2751,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3151,7 +2761,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3161,7 +2771,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3171,7 +2781,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3181,7 +2791,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3191,7 +2801,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3201,7 +2811,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3211,7 +2821,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3221,7 +2831,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3231,7 +2841,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3241,7 +2851,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3251,7 +2861,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]
@@ -3261,7 +2871,7 @@
 				[
 					[
 						"lyrics",
-						"Raaaahhhh...",
+						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
 					]
 				]

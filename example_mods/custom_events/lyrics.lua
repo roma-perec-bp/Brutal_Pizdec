@@ -1,4 +1,10 @@
 ---@diagnostic disable: undefined-global, lowercase-global
+local textStringStart = 0
+local textStringLast = 0
+
+local rus = ''
+local eng = ''
+
 function onCreate()
     makeLuaText('lyrics', 'nothin', 0, 0, 450)
 
@@ -19,7 +25,17 @@ function onEvent(eventName, value1, value2)
         cancelTween('lyricsShrinkX')
         cancelTween('lyricsShrinkY')
         setProperty('lyrics.alpha', 1)
-        setTextString('lyrics', value1)
+
+        tableV1 = stringSplit(value1,'$')
+        rus = stringTrim(split[2])
+        eng = stringTrim(split[1])
+
+        if getPropertyFromClass('ClientPrefs', 'language') == 'Russian' then
+            setTextString('lyrics', rus)
+        else
+            setTextString('lyrics', eng)
+        end
+
         if value2 ~= nil and value2 ~= '' then
             setTextColor('lyrics', value2)
         else

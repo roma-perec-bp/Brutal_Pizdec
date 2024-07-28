@@ -20,6 +20,7 @@ import shaders.ColorSwap;
 
 import states.StoryMenuState;
 import states.MainMenuState;
+import states.SetLanguageState;
 
 #if MODS_ALLOWED
 import sys.FileSystem;
@@ -381,7 +382,10 @@ class TitleState extends MusicBeatState
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					MusicBeatState.switchState(new MainMenuState());
+					if(ClientPrefs.data.language == 'None')
+						MusicBeatState.switchState(new SetLanguageState());
+					else
+						MusicBeatState.switchState(new MainMenuState());
 					closedState = true;
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
