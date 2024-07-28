@@ -843,8 +843,6 @@ class PlayState extends MusicBeatState
 		super.create();
 		Paths.clearUnusedMemory();
 
-		//FlxG.mouse.unload();
-		//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
 		FlxG.mouse.visible = true;
 		
 		CustomFadeTransition.nextCamera = camOther;
@@ -1046,32 +1044,32 @@ class PlayState extends MusicBeatState
 
 		if (foundFile)
 		{
-			var cutscene:VideoSprite = new VideoSprite(fileName, forMidSong, canSkip, loop);
+			videoCutscene = new VideoSprite(fileName, forMidSong, canSkip, loop);
 
 			// Finish callback
 			if (!forMidSong)
 			{
-				cutscene.finishCallback = function()
+				function onVideoEnd()
 				{
 					if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
+					{
+						moveCameraSection();
 						FlxG.camera.snapToTarget();
-
+					}
+					videoCutscene = null;
+					inCutscene = false;
 					startAndEnd();
-				};
-
-				// Skip callback
-				cutscene.onSkip = function()
-				{
-					startAndEnd();
-				};
+				}
+				videoCutscene.finishCallback = onVideoEnd;
+				videoCutscene.onSkip = onVideoEnd;
 			}
-			add(cutscene);
+			add(videoCutscene);
 
-			cutscene.videoSprite.cameras = [cameraFromString('video')];
+			videoCutscene.videoSprite.cameras = [cameraFromString('video')];
 
 			if (playOnLoad)
-				cutscene.videoSprite.play();
-			return cutscene;
+				videoCutscene.videoSprite.play();
+			return videoCutscene;
 		}
 		#if (LUA_ALLOWED || HSCRIPT_ALLOWED)
 		else addTextToDebug("Video not found: " + fileName, FlxColor.RED);
@@ -1796,6 +1794,9 @@ class PlayState extends MusicBeatState
 				vocals.pause();
 			}
 
+			if(videoCutscene != null)
+				videoCutscene.videoSprite.pause();
+
 			if (startTimer != null && !startTimer.finished) startTimer.active = false;
 			if (finishTimer != null && !finishTimer.finished) finishTimer.active = false;
 			if (songSpeedTween != null) songSpeedTween.active = false;
@@ -1823,6 +1824,9 @@ class PlayState extends MusicBeatState
 			{
 				resyncVocals();
 			}
+
+			if(videoCutscene != null)
+				videoCutscene.videoSprite.resume();
 
 			if (startTimer != null && !startTimer.finished) startTimer.active = true;
 			if (finishTimer != null && !finishTimer.finished) finishTimer.active = true;
@@ -3032,6 +3036,7 @@ class PlayState extends MusicBeatState
 			var percent:Float = ratingPercent;
 			if(Math.isNaN(percent)) percent = 0;
 			Highscore.saveScore(SONG.song, songScore, storyDifficulty, percent);
+			Highscore.saveMedal(SONG.song, medalStatus, storyDifficulty);
 			#end
 			playbackRate = 1;
 

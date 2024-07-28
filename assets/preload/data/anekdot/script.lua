@@ -6,9 +6,17 @@ local dnb = false
 local shake = false
 local vanilla = true
 
+local canDrain = false
+
 function onCreate()
     makeLuaSprite('iconP1obj', nil, 0, 0)
     makeLuaSprite('iconP2obj', nil, 0, 0)
+end
+
+function opponentNoteHit(membersIndex, noteData, noteType, isSustainNote)
+    if canDrain == true then
+        addHealth(-0.1)
+    end
 end
 
 function onUpdatePost(elapsed)
@@ -123,6 +131,7 @@ function onBeatHit()
     end
     if curBeat == 472 then
         doTweenColor('lol', 'dad', 'ff0000', 10)
+        canDrain = true
     end
     if curBeat == 488 then
         dnb = true

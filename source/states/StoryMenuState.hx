@@ -19,7 +19,9 @@ class StoryMenuState extends MusicBeatState
 	var scoring:FlxText;
 	var scoreText:FlxText;
 
-	var medgrp:FlxTypedSpriteGroup<FlxSprite>;
+	var medal1:FlxSprite;
+	var medal2:FlxSprite;
+	var medal3:FlxSprite;
 
 	private static var lastDifficultyName:String = '';
 	var curDifficulty:Int = 1;
@@ -44,8 +46,6 @@ class StoryMenuState extends MusicBeatState
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
-		FlxG.mouse.unload();
-		//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
 		FlxG.mouse.visible = true;
 
 		PlayState.isStoryMode = true;
@@ -146,8 +146,23 @@ class StoryMenuState extends MusicBeatState
 		add(scoring);
 		add(txtWeekTitle);
 
-		medgrp = new FlxTypedSpriteGroup<FlxSprite>();
-		add(medgrp);
+		medal1 = new FlxSprite(scoring.x - 210, 260);
+		medal1.scale.set(0.15, 0.15);
+		medal1.updateHitbox();
+		medal1.antialiasing = ClientPrefs.data.antialiasing;
+		add(medal1);
+
+		medal2 = new FlxSprite(medal1.x + 75, medal1.y);
+		medal2.scale.set(0.15, 0.15);
+		medal2.updateHitbox();
+		medal2.antialiasing = ClientPrefs.data.antialiasing;
+		add(medal2);
+
+		medal3 = new FlxSprite(medal2.x + 75, medal2.y);
+		medal3.scale.set(0.15, 0.15);
+		medal3.updateHitbox();
+		medal3.antialiasing = ClientPrefs.data.antialiasing;
+		add(medal3);
 
 		changeWeek();
 		changeDifficulty();
@@ -344,16 +359,58 @@ class StoryMenuState extends MusicBeatState
 		}
 		updateText();
 
-		medgrp.clear();
+		var stringThing:Array<String> = [];
+		for (i in 0...leWeek.songs.length) {
+			stringThing.push(leWeek.songs[i][0]);
+		}
 
-		for (i in 0...3)
+		medal1.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(stringThing[0], curDifficulty)));
+		if(Highscore.getMedal(stringThing[0], curDifficulty) == 1)
 		{
-			var medal:FlxSprite = new FlxSprite((i * 75) + scoreText.x - 105, scoreText.y + 55).loadGraphic(Paths.image('medals/medal_1'));
-			medal.scale.set(0.15, 0.15);
-			medal.updateHitbox();
-			medal.centerOffsets();
-			medal.antialiasing = ClientPrefs.data.antialiasing;
-			medgrp.add(medal);
+			medal1.offset.x = 65;
+			medal1.offset.y = 0;
+		}
+		else if(Highscore.getMedal(stringThing[0], curDifficulty) == 2)
+		{
+			medal1.offset.x = 15;
+			medal1.offset.y = 5;
+		}
+		else
+		{
+			medal1.offset.x = 0;
+			medal1.offset.y = 0;
+		}
+		medal2.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(stringThing[1], curDifficulty)));
+		if(Highscore.getMedal(stringThing[1], curDifficulty) == 1)
+		{
+			medal2.offset.x = 65;
+			medal2.offset.y = 0;
+		}
+		else if(Highscore.getMedal(stringThing[1], curDifficulty) == 2)
+		{
+			medal2.offset.x = 15;
+			medal2.offset.y = 5;
+		}
+		else
+		{
+			medal2.offset.x = 0;
+			medal2.offset.y = 0;
+		}
+		medal3.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(stringThing[2], curDifficulty)));
+		if(Highscore.getMedal(stringThing[2], curDifficulty) == 1)
+		{
+			medal3.offset.x = 15;
+			medal3.offset.y = 5;
+		}
+		else if(Highscore.getMedal(stringThing[2], curDifficulty) == 2)
+		{
+			medal3.offset.x = 5;
+			medal3.offset.y = 1;
+		}
+		else
+		{
+			medal3.offset.x = 0;
+			medal3.offset.y = 0;
 		}
 	}
 

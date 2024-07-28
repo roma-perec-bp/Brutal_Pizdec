@@ -103,8 +103,6 @@ class FlashingState extends MusicBeatState
 							canChoose = true;
 							gmanMoment.play();
 							timerOfWaiting();
-							FlxG.mouse.unload();
-							//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
 							FlxG.mouse.visible = true;
 						});
 					});
@@ -184,6 +182,7 @@ class FlashingState extends MusicBeatState
 			});
 		}
 		infoToggled = true;
+		FlxG.mouse.visible = false;
 	}
 
 	override function update(elapsed:Float)

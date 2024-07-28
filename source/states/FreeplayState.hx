@@ -196,11 +196,9 @@ class FreeplayState extends MusicBeatState
 		add(scoreText);
 
 		// медальки
-		medal = new FlxSprite(FlxG.width - 150, 75).loadGraphic(Paths.image('medals/medal_1'));
+		medal = new FlxSprite(FlxG.width - 285, -235).loadGraphic(Paths.image('medals/medal_1'));
 		medal.scale.set(0.2, 0.2);
-		medal.origin.set(128/2, 128/2);
 		medal.updateHitbox();
-		medal.centerOffsets();
 		medal.antialiasing = ClientPrefs.data.antialiasing;
 		add(medal);
 
@@ -478,6 +476,76 @@ class FreeplayState extends MusicBeatState
 		_updateSongLastDifficulty();
 	}
 
+	function uniqueMedalChange(medalInt:Int) //почему не LERP? потому что Ease
+	{
+		FlxTween.cancelTweensOf(medal);
+		FlxTween.cancelTweensOf(medal.scale);
+		FlxTween.cancelTweensOf(medal.color);
+		FlxTween.cancelTweensOf(medal.colorTransform);
+		medal.scale.set(0.2, 0.2);
+		medal.angle = 0;
+		medal.color = 0xFFFFFFFF;
+
+		medal.colorTransform.redOffset = 0;
+		medal.colorTransform.greenOffset = 0;
+		medal.colorTransform.blueOffset = 0;
+
+		medal.colorTransform.redMultiplier = 1;
+		medal.colorTransform.greenMultiplier = 1;
+		medal.colorTransform.blueMultiplier = 1;
+		switch(medalInt)
+		{
+			case 7:
+				//вообще нихуя сосите
+			case 6:
+				//вообще нихуя сосите
+			case 5:
+				FlxTween.tween(medal.scale, {x: 0.3, y: 0.3}, 0.6, {ease: FlxEase.quadOut, type: BACKWARD});
+			case 4:
+				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
+			case 3:
+				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 7}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
+			case 2:
+				medal.color = 0xff7400ff;
+				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, 0.6, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 12}, 0.6, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.color(medal, 0.6, medal.color, 0xffFFFFFF);
+			case 1:
+				medal.colorTransform.redOffset = 134;
+				medal.colorTransform.greenOffset = 248;
+				medal.colorTransform.blueOffset = 255;
+
+				medal.colorTransform.redMultiplier = 0;
+				medal.colorTransform.greenMultiplier = 0;
+				medal.colorTransform.blueMultiplier = 0;
+
+				FlxTween.tween(medal.scale, {x: 0.6, y: 0.6}, 0.6, {ease: FlxEase.elasticOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 23}, 0.6, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal.colorTransform, {redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1}, 0.6);
+
+				//medal.x -= 50; //ТЫ ЧЕ ОХУЕЛ
+		}
+
+		medal.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty)));
+
+		if(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty) == 1)
+		{
+			medal.offset.x = 75;
+			medal.offset.y = 0;
+		}
+		else if(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty) == 2)
+		{
+			medal.offset.x = 25;
+			medal.offset.y = 15;
+		}
+		else
+		{
+			medal.offset.x = 0;
+			medal.offset.y = 0;
+		}
+	}
+
 	var portTween:FlxTween;
 	function changePortrait(char:String = 'lamar')
 	{
@@ -566,6 +634,8 @@ class FreeplayState extends MusicBeatState
 		intendedScore = Highscore.getScore(songs[curSelected[freeplayType]].songName, curDifficulty);
 		intendedRating = Highscore.getRating(songs[curSelected[freeplayType]].songName, curDifficulty);
 		#end
+
+		uniqueMedalChange(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty));
 		
 		Mods.currentModDirectory = songs[curSelected[freeplayType]].folder;
 		PlayState.storyWeek = songs[curSelected[freeplayType]].week;

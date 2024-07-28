@@ -12,6 +12,7 @@ class Achievements {
 		// freeplay no miss
 		["Daily Anekdot!!",'Beat \"Anekdot\" song with no Misses.', 'anekdot_freeplay_nomiss',false], // done
 		["DIMA KUPLINOV",'Beat \"Klork\" song with no Misses.','klork_freeplay_nomiss',false], // done
+		["RANDOM SHORT IN UNDERWEARS???",'Beat \"T-short\" song with no Misses.','t-short_freeplay_nomiss',false], // done
 		["D E A D",'Beat \"Monochrome\" song with no Misses.','monochrome_freeplay_nomiss',false], // done
 		["I have a GAME theory!",'Beat \"Lore\" song with no Misses.','lore_freeplay_nomiss',false], // done
 		["SEXY",'Beat \"S6x-Boom\" song with no Misses.','s6x-boom_freeplay_nomiss',false], // done
