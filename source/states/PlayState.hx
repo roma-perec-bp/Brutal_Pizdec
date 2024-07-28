@@ -2346,10 +2346,10 @@ class PlayState extends MusicBeatState
 								FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 								add(achievementPop);
 								achievementPop.onFinish = function() {
-									MusicBeatState.resetState();
+									deathAch();
 								};
 							} else {
-								MusicBeatState.resetState();
+								deathAch();
 							}
 						}
 					});
@@ -2370,6 +2370,31 @@ class PlayState extends MusicBeatState
 			}
 		}
 		return false;
+	}
+
+	public function deathAch()
+	{
+		var achieveID:Int = Achievements.getAchievementIndex("skill");
+		Achievements.loadAchievements();
+		if(Achievements.getAchievementCurNum("skill") > 11)
+			Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
+		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
+			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2]))
+			{
+				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
+				ClientPrefs.saveSettings();
+				var achievementPop:AchievementPopup = new AchievementPopup("skill", camOther);
+				FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
+				add(achievementPop);
+				achievementPop.onFinish = function() {
+					MusicBeatState.resetState();
+				};
+			}
+		}
+		else
+		{
+			MusicBeatState.resetState();
+		}
 	}
 
 	public function checkEventNote() {
@@ -3761,7 +3786,8 @@ class PlayState extends MusicBeatState
 							Achievements.loadAchievements();
 							var kaboom:Int = Achievements.getAchievementCurNum("kaboom");	
 							var kaboomMax:Int = Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4];
-							Achievements.setAchievementCurNum("kaboom", kaboom+1);						
+							if(kaboom > 11)
+								Achievements.setAchievementCurNum("kaboom", kaboom+1);						
 							if (kaboom == Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]) {
 								#if ACHIEVEMENTS_ALLOWED
 								var achieveID:Int = Achievements.getAchievementIndex('kaboom');

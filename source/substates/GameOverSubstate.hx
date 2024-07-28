@@ -208,7 +208,9 @@ class GameOverSubstate extends MusicBeatSubstate
 		if(PlayState.songName.toLowerCase() == "anekdot")
 			checkAchievement("anekdot_death");
 		// deaths
-		Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
+		if(Achievements.getAchievementCurNum("skill") > 11)
+			Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
+		
 		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
 			checkAchievement("skill");
 		}
