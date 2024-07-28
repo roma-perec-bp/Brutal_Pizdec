@@ -510,7 +510,6 @@ class PlayState extends MusicBeatState
 			if(gf != null)
 				gf.visible = false;
 		}
-		stagesFunc(function(stage:BaseStage) stage.createPost());
 
 		Conductor.songPosition = -5000 / Conductor.songPosition;
 		var showTime:Bool = (ClientPrefs.data.timeBarType != 'Disabled');
@@ -818,6 +817,8 @@ class PlayState extends MusicBeatState
 
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+
+		stagesFunc(function(stage:BaseStage) stage.createPost());
 		callOnScripts('onCreatePost');
 
 		cacheCountdown();
@@ -1030,7 +1031,7 @@ class PlayState extends MusicBeatState
 	public function startVideo(name:String, forMidSong:Bool = false, canSkip:Bool = true, loop:Bool = false, playOnLoad:Bool = true)
 	{
 		#if VIDEOS_ALLOWED
-		inCutscene = true;
+		//inCutscene = true;
 
 		var foundFile:Bool = false;
 		var fileName:String = Paths.video(name);
@@ -1047,7 +1048,7 @@ class PlayState extends MusicBeatState
 			videoCutscene = new VideoSprite(fileName, forMidSong, canSkip, loop);
 
 			// Finish callback
-			if (!forMidSong)
+			if (forMidSong == false)
 			{
 				function onVideoEnd()
 				{
@@ -3669,6 +3670,7 @@ class PlayState extends MusicBeatState
 		strumPlayAnim(true, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
 		note.hitByOpponent = true;
 
+		stagesFunc(function(stage:BaseStage) stage.opponentNoteHit(note));
 		var result:Dynamic = callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
 		if(result != FunkinLua.Function_Stop && result != FunkinLua.Function_StopHScript && result != FunkinLua.Function_StopAll) callOnHScript('opponentNoteHit', [note]);
 
@@ -3892,6 +3894,8 @@ class PlayState extends MusicBeatState
 		luaArray = [];
 		FunkinLua.customFunctions.clear();
 		#end
+
+		if(videoCutscene != null) videoCutscene.destroy();
 
 		#if HSCRIPT_ALLOWED
 		for (script in hscriptArray)

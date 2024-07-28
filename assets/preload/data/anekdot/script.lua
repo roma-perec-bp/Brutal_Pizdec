@@ -15,7 +15,9 @@ end
 
 function opponentNoteHit(membersIndex, noteData, noteType, isSustainNote)
     if canDrain == true then
-        addHealth(-0.1)
+        if isSustainNote == false then
+            if getHealth() - 0.01 > 0.05 then addHealth(-0.01) end
+        end
     end
 end
 

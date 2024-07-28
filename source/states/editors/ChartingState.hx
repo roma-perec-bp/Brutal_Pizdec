@@ -110,6 +110,10 @@ class ChartingState extends MusicBeatState
 		['burn with cone', "only with cone"],
 		['vibe time', "only with cone"],
 		['fire boom', "only boom"],
+		['start notes', "only monocum"],
+		['monochrome pizdec', "only monocum"],
+		['hi gradient', "only monocum"],
+		['bye gradient', "only monocum"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 	];
 
