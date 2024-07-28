@@ -157,28 +157,31 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		achievements();
 
-		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		if(PlayState.SONG.stage == 'flipaclip')
 		{
-			FlxG.sound.play(Paths.sound('pizdos'));
-			FlxG.sound.play(Paths.sound('zamn/'+randomNum));
-		});
-
-		new FlxTimer().start(3, function(tmr:FlxTimer)
-		{
-			FlxG.camera.shake(0.0025, 0.15);
-			FlxG.sound.play(Paths.sound('sex'));
-			new FlxTimer().start(1, function(tmr:FlxTimer)
+			new FlxTimer().start(0.5, function(tmr:FlxTimer)
+			{
+				FlxG.sound.play(Paths.sound('pizdos'));
+				FlxG.sound.play(Paths.sound('zamn/'+randomNum));
+			});
+		
+			new FlxTimer().start(3, function(tmr:FlxTimer)
 			{
 				FlxG.camera.shake(0.0025, 0.15);
 				FlxG.sound.play(Paths.sound('sex'));
-				new FlxTimer().start(sexValue, function(tmr:FlxTimer)
+				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					FlxG.camera.shake(0.0025, 0.15);
 					FlxG.sound.play(Paths.sound('sex'));
-					sexValue -= FlxG.random.float(0.01, 0.09);
-				}, 999);
+					new FlxTimer().start(sexValue, function(tmr:FlxTimer)
+					{
+						FlxG.camera.shake(0.0025, 0.15);
+						FlxG.sound.play(Paths.sound('sex'));
+						sexValue -= FlxG.random.float(0.01, 0.09);
+					}, 999);
+				});
 			});
-		});
+		}
 	}
 
 	public var startedDeath:Bool = false;
