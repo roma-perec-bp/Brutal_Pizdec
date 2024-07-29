@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GRAVE.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="grave0000" x="5976" y="2938" width="467" height="460" frameX="0" frameY="-18" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0001" x="5976" y="2938" width="467" height="460" frameX="0" frameY="-18" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0002" x="5511" y="2938" width="455" height="474" frameX="0" frameY="-4" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0003" x="5511" y="2938" width="455" height="474" frameX="0" frameY="-4" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0004" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0005" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0006" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0007" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0008" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0009" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0010" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0011" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0012" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0013" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="grave0014" x="4954" y="10" width="454" height="478" frameX="0" frameY="0" frameWidth="467" frameHeight="478"/>
+	<SubTexture name="ono idet0000" x="5976" y="3408" width="467" height="460" frameX="-8" frameY="-351" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0001" x="5976" y="3408" width="467" height="460" frameX="-8" frameY="-351" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0002" x="5511" y="3422" width="455" height="474" frameX="-8" frameY="-337" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0003" x="5511" y="3422" width="455" height="474" frameX="-8" frameY="-337" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0004" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0005" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0006" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0007" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0008" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0009" x="3655" y="3470" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0010" x="4098" y="2239" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0011" x="4530" y="1462" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0012" x="4980" y="498" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0013" x="5418" y="10" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0014" x="5882" y="10" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0015" x="6346" y="10" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0016" x="4119" y="2727" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0017" x="4562" y="1950" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0018" x="4119" y="3215" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0019" x="4994" y="986" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0020" x="5444" y="498" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0021" x="5908" y="498" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0022" x="6372" y="498" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0023" x="5458" y="986" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0024" x="5922" y="986" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0025" x="4583" y="2438" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0026" x="5026" y="1474" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0027" x="4583" y="2926" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0028" x="4583" y="3414" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0029" x="5490" y="1474" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0030" x="5954" y="1474" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0031" x="5047" y="1962" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0032" x="5511" y="1962" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0033" x="5975" y="1962" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0034" x="5047" y="2450" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0035" x="5047" y="2938" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0036" x="5047" y="3426" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0037" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0038" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0039" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0040" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0041" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0042" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0043" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0044" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0045" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0046" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0047" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0048" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0049" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0050" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0051" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0052" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0053" x="3655" y="2982" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0054" x="5511" y="2450" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0055" x="5511" y="2450" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0056" x="5975" y="2450" width="454" height="478" frameX="-8" frameY="-333" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0057" x="10" y="3292" width="459" height="763" frameX="-3" frameY="-48" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0058" x="10" y="3292" width="459" height="763" frameX="-3" frameY="-48" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0059" x="481" y="1650" width="460" height="806" frameX="-2" frameY="-5" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0060" x="481" y="2466" width="460" height="806" frameX="-2" frameY="-5" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0061" x="10" y="1650" width="461" height="811" frameX="-1" frameY="0" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0062" x="10" y="2471" width="461" height="811" frameX="-1" frameY="0" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0063" x="10" y="10" width="462" height="810" frameX="0" frameY="-1" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0064" x="10" y="830" width="462" height="810" frameX="0" frameY="-1" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0065" x="481" y="3282" width="459" height="804" frameX="-3" frameY="-7" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0066" x="950" y="3282" width="459" height="804" frameX="-3" frameY="-7" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0067" x="1419" y="2980" width="454" height="713" frameX="-8" frameY="-98" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0068" x="4516" y="753" width="454" height="699" frameX="-8" frameY="-112" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0069" x="4516" y="753" width="454" height="699" frameX="-8" frameY="-112" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0070" x="1410" y="10" width="454" height="710" frameX="-8" frameY="-101" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0071" x="1410" y="10" width="454" height="710" frameX="-8" frameY="-101" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0072" x="951" y="1496" width="454" height="731" frameX="-8" frameY="-80" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0073" x="951" y="1496" width="454" height="731" frameX="-8" frameY="-80" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0074" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0075" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0076" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0077" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0078" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0079" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0080" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0081" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0082" x="482" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0083" x="482" y="753" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0084" x="482" y="753" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0085" x="946" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0086" x="946" y="10" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0087" x="946" y="753" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0088" x="946" y="753" width="454" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0089" x="951" y="2237" width="452" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0090" x="1413" y="2237" width="449" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0091" x="1413" y="2237" width="449" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0092" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0093" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0094" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0095" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0096" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0097" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0098" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0099" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0100" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0101" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0102" x="1410" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0103" x="1415" y="1473" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0104" x="1853" y="730" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0105" x="1858" y="1473" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0106" x="1872" y="2216" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0107" x="1883" y="2959" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0108" x="2296" y="10" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0109" x="2301" y="753" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0110" x="2739" y="10" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0111" x="2315" y="1496" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0112" x="2744" y="753" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0113" x="3182" y="10" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0114" x="2326" y="2239" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0115" x="2758" y="1496" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0116" x="3187" y="753" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0117" x="3625" y="10" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0118" x="2326" y="2982" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0119" x="2769" y="2239" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0120" x="3201" y="1496" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0121" x="3630" y="753" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0122" x="4068" y="10" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0123" x="2769" y="2982" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0124" x="3212" y="2239" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0125" x="3644" y="1496" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0126" x="4073" y="753" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0127" x="4511" y="10" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0128" x="3212" y="2982" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0129" x="3655" y="2239" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+	<SubTexture name="ono idet0130" x="4087" y="1496" width="433" height="733" frameX="-8" frameY="-78" frameWidth="475" frameHeight="811"/>
+</TextureAtlas>
