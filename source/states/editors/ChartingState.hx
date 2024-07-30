@@ -107,6 +107,8 @@ class ChartingState extends MusicBeatState
 		['GrassHey', "Value 1: on or off?"],
 		['dead jumpscare', "Value 1: time"],
 		['Show Song', "fuck you"],
+		['Cam lock', "value 1: x amd y, value2 zoom (can be null)"],
+		['Cam unlock', "yes"],
 		['Play Video', "value1: video"],
 		['Play OVERFIRE', "value1: video"],
 		['Stop OVERFIRE', ""],
