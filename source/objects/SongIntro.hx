@@ -49,11 +49,11 @@ class SongIntro extends FlxSpriteGroup
                 color == 0xffec0063;
         }
 
-        var text = new FlxText(780, 400, 0, "", 82);
+        var text = new FlxText(420, 150, 0, "", 82);
         text.setFormat(Paths.font("HouseofTerror.ttf"), 100, color, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         text.borderSize = 4;
 
-        var text2 = new FlxText(790, 600, 0, "", fontSize);
+        var text2 = new FlxText(430, 350, 0, "", fontSize);
         text2.setFormat(Paths.font("HouseofTerror.ttf"), fontSize, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
         var text3 = new FlxText(text2.x, text2.y + 60, 0, "", fontSize - 20);
@@ -103,7 +103,7 @@ class SongIntro extends FlxSpriteGroup
     }
 
     public function start(){
-        FlxTween.tween(this, {x: -200}, 2, {ease: FlxEase.quadOut, onComplete: function(twn:FlxTween){
+        FlxTween.tween(this, {x: -100}, 2, {ease: FlxEase.quadOut, onComplete: function(twn:FlxTween){
             FlxTween.tween(this, {x: -2000}, 2, {ease: FlxEase.backInOut, startDelay: 1.5, onComplete: function(twn:FlxTween){ 
                 this.destroy(); 
             }});

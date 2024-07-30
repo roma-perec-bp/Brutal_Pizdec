@@ -66,7 +66,15 @@ class ChartingState extends MusicBeatState
 		'Jalapeno Note NEW',
 		'Jalapeno Note BOOM SOUND',
 		'rom',
-		'Mania Note'
+		'Mania Note',
+		//NOTE TRAILS
+		'Note Trail',
+		'Note Trail Arrow Mode',
+		'Note Trail Ascend Mode',
+		//NOTE BUT PLAYS ANIM
+		'Note Trail Anim',
+		'Note Trail Arrow Mode Anim',
+		'Note Trail Ascend Mode Anim'
 	];
 	public var ignoreWarnings = false;
 	var curNoteTypes:Array<String> = [];
@@ -100,6 +108,8 @@ class ChartingState extends MusicBeatState
 		['dead jumpscare', "Value 1: time"],
 		['Show Song', "fuck you"],
 		['Play Video', "value1: video"],
+		['Play OVERFIRE', "value1: video"],
+		['Stop OVERFIRE', ""],
 		['Character Color', "Value 1: Character\nValue 2:Color 0xffffffff, time"],
 		['Character Color Transform', "Value 1: redOffset, greenOffset, blueOffset, redMultiplier, greenMultiplier, blueMultiplier\nValue 2:Character, Time"],
 		['boom dead', "yes"],
@@ -114,6 +124,8 @@ class ChartingState extends MusicBeatState
 		['monochrome pizdec', "only monocum"],
 		['hi gradient', "only monocum"],
 		['bye gradient', "only monocum"],
+		['rain', "only overfire"],
+		['trans overfire', "only overfire"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 	];
 

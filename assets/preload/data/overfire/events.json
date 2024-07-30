@@ -12,12 +12,42 @@
 				]
 			],
 			[
+				1000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"perec-wheel-cuts"
+					]
+				]
+			],
+			[
+				1083.33333333333,
+				[
+					[
+						"Play Animation",
+						"games",
+						"dad"
+					]
+				]
+			],
+			[
 				1333.33333333333,
 				[
 					[
 						"lyrics",
 						"Game$Игры",
 						"ff0000"
+					]
+				]
+			],
+			[
+				1333.33333333333,
+				[
+					[
+						"Set Cam Zoom Alt",
+						"1",
+						"2"
 					]
 				]
 			],
@@ -62,7 +92,7 @@
 				]
 			],
 			[
-				2833.33333333333,
+				2916.66666666667,
 				[
 					[
 						"lyrics",
@@ -72,7 +102,7 @@
 				]
 			],
 			[
-				3000,
+				3083.33333333333,
 				[
 					[
 						"lyrics",
@@ -93,6 +123,16 @@
 						"Cam Boom Speed",
 						"1",
 						"1"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						"0xffff0000"
 					]
 				]
 			],
@@ -132,12 +172,67 @@
 					[
 						"Flash Camera",
 						"1",
-						"0xffff0000"
+						"0xffFFFFFF"
 					],
 					[
 						"Cam Boom Speed",
 						"2",
 						"1"
+					],
+					[
+						"Change Character",
+						"dad",
+						"perec-wheel"
+					],
+					[
+						"rain",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				10666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				12000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				13333.3333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				14666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
 					]
 				]
 			],
@@ -151,6 +246,51 @@
 					],
 					[
 						"Cam Boom Speed",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				16000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					],
+					[
+						"Set DAD Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				16000,
+				[
+					[
+						"Show Song",
+						"",
+						""
+					]
+				]
+			],
+			[
+				26666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				36000,
+				[
+					[
+						"Set Cam Zoom",
 						"1",
 						"1"
 					]
@@ -172,6 +312,21 @@
 					[
 						"Cam Boom Speed",
 						"2",
+						"1"
+					],
+					[
+						"Set DAD Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				42666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
 						"1"
 					]
 				]
@@ -197,6 +352,56 @@
 				]
 			],
 			[
+				53333.3333333334,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				54666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				55333.3333333334,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				56000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				57333.3333333334,
+				[
+					[
+						"Set Cam Zoom",
+						"1.4",
+						"2"
+					]
+				]
+			],
+			[
 				58666.6666666667,
 				[
 					[
@@ -213,6 +418,46 @@
 						"Set Cam Zoom",
 						"0.9",
 						"0.1"
+					]
+				]
+			],
+			[
+				60666.6666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				61000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				63333.3333333334,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				63666.6666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -237,6 +482,16 @@
 				]
 			],
 			[
+				66666.6666666667,
+				[
+					[
+						"Set Cam Zoom",
+						"1.2",
+						"0.5"
+					]
+				]
+			],
+			[
 				67166.6666666667,
 				[
 					[
@@ -253,6 +508,11 @@
 						"lyrics",
 						"A$A",
 						"ff0000"
+					],
+					[
+						"Set Cam Zoom",
+						"1.4",
+						"1.5"
 					]
 				]
 			],
@@ -396,28 +656,98 @@
 					],
 					[
 						"Set Cam Zoom",
-						"0.6",
+						"0.4",
 						"0.1"
 					],
 					[
 						"lyrics",
 						"AAAAAAAA$AAAAAAAA",
 						"FF0000"
+					],
+					[
+						"Set DAD Speed",
+						"1",
+						""
+					],
+					[
+						"Play OVERFIRE",
+						"die",
+						""
+					]
+				]
+			],
+			[
+				70666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				71333.3333333334,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				71666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				72000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					]
+				]
+			],
+			[
+				73333.3333333334,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				74333.3333333334,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				74666.6666666667,
+				[
+					[
+						"Camera Follow Pos",
+						"500",
+						"800"
 					]
 				]
 			],
 			[
 				75333.3333333334,
-				[
-					[
-						"Set Cam Zoom",
-						"0.9",
-						"0.03"
-					]
-				]
-			],
-			[
-				75666.6666666667,
 				[
 					[
 						"Set Cam Zoom",
@@ -427,11 +757,21 @@
 				]
 			],
 			[
+				75666.6666666667,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						"0.03"
+					]
+				]
+			],
+			[
 				75833.3333333334,
 				[
 					[
 						"Set Cam Zoom",
-						"0.9",
+						"0.8",
 						"0.03"
 					]
 				]
@@ -443,6 +783,171 @@
 						"Set Cam Zoom",
 						"0.7",
 						"0.1"
+					]
+				]
+			],
+			[
+				76666.6666666667,
+				[
+					[
+						"Set Cam Zoom",
+						"0.6",
+						"0.1"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				77333.3333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				78666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					]
+				]
+			],
+			[
+				79666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				80000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				81333.3333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				82000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				82333.3333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				82666.6666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				84000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				85333.3333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				86000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				86666.6666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.3"
+					]
+				]
+			],
+			[
+				87333.3333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				88000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				89333.3333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -467,6 +972,36 @@
 					[
 						"Flash Camera",
 						"1",
+						""
+					],
+					[
+						"Set DAD Speed",
+						"2",
+						""
+					],
+					[
+						"Dadbattle Spotlight",
+						"",
+						""
+					],
+					[
+						"Character Color Transform",
+						"255, 255, 255, 0, 0, 0",
+						"dad, 0.001"
+					],
+					[
+						"Character Color Transform",
+						"255, 255, 255, 0, 0, 0",
+						"bf, 0.001"
+					],
+					[
+						"Set Cam Zoom",
+						"1.2",
+						"0.5"
+					],
+					[
+						"Stop OVERFIRE",
+						"",
 						""
 					]
 				]
@@ -678,6 +1213,16 @@
 						"Cam Boom Speed",
 						"1",
 						"1"
+					]
+				]
+			],
+			[
+				106750,
+				[
+					[
+						"Set Cam Zoom",
+						"0.9",
+						"0.1"
 					]
 				]
 			],

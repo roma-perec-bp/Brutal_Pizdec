@@ -200,6 +200,7 @@ class FreeplayState extends MusicBeatState
 		medal.scale.set(0.2, 0.2);
 		medal.updateHitbox();
 		medal.antialiasing = ClientPrefs.data.antialiasing;
+		medal.visible = false;
 		add(medal);
 
 		if(curSelected[freeplayType] >= songs.length) curSelected[freeplayType] = 0;
@@ -478,6 +479,8 @@ class FreeplayState extends MusicBeatState
 
 	function uniqueMedalChange(medalInt:Int) //почему не LERP? потому что Ease
 	{
+		medal.visible = true;
+
 		FlxTween.cancelTweensOf(medal);
 		FlxTween.cancelTweensOf(medal.scale);
 		FlxTween.cancelTweensOf(medal.color);

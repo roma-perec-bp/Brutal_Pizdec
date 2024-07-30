@@ -18757,7 +18757,7 @@
 			}
 		],
 		"player2": "perec",
-		"gfVersion": "gf",
+		"gfVersion": "invis",
 		"events": [],
 		"disableAtTheStartSong": true,
 		"gameOverLoop": "gameOverZombie",

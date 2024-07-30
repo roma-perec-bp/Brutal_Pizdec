@@ -20943,7 +20943,7 @@
 				"bpm": 140
 			}
 		],
-		"gfVersion": "gf",
+		"gfVersion": "invis",
 		"player3": null,
 		"gameOverLoop": "gameOverZombie",
 		"disableNoteRGB": false,

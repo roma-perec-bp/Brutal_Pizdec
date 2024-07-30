@@ -98,7 +98,7 @@ class GalleryState extends MusicBeatState
 
         debug = new FlxText(5, 5, 0, "You can use the mouse wheel to zoom in and out of the picture!", 55);
 		debug.setFormat(Paths.font("HouseofTerror.ttf"), 15, 0xFFFFFF, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        debug.alpha = 0.4;
+        debug.alpha = 0.7;
         debug.screenCenter(X);
 		debug.borderSize = 1.5;
 		add(debug);
@@ -116,7 +116,7 @@ class GalleryState extends MusicBeatState
 
     override function update(elapsed:Float) 
     {
-        if(FlxG.keys.justPressed.LEFT) 
+        if(controls.UI_LEFT_P) 
         {
             changeButtons(-1);
             name.screenCenter(X);
@@ -125,7 +125,7 @@ class GalleryState extends MusicBeatState
             FlxG.sound.play(Paths.sound('scrollMenu'));
         }
         
-        if(FlxG.keys.justPressed.RIGHT) 
+        if(controls.UI_RIGHT_P) 
         {
             changeButtons(1);
             name.screenCenter(X);

@@ -11,10 +11,36 @@ function onCreate()
   setProperty('timeBarBG.visible', false)
   setProperty('scoreTxt.visible', false)
   setProperty('accuracyShit.visible', false)
- -- makeLuaSprite('blackFlash', nil, 0, 0)
-    --makeGraphic('blackFlash', 1280, 720, '000000')
-    --setObjectCamera('blackFlash', 'hud')
-   -- addLuaSprite('blackFlash', false)
+
+  makeLuaSprite('blammedLightsBlack', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
+	makeGraphic('blammedLightsBlack', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, '000000')
+	setScrollFactor('blammedLightsBlack', 0)
+	setProperty('blammedLightsBlack.scale.x', 5)
+	setProperty('blammedLightsBlack.scale.y', 5)
+    setProperty('blammedLightsBlack.alpha', 0.001)
+	addLuaSprite('blammedLightsBlack', false)
+
+  makeLuaSprite('red', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
+	makeGraphic('red', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, 'ff0000')
+	setScrollFactor('red', 0)
+	setProperty('red.scale.x', 5)
+	setProperty('red.scale.y', 5)
+    setProperty('red.alpha', 0.001)
+	addLuaSprite('red', false)
+
+  makeLuaSprite('blackFlash', nil, 0, 0)
+  makeGraphic('blackFlash', 1280, 720, '000000')
+  setObjectCamera('blackFlash', 'hud')
+  addLuaSprite('blackFlash', false)
+  setProperty('blackFlash.alpha', 0.001)
+end
+
+function onCountdownStarted()
+  if isStoryMode == true then
+    doTweenAlpha('startBlack', 'blackFlash', 1, 1)
+  else
+    setProperty('blackFlash.alpha', 1)
+  end
 end
 
 function onSongStart()
@@ -67,6 +93,59 @@ function onCreatePost()
     for i = 0, 7 do
         setPropertyFromGroup('strumLineNotes', i, 'alpha', 0)
     end
+end
+
+function onStepHit()
+  if curStep == 2 then
+    setProperty('blammedLightsBlack.alpha', 1)
+  end
+  if curStep == 16 then
+    doTweenAlpha('gameover', 'blackFlash', 0, 1)
+    setProperty('boyfriend.alpha', 0.0001)
+  end
+  if curStep == 48 then
+    setProperty('red.alpha', 1)
+    setProperty('dad.color', 0xff000000)
+  end
+  if curStep == 64 then
+    setProperty('red.alpha', 0)
+    setProperty('blammedLightsBlack.alpha', 0.0001)
+    setProperty('boyfriend.alpha', 1)
+  end
+  if curStep == 704 then
+    doTweenAlpha('pizdos', 'blammedLightsBlack', 0.6, 1)
+  end
+  if curStep == 816 then
+    setProperty('red.alpha', 1)
+    setProperty('blammedLightsBlack.alpha', 1)
+    setProperty('dad.color', 0xff000000)
+  end
+  if curStep == 824 then
+    setProperty('red.alpha', 0)
+  end
+  if curStep == 826 then
+    setProperty('red.alpha', 1)
+  end
+  if curStep == 828 then
+    setProperty('red.alpha', 0)
+  end
+  if curStep == 829 then
+    setProperty('red.alpha', 1)
+  end
+  if curStep == 830 then
+    setProperty('red.alpha', 0)
+  end
+  if curStep == 831 then
+    setProperty('red.alpha', 1)
+  end
+  if curStep == 832 then
+    setProperty('red.alpha', 0)
+    setProperty('blammedLightsBlack.alpha', 0)
+    doTweenColor('obnegrel', 'dad', 'FFFFFF', 0.001)
+  end
+  if curStep == 1088 then
+    setProperty('blammedLightsBlack.alpha', 1)
+  end
 end
 
 function onBeatHit()

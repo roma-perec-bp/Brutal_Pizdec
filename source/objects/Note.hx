@@ -105,6 +105,9 @@ class Note extends FlxSprite
 
 	public var jap:Bool = false;
 
+	public var ghostNote:Bool = false;
+	public var ghostAnimNote:Bool = false;
+
 	public var hitHealth:Float = 0.023;
 	public var missHealth:Float = 0.0475;
 	public var rating:String = 'unknown';
@@ -347,6 +350,11 @@ class Note extends FlxSprite
 					rgbShader.enabled = false;
 					offsetX = 32;
 					if(isSustainNote) offsetX = 28;
+
+				case 'Note Trail' | 'Note Trail Arrow Mode' | 'Note Trail Ascend Mode':
+					ghostNote = true;
+				case 'Note Trail Anim' | 'Note Trail Arrow Mode Anim' | 'Note Trail Ascend Mode Anim':
+					ghostAnimNote = true;
 			}
 			if (value != null && value.length > 1) NoteTypesConfig.applyNoteTypeData(this, value);
 			if (hitsound != 'hitsound' && ClientPrefs.data.hitsoundVolume > 0) Paths.sound(hitsound); //precache new sound for being idiot-proof
