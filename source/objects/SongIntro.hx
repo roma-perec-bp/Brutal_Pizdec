@@ -36,24 +36,26 @@ class SongIntro extends FlxSpriteGroup
         switch(_song)
         {
             case 'boom':
-                color = 0xffff0000;
+                colorText = 0xffff0000;
             case 'overfire':
-                color = 0xffff7a00;
+                colorText = 0xffff7a00;
+            case 'klork':
+                colorText = 0xff8cd485;
+            case 'klork-old':
+                colorText = 0xff8cd485;
             case 't-short':
-                color = 0xff1e1d2b;
-            case 'klork' | 'klork-old':
-                color == 0xff8cd485;
+                colorText = 0xff1e1d2b;
             case 'monochrome':
-                color == 0xff3f3f3f;
+                colorText = 0xff3f3f3f;
             case 's6x-boom':
-                color == 0xffec0063;
+                colorText = 0xffec0063;
         }
 
         var text = new FlxText(420, 150, 0, "", 82);
-        text.setFormat(Paths.font("HouseofTerror.ttf"), 100, color, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        text.setFormat(Paths.font("HouseofTerror.ttf"), 100, colorText, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         text.borderSize = 4;
 
-        var text2 = new FlxText(430, 350, 0, "", fontSize);
+        var text2 = new FlxText(410, 350, 0, "", fontSize);
         text2.setFormat(Paths.font("HouseofTerror.ttf"), fontSize, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
         var text3 = new FlxText(text2.x, text2.y + 60, 0, "", fontSize - 20);
@@ -72,16 +74,20 @@ class SongIntro extends FlxSpriteGroup
         text.scale.x = tooLong;
 
         var composerText:String = text2.text;
-        var tooLong2:Float = (composerText.length > 27) ? 0.65 : 1;
+        var tooLong2:Float = (composerText.length > 22) ? 0.65 : 1;
         text2.scale.x = tooLong2;
 
+        if(_song == 'overfire') text2.scale.x = 0.35;
+
         var charterText:String = text3.text;
-        var tooLong3:Float = (charterText.length > 27) ? 0.65 : 1;
+        var tooLong3:Float = (charterText.length > 22) ? 0.65 : 1;
         text3.scale.x = tooLong3;
 
         var scriptsText:String = text4.text;
-        var tooLong4:Float = (scriptsText.length > 27) ? 0.65 : 1;
+        var tooLong4:Float = (scriptsText.length > 22) ? 0.65 : 1;
         text4.scale.x = tooLong4;
+
+        if(_song == 't-short') text2.scale.x = 0.45;
 
         text.updateHitbox();
         text2.updateHitbox();

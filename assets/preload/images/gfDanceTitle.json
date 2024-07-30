@@ -4,7 +4,7 @@
 	"startx":455,
 	"starty":630,
 	"gfx":512,
-	"gfy":-500,
+	"gfy":-440,
 	"backgroundSprite":"roof",
 	"bpm":120
 }

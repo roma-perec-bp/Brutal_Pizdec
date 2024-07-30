@@ -1071,8 +1071,8 @@ class PlayState extends MusicBeatState
 			videoCutscene.videoSprite.cameras = [cameraFromString('video')];
 			if(shouldBlend == true)
 			{
-				videoCutscene.blend = LIGHTEN;
-				//videoCutscene.alpha = 0.4;
+				videoCutscene.blend = OVERLAY;
+				videoCutscene.alpha = 0.4;
 			}
 
 			if (playOnLoad)
@@ -1712,6 +1712,10 @@ class PlayState extends MusicBeatState
 				Paths.sound(event.value1);
 
 			case 'Play Video':
+				precacheList.set(event.value1, 'video');
+				Paths.video(event.value1);
+
+			case 'Play OVERFIRE':
 				precacheList.set(event.value1, 'video');
 				Paths.video(event.value1);
 		}

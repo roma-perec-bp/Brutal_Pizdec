@@ -192,7 +192,7 @@ class TitleState extends MusicBeatState
 		gfDance.antialiasing = ClientPrefs.data.antialiasing;
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 		gfDance.animation.addByPrefix('japDance', 'dance', 24, false);
-		gfDance.scale.set(0.65,0.65);
+		gfDance.scale.set(0.45,0.45);
 		gfDance.screenCenter(X);
 
 		var logotrail:FlxTrail = new FlxTrail(gfDance, null, 3, 6, 0.3, 0.002);
@@ -378,6 +378,7 @@ class TitleState extends MusicBeatState
 				FlxTween.cancelTweensOf(FlxG.camera);
 				FlxTween.tween(FlxG.camera, {zoom: 3}, 1.5, {ease: FlxEase.backIn});
 				FlxTween.tween(titleText, {alpha: 0}, 0.7, {ease: FlxEase.linear});
+				FlxTween.tween(gfDance, {y: 500}, 2, {ease: FlxEase.quadInOut});
 				textBG.alpha = 0;
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)

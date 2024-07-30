@@ -28,7 +28,7 @@ class FlipaClip extends BaseStage
 		water = new BGSprite('Flipaclip', 0, 550, 0, 0);
 		water.setGraphicSize(Std.int(water.width * 0.22));
 		water.scale.set(0.2, 0.2);
-		add(water);
+		insert(members.indexOf(game.scoreTxt), water);
 		water.cameras = [camHUD];
 		}
 	}

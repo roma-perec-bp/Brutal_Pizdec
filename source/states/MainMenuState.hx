@@ -297,7 +297,7 @@ class MainMenuState extends MusicBeatState
 					}
 				}
 
-				if (controls.ACCEPT || (curColumn != NONE && FlxG.mouse.justPressed))
+				if ((curColumn != NONE && FlxG.mouse.justPressed))
 				{
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					selectedSomethin = true;
