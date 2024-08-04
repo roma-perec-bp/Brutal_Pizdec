@@ -191,6 +191,7 @@ class MainMenuState extends MusicBeatState
 
 	#if ACHIEVEMENTS_ALLOWED
 	function checkAchievement(achievementName) {
+		trace(Achievements.achDone);
 		Achievements.loadAchievements();
 		var achieveID:Int = Achievements.getAchievementIndex(achievementName);
 		if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
@@ -229,6 +230,8 @@ class MainMenuState extends MusicBeatState
 		FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
 
 		#if ACHIEVEMENTS_ALLOWED
+		//var leDate = Date.now();
+		//if (leDate.getDay() == 5 && leDate.getHours() >= 18)
 		if(FlxG.keys.justPressed.ONE)
 		{
 			checkAchievement('friday_night_play');

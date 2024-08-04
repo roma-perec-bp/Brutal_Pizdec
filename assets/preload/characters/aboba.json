@@ -75,24 +75,24 @@
 	],
 	"notes_colors": [
 		[
-			"0xFF000000",
+			"0xFF5f5e76",
 			"0xFFFFFFFF",
-			"0xFF3A3A3A"
+			"0xFF28272b"
 		],
 		[
-			"0xFF0026FF",
+			"0xFF423ffe",
 			"0xFFFFFFFF",
-			"0xFF200078"
+			"0xFF181745"
 		],
 		[
-			"0xFF5D2400",
+			"0xFF54312b",
 			"0xFFFFFFFF",
-			"0xFF2C1100"
+			"0xFF160f0e"
 		],
 		[
-			"0xFFFFB27F",
+			"0xFFfecfa8",
 			"0xFFFFFFFF",
-			"0xFF7F593F"
+			"0xFF9a7b62"
 		]
 	],
 	"sing_duration": 4,

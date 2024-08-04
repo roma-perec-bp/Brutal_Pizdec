@@ -162,7 +162,7 @@ class GalleryState extends MusicBeatState
         if(controls.BACK)
         {
             FlxG.sound.play(Paths.sound('cancelMenu'));
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 1, true);
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7, true);
             MusicBeatState.switchState(new MainMenuState());
         }
 

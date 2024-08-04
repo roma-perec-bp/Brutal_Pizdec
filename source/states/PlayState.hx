@@ -2459,7 +2459,7 @@ class PlayState extends MusicBeatState
 	{
 		var achieveID:Int = Achievements.getAchievementIndex("skill");
 		Achievements.loadAchievements();
-		if(Achievements.getAchievementCurNum("skill") < 11)
+		if(Achievements.getAchievementCurNum("skill") < 10)
 			Achievements.setAchievementCurNum("skill", Achievements.getAchievementCurNum("skill") + 1);
 		
 		if (Achievements.getAchievementCurNum("skill") == Achievements.achievementsStuff[Achievements.getAchievementIndex("skill")][4]) {
@@ -2468,7 +2468,7 @@ class PlayState extends MusicBeatState
 				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 				ClientPrefs.saveSettings();
 				var achievementPop:AchievementPopup = new AchievementPopup("skill", camOther);
-				FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
+				FlxG.sound.play(Paths.sound('confirmAch'));
 				add(achievementPop);
 				achievementPop.onFinish = function() {
 					MusicBeatState.resetState();
@@ -4120,7 +4120,7 @@ class PlayState extends MusicBeatState
 							Achievements.loadAchievements();
 							var kaboom:Int = Achievements.getAchievementCurNum("kaboom");	
 							var kaboomMax:Int = Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4];
-							if(kaboom < 11)
+							if(kaboom < 10)
 								Achievements.setAchievementCurNum("kaboom", kaboom+1);						
 							if (kaboom == Achievements.achievementsStuff[Achievements.getAchievementIndex("kaboom")][4]) {
 								#if ACHIEVEMENTS_ALLOWED
