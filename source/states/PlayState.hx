@@ -4038,6 +4038,7 @@ class PlayState extends MusicBeatState
 		{
 			case 6:
 				//вообще нихуя сосите
+				//дебил?
 			case 5:
 				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, Conductor.crochet * 0.002, {ease: FlxEase.quadOut, type: BACKWARD});
 			case 4:
@@ -4090,6 +4091,7 @@ class PlayState extends MusicBeatState
 								boyfriend.playAnim('hurt', true);
 								boyfriend.specialAnim = true;
 							}
+							//УДАЛИТЕ УДАЛИТЕ УДАЛИТЕ
 						case 'Jap Note': //Hurt note
 							FlxG.sound.play(Paths.sound('boom'), 0.6);
 							fireHalapeno.alpha = 0.5;
