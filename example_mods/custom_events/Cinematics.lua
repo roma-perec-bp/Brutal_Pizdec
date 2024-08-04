@@ -24,23 +24,11 @@ function onCreatePost()
     luaGraphic("topBar", 0, -1)
     luaGraphic("bottomBar", 0, screenHeight)
 
-    if stringStartsWith(version, "0.7") then
-        hpOpacity = getPropertyFromClass("backend.ClientPrefs", "data.healthBarAlpha")
-        hudItems.opaque = {"scoreTxt","timeBar","timeTxt"}
-        hudItems.nonOpaque = {"healthBar","iconP1","iconP2"}
-        orderCheck.underNotes = "uiGroup"
-        orderCheck.overNotes = "uiGroup"
-        if version == "0.7" or version == "0.7.1" or version == "0.7.1h" then -- 0.7.2 issues lol
-            orderCheck.underNotes = "timeBar"
-            orderCheck.overNotes = "scoreTxt"
-        end
-    else -- this will be anything below 0.7
-        hpOpacity = getPropertyFromClass("ClientPrefs", "healthBarAlpha")
-        hudItems.opaque = {"scoreTxt","timeBar","timeBarBG","timeTxt"}
-        hudItems.nonOpaque = {"healthBarBG","healthBar","iconP1","iconP2"}
-        orderCheck.underNotes = "timeBarBG"
-        orderCheck.overNotes = "scoreTxt"
-    end
+    hpOpacity = getPropertyFromClass("backend.ClientPrefs", "data.healthBarAlpha")
+    hudItems.opaque = {"scoreTxt","timeBar","timeTxt"}
+    hudItems.nonOpaque = {"healthBarBGOverlay","healthBar","iconP1","iconP2"}
+    orderCheck.underNotes = "timeBar"
+    orderCheck.overNotes = "scoreTxt"
 end
 
 function onCountdownStarted() -- cause of dialogue shit lol (thanks Oxhidoupsil for report)

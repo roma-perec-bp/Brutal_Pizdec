@@ -70,6 +70,7 @@ class SetLanguageState extends MusicBeatState
 			else{
 				ClientPrefs.data.language = 'Russian';
 			}
+			ClientPrefs.saveSettings();
 			MusicBeatState.switchState(new MainMenuState());
 		}
 		super.update(elapsed);

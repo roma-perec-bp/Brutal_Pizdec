@@ -178,7 +178,8 @@ class GameOverSubstate extends MusicBeatSubstate
 						FlxG.camera.shake(0.0025, 0.15);
 						FlxG.sound.play(Paths.sound('sex'));
 						sexValue -= FlxG.random.float(0.01, 0.09);
-					}, 999);
+						tmr.reset(sexValue);
+					});
 				});
 			});
 		}

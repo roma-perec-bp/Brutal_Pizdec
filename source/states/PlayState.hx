@@ -2342,6 +2342,24 @@ class PlayState extends MusicBeatState
 		MusicBeatState.switchState(new ChartingState());
 	}
 
+	function ohGodNo()
+	{
+		FlxG.camera.followLerp = 0;
+		persistentUpdate = false;
+		paused = true;
+		FlxG.sound.music.volume = 0;
+		cancelMusicFadeTween();
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxTransitionableState.skipNextTransOut = true;
+
+		#if desktop
+		DiscordClient.changePresence("He cheated", null, null, true);
+		DiscordClient.resetClientID();
+		#end
+		
+		MusicBeatState.switchState(new CheatState());
+	}
+
 	function ebatLoh()
 	{
 		FlxG.camera.followLerp = 0;
@@ -3084,6 +3102,16 @@ class PlayState extends MusicBeatState
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
 		vocals.pause();
+
+		if (!FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
+			FlxG.save.data.playedSongs.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
+
+		if(songMisses == 0 && deathCounter == 0)
+		{
+			if (!FlxG.save.data.playedSongsFC.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
+				FlxG.save.data.playedSongsFC.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
+		}
+
 		if(ClientPrefs.data.noteOffset <= 0 || ignoreNoteOffset) {
 			endCallback();
 		} else {
@@ -3113,15 +3141,6 @@ class PlayState extends MusicBeatState
 			if(doDeathCheck()) {
 				return false;
 			}
-		}
-
-		if (!FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
-			FlxG.save.data.playedSongs.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
-
-		if(songMisses == 0 && deathCounter == 0)
-		{
-			if (!FlxG.save.data.playedSongsFC.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
-				FlxG.save.data.playedSongsFC.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
 		}
 
 		timeBar.visible = false;
@@ -3216,8 +3235,6 @@ class PlayState extends MusicBeatState
 					trace('LOADING NEXT SONG');
 					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
 
-					FlxTransitionableState.skipNextTransIn = true;
-					FlxTransitionableState.skipNextTransOut = true;
 					prevCamFollow = camFollow;
 
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
@@ -4207,6 +4224,12 @@ class PlayState extends MusicBeatState
 		if (generatedMusic)
 			notes.sort(FlxSort.byY, ClientPrefs.data.downScroll ? FlxSort.ASCENDING : FlxSort.DESCENDING);
 
+		if(curBeat == 1)
+		{
+			if(ClientPrefs.data.downScroll == true) ohGodNo();
+			if(ClientPrefs.data.middleScroll == true) ohGodNo();
+		}
+
 		if(dropTime <= 0) iconP1.scale.set(1.2, 1.2);
 		if(curSong == 'Lore') iconROM.scale.set(1.2, 1.2);
 		if(curSong == 'Lore') iconGF.scale.set(1.2, 1.2);
@@ -4633,11 +4656,11 @@ class PlayState extends MusicBeatState
 								ClientPrefs.data.arrowRGB[2][0] == -1 && ClientPrefs.data.arrowRGB[2][1] == -1 && ClientPrefs.data.arrowRGB[2][2] == -1 &&
 								ClientPrefs.data.arrowRGB[3][0] == -1 && ClientPrefs.data.arrowRGB[3][1] == -1 && ClientPrefs.data.arrowRGB[3][2] == -1);
 						case 'oldweek0':
-							unlock = FlxG.save.data.playedSongs = ['with-cone-old', 'boom-old', 'overfire-old', 'klork-old'];
+							unlock = FlxG.save.data.playedSongs.contains(['with-cone-old', 'boom-old', 'overfire-old', 'klork-old']);
 						case 'allweeks':
-							unlock = FlxG.save.data.playedSongs = ['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old'];
+							unlock = FlxG.save.data.playedSongs.contains(['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old']);
 						case 'allweeks1':
-							unlock = FlxG.save.data.playedSongsFC = ['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old'];
+							unlock = FlxG.save.data.playedSongsFC.contains(['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old']);
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{
