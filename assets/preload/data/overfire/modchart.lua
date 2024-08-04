@@ -2,7 +2,6 @@ setProperty('skipArrowStartTween', true)
 local balls = false
 local defaultNotePos = {};
 local defaultNoteReversePos = {};
-
 local Meow1 = 0
 local Meow2 = 112
 local Meow3 = 112 * 2
@@ -502,6 +501,7 @@ end
 
       balls = not balls
   end
+
   if curBeat == 111 then
       for i = 0,7 do
         setPropertyFromGroup('strumLineNotes', i, 'x', defaultNotePos[i + 1][1])
@@ -578,6 +578,24 @@ end
 
       balls = not balls
   end
+  
+  if curBeat == 1120 then
+      setProperty('healthBar.visible', false)
+  setProperty('healthBarBGOverlay.visible', false)
+  setProperty('iconP1.visible', false)
+  setProperty('iconP2.visible', false)
+  setProperty('timeBar.visible', false)
+  setProperty('timeTxt.visible', false)
+  setProperty('timeBarBG.visible', false)
+  setProperty('scoreTxt.visible', false)
+  setProperty('accuracyShit.visible', false)
+  end
+if curBeat == 1124 then
+    noteTweenAlpha("TheEnd", 4, 0, 5, "quartInOut")
+    noteTweenAlpha("TheEndForRe", 5, 0, 5, "quartInOut")
+    noteTweenAlpha("The", 6, 0, 5, "quartInOut")
+    noteTweenAlpha("End", 7, 0, 5, "quartInOut")
+    end
 end
 
 function noteSquish(note, axis, mult)
@@ -605,6 +623,7 @@ function resettiRev()
 end
 
 function funni(intense) --да да я спиздил хахахаха
+    --- иди нахуй
   for i = 0,3 do
     setPropertyFromGroup('opponentStrums', i, 'x', 
     getPropertyFromGroup("opponentStrums", i, "x") + getRandomFloat(-intense, intense))
