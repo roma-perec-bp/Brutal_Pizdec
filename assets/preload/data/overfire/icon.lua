@@ -96,5 +96,3 @@ function onBeatHit()
         doTweenY('icon2objy', 'iconP2obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
     end
 end
-
--- у ромы хуй маленки

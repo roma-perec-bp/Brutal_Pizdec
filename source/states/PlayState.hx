@@ -3216,7 +3216,7 @@ class PlayState extends MusicBeatState
 					if(FlxTransitionableState.skipNextTransIn) {
 						CustomFadeTransition.nextCamera = null;
 					}
-					
+
 					if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 						Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
@@ -3281,6 +3281,11 @@ class PlayState extends MusicBeatState
 							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 						}
 					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+					}
 				}
 				else if(curSong == 'S6X BOOM' || curSong == 'Lamar Tut Voobshe Ne Nujen')
 				{
@@ -3298,6 +3303,11 @@ class PlayState extends MusicBeatState
 							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 						}
 					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+					}
 				}
 				else if(curSong == 'With Cone OLD' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD')
 				{
@@ -3314,6 +3324,11 @@ class PlayState extends MusicBeatState
 							MusicBeatState.switchState(new FreeplayState());
 							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 						}
+					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 					}
 				}
 				else
@@ -3351,6 +3366,11 @@ class PlayState extends MusicBeatState
 								FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 							}
 						}
+					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 					}
 				}
 

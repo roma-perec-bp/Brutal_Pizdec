@@ -95,7 +95,9 @@ class EndState extends MusicBeatState
 		{
 			if (controls.ACCEPT)
 			{
-				ClientPrefs.data.ends[end] == 1;
+				ClientPrefs.data.ends[end] = 1;
+				ClientPrefs.saveSettings();
+
 				if(gift)
 					giveTrophy();
 				else
