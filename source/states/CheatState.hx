@@ -28,7 +28,7 @@ class CheatState extends MusicBeatState
 		text.screenCenter(Y);
         add(text);
 
-		text.text = 'Warning, scroll change was detected\n\nディックディックお尻ディック弄す吸盤';
+		text.text = 'Warning, scroll change was detected\n\nディックディックお尻ディック弄す吸盤'; //максплей гейс такой: БРОУ ВАТАФАК?
 		new FlxTimer().start(4, function(tmr:FlxTimer)
 		{
 			text.text = 'It is illegal to use middle and down scroll types in this mod\n\n何もしなかったのか臭いホモか?';
@@ -41,7 +41,7 @@ class CheatState extends MusicBeatState
 					new FlxTimer().start(4, function(tmr:FlxTimer)
 					{
 						text.text = 'Иди нахуй';
-						new FlxTimer().start(0.4, function(tmr:FlxTimer)
+						new FlxTimer().start(0.4, function(tmr:FlxTimer) //хихихиха
 						{
 							Sys.exit(1);
 						});
