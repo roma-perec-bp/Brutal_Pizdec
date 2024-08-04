@@ -38,8 +38,8 @@ class EndState extends MusicBeatState
 		bg.alpha = 0;
 		add(bg);
 
-		var te:FlxText = new FlxText(0, FlxG.height-35, 1200, 'Press ACCEPT to continue', 32);
-        te.setFormat(Paths.font("HouseofTerror.ttf"), 32, 0xFF777777, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		var te:FlxText = new FlxText(0, FlxG.height-135, 1200, 'Press ACCEPT to continue', 32);
+        te.setFormat(Paths.font("HouseofTerror.ttf"), 32, 0xFFd4a967, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         te.screenCenter(X);
         add(te);
 
