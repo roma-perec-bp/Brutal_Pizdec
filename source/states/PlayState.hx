@@ -250,6 +250,7 @@ class PlayState extends MusicBeatState
 	public var inCutscene:Bool = false;
 	public var skipCountdown:Bool = false;
 	var songLength:Float = 0;
+	var songLengthDiscord:Float = 0; //Fake timer ломает дискодр рпс
 
 	public var boyfriendCameraOffset:Array<Float> = null;
 	public var opponentCameraOffset:Array<Float> = null;
@@ -1071,8 +1072,8 @@ class PlayState extends MusicBeatState
 			videoCutscene.videoSprite.cameras = [cameraFromString('video')];
 			if(shouldBlend == true)
 			{
-				videoCutscene.blend = OVERLAY;
-				videoCutscene.alpha = 0.4;
+				videoCutscene.blend = HARDLIGHT;
+				videoCutscene.alpha = 0.1;
 			}
 
 			if (playOnLoad)
@@ -1305,18 +1306,69 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			if(image != 'go')
+			if(image != 'go' && image != 'wave' && image != 'finalwave')
 			{
 				FlxTween.tween(spr.scale, {x: 1, y: 1}, Conductor.crochet / 1000, {
 					ease: FlxEase.linear
 				});
 			}
-
-			new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
+			
+			if(image == 'wave')
 			{
-				remove(spr);
-				spr.destroy();
-			});
+				spr.scale.set(1.3, 1.3);
+				spr.alpha = 0;
+				FlxTween.tween(spr, {alpha: 1}, 0.5, {
+					ease: FlxEase.sineIn
+				});
+				FlxTween.tween(spr.scale, {x: 1, y: 1}, 0.5, {
+					ease: FlxEase.sineIn,
+					onComplete: function(twn:FlxTween)
+					{
+						new FlxTimer().start(1, function(tmr:FlxTimer)
+						{
+							FlxTween.tween(spr, {alpha: 0}, 1, {
+								onComplete: function(twn:FlxTween)
+								{
+									remove(spr);
+									spr.destroy();
+								}
+							});
+						});
+					}
+				});
+			}
+
+			if(image == 'finalwave')
+			{
+				spr.scale.set(1.3, 1.3);
+				spr.alpha = 0;
+				FlxTween.tween(spr, {alpha: 1}, 0.3);
+				FlxTween.tween(spr.scale, {x: 1, y: 1}, 0.3, {
+					ease: FlxEase.quadIn,
+					onComplete: function(twn:FlxTween)
+					{
+						new FlxTimer().start(1, function(tmr:FlxTimer)
+						{
+							FlxTween.tween(spr, {alpha: 0}, 1, {
+								onComplete: function(twn:FlxTween)
+								{
+									remove(spr);
+									spr.destroy();
+								}
+							});
+						});
+					}
+				});
+			}
+
+			if(image != 'wave' && image != 'finalwave')
+			{
+				new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
+				{
+					remove(spr);
+					spr.destroy();
+				});
+			}
 
 			return spr;
 		}
@@ -1502,12 +1554,13 @@ class PlayState extends MusicBeatState
 
 		// Song duration in a float, useful for the time left feature
 		songLength = FlxG.sound.music.length;
+		songLengthDiscord = FlxG.sound.music.length;
 		FlxTween.tween(timeBar, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
 		FlxTween.tween(timeTxt, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
 
 		#if desktop
 		// Updating Discord Rich Presence (with Time Left)
-		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLength);
+		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLengthDiscord);
 		#end
 		setOnScripts('songLength', songLength);
 		callOnScripts('onSongStart');
@@ -1889,7 +1942,7 @@ class PlayState extends MusicBeatState
 	{
 		#if desktop
 		if (cond)
-			DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLength - Conductor.songPosition - ClientPrefs.data.noteOffset);
+			DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLengthDiscord - Conductor.songPosition - ClientPrefs.data.noteOffset);
 		else
 			DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		#end
@@ -2468,7 +2521,7 @@ class PlayState extends MusicBeatState
 				final introAlts:Array<String> = switch(stageUI)
 				{
 					case "pixel":  ['${stageUI}UI/ready-pixel', '${stageUI}UI/set-pixel', '${stageUI}UI/date-pixel'];
-					case "normal": ["ready", "set" ,"go"];
+					case "normal": ["ready", "set" ,"go","wave","finalwave"];
 					default:       ['${stageUI}UI/ready', '${stageUI}UI/set', '${stageUI}UI/go'];
 				};
 				final antialias:Bool = (ClientPrefs.data.antialiasing && !isPixelStage);
@@ -2483,6 +2536,10 @@ class PlayState extends MusicBeatState
 					case 'go':
 						countdownGo = createCountdownSprite(introAlts[2], antialias);
 						if(value2 == 'true') FlxG.sound.play(Paths.sound('rap' + introSoundsSuffix), 0.6);
+					case 'wave':
+						countdownGo = createCountdownSprite(introAlts[3], antialias);
+					case 'finalwave':
+						countdownGo = createCountdownSprite(introAlts[4], antialias);
 				}
 
 			case 'Set GF Speed':
@@ -2955,17 +3012,17 @@ class PlayState extends MusicBeatState
 				if(split[1] != null) yMove = Std.parseInt(split[1].trim());
 
 				cameraLocked = true;
-				camFollow.setPosition(xMove, yMove); //900, 850
+				camFollow.setPosition(xMove, yMove);
 				FlxG.camera.focusOn(camFollow.getPosition());
 
-				if(flValue2 == null || flValue2 <= 0)
+				if(flValue2 != null)
 				{
 					defaultCamZoom = flValue2;
 					FlxG.camera.zoom = flValue2;
 				}
 
 			case 'cam unlock':
-				isCameraOnForcedPos = true;
+				isCameraOnForcedPos = false;
 				cameraLocked = false;
 
 			case 'Play Video':
@@ -3058,6 +3115,15 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		if (!FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
+			FlxG.save.data.playedSongs.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
+
+		if(songMisses == 0 && deathCounter == 0)
+		{
+			if (!FlxG.save.data.playedSongsFC.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
+				FlxG.save.data.playedSongsFC.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
+		}
+
 		timeBar.visible = false;
 		timeTxt.visible = false;
 		canPause = false;
@@ -3085,7 +3151,7 @@ class PlayState extends MusicBeatState
 				}
 			} else {
 				var noMissSong:String = songName.toLowerCase() + "_freeplay_nomiss";
-				var achieve:String = checkForAchievement([noMissSong, 'cum']);
+				var achieve:String = checkForAchievement([noMissSong, 'cum', 'oldweek0']);
 				if(achieve != null) {
 					trace(achieve);
 					startAchievement(achieve);
@@ -3107,9 +3173,6 @@ class PlayState extends MusicBeatState
 			Highscore.saveMedal(SONG.song, medalStatus, storyDifficulty);
 			#end
 			playbackRate = 1;
-
-			if (!FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
-				FlxG.save.data.playedSongs.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
 
 			if (chartingMode)
 			{
@@ -3293,7 +3356,10 @@ class PlayState extends MusicBeatState
 			ghost.antialiasing = ClientPrefs.data.antialiasing ? !player.noAntialiasing : false;
 			ghost.visible = true;
 
-			ghost.color = FlxColor.fromRGB(player.healthColorArray[0] + 50, player.healthColorArray[1] + 50, player.healthColorArray[2] + 50);
+			if(curSong == 'Overfire' && mode == 'Note Trail Ascend Mode Anim')
+				ghost.color = 0xFFff8c05;
+			else
+				ghost.color = FlxColor.fromRGB(player.healthColorArray[0] + 50, player.healthColorArray[1] + 50, player.healthColorArray[2] + 50);
 
 			ghost.velocity.x = 0;
 			ghost.velocity.y = 0;
@@ -3580,7 +3646,10 @@ class PlayState extends MusicBeatState
 			var spr:StrumNote = playerStrums.members[key];
 			if(strumsBlocked[key] != true && spr != null && spr.animation.curAnim.name != 'confirm')
 			{
-				spr.playAnim('pressed');
+				var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[key];
+				if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[key];
+
+				spr.playAnim('pressed', false, arr);
 				spr.resetAnim = 0;
 			}
 			callOnScripts('onKeyPress', [key]);
@@ -3832,7 +3901,7 @@ class PlayState extends MusicBeatState
 		if (SONG.needsVoices)
 			vocals.volume = 1;
 
-		strumPlayAnim(true, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
+		strumPlayAnim(true, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate, note);
 		note.hitByOpponent = true;
 
 		stagesFunc(function(stage:BaseStage) stage.opponentNoteHit(note));
@@ -3999,9 +4068,9 @@ class PlayState extends MusicBeatState
 			if(!cpuControlled)
 			{
 				var spr = playerStrums.members[note.noteData];
-				if(spr != null) spr.playAnim('confirm', true);
+				if(spr != null) spr.playAnim('confirm', true, [note.rgbShader.r, note.rgbShader.g, note.rgbShader.b]);
 			}
-			else strumPlayAnim(false, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
+			else strumPlayAnim(false, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate, note);
 			vocals.volume = 1;
 
 			var isSus:Bool = note.isSustainNote; //GET OUT OF MY HEAD, GET OUT OF MY HEAD, GET OUT OF MY HEAD
@@ -4407,7 +4476,7 @@ class PlayState extends MusicBeatState
 		#end
 	}
 
-	function strumPlayAnim(isDad:Bool, id:Int, time:Float) {
+	function strumPlayAnim(isDad:Bool, id:Int, time:Float, note:Note) {
 		var spr:StrumNote = null;
 		if(isDad) {
 			spr = opponentStrums.members[id];
@@ -4416,7 +4485,7 @@ class PlayState extends MusicBeatState
 		}
 
 		if(spr != null) {
-			spr.playAnim('confirm', true);
+			spr.playAnim('confirm', true, [note.rgbShader.r, note.rgbShader.g, note.rgbShader.b]);
 			spr.resetAnim = time;
 		}
 	}
@@ -4563,6 +4632,12 @@ class PlayState extends MusicBeatState
 								ClientPrefs.data.arrowRGB[1][0] == -1 && ClientPrefs.data.arrowRGB[1][1] == -1 && ClientPrefs.data.arrowRGB[1][2] == -1 &&
 								ClientPrefs.data.arrowRGB[2][0] == -1 && ClientPrefs.data.arrowRGB[2][1] == -1 && ClientPrefs.data.arrowRGB[2][2] == -1 &&
 								ClientPrefs.data.arrowRGB[3][0] == -1 && ClientPrefs.data.arrowRGB[3][1] == -1 && ClientPrefs.data.arrowRGB[3][2] == -1);
+						case 'oldweek0':
+							unlock = FlxG.save.data.playedSongs = ['with-cone-old', 'boom-old', 'overfire-old', 'klork-old'];
+						case 'allweeks':
+							unlock = FlxG.save.data.playedSongs = ['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old'];
+						case 'allweeks1':
+							unlock = FlxG.save.data.playedSongsFC = ['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old'];
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{

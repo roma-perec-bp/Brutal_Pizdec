@@ -197,6 +197,16 @@
 				]
 			],
 			[
+				6000,
+				[
+					[
+						"Show Song",
+						"",
+						""
+					]
+				]
+			],
+			[
 				10666.6666666667,
 				[
 					[
@@ -262,16 +272,6 @@
 					[
 						"Set DAD Speed",
 						"1",
-						""
-					]
-				]
-			],
-			[
-				16000,
-				[
-					[
-						"Show Song",
-						"",
 						""
 					]
 				]
@@ -743,6 +743,11 @@
 						"Camera Follow Pos",
 						"500",
 						"800"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
 					]
 				]
 			],
@@ -838,6 +843,11 @@
 						"Set Property",
 						"defaultCamZoom",
 						"0.8"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
 					]
 				]
 			],
@@ -898,6 +908,16 @@
 						"Set Property",
 						"defaultCamZoom",
 						"1"
+					]
+				]
+			],
+			[
+				85333.3333333333,
+				[
+					[
+						"Flash Camera",
+						"0.5",
+						""
 					]
 				]
 			],
@@ -1013,6 +1033,21 @@
 						"lyrics",
 						"EY!$ЭЙ!",
 						"ff0000"
+					],
+					[
+						"Cam lock",
+						"500, 700",
+						""
+					]
+				]
+			],
+			[
+				98666.6666666666,
+				[
+					[
+						"Cam lock",
+						"1750, 700",
+						""
 					]
 				]
 			],
@@ -1023,6 +1058,16 @@
 						"lyrics",
 						"FUCK$БЛЯТЬ",
 						"ff0000"
+					]
+				]
+			],
+			[
+				99999.9999999999,
+				[
+					[
+						"cam unlock",
+						"",
+						""
 					]
 				]
 			],
@@ -1311,8 +1356,8 @@
 				[
 					[
 						"Set Cam Zoom",
-						"0.9",
-						"0.1"
+						"1.2",
+						"0.6"
 					]
 				]
 			],
@@ -1408,6 +1453,106 @@
 						"Cam Boom Speed",
 						"1",
 						"1"
+					],
+					[
+						"Character Color Transform",
+						"0,0,0,1,1,1",
+						"dad, 0.001"
+					],
+					[
+						"Character Color Transform",
+						"0,0,0,1,1,1",
+						"bf, 0.001"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					],
+					[
+						"Play OVERFIRE",
+						"die",
+						""
+					],
+					[
+						"Dadbattle Spotlight",
+						"",
+						""
+					]
+				]
+			],
+			[
+				113333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				114000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				114666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					]
+				]
+			],
+			[
+				116000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				117000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				117333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					],
+					[
+						"Camera Follow Pos",
+						"500",
+						"800"
+					]
+				]
+			],
+			[
+				117333.333333333,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
 					]
 				]
 			],
@@ -1452,12 +1597,117 @@
 				]
 			],
 			[
+				119333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				120000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				121333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				122333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				122664.583333333,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				122666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				124000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				125333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				126666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
 				127333.333333333,
 				[
 					[
 						"lyrics",
 						"BITCH!$СУ",
 						"ff0000"
+					],
+					[
+						"Camera Follow Pos",
+						"500",
+						"800"
+					],
+					[
+						"Set Cam Zoom",
+						"1.2",
+						"0.5"
 					]
 				]
 			],
@@ -1472,12 +1722,27 @@
 				]
 			],
 			[
+				127997.916666666,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
 				128000,
 				[
 					[
-						"Set Cam Zoom",
-						"0.9",
-						"0.1"
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					],
+					[
+						"Camera Follow Pos",
+						"1200",
+						"600"
 					]
 				]
 			],
@@ -1486,7 +1751,7 @@
 				[
 					[
 						"Set Cam Zoom",
-						"0.8",
+						"0.5",
 						"0.1"
 					]
 				]
@@ -1496,7 +1761,7 @@
 				[
 					[
 						"Set Cam Zoom",
-						"0.7",
+						"0.4",
 						"0.1"
 					]
 				]
@@ -1506,8 +1771,18 @@
 				[
 					[
 						"Set Cam Zoom",
-						"0.6",
+						"0.5",
 						"0.1"
+					]
+				]
+			],
+			[
+				132666.666666666,
+				[
+					[
+						"Set Cam Zoom",
+						"1.2",
+						"0.4"
 					]
 				]
 			],
@@ -1518,6 +1793,36 @@
 						"Cam Boom Speed",
 						"0",
 						"0"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Stop OVERFIRE",
+						"",
+						""
+					],
+					[
+						"Set Cam Zoom",
+						"0.7",
+						"1"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				134000,
+				[
+					[
+						"Camera Follow Pos Tween",
+						"1350, 0, 3",
+						"smootherstepinout"
 					]
 				]
 			],
@@ -1748,6 +2053,21 @@
 						"lyrics",
 						"This CRAPPY mix of overhead is finished? YEAH?$Этому ХУЕВОМУ миксу на оверхед конец? ДА?",
 						"ff0000"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				143666.666666667,
+				[
+					[
+						"CountDown",
+						"wave",
+						""
 					]
 				]
 			],
@@ -1882,6 +2202,16 @@
 				]
 			],
 			[
+				149166.666666667,
+				[
+					[
+						"CountDown",
+						"finalwave",
+						""
+					]
+				]
+			],
+			[
 				150000,
 				[
 					[
@@ -1908,6 +2238,11 @@
 						"lyrics",
 						"OF COURSE NOT$НИХУЯ ПОДОБ",
 						"ff0000"
+					],
+					[
+						"trans overfire",
+						"",
+						""
 					]
 				]
 			],
@@ -1942,12 +2277,37 @@
 				]
 			],
 			[
+				151666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				152000,
 				[
 					[
 						"lyrics",
 						"You've$Ты",
 						"a5c09b"
+					],
+					[
+						"Change Character",
+						"dad",
+						"striper"
+					],
+					[
+						"Change Character",
+						"gf",
+						"perec-wheel-flip"
+					],
+					[
+						"Change Character",
+						"bf",
+						"hwaw-flip"
 					]
 				]
 			],
@@ -2002,12 +2362,77 @@
 				]
 			],
 			[
+				154000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				154666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				159333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				160000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				165000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				165333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
 				170000,
 				[
 					[
 						"lyrics",
 						"Cock$Ху",
 						"ff007e"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
 					]
 				]
 			],
@@ -2032,12 +2457,117 @@
 				]
 			],
 			[
+				170666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				174666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				175333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				176000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				185333.333333334,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				186000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				186666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				196000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				196666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				197333.333333334,
 				[
 					[
 						"lyrics",
 						"You$Ты",
 						"A5C09B"
+					],
+					[
+						"Play Video",
+						"overfire",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"2",
+						"2"
 					]
 				]
 			],
@@ -2622,6 +3152,16 @@
 				]
 			],
 			[
+				218666.666666667,
+				[
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					]
+				]
+			],
+			[
 				219333.333333334,
 				[
 					[
@@ -2852,6 +3392,21 @@
 				]
 			],
 			[
+				229333.333333334,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
 				238666.666666667,
 				[
 					[
@@ -2878,6 +3433,11 @@
 						"lyrics",
 						"SHUT$ЗА",
 						"ff0000"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -2888,6 +3448,11 @@
 						"lyrics",
 						"SHUT THE FUCK$ЗАЕ",
 						"ff0000"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -2898,6 +3463,51 @@
 						"lyrics",
 						"SHUT THE FUCK UP!!!$ЗАЕБАЛ!!!",
 						"ff0000"
+					],
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.6"
+					],
+					[
+						"Flash Camera",
+						"1",
+						"0xffFF0000"
+					]
+				]
+			],
+			[
+				241666.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				242000.000000001,
+				[
+					[
+						"Change Character",
+						"bf",
+						"hwaw-flip-cuts"
+					],
+					[
+						"Play Animation",
+						"lolz",
+						"bf"
+					]
+				]
+			],
+			[
+				242166.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -2928,6 +3538,16 @@
 						"lyrics",
 						"This is the$Это долго",
 						"ff007e"
+					]
+				]
+			],
+			[
+				242666.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -3002,6 +3622,16 @@
 				]
 			],
 			[
+				244333.333333334,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				244416.666666667,
 				[
 					[
@@ -3012,12 +3642,32 @@
 				]
 			],
 			[
+				244833.333333334,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				245000.000000001,
 				[
 					[
 						"lyrics",
 						"Second$Продол",
 						"ff007e"
+					]
+				]
+			],
+			[
+				245331.250000001,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -3092,6 +3742,16 @@
 				]
 			],
 			[
+				247000.000000001,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				247250.000000001,
 				[
 					[
@@ -3112,12 +3772,222 @@
 				]
 			],
 			[
+				247500.000000001,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				247666.666666667,
 				[
 					[
 						"lyrics",
 						"YOURSELF!!!$НАХУЙ!!!",
 						"ff0000"
+					]
+				]
+			],
+			[
+				247993.750000001,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				248000.000000001,
+				[
+					[
+						"Camera Follow Pos",
+						"1350",
+						"0"
+					]
+				]
+			],
+			[
+				249000.000000001,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				249166.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				249666.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				250166.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				250333.333333334,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				250416.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				250500.000000001,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				250583.333333334,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				250666.666666667,
+				[
+					[
+						"Change Character",
+						"dad",
+						"perec-wheel"
+					],
+					[
+						"Change Character",
+						"bf",
+						"hwaw"
+					],
+					[
+						"night cum",
+						"",
+						""
+					]
+				]
+			],
+			[
+				260000.000000001,
+				[
+					[
+						"Camera Follow Pos Tween",
+						"1750, 700, 5",
+						"linear"
+					]
+				]
+			],
+			[
+				272000.000000001,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"1"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"vibe time",
+						"",
+						""
+					]
+				]
+			],
+			[
+				282666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				293333.333333334,
+				[
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					],
+					[
+						"Set Cam Zoom",
+						"0.7",
+						"1"
+					]
+				]
+			],
+			[
+				296000,
+				[
+					[
+						"oh well",
+						"",
+						""
+					],
+					[
+						"vibe time",
+						"",
+						""
 					]
 				]
 			],
@@ -3132,12 +4002,227 @@
 				]
 			],
 			[
+				298000,
+				[
+					[
+						"Toogle CamZooming",
+						"",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				298166.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				298333.333333334,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				298500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				298666.666666667,
+				[
+					[
+						"Flash Camera",
+						"0.5",
+						""
+					],
+					[
+						"Cam lock",
+						"500, 800",
+						"1"
+					],
+					[
+						"Cam Boom Speed",
+						"4",
+						"4"
+					]
+				]
+			],
+			[
+				300000,
+				[
+					[
+						"Cam lock",
+						"1750, 700",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				301333.333333334,
+				[
+					[
+						"Cam lock",
+						"500, 800",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				302666.666666667,
+				[
+					[
+						"Cam lock",
+						"1750, 700",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				304000,
+				[
+					[
+						"Cam lock",
+						"500, 800",
+						"1"
+					],
+					[
+						"Cam Boom Speed",
+						"2",
+						"4"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				305333.333333333,
+				[
+					[
+						"Cam lock",
+						"1750, 700",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				306666.666666667,
+				[
+					[
+						"Cam lock",
+						"500, 800",
+						"1"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"4"
+					]
+				]
+			],
+			[
+				307333.333333333,
+				[
+					[
+						"Cam lock",
+						"1750, 700",
+						"1"
+					]
+				]
+			],
+			[
 				308000,
 				[
 					[
 						"lyrics",
 						"HA$ХА",
 						"ff0000"
+					]
+				]
+			],
+			[
+				308000,
+				[
+					[
+						"Cam lock",
+						"500, 800",
+						"1"
+					],
+					[
+						"Change Character",
+						"dad",
+						"perec-wheel-cuts"
+					],
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					],
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				308166.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				308322.916666667,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
 					]
 				]
 			],
@@ -3152,12 +4237,72 @@
 				]
 			],
 			[
+				308500,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				308656.25,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
 				308666.666666667,
 				[
 					[
 						"lyrics",
 						"HA HA HA$ХА ХА ХА",
 						"ff0000"
+					]
+				]
+			],
+			[
+				308750,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				308833.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				308916.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				308981.25,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
 					]
 				]
 			],
@@ -3172,12 +4317,112 @@
 				]
 			],
 			[
+				309083.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				309166.666666667,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				309250,
+				[
+					[
+						"Add Camera Zoom",
+						"0.069",
+						"0.06"
+					]
+				]
+			],
+			[
+				309333.333333333,
+				[
+					[
+						"Change Character",
+						"dad",
+						"perec-wheel"
+					],
+					[
+						"cam unlock",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"fire boom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				314666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				316000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				317333.333333333,
 				[
 					[
 						"lyrics",
 						"WHA$ЭЭЭ",
 						"ff007e"
+					]
+				]
+			],
+			[
+				317333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Change Character",
+						"bf",
+						"hwaw-cuts"
+					],
+					[
+						"Play Animation",
+						"grave",
+						"bf"
 					]
 				]
 			],
@@ -3268,6 +4513,16 @@
 						"lyrics",
 						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
+					],
+					[
+						"Camera Follow Pos",
+						"500",
+						"800"
+					],
+					[
+						"Screen Shake",
+						"1.2, 0.005",
+						"1.2, 0.005"
 					]
 				]
 			],
@@ -3418,6 +4673,981 @@
 						"lyrics",
 						"RAAAAAAAAAAAAAH!!!$ЭЭАААААААААХХХХХХ!!!",
 						"ff0000"
+					]
+				]
+			],
+			[
+				320000,
+				[
+					[
+						"Change Character",
+						"bf",
+						"hwaw"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Camera Follow Pos",
+						"1200",
+						"600"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"4"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					],
+					[
+						"Play OVERFIRE",
+						"die red",
+						""
+					]
+				]
+			],
+			[
+				322666.666666667,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				325333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				328000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				329333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				330666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.4"
+					],
+					[
+						"Camera Follow Pos",
+						"1200",
+						"600"
+					]
+				]
+			],
+			[
+				333333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				336000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				337333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				338666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
+					]
+				]
+			],
+			[
+				340000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				341000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				341333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					],
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Stop OVERFIRE",
+						"",
+						""
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				341666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				342000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				342333.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				342666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				343000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				343333.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				343666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				344000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				344333.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				344666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				345000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				345333.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				345666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				346666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				346833.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				347000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				347166.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				347333.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				347500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				347666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				347833.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				348000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				348166.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				348333.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				348500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				348666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				348833.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349166.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349416.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349583.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349666.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349750,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349833.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				349916.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350083.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350166.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350250,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350333.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350416.666666666,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				350583.333333333,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				351999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				353333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				354666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				355999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				357333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				358666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				359333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				359666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				359999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				361333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.0"
+					]
+				]
+			],
+			[
+				362666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				365333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				366666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				367333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				367999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"2"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				368333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				368666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				368999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				369333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				369666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.3"
+					]
+				]
+			],
+			[
+				369999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				370333.333333333,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				370666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.3"
+					]
+				]
+			],
+			[
+				371666.666666666,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				371999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				372999.999999999,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.3"
+					]
+				]
+			],
+			[
+				373333.333333332,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					],
+					[
+						"Camera Follow Pos",
+						"500",
+						"800"
+					],
+					[
+						"Change Character",
+						"dad",
+						"perec-wheel-death"
+					],
+					[
+						"Play Animation",
+						"death",
+						"dad"
+					],
+					[
+						"Change Scroll Speed",
+						"0.7",
+						"1"
+					],
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"end",
+						"",
+						""
 					]
 				]
 			]

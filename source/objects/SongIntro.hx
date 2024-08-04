@@ -77,7 +77,7 @@ class SongIntro extends FlxSpriteGroup
         var tooLong2:Float = (composerText.length > 22) ? 0.65 : 1;
         text2.scale.x = tooLong2;
 
-        if(_song == 'overfire') text2.scale.x = 0.35;
+        if(_song == 'overfire') text2.scale.x = 0.45;
 
         var charterText:String = text3.text;
         var tooLong3:Float = (charterText.length > 22) ? 0.65 : 1;

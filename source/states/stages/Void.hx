@@ -71,14 +71,17 @@ class Void extends BaseStage
 	{
 		PlayState.instance.dad.alpha = 0.001;
 
-		lavaEmitter = new FlxTypedEmitter<LavaParticle>(0, 3400);
-		lavaEmitter.particleClass = LavaParticle;
-		lavaEmitter.launchMode = FlxEmitterMode.SQUARE;
-		lavaEmitter.width = FlxG.width;
-		lavaEmitter.velocity.set(0, -150, 0, -300, 0, -10, 0, -50);
-		lavaEmitter.alpha.set(1, 0);
-		add(lavaEmitter);
-		lavaEmitter.start(false);
+		if(!ClientPrefs.data.lowQuality)
+		{
+			lavaEmitter = new FlxTypedEmitter<LavaParticle>(0, 3400);
+			lavaEmitter.particleClass = LavaParticle;
+			lavaEmitter.launchMode = FlxEmitterMode.SQUARE;
+			lavaEmitter.width = FlxG.width;
+			lavaEmitter.velocity.set(0, -150, 0, -300, 0, -10, 0, -50);
+			lavaEmitter.alpha.set(1, 0);
+			add(lavaEmitter);
+			lavaEmitter.start(false);
+		}
 
 		grad = new FlxSprite(-1000, 2700).loadGraphic(Paths.image('gradient'));
 		grad.scrollFactor.set(0, 1);
@@ -207,11 +210,11 @@ class Void extends BaseStage
 				noteStar = !noteStar;
 			case 'hi gradient':
 				FlxTween.tween(grad, {y: 700}, 6, {ease: FlxEase.sineOut});
-				FlxTween.tween(lavaEmitter, {y: 1400}, 6, {ease: FlxEase.sineOut});
+				if(!ClientPrefs.data.lowQuality) FlxTween.tween(lavaEmitter, {y: 1400}, 6, {ease: FlxEase.sineOut});
 
 			case 'bye gradient':
 				FlxTween.tween(grad, {y: 2700}, 1, {ease: FlxEase.sineIn});
-				FlxTween.tween(lavaEmitter, {y: 3400}, 1, {ease: FlxEase.sineIn});
+				if(!ClientPrefs.data.lowQuality) FlxTween.tween(lavaEmitter, {y: 3400}, 1, {ease: FlxEase.sineIn});
 		}
 	}
 

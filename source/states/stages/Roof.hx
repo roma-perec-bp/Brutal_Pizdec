@@ -1,15 +1,19 @@
 package states.stages;
 
-import states.stages.objects.*;
+import states.stages.objectMyBalls.*;
+import flixel.effects.particles.FlxEmitter.FlxEmitterMode;
+import flixel.effects.particles.FlxEmitter.FlxTypedEmitter;
 import substates.GameOverSubstate;
 import objects.Character;
+import cutscenes.CutsceneHandler;
+import backend.Achievements;
 
 class Roof extends BaseStage
 {
 	public var originalY:Float;
 	public var originalHeight:Int = 2000;
 	public var intendedAlpha:Float = 1;
-
+	public var lavaEmitter:FlxTypedEmitter<LavaParticle>;
 	public var grad:FlxSprite;
 
 	public var flames:FlxSprite;
@@ -24,6 +28,9 @@ class Roof extends BaseStage
 
 	var day:BGSprite;
 
+	var bg:BGSprite;
+	var roof:BGSprite;
+
 	var lightning:BGSprite;
 	var nword:FlxSprite;
 	var lightningTimer:Float = 3.0;
@@ -34,6 +41,12 @@ class Roof extends BaseStage
 
 	var phillyLightsColors:Array<FlxColor>;
 	var curLight:Int = -1;
+
+	//the end
+	public var trophy:FlxSprite;
+	var centerVarX:Float = 0;
+	var centerVarY:Float = 0;
+	var canGrab:Bool = false;
 
 	override function create()
 	{
@@ -47,7 +60,7 @@ class Roof extends BaseStage
 			spr.updateHitbox();
 		}
 
-		var bg:BGSprite = new BGSprite('sky', 0, 0, 0.75, 0.75);
+		bg = new BGSprite('sky', 0, 0, 0.75, 0.75);
 		bg.setGraphicSize(Std.int(bg.width * 3));
 		add(bg);
 
@@ -64,11 +77,12 @@ class Roof extends BaseStage
 
 		if(!ClientPrefs.data.lowQuality)
 		{		
-			additionalLighten = new FlxSprite(-1000, -1000).makeGraphic(FlxG.width * 8, FlxG.height * 8, FlxColor.WHITE);
+			additionalLighten = new FlxSprite(FlxG.width * -0.5, FlxG.height * -0.5).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.WHITE);
 			additionalLighten.scrollFactor.set();
 			additionalLighten.updateHitbox();
 			additionalLighten.blend = ADD;
 			additionalLighten.visible = false;
+			additionalLighten.scale.set(5, 5);
 			add(additionalLighten);
 		}
 
@@ -91,7 +105,7 @@ class Roof extends BaseStage
 		grad.visible = false;
 		add(grad);
 
-		var roof:BGSprite = new BGSprite('home', 0, 0);
+		roof = new BGSprite('home', 0, 0);
 		roof.setGraphicSize(Std.int(roof.width * 3));
 		add(roof);
 
@@ -111,24 +125,43 @@ class Roof extends BaseStage
 					Paths.sound('Lightning$i');
 				}
 			}
-			day = new BGSprite('day', 0, 0);
-			day.screenCenter();
+			day = new BGSprite('day', -150, 130);
 			day.visible = false;
 			day.setGraphicSize(Std.int(day.width * 1.5));
+			day.updateHitbox();
 			add(day);
 		}
 
 		originalY = grad.y;
 		phillyLightsColors = [0xFF31A2FD, 0xFF31FD8C, 0xFFFB33F5, 0xFFFD4531, 0xFFFBA633];
+
+		if (isStoryMode && !seenCutscene)
+		{
+			if(PlayState.SONG.song == 'Overfire')
+			{
+				setStartCallback(overfireIntro);
+
+				if(winner() == false)
+				{
+					setEndCallback(function()
+					{
+						game.endingSong = true;
+						canPause = false;
+						gimme();
+					});
+				}
+			}
+		}
 	}
 
 	override function createPost()
 	{
 		if(PlayState.SONG.song == 'Overfire')
 		{
-			nword = new FlxSprite(-1000, -1000).makeGraphic(FlxG.width * 8, FlxG.height * 8, FlxColor.BLACK);
+			nword = new FlxSprite(FlxG.width * -0.5, FlxG.height * -0.5).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 			nword.scrollFactor.set(0, 0);
 			nword.alpha = 0.0001;
+			nword.scale.set(5, 5);
 			add(nword);
 
 			if(!ClientPrefs.data.lowQuality) {
@@ -140,6 +173,15 @@ class Roof extends BaseStage
 				rain.scale.set(2.1, 2.1);
 				rain.visible = false;
 				add(rain);
+
+				lavaEmitter = new FlxTypedEmitter<LavaParticle>(FlxG.width * -0.5, 3400);
+				lavaEmitter.particleClass = LavaParticle;
+				lavaEmitter.launchMode = FlxEmitterMode.SQUARE;
+				lavaEmitter.width = Std.int(FlxG.width * 2);
+				lavaEmitter.velocity.set(0, -150, 0, -300, 0, -10, 0, -50);
+				lavaEmitter.alpha.set(1, 0);
+				add(lavaEmitter);
+				lavaEmitter.start(false);
 			}
 		}
 	}
@@ -173,6 +215,18 @@ class Roof extends BaseStage
 			{
 				applyLightning();
 				lightningTimer = FlxG.random.float(7, 15);
+			}
+		}
+
+		if(canGrab)
+		{
+			if((FlxG.mouse.overlaps(trophy)))
+			{
+				select();
+			}
+			else
+			{
+				trophy.color = 0xFFFFFFFF;
 			}
 		}
 
@@ -230,6 +284,15 @@ class Roof extends BaseStage
 				FlxTween.tween(smoke, {alpha: 1}, 10);
 				FlxTween.tween(flames, {alpha: 1}, 10);
 
+				if(PlayState.SONG.song == 'Overfire')
+				{
+					FlxTween.color(roof, 10, 0xFFFFFFFF, 0xffff6300);
+					FlxTween.color(bg, 10, 0xFFFFFFFF, 0xffff6300);
+					FlxTween.color(game.dadGroup, 10, 0xFFFFFFFF, 0xffff6300);
+					FlxTween.color(game.boyfriendGroup, 10, 0xFFFFFFFF, 0xffff6300);
+					if(!ClientPrefs.data.lowQuality) FlxTween.tween(lavaEmitter, {y: 1200}, 6, {ease: FlxEase.sineOut});
+				}
+
 			case 'rain':
 				nword.alpha = 0.6;
 				if(ClientPrefs.data.lowQuality) return;
@@ -238,25 +301,38 @@ class Roof extends BaseStage
 				splash.visible = true;
 				canRain = true;
 			case 'trans overfire':
-				nword.alpha = 0;
+				nword.visible = false;
 				day.visible = true;
 				if(ClientPrefs.data.lowQuality) return;
 					
 				rain.visible = false;
 				splash.visible = false;
 				canRain = false;
+			case 'night cum':
+				game.camHUD.flash(0xffFFFFFF, 3);
+				day.visible = false;
+				game.boyfriendGroup.color = 0xFF44145f;
+				roof.color = 0xFF44145f;
+				bg.color = 0xFF44145f;
+			case 'oh well':
+				game.boyfriendGroup.color = 0xFFFFFFFF;
+				roof.color = 0xFFFFFFFF;
+				bg.color = 0xFFFFFFFF;
 			case "Dadbattle Spotlight":
 				toogledLight = !toogledLight;
 
 				if(toogledLight == true)
 				{
 					dadbattleLight.visible = true;
-					dadbattleLight.setPosition(dad.getGraphicMidpoint().x - dadbattleLight.width / 2, dad.y + dad.height - dadbattleLight.height + 250);
+					dadbattleLight.setPosition(dad.x - 50, dad.y + dad.height - dadbattleLight.height + 250);
 				}
 				else
 				{
 					dadbattleLight.visible = false;
 				}
+			case "end":
+				smoke.alpha = 0;
+				if(!ClientPrefs.data.lowQuality) lavaEmitter.y = 5000;
 		}
 	}
 
@@ -284,8 +360,179 @@ class Roof extends BaseStage
 			grad.updateHitbox();
 			grad.y = originalY;
 			grad.alpha = intendedAlpha;
-			curLight = FlxG.random.int(0, phillyLightsColors.length - 1, [curLight]);
-			grad.color = phillyLightsColors[curLight];
+			if(PlayState.SONG.song == 'Overfire')
+			{
+				grad.color = 0xFF44145f;
+			}
+			else
+			{
+				curLight = FlxG.random.int(0, phillyLightsColors.length - 1, [curLight]);
+				grad.color = phillyLightsColors[curLight];
+			}
+		}
+	}
+
+	// Cutscenes
+	var cutsceneHandler:CutsceneHandler;
+	var grave:FlxSprite;
+	var hwaw:FlxSprite;
+	var blackFlashs:FlxSprite;
+	function prepareCutscene()
+	{
+		cutsceneHandler = new CutsceneHandler();
+		camHUD.visible = false;
+		dadGroup.alpha = 0.00001;
+
+		grave = new FlxSprite(dad.x + 200, dad.y + 210);
+		grave.frames = Paths.getSparrowAtlas('GRAVE');
+		grave.antialiasing = ClientPrefs.data.antialiasing;
+		addBehindDad(grave);
+
+		hwaw = new FlxSprite(boyfriend.x, boyfriend.y);
+		hwaw.antialiasing = ClientPrefs.data.antialiasing;
+
+		blackFlashs = new FlxSprite(0, 0).makeGraphic(1280, 720, FlxColor.BLACK);
+		blackFlashs.cameras = [camOther];
+		blackFlashs.alpha = 0.0001;
+		add(blackFlashs);
+
+		cutsceneHandler.push(grave);
+		cutsceneHandler.push(hwaw);
+		cutsceneHandler.push(blackFlashs);
+
+		cutsceneHandler.finishCallback = function()
+		{
+			var timeForStuff:Float = Conductor.crochet / 1000 * 4.5;
+			FlxG.sound.music.fadeOut(timeForStuff);
+			FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, timeForStuff, {ease: FlxEase.quadInOut});
+			startCountdown();
+
+			dadGroup.alpha = 1;
+			boyfriendGroup.alpha = 1;
+			camHUD.visible = true;
+			remove(blackFlashs);
+			blackFlashs.destroy();
+			boyfriend.animation.finishCallback = null;
+		};
+		camFollow.setPosition(boyfriend.x - 480, boyfriend.y - 70);
+	}
+
+	function overfireIntro()
+	{
+		prepareCutscene();
+		cutsceneHandler.endTime = 18;
+		precacheSound('ambienceSlendy');
+		precacheSound('onoIdet');
+		boyfriendGroup.alpha = 0.00001;
+
+		var amb:FlxSound = new FlxSound().loadEmbedded(Paths.sound('ambienceSlendy'));
+		FlxG.sound.list.add(amb);
+
+		grave.animation.addByPrefix('grave', 'grave', 24, true);
+		grave.animation.addByPrefix('kirill', 'ono idet', 24, false);
+		grave.animation.play('grave', true);
+		FlxG.camera.zoom = 0.4;
+
+		hwaw.frames = Paths.getSparrowAtlas('characters/HWAW_ASS');
+		hwaw.animation.addByPrefix('idle', 'idle', 24, true);
+		hwaw.animation.play('idle', true);
+		addBehindBF(hwaw);
+
+		// Играет амбиент из следни табис и камера приближается
+		cutsceneHandler.timer(0.1, function()
+		{
+			amb.play(true);
+			FlxTween.tween(FlxG.camera, {zoom: 0.6}, 5, {ease: FlxEase.quadInOut});
+		});
+
+		// Камера идет к могиле
+		cutsceneHandler.timer(6, function()
+		{
+			camFollow.x = 750;
+			camFollow.y = 900;
+			FlxTween.tween(FlxG.camera, {zoom: 0.8}, 1, {ease: FlxEase.quadInOut});
+		});
+
+		// Ох бля
+		cutsceneHandler.timer(9, function()
+		{
+			camFollow.y -= 100;
+			grave.animation.play('kirill', true);
+			grave.y -= 315;
+			FlxG.sound.play(Paths.sound('onoIdet'));
+			FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
+			FlxG.camera.shake(0.0025, 7);
+		});
+
+		cutsceneHandler.timer(12, function()
+		{
+			camFollow.x += 400;
+			camFollow.y -= 50;
+			FlxTween.tween(FlxG.camera, {zoom: 0.7}, 5, {ease: FlxEase.quadInOut});
+		});
+
+		cutsceneHandler.timer(14, function()
+		{
+			FlxTween.tween(blackFlashs, {alpha: 1}, 3);
+		});
+	}
+
+	function winner()
+	{
+		for(i in 0...Achievements.achievementsStuff.length)
+		{
+			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
+				return false;
+		}
+		return true;
+	}
+
+	function gimme()
+	{
+		FlxG.camera.zoom = 1;
+		game.defaultCamZoom = 1;
+
+		trophy = new FlxSprite(0, 0).loadGraphic(Paths.image('awards_ew'));
+		trophy.setGraphicSize(Std.int(trophy.width * 0.2));
+		add(trophy);
+
+		trophy.x = -1000;
+		trophy.y = FlxG.random.float(100, 300);
+
+		trophy.cameras = [camOther];
+		trophy.updateHitbox();
+
+		FlxTween.tween(trophy, {x: FlxG.random.float(200, 500)}, 2.1, {ease: FlxEase.cubeInOut});
+
+		FlxTween.tween(trophy, {y: trophy.y - 90}, 0.1, {
+			ease: FlxEase.cubeInOut,
+			onComplete: function(twn:FlxTween)
+			{
+				FlxTween.tween(trophy, {y: trophy.y + 200}, 2, {
+					ease: FlxEase.cubeInOut,
+					onComplete: function(twn:FlxTween)
+					{
+						canGrab = true;
+					}
+				});
+			}
+		});
+	}
+
+	function select()
+	{
+		trophy.color = 0xFF6c6c6c;
+		if(FlxG.mouse.justPressed)
+		{
+			canGrab = false;
+			trophy.color = 0xFFFFFFFF;
+			FlxTween.tween(trophy, {x: 542.8, y: 185.1}, 5, {ease: FlxEase.quadOut});
+			FlxTween.tween(trophy.scale, {x: 0.36, y: 0.36}, 5, {ease: FlxEase.quadOut});
+			game.camHUD.fade(0xFFFFFFFF, 5);
+			new FlxTimer().start(7, function(tmr:FlxTimer)
+			{
+				endSong();
+			});
 		}
 	}
 }

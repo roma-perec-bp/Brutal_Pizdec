@@ -26,52 +26,17 @@ class StrumNote extends FlxSprite
 	public function new(x:Float, y:Float, leData:Int, player:Int, ?notPlayState:Bool = true) {
 		rgbShader = new RGBShaderReference(this, Note.initializeGlobalRGBShader(leData));
 		rgbShader.enabled = false;
-		if(PlayState.SONG != null && PlayState.SONG.disableNoteRGB) useRGBShader = false;
-		
-		if (player == 0)
-		{
-			if(notPlayState == false && useRGBShader == true)
+		var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[leData];
+		if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[leData];
+	    if(leData <= arr.length)
+	    {
+			@:bypassAccessor
 			{
-				var arrOpp:Array<String> = PlayState.instance.dad.arrowColor[leData]; //crash
-				if(leData <= arrOpp.length)
-				{
-					@:bypassAccessor
-					{
-				     	rgbShader.r = Std.parseInt(arrOpp[0]);
-				    	rgbShader.g = Std.parseInt(arrOpp[1]);
-				    	rgbShader.b = Std.parseInt(arrOpp[2]);
-					}
-				}
+	    	    rgbShader.r = arr[0];
+		        rgbShader.g = arr[1];
+		        rgbShader.b = arr[2];
 			}
-			else
-			{
-				var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[leData];
-				if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[leData];
-				if(leData <= arr.length)
-				{
-					@:bypassAccessor
-					{
-						rgbShader.r = arr[0];
-						rgbShader.g = arr[1];
-						rgbShader.b = arr[2];
-					}
-				}
-			}
-		}
-		else if (player == 1)
-		{
-			var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[leData];
-			if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[leData];
-	    	if(leData <= arr.length)
-	    	{
-				@:bypassAccessor
-				{
-	    	    	rgbShader.r = arr[0];
-		        	rgbShader.g = arr[1];
-		        	rgbShader.b = arr[2];
-				}
-	    	}
-		}
+	    }
 
 		noteData = leData;
 		this.player = player;
@@ -186,13 +151,22 @@ class StrumNote extends FlxSprite
 		super.update(elapsed);
 	}
 
-	public function playAnim(anim:String, ?force:Bool = false) {
+	public function playAnim(anim:String, ?force:Bool = false, ?colorN:Array<FlxColor>) {
 		animation.play(anim, force);
 		if(animation.curAnim != null)
 		{
 			centerOffsets();
 			centerOrigin();
 		}
-		if(useRGBShader) rgbShader.enabled = (animation.curAnim != null && animation.curAnim.name != 'static');
+		if(useRGBShader)
+		{
+			rgbShader.enabled = (animation.curAnim != null && animation.curAnim.name != 'static');
+			if(colorN != null)
+			{
+				rgbShader.r = colorN[0];
+				rgbShader.g = colorN[1];
+				rgbShader.b = colorN[2];
+			}
+		}
 	}
 }

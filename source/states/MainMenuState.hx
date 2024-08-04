@@ -126,28 +126,25 @@ class MainMenuState extends MusicBeatState
 		}
 		add(bros);
 		
-		for(i in 0...Achievements.achievementsStuff.length)
+		if(winner() == true)
 		{
-			if(Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
+			var trophy:FlxSprite = new FlxSprite(330, 335);
+			if(monochrome() == false)
 			{
-				var trophy:FlxSprite = new FlxSprite(330, 335);
-				if(monochrome() == false)
-				{
-					trophy.frames = Paths.getSparrowAtlas('awards_ew');
-				}
-				else
-				{
-					trophy.frames = Paths.getSparrowAtlas('awards');
-				}
-				trophy.animation.addByPrefix('idle', 'trophy_normal', 24, true);
-				trophy.animation.play('idle');
-				trophy.scale.set(0.30, 0.30);
-
-				trophy.updateHitbox();
-				
-				trophy.antialiasing = ClientPrefs.data.antialiasing;
-				add(trophy);
+				trophy.frames = Paths.getSparrowAtlas('awards_ew');
 			}
+			else
+			{
+				trophy.frames = Paths.getSparrowAtlas('awards');
+			}
+			trophy.animation.addByPrefix('idle', 'trophy_normal', 24, true);
+			trophy.animation.play('idle');
+			trophy.scale.set(0.30, 0.30);
+
+			trophy.updateHitbox();
+			
+			trophy.antialiasing = ClientPrefs.data.antialiasing;
+			add(trophy);
 		}
 
 		var overlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBangerOverlay'));
@@ -211,6 +208,16 @@ class MainMenuState extends MusicBeatState
 		for(i in 0...Achievements.achievementsStuff.length)
 		{
 			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][2]))
+				return false;
+		}
+		return true;
+	}
+
+	function winner()
+	{
+		for(i in 0...Achievements.achievementsStuff.length)
+		{
+			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
 				return false;
 		}
 		return true;

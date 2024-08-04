@@ -57,6 +57,7 @@ class ChartingState extends MusicBeatState
 	[
 		'',
 		'Alt Animation',
+		'Alt 2',
 		'Hey!',
 		'Hurt Note',
 		'GF Sing',
@@ -74,7 +75,8 @@ class ChartingState extends MusicBeatState
 		//NOTE BUT PLAYS ANIM
 		'Note Trail Anim',
 		'Note Trail Arrow Mode Anim',
-		'Note Trail Ascend Mode Anim'
+		'Note Trail Ascend Mode Anim',
+		'zondro'
 	];
 	public var ignoreWarnings = false;
 	var curNoteTypes:Array<String> = [];
@@ -108,7 +110,7 @@ class ChartingState extends MusicBeatState
 		['dead jumpscare', "Value 1: time"],
 		['Show Song', "fuck you"],
 		['Cam lock', "value 1: x amd y, value2 zoom (can be null)"],
-		['Cam unlock', "yes"],
+		['cam unlock', "yes"],
 		['Play Video', "value1: video"],
 		['Play OVERFIRE', "value1: video"],
 		['Stop OVERFIRE', ""],
@@ -128,6 +130,12 @@ class ChartingState extends MusicBeatState
 		['bye gradient', "only monocum"],
 		['rain', "only overfire"],
 		['trans overfire', "only overfire"],
+		['night time', "only hlork"],
+		['night cum', "only overfire"],
+		['oh well', "only overfire"],
+		['evening time', "only hlork"],
+		['slow evening time', "only hlork"],
+		['day time', "only hlork"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 	];
 

@@ -177,7 +177,7 @@
 	"no_antialiasing": true,
 	"image": "characters/perchik",
 	"position": [
-		210,
+		-110,
 		400
 	],
 	"healthicon": "japenis-pixel",

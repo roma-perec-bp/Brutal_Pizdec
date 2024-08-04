@@ -1,0 +1,126 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "game_over",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "games",
+			"fps": 24,
+			"name": "game_over",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				30
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "laugh",
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				30
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "laugh",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				30
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "laugh",
+			"indices": [
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				30
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "laugh",
+			"indices": [
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/perec_wheel_ASSETS_cutscenes",
+	"position": [
+		-80,
+		-10
+	],
+	"healthicon": "jap-wheel",
+	"flip_x": false,
+	"healthbar_colors": [
+		192,
+		7,
+		10
+	],
+	"camera_position": [
+		170,
+		30
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 1
+}
