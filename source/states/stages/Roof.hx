@@ -42,12 +42,6 @@ class Roof extends BaseStage
 	var phillyLightsColors:Array<FlxColor>;
 	var curLight:Int = -1;
 
-	//the end
-	public var trophy:FlxSprite;
-	var centerVarX:Float = 0;
-	var centerVarY:Float = 0;
-	var canGrab:Bool = false;
-
 	override function create()
 	{
 		var _song = PlayState.SONG;
@@ -140,16 +134,6 @@ class Roof extends BaseStage
 			if(PlayState.SONG.song == 'Overfire')
 			{
 				setStartCallback(overfireIntro);
-
-				if(winner() == false)
-				{
-					setEndCallback(function()
-					{
-						game.endingSong = true;
-						canPause = false;
-						gimme();
-					});
-				}
 			}
 		}
 	}
@@ -215,18 +199,6 @@ class Roof extends BaseStage
 			{
 				applyLightning();
 				lightningTimer = FlxG.random.float(7, 15);
-			}
-		}
-
-		if(canGrab)
-		{
-			if((FlxG.mouse.overlaps(trophy)))
-			{
-				select();
-			}
-			else
-			{
-				trophy.color = 0xFFFFFFFF;
 			}
 		}
 
@@ -475,64 +447,5 @@ class Roof extends BaseStage
 		{
 			FlxTween.tween(blackFlashs, {alpha: 1}, 3);
 		});
-	}
-
-	function winner()
-	{
-		for(i in 0...Achievements.achievementsStuff.length)
-		{
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
-				return false;
-		}
-		return true;
-	}
-
-	function gimme()
-	{
-		FlxG.camera.zoom = 1;
-		game.defaultCamZoom = 1;
-
-		trophy = new FlxSprite(0, 0).loadGraphic(Paths.image('awards_ew'));
-		trophy.setGraphicSize(Std.int(trophy.width * 0.2));
-		add(trophy);
-
-		trophy.x = -1000;
-		trophy.y = FlxG.random.float(100, 300);
-
-		trophy.cameras = [camOther];
-		trophy.updateHitbox();
-
-		FlxTween.tween(trophy, {x: FlxG.random.float(200, 500)}, 2.1, {ease: FlxEase.cubeInOut});
-
-		FlxTween.tween(trophy, {y: trophy.y - 90}, 0.1, {
-			ease: FlxEase.cubeInOut,
-			onComplete: function(twn:FlxTween)
-			{
-				FlxTween.tween(trophy, {y: trophy.y + 200}, 2, {
-					ease: FlxEase.cubeInOut,
-					onComplete: function(twn:FlxTween)
-					{
-						canGrab = true;
-					}
-				});
-			}
-		});
-	}
-
-	function select()
-	{
-		trophy.color = 0xFF6c6c6c;
-		if(FlxG.mouse.justPressed)
-		{
-			canGrab = false;
-			trophy.color = 0xFFFFFFFF;
-			FlxTween.tween(trophy, {x: 542.8, y: 185.1}, 5, {ease: FlxEase.quadOut});
-			FlxTween.tween(trophy.scale, {x: 0.36, y: 0.36}, 5, {ease: FlxEase.quadOut});
-			game.camHUD.fade(0xFFFFFFFF, 5);
-			new FlxTimer().start(7, function(tmr:FlxTimer)
-			{
-				endSong();
-			});
-		}
 	}
 }

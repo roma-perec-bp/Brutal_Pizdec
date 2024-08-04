@@ -8,6 +8,8 @@ import states.TitleState;
 
 // Add a variable here and it will get automatically saved
 class SaveVariables {
+	public var ends:Array<Int> = [0, 0, 0, 0, 0, 0];
+
 	public var language:String = 'None';
 	public var downScroll:Bool = false;
 	public var middleScroll:Bool = false;

@@ -191,7 +191,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	#if ACHIEVEMENTS_ALLOWED
 	function giveAchievement(name) {
 		add(new AchievementPopup(name, camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 		trace('Giving achievement: ${name}');
 	}
 	function checkAchievement(achievementName) {

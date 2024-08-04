@@ -31,6 +31,7 @@ import cutscenes.DialogueBoxPsych;
 
 import states.StoryMenuState;
 import states.FreeplayState;
+import states.EndState;
 import states.editors.ChartingState;
 import states.editors.CharacterEditorState;
 
@@ -3209,16 +3210,13 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 //					Mods.loadTopMod();
-					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 					#if desktop DiscordClient.resetClientID(); #end
 
 					cancelMusicFadeTween();
 					if(FlxTransitionableState.skipNextTransIn) {
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new StoryMenuState());
-
-					// if ()
+					
 					if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 						Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
@@ -3227,6 +3225,18 @@ class PlayState extends MusicBeatState
 						FlxG.save.flush();
 					}
 					changedDifficulty = false;
+
+					if(ClientPrefs.data.ends[0] == 0)
+					{
+						MusicBeatState.switchState(new EndState());
+						EndState.end = 0;
+						EndState.gift = true;
+					}
+					else
+					{
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+						MusicBeatState.switchState(new StoryMenuState());
+					}
 				}
 				else
 				{
@@ -3254,8 +3264,96 @@ class PlayState extends MusicBeatState
 				if(FlxTransitionableState.skipNextTransIn) {
 					CustomFadeTransition.nextCamera = null;
 				}
-				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
+				if(curSong == 'Klork' || curSong == 'Anekdot' || curSong == 'T-SHORT' || curSong == 'Monochrome' || curSong == 'Lore')
+				{
+					if(FlxG.save.data.playedSongs.contains(['klork', 'anekdot', 't-short', 'monochrome', 'lore']))
+					{
+						if(ClientPrefs.data.ends[1] == 0)
+						{
+							EndState.end = 1;
+							EndState.gift = false;
+							MusicBeatState.switchState(new EndState());
+						}
+						else
+						{
+							MusicBeatState.switchState(new FreeplayState());
+							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+						}
+					}
+				}
+				else if(curSong == 'S6X BOOM' || curSong == 'Lamar Tut Voobshe Ne Nujen')
+				{
+					if(FlxG.save.data.playedSongs.contains(['s6x-boom', 'lamar-tut-voobshe-ne-nujen']))
+					{
+						if(ClientPrefs.data.ends[2] == 0)
+						{
+							EndState.end = 2;
+							EndState.gift = false;
+							MusicBeatState.switchState(new EndState());
+						}
+						else
+						{
+							MusicBeatState.switchState(new FreeplayState());
+							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+						}
+					}
+				}
+				else if(curSong == 'With Cone OLD' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD')
+				{
+					if(FlxG.save.data.playedSongs.contains(['with-cone-old', 'boom-old', 'overfire-old', 'klork-old']))
+					{
+						if(ClientPrefs.data.ends[3] == 0)
+						{
+							EndState.end = 3;
+							EndState.gift = false;
+							MusicBeatState.switchState(new EndState());
+						}
+						else
+						{
+							MusicBeatState.switchState(new FreeplayState());
+							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+						}
+					}
+				}
+				else
+				{
+					if(ClientPrefs.data.ends[4] == 0 && ClientPrefs.data.ends[5] != 1)
+					{
+						if(FlxG.save.data.playedSongs.contains(['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old']))
+						{
+							if(ClientPrefs.data.ends[4] == 0)
+							{
+								EndState.end = 4;
+								EndState.gift = false;
+								MusicBeatState.switchState(new EndState());
+							}
+							else
+							{
+								MusicBeatState.switchState(new FreeplayState());
+								FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+							}
+						}
+					}
+					else if(ClientPrefs.data.ends[5] == 0)
+					{
+						if(FlxG.save.data.playedSongsFC.contains(['with-cone', 'boom', 'overfire', 'klork', 'anekdot', 't-short', 'monochrome', 'lore', 's6x-boom', 'lamar-tut-voobshe-ne-nujen', 'with-cone-old', 'boom-old', 'overfire-old', 'klork-old']))
+						{
+							if(ClientPrefs.data.ends[5] == 0)
+							{
+								EndState.end = 5;
+								EndState.gift = true;
+								MusicBeatState.switchState(new EndState());
+							}
+							else
+							{
+								MusicBeatState.switchState(new FreeplayState());
+								FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+							}
+						}
+					}
+				}
+
 				changedDifficulty = false;
 			}
 			transitioning = true;

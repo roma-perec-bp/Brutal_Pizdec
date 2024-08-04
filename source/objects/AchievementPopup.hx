@@ -1,6 +1,7 @@
 package objects;
 
 import backend.Achievements;
+import states.EndState;
 
 class AchievementPopup extends FlxSpriteGroup {
 	public var onFinish:Void->Void = null;
@@ -18,6 +19,8 @@ class AchievementPopup extends FlxSpriteGroup {
 		achievementName.setFormat(Paths.font("HouseofTerror.ttf"), 42, 0xffdfd383, CENTER);
 		achievementName.screenCenter(X);
 		achievementName.scrollFactor.set();
+
+		Achievements.achDone++;
 
 		add(achievementBG);
 		add(achievementName);
@@ -37,6 +40,16 @@ class AchievementPopup extends FlxSpriteGroup {
 			this.alpha = 0;
 			remove(this);
 			if(onFinish != null) onFinish();
+
+			if(Achievements.achDone == 23)
+			{
+				if(ClientPrefs.data.ends[6] == 0)
+				{
+					EndState.end = 6;
+					EndState.gift = true;
+					MusicBeatState.switchState(new EndState());
+				}
+			}
 		});
 	}
 }

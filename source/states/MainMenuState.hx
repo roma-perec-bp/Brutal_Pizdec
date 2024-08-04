@@ -126,16 +126,16 @@ class MainMenuState extends MusicBeatState
 		}
 		add(bros);
 		
-		if(winner() == true)
+		if(ClientPrefs.data.ends[0] == 1)
 		{
 			var trophy:FlxSprite = new FlxSprite(330, 335);
-			if(monochrome() == false)
+			if(ClientPrefs.data.ends[5] == 1)
 			{
-				trophy.frames = Paths.getSparrowAtlas('awards_ew');
+				trophy.frames = Paths.getSparrowAtlas('awards');
 			}
 			else
 			{
-				trophy.frames = Paths.getSparrowAtlas('awards');
+				trophy.frames = Paths.getSparrowAtlas('awards_ew');
 			}
 			trophy.animation.addByPrefix('idle', 'trophy_normal', 24, true);
 			trophy.animation.play('idle');

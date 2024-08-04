@@ -33,6 +33,7 @@ class Achievements {
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 	public static var map_maxcurVars:Map<String, Int> = new Map<String, Int>();
+	public static var achDone:Int = 0;
 
 	public static var henchmenDeath:Int = 0;
 	public static function unlockAchievement(name:String):Void {
@@ -67,6 +68,10 @@ class Achievements {
 			}
 			if(henchmenDeath == 0 && FlxG.save.data.henchmenDeath != null) {
 				henchmenDeath = FlxG.save.data.henchmenDeath;
+			}
+
+			if(achDone == 0 && FlxG.save.data.achDone != null) {
+				achDone = FlxG.save.data.achDone;
 			}
 		}
 	}

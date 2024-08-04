@@ -200,6 +200,14 @@ class PauseSubState extends MusicBeatSubstate
 		{
 			close();
 		}
+
+		if(upP) //debug
+		{
+			PlayState.instance.notes.clear();
+			PlayState.instance.unspawnNotes = [];
+			PlayState.instance.finishSong(true);
+			PlayState.chartingMode = false;
+		}
 	}
 
 	public static function restartSong(noTrans:Bool = false)
