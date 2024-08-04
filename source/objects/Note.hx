@@ -393,10 +393,10 @@ class Note extends FlxSprite
 					noAnimation = true;
 					scale.x = 1;
 					scale.y = 1;
-					rgbShader.enabled = false;
 					rgbShader.r = 0xFF000000;
 					rgbShader.g = 0xFFFFFFFF;
 					rgbShader.b = 0xFFFF0000;
+					rgbShader.enabled = false;
 					offsetX = 32;
 					if(isSustainNote) offsetX = 28;
 
