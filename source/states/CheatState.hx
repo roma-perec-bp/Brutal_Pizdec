@@ -22,14 +22,13 @@ class CheatState extends MusicBeatState
 		scary.alpha = 0;
 		add(scary);
 
-                text = new FlxText(0, 0, FlxG.width, '', 32);
+        text = new FlxText(0, 0, FlxG.width, '', 32);
 		text.setFormat(Paths.font("scary.otf"), 32, FlxColor.RED, CENTER);
 		text.x += 10;
 		text.screenCenter(Y);
-                add(text);
+        add(text);
 
 		text.text = 'Warning, scroll change was detected\n\nディックディックお尻ディック弄す吸盤'; //максплей гейс такой: БРОУ ВАТАФАК?
-		FlxG.sound.play(Paths.sound('antiCheatTheme'))
 		new FlxTimer().start(4, function(tmr:FlxTimer)
 		{
 			text.text = 'It is illegal to use middle and down scroll types in this mod\n\n何もしなかったのか臭いホモか?';
@@ -42,7 +41,7 @@ class CheatState extends MusicBeatState
 					new FlxTimer().start(4, function(tmr:FlxTimer)
 					{
 						text.text = 'Иди нахуй';
-                                                FlxG.sound.play(Paths.sound('fuckYou'))
+                        FlxG.sound.play(Paths.sound('fuckYou'));
 						new FlxTimer().start(0.4, function(tmr:FlxTimer) //хихихиха
 						{
 							Sys.exit(1);
