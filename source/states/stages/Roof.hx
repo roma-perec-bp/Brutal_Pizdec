@@ -313,8 +313,6 @@ class Roof extends BaseStage
 		// used for preloading assets used on events that doesn't need different assets based on its values
 		switch(event.event)
 		{
-			case "burn with cone":
-				precacheSound('boom');
 			case "Dadbattle Spotlight":
 				dadbattleLight = new BGSprite('spotlight', 400, -400);
 				dadbattleLight.alpha = 0.375;

@@ -3289,7 +3289,8 @@ class PlayState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 					}
 				}
-				else if(curSong == 'S6X BOOM' || curSong == 'Lamar Tut Voobshe Ne Nujen')
+
+				if(curSong == 'S6X BOOM' || curSong == 'Lamar Tut Voobshe Ne Nujen')
 				{
 					if(FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen'))
 					{
@@ -3311,7 +3312,8 @@ class PlayState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 					}
 				}
-				else if(curSong == 'With Cone OLD' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD')
+
+				if(curSong == 'With Cone OLD' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD')
 				{
 					if(FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
 						 && FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
@@ -3335,31 +3337,47 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				if(ClientPrefs.data.ends[5] == 0)
+				if(FlxG.save.data.playedSongs.contains('with-cone') && FlxG.save.data.playedSongs.contains('boom') && FlxG.save.data.playedSongs.contains('overfire') 
+					&& FlxG.save.data.playedSongs.contains('klork') && FlxG.save.data.playedSongs.contains('anekdot') && FlxG.save.data.playedSongs.contains('t-short')
+					&& FlxG.save.data.playedSongs.contains('monochrome') && FlxG.save.data.playedSongs.contains('lore')
+					&& FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen')
+					&&FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
+					&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
 				{
-					if((FlxG.save.data.playedSongsFC.contains('with-cone') && FlxG.save.data.playedSongsFC.contains('boom') && FlxG.save.data.playedSongsFC.contains('overfire') 
-						&& FlxG.save.data.playedSongsFC.contains('klork') && FlxG.save.data.playedSongsFC.contains('anekdot') && FlxG.save.data.playedSongsFC.contains('t-short')
-					    && FlxG.save.data.playedSongsFC.contains('monochrome') && FlxG.save.data.playedSongsFC.contains('lore')
-						&& FlxG.save.data.playedSongsFC.contains('s6x-boom') && FlxG.save.data.playedSongsFC.contains('lamar-tut-voobshe-ne-nujen')
-						&&FlxG.save.data.playedSongsFC.contains('with-cone-old') && FlxG.save.data.playedSongsFC.contains('klork-old')))
+					if(ClientPrefs.data.ends[4] == 0)
 					{
-						if(ClientPrefs.data.ends[5] == 0)
-						{
-							EndState.end = 5;
-							EndState.gift = true;
-							MusicBeatState.switchState(new EndState());
-						}
-						else
-						{
-							MusicBeatState.switchState(new FreeplayState());
-							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-						}
+						EndState.end = 4;
+						EndState.gift = false;
+						MusicBeatState.switchState(new EndState());
+					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+					}
+				}
+				else if((FlxG.save.data.playedSongsFC.contains('with-cone') && FlxG.save.data.playedSongsFC.contains('boom') && FlxG.save.data.playedSongsFC.contains('overfire') 
+					&& FlxG.save.data.playedSongsFC.contains('klork') && FlxG.save.data.playedSongsFC.contains('anekdot') && FlxG.save.data.playedSongsFC.contains('t-short')
+					&& FlxG.save.data.playedSongsFC.contains('monochrome') && FlxG.save.data.playedSongsFC.contains('lore')
+					&& FlxG.save.data.playedSongsFC.contains('s6x-boom') && FlxG.save.data.playedSongsFC.contains('lamar-tut-voobshe-ne-nujen')
+					&&FlxG.save.data.playedSongsFC.contains('with-cone-old') && FlxG.save.data.playedSongsFC.contains('klork-old')))
+				{
+					if(ClientPrefs.data.ends[5] == 0)
+					{
+						EndState.end = 5;
+						EndState.gift = true;
+						MusicBeatState.switchState(new EndState());
+					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
 					}
 				}
 				else
 				{
 					MusicBeatState.switchState(new FreeplayState());
-					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
 				}
 
 				changedDifficulty = false;
@@ -4722,39 +4740,25 @@ class PlayState extends MusicBeatState
 		for (i in 0...achievesToCheck.length) {
 			var achievementName:String = achievesToCheck[i];
 			Achievements.loadAchievements();
-			trace(achievementName);
 			if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled && Achievements.getAchievementIndex(achievementName) > -1) {
-				trace(achievementName + ', start testing stuff');
 				var unlock:Bool = false;
 				if (achievementName == WeekData.getWeekFileName() + '_nomiss') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
-					trace("NoMiss");
 					if(isStoryMode && campaignMisses + songMisses < 1 && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
-					{
 						unlock = true;
-						trace('NoMiss: ${unlock}');
-					}
 				}
 				else if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
-					trace("NoMissNoDeaths");
 					if(isStoryMode && campaignMisses + songMisses < 1 && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice && deathCounter == 0)
-					{
 						unlock = true;
-						trace('NoMiss: ${unlock}');
-					}
 				}
 				else if (achievementName == songName.toLowerCase() + "_freeplay_nomiss")
 				{
 					if(!isStoryMode && songMisses < 1 && !changedDifficulty && !usedPractice)
-					{
 						unlock = true;
-						trace('Freeplay NoMiss: ${unlock}');
-					}
 				}
 				else
 				{
-					trace("switch achievements");
 					var weekName:String = WeekData.getWeekFileName();
 					switch(achievementName)
 					{

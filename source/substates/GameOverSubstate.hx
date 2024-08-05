@@ -29,6 +29,8 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	var stageSuffix:String = "";
 
+	var canDoShit:Bool = true;
+
 	public static var characterName:String = 'bf-dead';
 	public static var deathSoundName:String = 'fnf_loss_sfx';
 	public static var loopSoundName:String = 'gameOver';
@@ -72,21 +74,24 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		Conductor.songPosition = 0;
 
-		boyfriend = new Character(x, y, characterName, true);
-		boyfriend.x += boyfriend.positionArray[0];
-		boyfriend.y += boyfriend.positionArray[1];
-		if(PlayState.SONG.stage != 'flipaclip') add(boyfriend);
+		if(PlayState.SONG.stage != 'flipaclip')
+		{
+			boyfriend = new Character(x, y, characterName, true);
+			boyfriend.x += boyfriend.positionArray[0];
+			boyfriend.y += boyfriend.positionArray[1];
+			add(boyfriend);
+		}
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
 		if(PlayState.SONG.stage == 'flipaclip') FlxG.sound.play(Paths.sound('bbg_death'), 1, false, null, true, 
 		function() {
-			Sys.command('mshta vbscript:Execute("msgbox ""ВЫ БЫЛИ ОТРАХНУТЫ"":close")');
+			Sys.command('mshta vbscript:Execute("msgbox ""ВЫ БЫЛИ ОТРАХНУТЫ"":принять")');
 			Sys.exit(1);
 		});
 		FlxG.camera.scroll.set();
 		FlxG.camera.target = null;
 
-		boyfriend.playAnim('firstDeath');
+		if(PlayState.SONG.stage != 'flipaclip') boyfriend.playAnim('firstDeath');
 
 		if (PlayState.SONG.stage != 'roof-old')
 		{
@@ -190,7 +195,10 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	#if ACHIEVEMENTS_ALLOWED
 	function giveAchievement(name) {
-		add(new AchievementPopup(name, camAchievement));
+		canDoShit = false;
+		var achievementObj:AchievementPopup = new AchievementPopup(name, camAchievement);
+		achievementObj.onFinish = function(){canDoShit = true;}; //crash shit
+		add(achievementObj);
 		FlxG.sound.play(Paths.sound('confirmAch'));
 		trace('Giving achievement: ${name}');
 	}
@@ -247,11 +255,13 @@ class GameOverSubstate extends MusicBeatSubstate
 		{
 			if (controls.ACCEPT)
 			{
-				endBullshit();
+				if(canDoShit) endBullshit();
 			}
 
 			if (controls.BACK)
 			{
+				if(!canDoShit) return;
+				
 				#if desktop DiscordClient.resetClientID(); #end
 				FlxG.sound.music.stop();
 				PlayState.deathCounter = 0;

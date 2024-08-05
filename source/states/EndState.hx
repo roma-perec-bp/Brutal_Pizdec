@@ -30,10 +30,12 @@ class EndState extends MusicBeatState
 		super.create();
 
 		var bg:FlxSprite = new FlxSprite();
+
 		if(end != 6)
 			bg.loadGraphic(Paths.image('endScreen/'+lang+end));
 		else
-			bg.loadGraphic(Paths.image('fuck'));
+			bg.loadGraphic(Paths.image('endScreen/fuck'));
+		
 		bg.screenCenter();
 		bg.alpha = 0;
 		add(bg);
