@@ -2,6 +2,7 @@ package states.stages;
 
 import states.stages.objects.*;
 import objects.Character;
+import substates.GameOverSubstate;
 
 class Grass extends BaseStage
 {
@@ -9,6 +10,7 @@ class Grass extends BaseStage
 	override function create()
 	{
 		game.skipCountdown = true;
+		GameOverSubstate.loopSoundName = 'gameOverKlork';
 		
 		day = new BGSprite('day', 0, 0);
 		day.screenCenter();

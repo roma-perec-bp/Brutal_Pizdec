@@ -237,6 +237,8 @@ class PlayState extends MusicBeatState
 
 	var trail:FlxTrail;
 
+	var japHit:Int = 0;
+
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
@@ -2016,7 +2018,14 @@ class PlayState extends MusicBeatState
 		if(dropTime > 0)
 		{
 			dropTime -= elapsed;
-			health -= healthDrop * (elapsed/(1/120));
+			if(japHit <= 3)
+			{
+				if(health > 0.1) health -= healthDrop * (elapsed/(1/120));
+			}
+			else
+			{
+				health -= healthDrop * (elapsed/(1/120));
+			}
 			healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
 			FlxColor.fromRGB(255, 138, 0));
 			iconP1.offset.x = FlxG.random.float(-10, 10);
@@ -3265,107 +3274,71 @@ class PlayState extends MusicBeatState
 					CustomFadeTransition.nextCamera = null;
 				}
 
-				if(curSong == 'Klork' || curSong == 'Anekdot' || curSong == 'T-SHORT' || curSong == 'Monochrome' || curSong == 'Lore')
+				if(ClientPrefs.data.ends[1] == 0 && (curSong == 'Klork' || curSong == 'Anekdot' || curSong == 'T-SHORT' || curSong == 'Monochrome' || curSong == 'Lore'))
 				{
-					trace(FlxG.save.data.playedSongs);
 					if(FlxG.save.data.playedSongs.contains('klork') && FlxG.save.data.playedSongs.contains('anekdot') && FlxG.save.data.playedSongs.contains('t-short')
 						&& FlxG.save.data.playedSongs.contains('monochrome') && FlxG.save.data.playedSongs.contains('lore'))
 					{
-						if(ClientPrefs.data.ends[1] == 0)
-						{
-							EndState.end = 1;
-							EndState.gift = false;
-							MusicBeatState.switchState(new EndState());
-						}
-						else
-						{
-							MusicBeatState.switchState(new FreeplayState());
-							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-						}
-					}
-					else
-					{
-						MusicBeatState.switchState(new FreeplayState());
-						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-					}
-				}
-
-				if(curSong == 'S6X BOOM' || curSong == 'Lamar Tut Voobshe Ne Nujen')
-				{
-					if(FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen'))
-					{
-						if(ClientPrefs.data.ends[2] == 0)
-						{
-							EndState.end = 2;
-							EndState.gift = false;
-							MusicBeatState.switchState(new EndState());
-						}
-						else
-						{
-							MusicBeatState.switchState(new FreeplayState());
-							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-						}
-					}
-					else
-					{
-						MusicBeatState.switchState(new FreeplayState());
-						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-					}
-				}
-
-				if(curSong == 'With Cone OLD' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD')
-				{
-					if(FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
-						 && FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
-					{
-						if(ClientPrefs.data.ends[3] == 0)
-						{
-							EndState.end = 3;
-							EndState.gift = false;
-							MusicBeatState.switchState(new EndState());
-						}
-						else
-						{
-							MusicBeatState.switchState(new FreeplayState());
-							FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-						}
-					}
-					else
-					{
-						MusicBeatState.switchState(new FreeplayState());
-						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
-					}
-				}
-
-				if(FlxG.save.data.playedSongs.contains('with-cone') && FlxG.save.data.playedSongs.contains('boom') && FlxG.save.data.playedSongs.contains('overfire') 
-					&& FlxG.save.data.playedSongs.contains('klork') && FlxG.save.data.playedSongs.contains('anekdot') && FlxG.save.data.playedSongs.contains('t-short')
-					&& FlxG.save.data.playedSongs.contains('monochrome') && FlxG.save.data.playedSongs.contains('lore')
-					&& FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen')
-					&&FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
-					&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
-				{
-					if(ClientPrefs.data.ends[4] == 0)
-					{
-						EndState.end = 4;
+						EndState.end = 1;
 						EndState.gift = false;
 						MusicBeatState.switchState(new EndState());
 					}
 					else
 					{
 						MusicBeatState.switchState(new FreeplayState());
-						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
 					}
 				}
-				else if((FlxG.save.data.playedSongsFC.contains('with-cone') && FlxG.save.data.playedSongsFC.contains('boom') && FlxG.save.data.playedSongsFC.contains('overfire') 
-					&& FlxG.save.data.playedSongsFC.contains('klork') && FlxG.save.data.playedSongsFC.contains('anekdot') && FlxG.save.data.playedSongsFC.contains('t-short')
-					&& FlxG.save.data.playedSongsFC.contains('monochrome') && FlxG.save.data.playedSongsFC.contains('lore')
-					&& FlxG.save.data.playedSongsFC.contains('s6x-boom') && FlxG.save.data.playedSongsFC.contains('lamar-tut-voobshe-ne-nujen')
-					&&FlxG.save.data.playedSongsFC.contains('with-cone-old') && FlxG.save.data.playedSongsFC.contains('klork-old')))
+				else if(ClientPrefs.data.ends[2] == 0 && (curSong == 'S6X BOOM' || curSong == 'Lamar Tut Voobshe Ne Nujen'))
 				{
-					if(ClientPrefs.data.ends[5] == 0)
+					if(FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen'))
+					{
+						EndState.end = 2;
+						EndState.gift = false;
+						MusicBeatState.switchState(new EndState());
+					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
+					}
+				}
+				else if(ClientPrefs.data.ends[3] == 0 && (curSong == 'With Cone OLD' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD'))
+				{
+					if(FlxG.save.data.playedSongs.contains('with-cone-original') && FlxG.save.data.playedSongs.contains('boom-old')
+						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
+					{
+						EndState.end = 3;
+						EndState.gift = false;
+						MusicBeatState.switchState(new EndState());
+					}
+					else
+					{
+						MusicBeatState.switchState(new FreeplayState());
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
+					}
+				}
+				else if(ClientPrefs.data.ends[4] == 0 || ClientPrefs.data.ends[5] == 0)
+				{
+					if((FlxG.save.data.playedSongsFC.contains('with-cone') && FlxG.save.data.playedSongsFC.contains('boom') && FlxG.save.data.playedSongsFC.contains('overfire') 
+						&& FlxG.save.data.playedSongsFC.contains('klork') && FlxG.save.data.playedSongsFC.contains('anekdot') && FlxG.save.data.playedSongsFC.contains('t-short')
+						&& FlxG.save.data.playedSongsFC.contains('monochrome') && FlxG.save.data.playedSongsFC.contains('lore')
+						&& FlxG.save.data.playedSongsFC.contains('s6x-boom') && FlxG.save.data.playedSongsFC.contains('lamar-tut-voobshe-ne-nujen')
+						&&FlxG.save.data.playedSongsFC.contains('with-cone-original') && FlxG.save.data.playedSongsFC.contains('klork-old')))
 					{
 						EndState.end = 5;
 						EndState.gift = true;
+						MusicBeatState.switchState(new EndState());
+					}
+					else if(FlxG.save.data.playedSongs.contains('with-cone') && FlxG.save.data.playedSongs.contains('boom') && FlxG.save.data.playedSongs.contains('overfire') 
+						&& FlxG.save.data.playedSongs.contains('klork') && FlxG.save.data.playedSongs.contains('anekdot') && FlxG.save.data.playedSongs.contains('t-short')
+						&& FlxG.save.data.playedSongs.contains('monochrome') && FlxG.save.data.playedSongs.contains('lore')
+						&& FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen')
+						&&FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
+						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
+					{
+						EndState.end = 4;
+						EndState.gift = false;
 						MusicBeatState.switchState(new EndState());
 					}
 					else
@@ -4133,6 +4106,7 @@ class PlayState extends MusicBeatState
 							healthDrop += 0.00050;
 							iconP1.scale.set(1, 1);
 							iconP1.changeIcon('hwaw-fire');
+							japHit++;
 
 							// checking achievement
 							Achievements.loadAchievements();
@@ -4768,13 +4742,13 @@ class PlayState extends MusicBeatState
 								ClientPrefs.data.arrowRGB[2][0] == -1 && ClientPrefs.data.arrowRGB[2][1] == -1 && ClientPrefs.data.arrowRGB[2][2] == -1 &&
 								ClientPrefs.data.arrowRGB[3][0] == -1 && ClientPrefs.data.arrowRGB[3][1] == -1 && ClientPrefs.data.arrowRGB[3][2] == -1);
 						case 'oldweek0':
-							unlock = (FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old') && FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'));
+							unlock = (FlxG.save.data.playedSongs.contains('with-cone-original') && FlxG.save.data.playedSongs.contains('boom-old') && FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'));
 						case 'allweeks':
 							unlock = (FlxG.save.data.playedSongs.contains('with-cone') && FlxG.save.data.playedSongs.contains('boom') && FlxG.save.data.playedSongs.contains('overfire') 
 							&& FlxG.save.data.playedSongs.contains('klork') && FlxG.save.data.playedSongs.contains('anekdot') && FlxG.save.data.playedSongs.contains('t-short')
 						    && FlxG.save.data.playedSongs.contains('monochrome') && FlxG.save.data.playedSongs.contains('lore')
 							&& FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen')
-							&&FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
+							&&FlxG.save.data.playedSongs.contains('with-cone-original') && FlxG.save.data.playedSongs.contains('boom-old')
 							&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'));
 
 						case 'allweeks1':
@@ -4782,8 +4756,7 @@ class PlayState extends MusicBeatState
 							&& FlxG.save.data.playedSongsFC.contains('klork') && FlxG.save.data.playedSongsFC.contains('anekdot') && FlxG.save.data.playedSongsFC.contains('t-short')
 						    && FlxG.save.data.playedSongsFC.contains('monochrome') && FlxG.save.data.playedSongsFC.contains('lore')
 							&& FlxG.save.data.playedSongsFC.contains('s6x-boom') && FlxG.save.data.playedSongsFC.contains('lamar-tut-voobshe-ne-nujen')
-							&&FlxG.save.data.playedSongsFC.contains('with-cone-old') && FlxG.save.data.playedSongsFC.contains('boom-old')
-							&& FlxG.save.data.playedSongsFC.contains('overfire-old') && FlxG.save.data.playedSongsFC.contains('klork-old'));
+							&&FlxG.save.data.playedSongsFC.contains('with-cone-original') && FlxG.save.data.playedSongsFC.contains('klork-old'));
 						case weekName:
 							if (isStoryMode && storyPlaylist.length <= 1)
 							{

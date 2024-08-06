@@ -2,11 +2,13 @@ package states.stages;
 
 import states.stages.objects.*;
 import objects.Character;
+import substates.GameOverSubstate;
 
 class Random extends BaseStage
 {
 	override function create()
 	{	
+		GameOverSubstate.loopSoundName = 'gameOverT-Short';
 		var bg:BGSprite = new BGSprite('bg', 0, 0, 0.3, 0.3);
 		bg.setGraphicSize(Std.int(bg.width * 1.5));
 		add(bg);

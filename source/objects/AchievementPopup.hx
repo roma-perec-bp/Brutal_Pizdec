@@ -8,6 +8,8 @@ class AchievementPopup extends FlxSpriteGroup {
 	public function new(name:String, ?camera:FlxCamera = null)
 	{
 		super(x, y);
+		
+		Achievements.achDone++;
 		ClientPrefs.saveSettings();
 
 		var id:Int = Achievements.getAchievementIndex(name);
@@ -19,8 +21,6 @@ class AchievementPopup extends FlxSpriteGroup {
 		achievementName.setFormat(Paths.font("HouseofTerror.ttf"), 42, 0xffdfd383, CENTER);
 		achievementName.screenCenter(X);
 		achievementName.scrollFactor.set();
-
-		Achievements.achDone++;
 
 		add(achievementBG);
 		add(achievementName);

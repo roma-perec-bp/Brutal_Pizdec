@@ -236,6 +236,12 @@ class MainMenuState extends MusicBeatState
 		{
 			checkAchievement('friday_night_play');
 		}
+		if(FlxG.keys.justPressed.TWO)
+		{
+			add(new AchievementPopup('friday_night_play', camAchievement));
+			Achievements.unlockAchievement('friday_night_play');
+			ClientPrefs.saveSettings();
+		}
 		if((FlxG.mouse.overlaps(bros)) && FlxG.mouse.justPressed && bros.ID == 4)
 		{
 			checkAchievement('menu0');

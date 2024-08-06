@@ -29,6 +29,8 @@ class EndState extends MusicBeatState
 
 		super.create();
 
+		FlxG.sound.music.volume = 0;
+
 		var bg:FlxSprite = new FlxSprite();
 
 		if(end != 6)
@@ -108,7 +110,7 @@ class EndState extends MusicBeatState
 						&& FlxG.save.data.playedSongs.contains('klork') && FlxG.save.data.playedSongs.contains('anekdot') && FlxG.save.data.playedSongs.contains('t-short')
 						&& FlxG.save.data.playedSongs.contains('monochrome') && FlxG.save.data.playedSongs.contains('lore')
 						&& FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen')
-						&&FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
+						&&FlxG.save.data.playedSongs.contains('with-cone-original') && FlxG.save.data.playedSongs.contains('boom-old')
 						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
 					{
 						if(ClientPrefs.data.ends[4] == 0)
@@ -127,7 +129,7 @@ class EndState extends MusicBeatState
 						&& FlxG.save.data.playedSongsFC.contains('klork') && FlxG.save.data.playedSongsFC.contains('anekdot') && FlxG.save.data.playedSongsFC.contains('t-short')
 						&& FlxG.save.data.playedSongsFC.contains('monochrome') && FlxG.save.data.playedSongsFC.contains('lore')
 						&& FlxG.save.data.playedSongsFC.contains('s6x-boom') && FlxG.save.data.playedSongsFC.contains('lamar-tut-voobshe-ne-nujen')
-						&&FlxG.save.data.playedSongsFC.contains('with-cone-old') && FlxG.save.data.playedSongsFC.contains('klork-old')))
+						&&FlxG.save.data.playedSongsFC.contains('with-cone-original') && FlxG.save.data.playedSongsFC.contains('klork-old')))
 					{
 						if(ClientPrefs.data.ends[5] == 0)
 						{
@@ -143,7 +145,7 @@ class EndState extends MusicBeatState
 					}
 					else
 					{
-						MusicBeatState.switchState(new CreditsState());
+						MusicBeatState.switchState(new FreeplayState());
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
 					}
 				}
