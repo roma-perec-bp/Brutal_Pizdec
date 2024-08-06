@@ -52,11 +52,9 @@ function onBeatHit()
 		doTweenAngle('tt', 'camGame', angleshit, stepCrochet*0.002, 'circOut')
 		doTweenX('ttrn', 'camGame', -angleshit * 8, crochet*0.001, 'linear')
 	elseif curBeat >= 96 and curBeat < 192 or curBeat >= 256 then
-	    setProperty('camHUD.angle',0)
-		setProperty('camHUD.x',0)
-		setProperty('camHUD.y',0)
-        setProperty('camGame.angle',0)
-        setProperty('camGame.x',0)
-        setProperty('camGame.y',0)
+	    doTweenAngle('dick', 'camHUD', 0, stepCrochet * 0.005, 'circOut')
+        doTweenAngle('boobs', 'camGame', 0, stepCrochet * 0.005, 'circOut')
+	    doTweenX('dickB', 'camHUD', 0, stepCrochet * 0.005, 'circOut')
+        doTweenX('boobsB', 'camGame', 0, stepCrochet * 0.005, 'circOut')
     end
 end
