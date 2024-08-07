@@ -7,6 +7,22 @@
 			],
 			"indices": [],
 			"fps": 24,
+			"anim": "die",
+			"loop": false,
+			"name": "ni"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				99,
+				99,
+				99,
+				99
+			],
+			"fps": 24,
 			"anim": "idle",
 			"loop": false,
 			"name": "ni"
