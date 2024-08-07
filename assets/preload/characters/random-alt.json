@@ -92,8 +92,8 @@
 	"no_antialiasing": false,
 	"image": "characters/random",
 	"position": [
-		-230,
-		-300
+		-210,
+		-220
 	],
 	"healthicon": "short",
 	"flip_x": false,
@@ -103,7 +103,7 @@
 		55
 	],
 	"camera_position": [
-		350,
+		250,
 		300
 	],
 	"sing_duration": 4.00000000000001,

@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				90,
 				20
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-70
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-10,
 				90
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-20,
 				-30
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/random",
 	"position": [
-		-230,
-		-300
+		-210,
+		-220
 	],
 	"healthicon": "short",
 	"flip_x": false,
@@ -70,30 +70,8 @@
 		55
 	],
 	"camera_position": [
-		350,
+		250,
 		300
-	],
-	"notes_colors": [
-		[
-			"0xFF473f7f",
-			"0xFFFFFFFF",
-			"0xFF201b42"
-		],
-		[
-			"0xFFFFFFFF",
-			"0xFFFFFFFF",
-			"0xFF000000"
-		],
-		[
-			"0xFF290f4d",
-			"0xFFFFFFFF",
-			"0xFF05020a"
-		],
-		[
-			"0xFF3a3261",
-			"0xFFFFFFFF",
-			"0xFF19162a"
-		]
 	],
 	"sing_duration": 4.00000000000001,
 	"scale": 0.5
