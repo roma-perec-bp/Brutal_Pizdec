@@ -73,6 +73,28 @@
 		350,
 		300
 	],
+	"notes_colors": [
+		[
+			"0xFF473f7f",
+			"0xFFFFFFFF",
+			"0xFF201b42"
+		],
+		[
+			"0xFFFFFFFF",
+			"0xFFFFFFFF",
+			"0xFF000000"
+		],
+		[
+			"0xFF290f4d",
+			"0xFFFFFFFF",
+			"0xFF05020a"
+		],
+		[
+			"0xFF3a3261",
+			"0xFFFFFFFF",
+			"0xFF19162a"
+		]
+	],
 	"sing_duration": 4.00000000000001,
 	"scale": 0.5
 }
