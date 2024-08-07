@@ -1,21 +1,25 @@
 {
 	"animations": [
 		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "lolz"
+		},
+		{
 			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"anim": "lolz",
 			"fps": 24,
 			"name": "lolz",
-			"indices": []
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
 			"indices": [
 				0,
 				1,
@@ -188,11 +192,7 @@
 				9,
 				8,
 				9
-			],
-			"fps": 24,
-			"anim": "lolz",
-			"loop": false,
-			"name": "lolz"
+			]
 		}
 	],
 	"no_antialiasing": false,
@@ -209,8 +209,8 @@
 		206
 	],
 	"camera_position": [
-		-570,
-		30
+		-410,
+		-30
 	],
 	"sing_duration": 4.00000000000001,
 	"scale": 1
