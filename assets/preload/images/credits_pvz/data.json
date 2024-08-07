@@ -275,16 +275,20 @@
             "work":"Artist",
             "wish":"Mamamia",
             "socialnetwork": {
-                "youtube":"https://youtube.com/@carton3842?si=TmJMSyLhQ3YXVW0H",
-                "twitter":"https://x.com/n_cartoN?t=CwAGX4DZoUw9QiUJ2LCwMQ&s=09"
+                "youtube":"https://youtube.com/@carton3842",
+                "twitter":"https://x.com/n_cartoN"
             }
         },
         {
             "picture":"sm",
             "nickname":"SMixels2",
-            "work":"Artist",
-            "wish":"he made BF icon and second banner",
-            "socialnetwork": {}
+            "work":"Artist (bf icon and 2-nd banner)",
+            "wish":"Bo",
+            "socialnetwork": {
+                "youtube":"https://youtube.com/@SMixels2",
+                "gamejolt": "https://gamejolt.com/@SMixels2",
+                "twitter":"https://x.com/SMixels2"
+            }
         },
         {
             "picture":"sealz",
@@ -310,10 +314,7 @@
             "nickname":"Mr Kirpych",
             "work":"Artist",
             "wish":"Ya zaebalas",
-            "socialnetwork": {
-                "twitter": "https://x.com/LegumiU12630?t=m_WIuGmODSHN7b4eKPI0Eg&s=09",
-                 "telegram": "https://t.me/legumiuwu"
-            }
+            "socialnetwork": {}
         }
     ]
 }
