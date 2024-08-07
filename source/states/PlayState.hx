@@ -3303,7 +3303,7 @@ class PlayState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
 					}
 				}
-				else if(ClientPrefs.data.ends[3] == 0 && (curSong == 'With Cone OLD' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD'))
+				else if(ClientPrefs.data.ends[3] == 0 && (curSong == 'With Cone ORIGINAL' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD'))
 				{
 					if(FlxG.save.data.playedSongs.contains('with-cone-original') && FlxG.save.data.playedSongs.contains('boom-old')
 						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
