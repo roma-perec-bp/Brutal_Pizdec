@@ -45,6 +45,7 @@ class Roof extends BaseStage
 	override function create()
 	{
 		var _song = PlayState.SONG;
+		GameOverSubstate.loopSoundName = 'gameOverZombie';
 		GameOverSubstate.deathSoundName = 'fnf_loss_sfx_notBf';
 		GameOverSubstate.characterName = 'hwaw-death';
 
