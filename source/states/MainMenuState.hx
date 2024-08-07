@@ -9,7 +9,6 @@ import flixel.effects.FlxFlicker;
 import lime.app.Application;
 
 import objects.AchievementPopup;
-import states.editors.MasterEditorMenu;
 import options.OptionsState;
 
 enum MainMenuColumn {
@@ -203,45 +202,17 @@ class MainMenuState extends MusicBeatState
 	#end
 
 	var selectedSomethin:Bool = false;
-
-	function monochrome()
-	{
-		for(i in 0...Achievements.achievementsStuff.length)
-		{
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][2]))
-				return false;
-		}
-		return true;
-	}
-
-	function winner()
-	{
-		for(i in 0...Achievements.achievementsStuff.length)
-		{
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
-				return false;
-		}
-		return true;
-	}
-
+	
 	override function update(elapsed:Float)
 	{
 		FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, (FlxG.mouse.screenX-(FlxG.width/2)) * 0.015, (1/30)*240*elapsed);
 		FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
 
 		#if ACHIEVEMENTS_ALLOWED
-		//var leDate = Date.now();
-		//if (leDate.getDay() == 5 && leDate.getHours() >= 18)
-		if(FlxG.keys.justPressed.ONE)
-		{
+		var leDate = Date.now();
+		if (leDate.getDay() == 5 && leDate.getHours() >= 18)
 			checkAchievement('friday_night_play');
-		}
-		if(FlxG.keys.justPressed.TWO)
-		{
-			add(new AchievementPopup('friday_night_play', camAchievement));
-			Achievements.unlockAchievement('friday_night_play');
-			ClientPrefs.saveSettings();
-		}
+
 		if((FlxG.mouse.overlaps(bros)) && FlxG.mouse.justPressed && bros.ID == 4)
 		{
 			checkAchievement('menu0');
@@ -373,14 +344,6 @@ class MainMenuState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('cancelMenu'));
 					MusicBeatState.switchState(new TitleState());
 				}
-	
-				#if desktop
-				else if (controls.justPressed('debug_1'))
-				{
-					selectedSomethin = true;
-					MusicBeatState.switchState(new MasterEditorMenu());
-				}
-				#end	
 			}
 		}
 

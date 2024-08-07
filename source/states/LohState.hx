@@ -5,6 +5,7 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 
+import backend.StageData;
 import objects.VideoSprite;
 
 var videoShow:String = 'brutal-pizdec';
@@ -35,7 +36,7 @@ class LohState extends MusicBeatState
 
 			cutscene.finishCallback = function()
 			{
-                remove(cutscene);
+				StageData.loadDirectory(PlayState.SONG);
 				LoadingState.loadAndSwitchState(new PlayState());
 			};
 
@@ -43,6 +44,7 @@ class LohState extends MusicBeatState
 			cutscene.onSkip = function()
 			{
                 remove(cutscene);
+				StageData.loadDirectory(PlayState.SONG);
 				LoadingState.loadAndSwitchState(new PlayState());
 			};
 
@@ -52,6 +54,7 @@ class LohState extends MusicBeatState
 		}
 		#else
 		FlxG.log.warn('Platform not supported!');
+		StageData.loadDirectory(PlayState.SONG);
 		LoadingState.loadAndSwitchState(new PlayState());
 		#end
     }

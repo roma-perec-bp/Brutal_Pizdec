@@ -136,15 +136,6 @@ class PauseSubState extends MusicBeatSubstate
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 
-		// if (upP)
-		// {
-		// 	changeSelection(-1);
-		// }
-		// if (downP)
-		// {
-		// 	changeSelection(1);
-		// }
-
 		changeButtons();
 
 		if (FlxG.mouse.overlaps(dragDropObj) && FlxG.mouse.pressed)
@@ -199,14 +190,6 @@ class PauseSubState extends MusicBeatSubstate
 		if(accepted)
 		{
 			close();
-		}
-
-		if(upP) //debug
-		{
-			PlayState.instance.notes.clear();
-			PlayState.instance.unspawnNotes = [];
-			PlayState.instance.finishSong(true);
-			PlayState.chartingMode = false;
 		}
 	}
 

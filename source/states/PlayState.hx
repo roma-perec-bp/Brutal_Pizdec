@@ -2082,14 +2082,15 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
-					achievementObj.onFinish = openChartEditor;
+					achievementObj.onFinish = ebatLoh;
 					add(achievementObj);
 					ClientPrefs.saveSettings();
 				}
+				else
 				#end
-				openChartEditor();
+				ebatLoh();
 			} else {
-				openChartEditor();
+				ebatLoh();
 			}
 		}
 

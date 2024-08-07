@@ -163,14 +163,6 @@ class PauseSubStateold extends MusicBeatSubstate
 			changeSelection(1);
 		}
 
-		if(controls.justPressed('debug_1'))
-		{
-			PlayState.instance.notes.clear();
-			PlayState.instance.unspawnNotes = [];
-			PlayState.instance.finishSong(true);
-			PlayState.chartingMode = false;
-		}
-
 		var daSelected:String = menuItems[curSelected];
 		switch (daSelected)
 		{
