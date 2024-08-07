@@ -3483,6 +3483,16 @@
 						"Flash Camera",
 						"1",
 						"0xffFF0000"
+					],
+					[
+						"Change Character",
+						"dad",
+						"striper-dead"
+					],
+					[
+						"Play Animation",
+						"die",
+						"dad"
 					]
 				]
 			],
