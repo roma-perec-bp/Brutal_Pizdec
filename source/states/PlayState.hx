@@ -66,7 +66,7 @@ import psychlua.HScript;
 #if SScript
 import tea.SScript;
 #end
-
+	
 class PlayState extends MusicBeatState
 {
 	public static var STRUM_X = 42;
@@ -1924,6 +1924,8 @@ class PlayState extends MusicBeatState
 
 		super.closeSubState();
 	}
+
+        // аджика/нампавс анскилл
 
 	override public function onFocus():Void
 	{
