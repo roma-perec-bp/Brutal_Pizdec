@@ -311,10 +311,12 @@
         },
         {
             "picture":"brick",
-            "nickname":"Mr Kirpych",
+            "nickname":"mister kirpi4",
             "work":"Artist",
-            "wish":"Ya zaebalas",
-            "socialnetwork": {}
+            "wish":"Constant failure turns into chaos!!!",
+            "socialnetwork": {
+                 "youtube": "https://youtube.com/@misterkirpi4?si=u60AUyZh0Xh4eIlU"
+            }
         }
     ]
 }

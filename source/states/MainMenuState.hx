@@ -177,6 +177,11 @@ class MainMenuState extends MusicBeatState
 		else
 			menuItem.frames = Paths.getSparrowAtlas('${name}_button');
 
+		if(name == 'freeplay')
+		{
+			if(ClientPrefs.data.ends[0] == 0) menuItem.color = 0xFF232323;
+		}
+
 		menuItem.animation.addByPrefix('idle', '${name}_normal', 24, true);
 		menuItem.animation.addByPrefix('selected', '${name}_hover', 24, true);
 		menuItem.animation.play('idle');
@@ -286,6 +291,10 @@ class MainMenuState extends MusicBeatState
 
 				if ((curColumn != NONE && FlxG.mouse.justPressed))
 				{
+					if (curSelected == 1)
+					{
+						if(ClientPrefs.data.ends[0] == 0) return;
+					}
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					selectedSomethin = true;
 
@@ -317,7 +326,7 @@ class MainMenuState extends MusicBeatState
 						switch (option)
 						{
 							case 'story': MusicBeatState.switchState(new StoryMenuState());
-							case 'freeplay': MusicBeatState.switchState(new FreeplaySelectState());
+							case 'freeplay': if(ClientPrefs.data.ends[0] == 1) MusicBeatState.switchState(new FreeplaySelectState());
 							#if ACHIEVEMENTS_ALLOWED
 							case 'awards': MusicBeatState.switchState(new AchievementsStatePVZ());
 							case 'trophy': MusicBeatState.switchState(new AchievementsStatePVZ());
@@ -358,6 +367,11 @@ class MainMenuState extends MusicBeatState
 
 		for (item in menuItems)
 			item.animation.play('idle');
+
+		if (curSelected == 1)
+		{
+			if(ClientPrefs.data.ends[0] == 0) return;
+		}
 
 		var selectedItem:FlxSprite;
 		switch(curColumn)

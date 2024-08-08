@@ -1,6 +1,13 @@
 -- CHANGE THE OFFSET VARIABLE FOR MORE OR LESS CAMERA MOVEMENT!!
 local offset = 30
 --
+
+function onCreate()
+	if curStage == 'roof-old' then
+		close()
+	end
+end
+
 local function follow(data, mustPress, type)
 	if type ~= "No Animation" and type ~= "Hey!" and type ~= "Hurt Note" and (gfSection or mustPress == nil or mustPress == mustHitSection) then
 		local x, y = 0, 0

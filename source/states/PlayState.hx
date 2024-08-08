@@ -2148,9 +2148,6 @@ class PlayState extends MusicBeatState
 			iconP2.animation.curAnim.curFrame = 0;
 			if(curSong == 'Lore') iconGF.animation.curAnim.curFrame = 0;
 		}
-
-		if (controls.justPressed('debug_2') && !endingSong && !inCutscene)
-			openCharacterEditor();
 		
 		if (startedCountdown && !paused)
 			Conductor.songPosition += FlxG.elapsed * 1000 * playbackRate;
@@ -3539,7 +3536,7 @@ class PlayState extends MusicBeatState
 		if(daRating.noteSplash && !note.noteSplashData.disabled)
 			spawnNoteSplashOnNote(note);
 
-		if(!practiceMode /*&& !cpuControlled*/) {
+		if(!practiceMode && !cpuControlled) {
 			songScore += score;
 			if(!note.ratingDisabled)
 			{
