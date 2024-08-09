@@ -20,7 +20,7 @@ enum MainMenuColumn {
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '1.0.0'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '1.0.1'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 	public static var curColumn:MainMenuColumn = NONE;
 
@@ -291,7 +291,7 @@ class MainMenuState extends MusicBeatState
 
 				if ((curColumn != NONE && FlxG.mouse.justPressed))
 				{
-					if (curSelected == 1)
+					if (curColumn == CENTER && curSelected == 1)
 					{
 						if(ClientPrefs.data.ends[0] == 0) return;
 					}
@@ -368,7 +368,7 @@ class MainMenuState extends MusicBeatState
 		for (item in menuItems)
 			item.animation.play('idle');
 
-		if (curSelected == 1)
+		if (curColumn == CENTER && curSelected == 1)
 		{
 			if(ClientPrefs.data.ends[0] == 0) return;
 		}
