@@ -192,7 +192,7 @@ class Roof extends BaseStage
 
 		if(fire)
 			if (game.health >= 0.4)
-				game.health -= 0.001;
+				game.health -= 0.001 * (elapsed/(1/60));
 
 		if(canRain)
 		{

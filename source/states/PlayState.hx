@@ -2006,7 +2006,7 @@ class PlayState extends MusicBeatState
 
 		FlxG.camera.followLerp = 0;
 		if(!inCutscene && !paused && !cameraLocked) {
-			FlxG.camera.followLerp = FlxMath.bound(elapsed * 2.4 * cameraSpeed * playbackRate / (FlxG.updateFramerate / 60), 0, 1);
+			FlxG.camera.followLerp = FlxMath.bound(elapsed * 2.4 * cameraSpeed * playbackRate * (FlxG.updateFramerate / 60), 0, 1);
 			if(!startingSong && !endingSong && boyfriend.animation.curAnim != null && boyfriend.animation.curAnim.name.startsWith('idle')) {
 				boyfriendIdleTime += elapsed;
 				if(boyfriendIdleTime >= 0.15) { // Kind of a mercy thing for making the achievement easier to get as it's apparently frustrating to some playerss
@@ -2022,11 +2022,11 @@ class PlayState extends MusicBeatState
 			dropTime -= elapsed;
 			if(japHit <= 3)
 			{
-				if(health > 0.1) health -= healthDrop * (elapsed/(1/120));
+				if(health > 0.1) health -= healthDrop * (elapsed/(1/60));
 			}
 			else
 			{
-				health -= healthDrop * (elapsed/(1/120));
+				health -= healthDrop * (elapsed/(1/60));
 			}
 			healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
 			FlxColor.fromRGB(255, 138, 0));
@@ -2045,7 +2045,7 @@ class PlayState extends MusicBeatState
 		if (rotCam)
 		{
 			rotCamInd++;
-			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange;
+			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange * (elapsed/(1/60));
 		}
 		else
 		{
