@@ -254,7 +254,7 @@
         {
             "picture":"no-icon",
             "nickname":"Spirl",
-            "work":"Charter",
+            "work":"Chromtatic scale maker",
             "wish":"Makes chromatics like a fucker",
             "socialnetwork": {
                 "youtube":"https://youtube.com/@HelpWmods"
@@ -317,6 +317,13 @@
             "socialnetwork": {
                  "youtube": "https://youtube.com/@misterkirpi4?si=u60AUyZh0Xh4eIlU"
             }
+        },
+        {
+            "picture":"no-icon",
+            "nickname":"Broked",
+            "work":"Charter",
+            "wish":"Klork was charted by him",
+            "socialnetwork": {}
         }
     ]
 }
