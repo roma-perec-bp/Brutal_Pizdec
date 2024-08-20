@@ -367,7 +367,7 @@ class FreeplayState extends MusicBeatState
 					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1, true);
 					cantDo = true;
 					destroyFreeplayVocals();
-		
+					
 					for (i in 0...grpSongs.members.length)
 					{
 						if (i == curSelected[freeplayType])

@@ -2020,7 +2020,7 @@ class PlayState extends MusicBeatState
 		if(dropTime > 0)
 		{
 			dropTime -= elapsed;
-			if(japHit <= 3)
+			if(japHit <= 5)
 			{
 				if(health > 0.1) health -= healthDrop * (elapsed/(1/60));
 			}
@@ -2082,15 +2082,18 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
-					achievementObj.onFinish = ebatLoh;
+					//achievementObj.onFinish = ebatLoh;
+					achievementObj.onFinish = openChartEditor();;
 					add(achievementObj);
 					ClientPrefs.saveSettings();
 				}
 				else
 				#end
-				ebatLoh();
+				//ebatLoh();
+				openChartEditor();
 			} else {
-				ebatLoh();
+				//ebatLoh();
+				openChartEditor();
 			}
 		}
 
@@ -3105,7 +3108,7 @@ class PlayState extends MusicBeatState
 		if (!FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
 			FlxG.save.data.playedSongs.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
 
-		if(songMisses == 0 && deathCounter == 0)
+		if(songMisses == 0 && deathCounter == 0 && !cpuControlled)
 		{
 			if (!FlxG.save.data.playedSongsFC.contains(CoolUtil.spaceToDash(SONG.song.toLowerCase())))
 				FlxG.save.data.playedSongsFC.push(CoolUtil.spaceToDash(SONG.song.toLowerCase()));
@@ -3207,7 +3210,6 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-//					Mods.loadTopMod();
 					#if desktop DiscordClient.resetClientID(); #end
 
 					cancelMusicFadeTween();
@@ -3993,12 +3995,18 @@ class PlayState extends MusicBeatState
 		}
 
 		if(note.noteType == 'Jalapeno Note BOOM SOUND') {
-			if (health >= 0.4) health -=  0.1;
+			if (health >= 1) health -=  0.1;
 			fireHalapeno.alpha = 0.5;
-			fireFlash.alpha = 0.4;
-			FlxG.camera.zoom += 0.02;
-			camHUD.zoom += 0.02;
 			fireHalapeno.animation.play('idle');
+			
+			if (ClientPrefs.data.flashing)
+				fireFlash.alpha = 0.4;
+
+			if(ClientPrefs.data.camZooms)
+			{
+				FlxG.camera.zoom += 0.02;
+				camHUD.zoom += 0.02;
+			}
 		}
 
 		if (SONG.needsVoices)
@@ -4086,16 +4094,29 @@ class PlayState extends MusicBeatState
 
 						case 'Jalapeno Note NEW':
 							FlxG.sound.play(Paths.sound('boom'), 0.6);
-							health -=  0.06;
+
+							if(japHit <= 5)
+							{
+								if(health > 0.1) health -=  0.06;
+							}
+							else
+								health -=  0.06;
+
 							fireHalapeno.alpha = 0.8;
-							fireFlash.alpha = 0.6;
-							FlxG.camera.zoom += 0.06;
-							camHUD.zoom += 0.06;
 							dropTime = 10;
 							healthDrop += 0.00050;
 							iconP1.scale.set(1, 1);
 							iconP1.changeIcon('hwaw-fire');
 							japHit++;
+
+							if (ClientPrefs.data.flashing)
+								fireFlash.alpha = 0.6;
+
+							if(ClientPrefs.data.camZooms)
+							{
+								FlxG.camera.zoom += 0.06;
+								camHUD.zoom += 0.06;
+							}
 
 							// checking achievement
 							Achievements.loadAchievements();
@@ -4703,19 +4724,19 @@ class PlayState extends MusicBeatState
 		for (i in 0...achievesToCheck.length) {
 			var achievementName:String = achievesToCheck[i];
 			Achievements.loadAchievements();
-			if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled && Achievements.getAchievementIndex(achievementName) > -1) {
+			if(!Achievements.isAchievementUnlocked(achievementName) && Achievements.getAchievementIndex(achievementName) > -1) {
 				var unlock:Bool = false;
-				if (achievementName == WeekData.getWeekFileName() + '_nomiss') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
+				if (achievementName == WeekData.getWeekFileName() + '_nomiss' && !cpuControlled) // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
 					if(isStoryMode && campaignMisses + songMisses < 1 && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						unlock = true;
 				}
-				else if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths') // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
+				else if (achievementName == WeekData.getWeekFileName() + '_nomiss_nodeaths' && !cpuControlled) // any FC achievements, name should be "weekFileName_nomiss", e.g: "week3_nomiss";
 				{
 					if(isStoryMode && campaignMisses + songMisses < 1 && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice && deathCounter == 0)
 						unlock = true;
 				}
-				else if (achievementName == songName.toLowerCase() + "_freeplay_nomiss")
+				else if (achievementName == songName.toLowerCase() + "_freeplay_nomiss" && !cpuControlled)
 				{
 					if(!isStoryMode && songMisses < 1 && !changedDifficulty && !usedPractice)
 						unlock = true;

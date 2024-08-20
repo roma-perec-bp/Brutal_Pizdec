@@ -222,7 +222,7 @@ class FlashingState extends MusicBeatState
 					leftState = true;
 					canChoose = false;
 					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-					ClientPrefs.data.flashing = true;
+					ClientPrefs.data.flashing = false;
 					ClientPrefs.saveSettings();
 					if (startTimer != null) startTimer.cancel();
 					FlxFlicker.flicker(noText, 1, 0.06, true, false, function(flick:FlxFlicker)

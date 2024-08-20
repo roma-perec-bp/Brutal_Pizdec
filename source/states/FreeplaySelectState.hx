@@ -146,7 +146,7 @@ class FreeplaySelectState extends MusicBeatState{
 	{
 		disableInput = true;
 		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		FlxTween.tween(FlxG.camera, {zoom:1.2}, 0.3, {ease: FlxEase.quadOut});
+		if(ClientPrefs.data.camZooms) FlxTween.tween(FlxG.camera, {zoom:1.2}, 0.3, {ease: FlxEase.quadOut});
 		FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 		FlxFlicker.flicker(sprItemsGroup.members[curSelected], 1, 0.06, true, false, function(flick:FlxFlicker)
 		{

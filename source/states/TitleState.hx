@@ -452,7 +452,8 @@ class TitleState extends MusicBeatState
 
 		if(skippedIntro) 
 			if(!noZoom)
-				FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
+				if(ClientPrefs.data.camZooms)
+					FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
@@ -479,7 +480,7 @@ class TitleState extends MusicBeatState
 					FlxTween.tween(logo, {angle: 0}, 0.3, {ease: FlxEase.quadOut});
 					logo.scale.set(0.55, 0.55);
 					FlxTween.tween(logo.scale, {x: 0.45, y: 0.45}, 0.5, {ease: FlxEase.quadOut});
-					FlxTween.tween(white, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+					if(ClientPrefs.data.flashing) FlxTween.tween(white, {alpha: 1}, 0.8, {ease: FlxEase.linear});
 					if(!skippedIntro) FlxTween.tween(FlxG.camera, {zoom: 1.9}, 1.2, {ease: FlxEase.quadIn});
 				case 8:
 					logo.angle = -17;
