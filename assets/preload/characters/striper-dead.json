@@ -34,12 +34,12 @@
 		1000,
 		0
 	],
-	"healthicon": "pososi",
+	"healthicon": "jap-wheel",
 	"flip_x": false,
 	"healthbar_colors": [
-		190,
-		206,
-		182
+		192,
+		7,
+		10
 	],
 	"camera_position": [
 		-600,
