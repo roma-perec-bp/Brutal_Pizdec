@@ -1,5 +1,3 @@
-local timePassed
-
 function onSongStart()
     runHaxeCode([[
         game.songLength = (136 * 1000);

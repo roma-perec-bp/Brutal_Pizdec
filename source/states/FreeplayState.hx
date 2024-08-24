@@ -196,7 +196,7 @@ class FreeplayState extends MusicBeatState
 		add(scoreText);
 
 		// медальки
-		medal = new FlxSprite(FlxG.width - 285, -235).loadGraphic(Paths.image('medals/medal_1'));
+		medal = new FlxSprite(FlxG.width - 285, -235).loadGraphic(Paths.image('medals/medal_7'));
 		medal.scale.set(0.2, 0.2);
 		medal.updateHitbox();
 		medal.antialiasing = ClientPrefs.data.antialiasing;
@@ -637,8 +637,6 @@ class FreeplayState extends MusicBeatState
 		intendedScore = Highscore.getScore(songs[curSelected[freeplayType]].songName, curDifficulty);
 		intendedRating = Highscore.getRating(songs[curSelected[freeplayType]].songName, curDifficulty);
 		#end
-
-		uniqueMedalChange(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty));
 		
 		Mods.currentModDirectory = songs[curSelected[freeplayType]].folder;
 		PlayState.storyWeek = songs[curSelected[freeplayType]].week;
@@ -658,6 +656,8 @@ class FreeplayState extends MusicBeatState
 
 		changeDiff();
 		_updateSongLastDifficulty();
+
+		uniqueMedalChange(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty));
 	}
 
 	private function positionHighscore() {

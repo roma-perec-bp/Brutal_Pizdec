@@ -106,7 +106,8 @@ class Roof extends BaseStage
 
 		if(PlayState.SONG.song == 'Overfire')
 		{
-			if(!ClientPrefs.data.lowQuality) {
+			if(!ClientPrefs.data.lowQuality)
+			{
 				splash = new FlxSprite(0, 1000);
 				splash.frames = Paths.getSparrowAtlas('splash');
 				splash.animation.addByPrefix('loop', 'splash loop', 15, true);
@@ -242,7 +243,7 @@ class Roof extends BaseStage
 		switch(eventName)
 		{
 			case 'burn with cone':
-				FlxG.camera.flash(0xffff4d00, 1, null, true);
+				FlxG.camera.flash(ClientPrefs.data.flashing ? 0xffff4d00 : 0x4cff4d00, 1, null, true);
 				FlxG.sound.play(Paths.sound('boom'), 0.6);
 				game.health -= 0.5;
 				fire = !fire;
@@ -283,7 +284,7 @@ class Roof extends BaseStage
 				splash.visible = false;
 				canRain = false;
 			case 'night cum':
-				game.camHUD.flash(0xffFFFFFF, 3);
+				game.camHUD.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 3);
 				day.visible = false;
 				game.boyfriendGroup.color = 0xFF44145f;
 				roof.color = 0xFF44145f;

@@ -1982,7 +1982,7 @@ class PlayState extends MusicBeatState
 	public static var rotCam = false;
 	var rotCamSpd:Float = 1;
 	var rotCamRange:Float = 10;
-	var rotCamInd = 0;
+	var rotCamInd:Float = 0;
 
 	override public function update(elapsed:Float)
 	{
@@ -1995,13 +1995,13 @@ class PlayState extends MusicBeatState
 		if(curStage == 'roof-old' || curStage == 'night')
 		{
 			if (fireHalapeno.alpha >= 0)
-				fireHalapeno.alpha -= 0.01;
+				fireHalapeno.alpha -= 0.01 * (elapsed/(1/60));
 		}
 
 		if(curStage == 'night')
 		{
 			if (fireFlash.alpha >= 0)
-				fireFlash.alpha -= 0.01;
+				fireFlash.alpha -= 0.01 * (elapsed/(1/60));
 		}
 
 		FlxG.camera.followLerp = 0;
@@ -2044,8 +2044,8 @@ class PlayState extends MusicBeatState
 
 		if (rotCam)
 		{
-			rotCamInd++;
-			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange * (elapsed/(1/60));
+			rotCamInd += 1 / (FlxG.updateFramerate / 60);
+			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange * (FlxG.updateFramerate / 60);
 		}
 		else
 		{
@@ -2083,7 +2083,7 @@ class PlayState extends MusicBeatState
 					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
 					//achievementObj.onFinish = ebatLoh;
-					achievementObj.onFinish = openChartEditor();;
+					achievementObj.onFinish = openChartEditor;
 					add(achievementObj);
 					ClientPrefs.saveSettings();
 				}
@@ -2766,6 +2766,9 @@ class PlayState extends MusicBeatState
 			case 'Play Sound':
 				if(flValue2 == null) flValue2 = 1;
 				FlxG.sound.play(Paths.sound(value1), flValue2);
+
+			case 'go back health':
+				FlxTween.tween(this, {health: 1}, 1, {ease: FlxEase.elasticInOut});
 
 			case 'Show Song':
 				if (task != null) task.start(); //если хочешь то вот

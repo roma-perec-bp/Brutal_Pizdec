@@ -132,6 +132,7 @@ class ChartingState extends MusicBeatState
 		['trans overfire', "only overfire"],
 		['night time', "only hlork"],
 		['night cum', "only overfire"],
+		['go back health', "only overfire"],
 		['oh well', "only overfire"],
 		['evening time', "only hlork"],
 		['slow evening time', "only hlork"],

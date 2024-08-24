@@ -13,20 +13,26 @@ class Random extends BaseStage
 		bg.setGraphicSize(Std.int(bg.width * 1.5));
 		add(bg);
 
-		var clouds:BGSprite = new BGSprite('clouds', 0, 0, 0.3, 0.3);
-		clouds.setGraphicSize(Std.int(clouds.width * 1.5));
-		add(clouds);
+		if(!ClientPrefs.data.lowQuality) 
+		{
+			var clouds:BGSprite = new BGSprite('clouds', 0, 0, 0.3, 0.3);
+			clouds.setGraphicSize(Std.int(clouds.width * 1.5));
+			add(clouds);
 
-		var trees:BGSprite = new BGSprite('trees', 0, 0, 0.9, 0.9);
-		trees.setGraphicSize(Std.int(trees.width * 1.5));
-		add(trees);
+			var trees:BGSprite = new BGSprite('trees', 0, 0, 0.9, 0.9);
+			trees.setGraphicSize(Std.int(trees.width * 1.5));
+			add(trees);
+		}
 
 		var zabor:BGSprite = new BGSprite('zabor', 0, 0);
 		zabor.setGraphicSize(Std.int(zabor.width * 1.5));
 		add(zabor);
 
-		var shit:BGSprite = new BGSprite('stuff', 0, 0);
-		shit.setGraphicSize(Std.int(shit.width * 1.5));
-		add(shit);
+		if(!ClientPrefs.data.lowQuality) 
+		{
+			var shit:BGSprite = new BGSprite('stuff', 0, 0);
+			shit.setGraphicSize(Std.int(shit.width * 1.5));
+			add(shit);
+		}
 	}
 }

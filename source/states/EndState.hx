@@ -210,7 +210,7 @@ class EndState extends MusicBeatState
 			trophy.color = 0xFFFFFFFF;
 			FlxTween.tween(trophy, {x: 542.8, y: 185.1}, 5, {ease: FlxEase.quadOut});
 			FlxTween.tween(trophy.scale, {x: 0.36, y: 0.36}, 5, {ease: FlxEase.quadOut});
-			FlxG.camera.fade(FlxColor.WHITE : 0x4CFFFFFF, 6);
+			FlxG.camera.fade(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 6);
 			FlxG.sound.play(Paths.sound('winMusic'));
 			FlxG.sound.play(Paths.sound('lightfill'));
 			new FlxTimer().start(7, function(tmr:FlxTimer)
