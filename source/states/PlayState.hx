@@ -4678,6 +4678,8 @@ class PlayState extends MusicBeatState
 		else if (songMisses < 10)
 			ratingFC = 'SDCB';
 
+		if(changedDifficulty) return; //хуй а не фри мани
+
 		if (sicks == totalNotes)
 			medalStatus = 0;
 
@@ -4690,7 +4692,7 @@ class PlayState extends MusicBeatState
 		if (grade == 1.00)
 		{
 			if(ratingFC == 'SFC') medalStatus = 0;
-			else medalStatus = 1;
+			else if(ratingFC == 'GFC') medalStatus = 1;
 		}
 		else if (grade >= 0.80)
 			medalStatus = 2;
@@ -4707,21 +4709,6 @@ class PlayState extends MusicBeatState
 			uniqueMedalChange(medalStatus+1);
 			medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
 		}
-
-		/*var cur:Float = (songHits*350/fullScore)*200;
-		for(i in 0...medal_system.length)
-		{
-			if(cur < medal_system[i][1] && cur >= medal_system[i][0])
-			{
-				medalStatus = i;
-				if (medalOldStatus != medalStatus)
-					{
-					medalOldStatus = medalStatus;
-					uniqueMedalChange(medalStatus+1);
-					medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
-				}
-			}
-		}*/
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
