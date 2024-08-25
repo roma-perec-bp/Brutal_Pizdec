@@ -41,6 +41,7 @@ class Note extends FlxSprite
 	public var canBeHit:Bool = false;
 	public var tooLate:Bool = false;
 	public var wasGoodHit:Bool = false;
+	public var missed:Bool = false;
 	public var ignoreNote:Bool = false;
 	public var hitByOpponent:Bool = false;
 	public var noteWasHit:Bool = false;
@@ -372,7 +373,7 @@ class Note extends FlxSprite
 					noteSplashData.r = 0xFFff0000;
 					noteSplashData.g = 0xFF003806;
 					hitCausesMiss = true;
-					earlyHitMult = 0.5;
+					earlyHitMult = 0.25;
 					lateHitMult = 0.5;
 					missHealth = 0.25;
 					lowPriority = true;

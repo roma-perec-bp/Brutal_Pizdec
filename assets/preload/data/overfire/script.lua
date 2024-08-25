@@ -107,8 +107,8 @@ function onStepHit()
     if curStep == 3008 then
         setProperty('dad.alpha', 0)
     end  
-    if curStep == 3016 then
-        setProperty('boyfriendGroup.color', getColorFromHex('44145f'))
+    if curStep == 3009 then
+        doTweenColor('oh', 'boyfriend', '44145f', 0.001)
     end  
     if curStep == 3520 then
         canDrain = true
