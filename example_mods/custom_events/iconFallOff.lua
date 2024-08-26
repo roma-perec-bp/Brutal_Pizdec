@@ -20,9 +20,9 @@ function onEvent(eventName, value1, value2)
         mult = shit/2
 
         loadGraphic('fakeIcon', 'icons/'..value1) -- Load stupidly first for getting the file size
-        loadGraphic('fakeIcon', 'icons/'..value1, getProperty('fakeIcon.width')/2, getProperty('fakeIcon.height')) -- Then load it fr
+        loadGraphic('fakeIcon', 'icons/'..value1, getProperty('fakeIcon.width')/3, getProperty('fakeIcon.height')) -- Then load it fr
 
-        addAnimation('fakeIcon','lose', {1, 0, 2}, 0, true) 
+        addAnimation('fakeIcon','lose', {1}, 0, true) 
 
         playAnim('fakeIcon', 'lose')
 
@@ -35,6 +35,7 @@ function onEvent(eventName, value1, value2)
         setProperty('fakeIcon.angle', 0)
         setProperty('fakeIcon.visible', true)
         setObjectOrder('fakeIcon',getObjectOrder('iconP2') + 1)
+        setProperty('fakeIcon.color', getColorFromHex('000000'))
     end
 end
 
