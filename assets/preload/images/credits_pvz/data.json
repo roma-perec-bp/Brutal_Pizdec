@@ -319,11 +319,13 @@
             }
         },
         {
-            "picture":"no-icon",
-            "nickname":"Broked",
-            "work":"Charter",
-            "wish":"Klork was charted by him",
-            "socialnetwork": {}
+            "picture":"sonic",
+            "nickname":"HedgehogGamer",
+            "work":"Best Memes ever",
+            "wish":"I promised to add him here",
+            "socialnetwork": {
+                "youtube": "https://www.youtube.com/channel/UC7wXXnYySl-KYOwBQ1dUnEg"
+           }
         }
     ]
 }

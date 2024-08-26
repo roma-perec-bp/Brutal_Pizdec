@@ -92,6 +92,7 @@ class FreeplayState extends MusicBeatState
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
+		WeekData.reloadWeekFiles(false);
 
 		#if desktop
 		// Updating Discord Rich Presence
@@ -639,6 +640,8 @@ class FreeplayState extends MusicBeatState
 		
 		Mods.currentModDirectory = songs[curSelected[freeplayType]].folder;
 		PlayState.storyWeek = songs[curSelected[freeplayType]].week;
+
+		Difficulty.resetList();
 		
 		var savedDiff:String = songs[curSelected[freeplayType]].lastDifficulty;
 		var lastDiff:Int = Difficulty.list.indexOf(lastDifficultyName);

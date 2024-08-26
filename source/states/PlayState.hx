@@ -1312,7 +1312,7 @@ class PlayState extends MusicBeatState
 			if(image != 'go' && image != 'wave' && image != 'finalwave')
 			{
 				FlxTween.tween(spr.scale, {x: 1, y: 1}, Conductor.crochet / 1000, {
-					ease: FlxEase.linear
+					ease: FlxEase.linear,
 				});
 			}
 			
