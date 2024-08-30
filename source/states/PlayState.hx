@@ -2010,7 +2010,7 @@ class PlayState extends MusicBeatState
 
 		if(curSong == 'Lore')
 			{
-				var mult:Float = FlxMath.lerp(1, iconROM.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
+				var mult:Float = FlxMath.lerp(1, iconGF.scale.x, FlxMath.bound(1 - (elapsed * 9 * playbackRate), 0, 1));
 				iconGF.scale.set(mult, mult);
 				iconGF.updateHitbox();
 			}
