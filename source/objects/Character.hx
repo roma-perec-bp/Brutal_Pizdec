@@ -28,6 +28,7 @@ typedef CharacterFile = {
 	var flip_x:Bool;
 	var no_antialiasing:Bool;
 	var healthbar_colors:Array<Int>;
+	var notes_colors:Array<Array<String>>;
 }
 
 typedef AnimArray = {
@@ -72,6 +73,12 @@ class Character extends FlxSprite
 	public var noAntialiasing:Bool = false;
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
+	public var arrowColor:Array<Array<String>> = [
+		["0xFFC24B99", "0xFFFFFFFF", "0xFF3C1F56"],
+		["0xFF00FFFF", "0xFFFFFFFF", "0xFF1542B7"],
+		["0xFF12FA05", "0xFFFFFFFF", "0xFF0A4447"],
+		["0xFFF9393F", "0xFFFFFFFF", "0xFF651038"]
+	];
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
 	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
@@ -145,6 +152,8 @@ class Character extends FlxSprite
 
 				if(json.healthbar_colors != null && json.healthbar_colors.length > 2)
 					healthColorArray = json.healthbar_colors;
+
+				if(json.notes_colors != null) arrowColor = json.notes_colors;
 
 				// antialiasing
 				noAntialiasing = (json.no_antialiasing == true);
@@ -285,7 +294,7 @@ class Character extends FlxSprite
 					playAnim('danceLeft' + idleSuffix);
 			}
 			else if(animation.getByName('idle' + idleSuffix) != null) {
-					playAnim('idle' + idleSuffix);
+					playAnim('idle' + idleSuffix, true);
 			}
 		}
 	}

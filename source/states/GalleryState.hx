@@ -17,10 +17,13 @@ import flixel.addons.display.FlxBackdrop;
 class GalleryState extends MusicBeatState
 {
     var images = [];
-    var paths = ["Arts", "Memes", "Other"];
+    var paths = ["Arts", "Memes", "OST arts", "Other"];
     var name:FlxText; 
     var author:FlxText;
     var pathname:FlxText;
+
+    var leftArrows:FlxSprite;
+	var rightArrows:FlxSprite;
 
     var debug:FlxText;
 
@@ -31,6 +34,8 @@ class GalleryState extends MusicBeatState
 
 	override function create()
     {
+        final ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+
         var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("gallery_pvz/bg"));
         add(bg);
 
@@ -98,10 +103,30 @@ class GalleryState extends MusicBeatState
 
         debug = new FlxText(5, 5, 0, "You can use the mouse wheel to zoom in and out of the picture!", 55);
 		debug.setFormat(Paths.font("HouseofTerror.ttf"), 15, 0xFFFFFF, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        debug.alpha = 0.4;
+        debug.alpha = 0.7;
         debug.screenCenter(X);
 		debug.borderSize = 1.5;
 		add(debug);
+
+        if (leftArrows == null){
+			leftArrows = new FlxSprite(10, 300);
+			leftArrows.antialiasing = ClientPrefs.data.antialiasing;
+			leftArrows.frames = ui_tex;
+			leftArrows.animation.addByPrefix('idle', "arrow left");
+			leftArrows.animation.addByPrefix('press', "arrow push left");
+			leftArrows.animation.play('idle');
+		}
+		add(leftArrows);
+
+		if (rightArrows == null){
+			rightArrows = new FlxSprite(leftArrows.x + 1210, leftArrows.y);
+			rightArrows.antialiasing = ClientPrefs.data.antialiasing;
+			rightArrows.frames = ui_tex;
+			rightArrows.animation.addByPrefix('idle', 'arrow right');
+			rightArrows.animation.addByPrefix('press', "arrow push right", 24, false);
+			rightArrows.animation.play('idle');
+		}
+		add(rightArrows);
         
         changeButtons();
         name.screenCenter(X);
@@ -116,7 +141,17 @@ class GalleryState extends MusicBeatState
 
     override function update(elapsed:Float) 
     {
-        if(FlxG.keys.justPressed.LEFT) 
+        if (controls.UI_RIGHT || FlxG.mouse.overlaps(rightArrows))
+            rightArrows.animation.play('press')
+        else
+            rightArrows.animation.play('idle');
+
+        if (controls.UI_LEFT || FlxG.mouse.overlaps(leftArrows))
+            leftArrows.animation.play('press');
+        else
+            leftArrows.animation.play('idle');
+
+        if (controls.UI_LEFT_P || FlxG.mouse.overlaps(leftArrows) && FlxG.mouse.justPressed)
         {
             changeButtons(-1);
             name.screenCenter(X);
@@ -125,7 +160,7 @@ class GalleryState extends MusicBeatState
             FlxG.sound.play(Paths.sound('scrollMenu'));
         }
         
-        if(FlxG.keys.justPressed.RIGHT) 
+        if (controls.UI_RIGHT_P || FlxG.mouse.overlaps(rightArrows) && FlxG.mouse.justPressed) 
         {
             changeButtons(1);
             name.screenCenter(X);
@@ -162,7 +197,7 @@ class GalleryState extends MusicBeatState
         if(controls.BACK)
         {
             FlxG.sound.play(Paths.sound('cancelMenu'));
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 1, true);
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7, true);
             MusicBeatState.switchState(new MainMenuState());
         }
 

@@ -1,6 +1,7 @@
 package states.stages;
 
 import states.stages.objects.*;
+import substates.GameOverSubstate;
 import objects.Character;
 
 class OldRoof extends BaseStage
@@ -8,6 +9,10 @@ class OldRoof extends BaseStage
 	var bg2:BGSprite;
 	override function create()
 	{
+		var _song = PlayState.SONG;
+		if(_song.gameOverLoop == null || _song.gameOverLoop.trim().length < 1) GameOverSubstate.loopSoundName = 'gameOver-old';
+		if(_song.gameOverEnd == null || _song.gameOverEnd.trim().length < 1) GameOverSubstate.endSoundName = 'gameOverEnd-old';
+
 		var bg:BGSprite = new BGSprite('roof', -600, -200, 0.9, 0.9);
 		bg.setGraphicSize(Std.int(bg.width * 1.4));
 		bg.updateHitbox();

@@ -29,7 +29,7 @@ class PauseSubState extends MusicBeatSubstate
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
-	var practiceText:FlxText;
+	var bpText:FlxText;
 	//var botplayText:FlxText;
 
 	var dragDropObj:FlxSprite;
@@ -58,6 +58,14 @@ class PauseSubState extends MusicBeatSubstate
 		bg.alpha = 0;
 		bg.scrollFactor.set();
 		add(bg);
+
+		bpText = new FlxText(20, 15, 0, "BOTPLAY ON", 32);
+		bpText.scrollFactor.set();
+		bpText.setFormat(Paths.font('vcr.ttf'), 32);
+		bpText.x = FlxG.width - (bpText.width + 20);
+		bpText.updateHitbox();
+		bpText.visible = PlayState.instance.cpuControlled;
+		add(bpText);
 
 		var chartingText:FlxText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
 		chartingText.scrollFactor.set();
@@ -136,15 +144,6 @@ class PauseSubState extends MusicBeatSubstate
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 
-		// if (upP)
-		// {
-		// 	changeSelection(-1);
-		// }
-		// if (downP)
-		// {
-		// 	changeSelection(1);
-		// }
-
 		changeButtons();
 
 		if (FlxG.mouse.overlaps(dragDropObj) && FlxG.mouse.pressed)
@@ -181,6 +180,7 @@ class PauseSubState extends MusicBeatSubstate
 						PlayState.instance.botplayTxt.visible = PlayState.instance.cpuControlled;
 						PlayState.instance.botplayTxt.alpha = 1;
 						PlayState.instance.botplaySine = 0;
+						bpText.visible = PlayState.instance.cpuControlled;
 					case "Exit to menu":
 						PlayState.deathCounter = 0;
 						PlayState.seenCutscene = false;
@@ -189,7 +189,7 @@ class PauseSubState extends MusicBeatSubstate
 						} else {
 							MusicBeatState.switchState(new FreeplayState());
 						}
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
 						PlayState.changedDifficulty = false;
 						PlayState.chartingMode = false;
 				}

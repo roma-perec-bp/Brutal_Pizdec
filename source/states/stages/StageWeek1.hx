@@ -34,7 +34,7 @@ class StageWeek1 extends BaseStage
 			add(stageCurtains);
 		}
 
-		if(PlayState.SONG.song == 'Lore')
+		if(PlayState.SONG != null && PlayState.SONG.song == 'Lore')
 		{
 			setStartCallback(startCut);
 			setEndCallback(endCut);
@@ -88,9 +88,11 @@ class StageWeek1 extends BaseStage
 				dadbattleLight.visible = false;
 				add(dadbattleLight);
 
-				dadbattleFog = new DadBattleFog();
-				dadbattleFog.visible = false;
-				add(dadbattleFog);
+				if(!ClientPrefs.data.lowQuality) {
+					dadbattleFog = new DadBattleFog();
+					dadbattleFog.visible = false;
+					add(dadbattleFog);
+				}
 		}
 	}
 
@@ -133,7 +135,7 @@ class StageWeek1 extends BaseStage
 						dadbattleBlack.visible = false;
 						dadbattleLight.visible = false;
 						defaultCamZoom -= 0.12;
-						FlxTween.tween(dadbattleFog, {alpha: 0}, 0.7, {onComplete: function(twn:FlxTween) dadbattleFog.visible = false});
+						if(!ClientPrefs.data.lowQuality) FlxTween.tween(dadbattleFog, {alpha: 0}, 0.7, {onComplete: function(twn:FlxTween) dadbattleFog.visible = false});
 				}
 		}
 	}

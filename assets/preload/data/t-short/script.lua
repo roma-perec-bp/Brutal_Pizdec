@@ -33,6 +33,7 @@ function onBeatHit()
         setProperty('blammedLightsBlack.alpha', 1)
         setProperty('dad.color', getColorFromHex('FF2a1c4d'))
         setProperty('boyfriend.color', getColorFromHex('FF2a1c4d'))
+        setProperty('gf.color', getColorFromHex('FF2a1c4d'))
         cameraFlash('camhud', '0xFFFFFFFF', 1)
     end
     if curBeat == 756 then
@@ -42,6 +43,7 @@ function onBeatHit()
     if curBeat == 816 then
         doTweenAlpha('sex1', 'blammedLightsBlack', 0, 20)
         doTweenColor('dad', 'dad', 'ffffff', 20)
+        doTweenColor('gf', 'gf', 'ffffff', 20)
         doTweenColor('bf', 'boyfriend', 'ffffff', 20)
     end
 

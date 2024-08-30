@@ -20,6 +20,7 @@ import shaders.ColorSwap;
 
 import states.StoryMenuState;
 import states.MainMenuState;
+import states.SetLanguageState;
 
 #if MODS_ALLOWED
 import sys.FileSystem;
@@ -80,10 +81,6 @@ class TitleState extends MusicBeatState
 		#end
 //		Mods.loadTopMod();
 
-		FlxG.fixedTimestep = false;
-		FlxG.game.focusLostFramerate = 60;
-		FlxG.keys.preventDefaultKeys = [TAB];
-
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
 		super.create();
@@ -92,8 +89,6 @@ class TitleState extends MusicBeatState
 
 		ClientPrefs.loadPrefs();
 
-		//FlxG.mouse.unload();
-		//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);
 		Highscore.load();
 
 		// IGNORE THIS!!!
@@ -114,6 +109,7 @@ class TitleState extends MusicBeatState
 			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
 
 		if (FlxG.save.data.playedSongs == null) FlxG.save.data.playedSongs = [];
+		if (FlxG.save.data.playedSongsFC == null) FlxG.save.data.playedSongsFC = [];
 
 		FlxG.mouse.visible = false;
 		#if FREEPLAY
@@ -193,7 +189,7 @@ class TitleState extends MusicBeatState
 		gfDance.antialiasing = ClientPrefs.data.antialiasing;
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 		gfDance.animation.addByPrefix('japDance', 'dance', 24, false);
-		gfDance.scale.set(0.65,0.65);
+		gfDance.scale.set(0.45,0.45);
 		gfDance.screenCenter(X);
 
 		var logotrail:FlxTrail = new FlxTrail(gfDance, null, 3, 6, 0.3, 0.002);
@@ -379,11 +375,15 @@ class TitleState extends MusicBeatState
 				FlxTween.cancelTweensOf(FlxG.camera);
 				FlxTween.tween(FlxG.camera, {zoom: 3}, 1.5, {ease: FlxEase.backIn});
 				FlxTween.tween(titleText, {alpha: 0}, 0.7, {ease: FlxEase.linear});
+				FlxTween.tween(gfDance, {y: 500}, 2, {ease: FlxEase.quadInOut});
 				textBG.alpha = 0;
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					MusicBeatState.switchState(new MainMenuState());
+					if(ClientPrefs.data.language == 'None')
+						MusicBeatState.switchState(new SetLanguageState());
+					else
+						MusicBeatState.switchState(new MainMenuState());
 					closedState = true;
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
@@ -448,7 +448,8 @@ class TitleState extends MusicBeatState
 
 		if(skippedIntro) 
 			if(!noZoom)
-				FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
+				if(ClientPrefs.data.camZooms)
+					FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
@@ -475,7 +476,7 @@ class TitleState extends MusicBeatState
 					FlxTween.tween(logo, {angle: 0}, 0.3, {ease: FlxEase.quadOut});
 					logo.scale.set(0.55, 0.55);
 					FlxTween.tween(logo.scale, {x: 0.45, y: 0.45}, 0.5, {ease: FlxEase.quadOut});
-					FlxTween.tween(white, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+					if(ClientPrefs.data.flashing) FlxTween.tween(white, {alpha: 1}, 0.8, {ease: FlxEase.linear});
 					if(!skippedIntro) FlxTween.tween(FlxG.camera, {zoom: 1.9}, 1.2, {ease: FlxEase.quadIn});
 				case 8:
 					logo.angle = -17;

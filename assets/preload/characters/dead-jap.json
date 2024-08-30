@@ -3,19 +3,12 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				0
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "monopepper idle",
-			"indices": []
-		},
-		{
-			"offsets": [
-				20,
+				30,
 				-222
 			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "monopepper left",
 			"indices": [
 				3,
 				4,
@@ -24,17 +17,17 @@
 				7,
 				8,
 				9
-			],
-			"fps": 24,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "monopepper left"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-574,
+				-584,
 				-342
 			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "monopepper right",
 			"indices": [
 				3,
 				4,
@@ -43,17 +36,17 @@
 				7,
 				8,
 				9
-			],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"loop": false,
-			"name": "monopepper right"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-525,
-				-626
+				-616
 			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "monopepper down",
 			"indices": [
 				3,
 				4,
@@ -62,30 +55,37 @@
 				7,
 				8,
 				9
-			],
-			"fps": 24,
-			"anim": "singDOWN",
+			]
+		},
+		{
 			"loop": false,
-			"name": "monopepper down"
+			"offsets": [
+				-374,
+				52
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "monopepper up",
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
 		},
 		{
 			"offsets": [
-				-374,
-				-28
+				-495,
+				0
 			],
-			"indices": [
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9
-			],
+			"indices": [],
 			"fps": 24,
-			"anim": "singUP",
-			"loop": false,
-			"name": "monopepper up"
+			"anim": "idle",
+			"loop": true,
+			"name": "monopepper idle"
 		}
 	],
 	"no_antialiasing": false,
@@ -97,9 +97,9 @@
 	"healthicon": "deadjap",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		255,
-		255
+		161,
+		161,
+		161
 	],
 	"camera_position": [
 		170,

@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "bf",
-		"player2": "ourple-short",
+		"player2": "random",
 		"events": [],
 		"notes": [
 			{
@@ -562,11 +562,6 @@
 						94
 					],
 					[
-						32437.5,
-						2,
-						0
-					],
-					[
 						32531.25,
 						1,
 						0
@@ -575,6 +570,11 @@
 						32625,
 						3,
 						282
+					],
+					[
+						32437.5,
+						0,
+						0
 					]
 				],
 				"sectionBeats": 4,
@@ -669,11 +669,6 @@
 						94
 					],
 					[
-						35437.5,
-						2,
-						0
-					],
-					[
 						35531.25,
 						1,
 						0
@@ -682,6 +677,11 @@
 						35625,
 						3,
 						282
+					],
+					[
+						35437.5,
+						0,
+						0
 					]
 				],
 				"sectionBeats": 4,
@@ -1942,11 +1942,6 @@
 						0
 					],
 					[
-						69843.75,
-						0,
-						0
-					],
-					[
 						69937.5,
 						3,
 						95
@@ -1954,11 +1949,6 @@
 					[
 						70125,
 						1,
-						0
-					],
-					[
-						70218.75,
-						2,
 						0
 					],
 					[
@@ -2151,11 +2141,6 @@
 						0
 					],
 					[
-						75843.75,
-						0,
-						0
-					],
-					[
 						75937.5,
 						3,
 						95
@@ -2163,11 +2148,6 @@
 					[
 						76125,
 						1,
-						0
-					],
-					[
-						76218.75,
-						2,
 						0
 					],
 					[
@@ -4940,11 +4920,6 @@
 						94
 					],
 					[
-						192375,
-						1,
-						94
-					],
-					[
 						192562.5,
 						0,
 						94
@@ -4960,13 +4935,18 @@
 						94
 					],
 					[
-						193125,
+						193312.5,
+						0,
+						94
+					],
+					[
+						192375,
 						2,
 						94
 					],
 					[
-						193312.5,
-						0,
+						193125,
+						1,
 						94
 					]
 				],
@@ -5139,11 +5119,6 @@
 						94
 					],
 					[
-						198375,
-						1,
-						94
-					],
-					[
 						198562.5,
 						0,
 						94
@@ -5159,13 +5134,18 @@
 						94
 					],
 					[
-						199125,
+						199312.5,
+						0,
+						94
+					],
+					[
+						198375,
 						2,
 						94
 					],
 					[
-						199312.5,
-						0,
+						199125,
+						1,
 						94
 					]
 				],
@@ -5294,12 +5274,14 @@
 					[
 						202500,
 						1,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						202875,
 						2,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						202875,
@@ -5314,12 +5296,14 @@
 					[
 						203250,
 						3,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						203625,
 						1,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						203625,
@@ -5391,12 +5375,14 @@
 					[
 						205500,
 						1,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						205875,
 						2,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						205875,
@@ -5411,12 +5397,14 @@
 					[
 						206250,
 						3,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						206625,
 						1,
-						282
+						282,
+						"Note Trail"
 					],
 					[
 						206625,
@@ -5766,19 +5754,9 @@
 				"sectionBeats": 4,
 				"sectionNotes": [
 					[
-						216000,
-						2,
-						94
-					],
-					[
 						216187.5,
 						3,
 						94
-					],
-					[
-						216375,
-						3,
-						282
 					],
 					[
 						216562.5,
@@ -5792,6 +5770,16 @@
 					],
 					[
 						217125,
+						1,
+						282
+					],
+					[
+						216000,
+						0,
+						94
+					],
+					[
+						216375,
 						1,
 						282
 					]
@@ -5925,19 +5913,9 @@
 				"sectionBeats": 4,
 				"sectionNotes": [
 					[
-						222000,
-						2,
-						94
-					],
-					[
 						222187.5,
 						3,
 						94
-					],
-					[
-						222375,
-						3,
-						282
 					],
 					[
 						222562.5,
@@ -5951,6 +5929,16 @@
 					],
 					[
 						223125,
+						1,
+						282
+					],
+					[
+						222000,
+						0,
+						94
+					],
+					[
+						222375,
 						1,
 						282
 					]
@@ -6982,6 +6970,12 @@
 						251884.615384615,
 						2,
 						0
+					],
+					[
+						251076.923076923,
+						1,
+						0,
+						"Note Trail"
 					]
 				],
 				"typeOfSection": 0,
@@ -7063,6 +7057,18 @@
 						252000,
 						1,
 						0
+					],
+					[
+						252000,
+						3,
+						0,
+						"Note Trail"
+					],
+					[
+						252923.076923077,
+						2,
+						0,
+						"Note Trail"
 					]
 				],
 				"typeOfSection": 0,
@@ -7179,6 +7185,12 @@
 						254653.846153846,
 						0,
 						0
+					],
+					[
+						254769.230769231,
+						3,
+						0,
+						"Note Trail"
 					]
 				],
 				"typeOfSection": 0,
@@ -7290,6 +7302,18 @@
 						256500,
 						2,
 						0
+					],
+					[
+						255692.307692308,
+						0,
+						0,
+						"Note Trail"
+					],
+					[
+						256615.384615385,
+						1,
+						0,
+						"Note Trail"
 					]
 				],
 				"typeOfSection": 0,
@@ -7554,22 +7578,26 @@
 					[
 						264923.076923077,
 						3,
-						348
-					],
-					[
-						265846.153846154,
-						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						265384.615384615,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
+					],
+					[
+						265846.153846154,
+						3,
+						349,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						266307.692307692,
 						1,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7583,24 +7611,28 @@
 				"sectionBeats": 4,
 				"sectionNotes": [
 					[
+						268153.846153846,
+						1,
+						348,
+						"Note Trail Arrow Mode Anim"
+					],
+					[
 						266769.230769231,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						267230.769230769,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						267692.307692308,
 						0,
-						348
-					],
-					[
-						268153.846153846,
-						1,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7616,22 +7648,26 @@
 					[
 						268615.384615385,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						269538.461538462,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						269076.923076923,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						270000,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7647,22 +7683,26 @@
 					[
 						270461.538461539,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						271384.615384615,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						270923.076923077,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						271846.153846154,
 						1,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7678,22 +7718,26 @@
 					[
 						272307.692307692,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						272769.230769231,
 						1,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						273230.769230769,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						273692.307692308,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7709,22 +7753,26 @@
 					[
 						274153.846153846,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						274615.384615385,
 						1,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						275076.923076923,
 						2,
-						349
+						349,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						275538.461538462,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7740,22 +7788,26 @@
 					[
 						276000,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						276461.538461539,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						276923.076923077,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						277384.615384616,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7771,22 +7823,26 @@
 					[
 						277846.153846154,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						278307.692307692,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						278769.230769231,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						279230.769230769,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7802,32 +7858,38 @@
 					[
 						279692.307692308,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						280846.153846154,
 						3,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						281076.923076923,
 						1,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						281307.692307693,
 						1,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						280153.846153846,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						280384.615384616,
 						2,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7843,42 +7905,50 @@
 					[
 						282000,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						282230.769230769,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						282346.153846154,
 						3,
-						233
+						233,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						282692.307692308,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						282807.692307693,
 						3,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						282923.076923077,
 						1,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						283153.846153846,
 						0,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						281538.461538462,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7894,47 +7964,56 @@
 					[
 						283615.384615385,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						283846.153846154,
 						3,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						284076.923076923,
 						1,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						283384.615384616,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						284307.692307693,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						284538.461538462,
 						3,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						284769.230769231,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						285000,
 						1,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						285115.384615385,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7950,37 +8029,44 @@
 					[
 						285230.76923077,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						285692.307692308,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						286153.846153846,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						286615.384615385,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						286730.76923077,
 						1,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						286846.153846154,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						286961.538461539,
 						1,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -7996,32 +8082,38 @@
 					[
 						287076.923076923,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						287538.461538462,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						287769.230769231,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						288230.76923077,
 						3,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						288461.538461539,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						288692.307692308,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -8037,42 +8129,50 @@
 					[
 						288923.076923077,
 						1,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						289384.615384616,
 						3,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						289615.384615385,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						289730.76923077,
 						3,
-						232
+						232,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						290076.923076923,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						290192.307692308,
 						3,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						290307.692307693,
 						0,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						290538.461538462,
 						2,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -8088,47 +8188,56 @@
 					[
 						290769.230769231,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						291000,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						291230.76923077,
 						3,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						291461.538461539,
 						2,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						291692.307692308,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						291923.076923077,
 						3,
-						116
+						116,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						292153.846153847,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						292384.615384616,
 						3,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						292500,
 						0,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -8144,37 +8253,44 @@
 					[
 						292615.384615385,
 						0,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						293076.923076923,
 						1,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						293538.461538462,
 						3,
-						348
+						348,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						294000,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						294115.384615385,
 						1,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						294230.76923077,
 						2,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					],
 					[
 						294346.153846154,
 						1,
-						0
+						0,
+						"Note Trail Arrow Mode Anim"
 					]
 				],
 				"typeOfSection": 0,
@@ -8186,7 +8302,20 @@
 			},
 			{
 				"sectionBeats": 4,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						294461.538461539,
+						0,
+						0,
+						"Note Trail Arrow Mode Anim"
+					],
+					[
+						294461.538461539,
+						3,
+						0,
+						"Note Trail Arrow Mode Anim"
+					]
+				],
 				"typeOfSection": 0,
 				"gfSection": false,
 				"altAnim": false,
@@ -9480,10 +9609,10 @@
 				"bpm": 160
 			}
 		],
-		"gfVersion": "gf-tankmen",
-		"song": "T-Short",
+		"gfVersion": "gf",
+		"song": "T-SHORT",
 		"needsVoices": true,
-		"stage": "day",
+		"stage": "random",
 		"bpm": 160,
 		"speed": 2.3
 	}

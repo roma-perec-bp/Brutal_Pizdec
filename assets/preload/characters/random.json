@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				90,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				0,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-10,
+				90
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-20,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/random",
+	"position": [
+		-210,
+		-220
+	],
+	"healthicon": "short",
+	"flip_x": false,
+	"healthbar_colors": [
+		35,
+		0,
+		55
+	],
+	"camera_position": [
+		250,
+		300
+	],
+	"notes_colors": [
+		[
+			"0xFF473f7f",
+			"0xFFFFFFFF",
+			"0xFF201b42"
+		],
+		[
+			"0xFFFFFFFF",
+			"0xFFFFFFFF",
+			"0xFF000000"
+		],
+		[
+			"0xFF290f4d",
+			"0xFFFFFFFF",
+			"0xFF05020a"
+		],
+		[
+			"0xFF3a3261",
+			"0xFFFFFFFF",
+			"0xFF19162a"
+		]
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 0.5
+}

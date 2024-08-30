@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dead_sturm.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down confirm0000" x="10" y="10" width="238" height="235"/>
+	<SubTexture name="down confirm0001" x="10" y="255" width="238" height="235"/>
+	<SubTexture name="down confirm0002" x="1206" y="477" width="220" height="217" frameX="-6" frameY="-12" frameWidth="238" frameHeight="235"/>
+	<SubTexture name="down confirm0003" x="1206" y="477" width="220" height="217" frameX="-6" frameY="-12" frameWidth="238" frameHeight="235"/>
+	<SubTexture name="down confirm red0000" x="10" y="500" width="238" height="235"/>
+	<SubTexture name="down confirm red0001" x="10" y="745" width="238" height="235"/>
+	<SubTexture name="down confirm red0002" x="975" y="477" width="221" height="217" frameX="-9" frameY="-12" frameWidth="238" frameHeight="235"/>
+	<SubTexture name="down confirm red0003" x="975" y="477" width="221" height="217" frameX="-9" frameY="-12" frameWidth="238" frameHeight="235"/>
+	<SubTexture name="left confirm0000" x="504" y="10" width="228" height="231"/>
+	<SubTexture name="left confirm0001" x="975" y="246" width="218" height="221" frameX="-5" frameY="-5" frameWidth="228" frameHeight="231"/>
+	<SubTexture name="left confirm0002" x="740" y="492" width="225" height="228" frameX="-2" frameY="-1" frameWidth="228" frameHeight="231"/>
+	<SubTexture name="left confirm0003" x="740" y="492" width="225" height="228" frameX="-2" frameY="-1" frameWidth="228" frameHeight="231"/>
+	<SubTexture name="left confirm red0000" x="504" y="251" width="228" height="231"/>
+	<SubTexture name="left confirm red0001" x="1203" y="246" width="218" height="221" frameX="-5" frameY="-5" frameWidth="228" frameHeight="231"/>
+	<SubTexture name="left confirm red0002" x="740" y="730" width="225" height="228" frameX="-2" frameY="-1" frameWidth="228" frameHeight="231"/>
+	<SubTexture name="left confirm red0003" x="740" y="730" width="225" height="228" frameX="-2" frameY="-1" frameWidth="228" frameHeight="231"/>
+	<SubTexture name="right confirm0000" x="742" y="10" width="223" height="226" frameX="-1" frameY="-3" frameWidth="226" frameHeight="230"/>
+	<SubTexture name="right confirm0001" x="742" y="246" width="223" height="226" frameX="-1" frameY="-3" frameWidth="226" frameHeight="230"/>
+	<SubTexture name="right confirm0002" x="504" y="492" width="226" height="230"/>
+	<SubTexture name="right confirm0003" x="504" y="492" width="226" height="230"/>
+	<SubTexture name="right confirm red0000" x="975" y="10" width="223" height="226" frameX="-1" frameY="-3" frameWidth="226" frameHeight="230"/>
+	<SubTexture name="right confirm red0001" x="1208" y="10" width="223" height="226" frameX="-1" frameY="-3" frameWidth="226" frameHeight="230"/>
+	<SubTexture name="right confirm red0002" x="504" y="732" width="226" height="230"/>
+	<SubTexture name="right confirm red0003" x="504" y="732" width="226" height="230"/>
+	<SubTexture name="up confirm0000" x="258" y="10" width="236" height="232"/>
+	<SubTexture name="up confirm0001" x="258" y="252" width="236" height="232"/>
+	<SubTexture name="up confirm0002" x="975" y="704" width="214" height="211" frameX="-11" frameY="-10" frameWidth="236" frameHeight="232"/>
+	<SubTexture name="up confirm0003" x="975" y="704" width="214" height="211" frameX="-11" frameY="-10" frameWidth="236" frameHeight="232"/>
+	<SubTexture name="up confirm red0000" x="258" y="494" width="236" height="232"/>
+	<SubTexture name="up confirm red0001" x="258" y="736" width="236" height="232"/>
+	<SubTexture name="up confirm red0002" x="1199" y="704" width="214" height="211" frameX="-11" frameY="-10" frameWidth="236" frameHeight="232"/>
+	<SubTexture name="up confirm red0003" x="1199" y="704" width="214" height="211" frameX="-11" frameY="-10" frameWidth="236" frameHeight="232"/>
+</TextureAtlas>

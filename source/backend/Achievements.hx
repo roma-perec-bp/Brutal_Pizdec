@@ -12,10 +12,11 @@ class Achievements {
 		// freeplay no miss
 		["Daily Anekdot!!",'Beat \"Anekdot\" song with no Misses.', 'anekdot_freeplay_nomiss',false], // done
 		["DIMA KUPLINOV",'Beat \"Klork\" song with no Misses.','klork_freeplay_nomiss',false], // done
+		["RANDOM SHORT IN UNDERWEARS???",'Beat \"T-short\" song with no Misses.','t-short_freeplay_nomiss',false], // done
 		["D E A D",'Beat \"Monochrome\" song with no Misses.','monochrome_freeplay_nomiss',false], // done
 		["I have a GAME theory!",'Beat \"Lore\" song with no Misses.','lore_freeplay_nomiss',false], // done
 		["SEXY",'Beat \"S6x-Boom\" song with no Misses.','s6x-boom_freeplay_nomiss',false], // done
-		["Fully smoked!!",'Beat \"lamar tut voobshe ne nujen\" song with no Misses.','lamar-tut-voobshe-ne-nujen_freeplay_nomiss',false], // idk? is it done?
+		["Fully smoked!!",'Beat \"lamar tut voobshe ne nujen\" song with no Misses.','lamar-tut-voobshe-ne-nujen_freeplay_nomiss',false], // idk? is it done? -ElectroPea It is done i literally fced it -Rom4chek
 		// misc
 		["Anekdot is for real",'Die on \"Anekdot\" song.','anekdot_death',false], // done
 		["Oh, China, what are you doing here?",'Press on JinchengZhang in Main Menu.','menu0',true], // done
@@ -23,8 +24,8 @@ class Achievements {
 		["KA-BOOM",'Hit the Jalapeno Note 10 times','kaboom',true,10], // done
 		["Da old days...",'Beat Every Old Songs.','oldweek0',false], // НЕТУ
 		["Cum","Play any song with only white color on notes RGB option",'cum',false], // ah hell naw
-		["Cursed Omlet da fucking shit",'Press 7 on "Lore" song.','lore',true], // done
-		["Random Sing",'Press 7 on "T-Short" song.','t-short',true], // done // НЕТУ
+		["Cursed Omlet da fucking shit",'Press 7 on "Lore" song.','Lore',true], // done
+		["Random Sing",'Press 7 on "T-Short" song.','T-SHORT',true], // done // НЕТУ
 		["FNAF Jumpscare",'Die on "Monochrome" song.','fnaf',false], // done
 		["How",'Die on with BotPlay turned on.','bot',false], // done
 		// that one
@@ -32,12 +33,13 @@ class Achievements {
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 	public static var map_maxcurVars:Map<String, Int> = new Map<String, Int>();
+	public static var achDone:Int = 0;
 
 	public static var henchmenDeath:Int = 0;
 	public static function unlockAchievement(name:String):Void {
 		FlxG.log.add('Completed achievement "' + name +'"');
 		achievementsMap.set(name, true);
-		FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
+		FlxG.sound.play(Paths.sound('confirmAch'));
 	}
 
 	public static function isAchievementUnlocked(name:String) {
@@ -66,6 +68,10 @@ class Achievements {
 			}
 			if(henchmenDeath == 0 && FlxG.save.data.henchmenDeath != null) {
 				henchmenDeath = FlxG.save.data.henchmenDeath;
+			}
+
+			if(achDone == 0 && FlxG.save.data.achDone != null) {
+				achDone = FlxG.save.data.achDone;
 			}
 		}
 	}

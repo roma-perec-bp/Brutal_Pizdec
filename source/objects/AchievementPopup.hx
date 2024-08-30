@@ -1,12 +1,15 @@
 package objects;
 
 import backend.Achievements;
+import states.EndState;
 
 class AchievementPopup extends FlxSpriteGroup {
 	public var onFinish:Void->Void = null;
 	public function new(name:String, ?camera:FlxCamera = null)
 	{
 		super(x, y);
+		
+		Achievements.achDone++;
 		ClientPrefs.saveSettings();
 
 		var id:Int = Achievements.getAchievementIndex(name);
@@ -37,6 +40,16 @@ class AchievementPopup extends FlxSpriteGroup {
 			this.alpha = 0;
 			remove(this);
 			if(onFinish != null) onFinish();
+
+			if(Achievements.achDone == 23)
+			{
+				if(ClientPrefs.data.ends[6] == 0)
+				{
+					EndState.end = 6;
+					EndState.gift = true;
+					MusicBeatState.switchState(new EndState());
+				}
+			}
 		});
 	}
 }

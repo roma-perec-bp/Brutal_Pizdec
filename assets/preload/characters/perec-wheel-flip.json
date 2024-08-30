@@ -1,0 +1,98 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "perec idle"
+		},
+		{
+			"offsets": [
+				6,
+				45
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "perec right"
+		},
+		{
+			"offsets": [
+				145,
+				-256
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "perec down"
+		},
+		{
+			"offsets": [
+				64,
+				107
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "perec up"
+		},
+		{
+			"offsets": [
+				-19,
+				49
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "perec left"
+		},
+		{
+			"offsets": [
+				-19,
+				49
+			],
+			"indices": [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"loop": true,
+			"name": "perec left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/perec_wheel_ASSETS",
+	"position": [
+		800,
+		350
+	],
+	"healthicon": "jap-wheel",
+	"flip_x": true,
+	"healthbar_colors": [
+		192,
+		7,
+		10
+	],
+	"camera_position": [
+		-420,
+		150
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 1
+}

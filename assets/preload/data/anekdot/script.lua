@@ -1,16 +1,23 @@
 local turnvalue = 20
 local x1 = 0
 local x2 = 0
-local circle = false
-local dnb = false
-local vanilla = true
+local canDrain = false
 
 function onCreate()
     makeLuaSprite('iconP1obj', nil, 0, 0)
     makeLuaSprite('iconP2obj', nil, 0, 0)
 end
 
+function opponentNoteHit(membersIndex, noteData, noteType, isSustainNote)
+    if canDrain == true then
+        if isSustainNote == false then
+            if getHealth() - 0.01 > 0.05 then addHealth(-0.01) end
+        end
+    end
+end
+
 function onUpdatePost(elapsed)
+    if curBeat >= 224 and curBeat < 228 or curBeat >= 384 and curBeat < 448 or curBeat >= 488 and curBeat < 520 then
     x1 = screenWidth - getProperty('healthBar.x') - (getProperty('healthBar.width') * (getProperty('healthBar.percent') * 0.01)) + (150 * getProperty('iconP1obj.scale.x') - 150) / 2 - 26
     x2 = screenWidth - getProperty('healthBar.x') - (getProperty('healthBar.width') * (getProperty('healthBar.percent') * 0.01)) - (150 * getProperty('iconP2obj.scale.x')) / 2 - 26 * 2
 
@@ -22,27 +29,18 @@ function onUpdatePost(elapsed)
     setProperty('iconP2.scale.y', getProperty('iconP2obj.scale.y'))
     setProperty('iconP1.y', getProperty('healthBar.y') - 150 - (150 * getProperty('iconP1.scale.y') / -2))
     setProperty('iconP2.y', getProperty('healthBar.y') - 150 - (150 * getProperty('iconP2.scale.y') / -2))
+    end
+
+    if curBeat >= 520 and curBeat < 552 then
+        setProperty('iconP1.offset.x', getRandomFloat(-4, 4))
+        setProperty('iconP1.offset.y', getRandomFloat(-4, 4))
+        setProperty('iconP2.offset.x', getRandomFloat(-4, 4))
+        setProperty('iconP2.offset.y', getRandomFloat(-4, 4))
+    end
 end
 
 function onBeatHit()
-    if vanilla == true then
-        if curBeat % 1 == 0 then
-            if curBeat % getProperty('gfSpeed') == 0 then
-                if curBeat % (getProperty('gfSpeed') * 2) == 0 then
-                    scaleObject('iconP1obj', 1.15, 1.15)
-                    scaleObject('iconP2obj', 1.15, 1.15)
-                else
-                    scaleObject('iconP1obj', 1.15, 1.15)
-                    scaleObject('iconP2obj', 1.15, 1.15)
-                end
-            end
-            doTweenX('icon1objx', 'iconP1obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
-            doTweenX('icon2objx', 'iconP2obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
-            doTweenY('icon1objy', 'iconP1obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
-            doTweenY('icon2objy', 'iconP2obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
-        end
-    end
-    if circle == true then
+    if curBeat >= 192 and curBeat < 244 or curBeat >= 288 and curBeat < 352 then
         turnvalue = 20 -- the icon shit
         if curBeat % getProperty('gfSpeed') == 0 then
             if curBeat % 4 == 0 then
@@ -65,7 +63,7 @@ function onBeatHit()
         doTweenY('icon1objy', 'iconP1obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
         doTweenY('icon2objy', 'iconP2obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
     end
-    if dnb == true then
+    if curBeat >= 224 and curBeat < 228 or curBeat >= 384 and curBeat < 448 or curBeat >= 488 and curBeat < 520 then
         if curBeat % getProperty('gfSpeed') == 0 then
             if curBeat % (getProperty('gfSpeed') * 2) == 0 then
                 scaleObject('iconP1obj', 1.1, 0.8)
@@ -87,27 +85,11 @@ function onBeatHit()
         doTweenY('icon2objy', 'iconP2obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
     end
 
-    if curBeat == 192 then
-        circle = true
-        vanilla = false
+    if curBeat == 472 then
+        doTweenColor('lol', 'dad', 'ff0000', 10)
+        canDrain = true
     end
-    if curBeat == 224 then
-        circle = false
-        dnb = true
-    end
-    if curBeat == 288 then
-        circle = true
-        dnb = false
-    end
-    if curBeat == 352 then
-        circle = false
-        vanilla = true
-    end
-    if curBeat == 384 then
-        dnb = true
-        vanilla = false
-    end
-    if curBeat == 448 then
-        dnb = false
+    if curBeat == 596 then
+        cameraFade('hud', '000000', 7)
     end
 end

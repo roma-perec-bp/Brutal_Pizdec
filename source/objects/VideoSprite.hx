@@ -19,14 +19,16 @@ class VideoSprite extends FlxSpriteGroup {
 	public var canSkip(default, set):Bool = false;
 
 	private var videoName:String;
+	private var play:Bool;
 
 	public var waiting:Bool = false;
 	public var didPlay:Bool = false;
 
-	public function new(videoName:String, isWaiting:Bool, canSkip:Bool = false, shouldLoop:Dynamic = false) {
+	public function new(videoName:String, isWaiting:Bool, canSkip:Bool = false, shouldLoop:Dynamic = false, ?play:Bool = true) {
 		super();
 
 		this.videoName = videoName;
+		this.play = play;
 		scrollFactor.set();
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
@@ -59,7 +61,7 @@ class VideoSprite extends FlxSpriteGroup {
 					cover.destroy();
 				}
 		
-				PlayState.instance.remove(this);
+				if(play) PlayState.instance.remove(this);
 				destroy();
 				alreadyDestroyed = true;
 			});
@@ -102,7 +104,7 @@ class VideoSprite extends FlxSpriteGroup {
 			finishCallback();
 		onSkip = null;
 
-		PlayState.instance.remove(this);
+		if(play) PlayState.instance.remove(this);
 		super.destroy();
 	}
 
@@ -125,7 +127,7 @@ class VideoSprite extends FlxSpriteGroup {
 				if(onSkip != null) onSkip();
 				finishCallback = null;
 				videoSprite.bitmap.onEndReached.dispatch();
-				PlayState.instance.remove(this);
+				if(play) PlayState.instance.remove(this);
 				trace('Skipped video');
 				return;
 			}

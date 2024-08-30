@@ -9,7 +9,6 @@ import flixel.effects.FlxFlicker;
 import lime.app.Application;
 
 import objects.AchievementPopup;
-import states.editors.MasterEditorMenu;
 import options.OptionsState;
 
 enum MainMenuColumn {
@@ -21,7 +20,7 @@ enum MainMenuColumn {
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '1.0.0'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '1.0.2'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 	public static var curColumn:MainMenuColumn = NONE;
 
@@ -111,7 +110,7 @@ class MainMenuState extends MusicBeatState
 			rightItem = createMenuItem(rightOption, 1150, 460);
 		}
 
-		var randomNum:Int = FlxG.random.int(0,4);
+		var randomNum:Int = FlxG.random.int(0,5);
 		bros = new FlxSprite(-50, 270);
 		bros.frames = Paths.getSparrowAtlas('main_menu_chars/${randomNum}');
 		bros.animation.addByPrefix('idle', 'menu', 24);
@@ -119,31 +118,32 @@ class MainMenuState extends MusicBeatState
 		bros.ID = randomNum;
 		bros.antialiasing = ClientPrefs.data.antialiasing;
 		bros.scale.set(1, 1);
+
+		if(randomNum == 5)
+		{
+			bros.y += 160; //какого хуя рандом шлепка
+		}
 		add(bros);
 		
-		for(i in 0...Achievements.achievementsStuff.length)
+		if(ClientPrefs.data.ends[0] == 1)
 		{
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][0]))
+			var trophy:FlxSprite = new FlxSprite(330, 335);
+			if(ClientPrefs.data.ends[5] == 1)
 			{
-				var trophy:FlxSprite = new FlxSprite(330, 335);
-				if(monochrome() == false)
-				{
-					trophy.frames = Paths.getSparrowAtlas('awards_ew');
-				}
-				else
-				{
-					trophy.frames = Paths.getSparrowAtlas('awards');
-				}
-				trophy.animation.addByPrefix('idle', 'trophy_normal', 24, true);
-				trophy.animation.play('idle');
-				trophy.scale.set(0.30, 0.30);
-
-				trophy.updateHitbox();
-				
-				trophy.antialiasing = ClientPrefs.data.antialiasing;
-				add(trophy);
-
+				trophy.frames = Paths.getSparrowAtlas('awards');
 			}
+			else
+			{
+				trophy.frames = Paths.getSparrowAtlas('awards_ew');
+			}
+			trophy.animation.addByPrefix('idle', 'trophy_normal', 24, true);
+			trophy.animation.play('idle');
+			trophy.scale.set(0.30, 0.30);
+
+			trophy.updateHitbox();
+			
+			trophy.antialiasing = ClientPrefs.data.antialiasing;
+			add(trophy);
 		}
 
 		var overlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBangerOverlay'));
@@ -165,8 +165,6 @@ class MainMenuState extends MusicBeatState
 		
 		super.create();
 
-		FlxG.mouse.unload();
-		//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0); // you can't hide what you did
 		FlxG.mouse.visible = true;
 	}
 
@@ -178,6 +176,11 @@ class MainMenuState extends MusicBeatState
 			menuItem.frames = Paths.getSparrowAtlas('buttons_mainmenu');
 		else
 			menuItem.frames = Paths.getSparrowAtlas('${name}_button');
+
+		if(name == 'freeplay')
+		{
+			if(ClientPrefs.data.ends[0] == 0) menuItem.color = 0xFF232323;
+		}
 
 		menuItem.animation.addByPrefix('idle', '${name}_normal', 24, true);
 		menuItem.animation.addByPrefix('selected', '${name}_hover', 24, true);
@@ -192,6 +195,7 @@ class MainMenuState extends MusicBeatState
 
 	#if ACHIEVEMENTS_ALLOWED
 	function checkAchievement(achievementName) {
+		trace(Achievements.achDone);
 		Achievements.loadAchievements();
 		var achieveID:Int = Achievements.getAchievementIndex(achievementName);
 		if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) {
@@ -203,33 +207,17 @@ class MainMenuState extends MusicBeatState
 	#end
 
 	var selectedSomethin:Bool = false;
-
-	function monochrome()
-	{
-		for(i in 0...Achievements.achievementsStuff.length)
-		{
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][2]))
-				return false;
-		}
-		return true;
-	}
-
+	
 	override function update(elapsed:Float)
 	{
-		if (FlxG.sound.music.volume < 0.8)
-		{
-			FlxG.sound.music.volume += 0.5 * elapsed;
-			if(FreeplayState.vocals != null) FreeplayState.vocals.volume += 0.5 * elapsed;
-		}
-
 		FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, (FlxG.mouse.screenX-(FlxG.width/2)) * 0.015, (1/30)*240*elapsed);
 		FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
 
 		#if ACHIEVEMENTS_ALLOWED
-		if(FlxG.keys.justPressed.ONE)
-		{
+		var leDate = Date.now();
+		if (leDate.getDay() == 5 && leDate.getHours() >= 18)
 			checkAchievement('friday_night_play');
-		}
+
 		if((FlxG.mouse.overlaps(bros)) && FlxG.mouse.justPressed && bros.ID == 4)
 		{
 			checkAchievement('menu0');
@@ -301,12 +289,16 @@ class MainMenuState extends MusicBeatState
 					}
 				}
 
-				if (controls.ACCEPT || (curColumn != NONE && FlxG.mouse.justPressed))
+				if ((curColumn != NONE && FlxG.mouse.justPressed))
 				{
+					if (curColumn == CENTER && curSelected == 1)
+					{
+						if(ClientPrefs.data.ends[0] == 0) return;
+					}
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					selectedSomethin = true;
 
-					FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.7, {ease: FlxEase.quadOut, type: BACKWARD});
+					if(ClientPrefs.data.camZooms) FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.7, {ease: FlxEase.quadOut, type: BACKWARD});
 					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 
 					var item:FlxSprite;
@@ -334,7 +326,7 @@ class MainMenuState extends MusicBeatState
 						switch (option)
 						{
 							case 'story': MusicBeatState.switchState(new StoryMenuState());
-							case 'freeplay': MusicBeatState.switchState(new FreeplaySelectState());
+							case 'freeplay': if(ClientPrefs.data.ends[0] == 1) MusicBeatState.switchState(new FreeplaySelectState());
 							#if ACHIEVEMENTS_ALLOWED
 							case 'awards': MusicBeatState.switchState(new AchievementsStatePVZ());
 							case 'trophy': MusicBeatState.switchState(new AchievementsStatePVZ());
@@ -361,14 +353,6 @@ class MainMenuState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('cancelMenu'));
 					MusicBeatState.switchState(new TitleState());
 				}
-	
-				#if desktop
-				else if (controls.justPressed('debug_1'))
-				{
-					selectedSomethin = true;
-					MusicBeatState.switchState(new MasterEditorMenu());
-				}
-				#end	
 			}
 		}
 
@@ -383,6 +367,11 @@ class MainMenuState extends MusicBeatState
 
 		for (item in menuItems)
 			item.animation.play('idle');
+
+		if (curColumn == CENTER && curSelected == 1)
+		{
+			if(ClientPrefs.data.ends[0] == 0) return;
+		}
 
 		var selectedItem:FlxSprite;
 		switch(curColumn)

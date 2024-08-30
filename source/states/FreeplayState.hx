@@ -34,6 +34,7 @@ class FreeplayState extends MusicBeatState
 	public static var freeplayType = 0;
 
 	var scoreBG:FlxSprite;
+	var scoreMedal:FlxSprite;
 	var scoreText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
@@ -55,6 +56,7 @@ class FreeplayState extends MusicBeatState
 	var colorTween:FlxTween;
 
 	var displayName:String;
+	public var medal:FlxSprite;
 
 	var mainColors:Array<Int> = [
 		0xff4d250e,
@@ -82,6 +84,7 @@ class FreeplayState extends MusicBeatState
 		0xff61de35
 	];
 
+	var jalapenis:String = 'jap_3';
 	override function create()
 	{
 
@@ -96,16 +99,19 @@ class FreeplayState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
+		if(FlxG.save.data.playedSongs.contains(CoolUtil.spaceToDash('overfire')))
+			jalapenis = 'jap_4';
+
 		switch (freeplayType)
 		{
 			case 0:
-				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', 'jap_3']);
+				addWeek(['With Cone', 'BOOM', 'Overfire'], 1, mainColors, ['jap-pixel', 'jap-pixel', 'jap-wheel-pixel'], ['jap_1', 'jap_2', jalapenis]);
 			case 1:
 				addWeek(['Anekdot', 'Klork', 'T-SHORT', 'Monochrome', 'Lore'], 1, bonusColors, ['box-pixel', 'lork-pixel', 'short-pixel', 'deadjap-pixel', 'lore-pixel'], ['zombie', 'lork', 'tshort', 'dead', 'gandons']);
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex-pixel', 'jamar-pixel'], ['bbg', 'lamar']);
 			case 3:
-				addWeek(['With Cone OLD','BOOM OLD', 'Overfire OLD', 'Klork OLD'], 1, oldColors, ['jap-pixel', 'jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel'], ['jap_1', 'jap-old', 'jap2-old', 'lork']);
+				addWeek(['With Cone ORIGINAL','BOOM OLD', 'Overfire OLD', 'Klork OLD'], 1, oldColors, ['jap-pixel', 'jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel'], ['jap_1', 'jap-old', 'jap2-old', 'lork']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
@@ -183,7 +189,19 @@ class FreeplayState extends MusicBeatState
 		scoreBG.alpha = 0.6;
 		add(scoreBG);
 
+		scoreMedal = new FlxSprite(FlxG.width - 195, 66).makeGraphic(195, 170, 0xFF000000);
+		scoreMedal.alpha = 0.6;
+		add(scoreMedal);
+
 		add(scoreText);
+
+		// медальки
+		medal = new FlxSprite(FlxG.width - 285, -235).loadGraphic(Paths.image('medals/medal_7'));
+		medal.scale.set(0.2, 0.2);
+		medal.updateHitbox();
+		medal.antialiasing = ClientPrefs.data.antialiasing;
+		medal.visible = false;
+		add(medal);
 
 		if(curSelected[freeplayType] >= songs.length) curSelected[freeplayType] = 0;
 		bg.color = songs[curSelected[freeplayType]].color;
@@ -349,7 +367,7 @@ class FreeplayState extends MusicBeatState
 					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1, true);
 					cantDo = true;
 					destroyFreeplayVocals();
-		
+					
 					for (i in 0...grpSongs.members.length)
 					{
 						if (i == curSelected[freeplayType])
@@ -459,6 +477,78 @@ class FreeplayState extends MusicBeatState
 		_updateSongLastDifficulty();
 	}
 
+	function uniqueMedalChange(medalInt:Int) //почему не LERP? потому что Ease
+	{
+		medal.visible = true;
+
+		FlxTween.cancelTweensOf(medal);
+		FlxTween.cancelTweensOf(medal.scale);
+		FlxTween.cancelTweensOf(medal.color);
+		FlxTween.cancelTweensOf(medal.colorTransform);
+		medal.scale.set(0.2, 0.2);
+		medal.angle = 0;
+		medal.color = 0xFFFFFFFF;
+
+		medal.colorTransform.redOffset = 0;
+		medal.colorTransform.greenOffset = 0;
+		medal.colorTransform.blueOffset = 0;
+
+		medal.colorTransform.redMultiplier = 1;
+		medal.colorTransform.greenMultiplier = 1;
+		medal.colorTransform.blueMultiplier = 1;
+		switch(medalInt)
+		{
+			case 7:
+				//вообще нихуя сосите
+			case 6:
+				//вообще нихуя сосите
+			case 5:
+				FlxTween.tween(medal.scale, {x: 0.3, y: 0.3}, 0.6, {ease: FlxEase.quadOut, type: BACKWARD});
+			case 4:
+				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
+			case 3:
+				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 7}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
+			case 2:
+				medal.color = 0xff7400ff;
+				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, 0.6, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 12}, 0.6, {ease: FlxEase.bounceOut, type: BACKWARD});
+				FlxTween.color(medal, 0.6, medal.color, 0xffFFFFFF);
+			case 1:
+				medal.colorTransform.redOffset = 134;
+				medal.colorTransform.greenOffset = 248;
+				medal.colorTransform.blueOffset = 255;
+
+				medal.colorTransform.redMultiplier = 0;
+				medal.colorTransform.greenMultiplier = 0;
+				medal.colorTransform.blueMultiplier = 0;
+
+				FlxTween.tween(medal.scale, {x: 0.6, y: 0.6}, 0.6, {ease: FlxEase.elasticOut, type: BACKWARD});
+				FlxTween.tween(medal, {angle: 23}, 0.6, {ease: FlxEase.expoOut, type: BACKWARD});
+				FlxTween.tween(medal.colorTransform, {redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1}, 0.6);
+
+				//medal.x -= 50; //ТЫ ЧЕ ОХУЕЛ
+		}
+
+		medal.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty)));
+
+		if(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty) == 1)
+		{
+			medal.offset.x = 75;
+			medal.offset.y = 0;
+		}
+		else if(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty) == 2)
+		{
+			medal.offset.x = 25;
+			medal.offset.y = 15;
+		}
+		else
+		{
+			medal.offset.x = 0;
+			medal.offset.y = 0;
+		}
+	}
+
 	var portTween:FlxTween;
 	function changePortrait(char:String = 'lamar')
 	{
@@ -483,6 +573,8 @@ class FreeplayState extends MusicBeatState
 				portrait.offset.set(-196, 70);
 			case 'jap_3':
 				portrait.offset.set(-190, 110);
+			case 'jap_4':
+				portrait.offset.set(-198, 110);
 			case 'zombie':
 				portrait.offset.set(-82, 140);
 			case 'tshort':
@@ -549,7 +641,7 @@ class FreeplayState extends MusicBeatState
 		Mods.currentModDirectory = songs[curSelected[freeplayType]].folder;
 		PlayState.storyWeek = songs[curSelected[freeplayType]].week;
 
-		Difficulty.loadFromWeek();
+		Difficulty.resetList();
 		
 		var savedDiff:String = songs[curSelected[freeplayType]].lastDifficulty;
 		var lastDiff:Int = Difficulty.list.indexOf(lastDifficultyName);
@@ -564,6 +656,8 @@ class FreeplayState extends MusicBeatState
 
 		changeDiff();
 		_updateSongLastDifficulty();
+
+		uniqueMedalChange(Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty));
 	}
 
 	private function positionHighscore() {

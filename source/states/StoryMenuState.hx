@@ -16,9 +16,12 @@ class StoryMenuState extends MusicBeatState
 {
 	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
 
-
 	var scoring:FlxText;
 	var scoreText:FlxText;
+
+	var medal1:FlxSprite;
+	var medal2:FlxSprite;
+	var medal3:FlxSprite;
 
 	private static var lastDifficultyName:String = '';
 	var curDifficulty:Int = 1;
@@ -43,8 +46,6 @@ class StoryMenuState extends MusicBeatState
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
-		FlxG.mouse.unload();
-		//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
 		FlxG.mouse.visible = true;
 
 		PlayState.isStoryMode = true;
@@ -145,6 +146,24 @@ class StoryMenuState extends MusicBeatState
 		add(scoring);
 		add(txtWeekTitle);
 
+		medal1 = new FlxSprite(scoring.x - 210, 260);
+		medal1.scale.set(0.15, 0.15);
+		medal1.updateHitbox();
+		medal1.antialiasing = ClientPrefs.data.antialiasing;
+		add(medal1);
+
+		medal2 = new FlxSprite(medal1.x + 75, medal1.y);
+		medal2.scale.set(0.15, 0.15);
+		medal2.updateHitbox();
+		medal2.antialiasing = ClientPrefs.data.antialiasing;
+		add(medal2);
+
+		medal3 = new FlxSprite(medal2.x + 75, medal2.y);
+		medal3.scale.set(0.15, 0.15);
+		medal3.updateHitbox();
+		medal3.antialiasing = ClientPrefs.data.antialiasing;
+		add(medal3);
+
 		changeWeek();
 		changeDifficulty();
 
@@ -164,30 +183,6 @@ class StoryMenuState extends MusicBeatState
 
 		if (!movedBack && !selectedWeek)
 		{
-			var upP = controls.UI_UP_P;
-			var downP = controls.UI_DOWN_P;
-			if (upP)
-			{
-				changeWeek(-1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-
-			if (downP)
-			{
-				changeWeek(1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-
-			if(FlxG.mouse.wheel != 0)
-			{
-				FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-				changeWeek(-FlxG.mouse.wheel);
-				changeDifficulty();
-			}
-
-			if (upP || downP)
-				changeDifficulty();
-
 			if(FlxG.keys.justPressed.CONTROL)
 			{
 				persistentUpdate = false;
@@ -197,9 +192,8 @@ class StoryMenuState extends MusicBeatState
 			{
 				persistentUpdate = false;
 				openSubState(new ResetScoreSubState('', curDifficulty, '', curWeek));
-				//FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
-			else if (controls.ACCEPT)
+			else if (controls.ACCEPT || FlxG.mouse.justPressed)
 			{
 				selectWeek();
 			}
@@ -281,10 +275,6 @@ class StoryMenuState extends MusicBeatState
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 				FreeplayState.destroyFreeplayVocals();
 			});
-			
-			#if MODS_ALLOWED
-			DiscordClient.loadModRPC();
-			#end
 		} else {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
@@ -364,6 +354,60 @@ class StoryMenuState extends MusicBeatState
 			curDifficulty = newPos;
 		}
 		updateText();
+
+		var stringThing:Array<String> = [];
+		for (i in 0...leWeek.songs.length) {
+			stringThing.push(leWeek.songs[i][0]);
+		}
+
+		medal1.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(stringThing[0], curDifficulty)));
+		if(Highscore.getMedal(stringThing[0], curDifficulty) == 1)
+		{
+			medal1.offset.x = 65;
+			medal1.offset.y = 0;
+		}
+		else if(Highscore.getMedal(stringThing[0], curDifficulty) == 2)
+		{
+			medal1.offset.x = 15;
+			medal1.offset.y = 5;
+		}
+		else
+		{
+			medal1.offset.x = 0;
+			medal1.offset.y = 0;
+		}
+		medal2.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(stringThing[1], curDifficulty)));
+		if(Highscore.getMedal(stringThing[1], curDifficulty) == 1)
+		{
+			medal2.offset.x = 65;
+			medal2.offset.y = 0;
+		}
+		else if(Highscore.getMedal(stringThing[1], curDifficulty) == 2)
+		{
+			medal2.offset.x = 15;
+			medal2.offset.y = 5;
+		}
+		else
+		{
+			medal2.offset.x = 0;
+			medal2.offset.y = 0;
+		}
+		medal3.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(stringThing[2], curDifficulty)));
+		if(Highscore.getMedal(stringThing[2], curDifficulty) == 1)
+		{
+			medal3.offset.x = 15;
+			medal3.offset.y = 5;
+		}
+		else if(Highscore.getMedal(stringThing[2], curDifficulty) == 2)
+		{
+			medal3.offset.x = 5;
+			medal3.offset.y = 1;
+		}
+		else
+		{
+			medal3.offset.x = 0;
+			medal3.offset.y = 0;
+		}
 	}
 
 	function weekIsLocked(name:String):Bool {

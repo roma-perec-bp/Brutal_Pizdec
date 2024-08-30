@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				-20
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				19
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				-2
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/lork",
+	"position": [
+		50,
+		170
+	],
+	"healthicon": "lork",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		185,
+		103
+	],
+	"camera_position": [
+		200,
+		-40
+	],
+	"notes_colors": [
+		[
+			"0xFF4db946",
+			"0xFFFFFFFF",
+			"0xFF287762"
+		],
+		[
+			"0xFFbbff3e",
+			"0xFFFFFFFF",
+			"0xFF6b7c1d"
+		],
+		[
+			"0xFF7277e2",
+			"0xFFFFFFFF",
+			"0xFF292c8e"
+		],
+		[
+			"0xFF46c693",
+			"0xFFFFFFFF",
+			"0xFF247363"
+		]
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

@@ -57,6 +57,7 @@ class ChartingState extends MusicBeatState
 	[
 		'',
 		'Alt Animation',
+		'Alt 2',
 		'Hey!',
 		'Hurt Note',
 		'GF Sing',
@@ -66,7 +67,16 @@ class ChartingState extends MusicBeatState
 		'Jalapeno Note NEW',
 		'Jalapeno Note BOOM SOUND',
 		'rom',
-		'Mania Note'
+		'Mania Note',
+		//NOTE TRAILS
+		'Note Trail',
+		'Note Trail Arrow Mode',
+		'Note Trail Ascend Mode',
+		//NOTE BUT PLAYS ANIM
+		'Note Trail Anim',
+		'Note Trail Arrow Mode Anim',
+		'Note Trail Ascend Mode Anim',
+		'zondro'
 	];
 	public var ignoreWarnings = false;
 	var curNoteTypes:Array<String> = [];
@@ -78,7 +88,8 @@ class ChartingState extends MusicBeatState
 		['Hey!', "Plays the \"Hey!\" animation from Bopeebo,\nValue 1: BF = Only Boyfriend, GF = Only Girlfriend,\nSomething else = Both.\nValue 2: Custom animation duration,\nleave it blank for 0.6s"],
 		['Dadbattle Spotlight', "Used in Dad Battle,\nValue 1: 0/1 = ON/OFF,\n2 = Target Dad\n3 = Target BF"],
 		['Set GF Speed', "Sets GF head bopping speed,\nValue 1: 1 = Normal speed,\n2 = 1/2 speed, 4 = 1/4 speed etc.\nUsed on Fresh during the beatbox parts.\n\nWarning: Value must be integer!"],
-		['Set CHARACTERS Speed', "Sets Dad and BF head bopping speed,\nValue 1: 1 = Normal speed,\n2 = 1/2 speed, 4 = 1/4 speed etc.\nWarning: Value must be integer!"],
+		['Set DAD Speed', "Sets Dad head bopping speed,\nValue 1: 1 = Normal speed,\n2 = 1/2 speed, 4 = 1/4 speed etc.\nWarning: Value must be integer!"],
+		['Set BF Speed', "Sets BF head bopping speed,\nValue 1: 1 = Normal speed,\n2 = 1/2 speed, 4 = 1/4 speed etc.\nWarning: Value must be integer!"],
 		['CountDown', "Val 1: Count  \n Example: Ready, Set, Go \nVal 2: if True then sound plays"],
 		['Add Camera Zoom', "Used on MILF on that one \"hard\" part\nValue 1: Camera zoom add (Default: 0.015)\nValue 2: UI zoom add (Default: 0.03)\nLeave the values blank if you want to use Default."],
 		['Play Animation', "Plays an animation on a Character,\nonce the animation is completed,\nthe animation changes to Idle\n\nValue 1: Animation to play.\nValue 2: Character (Dad, BF, GF)"],
@@ -98,7 +109,11 @@ class ChartingState extends MusicBeatState
 		['GrassHey', "Value 1: on or off?"],
 		['dead jumpscare', "Value 1: time"],
 		['Show Song', "fuck you"],
+		['Cam lock', "value 1: x amd y, value2 zoom (can be null)"],
+		['cam unlock', "yes"],
 		['Play Video', "value1: video"],
+		['Play OVERFIRE', "value1: video"],
+		['Stop OVERFIRE', ""],
 		['Character Color', "Value 1: Character\nValue 2:Color 0xffffffff, time"],
 		['Character Color Transform', "Value 1: redOffset, greenOffset, blueOffset, redMultiplier, greenMultiplier, blueMultiplier\nValue 2:Character, Time"],
 		['boom dead', "yes"],
@@ -109,6 +124,19 @@ class ChartingState extends MusicBeatState
 		['burn with cone', "only with cone"],
 		['vibe time', "only with cone"],
 		['fire boom', "only boom"],
+		['start notes', "only monocum"],
+		['monochrome pizdec', "only monocum"],
+		['hi gradient', "only monocum"],
+		['bye gradient', "only monocum"],
+		['rain', "only overfire"],
+		['trans overfire', "only overfire"],
+		['night time', "only hlork"],
+		['night cum', "only overfire"],
+		['go back health', "only overfire"],
+		['oh well', "only overfire"],
+		['evening time', "only hlork"],
+		['slow evening time', "only hlork"],
+		['day time', "only hlork"],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"]
 	];
 

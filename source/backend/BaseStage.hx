@@ -5,7 +5,7 @@ import flixel.FlxObject;
 import flixel.FlxSubState;
 import backend.MusicBeatState;
 
-import objects.Note.EventNote;
+import objects.Note;
 import objects.Character;
 
 enum Countdown
@@ -85,6 +85,9 @@ class BaseStage extends FlxBasic
 	public function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float) {}
 	public function eventPushed(event:EventNote) {}
 	public function eventPushedUnique(event:EventNote) {}
+
+	// Note Hit/Miss
+	public function opponentNoteHit(note:Note) {}
 
 	// Things to replace FlxGroup stuff and inject sprites directly into the state
 	function add(object:FlxBasic) game.add(object);

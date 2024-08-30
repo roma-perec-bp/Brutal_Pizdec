@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin' BRUTAL PIZDEC" file="BrutalPizdec" packageName="com.peatvbasement.brutalpizdec" package="com.peatvbasement.brutalpizdec" main="Main" version="1.0.0" company="PeaTV_Basement" />
+	<app title="Friday Night Funkin' BRUTAL PIZDEC" file="BrutalPizdec" packageName="com.peatvbasement.brutalpizdec" package="com.peatvbasement.brutalpizdec" main="Main" version="1.0.2" company="PeaTV_Basement" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -137,6 +137,8 @@
 	
 	<!-- Show debug traces for hxCodec -->
 	<haxedef name="HXC_DEBUG_TRACE" if="debug" />
+
+        <haxeflag name="-D no-traces" unless="debug" />
 	
 	<!--Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />

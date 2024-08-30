@@ -79,8 +79,8 @@ class FlashingState extends MusicBeatState
 		rippvzdich.alpha = 0;
 		add(rippvzdich);
 		
-		skiptext = new FlxText(5, FlxG.height-28, FlxG.width, "Skipping...", 26);
-		skiptext.setFormat("vcr.ttf", 26, FlxColor.WHITE, LEFT);
+		skiptext = new FlxText(5, FlxG.height-28, FlxG.width, "Hold Enter to skip...", 32);
+		skiptext.setFormat("vcr.ttf", 32, FlxColor.WHITE, CENTER);
 		add(skiptext);
 
 		gmanMoment = new FlxSound().loadEmbedded(Paths.sound('disclamer/flash-2'));
@@ -103,8 +103,6 @@ class FlashingState extends MusicBeatState
 							canChoose = true;
 							gmanMoment.play();
 							timerOfWaiting();
-							FlxG.mouse.unload();
-							//FlxG.mouse.load(Paths.image("cursor1").bitmap, 1.5, 0);// you can't hide what you did
 							FlxG.mouse.visible = true;
 						});
 					});
@@ -184,6 +182,7 @@ class FlashingState extends MusicBeatState
 			});
 		}
 		infoToggled = true;
+		FlxG.mouse.visible = false;
 	}
 
 	override function update(elapsed:Float)
@@ -223,7 +222,7 @@ class FlashingState extends MusicBeatState
 					leftState = true;
 					canChoose = false;
 					FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-					ClientPrefs.data.flashing = true;
+					ClientPrefs.data.flashing = false;
 					ClientPrefs.saveSettings();
 					if (startTimer != null) startTimer.cancel();
 					FlxFlicker.flicker(noText, 1, 0.06, true, false, function(flick:FlxFlicker)

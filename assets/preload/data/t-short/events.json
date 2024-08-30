@@ -530,6 +530,11 @@
 						""
 					],
 					[
+						"Change Character",
+						"dad",
+						"random-alt"
+					],
+					[
 						"Camera rotate off",
 						"",
 						""
@@ -733,6 +738,11 @@
 						"Flash Camera",
 						"1",
 						"0xFFFFFFFF"
+					],
+					[
+						"Change Character",
+						"dad",
+						"random"
 					],
 					[
 						"Cam Boom Speed",
