@@ -177,6 +177,9 @@ class PlayState extends MusicBeatState
 	public var camZoomingDecay:Float = 1;
 	private var curSong:String = "";
 
+	private var gameZoomAdd:Float = 0;
+	private var gameZoom:Float = 1;
+
 	public var gfSpeed:Int = 1;
 	public var health:Float = 1;
 	public var combo:Int = 0;
@@ -2115,7 +2118,7 @@ class PlayState extends MusicBeatState
 			iconGF.scale.set(mult, mult);
 			iconGF.updateHitbox();
 		}
-		
+
 		var iconOffset:Int = 26;
 		if (health > 2) health = 2;
 
@@ -3033,7 +3036,7 @@ class PlayState extends MusicBeatState
 				cameraLocked = false;
 
 			case 'Play Video':
-				startVideo(value1, true, false);
+				startVideo(value1, true, false);				
 
 			case 'Play OVERFIRE':
 				if(ClientPrefs.data.lowQuality) return;
@@ -3528,7 +3531,7 @@ class PlayState extends MusicBeatState
 			var rating:FlxSprite = new FlxSprite();
 	
 			rating.loadGraphic(Paths.image(daRating.image));
-			rating.cameras = [camHUD];
+			rating.cameras = [camGame];
 			rating.screenCenter();
 			rating.x = placement - 40;
 			rating.y -= 60;
@@ -3540,7 +3543,7 @@ class PlayState extends MusicBeatState
 			rating.y -= ClientPrefs.data.comboOffset[1];
 	
 			var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image('combo'));
-			comboSpr.cameras = [camHUD];
+			comboSpr.cameras = [camGame];
 			comboSpr.screenCenter();
 			comboSpr.x = placement;
 			comboSpr.acceleration.y = FlxG.random.int(200, 300) * playbackRate * playbackRate;
@@ -3604,7 +3607,7 @@ class PlayState extends MusicBeatState
 			for (i in seperatedScore)
 			{
 				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('num' + Std.int(i)));
-				numScore.cameras = [camHUD];
+				numScore.cameras = [camGsme];
 				numScore.screenCenter();
 				numScore.x = placement + (43 * daLoop) - 90 + ClientPrefs.data.comboOffset[2];
 				numScore.y += 80 - ClientPrefs.data.comboOffset[3];

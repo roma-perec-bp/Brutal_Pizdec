@@ -26,9 +26,12 @@ function onCreate()
     makeGraphic('blackFlash', 1280, 720, '000000')
     setObjectCamera('blackFlash', 'hud')
     addLuaSprite('blackFlash', false)
+    if not lowQuality then
     makeLuaSprite('vin', 'vin', 0, 0)
     setObjectCamera('vin', 'hud')
     addLuaSprite('vin', true)
+    end
+    --у кого то лагает винтейдж 
 
     setProperty('scoreTxt.visible', false)
     setProperty('timeTxt.visible', false)

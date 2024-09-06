@@ -2,8 +2,9 @@ local gfAss = false
 local fire = false
 
 function onCreate()
+    if not lowQuality then
     setProperty('skipCountdown', true)
-
+    end
     makeLuaSprite('blammedLightsBlack', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
 	makeGraphic('blammedLightsBlack', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, '000000')
 	setScrollFactor('blammedLightsBlack', 0)
@@ -11,7 +12,7 @@ function onCreate()
 	setProperty('blammedLightsBlack.scale.y', 5)
     setProperty('blammedLightsBlack.alpha', 0.001)
 	addLuaSprite('blammedLightsBlack', false)
-
+    
     makeLuaSprite('blackScreenSonicCount','',0,0)
     setObjectCamera('blackScreenSonicCount','hud')
     makeGraphic('blackScreenSonicCount',screenWidth,screenHeight,'000000')

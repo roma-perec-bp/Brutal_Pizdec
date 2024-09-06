@@ -1,23 +1,16 @@
 local gf = false
 
 function onCreate()
-    setProperty('skipCountdown', true)
-
-    makeLuaSprite('blammedLightsBlack', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
-	makeGraphic('blammedLightsBlack', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, '000000')
-	setScrollFactor('blammedLightsBlack', 0)
-	setProperty('blammedLightsBlack.scale.x', 5)
-	setProperty('blammedLightsBlack.scale.y', 5)
-    setProperty('blammedLightsBlack.alpha', 0.001)
-	addLuaSprite('blammedLightsBlack', false)
-
-    makeLuaSprite('blammedLightsBlack', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
-	makeGraphic('blammedLightsBlack', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, '000000')
-	setScrollFactor('blammedLightsBlack', 0)
-	setProperty('blammedLightsBlack.scale.x', 5)
-	setProperty('blammedLightsBlack.scale.y', 5)
-    setProperty('blammedLightsBlack.alpha', 0.001)
-	addLuaSprite('blammedLightsBlack', false)
+    if not lowQuality then
+        setProperty('skipCountdown', true)
+    end
+        makeLuaSprite('blammedLightsBlack', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
+        makeGraphic('blammedLightsBlack', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, '000000')
+        setScrollFactor('blammedLightsBlack', 0)
+        setProperty('blammedLightsBlack.scale.x', 5)
+        setProperty('blammedLightsBlack.scale.y', 5)
+        setProperty('blammedLightsBlack.alpha', 0.001)
+        addLuaSprite('blammedLightsBlack', false)
 
     makeLuaSprite('hui', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
 	makeGraphic('hui', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, 'ff0000')
@@ -26,7 +19,8 @@ function onCreate()
 	setProperty('hui.scale.y', 5)
     setProperty('hui.alpha', 0.001)
 	addLuaSprite('hui', false)
-
+    
+    if not lowQuality then
     precacheImage('flashback1')
     precacheImage('flashback2')
     precacheImage('flashback3')
@@ -46,9 +40,11 @@ function onCreate()
     setObjectCamera('flex2', 'camhud')
     scaleObject('flex2', 0.75, 0.75)
     addLuaSprite('flex2', false)
+    end
 end
 
 function onBeatHit()
+    if not lowQuality then
      if gf == false then
         setProperty('flex.angle', 12)
         doTweenAngle('flexA', 'flex', 0, 0.5, 'quadout')
@@ -63,6 +59,7 @@ function onBeatHit()
         gf = false
     end
 end
+end
 
 function onCreatePost()
     makeAnimatedLuaSprite('hand', 'nelzya', 795, 300)
@@ -70,11 +67,12 @@ function onCreatePost()
     setObjectCamera('hand', 'camhud')
     addLuaSprite('hand', true)
     setProperty('hand.visible', false)
-
+    if not lowQuality then
     makeLuaSprite('flashback', 'flashback1')
     setObjectCamera('flashback', 'camhud')
     setProperty('flashback.alpha', 0.0001)
     addLuaSprite('flashback', false)
+    end
 end
 
 function onSongStart()
@@ -90,6 +88,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
 end
 
 function onStepHit()
+    if not lowQuality then
     if curStep == 1408 then
         doTweenAlpha('watafak', 'blammedLightsBlack', 0.7, 3)
     end
@@ -118,6 +117,7 @@ function onStepHit()
     if curStep == 1624 then
         loadGraphic('flashback', 'flashback8')
     end
+end
     if curStep == 1632 then
         doTweenAlpha('flashbackBye', 'flashback', 0, 0.5)
         doTweenAlpha('sex', 'blammedLightsBlack', 1, 2)
