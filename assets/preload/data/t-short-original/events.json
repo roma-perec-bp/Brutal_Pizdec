@@ -1,0 +1,836 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Set Cam Zoom Alt",
+						"1.1",
+						"18"
+					],
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"2",
+						"0.5"
+					]
+				]
+			],
+			[
+				42000,
+				[
+					[
+						"Cam Boom Speed",
+						"2",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Set Cam Zoom",
+						"0.8",
+						"0.5"
+					]
+				]
+			],
+			[
+				66000,
+				[
+					[
+						"Cam Boom Speed",
+						"2",
+						"0.5"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Set Cam Zoom",
+						"1.1",
+						"0.5"
+					]
+				]
+			],
+			[
+				78000,
+				[
+					[
+						"Set Cam Zoom",
+						"0.9",
+						"0.5"
+					]
+				]
+			],
+			[
+				90000,
+				[
+					[
+						"Set Cam Zoom",
+						"1.2",
+						"0.5"
+					]
+				]
+			],
+			[
+				91500,
+				[
+					[
+						"Set Cam Zoom",
+						"0.9",
+						"2"
+					]
+				]
+			],
+			[
+				95997.65625,
+				[
+					[
+						"Set Cam Zoom",
+						"1.1",
+						"0.3"
+					]
+				]
+			],
+			[
+				96000,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				120000,
+				[
+					[
+						"Set Cam Zoom",
+						"0.9",
+						"0.5"
+					]
+				]
+			],
+			[
+				123000,
+				[
+					[
+						"Set Cam Zoom",
+						"1.4",
+						"2"
+					]
+				]
+			],
+			[
+				126000,
+				[
+					[
+						"Set Cam Zoom",
+						"1.1",
+						"0.5"
+					],
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFFFF"
+					],
+					[
+						"Cam Boom Speed",
+						"2",
+						"1"
+					]
+				]
+			],
+			[
+				139500,
+				[
+					[
+						"Set Cam Zoom",
+						"0.65",
+						"2"
+					]
+				]
+			],
+			[
+				140250,
+				[
+					[
+						"Change Scroll Speed",
+						"1.35",
+						"1"
+					]
+				]
+			],
+			[
+				141000,
+				[
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFFFF"
+					],
+					[
+						"Set Cam Zoom",
+						"0.7",
+						"1"
+					],
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					]
+				]
+			],
+			[
+				141750,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					]
+				]
+			],
+			[
+				142500,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					]
+				]
+			],
+			[
+				143250,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					]
+				]
+			],
+			[
+				144000,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					]
+				]
+			],
+			[
+				144750,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					]
+				]
+			],
+			[
+				145500,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					]
+				]
+			],
+			[
+				146250,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f   "
+					],
+					[
+						"Set Cam Zoom",
+						"0.9",
+						"1"
+					]
+				]
+			],
+			[
+				147000,
+				[
+					[
+						"Set Cam Zoom",
+						"0.75",
+						"1"
+					],
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					],
+					[
+						"Camera rotate on",
+						"1",
+						"6"
+					]
+				]
+			],
+			[
+				147750,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					]
+				]
+			],
+			[
+				148500,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					]
+				]
+			],
+			[
+				149250,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					]
+				]
+			],
+			[
+				150000,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					]
+				]
+			],
+			[
+				150750,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					]
+				]
+			],
+			[
+				151500,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					]
+				]
+			],
+			[
+				152250,
+				[
+					[
+						"Disco Flash",
+						"1",
+						"6a329f"
+					]
+				]
+			],
+			[
+				153000,
+				[
+					[
+						"Set Cam Zoom",
+						"0.85",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFF"
+					],
+					[
+						"Add trail",
+						"3, 6, 0.3, 0.002",
+						"dad, 1, 0xff2a1d42, no"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"5"
+					]
+				]
+			],
+			[
+				177000,
+				[
+					[
+						"Cam Boom Speed",
+						"1",
+						"1.5"
+					],
+					[
+						"Remove trail",
+						"dad",
+						""
+					]
+				]
+			],
+			[
+				189000,
+				[
+					[
+						"Set Cam Zoom",
+						"0.9",
+						"1"
+					]
+				]
+			],
+			[
+				202500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				202875,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				203250,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				203625,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				205500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				205875,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				206250,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				206625,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				223500,
+				[
+					[
+						"Set Cam Zoom",
+						"1.2",
+						"2"
+					]
+				]
+			],
+			[
+				224250,
+				[
+					[
+						"Change Scroll Speed",
+						"0.85",
+						"1"
+					]
+				]
+			],
+			[
+				225000,
+				[
+					[
+						"Set CHARACTERS Speed",
+						"1",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"random-alt"
+					],
+					[
+						"Camera rotate off",
+						"",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"4",
+						"0"
+					]
+				]
+			],
+			[
+				228000,
+				[
+					[
+						"Flash Camera",
+						"0.5",
+						"0xFFFFFFFF "
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				231692.307692308,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				235384.615384615,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				239076.923076923,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				242769.230769231,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Add trail",
+						"3, 6, 0.3, 0.002",
+						"dad, 1, 0xff2a1d42, no"
+					],
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFFFF"
+					]
+				]
+			],
+			[
+				251076.923076923,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				252000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				252923.076923077,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				253846.153846154,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				254769.230769231,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				255692.307692308,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				256615.384615385,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				257538.461538462,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					],
+					[
+						"Remove trail",
+						"dad",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"4",
+						"1"
+					]
+				]
+			],
+			[
+				261230.769230769,
+				[
+					[
+						"Cam Boom Speed",
+						"0.9",
+						"1"
+					]
+				]
+			],
+			[
+				263076.923076923,
+				[
+					[
+						"Cam Boom Speed",
+						"0.8",
+						"1"
+					]
+				]
+			],
+			[
+				264923.076923077,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					],
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFFFF"
+					],
+					[
+						"Change Character",
+						"dad",
+						"random"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"2"
+					]
+				]
+			],
+			[
+				294461.538461539,
+				[
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFFFF, camhud"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					],
+					[
+						"Cam Boom Speed",
+						"0",
+						"0"
+					]
+				]
+			],
+			[
+				295961.538461539,
+				[
+					[
+						"Set Cam Zoom",
+						"0.8",
+						"10"
+					]
+				]
+			],
+			[
+				300461.538461539,
+				[
+					[
+						"Cam Boom Speed",
+						"4",
+						"1"
+					],
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFFFF"
+					]
+				]
+			],
+			[
+				312461.538461539,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						"0.3"
+					],
+					[
+						"Flash Camera",
+						"0.3",
+						"0xFFFFFFFF"
+					]
+				]
+			],
+			[
+				318461.538461539,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						"20"
+					]
+				]
+			],
+			[
+				336461.538461539,
+				[
+					[
+						"Flash Camera",
+						"1",
+						"0xFFFFFFFF"
+					]
+				]
+			]
+		]
+	}
+}

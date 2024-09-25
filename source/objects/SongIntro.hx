@@ -45,6 +45,8 @@ class SongIntro extends FlxSpriteGroup
                 colorText = 0xff8cd485;
             case 't-short':
                 colorText = 0xff1e1d2b;
+            case 't-short-original':
+                colorText = 0xff1e1d2b;
             case 'monochrome':
                 colorText = 0xff3f3f3f;
             case 's6x-boom':

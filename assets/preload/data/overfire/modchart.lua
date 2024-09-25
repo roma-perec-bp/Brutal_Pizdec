@@ -17,6 +17,7 @@ function onCreate()
   setProperty('timeBarBG.visible', false)
   setProperty('scoreTxt.visible', false)
   setProperty('accuracyShit.visible', false)
+  setProperty('medal.visible', false)
 
   makeLuaSprite('blackFlash', nil, 0, 0)
   makeGraphic('blackFlash', 1280, 720, '000000')
@@ -152,19 +153,45 @@ function onStepHit()
     end
   end
   if curStep == 2368 then
-    for i = 0,7 do
+    for i = 4,7 do
       noteTweenAlpha('se'..i, i, 0, 0.001)
     end
+    setProperty('healthBar.visible', false)
+    setProperty('healthBarBGOverlay.visible', false)
+    setProperty('iconP1.visible', false)
+    setProperty('iconP2.visible', false)
+    setProperty('timeBar.visible', false)
+    setProperty('timeTxt.visible', false)
+    setProperty('timeBarBG.visible', false)
+    setProperty('scoreTxt.visible', false)
+    setProperty('accuracyShit.visible', false)
+    setProperty('medal.visible', false)
+    
   end
   if curStep == 2480 then
     for i = 4,7 do
       noteTweenAlpha('sex'..i, i, 1, 0.7)
     end
   end
-  if curStep == 2752 then
-    for i = 0,3 do
-      noteTweenAlpha('sexo'..i, i, 1, 0.7)
-    end
+  if curStep == 2768 then
+    setProperty('healthBar.visible', true)
+  setProperty('healthBarBGOverlay.visible', true)
+  setProperty('iconP1.visible', true)
+  setProperty('iconP2.visible', true)
+  setProperty('timeBar.visible', true)
+  setProperty('timeTxt.visible', true)
+  setProperty('timeBarBG.visible', true)
+  setProperty('scoreTxt.visible', true)
+  setProperty('medal.visible', true)
+  setProperty('accuracyShit.visible', true) --[[
+  noteTweenX('dragonTween1', 0, 740 + Meow1, 0.5, 'quartInOut');
+    noteTweenX('dragonTween2', 1, 740 + Meow2, 0.5, 'quartInOut');
+    noteTweenX('dragonTween3', 2, 740 + Meow3, 0.5, 'quartInOut');
+    noteTweenX('dragonTween4', 3, 740 + Meow4, 0.5, 'quartInOut');
+  noteTweenX('foxTween1', 4, 85 + Meow1, 1, 'quartInOut');
+  noteTweenX('foxTween2', 5, 85 + Meow2, 1, 'quartInOut');
+  noteTweenX('foxTween3', 6, 85 + Meow3, 1, 'quartInOut');
+  noteTweenX('foxTween4', 7, 85 + Meow4, 1, 'quartInOut');]]
   end
   if curStep == 2880 then
     resettiRev()
@@ -176,22 +203,63 @@ function onStepHit()
     setProperty('blackFlash.alpha', 1)
     setProperty('gf.alpha', 0)
   end
-  if curStep == 3004 then
+  if curStep == 3008 then
 		noteTweenX('dragonTween1', 0, 85 + Meow1, 0.5, 'quartInOut');
     noteTweenX('dragonTween2', 1, 85 + Meow2, 0.5, 'quartInOut');
     noteTweenX('dragonTween3', 2, 85 + Meow3, 0.5, 'quartInOut');
     noteTweenX('dragonTween4', 3, 85 + Meow4, 0.5, 'quartInOut');
-		noteTweenX('foxTween1', 4, 740 + Meow1, 0.5, 'quartInOut');
-    noteTweenX('foxTween2', 5, 740 + Meow2, 0.5, 'quartInOut');
-    noteTweenX('foxTween3', 6, 740 + Meow3, 0.5, 'quartInOut');
-    noteTweenX('foxTween4', 7, 740 + Meow4, 0.5, 'quartInOut');
+		noteTweenX('foxTween1', 4, 415 + Meow1, 0.5, 'quartInOut');
+    noteTweenX('foxTween2', 5, 415 + Meow2, 0.5, 'quartInOut');
+    noteTweenX('foxTween3', 6, 415 + Meow3, 0.5, 'quartInOut');
+    noteTweenX('foxTween4', 7, 415 + Meow4, 0.5, 'quartInOut');
+    for i = 0,7 do
+      noteTweenAlpha('se'..i, i, 0, 0.001)
+    end
+    setProperty('healthBar.visible', false)
+  setProperty('healthBarBGOverlay.visible', false)
+  setProperty('iconP1.visible', false)
+  setProperty('iconP2.visible', false)
+  setProperty('timeBar.visible', false)
+  setProperty('timeTxt.visible', false)
+  setProperty('timeBarBG.visible', false)
+  setProperty('scoreTxt.visible', false)
+  setProperty('accuracyShit.visible', false)
+  setProperty('medal.visible', false)
   end
+
   if curStep == 3008 then
     doTweenAlpha('welcum back', 'blackFlash', 0, 5)
   end  
+  if curStep == 3120 then
+    for i = 4,7 do
+      noteTweenAlpha('sex'..i, i, 1, 0.7)
+    end
+  end
   if curStep == 3520 then
     doTweenAlpha('oh shit', 'blackFlash', 1, 1)
   end  
+  if curStep == 3551 then
+
+    noteTweenX('foxTween1', 4, 740 + Meow1, 1, 'bounceOut');
+    noteTweenX('foxTween2', 5, 740 + Meow2, 1, 'bounceOut');
+    noteTweenX('foxTween3', 6, 740 + Meow3, 1, 'bounceOut');
+    noteTweenX('foxTween4', 7, 740 + Meow4, 1, 'bounceOut');
+  end
+  if curStep == 3552 then
+    for i = 0,3 do
+      noteTweenAlpha('sexo'..i, i, 1, 0.01)
+    end
+    setProperty('healthBar.visible', true)
+  setProperty('healthBarBGOverlay.visible', true)
+  setProperty('iconP1.visible', true)
+  setProperty('iconP2.visible', true)
+  setProperty('timeBar.visible', true)
+  setProperty('timeTxt.visible', true)
+  setProperty('timeBarBG.visible', true)
+  setProperty('scoreTxt.visible', true)
+  setProperty('accuracyShit.visible', true)
+  setProperty('medal.visible', true)
+  end
   if curStep == 3568 then
     doTweenAlpha('oh blyat', 'blackFlash', 0, 0.3)
   end  
@@ -255,6 +323,7 @@ function onBeatHit()
     setPropertyFromGroup('strumLineNotes', 5, 'alpha', 1)
     setProperty('scoreTxt.visible', true)
     setProperty('accuracyShit.visible', true)
+    setProperty('medal.visible', true)
   end
   if curBeat == 15 then
     setPropertyFromGroup('strumLineNotes', 3, 'alpha', 1)
@@ -304,6 +373,7 @@ end
     setProperty('timeTxt.visible', false)
     setProperty('timeBarBG.visible', false)
     setProperty('scoreTxt.visible', false)
+    setProperty('medal.visible', false)
     setProperty('accuracyShit.visible', false)
   end
   if curBeat == 1124 then

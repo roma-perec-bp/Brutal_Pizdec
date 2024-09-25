@@ -81,7 +81,8 @@ class FreeplayState extends MusicBeatState
 		0xff4d250e,
 		0xffff0000,
 		0xff642800,
-		0xff61de35
+		0xff61de35,
+		0xff7a7a7a
 	];
 
 	var jalapenis:String = 'jap_3';
@@ -111,7 +112,7 @@ class FreeplayState extends MusicBeatState
 			case 2:
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex-pixel', 'jamar-pixel'], ['bbg', 'lamar']);
 			case 3:
-				addWeek(['With Cone ORIGINAL','BOOM OLD', 'Overfire OLD', 'Klork OLD'], 1, oldColors, ['jap-pixel', 'jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel'], ['jap_1', 'jap-old', 'jap2-old', 'lork']);
+				addWeek(['With Cone ORIGINAL','BOOM OLD', 'Overfire OLD', 'Klork OLD', 'T-SHORT ORIGINAL'], 1, oldColors, ['jap-pixel', 'jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel', 'short-pixel'], ['jap_1', 'jap-old', 'jap2-old', 'lork', 'tshort']);
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));

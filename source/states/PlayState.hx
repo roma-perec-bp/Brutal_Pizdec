@@ -3607,7 +3607,7 @@ class PlayState extends MusicBeatState
 			for (i in seperatedScore)
 			{
 				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('num' + Std.int(i)));
-				numScore.cameras = [camGsme];
+				numScore.cameras = [camGame];
 				numScore.screenCenter();
 				numScore.x = placement + (43 * daLoop) - 90 + ClientPrefs.data.comboOffset[2];
 				numScore.y += 80 - ClientPrefs.data.comboOffset[3];
