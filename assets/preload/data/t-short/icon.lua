@@ -8,7 +8,7 @@ function onCreate()
 end
 
 function onUpdatePost(elapsed)
-    if curBeat >= 336 and curBeat < 600 then
+    if curBeat >= 204 and curBeat < 304 or curBeat >= 776 and curBeat < 840 then
         x1 = screenWidth - getProperty('healthBar.x') - (getProperty('healthBar.width') * (getProperty('healthBar.percent') * 0.01)) + (150 * getProperty('iconP1obj.scale.x') - 150) / 2 - 26
         x2 = screenWidth - getProperty('healthBar.x') - (getProperty('healthBar.width') * (getProperty('healthBar.percent') * 0.01)) - (150 * getProperty('iconP2obj.scale.x')) / 2 - 26 * 2
         setProperty('iconP1.x', x1)
@@ -23,7 +23,7 @@ function onUpdatePost(elapsed)
 end
 
 function onBeatHit()
-    if curBeat >= 336 and curBeat < 600 then
+    if curBeat >= 240 and curBeat < 304 or curBeat >= 776 and curBeat < 840 then
         if curBeat % getProperty('gfSpeed') == 0 then
             if curBeat % (getProperty('gfSpeed') * 2) == 0 then
                 scaleObject('iconP1obj', 1.1, 0.8)
@@ -45,7 +45,7 @@ function onBeatHit()
         doTweenY('icon2objy', 'iconP2obj.scale', 1, crochet / 1300 * getProperty('gfSpeed'), 'quadOut')
     end
 
-    if curBeat >= 608 and curBeat < 768 then
+    if curBeat >= 552 and curBeat < 696 then
         turnvalue = 20 -- the icon shit
         if curBeat % 4 == 0 then
             turnvalue = 120
@@ -54,7 +54,7 @@ function onBeatHit()
         end
         setProperty('iconP2.angle',-turnvalue)
         setProperty('iconP1.angle',turnvalue)
-        
+
         doTweenAngle('iconTween1','iconP1',0,crochet/1000,'circOut')
         doTweenAngle('iconTween2','iconP2',0,crochet/1000,'circOut')
     end
