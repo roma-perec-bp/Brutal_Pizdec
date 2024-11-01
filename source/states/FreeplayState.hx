@@ -210,7 +210,7 @@ class FreeplayState extends MusicBeatState
 
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
 		
-		changeSelection();
+		changeSelection(0, false);
 		changePortrait(songs[curSelected[freeplayType]].charPort);
 		changeDiff();
 
