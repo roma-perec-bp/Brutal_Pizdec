@@ -79,13 +79,13 @@ function onBeatHit()
         setProperty('blammedLightsBlack.alpha', 0)
         setProperty('dad.visible', true)
         setProperty('boyfriend.visible', true)
-        setProperty('iconROM.visible', true)
+        setProperty('iconROM.visible', hideHud)
         setProperty('iconROM.angle', -25)
         doTweenAngle('sex', 'iconROM', 0, 0.5, 'elasticOut')
     end
     if curBeat == 598 then
         doTweenAlpha('random','gf', 1, 5)
-        doTweenAlpha('boobs','iconGF', 1, 5)
+        doTweenAlpha('boobs','iconGF', healthBarAlpha, 5)
     end
     if curBeat == 736 then
         setProperty('blammedLightsBlack.alpha', 1)
