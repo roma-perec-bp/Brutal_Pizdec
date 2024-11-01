@@ -117,7 +117,7 @@ function onStepHit()
     end  
     if curStep == 3552 then
         setProperty('blammedLightsBlack.alpha', 1)
-        setProperty('boyfriendGroup.color', getColorFromHex('FFFFFF'))
+        doTweenColor('he is no black or wtf', 'boyfriend', 'FFFFFF', 0.001) --пидорас тупой блятьь
         setProperty('dad.alpha', 1)
     end 
     if curStep == 3584 then

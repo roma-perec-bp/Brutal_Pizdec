@@ -92,6 +92,12 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool');
 		addOption(option);
 
+		var option:Option = new Option('Camera Zooms', //эта хуйня в некоторых случаях бесит
+		"If unchecked, the camera won't zoom in on a beat hit.",
+		'camZooms',
+		'bool');
+		addOption(option);
+
 		#if !mobile
 		var option:Option = new Option('FPS Counter',
 			'If unchecked, hides FPS Counter.',

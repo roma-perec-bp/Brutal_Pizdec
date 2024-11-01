@@ -174,24 +174,18 @@ function onStepHit()
     end
   end
   if curStep == 2768 then
-    setProperty('healthBar.visible', true)
-  setProperty('healthBarBGOverlay.visible', true)
-  setProperty('iconP1.visible', true)
-  setProperty('iconP2.visible', true)
-  setProperty('timeBar.visible', true)
-  setProperty('timeTxt.visible', true)
-  setProperty('timeBarBG.visible', true)
-  setProperty('scoreTxt.visible', true)
-  setProperty('medal.visible', true)
-  setProperty('accuracyShit.visible', true) --[[
-  noteTweenX('dragonTween1', 0, 740 + Meow1, 0.5, 'quartInOut');
-    noteTweenX('dragonTween2', 1, 740 + Meow2, 0.5, 'quartInOut');
-    noteTweenX('dragonTween3', 2, 740 + Meow3, 0.5, 'quartInOut');
-    noteTweenX('dragonTween4', 3, 740 + Meow4, 0.5, 'quartInOut');
-  noteTweenX('foxTween1', 4, 85 + Meow1, 1, 'quartInOut');
-  noteTweenX('foxTween2', 5, 85 + Meow2, 1, 'quartInOut');
-  noteTweenX('foxTween3', 6, 85 + Meow3, 1, 'quartInOut');
-  noteTweenX('foxTween4', 7, 85 + Meow4, 1, 'quartInOut');]]
+    if not hideHud then
+      setProperty('healthBar.visible', true)
+      setProperty('healthBarBGOverlay.visible', true)
+      setProperty('iconP1.visible', true)
+      setProperty('iconP2.visible', true)
+      setProperty('timeBar.visible', true)
+      setProperty('timeTxt.visible', true)
+      setProperty('timeBarBG.visible', true)
+      setProperty('scoreTxt.visible', true)
+      setProperty('medal.visible', true)
+      setProperty('accuracyShit.visible', true)
+    end
   end
   if curStep == 2880 then
     resettiRev()
@@ -249,16 +243,18 @@ function onStepHit()
     for i = 0,3 do
       noteTweenAlpha('sexo'..i, i, 1, 0.01)
     end
-    setProperty('healthBar.visible', true)
-  setProperty('healthBarBGOverlay.visible', true)
-  setProperty('iconP1.visible', true)
-  setProperty('iconP2.visible', true)
-  setProperty('timeBar.visible', true)
-  setProperty('timeTxt.visible', true)
-  setProperty('timeBarBG.visible', true)
-  setProperty('scoreTxt.visible', true)
-  setProperty('accuracyShit.visible', true)
-  setProperty('medal.visible', true)
+    if not hideHud then
+      setProperty('healthBar.visible', true)
+      setProperty('healthBarBGOverlay.visible', true)
+      setProperty('iconP1.visible', true)
+      setProperty('iconP2.visible', true)
+      setProperty('timeBar.visible', true)
+      setProperty('timeTxt.visible', true)
+      setProperty('timeBarBG.visible', true)
+      setProperty('scoreTxt.visible', true)
+      setProperty('medal.visible', true)
+      setProperty('accuracyShit.visible', true)
+    end
   end
   if curStep == 3568 then
     doTweenAlpha('oh blyat', 'blackFlash', 0, 0.3)
@@ -308,7 +304,9 @@ function onBeatHit()
   if curBeat == 12 then
     setPropertyFromGroup('strumLineNotes', 0, 'alpha', 1)
     setPropertyFromGroup('strumLineNotes', 7, 'alpha', 1)
-    setProperty('healthBar.visible', true)
+    if not hideHud then 
+      setProperty('healthBar.visible', true) 
+    end
     setProperty('healthBarBGOverlay.visible', true)
   end
   if curBeat == 13 then
@@ -321,9 +319,12 @@ function onBeatHit()
   if curBeat == 14 then
     setPropertyFromGroup('strumLineNotes', 2, 'alpha', 1)
     setPropertyFromGroup('strumLineNotes', 5, 'alpha', 1)
-    setProperty('scoreTxt.visible', true)
-    setProperty('accuracyShit.visible', true)
-    setProperty('medal.visible', true)
+
+    if not hideHud then 
+      setProperty('scoreTxt.visible', true)
+      setProperty('accuracyShit.visible', true)
+      setProperty('medal.visible', true)
+    end
   end
   if curBeat == 15 then
     setPropertyFromGroup('strumLineNotes', 3, 'alpha', 1)
