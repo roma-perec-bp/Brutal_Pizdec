@@ -8,16 +8,21 @@
 						"Cam Boom Speed",
 						"0",
 						"0"
+					],
+					[
+						"Set Cam Zoom Alt",
+						"1.1",
+						"6"
 					]
 				]
 			],
 			[
-				14343.75,
+				6000,
 				[
 					[
-						"Set Property",
-						"defaultCamZoom",
-						"1"
+						"Set Cam Zoom Alt",
+						"0.7",
+						"0.5"
 					]
 				]
 			],
@@ -28,6 +33,16 @@
 						"lyrics",
 						"Halo$Всем",
 						"1e1d2b"
+					]
+				]
+			],
+			[
+				14995.3125,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
 					]
 				]
 			],
@@ -143,6 +158,41 @@
 						"Cam Boom Speed",
 						"4",
 						"1"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				30000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				41995.3125,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
 					]
 				]
 			],
@@ -151,8 +201,238 @@
 				[
 					[
 						"Cam Boom Speed",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				66000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					],
+					[
+						"Flash Camera",
+						"",
+						""
+					],
+					[
+						"Cam Boom Speed",
 						"2",
 						"1"
+					]
+				]
+			],
+			[
+				67500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				69000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				70500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				70875,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.05"
+					]
+				]
+			],
+			[
+				71250,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				71625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				72000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				73500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				75000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				76500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.0"
+					]
+				]
+			],
+			[
+				76875,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.95"
+					]
+				]
+			],
+			[
+				77250,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				77625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				78000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				79500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				81000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				82500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				84000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				85500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				87000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				88500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
 					]
 				]
 			],
@@ -161,8 +441,18 @@
 				[
 					[
 						"Set Cam Zoom Alt",
-						"1",
+						"1.3",
 						"0.5"
+					]
+				]
+			],
+			[
+				89992.96875,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
 					]
 				]
 			],
@@ -217,6 +507,16 @@
 				]
 			],
 			[
+				91485.9375,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
 				91500,
 				[
 					[
@@ -253,6 +553,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				92995.3125,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
 					]
 				]
 			],
@@ -297,6 +607,16 @@
 				]
 			],
 			[
+				94492.96875,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
 				94500,
 				[
 					[
@@ -333,6 +653,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				95997.65625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
 					]
 				]
 			],
@@ -377,6 +707,16 @@
 				]
 			],
 			[
+				97497.65625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
 				97500,
 				[
 					[
@@ -413,6 +753,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				98985.9375,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
 					]
 				]
 			],
@@ -457,6 +807,16 @@
 				]
 			],
 			[
+				100492.96875,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
 				100500,
 				[
 					[
@@ -493,6 +853,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				101988.28125,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
 					]
 				]
 			],
@@ -537,6 +907,16 @@
 				]
 			],
 			[
+				103490.625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
 				103500,
 				[
 					[
@@ -573,6 +953,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				104997.65625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.3"
 					]
 				]
 			],
@@ -617,6 +1007,16 @@
 				]
 			],
 			[
+				106495.3125,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
 				106500,
 				[
 					[
@@ -653,6 +1053,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				107990.625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
 					]
 				]
 			],
@@ -697,6 +1107,16 @@
 				]
 			],
 			[
+				109490.625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
 				109500,
 				[
 					[
@@ -733,6 +1153,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				110990.625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
 					]
 				]
 			],
@@ -777,6 +1207,16 @@
 				]
 			],
 			[
+				112497.65625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.3"
+					]
+				]
+			],
+			[
 				112500,
 				[
 					[
@@ -817,6 +1257,16 @@
 				]
 			],
 			[
+				113992.96875,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
 				114000,
 				[
 					[
@@ -828,6 +1278,16 @@
 						"Flash Camera",
 						"1",
 						""
+					]
+				]
+			],
+			[
+				119250,
+				[
+					[
+						"Set Cam Zoom Alt",
+						"1.15",
+						"0.8"
 					]
 				]
 			],
@@ -852,6 +1312,431 @@
 				]
 			],
 			[
+				125997.65625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				126000,
+				[
+					[
+						"Camera rotate on",
+						"1",
+						"6"
+					]
+				]
+			],
+			[
+				129000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				130500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				131997.65625,
+				[
+					[
+						"Cam Boom Speed",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				132000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					],
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				135000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				136500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				137250,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				138000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				141000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				142500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				144000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				145500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				147000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				148500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				150000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				151500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				153000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				154500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				156000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Camera rotate off",
+						"",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"4",
+						"1"
+					]
+				]
+			],
+			[
+				162000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				168000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				172500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				174000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				178500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				180000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				181500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				181875,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				182250,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				182625,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				184500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				184875,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				185250,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				185625,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				186000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				192000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				195000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				198000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				201000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				202500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
 				204000,
 				[
 					[
@@ -863,6 +1748,21 @@
 						"Cam Boom Speed",
 						"0",
 						"0"
+					]
+				]
+			],
+			[
+				205500,
+				[
+					[
+						"Set DAD Speed",
+						"1",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"random-alt"
 					]
 				]
 			],
@@ -881,13 +1781,18 @@
 					],
 					[
 						"Cam Boom Speed",
-						"2",
+						"1",
 						"1"
-					],
+					]
+				]
+			],
+			[
+				210692.307692308,
+				[
 					[
-						"Add trail",
-						"4, 24, 0.3, 0.069",
-						"dad, 2"
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
 					]
 				]
 			],
@@ -898,6 +1803,16 @@
 						"Cam Boom Speed",
 						"1",
 						"1"
+					]
+				]
+			],
+			[
+				214384.615384615,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -942,6 +1857,16 @@
 				]
 			],
 			[
+				218076.923076923,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				218538.461538462,
 				[
 					[
@@ -977,6 +1902,31 @@
 					[
 						"Angle",
 						"",
+						""
+					]
+				]
+			],
+			[
+				221763.461538462,
+				[
+					[
+						"Add trail",
+						"4, 24, 0.3, 0.069",
+						"dad, 1, 0xff2a1d42, no"
+					]
+				]
+			],
+			[
+				221769.230769231,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Flash Camera",
+						"1",
 						""
 					]
 				]
@@ -1072,10 +2022,30 @@
 				]
 			],
 			[
+				230076.923076923,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				230538.461538462,
 				[
 					[
 						"Angle",
+						"",
+						""
+					]
+				]
+			],
+			[
+				231000,
+				[
+					[
+						"Add Camera Zoom",
 						"",
 						""
 					]
@@ -1092,10 +2062,30 @@
 				]
 			],
 			[
+				231923.076923077,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				232384.615384615,
 				[
 					[
 						"Angle",
+						"",
+						""
+					]
+				]
+			],
+			[
+				232846.153846154,
+				[
+					[
+						"Add Camera Zoom",
 						"",
 						""
 					]
@@ -1112,10 +2102,30 @@
 				]
 			],
 			[
+				233769.230769231,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				234230.769230769,
 				[
 					[
 						"Angle",
+						"",
+						""
+					]
+				]
+			],
+			[
+				234692.307692308,
+				[
+					[
+						"Add Camera Zoom",
 						"",
 						""
 					]
@@ -1132,12 +2142,42 @@
 				]
 			],
 			[
+				235615.384615385,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
 				236076.923076923,
 				[
 					[
 						"Angle",
 						"",
 						""
+					]
+				]
+			],
+			[
+				236538.461538462,
+				[
+					[
+						"Remove trail",
+						"",
+						""
+					],
+					[
+						"Cam Boom Speed",
+						"2",
+						"1"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
 					]
 				]
 			],
@@ -1217,6 +2257,26 @@
 					[
 						"Angle",
 						"",
+						""
+					]
+				]
+			],
+			[
+				243923.076923077,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					],
+					[
+						"Cam Boom Speed",
+						"1",
+						"2"
+					],
+					[
+						"Flash Camera",
+						"1",
 						""
 					]
 				]
@@ -1378,6 +2438,16 @@
 						"Angle",
 						"",
 						""
+					]
+				]
+			],
+			[
+				258692.307692308,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
 					]
 				]
 			],
@@ -1553,11 +2623,6 @@
 						"Flash Camera",
 						"1",
 						""
-					],
-					[
-						"Remove trail",
-						"dad",
-						""
 					]
 				]
 			],
@@ -1591,8 +2656,118 @@
 					],
 					[
 						"Cam Boom Speed",
-						"2",
+						"1",
 						"1"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					],
+					[
+						"Change Character",
+						"dad",
+						"random"
+					]
+				]
+			],
+			[
+				291461.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				294461.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				295961.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				297461.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				298961.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				300461.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				301961.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				302336.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				302711.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.3"
+					]
+				]
+			],
+			[
+				303086.538461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
 					]
 				]
 			],
@@ -1607,12 +2782,17 @@
 					[
 						"Cam Boom Speed",
 						"1",
-						"1"
+						"2"
 					],
 					[
 						"Flash Camera",
 						"1",
 						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
 					]
 				]
 			],
@@ -1643,6 +2823,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				304954.507211539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -1687,6 +2877,16 @@
 				]
 			],
 			[
+				306454.507211539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				306461.538461539,
 				[
 					[
@@ -1723,6 +2923,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				307954.507211539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
 					]
 				]
 			],
@@ -1767,6 +2977,16 @@
 				]
 			],
 			[
+				309454.507211539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
 				309461.538461539,
 				[
 					[
@@ -1803,6 +3023,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				310959.194711539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -1847,6 +3077,16 @@
 				]
 			],
 			[
+				312447.475961539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				312461.538461539,
 				[
 					[
@@ -1883,6 +3123,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				313956.850961539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
 					]
 				]
 			],
@@ -1927,6 +3177,16 @@
 				]
 			],
 			[
+				315456.850961539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
 				315461.538461539,
 				[
 					[
@@ -1963,6 +3223,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				316952.163461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -2007,6 +3277,16 @@
 				]
 			],
 			[
+				318459.194711539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				318461.538461539,
 				[
 					[
@@ -2043,6 +3323,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				319959.194711539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
 					]
 				]
 			],
@@ -2087,6 +3377,16 @@
 				]
 			],
 			[
+				321459.194711539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
 				321461.538461539,
 				[
 					[
@@ -2123,6 +3423,16 @@
 						"Disco Flash",
 						"1",
 						"F9393F"
+					]
+				]
+			],
+			[
+				322959.194711539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -2167,6 +3477,16 @@
 				]
 			],
 			[
+				324459.194711539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
 				324461.538461539,
 				[
 					[
@@ -2207,22 +3527,22 @@
 				]
 			],
 			[
-				325961.538461539,
+				325956.850961539,
 				[
 					[
-						"Disco Flash",
-						"1",
-						"C24B99"
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
 					]
 				]
 			],
 			[
-				326336.538461539,
+				325961.538461539,
 				[
 					[
-						"Disco Flash",
-						"1",
-						"00FFFF"
+						"Cam Boom Speed",
+						"999",
+						"1"
 					]
 				]
 			],
@@ -2230,9 +3550,24 @@
 				326711.538461539,
 				[
 					[
-						"Disco Flash",
-						"1",
-						"12FA05"
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					],
+					[
+						"Add Camera Zoom",
+						"0.04",
+						"0.04"
+					]
+				]
+			],
+			[
+				327063.100961539,
+				[
+					[
+						"Add Camera Zoom",
+						"0.04",
+						"0.04"
 					]
 				]
 			],
@@ -2240,9 +3575,19 @@
 				327086.538461539,
 				[
 					[
-						"Disco Flash",
-						"1",
-						"F9393F"
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				327459.194711539,
+				[
+					[
+						"Add Camera Zoom",
+						"0.04",
+						"0.04"
 					]
 				]
 			],
@@ -2258,6 +3603,16 @@
 						"Cam Boom Speed",
 						"1",
 						"1"
+					]
+				]
+			],
+			[
+				327555.288461539,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
