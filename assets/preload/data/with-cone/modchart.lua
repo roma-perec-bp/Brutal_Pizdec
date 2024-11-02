@@ -1,5 +1,6 @@
 local defaultNotePos = {};
 local spin = 3
+setProperty('skipArrowStartTween', true)
 
 function onSongStart()
 	for i = 0,7 do 
@@ -9,6 +10,24 @@ function onSongStart()
 		table.insert(defaultNotePos, {x,y})
 	end
 end
+
+function onCreatePost()
+	setProperty('healthBar.visible', false)
+	setProperty('healthBarBGOverlay.visible', false)
+	setProperty('iconP1.visible', false)
+	setProperty('iconP2.visible', false)
+	setProperty('timeBar.visible', false)
+	setProperty('timeTxt.visible', false)
+	setProperty('timeBarBG.visible', false)
+	setProperty('scoreTxt.visible', false)
+	setProperty('accuracyShit.visible', false)
+	setProperty('medal.visible', false)
+
+	for i = 0, 7 do
+		setPropertyFromGroup('strumLineNotes', i, 'alpha', 0)
+	end
+end
+
 
 function onUpdate(elapsed)
 	local songPos = getPropertyFromClass('backend.Conductor', 'songPosition');
@@ -39,6 +58,35 @@ function onUpdate(elapsed)
 		for i = 0,7 do 
 			setPropertyFromGroup('strumLineNotes', i, 'x', defaultNotePos[i + 1][1])
 			setPropertyFromGroup('strumLineNotes', i, 'y', defaultNotePos[i + 1][2])
+		end
+	end
+end
+
+function onBeatHit()
+	if curBeat == 24 then
+		for i = 4, 7 do
+			noteTweenAlpha("note"..i, i, 1, 1, "linear")
+		end
+	end
+
+	if curBeat == 48 then
+		for i = 0, 3 do
+			noteTweenAlpha("note"..i, i, 1, 1, "linear")
+		end
+		setProperty('healthBar.visible', true)
+		setProperty('healthBarBGOverlay.visible', true)
+		setProperty('iconP1.visible', true)
+		setProperty('iconP2.visible', true)
+		setProperty('timeBar.visible', true)
+		setProperty('timeTxt.visible', true)
+		setProperty('timeBarBG.visible', true)
+		setProperty('scoreTxt.visible', true)
+		setProperty('accuracyShit.visible', true)
+		setProperty('medal.visible', true)
+	end
+	if curBeat == 702 then
+		for i = 0, 7 do
+			noteTweenAngle("note"..i, i, 360, 1, "quartInOut")
 		end
 	end
 end

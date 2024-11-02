@@ -43,6 +43,14 @@ function onSongStart()
 	end
 end
 
+
+function onSpawnNote()
+	if getPropertyFromGroup('notes', 0, 'strumTime') >= crochet * 1056 and not getPropertyFromGroup('notes', 0, 'mustPress') then
+			setObjectCamera('notes.members[0]', 'game')
+			callMethod('notes.members[0].scrollFactor.set', {1, 1})
+	end
+end
+
 local staticArrowWave = 0
 local function lerp(a,b,t) return a+(b-a)*t end
 function onUpdate(elapsed)
@@ -301,6 +309,19 @@ function onStepHit()
 end
 
 function onBeatHit()
+  if curBeat == 1056 then
+    for i = 0, 3 do
+      setObjectCamera('opponentStrums.members['.. i ..']', 'game')
+      callMethod('opponentStrums.members['.. i ..'].scrollFactor.set', {1, 1})
+      setPropertyFromGroup("opponentStrums", i, 'alpha', 0.6)
+      setPropertyFromGroup("opponentStrums", i, 'y', 600)
+      setProperty('opponentStrums.members['..i..'].downScroll', true)
+    end
+    setPropertyFromGroup("opponentStrums", 0, 'x', 50)
+    setPropertyFromGroup("opponentStrums", 1, 'x', 180)
+    setPropertyFromGroup("opponentStrums", 2, 'x', 700)
+    setPropertyFromGroup("opponentStrums", 3, 'x', 850)
+  end
   if curBeat == 12 then
     setPropertyFromGroup('strumLineNotes', 0, 'alpha', 1)
     setPropertyFromGroup('strumLineNotes', 7, 'alpha', 1)
@@ -366,6 +387,9 @@ end
   end
   
   if curBeat == 1120 then
+    for i = 0, 3 do
+      setPropertyFromGroup("opponentStrums", i, 'alpha', 0) -- нахуй пошел
+    end
     setProperty('healthBar.visible', false)
     setProperty('healthBarBGOverlay.visible', false)
     setProperty('iconP1.visible', false)
@@ -382,6 +406,7 @@ end
     noteTweenAlpha("TheEndForRe", 5, 0, 5, "quartInOut")
     noteTweenAlpha("The", 6, 0, 5, "quartInOut")
     noteTweenAlpha("End", 7, 0, 5, "quartInOut")
+
   end
 end
 

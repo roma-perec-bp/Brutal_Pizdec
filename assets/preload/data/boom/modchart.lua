@@ -4,6 +4,7 @@ local Meow1 = 0
 local Meow2 = 112
 local Meow3 = 112 * 2
 local Meow4 = 112 * 3
+setProperty('skipArrowStartTween', true)
 
 function onSongStart()
 	for i = 0,7 do 
@@ -26,23 +27,28 @@ function onCreate()
     makeGraphic('blackFlash', 1280, 720, '000000')
     setObjectCamera('blackFlash', 'hud')
     addLuaSprite('blackFlash', false)
-    if not lowQuality then
+
     makeLuaSprite('vin', 'vin', 0, 0)
+    screenCenter("vin", 'xy')
     setObjectCamera('vin', 'hud')
     addLuaSprite('vin', true)
-    end
-    --у кого то лагает винтейдж 
 
     setProperty('scoreTxt.visible', false)
     setProperty('timeTxt.visible', false)
     setProperty('timeBar.visible', false)
     setProperty('timeBarBG.visible', false)
-
+    setProperty('medal.visible', false)
     setProperty('healthBar.visible', false)
     setProperty('healthBarBGOverlay.visible', false)
     setProperty('iconP1.visible', false)
     setProperty('iconP2.visible', false)
     setProperty('accuracyShit.visible', false)
+end
+
+function onCountdownStarted()
+    for i = 0, 7 do
+        setPropertyFromGroup('strumLineNotes', i, 'alpha', 0)
+    end
 end
 
 function onUpdate(elapsed)
@@ -53,11 +59,11 @@ function onUpdate(elapsed)
 		for i = 0,7 do
 			setPropertyFromGroup('strumLineNotes', i, 'x', defaultNotePos[i + 1][1] + 10 *math.sin((currentBeat + i*0.25) * math.pi))
 			setPropertyFromGroup('strumLineNotes', i, 'y', defaultNotePos[i + 1][2] + 10 *math.cos((currentBeat + i*0.25) * math.pi))
-		end                                                  
+		end
 	end
 
 	if curStep == 3584 then
-		for i = 0,7 do 
+		for i = 0,7 do
 			setPropertyFromGroup('strumLineNotes', i, 'x', defaultNotePos[i + 1][1])
 			setPropertyFromGroup('strumLineNotes', i, 'y', defaultNotePos[i + 1][2])
 		end
@@ -66,147 +72,151 @@ end
 
 function onStepHit()
     if curStep == 28 then
-        setProperty('scoreTxt.visible', true)
+        for i = 0, 3 do
+            setPropertyFromGroup('strumLineNotes', i, 'alpha', 1)
+        end
+    end
+    if curStep == 30 then
+        for i = 4, 7 do
+            setPropertyFromGroup('strumLineNotes', i, 'alpha', 1)
+        end
+    end
+end
+
+function onBeatHit()
+    if curBeat == 8 then
+        doTweenAlpha('suka','blackFlash', 0, 1, 'linear')
+    end
+    if curBeat == 92 then
         setProperty('timeTxt.visible', true)
         setProperty('timeBar.visible', true)
         setProperty('timeBarBG.visible', true)
-        setProperty('accuracyShit.visible', true)
+        if not hideHud then
+            setProperty('scoreTxt.visible', true)
+            setProperty('accuracyShit.visible', true)
+            setProperty('healthBar.visible', true)
+            setProperty('healthBarBGOverlay.visible', true)
+            setProperty('iconP1.visible', true)
+            setProperty('iconP2.visible', true)
+            setProperty('medal.visible', true)
+        end
     end
-    if curStep == 30 then
-        setProperty('healthBar.visible', true)
-        setProperty('healthBarBGOverlay.visible', true)
-        setProperty('iconP1.visible', true)
-        setProperty('iconP2.visible', true)
-    end
-    if curStep == 32 then
-        doTweenAlpha('suka','blackFlash', 0, 1, 'linear')
-    end
-    if curStep == 288 then
+    if curBeat == 72 then
         setProperty('vin.visible', false)
     end
-    if curStep == 1398 then
-        noteTweenAlpha("sex1", 0, 0, 1, "quartInOut")
-        noteTweenAngle("saltoHWAW1", 4, -360, 0.6, "quartInOut");
-        noteTweenX('foxTween1', 4, 415 + Meow1, 1, 'quartInOut');
+    if curBeat == 348 then
+        for i = 4, 7 do
+            noteTweenAngle("hwaw"..i, i, -360, 1.5, "quartInOut")
+        end
+        for i = 0, 3 do
+            noteTweenAlpha("perec"..i, i, 0, 1, "quartInOut")
+        end
+        noteTweenX('foxTween1', 4, 415 + Meow1, 1.5, 'quartInOut');
+        noteTweenX('foxTween2', 5, 415 + Meow2, 1.5, 'quartInOut');
+        noteTweenX('foxTween3', 6, 415 + Meow3, 1.5, 'quartInOut');
+        noteTweenX('foxTween4', 7, 415 + Meow4, 1.5, 'quartInOut');
     end
-    if curStep == 1400 then
-        noteTweenAlpha("sex2", 1, 0, 1, "quartInOut")
-        noteTweenAngle("saltoHWAW2", 5, -360, 0.6, "quartInOut");
-        noteTweenX('foxTween2', 5, 415 + Meow2, 1, 'quartInOut');
-    end
-    if curStep == 1402 then
-        noteTweenAlpha("sex3", 2, 0, 1, "quartInOut")
-        noteTweenAngle("saltoHWAW3", 6, -360, 0.6, "quartInOut");
-        noteTweenX('foxTween3', 6, 415 + Meow3, 1, 'quartInOut');
-    end
-    if curStep == 1404 then
-        noteTweenAlpha("sex4", 3, 0, 1, "quartInOut")
-        noteTweenAngle("saltoHWAW4", 7, -360, 0.6, "quartInOut");
-        noteTweenX('foxTween4', 7, 415 + Meow4, 1, 'quartInOut');
-    end
-    if curStep == 1536 then
-        noteTweenAlpha("ssex1", 0, 1, 10, "quartInOut")
-        noteTweenAlpha("ssss", 1, 1, 10, "quartInOut")
-        noteTweenAlpha("sssex1", 2, 1, 10, "quartInOut")
-        noteTweenAlpha("sex69", 3, 1, 10, "quartInOut")
-        noteTweenAngle("saltoHWAW1", 4, 360, 8, "quartInOut");
-        noteTweenAngle("saltoHWAW2", 5, 360, 8, "quartInOut");
-        noteTweenAngle("saltoHWAW3", 6, 360, 8, "quartInOut");
-        noteTweenAngle("saltoHWAW4", 7, 360, 8, "quartInOut");
+    if curBeat == 384 then
+        for i = 0, 3 do
+            noteTweenAlpha("perec"..i, i, 1, 10, "quartInOut")
+        end
         noteTweenX('foxTween1', 4, 740 + Meow1, 8, 'quartInOut');
     	noteTweenX('foxTween2', 5, 740 + Meow2, 8, 'quartInOut');
     	noteTweenX('foxTween3', 6, 744 + Meow3, 8, 'quartInOut');
     	noteTweenX('foxTween4', 7, 744 + Meow4, 8, 'quartInOut');
     end
-    if curStep == 1664 then
+    if curBeat == 416 then
         setProperty('vin.visible', true)
-        noteTweenAlpha("hwaw1", 4, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("hwaw2", 5, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("hwaw3", 6, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("hwaw4", 7, 0.6, 0.6, "quartInOut")
+        for i = 4, 7 do
+            noteTweenAlpha("hwaw"..i, i, 0.6, 0.6, "quartInOut")
+        end
     end
-    if curStep == 1792 then
-        noteTweenAlpha("sex1", 0, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex2", 1, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex3", 2, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex4", 3, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex14", 4, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex25", 5, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex39", 6, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex42", 7, 1, 0.6, "quartInOut")
+    if curBeat == 448 then
+        for i = 0, 3 do
+            noteTweenAlpha("perec"..i, i, 0.6, 0.6, "quartInOut")
+        end
+        for i = 4, 7 do
+            noteTweenAlpha("hwaw"..i, i, 1, 0.6, "quartInOut")
+        end
     end
-    if curStep == 1920 then
-        noteTweenAlpha("sex1", 0, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex2", 1, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex3", 2, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex4", 3, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex14", 4, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex25", 5, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex39", 6, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex42", 7, 0.6, 0.6, "quartInOut")
+    if curBeat == 480 then
+        for i = 0, 3 do
+            noteTweenAlpha("perec"..i, i, 1, 0.6, "quartInOut")
+        end
+        for i = 4, 7 do
+            noteTweenAlpha("hwaw"..i, i, 0.6, 0.6, "quartInOut")
+        end
     end
-    if curStep == 2048 then
-        noteTweenAlpha("sex1", 0, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex2", 1, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex3", 2, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex4", 3, 0.6, 0.6, "quartInOut")
-        noteTweenAlpha("sex14", 4, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex25", 5, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex39", 6, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex42", 7, 1, 0.6, "quartInOut")
+    if curBeat == 512 then
+        for i = 0, 3 do
+            noteTweenAlpha("perec"..i, i, 0.6, 0.6, "quartInOut")
+        end
+        for i = 4, 7 do
+            noteTweenAlpha("hwaw"..i, i, 1, 0.6, "quartInOut")
+        end
     end
-    if curStep == 2176 then
-        noteTweenAlpha("sex1", 0, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex2", 1, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex3", 2, 1, 0.6, "quartInOut")
-        noteTweenAlpha("sex4", 3, 1, 0.6, "quartInOut")
-    end
-
-    if curStep == 2176 then
+    if curBeat == 544 then
+        for i = 0, 3 do
+            noteTweenAlpha("perec"..i, i, 1, 0.6, "quartInOut")
+        end
         setProperty('vin.visible', false)
     end
-    if curStep == 2720 then
+    if curBeat == 680 then
         doTweenAlpha('maniaPartYea','maniaPart', 1, 0.5, 'linear')
         noteTweenX("Pizdec1", 0, 420, 0.5, "quartInOut")
         noteTweenX("Pizdec2", 1, 530, 0.5, "quartInOut")
         noteTweenX("Pizdec3", 2, 640, 0.5, "quartInOut")
         noteTweenX("Pizdec4", 3, 750, 0.5, "quartInOut")
-        noteTweenAlpha("hwaw1", 4, 0, 1, "quartInOut")
-        noteTweenAlpha("hwaw2", 5, 0, 1, "quartInOut")
-        noteTweenAlpha("hwaw3", 6, 0, 1, "quartInOut")
-        noteTweenAlpha("hwaw4", 7, 0, 1, "quartInOut")
-        noteTweenAngle("salto", 0, 360, 0.5, "quartInOut");
-        noteTweenAngle("saltyhyEbanyl", 1, 360, 0.5, "quartInOut");
-        noteTweenAngle("fuckingSalto", 2, 360, 0.5, "quartInOut");
-        noteTweenAngle("SaltoPizdec", 3, 360, 0.5, "quartInOut");
+        for i = 0, 3 do
+            noteTweenAngle("perec"..i, i, 360, 1, "quartInOut")
+        end
+        for i = 4, 7 do
+            noteTweenAlpha("hwaw"..i, i, 0, 1, "quartInOut")
+        end
     end
-    if curStep == 2971 then
+    if curBeat == 744 then
         doTweenAlpha('Fucked','maniaPart', 0, 0.1, 'linear')
-    end
-    if curStep == 2972 then
         noteTweenX('Pizdec1', 0,110, 1, 'quartInOut');
         noteTweenX('Pizdec2', 1, 220, 1, 'quartInOut');
         noteTweenX('Pizdec3', 2, 330, 1, 'quartInOut');
         noteTweenX('Pizdec4', 3,440, 1, 'quartInOut');
-        noteTweenAlpha("hwaw1", 4, 1,2, "quartInOut")
-        noteTweenAlpha("hwaw2", 5, 1, 2, "quartInOut")
-        noteTweenAlpha("hwaw3", 6, 1, 2, "quartInOut")
-        noteTweenAlpha("hwaw4", 7, 1, 2, "quartInOut")
-        noteTweenAngle("salto", 0, -360, 1, "quartInOut");
-        noteTweenAngle("saltyhyEbanyl", 1, -360, 1, "quartInOut");
-        noteTweenAngle("fuckingSalto", 2, -360, 1, "quartInOut");
-        noteTweenAngle("SaltoPizdec", 3, -360, 1, "quartInOut");
+        for i = 0, 3 do
+            noteTweenAngle("perec"..i, i, -360, 1, "quartInOut")
+        end
+        for i = 4, 7 do
+            noteTweenAlpha("hwaw"..i, i, 1, 1, "quartInOut")
+        end
     end
-    if curStep == 3072 then
+    if curBeat == 768 then
         setProperty('vin.visible', true)
     end
-    if curStep == 3584 then
+    if curBeat == 896 then
         setProperty('vin.visible', false)
     end
-    if curStep == 3840 then
-        setProperty('vin.visible', true)
+    if curBeat == 830 then
+        for i = 0, 7 do
+            noteTweenAngle("mod"..i, i, 360, 1, "quartInOut")
+        end
     end
-    if curStep == 4096 then
-        setProperty('vin.visible', false)
+    if curBeat == 960 then
+        setProperty('vin.visible', true) 
+    end
+    if curBeat == 1024 then
+        setProperty('scoreTxt.visible', false)
+        setProperty('timeTxt.visible', false)
+        setProperty('timeBar.visible', false)
+        setProperty('timeBarBG.visible', false)
+        setProperty('medal.visible', false)
+        setProperty('healthBar.visible', false)
+        setProperty('healthBarBGOverlay.visible', false)
+        setProperty('iconP1.visible', false)
+        setProperty('iconP2.visible', false)
+        setProperty('accuracyShit.visible', false)
+        for i = 0, 3 do
+            noteTweenAlpha("perec"..i, i, 0, 0.01, "quartInOut")
+        end
+        for i = 4, 7 do
+            noteTweenAlpha("hwaw"..i, i, 0, 3, "quartInOut")
+        end
     end
 end
