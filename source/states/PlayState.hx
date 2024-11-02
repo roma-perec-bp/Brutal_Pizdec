@@ -2017,7 +2017,7 @@ class PlayState extends MusicBeatState
 		if(dropTime > 0)
 		{
 			dropTime -= elapsed;
-			if(japHit <= 5)
+			if(japHit <= 4)
 			{
 				if(health > 0.1) health -= healthDrop * (elapsed/(1/60));
 			}
@@ -2033,6 +2033,7 @@ class PlayState extends MusicBeatState
 
 		if(dropTime<=0)
 		{
+			japHit = 0; //ох вау
 			iconP1.changeIcon(boyfriend.healthIcon);
 			healthDrop = 0;
 			dropTime = -1;
@@ -2079,18 +2080,18 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('confirmAch'), 0.7);
 					Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
 					var achievementObj:AchievementPopup = new AchievementPopup(curSong, camOther);
-					//achievementObj.onFinish = ebatLoh;
-					achievementObj.onFinish = openChartEditor;
+					achievementObj.onFinish = ebatLoh;
+					//achievementObj.onFinish = openChartEditor;
 					add(achievementObj);
 					ClientPrefs.saveSettings();
 				}
 				else
 				#end
-				//ebatLoh();
-				openChartEditor();
+				ebatLoh();
+				//openChartEditor();
 			} else {
-				//ebatLoh();
-				openChartEditor();
+				ebatLoh();
+				//openChartEditor();
 			}
 		}
 
