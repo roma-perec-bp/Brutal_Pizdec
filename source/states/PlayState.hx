@@ -4114,7 +4114,7 @@ class PlayState extends MusicBeatState
 						case 'Jalapeno Note NEW':
 							FlxG.sound.play(Paths.sound('boom'), 0.6);
 
-							if(japHit <= 5)
+							if(japHit <= 4)
 							{
 								if(health > 0.1) health -=  0.06;
 							}
