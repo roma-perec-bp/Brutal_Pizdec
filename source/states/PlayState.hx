@@ -2357,11 +2357,13 @@ class PlayState extends MusicBeatState
 		paused = true;
 		cancelMusicFadeTween();
 
+		LohState.videoShow = "brutal-pizdec"; //ЧТО
+
 		if(curSong == "Lore" || curSong == "T-SHORT")
 			LohState.videoShow = curSong;
 
 		#if desktop
-		DiscordClient.changePresence("DICK SUCER", null, null, true);
+		DiscordClient.changePresence("DICK SUCKER", null, null, true);
 		DiscordClient.resetClientID();
 		#end
 
