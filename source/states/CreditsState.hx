@@ -132,7 +132,7 @@ class CreditsState extends MusicBeatState
         name_text.screenCenter(X);
         add(name_text);
                         
-        var desc_text2:FlxText = new FlxText(0, FlxG.height-35, 1200, 'Press SPACE to find more information about that person!', 15);
+        var desc_text2:FlxText = new FlxText(0, FlxG.height-35, 1200, 'Press ENTER to find more information about that person!', 15);
         desc_text2.setFormat(Paths.font("HouseofTerror.ttf"), 15, 0xFF777777, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         desc_text2.screenCenter(X);
         add(desc_text2);
@@ -238,7 +238,7 @@ class CreditsState extends MusicBeatState
             }
         });
 
-        if(FlxG.keys.justPressed.SPACE) 
+        if(controls.ACCEPT) 
         {
             selectedSites = !selectedSites;
             skufing();
@@ -290,8 +290,16 @@ class CreditsState extends MusicBeatState
 
         if (controls.BACK)
         {
-            FlxG.sound.play(Paths.sound('cancelMenu'));
-            MusicBeatState.switchState(new MainMenuState());
+            if(selectedSites)
+            {
+                selectedSites = !selectedSites;
+                skufing();
+            }
+            else
+            {
+                FlxG.sound.play(Paths.sound('cancelMenu'));
+                MusicBeatState.switchState(new MainMenuState());
+            }
         }
 
         super.update(elapsed);

@@ -3287,10 +3287,10 @@ class PlayState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);	
 					}
 				}
-				else if(ClientPrefs.data.ends[3] == 0 && (curSong == 'With Cone ORIGINAL' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD'))
+				else if(ClientPrefs.data.ends[3] == 0 && (curSong == 'With Cone ORIGINAL' || curSong == 'BOOM OLD' || curSong == 'Overfire OLD' || curSong == 'Klork OLD' || curSong == 'T-SHORT ORIGINAL'))
 				{
 					if(FlxG.save.data.playedSongs.contains('with-cone-original') && FlxG.save.data.playedSongs.contains('boom-old')
-						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
+						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old') && FlxG.save.data.playedSongs.contains('t-short-original'))
 					{
 						EndState.end = 3;
 						EndState.gift = false;
@@ -3308,7 +3308,7 @@ class PlayState extends MusicBeatState
 						&& FlxG.save.data.playedSongsFC.contains('klork') && FlxG.save.data.playedSongsFC.contains('anekdot') && FlxG.save.data.playedSongsFC.contains('t-short')
 						&& FlxG.save.data.playedSongsFC.contains('monochrome') && FlxG.save.data.playedSongsFC.contains('lore')
 						&& FlxG.save.data.playedSongsFC.contains('s6x-boom') && FlxG.save.data.playedSongsFC.contains('lamar-tut-voobshe-ne-nujen')
-						&&FlxG.save.data.playedSongsFC.contains('with-cone-original') && FlxG.save.data.playedSongsFC.contains('klork-old')))
+						&&FlxG.save.data.playedSongsFC.contains('with-cone-original') && FlxG.save.data.playedSongsFC.contains('klork-old') && FlxG.save.data.playedSongsFC.contains('t-short-original')))
 					{
 						EndState.end = 5;
 						EndState.gift = true;
@@ -3318,8 +3318,8 @@ class PlayState extends MusicBeatState
 						&& FlxG.save.data.playedSongs.contains('klork') && FlxG.save.data.playedSongs.contains('anekdot') && FlxG.save.data.playedSongs.contains('t-short')
 						&& FlxG.save.data.playedSongs.contains('monochrome') && FlxG.save.data.playedSongs.contains('lore')
 						&& FlxG.save.data.playedSongs.contains('s6x-boom') && FlxG.save.data.playedSongs.contains('lamar-tut-voobshe-ne-nujen')
-						&&FlxG.save.data.playedSongs.contains('with-cone-old') && FlxG.save.data.playedSongs.contains('boom-old')
-						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old'))
+						&&FlxG.save.data.playedSongs.contains('with-cone-original') && FlxG.save.data.playedSongs.contains('boom-old')
+						&& FlxG.save.data.playedSongs.contains('overfire-old') && FlxG.save.data.playedSongs.contains('klork-old') && FlxG.save.data.playedSongsFC.contains('t-short-original'))
 					{
 						EndState.end = 4;
 						EndState.gift = false;
