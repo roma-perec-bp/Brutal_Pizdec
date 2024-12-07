@@ -1910,13 +1910,6 @@ class PlayState extends MusicBeatState
 			paused = false;
 			callOnScripts('onResume');
 			resetRPC(startTimer != null && startTimer.finished);
-			
-			FlxTween.cancelTweensOf(FlxG.camera.zoom);
-
-			if(sexcameratween != null)
-				sexcameratween.cancel();
-			
-			if(curStage != 'roof-old') FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 0.5, {ease: FlxEase.quadOut});
 		}
 
 		super.closeSubState();
@@ -2284,12 +2277,7 @@ class PlayState extends MusicBeatState
 		FlxG.camera.followLerp = 0;
 		persistentUpdate = false;
 		persistentDraw = true;
-		FlxTween.cancelTweensOf(FlxG.camera.zoom);
 
-		if(sexcameratween != null)
-			sexcameratween.cancel();
-
-		if(curStage != 'roof-old') FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.quadOut});
 		paused = true;
 
 		if(FlxG.sound.music != null) {

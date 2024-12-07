@@ -144,12 +144,15 @@ class PauseSubState extends MusicBeatSubstate
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 
+		var mousePosX:Float = FlxG.mouse.getScreenPosition(camera).x;
+		var mousePosY:Float = FlxG.mouse.getScreenPosition(camera).y;
+
 		changeButtons();
 
-		if (FlxG.mouse.overlaps(dragDropObj) && FlxG.mouse.pressed)
+		if (FlxG.mouse.overlaps(dragDropObj, camera) && FlxG.mouse.pressed)
 		{
-			dragDropObj.x = FlxG.mouse.screenX - (142/2);
-			dragDropObj.y = FlxG.mouse.screenY - (79/2);
+			dragDropObj.x = mousePosX - (142/2);
+			dragDropObj.y = mousePosY - (79/2);
 		}
 
 		bg2.offset.set(-(dragDropObj.x - 569), -(dragDropObj.y - 38));
@@ -164,7 +167,7 @@ class PauseSubState extends MusicBeatSubstate
 			spr.x = menuItemsAdvanced[spr.ID][1]+(dragDropObj.x - 569);
 			spr.y = menuItemsAdvanced[spr.ID][2]+(dragDropObj.y - 38);
 
-			if (FlxG.mouse.overlaps(spr) && FlxG.mouse.justPressed)
+			if (FlxG.mouse.overlaps(spr, camera) && FlxG.mouse.justPressed)
 			{
 				var daSelected:String = menuItems[curSelected];
 
@@ -242,7 +245,7 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		menuItemsGroup.forEach(function(spr:FlxSprite)
 		{
-			if(FlxG.mouse.overlaps(spr))
+			if(FlxG.mouse.overlaps(spr, camera))
 			{
 				curSelected = spr.ID;
 				spr.animation.play('selected');
