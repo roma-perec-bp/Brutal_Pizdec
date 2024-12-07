@@ -185,6 +185,16 @@ class PauseSubState extends MusicBeatSubstate
 						PlayState.instance.botplayTxt.alpha = 1;
 						PlayState.instance.botplaySine = 0;
 						bpText.visible = PlayState.instance.cpuControlled;
+					case 'Options':
+						PlayState.instance.paused = true; // For lua
+						PlayState.instance.vocals.volume = 0;
+						MusicBeatState.switchState(new OptionsState());
+
+						FlxG.sound.playMusic(Paths.music(pizdec), pauseMusic.volume);
+						FlxTween.tween(FlxG.sound.music, {volume: 1}, 0.8);
+						FlxG.sound.music.time = pauseMusic.time;
+
+						OptionsState.onPlayState = true;
 					case "Exit to menu":
 						PlayState.deathCounter = 0;
 						PlayState.seenCutscene = false;
