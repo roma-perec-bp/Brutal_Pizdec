@@ -2389,6 +2389,9 @@ class PlayState extends MusicBeatState
 					timer.active = true;
 				}
 				#end
+
+				FlxG.camera.setFilters([]);
+
 				vocals.stop();
 				FlxG.sound.music.stop();
 				if(curStage == 'void')
@@ -4290,6 +4293,9 @@ class PlayState extends MusicBeatState
 
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+		
+		FlxG.camera.setFilters([]);
+
 		FlxAnimationController.globalSpeed = 1;
 		FlxG.sound.music.pitch = 1;
 		Note.globalRgbShaders = [];

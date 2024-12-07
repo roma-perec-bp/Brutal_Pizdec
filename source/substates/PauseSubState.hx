@@ -16,15 +16,16 @@ import options.OptionsState;
 class PauseSubState extends MusicBeatSubstate
 {
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Toggle Botplay', 'Restart Song', 'Exit to menu'];
+	var menuItemsOG:Array<String> = ['Resume', 'Toggle Botplay', 'Restart Song', 'Options', 'Exit to menu'];
 
 	var menuItemsGroup:FlxTypedGroup<FlxSprite>;
 
 	var menuItemsAdvanced:Dynamic = [
 		["resume", 426, 575],
-		["botplay", 544, 359],
-		["restart", 544, 412],
-		["exit", 544, 464]
+		["botplay", 544, 309],
+		["restart", 544, 362],
+		["options", 544, 414],
+		["exit", 544, 467]
 	];
 	var curSelected:Int = 0;
 
