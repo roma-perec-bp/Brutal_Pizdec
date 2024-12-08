@@ -190,7 +190,7 @@ class PauseSubState extends MusicBeatSubstate
 						PlayState.instance.vocals.volume = 0;
 						MusicBeatState.switchState(new OptionsState());
 
-						FlxG.sound.playMusic(Paths.music(pizdec), pauseMusic.volume);
+						FlxG.sound.playMusic(Paths.music('pizdec'), pauseMusic.volume);
 						FlxTween.tween(FlxG.sound.music, {volume: 1}, 0.8);
 						FlxG.sound.music.time = pauseMusic.time;
 
