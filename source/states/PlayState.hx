@@ -1910,13 +1910,6 @@ class PlayState extends MusicBeatState
 			paused = false;
 			callOnScripts('onResume');
 			resetRPC(startTimer != null && startTimer.finished);
-			
-			FlxTween.cancelTweensOf(FlxG.camera.zoom);
-
-			if(sexcameratween != null)
-				sexcameratween.cancel();
-			
-			if(curStage != 'roof-old') FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 0.5, {ease: FlxEase.quadOut});
 		}
 
 		super.closeSubState();
@@ -2284,12 +2277,7 @@ class PlayState extends MusicBeatState
 		FlxG.camera.followLerp = 0;
 		persistentUpdate = false;
 		persistentDraw = true;
-		FlxTween.cancelTweensOf(FlxG.camera.zoom);
 
-		if(sexcameratween != null)
-			sexcameratween.cancel();
-
-		if(curStage != 'roof-old') FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.quadOut});
 		paused = true;
 
 		if(FlxG.sound.music != null) {
@@ -2401,6 +2389,9 @@ class PlayState extends MusicBeatState
 					timer.active = true;
 				}
 				#end
+
+				FlxG.camera.setFilters([]);
+
 				vocals.stop();
 				FlxG.sound.music.stop();
 				if(curStage == 'void')
@@ -4302,6 +4293,9 @@ class PlayState extends MusicBeatState
 
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+		
+		FlxG.camera.setFilters([]);
+
 		FlxAnimationController.globalSpeed = 1;
 		FlxG.sound.music.pitch = 1;
 		Note.globalRgbShaders = [];

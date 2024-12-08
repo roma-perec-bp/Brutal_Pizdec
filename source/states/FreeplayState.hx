@@ -113,6 +113,8 @@ class FreeplayState extends MusicBeatState
 				addWeek(['S6x Boom', 'Lamar Tut Voobshe Ne Nujen'], 1, coverColors, ['sex-pixel', 'jamar-pixel'], ['bbg', 'lamar']);
 			case 3:
 				addWeek(['With Cone ORIGINAL','BOOM OLD', 'Overfire OLD', 'Klork OLD', 'T-SHORT ORIGINAL'], 1, oldColors, ['jap-pixel', 'jap-old-pixel', 'jap-wheel-old-pixel', 'lork-pixel', 'short-pixel'], ['jap_1', 'jap-old', 'jap2-old', 'lork', 'tshort']);
+			/*case 4: //ЧООООО ТОТ САМЫЙ V3 :0
+				addWeek(['EXERECTION', 'UNFUCKABLE'], 666, sex, ['faggot-pixel', 'faggot-pixel'], ['faggot', 'faggot']);*/
 		};
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));

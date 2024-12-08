@@ -16,15 +16,16 @@ import options.OptionsState;
 class PauseSubState extends MusicBeatSubstate
 {
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Toggle Botplay', 'Restart Song', 'Exit to menu'];
+	var menuItemsOG:Array<String> = ['Resume', 'Toggle Botplay', 'Restart Song', 'Options', 'Exit to menu'];
 
 	var menuItemsGroup:FlxTypedGroup<FlxSprite>;
 
 	var menuItemsAdvanced:Dynamic = [
 		["resume", 426, 575],
-		["botplay", 544, 359],
-		["restart", 544, 412],
-		["exit", 544, 464]
+		["botplay", 544, 309],
+		["restart", 544, 362],
+		["options", 544, 414],
+		["exit", 544, 467]
 	];
 	var curSelected:Int = 0;
 
@@ -144,12 +145,15 @@ class PauseSubState extends MusicBeatSubstate
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 
+		var mousePosX:Float = FlxG.mouse.getScreenPosition(camera).x;
+		var mousePosY:Float = FlxG.mouse.getScreenPosition(camera).y;
+
 		changeButtons();
 
-		if (FlxG.mouse.overlaps(dragDropObj) && FlxG.mouse.pressed)
+		if (FlxG.mouse.overlaps(dragDropObj, camera) && FlxG.mouse.pressed)
 		{
-			dragDropObj.x = FlxG.mouse.screenX - (142/2);
-			dragDropObj.y = FlxG.mouse.screenY - (79/2);
+			dragDropObj.x = mousePosX - (142/2);
+			dragDropObj.y = mousePosY - (79/2);
 		}
 
 		bg2.offset.set(-(dragDropObj.x - 569), -(dragDropObj.y - 38));
@@ -164,7 +168,7 @@ class PauseSubState extends MusicBeatSubstate
 			spr.x = menuItemsAdvanced[spr.ID][1]+(dragDropObj.x - 569);
 			spr.y = menuItemsAdvanced[spr.ID][2]+(dragDropObj.y - 38);
 
-			if (FlxG.mouse.overlaps(spr) && FlxG.mouse.justPressed)
+			if (FlxG.mouse.overlaps(spr, camera) && FlxG.mouse.justPressed)
 			{
 				var daSelected:String = menuItems[curSelected];
 
@@ -181,6 +185,16 @@ class PauseSubState extends MusicBeatSubstate
 						PlayState.instance.botplayTxt.alpha = 1;
 						PlayState.instance.botplaySine = 0;
 						bpText.visible = PlayState.instance.cpuControlled;
+					case 'Options':
+						PlayState.instance.paused = true; // For lua
+						PlayState.instance.vocals.volume = 0;
+						MusicBeatState.switchState(new OptionsState());
+
+						FlxG.sound.playMusic(Paths.music(pizdec), pauseMusic.volume);
+						FlxTween.tween(FlxG.sound.music, {volume: 1}, 0.8);
+						FlxG.sound.music.time = pauseMusic.time;
+
+						OptionsState.onPlayState = true;
 					case "Exit to menu":
 						PlayState.deathCounter = 0;
 						PlayState.seenCutscene = false;
@@ -242,7 +256,7 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		menuItemsGroup.forEach(function(spr:FlxSprite)
 		{
-			if(FlxG.mouse.overlaps(spr))
+			if(FlxG.mouse.overlaps(spr, camera))
 			{
 				curSelected = spr.ID;
 				spr.animation.play('selected');
