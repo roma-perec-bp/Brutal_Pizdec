@@ -8,6 +8,7 @@ import sys.io.File;
 import sys.FileSystem;
 #end
 
+import objects.Note;
 import backend.Section;
 
 typedef SwagSong =
@@ -87,6 +88,23 @@ class Song
 					}
 					else i++;
 				}
+			}
+		}
+
+		var sectionsData:Array<SwagSection> = songJson.notes;
+		if(sectionsData == null) return;
+		for (section in sectionsData)
+		{
+			var beats:Null<Float> = cast section.sectionBeats;
+			if (beats == null || Math.isNaN(beats))
+			{
+				section.sectionBeats = 4;
+				if(Reflect.hasField(section, 'lengthInSteps')) Reflect.deleteField(section, 'lengthInSteps');
+			}
+			for (note in section.sectionNotes)
+			{
+				var gottaHitNote:Bool = (note[1] < 4) ? section.mustHitSection : !section.mustHitSection;
+				note[1] = (note[1] % 4) + (gottaHitNote ? 0 : 4);
 			}
 		}
 	}

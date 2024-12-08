@@ -480,58 +480,14 @@ class FreeplayState extends MusicBeatState
 		_updateSongLastDifficulty();
 	}
 
-	function uniqueMedalChange(medalInt:Int) //почему не LERP? потому что Ease
+	function uniqueMedalChange(medalInt:Int)
 	{
 		medal.visible = true;
 
 		FlxTween.cancelTweensOf(medal);
 		FlxTween.cancelTweensOf(medal.scale);
-		FlxTween.cancelTweensOf(medal.color);
-		FlxTween.cancelTweensOf(medal.colorTransform);
-		medal.scale.set(0.2, 0.2);
-		medal.angle = 0;
-		medal.color = 0xFFFFFFFF;
 
-		medal.colorTransform.redOffset = 0;
-		medal.colorTransform.greenOffset = 0;
-		medal.colorTransform.blueOffset = 0;
-
-		medal.colorTransform.redMultiplier = 1;
-		medal.colorTransform.greenMultiplier = 1;
-		medal.colorTransform.blueMultiplier = 1;
-		switch(medalInt)
-		{
-			case 7:
-				//вообще нихуя сосите
-			case 6:
-				//вообще нихуя сосите
-			case 5:
-				FlxTween.tween(medal.scale, {x: 0.3, y: 0.3}, 0.6, {ease: FlxEase.quadOut, type: BACKWARD});
-			case 4:
-				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
-			case 3:
-				FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.bounceOut, type: BACKWARD});
-				FlxTween.tween(medal, {angle: 7}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
-			case 2:
-				medal.color = 0xff7400ff;
-				FlxTween.tween(medal.scale, {x: 0.5, y: 0.5}, 0.6, {ease: FlxEase.expoOut, type: BACKWARD});
-				FlxTween.tween(medal, {angle: 12}, 0.6, {ease: FlxEase.bounceOut, type: BACKWARD});
-				FlxTween.color(medal, 0.6, medal.color, 0xffFFFFFF);
-			case 1:
-				medal.colorTransform.redOffset = 134;
-				medal.colorTransform.greenOffset = 248;
-				medal.colorTransform.blueOffset = 255;
-
-				medal.colorTransform.redMultiplier = 0;
-				medal.colorTransform.greenMultiplier = 0;
-				medal.colorTransform.blueMultiplier = 0;
-
-				FlxTween.tween(medal.scale, {x: 0.6, y: 0.6}, 0.6, {ease: FlxEase.elasticOut, type: BACKWARD});
-				FlxTween.tween(medal, {angle: 23}, 0.6, {ease: FlxEase.expoOut, type: BACKWARD});
-				FlxTween.tween(medal.colorTransform, {redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1}, 0.6);
-
-				//medal.x -= 50; //ТЫ ЧЕ ОХУЕЛ
-		}
+		FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
 
 		medal.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty)));
 
