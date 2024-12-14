@@ -10,6 +10,10 @@ function onCreate()
     setObjectOrder('fakeIcon',getObjectOrder('iconP2') + 1)
     addLuaSprite('fakeIcon')
     setProperty('fakeIcon.visible', false)
+
+    if hideHud then
+        close()
+    end
 end
 
 function onEvent(eventName, value1, value2)

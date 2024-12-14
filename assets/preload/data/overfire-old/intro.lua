@@ -12,7 +12,7 @@ function onCreate()
     setObjectCamera('nameSong', 'other')
     addLuaText('nameSong')
 
-    makeLuaText('creditSong', 'og song by: Sock.Clip || mix by: Rom4chek', 0, 350, 400)
+    makeLuaText('creditSong', 'og song by: Sock.Clip || mix by: ROMA PEREC', 0, 350, 400)
     setTextFont('creditSong', 'HouseofTerror.ttf')
     setTextAlignment('creditSong', 'center')
     setTextSize('creditSong', 35)

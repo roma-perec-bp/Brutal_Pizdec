@@ -283,6 +283,11 @@ class FreeplayState extends MusicBeatState
 			ratingSplit[1] += '0';
 		}
 
+		medal.scale.set(
+			FlxMath.lerp(medal.scale.x, 0.2, FlxMath.bound(elapsed * 10.2, 0, 1)),
+			FlxMath.lerp(medal.scale.y, 0.2, FlxMath.bound(elapsed * 10.2, 0, 1))
+		);
+
 		scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
 		positionHighscore();
 
@@ -484,10 +489,7 @@ class FreeplayState extends MusicBeatState
 	{
 		medal.visible = true;
 
-		FlxTween.cancelTweensOf(medal);
-		FlxTween.cancelTweensOf(medal.scale);
-
-		FlxTween.tween(medal.scale, {x: 0.4, y: 0.4}, 0.6, {ease: FlxEase.backOut, type: BACKWARD});
+		medal.scale.set(0.4, 0.4);
 
 		medal.loadGraphic(Paths.image('medals/medal_'+Highscore.getMedal(songs[curSelected[freeplayType]].songName, curDifficulty)));
 

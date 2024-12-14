@@ -187,12 +187,15 @@ function onStepHit()
       setProperty('healthBarBGOverlay.visible', true)
       setProperty('iconP1.visible', true)
       setProperty('iconP2.visible', true)
-      setProperty('timeBar.visible', true)
-      setProperty('timeTxt.visible', true)
-      setProperty('timeBarBG.visible', true)
       setProperty('scoreTxt.visible', true)
       setProperty('medal.visible', true)
       setProperty('accuracyShit.visible', true)
+    end
+
+    if not timeBarType == 'Disabled' then
+      setProperty('timeBar.visible', true)
+      setProperty('timeTxt.visible', true)
+      setProperty('timeBarBG.visible', true)
     end
   end
   if curStep == 2880 then
@@ -327,15 +330,18 @@ function onBeatHit()
     setPropertyFromGroup('strumLineNotes', 7, 'alpha', 1)
     if not hideHud then 
       setProperty('healthBar.visible', true) 
+      setProperty('healthBarBGOverlay.visible', true)
     end
-    setProperty('healthBarBGOverlay.visible', true)
   end
   if curBeat == 13 then
     setPropertyFromGroup('strumLineNotes', 1, 'alpha', 1)
     setPropertyFromGroup('strumLineNotes', 6, 'alpha', 1)
-    setProperty('timeBar.visible', true)
-    setProperty('timeTxt.visible', true)
-    setProperty('timeBarBG.visible', true)
+
+    if not timeBarType == 'Disabled' then
+      setProperty('timeBar.visible', true)
+      setProperty('timeTxt.visible', true)
+      setProperty('timeBarBG.visible', true)
+    end
   end
   if curBeat == 14 then
     setPropertyFromGroup('strumLineNotes', 2, 'alpha', 1)
@@ -350,8 +356,10 @@ function onBeatHit()
   if curBeat == 15 then
     setPropertyFromGroup('strumLineNotes', 3, 'alpha', 1)
     setPropertyFromGroup('strumLineNotes', 4, 'alpha', 1)
+    if not hideHud then 
     setProperty('iconP1.visible', true)
     setProperty('iconP2.visible', true)
+    end
   end
   if curBeat >= 48 and curBeat <= 112 or curBeat >= 144 and curBeat <= 176 then
       staticArrowWave = 40

@@ -98,6 +98,7 @@ class Roof extends BaseStage
 		grad.setGraphicSize(3000, originalHeight);
 		grad.updateHitbox();
 		grad.visible = false;
+		grad.color = 0xFF44145f;
 		add(grad);
 
 		roof = new BGSprite('home', 0, 0);

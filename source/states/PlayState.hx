@@ -674,6 +674,7 @@ class PlayState extends MusicBeatState
 		ratingTxt.scrollFactor.set();
 		ratingTxt.alpha = 0.001;
 		ratingTxt.borderSize = 1.5;
+		ratingTxt.visible = !ClientPrefs.data.hideHud;
 
 		if(curStage != 'roof-old')
 		{
@@ -751,6 +752,7 @@ class PlayState extends MusicBeatState
 		medal.scale.set(0.3, 0.3);
 		medal.origin.set(128/2, 128/2);
 		medal.updateHitbox();
+		medal.visible = !ClientPrefs.data.hideHud;
 		add(medal);
 
 		botplayTxt.cameras = [camHUD];
@@ -1974,6 +1976,10 @@ class PlayState extends MusicBeatState
 			}
 			vocals.play();
 		}
+		else
+		{
+			vocals.volume = 0;
+		}
 	}
 
 	public var paused:Bool = false;
@@ -2047,8 +2053,8 @@ class PlayState extends MusicBeatState
 
 		if (rotCam)
 		{
-			rotCamInd += 1 / (FlxG.updateFramerate / 60);
-			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange * (FlxG.updateFramerate / 60);
+			rotCamInd++;
+			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange;
 		}
 		else
 		{
@@ -2092,11 +2098,11 @@ class PlayState extends MusicBeatState
 				}
 				else
 				#end
-				//ebatLoh();
-				openChartEditor();
+				ebatLoh();
+				//openChartEditor();
 			} else {
-				//ebatLoh();
-				openChartEditor();
+				ebatLoh();
+				//openChartEditor();
 			}
 		}
 

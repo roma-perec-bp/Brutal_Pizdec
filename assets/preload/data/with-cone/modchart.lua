@@ -73,16 +73,22 @@ function onBeatHit()
 		for i = 0, 3 do
 			noteTweenAlpha("note"..i, i, 1, 1, "linear")
 		end
-		setProperty('healthBar.visible', true)
-		setProperty('healthBarBGOverlay.visible', true)
-		setProperty('iconP1.visible', true)
-		setProperty('iconP2.visible', true)
-		setProperty('timeBar.visible', true)
-		setProperty('timeTxt.visible', true)
-		setProperty('timeBarBG.visible', true)
-		setProperty('scoreTxt.visible', true)
-		setProperty('accuracyShit.visible', true)
-		setProperty('medal.visible', true)
+
+		if not hideHud then
+			setProperty('healthBar.visible', true)
+			setProperty('healthBarBGOverlay.visible', true)
+			setProperty('iconP1.visible', true)
+			setProperty('iconP2.visible', true)
+			setProperty('scoreTxt.visible', true)
+			setProperty('accuracyShit.visible', true)
+			setProperty('medal.visible', true)
+		end
+
+		if not timeBarType == 'Disabled' then
+			setProperty('timeBar.visible', true)
+			setProperty('timeTxt.visible', true)
+			setProperty('timeBarBG.visible', true)
+		end
 	end
 	if curBeat == 702 then
 		for i = 0, 7 do
