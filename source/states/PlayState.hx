@@ -341,7 +341,8 @@ class PlayState extends MusicBeatState
 		cpuControlled = ClientPrefs.getGameplaySetting('botplay');
 
 		// var gameCam:FlxCamera = FlxG.camera;
-		camGame = new FlxCamera();
+		camGame = initPsychCamera();
+
 		camVideo = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
@@ -349,13 +350,11 @@ class PlayState extends MusicBeatState
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
-		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camVideo, false);
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camOther, false);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 
-		FlxG.cameras.setDefaultDrawTarget(camGame, true);
 		CustomFadeTransition.nextCamera = camOther;
 
 		persistentUpdate = true;
@@ -667,6 +666,7 @@ class PlayState extends MusicBeatState
 		accuracyShit = new FlxText(0, healthBar.y + 40, FlxG.width, "Rating: Horny", 32);
 		accuracyShit.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		accuracyShit.scrollFactor.set();
+		accuracyShit.visible = !ClientPrefs.data.hideHud;
 		accuracyShit.borderSize = 1.25;
 
 		ratingTxt = new FlxText(0, healthBar.y - 125, FlxG.width, "Lmao x69", 64);
@@ -1986,6 +1986,7 @@ class PlayState extends MusicBeatState
 	public var canReset:Bool = true;
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
+	var freezeCamera:Bool = false;
 
 	public static var rotCam = false;
 	var rotCamSpd:Float = 1;
@@ -2012,9 +2013,8 @@ class PlayState extends MusicBeatState
 				fireFlash.alpha -= 0.01 * (elapsed/(1/60));
 		}
 
-		FlxG.camera.followLerp = 0;
 		if(!inCutscene && !paused && !cameraLocked) {
-			FlxG.camera.followLerp = FlxMath.bound(elapsed * 2.4 * cameraSpeed * playbackRate * (FlxG.updateFramerate / 60), 0, 1);
+			FlxG.camera.followLerp = 0.04 * cameraSpeed * playbackRate;
 			if(!startingSong && !endingSong && boyfriend.animation.curAnim != null && boyfriend.animation.curAnim.name.startsWith('idle')) {
 				boyfriendIdleTime += elapsed;
 				if(boyfriendIdleTime >= 0.15) { // Kind of a mercy thing for making the achievement easier to get as it's apparently frustrating to some playerss
@@ -2024,6 +2024,7 @@ class PlayState extends MusicBeatState
 				boyfriendIdleTime = 0;
 			}
 		}
+		else FlxG.camera.followLerp = 0;
 
 		if(dropTime > 0)
 		{
@@ -2053,8 +2054,8 @@ class PlayState extends MusicBeatState
 
 		if (rotCam)
 		{
-			rotCamInd++;
-			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange;
+			rotCamInd += 1 / (FlxG.updateFramerate / 60);
+			camera.angle = Math.sin(rotCamInd / 100 * rotCamSpd) * rotCamRange * (FlxG.updateFramerate / 60);
 		}
 		else
 		{
