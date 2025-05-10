@@ -138,7 +138,7 @@
 	<!-- Show debug traces for hxCodec -->
 	<haxedef name="HXC_DEBUG_TRACE" if="debug" />
 
-       <!-- <haxeflag name="-D no-traces" unless="debug" />-->
+    <haxeflag name="-D no-traces" unless="debug" />
 	
 	<!--Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />
