@@ -2267,7 +2267,7 @@
 					[
 						"Set Property",
 						"defaultCamZoom",
-						"1.4"
+						"1.2"
 					],
 					[
 						"Cam Boom Speed",
@@ -2447,7 +2447,7 @@
 					[
 						"Set Property",
 						"defaultCamZoom",
-						"1.2"
+						"1.1"
 					]
 				]
 			],
