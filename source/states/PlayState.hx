@@ -1669,6 +1669,15 @@ class PlayState extends MusicBeatState
 				swagNote.noteType = noteType;
 	
 				swagNote.scrollFactor.set();
+
+				var badNote:Bool = false;
+
+				if(swagNote.noteType == 'Hurt Note' || swagNote.noteType == 'Jap Note' || swagNote.noteType == 'Jalapeno Note NEW')
+					badNote = true;
+
+				if (swagNote.mustPress == true && badNote == false)
+					totalNotes++;
+				
 				unspawnNotes.push(swagNote);
 
 				final roundSus:Int = Math.round(swagNote.sustainLength / Conductor.stepCrochet);
