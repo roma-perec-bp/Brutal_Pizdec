@@ -1660,7 +1660,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				var swagNote:Note = new Note(spawnTime, noteColumn, oldNote);
+				var swagNote:Note = new Note(spawnTime, noteColumn, oldNote, false, false, null, false);
 				var isAlt: Bool = section.altAnim && !swagNote.mustPress && !section.gfSection;
 				swagNote.gfNote = (section.gfSection && gottaHitNote);
 				swagNote.animSuffix = isAlt ? "-alt" : "";
@@ -1678,7 +1678,7 @@ class PlayState extends MusicBeatState
 					{
 						oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
 
-						var sustainNote:Note = new Note(spawnTime + (Conductor.stepCrochet * susNote), noteColumn, oldNote, true);
+						var sustainNote:Note = new Note(spawnTime + (Conductor.stepCrochet * susNote), noteColumn, oldNote, true, false, null, false);
 						sustainNote.animSuffix = swagNote.animSuffix;
 						sustainNote.mustPress = swagNote.mustPress;
 						sustainNote.gfNote = swagNote.gfNote;

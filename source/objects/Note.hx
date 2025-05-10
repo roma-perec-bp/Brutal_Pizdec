@@ -151,7 +151,7 @@ class Note extends FlxSprite
 
 	public function defaultRGB()
 	{
-		if(inEditor || playstateMoment == false)
+		if(inEditor && playstateMoment == false)
 		{
 			var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[noteData];
 			if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[noteData];
