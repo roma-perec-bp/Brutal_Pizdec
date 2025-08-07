@@ -13,6 +13,10 @@ import openfl.display.StageScaleMode;
 import lime.app.Application;
 import states.TitleState;
 
+#if desktop
+import backend.ALSoftConfig; // Just to make sure DCE doesn't remove this, since it's not directly referenced anywhere else.
+#end
+
 //crash handler stuff
 #if CRASH_HANDLER
 import openfl.events.UncaughtErrorEvent;

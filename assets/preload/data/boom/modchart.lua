@@ -88,11 +88,13 @@ function onBeatHit()
         doTweenAlpha('suka','blackFlash', 0, 1, 'linear')
     end
     if curBeat == 92 then
-        if not timeBarType == 'Disabled' then
-            setProperty('timeTxt.visible', true)
+        if timeBarType == 'Disabled' then
+            setProperty('timeBar.visible', false)
+            setProperty('timeTxt.visible', false)
+          else
             setProperty('timeBar.visible', true)
-            setProperty('timeBarBG.visible', true)
-        end
+            setProperty('timeTxt.visible', true)
+          end
         if not hideHud then
             setProperty('scoreTxt.visible', true)
             setProperty('accuracyShit.visible', true)

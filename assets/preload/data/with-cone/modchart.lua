@@ -84,11 +84,13 @@ function onBeatHit()
 			setProperty('medal.visible', true)
 		end
 
-		if not timeBarType == 'Disabled' then
+		if timeBarType == 'Disabled' then
+			setProperty('timeBar.visible', false)
+			setProperty('timeTxt.visible', false)
+		  else
 			setProperty('timeBar.visible', true)
 			setProperty('timeTxt.visible', true)
-			setProperty('timeBarBG.visible', true)
-		end
+		  end
 	end
 	if curBeat == 702 then
 		for i = 0, 7 do

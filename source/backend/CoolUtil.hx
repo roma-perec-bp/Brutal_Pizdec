@@ -33,6 +33,12 @@ class CoolUtil
 		return daList != null ? listFromString(daList) : [];
 	}
 
+	public static function coolLerp(base:Float, target:Float, ratio:Float):Float
+		return base + cameraLerp(ratio) * (target - base);
+
+	public static function cameraLerp(lerp:Float):Float
+		return lerp * (FlxG.elapsed / (1 / 60));
+
 	inline public static function colorFromString(color:String):FlxColor
 	{
 		var hideChars = ~/[\t\n\r]/;

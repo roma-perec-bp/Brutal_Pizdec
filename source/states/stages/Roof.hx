@@ -3,6 +3,8 @@ package states.stages;
 import states.stages.objectMyBalls.*;
 import flixel.effects.particles.FlxEmitter.FlxEmitterMode;
 import flixel.effects.particles.FlxEmitter.FlxTypedEmitter;
+import openfl.filters.ShaderFilter;
+import shaders.RainShader;
 import substates.GameOverSubstate;
 import objects.Character;
 import cutscenes.CutsceneHandler;
@@ -23,13 +25,17 @@ class Roof extends BaseStage
 	public var vibing:Bool = false;
 	var canRain:Bool = false;
 
-	var rain:FlxSprite;
-	var splash:FlxSprite;
+	//var rain:FlxSprite;
+	//var splash:FlxSprite;
 
 	var day:BGSprite;
 
 	var bg:BGSprite;
 	var roof:BGSprite;
+
+	var rainShader:RainShader;
+	var rainShaderStartIntensity:Float = 0;
+	var rainShaderEndIntensity:Float = 0;
 
 	var lightning:BGSprite;
 	var nword:FlxSprite;
@@ -107,7 +113,7 @@ class Roof extends BaseStage
 
 		if(PlayState.SONG.song == 'Overfire')
 		{
-			if(!ClientPrefs.data.lowQuality)
+			/*if(!ClientPrefs.data.lowQuality)
 			{
 				splash = new FlxSprite(0, 1000);
 				splash.frames = Paths.getSparrowAtlas('splash');
@@ -121,7 +127,7 @@ class Roof extends BaseStage
 					//trace('Lightning$i');
 					Paths.sound('Lightning$i');
 				}
-			}
+			}*/
 			day = new BGSprite('day', -150, 130);
 			day.visible = false;
 			day.setGraphicSize(Std.int(day.width * 1.5));
@@ -152,14 +158,14 @@ class Roof extends BaseStage
 			add(nword);
 
 			if(!ClientPrefs.data.lowQuality) {
-				rain = new FlxSprite(-250, 0);
+				/*rain = new FlxSprite(-250, 0);
 				rain.frames = Paths.getSparrowAtlas('rain');
 				rain.animation.addByPrefix('loop', 'rain loop', 16, true);
 				rain.animation.play('loop');
 				rain.scrollFactor.set(0.3, 0.3);
 				rain.scale.set(2.1, 2.1);
 				rain.visible = false;
-				add(rain);
+				add(rain);*/
 
 				lavaEmitter = new FlxTypedEmitter<LavaParticle>(FlxG.width * -0.5, 3400);
 				lavaEmitter.particleClass = LavaParticle;
@@ -204,9 +210,29 @@ class Roof extends BaseStage
 				applyLightning();
 				lightningTimer = FlxG.random.float(7, 15);
 			}
+
+			if(rainShader != null)
+			{
+				var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.songPosition, 0, (FlxG.sound.music != null ? FlxG.sound.music.length : 0), rainShaderStartIntensity, rainShaderEndIntensity);
+				rainShader.intensity = remappedIntensityValue;
+				rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+				rainShader.update(elapsed);
+			}
 		}
 
 		super.update(elapsed);
+	}
+
+	function setupRainShader()
+	{
+		rainShader = new RainShader();
+		rainShader.scale = FlxG.height / 200;
+
+		rainShaderStartIntensity = 0.2;
+		rainShaderEndIntensity = 0.4;
+
+		rainShader.intensity = rainShaderStartIntensity;
+		FlxG.camera.setFilters([new ShaderFilter(rainShader)]);
 	}
 
 	function applyLightning():Void
@@ -271,19 +297,24 @@ class Roof extends BaseStage
 
 			case 'rain':
 				nword.alpha = 0.6;
-				if(ClientPrefs.data.lowQuality) return;
+
+				if(ClientPrefs.data.shaders)
+					setupRainShader();
 					
-				rain.visible = true;
-				splash.visible = true;
+				//rain.visible = true;
+				//splash.visible = true;
 				canRain = true;
 			case 'trans overfire':
 				nword.visible = false;
 				day.visible = true;
 				if(ClientPrefs.data.lowQuality) return;
 					
-				rain.visible = false;
-				splash.visible = false;
+				//rain.visible = false;
+				//splash.visible = false;
 				canRain = false;
+
+				if(!ClientPrefs.data.shaders) return; 
+				FlxG.camera.setFilters([]);
 			case 'night cum':
 				game.camHUD.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 3);
 				day.visible = false;

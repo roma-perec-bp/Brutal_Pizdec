@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fire_jap.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="firing0000" x="10" y="10" width="1772" height="320" frameX="-132" frameY="-261" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0001" x="1792" y="10" width="1713" height="312" frameX="-148" frameY="-267" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0002" x="10" y="340" width="1749" height="328" frameX="-136" frameY="-257" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0003" x="1769" y="340" width="1787" height="344" frameX="-122" frameY="-247" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0004" x="10" y="694" width="1824" height="358" frameX="-109" frameY="-237" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0005" x="1844" y="694" width="1863" height="376" frameX="-95" frameY="-226" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0006" x="10" y="1080" width="1899" height="408" frameX="-82" frameY="-199" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0007" x="1919" y="1080" width="1938" height="449" frameX="-68" frameY="-163" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0008" x="10" y="1539" width="1977" height="495" frameX="-54" frameY="-121" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0009" x="1997" y="1539" width="2014" height="557" frameX="-41" frameY="-66" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0010" x="10" y="2106" width="2052" height="567" frameX="-27" frameY="-61" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0011" x="10" y="2683" width="2089" height="607" frameX="-14" frameY="-26" frameWidth="2128" frameHeight="638"/>
+	<SubTexture name="firing0012" x="10" y="3300" width="2128" height="638"/>
+</TextureAtlas>

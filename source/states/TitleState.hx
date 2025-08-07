@@ -22,6 +22,8 @@ import states.StoryMenuState;
 import states.MainMenuState;
 import states.SetLanguageState;
 
+import hxwindowmode.WindowColorMode;
+
 #if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
@@ -90,6 +92,10 @@ class TitleState extends MusicBeatState
 		ClientPrefs.loadPrefs();
 
 		Highscore.load();
+
+		 // Sets the window to dark mode.
+		 WindowColorMode.setDarkMode();
+		 WindowColorMode.redrawWindowHeader(); //виндовс 11 пидарас
 
 		// IGNORE THIS!!!
 		titleJSON = Json.parse(Paths.getTextFromFile('images/gfDanceTitle.json'));

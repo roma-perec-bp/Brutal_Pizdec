@@ -14,7 +14,6 @@ function onCreate()
   setProperty('iconP2.visible', false)
   setProperty('timeBar.visible', false)
   setProperty('timeTxt.visible', false)
-  setProperty('timeBarBG.visible', false)
   setProperty('scoreTxt.visible', false)
   setProperty('accuracyShit.visible', false)
   setProperty('medal.visible', false)
@@ -161,7 +160,7 @@ function onStepHit()
     end
   end
   if curStep == 2368 then
-    for i = 4,7 do
+    for i = 0,7 do
       noteTweenAlpha('se'..i, i, 0, 0.001)
     end
     setProperty('healthBar.visible', false)
@@ -170,7 +169,6 @@ function onStepHit()
     setProperty('iconP2.visible', false)
     setProperty('timeBar.visible', false)
     setProperty('timeTxt.visible', false)
-    setProperty('timeBarBG.visible', false)
     setProperty('scoreTxt.visible', false)
     setProperty('accuracyShit.visible', false)
     setProperty('medal.visible', false)
@@ -179,6 +177,9 @@ function onStepHit()
   if curStep == 2480 then
     for i = 4,7 do
       noteTweenAlpha('sex'..i, i, 1, 0.7)
+    end
+    for i = 0,3 do
+      noteTweenAlpha('sex2'..i, i, 1, 6)
     end
   end
   if curStep == 2768 then
@@ -192,10 +193,12 @@ function onStepHit()
       setProperty('accuracyShit.visible', true)
     end
 
-    if not timeBarType == 'Disabled' then
+    if timeBarType == 'Disabled' then
+      setProperty('timeBar.visible', false)
+      setProperty('timeTxt.visible', false)
+    else
       setProperty('timeBar.visible', true)
       setProperty('timeTxt.visible', true)
-      setProperty('timeBarBG.visible', true)
     end
   end
   if curStep == 2880 then
@@ -226,7 +229,6 @@ function onStepHit()
   setProperty('iconP2.visible', false)
   setProperty('timeBar.visible', false)
   setProperty('timeTxt.visible', false)
-  setProperty('timeBarBG.visible', false)
   setProperty('scoreTxt.visible', false)
   setProperty('accuracyShit.visible', false)
   setProperty('medal.visible', false)
@@ -261,7 +263,6 @@ function onStepHit()
       setProperty('iconP2.visible', true)
       setProperty('timeBar.visible', true)
       setProperty('timeTxt.visible', true)
-      setProperty('timeBarBG.visible', true)
       setProperty('scoreTxt.visible', true)
       setProperty('medal.visible', true)
       setProperty('accuracyShit.visible', true)
@@ -337,11 +338,14 @@ function onBeatHit()
     setPropertyFromGroup('strumLineNotes', 1, 'alpha', 1)
     setPropertyFromGroup('strumLineNotes', 6, 'alpha', 1)
 
-    if not timeBarType == 'Disabled' then
+    if timeBarType == 'Disabled' then
+      setProperty('timeBar.visible', false)
+      setProperty('timeTxt.visible', false)
+    else
       setProperty('timeBar.visible', true)
       setProperty('timeTxt.visible', true)
-      setProperty('timeBarBG.visible', true)
     end
+
   end
   if curBeat == 14 then
     setPropertyFromGroup('strumLineNotes', 2, 'alpha', 1)
@@ -404,7 +408,6 @@ end
     setProperty('iconP2.visible', false)
     setProperty('timeBar.visible', false)
     setProperty('timeTxt.visible', false)
-    setProperty('timeBarBG.visible', false)
     setProperty('scoreTxt.visible', false)
     setProperty('medal.visible', false)
     setProperty('accuracyShit.visible', false)

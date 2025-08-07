@@ -18,6 +18,8 @@ class SaveVariables {
 	public var flashing:Bool = true;
 	public var screenShake:Bool = true;
 	public var autoPause:Bool = true;
+	public var optimize:Bool = false;
+	public var laneUnderlay:Float = 0;
 	public var antialiasing:Bool = true;
 	public var noteSkin:String = 'Default';
 	public var splashSkin:String = 'Psych';

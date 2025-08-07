@@ -2,19 +2,19 @@
 <TextureAtlas imagePath="gfDanceTitle.png">
 	<!-- Created with Adobe Animate version 24.0.0.305 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="dance0000" x="2122" y="1592" width="2122" height="1510" frameX="-1" frameY="-95" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0001" x="2122" y="1592" width="2122" height="1510" frameX="-1" frameY="-95" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0002" x="2122" y="10" width="2085" height="1572" frameX="0" frameY="-35" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0003" x="2122" y="10" width="2085" height="1572" frameX="0" frameY="-35" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0004" x="10" y="1629" width="2078" height="1599" frameX="-32" frameY="-10" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0005" x="10" y="1629" width="2078" height="1599" frameX="-32" frameY="-10" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0006" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0007" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0008" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0009" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0010" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0011" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0012" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0013" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
-	<SubTexture name="dance0014" x="10" y="10" width="2102" height="1609" frameX="-23" frameY="0" frameWidth="2125" frameHeight="1609"/>
+	<SubTexture name="dance0000" x="20" y="2282" width="2230" height="1560" frameX="0" frameY="-89" frameWidth="2242" frameHeight="1651" rotated="false"/>
+	<SubTexture name="dance0001" x="20" y="2282" width="2230" height="1560" frameX="0" frameY="-89" frameWidth="2242" frameHeight="1651" rotated="false"/>
+	<SubTexture name="dance0002" x="20" y="20" width="1598" height="2242" frameX="0" frameY="-52" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0003" x="20" y="20" width="1598" height="2242" frameX="0" frameY="-52" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0004" x="2270" y="2097" width="2060" height="1636" frameX="-83" frameY="-15" frameWidth="2242" frameHeight="1651" rotated="false"/>
+	<SubTexture name="dance0005" x="2270" y="2097" width="2060" height="1636" frameX="-83" frameY="-15" frameWidth="2242" frameHeight="1651" rotated="false"/>
+	<SubTexture name="dance0006" x="3309" y="20" width="1649" height="2057" frameX="-83" frameY="-2" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0007" x="3309" y="20" width="1649" height="2057" frameX="-83" frameY="-2" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0008" x="1638" y="20" width="1651" height="2057" frameX="-83" frameY="0" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0009" x="1638" y="20" width="1651" height="2057" frameX="-83" frameY="0" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0010" x="1638" y="20" width="1651" height="2057" frameX="-83" frameY="0" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0011" x="1638" y="20" width="1651" height="2057" frameX="-83" frameY="0" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0012" x="1638" y="20" width="1651" height="2057" frameX="-83" frameY="0" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0013" x="1638" y="20" width="1651" height="2057" frameX="-83" frameY="0" frameWidth="2242" frameHeight="1651" rotated="true"/>
+	<SubTexture name="dance0014" x="1638" y="20" width="1651" height="2057" frameX="-83" frameY="0" frameWidth="2242" frameHeight="1651" rotated="true"/>
 </TextureAtlas>

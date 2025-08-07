@@ -22,6 +22,15 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		addOption(option);
 		option.noChange = true;
 
+		var option:Option = new Option('Lane Underlay Transparency',
+		"Sets alpha of black rectangles behind notes\ncan be helpful if background distracting you.",
+		'laneUnderlay',
+		'float');
+		addOption(option);
+		option.minValue = 0;
+		option.maxValue = 1;
+		option.changeValue = 0.1;
+
 		var option:Option = new Option('Ghost Tapping',
 			"If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.",
 			'ghostTapping',

@@ -45,10 +45,12 @@ class FPS extends TextField
 		currentFPS = 0;
 		selectable = false;
 		mouseEnabled = false;
-		defaultTextFormat = new TextFormat("_sans", 14, color);
+		defaultTextFormat = new TextFormat("_sans", 12, color);
 		autoSize = LEFT;
 		multiline = true;
 		text = "FPS: ";
+		background = true;
+		backgroundColor = 0xFF000000;
 
 		cacheCount = 0;
 		currentTime = 0;
@@ -86,10 +88,10 @@ class FPS extends TextField
 			
 			#if openfl
 			memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));
-			text += "\nMemory: " + memoryMegas + " MB";
+			text += " • Memory: " + memoryMegas + " MB";
 			#end
 
-			textColor = 0xFFFFFFFF;
+			textColor = 0xff33ff00;
 			if (memoryMegas > 3000 || currentFPS <= ClientPrefs.data.framerate / 2)
 			{
 				textColor = 0xFFFF0000;

@@ -20,7 +20,7 @@ enum MainMenuColumn {
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '1.1.3'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '1.2.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 	public static var curColumn:MainMenuColumn = NONE;
 
@@ -110,10 +110,14 @@ class MainMenuState extends MusicBeatState
 
 		var randomNum:Int = FlxG.random.int(0,5);
 		bros = new FlxSprite(-50, 270);
-		bros.frames = Paths.getSparrowAtlas('main_menu_chars/${randomNum}');
-		bros.animation.addByPrefix('idle', 'menu', 24);
-		bros.animation.play('idle');
 		bros.ID = randomNum;
+		bros.frames = Paths.getSparrowAtlas('main_menu_chars/${randomNum}');
+		if(bros.ID != 4 && bros.ID != 5)
+			bros.animation.addByPrefix('idle', 'menu', 24);
+		else
+			bros.animation.addByPrefix('idle', 'menu', 24, true);
+
+		bros.animation.play('idle');
 		bros.antialiasing = ClientPrefs.data.antialiasing;
 		bros.scale.set(1, 1);
 
@@ -163,6 +167,8 @@ class MainMenuState extends MusicBeatState
 		
 		super.create();
 
+		Conductor.bpm = 120;
+
 		FlxG.mouse.visible = true;
 	}
 
@@ -210,6 +216,9 @@ class MainMenuState extends MusicBeatState
 	{
 		FlxG.camera.scroll.x = FlxMath.lerp(FlxG.camera.scroll.x, (FlxG.mouse.screenX-(FlxG.width/2)) * 0.015, (1/30)*240*elapsed);
 		FlxG.camera.scroll.y = FlxMath.lerp(FlxG.camera.scroll.y, (FlxG.mouse.screenY-6-(FlxG.height/2)) * 0.015, (1/30)*240*elapsed);
+
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
 
 		#if ACHIEVEMENTS_ALLOWED
 		var leDate = Date.now();
@@ -355,6 +364,14 @@ class MainMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+	}
+
+	override function beatHit()
+	{
+		super.beatHit();
+
+		if(bros != null && bros.ID != 4 && bros.ID != 5)
+			bros.animation.play('idle', true);
 	}
 
 	function changeItem(change:Int = 0, ?noSound:Bool)

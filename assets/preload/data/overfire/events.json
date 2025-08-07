@@ -283,6 +283,11 @@
 						"Set Property",
 						"defaultCamZoom",
 						"0.5"
+					],
+					[
+						"Flash Camera",
+						"1",
+						"0xffffffff"
 					]
 				]
 			],

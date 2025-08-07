@@ -28,6 +28,12 @@ function onCreatePost()
     setObjectCamera('pizdec', 'camhud')
     setProperty('pizdec.alpha', 0.0001)
     addLuaSprite('pizdec', false)
+
+    makeAnimatedLuaSprite('romy', 'rom_coming', defaultOpponentX - 500, defaultOpponentY + 50)
+    addAnimationByPrefix('romy', 'cut', 'cutscene', 24, false)
+    addLuaSprite('romy', false)
+    scaleObject('romy', 0.75, 0.75)
+    setProperty('romy.visible', false)
 end
 
 function onBeatHit()
@@ -61,10 +67,7 @@ function onBeatHit()
         doTweenAlpha('suka','blackFlash', 0, 20, 'quardOut')
     end
     if curBeat == 448 then
-        makeAnimatedLuaSprite('romy', 'rom_coming', defaultOpponentX - 500, defaultOpponentY)
-        addAnimationByPrefix('romy', 'cut', 'cutscene', 24, false)
-        addLuaSprite('romy', false)
-        scaleObject('romy', 0.75, 0.75)
+        setProperty('romy.visible', true)
         playAnim('romy', 'cut', true)
         doTweenX('romocoming', 'romy', defaultOpponentX + 200, 5, 'quadout')
     end
