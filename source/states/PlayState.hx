@@ -1706,8 +1706,7 @@ class PlayState extends MusicBeatState
 									tail.destroy();
 									unspawnNotes.remove(tail);
 								}
-							evilNote.destroy();
-							
+
 							if(evilNote.noteType == 'Hurt Note')
 								badNote = true;
 			
@@ -1719,6 +1718,9 @@ class PlayState extends MusicBeatState
 
 							if (evilNote.mustPress == true && badNote == false && evilNote.isSustainNote == false)
 								totalNotes -= 1;
+							
+							evilNote.destroy();
+
 							unspawnNotes.remove(evilNote);
 							ghostNotesCaught++;
 							//continue;
