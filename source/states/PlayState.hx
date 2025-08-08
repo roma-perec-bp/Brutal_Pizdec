@@ -223,6 +223,7 @@ class PlayState extends MusicBeatState
 	public var iconGF:HealthIcon;
 	public var camVideo:FlxCamera;
 	public var camHUD:FlxCamera;
+	public var camFlash:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
@@ -358,12 +359,15 @@ class PlayState extends MusicBeatState
 		camGame = initPsychCamera();
 
 		camVideo = new FlxCamera();
+		camFlash = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
 		camVideo.bgColor.alpha = 0;
 		camHUD.bgColor.alpha = 0;
+		camFlash.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
+		FlxG.cameras.add(camFlash, false);
 		FlxG.cameras.add(camVideo, false);
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camOther, false);
@@ -579,23 +583,6 @@ class PlayState extends MusicBeatState
 			timeTxt.y += 3;
 		}
 
-		opponentStrums = new FlxTypedGroup<StrumNote>();
-		playerStrums = new FlxTypedGroup<StrumNote>();
-
-		var splash:NoteSplash = new NoteSplash(100, 100);
-		grpNoteSplashes.add(splash);
-		splash.alpha = 0.000001; //cant make it invisible or it won't allow precaching
-
-		SustainSplash.startCrochet = Conductor.stepCrochet;
-		var splash2:SustainSplash = new SustainSplash();
-		grpHoldSplashes.add(splash2);
-		splash2.alpha = 0.00001;
-
-		generateSong(SONG.song);
-
-		add(grpHoldSplashes);
-		add(grpNoteSplashes);
-
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollow.setPosition(camPos.x, camPos.y);
 		camPos.put();
@@ -715,6 +702,23 @@ class PlayState extends MusicBeatState
 			add(accuracyShit);
 			add(ratingTxt);
 		}
+
+		opponentStrums = new FlxTypedGroup<StrumNote>();
+		playerStrums = new FlxTypedGroup<StrumNote>();
+
+		var splash:NoteSplash = new NoteSplash(100, 100);
+		grpNoteSplashes.add(splash);
+		splash.alpha = 0.000001; //cant make it invisible or it won't allow precaching
+
+		SustainSplash.startCrochet = Conductor.stepCrochet;
+		var splash2:SustainSplash = new SustainSplash();
+		grpHoldSplashes.add(splash2);
+		splash2.alpha = 0.00001;
+
+		generateSong(SONG.song);
+
+		add(grpHoldSplashes);
+		add(grpNoteSplashes);
 
 		if(curStage == 'roof-old')
 		{
@@ -1720,10 +1724,16 @@ class PlayState extends MusicBeatState
 
 				var badNote:Bool = false;
 
-				if(swagNote.noteType == 'Hurt Note' || swagNote.noteType == 'Jap Note' || swagNote.noteType == 'Jalapeno Note NEW')
+				if(swagNote.noteType == 'Hurt Note')
 					badNote = true;
 
-				if (swagNote.mustPress == true && badNote == false)
+				if(swagNote.noteType == 'Jap Note')
+					badNote = true;
+
+				if(swagNote.noteType == 'Jalapeno Note NEW')
+					badNote = true;
+
+				if (swagNote.mustPress == true && badNote == false && swagNote.isSustainNote != true)
 					totalNotes++;
 
 				unspawnNotes.push(swagNote);
@@ -2936,7 +2946,7 @@ class PlayState extends MusicBeatState
 				{
 					color = "0xFFFFFFFF";
 				}
-				FlxG.camera.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
+				camFlash.flash(Std.parseInt(color), Math.isNaN(duration) || value1.length <= 0 ? 1 : duration, null, true);
 	
 			case 'Camera Fade':
 				var args:Array<String> = value2.split(",");
@@ -2957,7 +2967,7 @@ class PlayState extends MusicBeatState
 						camHUD.fade(color, flValue1, direction, null, true);
 						direction = !direction;
 					default:
-						FlxG.camera.fade(color, flValue1, direction, null, true);
+						camFlash.fade(color, flValue1, direction, null, true);
 						direction = !direction;
 				}
 
@@ -3197,6 +3207,8 @@ class PlayState extends MusicBeatState
 				cameraLocked = false;
 
 			case 'Play Video':
+				if(ClientPrefs.data.optimize) return;
+
 				startVideo(value1, true, false);				
 
 			case 'Play OVERFIRE':
@@ -4205,7 +4217,7 @@ class PlayState extends MusicBeatState
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
 
-		if(curStage != 'roof-old') spawnHoldSplashOnNote(note);
+		if(curStage != 'roof-old' && note.noteType != 'Mania Note') spawnHoldSplashOnNote(note);
 
 		if(note.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
 			dad.playAnim('hey', true);
@@ -4972,22 +4984,39 @@ class PlayState extends MusicBeatState
 		else if (songMisses < 10)
 			ratingFC = 'SDCB';
 
-		if(changedDifficulty) return; //хуй а не фри мани
+		if(changedDifficulty) 
+		{
+			medalStatus = 5; //хуй а не фри мани	
+
+			if (medalOldStatus != medalStatus)
+			{
+				medalOldStatus = medalStatus;
+				uniqueMedalChange(medalStatus+1);
+				medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
+			}
+			return;
+		}
 
 		if (sicks == totalNotes)
+		{
 			medalStatus = 0;
+			if (medalOldStatus != medalStatus)
+			{
+				medalOldStatus = medalStatus;
+				uniqueMedalChange(medalStatus+1);
+				medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
+			}
+			return;
+		}
 
 		// calculate shit
 		// Grade % (only good and sick), 1.00 is a full combo
-		var grade = (sicks + goods) / totalNotes;
+		var grade = (sicks + goods - songMisses) / totalNotes;
 		// Clear % (including bad and shit). 1.00 is a full clear but not a full combo
 		var clear = (songHits) / totalNotes;
 
 		if (grade == 1.00)
-		{
-			if(ratingFC == 'SFC') medalStatus = 0;
-			else if(ratingFC == 'GFC') medalStatus = 1;
-		}
+			medalStatus = 1;
 		else if (grade >= 0.80)
 			medalStatus = 2;
 		else if (grade >= 0.60)

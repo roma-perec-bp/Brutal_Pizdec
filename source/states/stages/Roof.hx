@@ -262,7 +262,7 @@ class Roof extends BaseStage
 			lightning.x = FlxG.random.int(780, 900);
 
 		// Sound
-		FlxG.sound.play(Paths.soundRandom('Lightning', 1, 3));
+		FlxG.sound.play(Paths.soundRandom('Lightning', 1, 3), 0.6);
 	}
 
 	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)

@@ -26,7 +26,11 @@ class SustainSplash extends FlxSprite {
   override function update(elapsed:Float)
   {
     //so it won't be look weird when strum move
-    if(strumMove != null) setPosition(strumMove.x, strumMove.y);
+    if(strumMove != null) 
+    {
+      setPosition(strumMove.x, strumMove.y); 
+      alpha = strumMove.alpha;
+    }
 
     super.update(elapsed);
   }
