@@ -9,6 +9,7 @@ function opponentNoteHit(membersIndex, noteData, noteType, isSustainNote)
 end
 
 function onCreate()
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     makeLuaSprite('blammedLightsBlack', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
 	makeGraphic('blammedLightsBlack', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, '000000')
 	setScrollFactor('blammedLightsBlack', 0)
@@ -24,9 +25,11 @@ function onCreate()
 	setProperty('red.scale.y', 5)
     setProperty('red.alpha', 0.001)
 	addLuaSprite('red', false)
+    end
 end
 
 function onCreatePost()
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     makeLuaSprite('endScre', nil, 0, 0)
     makeGraphic('endScre', 1280, 720, '000000')
     setObjectCamera('endScre', 'hud')
@@ -44,10 +47,13 @@ function onCreatePost()
     setProperty('edn.alpha', 0.0001)
     screenCenter('edn', 'xy')
     addLuaSprite('edn', true)
+    end
 end
 
 function onCountdownStarted()
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     setProperty('blammedLightsBlack.alpha', 1)setProperty('blammedLightsBlack.alpha', 1)
+    end
 end
 
 function onStepHit()
@@ -55,11 +61,11 @@ function onStepHit()
         setProperty('boyfriend.alpha', 0.0001)
     end
     if curStep == 48 then
-        setProperty('red.alpha', 1)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then  setProperty('red.alpha', 1) end
         setProperty('dadGroup.color', getColorFromHex('000000'))
     end
     if curStep == 64 then
-        setProperty('red.alpha', 0)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('red.alpha', 0) end
         setProperty('blammedLightsBlack.alpha', 0.0001)
         setProperty('boyfriend.alpha', 1)
         setProperty('dadGroup.color', getColorFromHex('FFFFFF'))
@@ -68,13 +74,16 @@ function onStepHit()
         canDrain = true
     end
     if curStep == 704 then
-        doTweenAlpha('pizdos', 'blammedLightsBlack', 0.6, 1)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('pizdos', 'blammedLightsBlack', 0.6, 1) end
     end
     if curStep == 816 then
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
         setProperty('red.alpha', 1)
         setProperty('blammedLightsBlack.alpha', 1)
+        end
         setProperty('dadGroup.color', getColorFromHex('000000'))
     end
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     if curStep == 824 then
         setProperty('red.alpha', 0)
     end
@@ -93,13 +102,16 @@ function onStepHit()
     if curStep == 831 then
         setProperty('red.alpha', 1)
     end
+end
     if curStep == 832 then
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
         setProperty('red.alpha', 0)
         setProperty('blammedLightsBlack.alpha', 0)
+        end
         setProperty('dadGroup.color', getColorFromHex('FFFFFF'))
     end
     if curStep == 1344 then
-        setProperty('blammedLightsBlack.alpha', 0)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blammedLightsBlack.alpha', 0) end
     end
     if curStep == 1600 then
         canDrain = false
@@ -114,35 +126,41 @@ function onStepHit()
         canDrain = true
     end  
     if curStep == 3552 then
-        setProperty('blammedLightsBlack.alpha', 1)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blammedLightsBlack.alpha', 1) end
         doTweenColor('he is no black or wtf', 'boyfriend', 'FFFFFF', 0.001) --пидорас тупой блятьь
         setProperty('dad.alpha', 1)
     end 
     if curStep == 3584 then
-        setProperty('blammedLightsBlack.alpha', 0)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blammedLightsBlack.alpha', 0) end
     end
     if curStep == 4096 then
-        doTweenAlpha('watafuk', 'blammedLightsBlack', 1, 3)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then  doTweenAlpha('watafuk', 'blammedLightsBlack', 1, 3) end
     end
     if curStep == 4208 then
-        doTweenAlpha('doveli', 'zrya', 1, 1)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('doveli', 'zrya', 1, 1) end
     end
     if curStep == 4224 then
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
         setProperty('zrya.alpha',0)
         setProperty('blammedLightsBlack.alpha', 0)
+        end
         canDrain = false
     end
     if curStep == 4480 then
         setProperty('boyfriend.alpha',0)
-        setProperty('blammedLightsBlack.alpha', 1)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blammedLightsBlack.alpha', 1) end
         setProperty('dadGroup.color', getColorFromHex('FFFFFF'))
     end 
     if curStep == 4544 then
         setProperty('blackFlash.alpha',1)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
         setProperty('edn.alpha', 1)
         setProperty('endScre.alpha', 1)
+        end
     end  
     if curStep == 4552 then
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
         doTweenAlpha('bye', 'edn', 0, 5)
+        end
     end
 end

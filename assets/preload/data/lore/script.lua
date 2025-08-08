@@ -1,4 +1,5 @@
 function onCreate()
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     makeLuaSprite('blammedLightsBlack', '', getPropertyFromClass('flixel.FlxG', 'width') * -0.5, getPropertyFromClass('flixel.FlxG', 'height') * -0.5)
 	makeGraphic('blammedLightsBlack', getPropertyFromClass('flixel.FlxG', 'width') * 2, getPropertyFromClass('flixel.FlxG', 'height') * 2, '000000')
 	setScrollFactor('blammedLightsBlack', 0)
@@ -13,17 +14,22 @@ function onCreate()
     addLuaSprite('blackFlash', false) --эндер я ноты видеть хочу нахуй ты на тру ставишь
     -- так и планировалось
 
+    end
+
     setProperty('rom.alpha', 0.0001)
     setProperty('iconROM.visible', false)
     setProperty('iconGF.alpha', 0.0001)
 
     setProperty('gf.alpha', 0.001)
 
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     precacheImage('characters/oink_guy_cuts')
     precacheImage('rom_coming')
+    end
 end
 
 function onCreatePost()
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     makeLuaSprite('pizdec', 'hornyJump') -- ватафак ром
     setObjectCamera('pizdec', 'camhud')
     setProperty('pizdec.alpha', 0.0001)
@@ -34,9 +40,11 @@ function onCreatePost()
     addLuaSprite('romy', false)
     scaleObject('romy', 0.75, 0.75)
     setProperty('romy.visible', false)
+    end
 end
 
 function onBeatHit()
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     if curBeat == 1 then
         doTweenAlpha('suka','blackFlash', 0, 40, 'quardOut')
     end
@@ -78,8 +86,9 @@ function onBeatHit()
         doTweenAlpha('privet', 'rom', 1, 0.7)
         removeLuaSprite('romy')
     end
+   end
     if curBeat == 482 then
-        setProperty('blammedLightsBlack.alpha', 0)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blammedLightsBlack.alpha', 0) end
         setProperty('dad.visible', true)
         setProperty('boyfriend.visible', true)
         setProperty('iconROM.visible', not hideHud)
@@ -91,9 +100,9 @@ function onBeatHit()
         doTweenAlpha('boobs','iconGF', 1, 5)
     end
     if curBeat == 736 then
-        setProperty('blammedLightsBlack.alpha', 1)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blammedLightsBlack.alpha', 1) end
     end
     if curBeat == 746 then
-        doTweenAlpha('suka','blackFlash', 1, 25, 'linear')
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('suka','blackFlash', 1, 25, 'linear') end
     end
 end

@@ -18,18 +18,20 @@ function onCreate()
   setProperty('accuracyShit.visible', false)
   setProperty('medal.visible', false)
 
+  if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
   makeLuaSprite('blackFlash', nil, 0, 0)
   makeGraphic('blackFlash', 1280, 720, '000000')
   setObjectCamera('blackFlash', 'hud')
   addLuaSprite('blackFlash', false)
   setProperty('blackFlash.alpha', 0.001)
+  end
 end
 
 function onCountdownStarted()
   for i = 0, 7 do
       setPropertyFromGroup('strumLineNotes', i, 'alpha', 0)
   end
-  setProperty('blackFlash.alpha', 1)
+  if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blackFlash.alpha', 1) end
 end
 
 function onSongStart()
@@ -44,10 +46,12 @@ end
 
 
 function onSpawnNote()
+  if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
 	if getPropertyFromGroup('notes', 0, 'strumTime') >= crochet * 1056 and not getPropertyFromGroup('notes', 0, 'mustPress') then
 			setObjectCamera('notes.members[0]', 'game')
 			callMethod('notes.members[0].scrollFactor.set', {1, 1})
 	end
+  end
 end
 
 local staticArrowWave = 0
@@ -90,13 +94,13 @@ end
 
 function onStepHit()
   if curStep == 16 then
-    doTweenAlpha('gameover', 'blackFlash', 0, 1)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('gameover', 'blackFlash', 0, 1) end
   end
   if curStep == 144 then
     resetti()
   end
   if curStep == 1088 then
-    setProperty('blammedLightsBlack.alpha', 1)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blammedLightsBlack.alpha', 1) end
   end
   if curStep == 1212 or curStep == 1213 or curStep == 1214 or curStep == 1215 then
     funni(18)
@@ -126,12 +130,12 @@ function onStepHit()
     funni(69) --хахахуй
   end
   if curStep == 1600 then
-    doTweenAlpha('ohgodno', 'blackFlash', 1, 5)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then  doTweenAlpha('ohgodno', 'blackFlash', 1, 5) end
     resetti()
   end
   if curStep == 1848 then
     setProperty('gf.alpha', 0)
-    doTweenAlpha('hi', 'blackFlash', 0, 1)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('hi', 'blackFlash', 0, 1) end
 
 		noteTweenX('dragonTween1', 0, 740 + Meow1, 0.5, 'quartInOut');
     noteTweenAngle("dragonAngle1", 0, -360, 0.5, "quartInOut");
@@ -175,12 +179,14 @@ function onStepHit()
     
   end
   if curStep == 2480 then
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     for i = 4,7 do
       noteTweenAlpha('sex'..i, i, 1, 0.7)
     end
     for i = 0,3 do
       noteTweenAlpha('sex2'..i, i, 1, 6)
     end
+  end
   end
   if curStep == 2768 then
     if not hideHud then
@@ -235,15 +241,17 @@ function onStepHit()
   end
 
   if curStep == 3008 then
-    doTweenAlpha('welcum back', 'blackFlash', 0, 5)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('welcum back', 'blackFlash', 0, 5) end
   end  
   if curStep == 3120 then
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
     for i = 4,7 do
       noteTweenAlpha('sex'..i, i, 1, 0.7)
     end
+     end
   end
   if curStep == 3520 then
-    doTweenAlpha('oh shit', 'blackFlash', 1, 1)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('oh shit', 'blackFlash', 1, 1) end
   end  
   if curStep == 3551 then
 
@@ -254,7 +262,7 @@ function onStepHit()
   end
   if curStep == 3552 then
     for i = 0,3 do
-      noteTweenAlpha('sexo'..i, i, 1, 0.01)
+      if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then noteTweenAlpha('sexo'..i, i, 1, 0.01) end
     end
     if not hideHud then
       setProperty('healthBar.visible', true)
@@ -269,10 +277,10 @@ function onStepHit()
     end
   end
   if curStep == 3568 then
-    doTweenAlpha('oh blyat', 'blackFlash', 0, 0.3)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then doTweenAlpha('oh blyat', 'blackFlash', 0, 0.3) end
   end  
   if curStep == 4152 or curStep == 4153 or curStep == 4154 or curStep == 4155 then
-    setProperty('blackFlash.alpha', 1)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blackFlash.alpha', 1) end
     funni(69) --хахахуй
   end  
   if curStep == 4156 or curStep == 4157 or curStep == 4158 or curStep == 4159 then
@@ -280,11 +288,11 @@ function onStepHit()
   end  
   if curStep == 4160 then
     resetti()
-    setProperty('blackFlash.alpha', 0)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blackFlash.alpha', 0) end
   end  
 
   if curStep == 4208 then
-    setProperty('blackFlash.alpha',1)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blackFlash.alpha',1) end
     noteTweenAlpha("sex1", 0, 0, 0.3, "quartInOut")
     noteTweenAngle("saltoHWAW1", 4, -360, 0.6, "quartInOut");
     noteTweenX('foxTween1', 4, 415 + Meow1, 0.6, 'quartInOut');
@@ -305,10 +313,10 @@ function onStepHit()
     noteTweenX('foxTween4', 7, 415 + Meow4, 0.6, 'quartInOut');
   end
   if curStep == 4224 then
-    setProperty('blackFlash.alpha',0)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blackFlash.alpha',0) end
   end 
   if curStep == 4544 then
-    setProperty('blackFlash.alpha',1)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('blackFlash.alpha',1) end
   end  
 end
 

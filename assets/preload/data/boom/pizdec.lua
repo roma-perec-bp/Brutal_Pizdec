@@ -16,6 +16,10 @@ function onCreate()
     if not (shadersEnabled) then
         close()
     end
+
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == true then
+        close()
+    end
 end
 
 function onCreatePost()

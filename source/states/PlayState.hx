@@ -546,6 +546,7 @@ class PlayState extends MusicBeatState
 			boyfriendGroup.alpha = 0.00001;
 			dadGroup.alpha = 0.00001;
 			gfGroup.alpha = 0.00001;
+			if(SONG.song == 'Lore') romGroup.alpha = 0.00001;
 		}
 
 		createLanes();
@@ -839,6 +840,15 @@ class PlayState extends MusicBeatState
 
 		startCallback();
 		RecalculateRating();
+
+		medalStatus = 5; //ага...
+
+		if (medalOldStatus != medalStatus)
+		{
+			medalOldStatus = medalStatus;
+			uniqueMedalChange(medalStatus+1);
+			medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
+		}
 
 		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
 		if(ClientPrefs.data.hitsoundVolume > 0) precacheList.set('hitsound', 'sound');
@@ -1707,6 +1717,8 @@ class PlayState extends MusicBeatState
 									unspawnNotes.remove(tail);
 								}
 
+							badNote = false;
+
 							if(evilNote.noteType == 'Hurt Note')
 								badNote = true;
 			
@@ -1737,6 +1749,8 @@ class PlayState extends MusicBeatState
 				swagNote.noteType = noteType;
 	
 				swagNote.scrollFactor.set();
+
+				badNote = false;
 
 				if(swagNote.noteType == 'Hurt Note')
 					badNote = true;
@@ -3183,7 +3197,7 @@ class PlayState extends MusicBeatState
 
 			case 'Remove trail':
 				if(ClientPrefs.data.optimize) return;
-				
+
 				switch(value1.toLowerCase().trim()) {
 					case 'gf' | 'girlfriend':
 						removeBehindGF(trail);
@@ -5002,7 +5016,7 @@ class PlayState extends MusicBeatState
 		else if (songMisses < 10)
 			ratingFC = 'SDCB';
 
-		if(cpuControlled && changedDifficulty) 
+		if(changedDifficulty) 
 		{
 			medalStatus = 5; //хуй а не фри мани	
 

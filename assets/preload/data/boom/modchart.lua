@@ -17,21 +17,23 @@ function onSongStart()
 end
 
 function onCreate()
-    makeLuaSprite('maniaPart', nil, 360, 0)
-	makeGraphic('maniaPart', 560, 720, '000000')
-	setObjectCamera('maniaPart', 'hud')
-	setProperty('maniaPart.alpha', 0.00001)
-	addLuaSprite('maniaPart', false)
-    --начало модчарта хахаха
-    makeLuaSprite('blackFlash', nil, 0, 0)
-    makeGraphic('blackFlash', 1280, 720, '000000')
-    setObjectCamera('blackFlash', 'hud')
-    addLuaSprite('blackFlash', false)
-
-    makeLuaSprite('vin', 'vin', 0, 0)
-    screenCenter("vin", 'xy')
-    setObjectCamera('vin', 'hud')
-    addLuaSprite('vin', true)
+    if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then
+        makeLuaSprite('maniaPart', nil, 360, 0)
+        makeGraphic('maniaPart', 560, 720, '000000')
+        setObjectCamera('maniaPart', 'hud')
+        setProperty('maniaPart.alpha', 0.00001)
+        addLuaSprite('maniaPart', false)
+        --начало модчарта хахаха
+        makeLuaSprite('blackFlash', nil, 0, 0)
+        makeGraphic('blackFlash', 1280, 720, '000000')
+        setObjectCamera('blackFlash', 'hud')
+        addLuaSprite('blackFlash', false)
+    
+        makeLuaSprite('vin', 'vin', 0, 0)
+        screenCenter("vin", 'xy')
+        setObjectCamera('vin', 'hud')
+        addLuaSprite('vin', true)
+    end
 
     setProperty('scoreTxt.visible', false)
     setProperty('timeTxt.visible', false)
@@ -130,7 +132,7 @@ function onBeatHit()
     	noteTweenX('foxTween4', 7, 744 + Meow4, 8, 'quartInOut');
     end
     if curBeat == 416 then
-        setProperty('vin.visible', true)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('vin.visible', true) end
         for i = 4, 7 do
             noteTweenAlpha("hwaw"..i, i, 0.6, 0.6, "quartInOut")
         end
@@ -163,7 +165,7 @@ function onBeatHit()
         for i = 0, 3 do
             noteTweenAlpha("perec"..i, i, 1, 0.6, "quartInOut")
         end
-        setProperty('vin.visible', false)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then  setProperty('vin.visible', false) end
     end
     if curBeat == 680 then
         doTweenAlpha('maniaPartYea','maniaPart', 1, 0.5, 'linear')
@@ -192,10 +194,10 @@ function onBeatHit()
         end
     end
     if curBeat == 768 then
-        setProperty('vin.visible', true)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('vin.visible', true) end
     end
     if curBeat == 896 then
-        setProperty('vin.visible', false)
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then setProperty('vin.visible', false) end
     end
     if curBeat == 830 then
         for i = 0, 7 do
@@ -203,7 +205,7 @@ function onBeatHit()
         end
     end
     if curBeat == 960 then
-        setProperty('vin.visible', true) 
+        if getPropertyFromClass('backend.ClientPrefs','data.optimize') == false then  setProperty('vin.visible', true)  end
     end
     if curBeat == 1024 then
         setProperty('scoreTxt.visible', false)
