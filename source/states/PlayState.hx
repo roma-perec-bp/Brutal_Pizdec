@@ -3102,6 +3102,8 @@ class PlayState extends MusicBeatState
 				FlxTween.tween(char.colorTransform, {redOffset: redOff, greenOffset: greenOff, blueOffset: blueOff, redMultiplier: redMult, greenMultiplier: greenMult, blueMultiplier: blueMult}, time, {ease: FlxEase.linear});
 
 			case 'Add trail':
+				if(ClientPrefs.data.optimize) return;
+
 				if(ClientPrefs.data.lowQuality) return;
 
 				var split:Array<String> = value1.split(',');
