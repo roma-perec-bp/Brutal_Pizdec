@@ -1718,7 +1718,7 @@ class PlayState extends MusicBeatState
 
 							if (evilNote.mustPress == true && badNote == false && evilNote.isSustainNote == false)
 								totalNotes -= 1;
-							
+
 							evilNote.destroy();
 
 							unspawnNotes.remove(evilNote);
@@ -4998,7 +4998,20 @@ class PlayState extends MusicBeatState
 		else if (songMisses < 10)
 			ratingFC = 'SDCB';
 
-		if(changedDifficulty) 
+		if(cpuControlled && changedDifficulty) 
+		{
+			medalStatus = 5; //хуй а не фри мани	
+
+			if (medalOldStatus != medalStatus)
+			{
+				medalOldStatus = medalStatus;
+				uniqueMedalChange(medalStatus+1);
+				medal.loadGraphic(Paths.image('medals/medal_${medalStatus+1}', 'shared'));
+			}
+			return;
+		}
+
+		if(cpuControlled) 
 		{
 			medalStatus = 5; //хуй а не фри мани	
 

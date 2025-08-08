@@ -18577,7 +18577,7 @@
 		],
 		"player3": null,
 		"gameOverLoop": "gameOverZombie",
-		"song": "boom",
+		"song": "BOOM",
 		"stage": "night",
 		"sections": 0,
 		"needsVoices": true,

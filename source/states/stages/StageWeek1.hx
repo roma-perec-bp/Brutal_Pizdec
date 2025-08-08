@@ -129,7 +129,7 @@ class StageWeek1 extends BaseStage
 						else
 						{
 							dadbattleLight.setPosition(who.getGraphicMidpoint().x - dadbattleLight.width / 2, who.y + who.height - dadbattleLight.height + 220);
-							dadbattleLight.x += 50;
+							dadbattleLight.x += 25;
 						}
 
 						FlxTween.tween(dadbattleFog, {alpha: 0.7}, 1.5, {ease: FlxEase.quadInOut});
