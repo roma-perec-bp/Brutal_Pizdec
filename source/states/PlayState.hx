@@ -1678,6 +1678,8 @@ class PlayState extends MusicBeatState
 		var oldNote:Note = null;
 		var sectionsData:Array<SwagSection> = PlayState.SONG.notes;
 		var ghostNotesCaught: Int = 0;
+
+		var badNote:Bool = false;
 	
 		for (section in sectionsData)
 		{
@@ -1705,6 +1707,18 @@ class PlayState extends MusicBeatState
 									unspawnNotes.remove(tail);
 								}
 							evilNote.destroy();
+							
+							if(evilNote.noteType == 'Hurt Note')
+								badNote = true;
+			
+							if(evilNote.noteType == 'Jap Note')
+								badNote = true;
+			
+							if(evilNote.noteType == 'Jalapeno Note NEW')
+								badNote = true;
+
+							if (evilNote.mustPress == true && badNote == false && evilNote.isSustainNote == false)
+								totalNotes -= 1;
 							unspawnNotes.remove(evilNote);
 							ghostNotesCaught++;
 							//continue;
@@ -1722,8 +1736,6 @@ class PlayState extends MusicBeatState
 	
 				swagNote.scrollFactor.set();
 
-				var badNote:Bool = false;
-
 				if(swagNote.noteType == 'Hurt Note')
 					badNote = true;
 
@@ -1733,7 +1745,7 @@ class PlayState extends MusicBeatState
 				if(swagNote.noteType == 'Jalapeno Note NEW')
 					badNote = true;
 
-				if (swagNote.mustPress == true && badNote == false && swagNote.isSustainNote != true)
+				if (swagNote.mustPress == true && badNote == false && swagNote.isSustainNote == false)
 					totalNotes++;
 
 				unspawnNotes.push(swagNote);
