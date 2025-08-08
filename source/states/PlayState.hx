@@ -4506,9 +4506,9 @@ class PlayState extends MusicBeatState
 	}
 
 	public function grayNoteEarly(note:Note):Void {
-		note.rgbShader.r = 0xFFFFFFFF;
+		note.rgbShader.r = 0xFF808080;
 		note.rgbShader.g = 0xFFFFFFFF;
-		note.rgbShader.b = 0xFF454545;
+		note.rgbShader.b = 0xFF2F2F2F;
 
 		note.alpha = 0.5;
 		note.multAlpha = 0.5;
