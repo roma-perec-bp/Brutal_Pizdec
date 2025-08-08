@@ -3182,6 +3182,8 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'Remove trail':
+				if(ClientPrefs.data.optimize) return;
+				
 				switch(value1.toLowerCase().trim()) {
 					case 'gf' | 'girlfriend':
 						removeBehindGF(trail);
