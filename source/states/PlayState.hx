@@ -650,17 +650,17 @@ class PlayState extends MusicBeatState
 		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
 		if (!ClientPrefs.data.hideHud) add(iconP2);
 
-		if(SONG.song == 'Lore')
+		if(ClientPrefs.data.hideHud && SONG.song == 'Lore')
 		{
 			iconROM = new HealthIcon(rom.healthIcon, false);
 			iconROM.y = healthBar.y - 50;
 			iconROM.alpha = ClientPrefs.data.healthBarAlpha;
-			if (!ClientPrefs.data.hideHud) add(iconROM);
+			add(iconROM);
 
 			iconGF = new HealthIcon(gf.healthIcon, true);
 			iconGF.y = healthBar.y - 50;
 			iconGF.alpha = ClientPrefs.data.healthBarAlpha;
-			if (!ClientPrefs.data.hideHud) add(iconGF);
+			add(iconGF);
 		}
 	
 		if(curStage == 'roof-old')
