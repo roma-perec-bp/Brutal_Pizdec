@@ -624,6 +624,7 @@ class PlayState extends MusicBeatState
 		}
 
 		healthBarBGOverlay.alpha = ClientPrefs.data.healthBarAlpha;
+		if (!ClientPrefs.data.hideHud) add(healthBarBGOverlay);
 
 		healthBar = new HealthBar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return smoothHealth, 0, 2);
 		healthBar.screenCenter(X);
@@ -631,6 +632,7 @@ class PlayState extends MusicBeatState
 		healthBar.scrollFactor.set();
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
 		reloadHealthBarColors();
+		if (!ClientPrefs.data.hideHud) add(healthBar);
 
 		if(curStage != 'roof-old')
 		{
@@ -641,20 +643,24 @@ class PlayState extends MusicBeatState
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
 		iconP1.alpha = ClientPrefs.data.healthBarAlpha;
+		if (!ClientPrefs.data.hideHud) add(iconP1);
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
 		iconP2.y = healthBar.y - 75;
 		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
+		if (!ClientPrefs.data.hideHud) add(iconP2);
 
 		if(SONG.song == 'Lore')
 		{
 			iconROM = new HealthIcon(rom.healthIcon, false);
 			iconROM.y = healthBar.y - 50;
 			iconROM.alpha = ClientPrefs.data.healthBarAlpha;
+			if (!ClientPrefs.data.hideHud) add(iconROM);
 
 			iconGF = new HealthIcon(gf.healthIcon, true);
 			iconGF.y = healthBar.y - 50;
 			iconGF.alpha = ClientPrefs.data.healthBarAlpha;
+			if (!ClientPrefs.data.hideHud) add(iconGF);
 		}
 	
 		if(curStage == 'roof-old')
@@ -670,6 +676,7 @@ class PlayState extends MusicBeatState
 
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
+		if (!ClientPrefs.data.hideHud) add(scoreTxt);
 
 		accuracyShit = new FlxText(0, healthBar.y + 40, FlxG.width, "Rating: Horny", 32);
 		accuracyShit.setFormat(Paths.font("HouseofTerror.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -681,6 +688,12 @@ class PlayState extends MusicBeatState
 		ratingTxt.scrollFactor.set();
 		ratingTxt.alpha = 0.001;
 		ratingTxt.borderSize = 1.5;
+
+		if(!ClientPrefs.data.hideHud && curStage != 'roof-old')
+		{
+			add(accuracyShit);
+			add(ratingTxt);
+		}
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
@@ -769,26 +782,9 @@ class PlayState extends MusicBeatState
 		medal.scale.set(0.3, 0.3);
 		medal.origin.set(128/2, 128/2);
 		medal.updateHitbox();
+		medal.visible = !ClientPrefs.data.hideHud;
+		if (!ClientPrefs.data.hideHud) add(medal);
 
-		if (!ClientPrefs.data.hideHud) {
-			if(curStage != 'roof-old')
-			{
-				add(accuracyShit);
-				add(ratingTxt);
-			}
-			add(healthBarBGOverlay);
-			add(healthBar);
-			add(iconP1);
-			add(iconP2);
-			if(SONG.song == 'Lore')
-			{
-				add(iconROM); // ТОТ САМЫЙ
-				add(iconGF); // фу
-			}
-			add(scoreTxt);
-			add(medal);
-		}
-		
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
@@ -3778,7 +3774,7 @@ class PlayState extends MusicBeatState
 			comboSpr.x = placement;
 			comboSpr.acceleration.y = FlxG.random.int(200, 300) * playbackRate * playbackRate;
 			comboSpr.velocity.y -= FlxG.random.int(140, 160) * playbackRate;
-			comboSpr.visible = showCombo;
+			comboSpr.visible = (!ClientPrefs.data.hideHud && showCombo);
 			comboSpr.x += ClientPrefs.data.comboOffset[0];
 			comboSpr.y -= ClientPrefs.data.comboOffset[1];
 			comboSpr.y += 60;
@@ -3817,9 +3813,10 @@ class PlayState extends MusicBeatState
 	
 			var daLoop:Int = 0;
 			var xThing:Float = 0;
-			if (!ClientPrefs.data.hideHud && showCombo)
+			if (showCombo)
+			{
 				insert(members.indexOf(strumLineNotes), comboSpr);
-			
+			}
 			if (!ClientPrefs.data.comboStacking)
 			{
 				if (lastCombo != null) lastCombo.kill();
@@ -3851,9 +3848,10 @@ class PlayState extends MusicBeatState
 				numScore.acceleration.y = FlxG.random.int(200, 300) * playbackRate * playbackRate;
 				numScore.velocity.y -= FlxG.random.int(140, 160) * playbackRate;
 				numScore.velocity.x = FlxG.random.float(-5, 5) * playbackRate;
+				numScore.visible = !ClientPrefs.data.hideHud;
 	
 				//if (combo >= 10 || combo == 0)
-				if (!ClientPrefs.data.hideHud && showComboNum)
+				if(showComboNum)
 					insert(members.indexOf(strumLineNotes), numScore);
 	
 				FlxTween.tween(numScore, {alpha: 0}, 0.2 / playbackRate, {
